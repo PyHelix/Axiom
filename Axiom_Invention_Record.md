@@ -1,9 +1,9 @@
 # Axiom: Volunteer-Distributed Neural Network Training — Invention Record
 
 **Author:** PyHelix (Foxes.owo@gmail.com)
-**Date:** February 14-15, 2026
+**Date:** February 14-15, 2026 (updated February 26, 2026)
 **Project:** Axiom BOINC — https://axiom.heliex.net
-**Status:** Live in production, processing volunteer-contributed gradients
+**Status:** Live in production — modular spiking neural network with STDP, trained by volunteers
 
 ---
 
@@ -39,10 +39,32 @@ Discovered that the previous 80-sector approach (workers training full model but
 
 The fix: workers download the **complete** QNT4-compressed model weights (~20.5MB), train the full model with SGD, and send back the full delta. This eliminated the noise floor and enabled actual learning. BPC dropped from 5.10 to 4.59 in the first 8 minutes of production.
 
+### 7. Volunteer-Distributed Modular Spiking Neural Network with STDP (v5.00+)
+**Date: February 25-26, 2026**
+
+To my knowledge, the **first-ever** implementation of all of the following:
+
+- **Large-scale STDP training on text/language data.** All prior STDP research is on small-scale vision tasks (MNIST, CIFAR), maxing out at ~40M synapses with ~7,000 neurons. Axiom v5.00 runs STDP on a **224 million parameter** (710M synapses) spiking network processing natural language (byte-level text prediction from Project Gutenberg). No published work applies pure STDP to language modeling at any scale.
+
+- **Distributed volunteer computing for spiking neural network training.** Prior distributed SNN work targets neuromorphic hardware clusters (SpiNNaker, Loihi). Axiom distributes spiking network training across untrusted volunteer CPUs over the internet via BOINC — volunteers download 3-module neighborhoods (~1MB), train with STDP locally, and upload weight updates. No prior system uses volunteer computing for SNN training.
+
+- **Modular neuromorphic architecture trained by crowd-sourced STDP.** 64 independent spiking modules (LIF neurons, 1600 neurons each, 3.5M params each) connected by sparse inter-module projections, with staleness-based neighborhood assignment ensuring full network coverage. Each volunteer trains a 3-module neighborhood. Overlapping neighborhoods propagate learning across the full network without any global error signal or central coordination of learning.
+
+- **Long-duration unsupervised STDP on structured data as a self-organization experiment.** The hypothesis under test: whether sustained STDP-driven spike-timing correlations on statistically rich input data (English text) will drive the network toward self-organized criticality — a phase transition where emergent computational structure appears, analogous to cortical development. This has not been attempted or published.
+
+**Architecture:** 64 spiking modules x 1600 LIF neurons x 3.5M params each = 224M total parameters. Sparse inter-module connectivity (1% density). Staleness-based module assignment. CPU-only work units (~5 min per task). Supervised readout layer (SGD cross-entropy) provides the only gradient signal; all module-internal learning is pure unsupervised STDP.
+
+**Prior art search (February 26, 2026):**
+- [SpikeGPT](https://arxiv.org/abs/2302.13939) (2023): Spiking language model, but trained with surrogate gradient backprop, not STDP
+- [SpikeLLM](https://arxiv.org/abs/2407.04752) (2024): Converts existing LLMs to spiking, doesn't train from scratch with STDP
+- [Contrastive signal-dependent plasticity](https://pmc.ncbi.nlm.nih.gov/articles/PMC11639678/) (2024): Better local learning rules, small scale only
+- No results found for: distributed STDP training, volunteer computing for SNNs, STDP on language/text data, or large-scale STDP self-organization experiments
+
 ---
 
 ## Architecture Summary
 
+### v3.x — Transformer + Backprop (Jan-Feb 2026)
 ```
 Volunteers (BOINC)          Server (Hetzner)
 ┌──────────────┐           ┌──────────────────────────────┐
@@ -68,12 +90,42 @@ Volunteers (BOINC)          Server (Hetzner)
                            └──────────────────────────────┘
 ```
 
+### v5.x — Modular Spiking Network + STDP (Feb 26, 2026+)
+```
+Volunteers (BOINC)              Server (Hetzner)
+┌───────────────────┐          ┌─────────────────────────────────┐
+│ Download 3-module  │◄─────────│ 64 Spiking Modules (3.5M each) │
+│ neighborhood ~1MB  │          │                                 │
+│                   │          │ ┌─────────────────────────────┐ │
+│ Train with STDP    │          │ │ Spiking Coordinator         │ │
+│ (spike-timing      │          │ │  - Staleness-based assign   │ │
+│  dependent         │          │ │  - Direct weight writeback  │ │
+│  plasticity)       │          │ │  - Rate-mode BPC evaluation │ │
+│                   │          │ │  - Module storage on disk   │ │
+│ + Readout SGD      │          │ │  - Credit tracking          │ │
+│ (supervised)       │          │ └─────────────────────────────┘ │
+│                   │          │                                 │
+│ Upload delta ~1MB │──────────►│ Topology: 64 modules, sparse   │
+└───────────────────┘          │ inter-module connections (1%)   │
+                               │ 3-module neighborhoods overlap  │
+                               └─────────────────────────────────┘
+```
+
 ## Model Specifications
-- **Total parameters:** 17.8 billion (420 experts x 42,970,000 each)
-- **Expert architecture:** SimpleTransformer (d_model=768, n_heads=12, d_ff=3072, n_layers=6)
+
+### Current (v5.00+): Modular Spiking Network
+- **Total parameters:** 224 million (64 modules x 3.5M each) + 710M synapses
+- **Module architecture:** 1600 LIF neurons, W_rec (1600x1600), W_in (512x1600), W_pool (1600x64)
+- **Learning rule:** STDP (unsupervised) for modules, SGD cross-entropy (supervised) for readout only
+- **Inter-module connectivity:** Sparse (1% density), 190 connections across 64 modules
 - **Task:** Byte-level prediction (64 bytes input → predict next byte, vocab_size=256)
 - **Metric:** Bits Per Character (BPC), range 0-8, random baseline = 8.0
 - **Training data:** ~10GB Project Gutenberg corpus served via dynamic PHP endpoint
+- **Work unit size:** ~1MB download, ~5 min CPU per task
+
+### Previous (v3.x): Transformer MoE
+- **Total parameters:** 17.8 billion (420 experts x 42,970,000 each)
+- **Expert architecture:** SimpleTransformer (d_model=768, n_heads=12, d_ff=3072, n_layers=6)
 
 ## Timeline
 - **Jan 2026:** Initial BOINC infrastructure, Hebbian learning (later proven broken)
@@ -83,6 +135,8 @@ Volunteers (BOINC)          Server (Hetzner)
 - **Feb 14, 2026:** Discovered sector approach broken, deployed full-model no-sector (v3.90)
 - **Feb 14, 2026:** GA placement controller deployed, reactive policy active
 - **Feb 15, 2026:** 3-thread optimizer daemon deployed (v3.92), EMA perturbations active
+- **Feb 25, 2026:** Modular spiking network designed and tested on Vast.ai
+- **Feb 26, 2026:** v5.00 deployed — first-ever volunteer-distributed STDP spiking network on language data (224M params, 64 modules, BOINC). BPC dropped from 8.0 → 5.2 in first 2 hours (readout learning; STDP self-organization experiment ongoing)
 
 ---
 
