@@ -1,9 +1,9 @@
 # Axiom: Volunteer-Distributed Neural Network Training — Invention Record
 
 **Author:** PyHelix (Foxes.owo@gmail.com)
-**Date:** February 14-15, 2026 (updated February 26, 2026)
+**Date:** February 14-15, 2026 (updated February 28, 2026)
 **Project:** Axiom BOINC — https://axiom.heliex.net
-**Status:** Live in production — modular spiking neural network with STDP, trained by volunteers
+**Status:** Live in production — LLM-directed experiment container platform (v6.00+)
 
 ---
 
@@ -60,6 +60,20 @@ To my knowledge, the **first-ever** implementation of all of the following:
 - [Contrastive signal-dependent plasticity](https://pmc.ncbi.nlm.nih.gov/articles/PMC11639678/) (2024): Better local learning rules, small scale only
 - No results found for: distributed STDP training, volunteer computing for SNNs, STDP on language/text data, or large-scale STDP self-organization experiments
 
+### 8. LLM-Directed Experiment Container Platform with AI-Judged Credit (v6.00+)
+**Date: February 26-28, 2026**
+
+Documented separately: **[Axiom_v6_Experiment_Container_Record.md](Axiom_v6_Experiment_Container_Record.md)**
+
+Transformed the BOINC volunteer network into a general-purpose experiment container platform where an LLM (Claude), under human oversight, designs numpy-based ML experiments, dispatches them to volunteer hardware matched by capability (CPU count, RAM, OS, GPU), and judges credit based on result quality rather than FLOPS.
+
+To my knowledge, the **first implementation** of:
+- **AI-judged credit** in volunteer computing (no prior art found)
+- **LLM-designed experiments dispatched to volunteer hardware** (no prior art found)
+- **Closed-loop AI research pipeline** on volunteer computing (no prior art found)
+
+This pivot was driven by the discovery that you cannot reliably lower BPC in a decentralized LLM without every client downloading the entire model — conflicting gradients from different data contexts cancel out during aggregation. See the [v6 record](Axiom_v6_Experiment_Container_Record.md) for full architecture, prior art search, and experiment details.
+
 ---
 
 ## Architecture Summary
@@ -113,7 +127,14 @@ Volunteers (BOINC)              Server (Hetzner)
 
 ## Model Specifications
 
-### Current (v5.00+): Modular Spiking Network
+### Current (v6.00+): Experiment Container Platform
+- **Mode:** LLM designs experiments, dispatches to matched hardware, AI judges results
+- **Experiment format:** Self-contained numpy-only Python scripts, exec()'d by client
+- **First batch:** 10 experiments across 10 volunteer machines (Feb 28, 2026)
+- **Credit:** AI-reviewed, quality-based (not FLOPS)
+- **See:** [Axiom_v6_Experiment_Container_Record.md](Axiom_v6_Experiment_Container_Record.md)
+
+### Previous (v5.00): Modular Spiking Network
 - **Total parameters:** 224 million (64 modules x 3.5M each) + 710M synapses
 - **Module architecture:** 1600 LIF neurons, W_rec (1600x1600), W_in (512x1600), W_pool (1600x64)
 - **Learning rule:** STDP (unsupervised) for modules, SGD cross-entropy (supervised) for readout only
@@ -137,7 +158,10 @@ Volunteers (BOINC)              Server (Hetzner)
 - **Feb 15, 2026:** 3-thread optimizer daemon deployed (v3.92), EMA perturbations active
 - **Feb 25, 2026:** Modular spiking network designed and tested on Vast.ai
 - **Feb 26, 2026:** v5.00 deployed — first-ever volunteer-distributed STDP spiking network on language data (224M params, 64 modules, BOINC). BPC dropped from 8.0 → 5.2 in first 2 hours (readout learning; STDP self-organization experiment ongoing)
+- **Feb 26, 2026:** Discovered fundamental limitation of decentralized LLM training; designed experiment container architecture (v6.00)
+- **Feb 27, 2026:** Built experiment executor client, 10 numpy-only experiment scripts
+- **Feb 28, 2026:** v6.04 deployed — 10 experiments across 10 volunteer machines, AI-judged credit system. First results collected (Edge of Chaos completed)
 
 ---
 
-*This document serves as a timestamped record of invention. The git commit timestamp provides cryptographic proof of the date these ideas were first documented publicly.*
+*This document serves as a timestamped record of invention. The git commit timestamp, together with Internet Archive Wayback Machine snapshots, provides cryptographic proof of the date these ideas were first documented publicly.*
