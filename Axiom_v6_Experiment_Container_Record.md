@@ -148,49 +148,11 @@ All experiments are self-contained numpy-only Python scripts investigating funda
 
 ---
 
-## Proposed: Proof of Useful Contribution (PoUC) Consensus Mechanism
+## Related: Proof of Useful Contribution (PoUC) Consensus Mechanism
 
-**Date conceived: February 28, 2026**
+The AI-judged credit system in Axiom v6 led to the conception of a novel blockchain consensus mechanism where block production weight is determined by AI-validated scientific contribution rather than stake or hash rate.
 
-A novel blockchain consensus mechanism where block production weight is determined by **AI-validated scientific contribution** rather than stake (PoS) or computational waste (PoW).
-
-### How It Differs From Existing Consensus
-
-| Mechanism | What determines block production | Sybil resistance | Waste |
-|-----------|----------------------------------|-------------------|-------|
-| **Proof of Work** | Hash rate (wasted computation) | Cost of hardware + electricity | Enormous |
-| **Proof of Stake** | Coin balance locked up | Cost of acquiring coins | Minimal but plutocratic |
-| **Proof of Useful Contribution** | AI-judged experiment results | Can't fake valid scientific results | **Zero** — all computation is useful |
-
-### Proposed Design
-
-1. Volunteer runs Axiom experiments on BOINC, earns AI-judged credit
-2. User links BOINC account to wallet address (one-time)
-3. Wallet weight = accumulated AI-judged credit (not coin balance)
-4. Block producer selected by weighted random selection based on credit
-5. Block reward goes to producer
-6. Credit is consumed over time, requiring continued contribution
-
-### Why This Is Novel
-
-- **No staking required.** Block production rights come from doing useful science, not from having money. Eliminates the rich-get-richer problem of PoS.
-- **No wasted computation.** Unlike PoW, every cycle of computation produces actual scientific results.
-- **AI-validated sybil resistance.** You cannot fake experiment results that pass AI review. This is a stronger guarantee than PoS (where you just need money) and potentially stronger than PoW (where you just need hash rate).
-- **Gets more secure over time.** As AI improves, result validation gets harder to fool — the opposite of PoW, where security depends on maintaining an ever-growing waste of energy.
-
-### Integration With Existing Infrastructure
-
-The author operates:
-- **Axiom BOINC** (https://axiom.heliex.net) — the volunteer computing project that generates credit
-- **HeliEx** (https://heliex.net) — a science-based cryptocurrency exchange listing Curecoin and Gridcoin
-- A complete pipeline from experiment execution → AI credit judging → token distribution → exchange trading, all under one operator
-
-### Prior Art Search
-
-- **Gridcoin:** Rewards BOINC contribution, but uses FLOPS-based credit (gameable) and requires a complex beacon/superblock system to bridge BOINC and blockchain. Consensus is still PoS — BOINC credit only modifies the staking reward, it doesn't replace stake as consensus weight.
-- **Curecoin:** Rewards Folding@home contribution, but is a hybrid PoS/PoW system where folding earns tokens distributed from a central pool. Folding contribution is not the consensus mechanism.
-- **Proof of Useful Work (various proposals):** Academic proposals exist for replacing PoW with useful computation (protein folding, optimization problems), but none use AI to validate result quality. All rely on deterministic verification or redundant computation.
-- **No prior art found** for a consensus mechanism where AI-judged scientific result quality directly determines block production weight.
+Documented separately: **[Axiom_PoUC_Consensus_Mechanism.md](Axiom_PoUC_Consensus_Mechanism.md)**
 
 ---
 
