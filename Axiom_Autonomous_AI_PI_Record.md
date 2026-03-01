@@ -17,7 +17,7 @@ A system where an LLM (Claude, via Claude Code CLI) operates as the **autonomous
 1. **SSHs into the production server** and queries the live database
 2. **Reviews completed experiment results** by reading raw JSON output files from volunteer machines
 3. **Awards credit to volunteers** based on scientific quality judgment (not FLOPS)
-4. **Identifies idle compute capacity** across the volunteer fleet and fills every available CPU core with experiments
+4. **Identifies idle compute capacity** across the volunteer fleet and fills every available CPU core and GPU with experiments
 5. **Designs entirely new experiments** based on evidence from prior results, writes the Python scripts, uploads them to the server, and deploys them as BOINC workunits
 6. **Maintains cumulative scientific records** across sessions, building a growing body of findings
 7. **Iterates the research program** — retiring answered questions, cross-validating promising findings on additional hosts, fixing broken scripts, and pursuing new hypotheses
@@ -107,16 +107,16 @@ AxiomExperimentReview.txt (master instruction file)
     │     ├── Award credit by judgment (generous, quality-based)
     │     └── Update result, user, and host tables in DB
     │
-    ├── Step 4: Fill idle cores
-    │     ├── Compare running experiments vs available CPUs per host
-    │     ├── Deploy experiments matched to hardware capability
-    │     ├── Fill ALL idle cores across the volunteer fleet
+    ├── Step 4: Fill idle cores and GPUs
+    │     ├── Compare running experiments vs available CPUs/GPUs per host
+    │     ├── Deploy experiments matched to hardware capability (CPU count, RAM, GPU)
+    │     ├── Fill ALL idle cores and GPUs across the volunteer fleet
     │     └── Skip hosts with insufficient RAM
     │
     ├── Step 5: Design new experiments (autonomous)
     │     ├── Analyze evidence from completed experiments
     │     ├── Identify unexplored questions worth investigating
-    │     ├── Write new numpy-only experiment scripts
+    │     ├── Write new numpy/CuPy experiment scripts (CPU and GPU)
     │     ├── Upload scripts to server
     │     └── Deploy as BOINC workunits to appropriate hosts
     │
@@ -147,7 +147,7 @@ operations, and experiment deployments described in the instruction file.
 **Guardrails:**
 - 10,000 credit cap per session
 - No duplicate workunits (check before create)
-- No overloading hosts (respect CPU count)
+- No overloading hosts (respect CPU/GPU count)
 - No overwriting previous results files
 - Read scripts before modifying them
 
@@ -166,8 +166,8 @@ The system's first fully autonomous run (no human present or intervening) comple
    - Volunteer A: +525cr (23 results across 3 machines)
    - Volunteer B: +125cr (7 results)
    - Volunteer C: +5cr (1 MemoryError result — still credited for donated compute)
-5. **Deployed 644 workunits** to fill idle cores:
-   - 628 general experiment workunits across 33+ hosts
+5. **Deployed 644 workunits** to fill idle cores and GPUs:
+   - 628 general experiment workunits across 33+ hosts (CPU and GPU)
    - Including 15 brand new 32-CPU machines that had never received work
 6. **Designed a new experiment** — `grokking_dynamics_v3.py`:
    - Identified that grokking v2 (P=97, lr=0.001) was too slow — test accuracy only reached 49% in 100K epochs
