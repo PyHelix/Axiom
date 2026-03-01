@@ -74,6 +74,20 @@ To my knowledge, the **first implementation** of:
 
 This pivot was driven by the discovery that you cannot reliably lower BPC in a decentralized LLM without every client downloading the entire model — conflicting gradients from different data contexts cancel out during aggregation. See the [v6 record](Axiom_v6_Experiment_Container_Record.md) for full architecture, prior art search, and experiment details.
 
+### 9. First Autonomous AI Principal Investigator for Volunteer Computing
+**Date: March 1, 2026**
+
+Documented separately: **[Axiom_Autonomous_AI_PI_Record.md](Axiom_Autonomous_AI_PI_Record.md)**
+
+Built the first system where an LLM (Claude Code CLI) operates as a **fully autonomous principal investigator** for a volunteer computing network. Running on a scheduled task (hourly + on login) with zero human oversight, the AI SSHs into the production server, reviews experiment results, awards credit to volunteers based on scientific judgment, fills idle compute capacity with experiments, designs entirely new experiments based on evidence, and maintains cumulative scientific records across sessions.
+
+An exhaustive prior art search (March 2026) found **no prior system** that bridges autonomous AI scientists (Sakana AI Scientist, GPT-5+Ginkgo) with volunteer computing management (BOINC). The first fully autonomous run on March 1, 2026 awarded 655 credits, deployed 644 workunits, designed a new grokking experiment (v3), and produced a comprehensive scientific report — all without any human involvement.
+
+To my knowledge, the **first implementation** of:
+- **AI autonomously managing a BOINC project end-to-end** (no prior art found)
+- **AI designing experiments and deploying them as BOINC workunits** (no prior art found)
+- **Scheduled LLM automation as principal investigator of a volunteer computing network** (no prior art found)
+
 ---
 
 ## Architecture Summary
@@ -161,6 +175,7 @@ Volunteers (BOINC)              Server (Hetzner)
 - **Feb 26, 2026:** Discovered fundamental limitation of decentralized LLM training; designed experiment container architecture (v6.00)
 - **Feb 27, 2026:** Built experiment executor client, 10 numpy-only experiment scripts
 - **Feb 28, 2026:** v6.04 deployed — 10 experiments across 10 volunteer machines, AI-judged credit system. First results collected (Edge of Chaos completed)
+- **Mar 1, 2026:** First fully autonomous AI principal investigator run — scheduled task with zero human involvement. AI reviewed results, awarded credit, deployed 644 workunits, designed new experiment, saved scientific report. System operational on hourly schedule.
 
 ---
 
