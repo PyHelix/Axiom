@@ -163,9 +163,9 @@ The system's first fully autonomous run (no human present or intervening) comple
 2. **Found and fixed 23 database discrepancies** — results that were recorded in results files as "credited" but never actually had their database credit updated (a bug the human missed)
 3. **Reviewed 30 uncredited results** across 12 hosts and 35 experiment types
 4. **Awarded 655 credits** to 3 volunteers:
-   - Steve Dodd: +525cr (23 results across 3 machines)
-   - ChelseaOilman: +125cr (7 results on Dell-9520)
-   - Vato: +5cr (1 MemoryError result — still credited for donated compute)
+   - Volunteer A: +525cr (23 results across 3 machines)
+   - Volunteer B: +125cr (7 results)
+   - Volunteer C: +5cr (1 MemoryError result — still credited for donated compute)
 5. **Deployed 644 workunits** to fill idle cores:
    - 628 general experiment workunits across 33+ hosts
    - Including 15 brand new 32-CPU machines that had never received work
