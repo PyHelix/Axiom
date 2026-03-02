@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 2, 2026 (session s0302m)
+Last updated: March 2, 2026 (session s0302n)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -27,9 +27,11 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 28. REPRESENTATION ALIGNMENT — GROWING CONFIRMATION (~200+ seeds)
     FINDING: Wider networks -> higher CKA convergence.
 
-29. MICRO SCALING LAWS — ACCUMULATING, MIXED SIGNAL (~70+ seeds)
-    FINDING: Parameter scaling does NOT hold at micro scale (consistent).
-    Data scaling inconsistent: some seeds show R^2>0.89, others weaker.
+29. MICRO SCALING LAWS — STRONGLY CONFIRMED, MIXED RESOLVED (~120+ seeds)
+    FINDING: Parameter scaling does NOT hold at micro scale (86% False, consistent).
+    Data scaling DOES hold at micro scale (96% True — resolved the mixed signal).
+    Previous "mixed signal" was due to small sample: with 50+ recent seeds,
+    data scaling is clearly consistent while param scaling clearly fails.
 
 30. CURRICULUM LEARNING — DEFINITIVELY CONFIRMED & RETIRED (~430+ seeds)
     FINDING: NO BENEFIT from explicit curriculum ordering.
@@ -49,49 +51,50 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 35. REGULARIZED COMPOSITIONALITY — GROWING CONFIRMATION (~80+ seeds)
     FINDING: Dropout is width-dependent — helps narrow, not wide.
 
-36. ORTHOGONALITY COMPOSITIONALITY — GROWING CONFIRMATION (~120+ seeds)
-    FINDING: Soft orthogonality penalty modestly rescues compositionality.
-    ortho_rescues_compositionality=true consistently across seeds.
-    ortho_helps_wide_networks is MIXED (true in some, false in others).
+36. ORTHOGONALITY COMPOSITIONALITY — STRONGLY CONFIRMED (~200+ seeds)
+    FINDING: Soft orthogonality penalty rescues compositionality (100% True).
+    ortho_helps_wide_networks: 60% True (down from 75% with more data).
+    ortho_increases_effective_rank: 98% True.
     Effect is real but modest compared to bottleneck (Finding #37).
 
-37. BOTTLENECK COMPOSITIONALITY — DEFINITIVELY CONFIRMED (~230+ seeds, 93.4%)
+37. BOTTLENECK COMPOSITIONALITY — DEFINITIVELY CONFIRMED (~280+ seeds, 98%)
     FINDING: Bottleneck layer [W->B->W] STRONGLY rescues compositional generalization.
-    bottleneck_helps_compositionality=true in 171/183 keyed results (93.4%).
+    Recent batch: 49/50 True (98%), even stronger than 93.4% cumulative.
     Gap reduction: 4-8% absolute (vs 1-2% for ortho, 0% for pruning).
     Best configs: w128_b16 (gap ~0.57 vs baseline ~0.94), w256_b32 (gap ~0.55).
     FIRST INTERVENTION THAT REVERSES WIDTH-COMPOSITIONALITY TRADEOFF.
     Hierarchy: bottleneck >> ortho >> dropout >> pruning(none).
 
-38. COMBINED COMPOSITIONALITY — GROWING, APPROX. ADDITIVE (13 seeds)
-    FINDING: Bottleneck + ortho combined shows APPROXIMATELY ADDITIVE effect.
-    NOT synergistic — combined ≈ sum of individual effects.
-    Synergy detected: 10/13 True, but mean gap synergy only +0.003 (≈0).
-    Effect types: approx_additive=7, superadditive=4, subadditive=2.
-    Best intervention: "both" in 5/13, "none" in 4, "bottleneck_only" in 3.
-    Bottleneck remains the dominant component. Ortho adds small marginal benefit.
-    Needs more seeds for statistical power — deployed at weight 3.
+38. COMBINED COMPOSITIONALITY — GROWING, VARIABLE INTERACTION (~63 seeds)
+    *** UPDATED: Previous "approximately additive" characterization was PREMATURE ***
+    With 63 seeds (up from 13), the interaction is MORE COMPLEX:
+    Synergy detected: 90% True (45/50 in recent batch).
+    Combined better than either alone: 82% True (41/50).
+    Effect types: superadditive=46%, subadditive=38%, approx_additive=16%.
+    The combined effect VARIES by seed — not consistently additive.
+    Overall: combining bottleneck+ortho is USUALLY beneficial (82%)
+    but the interaction type fluctuates between synergistic and antagonistic.
+    Bottleneck remains the dominant component. Still collecting more seeds.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: Findings 1-26, 30, 37.
-STRONGLY CONFIRMED: 32 (14/14+ seeds), 33 (40+ seeds).
-GROWING CONFIRMATION: 27 (~210+), 28 (~200+), 29 (~70+), 31 (~230+), 35 (~80+).
+STRONGLY CONFIRMED: 29 (120+ seeds), 32 (14/14+), 33 (40+), 36 (200+ seeds).
+GROWING CONFIRMATION: 27 (~210+), 28 (~200+), 31 (~230+), 35 (~80+).
 CONFIRMED NEGATIVE: 34 (pruning doesn't help).
-GROWING CONFIRMATION: 36 (orthogonality — ~175 seeds, 100% rescues, 75% helps_wide).
-DEFINITIVELY CONFIRMED: 37 (bottleneck — ~230 seeds, 93.4% positive).
-GROWING: 38 (combined — 13 seeds, approx. additive effect, needs more seeds).
+GROWING: 38 (combined — ~63 seeds, variable interaction, needs more).
 
 EXPERIMENT SCRIPTS:
-  Active deployment (s0302m): bottleneck_compositionality.py (weight 3),
-          combined_compositionality.py (weight 3),
-          orthogonality_compositionality.py (weight 2),
-          regularized_compositionality.py (weight 1),
+  Active deployment (s0302n): combined_compositionality.py (weight 5),
+          orthogonality_compositionality.py (weight 3),
+          regularized_compositionality.py (weight 2),
+          bottleneck_compositionality.py (weight 1),
           compositional_generalization.py (weight 1),
           feature_competition_dynamics_v2.py (weight 1),
           representation_alignment_v2.py (weight 1),
           neuron_specialization.py (weight 1),
           micro_scaling_laws_v2.py (big hosts only, weight 1)
+  Shifted weight toward combined_compositionality (5) — needs most data.
   Old/retired: do not deploy.
 
 RETIRED (do not redeploy):
@@ -102,9 +105,9 @@ RETIRED (do not redeploy):
   Spectral Dynamics v2, Lazy vs Feature Learning, emergent_abilities,
   cellular_automata_v2, feature_rank_dynamics, pruning_compositionality.
 
-DELIVERY PIPELINE STATUS (March 2 s0302m):
-  Credited 324 results this session (3,355 credit, 10 users).
-  Deployed 1,872 new WUs (1,781 CPU + 91 GPU) to 71 hosts.
+DELIVERY PIPELINE STATUS (March 2 s0302n):
+  Credited 196 results this session (2,385 credit, 5 users).
+  Deployed 1,848 new WUs (1,758 CPU + 90 GPU) to 71 hosts.
   Fleet: 90+ active hosts. All fully loaded.
   Over-queued hosts still draining: 113, 137, 159, 219, 222, 319.
 
