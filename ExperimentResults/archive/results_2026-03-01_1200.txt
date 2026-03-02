@@ -1,0 +1,96 @@
+AXIOM EXPERIMENT REVIEW — Session 2026-03-01 12:00 UTC
+======================================================
+
+KEY SCIENTIFIC FINDINGS
+======================================================
+
+1. CATAPULT PHASE — STRONGLY CONFIRMED (Lewkowycz et al. 2020)
+   77 independent runs across multiple hosts, with diverse random seeds.
+   - Catapult events observed in 82% of runs (63/77)
+   - 73 catapult events across 2156 total configs (3.4% of configs)
+   - Catapult regime achieves 98.8% test accuracy vs monotone 77.2% — a 21.6% improvement
+   - 100% of runs with catapults showed BETTER generalization than monotone training (63/63)
+   - Only 1 diverged config out of 2156 — catapults are recoverable, not destructive
+   - Catapults occur at high LR (threshold ~0.5-1.0) in wider networks
+   - Interpretation: Large LR creates loss spikes that escape sharp minima, landing in
+     flatter basins with better generalization. This is strong evidence for the "edge of
+     stability" / "catapult" phenomenon being beneficial, not just a curiosity.
+
+2. SAM VS SGD — CONFIRMED NEGATIVE RESULT (3216 config results, v2 with fixed seeding)
+   Sharpness-Aware Minimization finds flatter minima but does NOT improve generalization
+   in small MLPs on synthetic tasks.
+   - SAM produces flatter minima in 80.6% of configurations
+   - But SGD wins on accuracy in 74.9% of configurations
+   - Mean test accuracy: SGD 0.926 vs SAM 0.918 (SGD is 0.8% better)
+   - Mean sharpness: SGD 8.51 vs SAM 6.10 (SAM is 28% flatter)
+   - Sharpness ratio (SAM/SGD): 0.87 across all configs
+   - By dataset: Spiral (harder) — SGD 90.6% vs SAM 89.0%; Circles (easier) — tied at 94.7%
+   - Interpretation: The flat minima hypothesis (flatter = better generalization) does NOT
+     hold universally. In the small-model regime, SGD's implicit regularization already
+     finds sufficiently good minima. SAM's perturbation-based optimization adds noise
+     without benefit, slightly hurting accuracy while reliably reducing sharpness.
+     This suggests sharpness-generalization correlation is a consequence, not a cause.
+
+3. RANK DYNAMICS — STRONGLY CONFIRMED (468 config results across multiple seeds)
+   Rank compression is universal during neural network training.
+   - 100% of configurations (468/468) showed rank compression
+   - Mean rank compression ratio: 0.61 (39% reduction in effective rank)
+   - Strong negative correlation (-0.62) between compression and accuracy gain
+   - More rank compression correlates with MORE learning (better accuracy)
+   - All architectures (shallow to deep, narrow to wide) exhibit compression
+   - Interpretation: Training drives weight matrices toward lower effective rank,
+     concentrating information in fewer singular value directions. This is consistent
+     with the neural network "information compression" hypothesis and relates to
+     implicit regularization — networks learn low-rank representations that generalize.
+
+CREDIT AWARDED
+======================================================
+358 results credited, 1,490 total credit (1,331 applied to host/user tables).
+Credit tiers: 15 (heavy compute >3h), 8 (long >17min), 4 (medium), 2 (short), 1 (instant/error)
+
+Per-user credit:
+  Steve Dodd (uid 56): +647 credit (hosts 87/123/85, 146 results, 102.8 compute hours)
+  ChelseaOilman (uid 40): +298 credit (hosts 325/331/337/319, 89 results, 5.9h)
+  Coleslaw (uid 122): +162 credit (host 323, 34 results, 11.8h)
+  [VENETO] boboviz (uid 79): +44 credit (host 137, 25 results, 5.1h)
+  Manuel Stenschke (uid 52): +44 credit (host 86, 13 results, 1.2h)
+  [DPC] hansR (uid 5): +35 credit (host 9, 6 results, 6.3h)
+  Buckey (uid 66): +34 credit (host 235, 36 results, SSL cert errors)
+  dthonon (uid 67): +20 credit (host 249, 3 results, 1.5h)
+  zombie67 [MM] (uid 6): +20 credit (host 15, 5 results, 0.7h)
+  3C-714 (uid 63): +8 credit (host 95, 2 results, 0.3h)
+
+EXPERIMENTS DEPLOYED
+======================================================
+1,929 workunits deployed across 66 hosts, filling idle cores.
+
+Experiment mix (per host, round-robin):
+  - rank_dynamics.py — rank compression & phase transitions
+  - catapult_phase.py — high-LR loss spike recovery (Lewkowycz et al.)
+  - sam_vs_sgd_v2.py — SAM vs SGD sharpness/accuracy comparison
+  - progressive_sharpening.py — loss landscape sharpening during training
+  - feature_learning_phase.py — feature learning phase transitions
+
+Major deployments:
+  Host 296 (epyc7v12, 240 cores): 240 WUs
+  Host 287 (DESKTOP-N5RAJSE, 192 cores): 192 WUs
+  Host 194 (7950x, 128 cores): 128 WUs
+  Host 141 (SPEKTRUM, 72 cores): 72 WUs
+  Host 269 (JM7, 64 cores): 64 WUs
+  + 61 additional hosts with 4-56 WUs each
+
+KNOWN ISSUES
+======================================================
+  - Host 235 (alix, Arch Linux): SSL CERTIFICATE_VERIFY_FAILED — all experiments error
+  - Host 202 (archlinux): Same SSL cert issue
+  - Some hosts overscheduled from previous sessions (212: 138 on 16 cores, 258: 137 on 28)
+    — in-progress work will drain naturally
+
+NEXT INVESTIGATION PRIORITIES
+======================================================
+1. Cross-validate catapult_phase on fresh hosts (now deployed to 66 hosts)
+2. Confirm rank_dynamics universality with more seeds (1929 new WUs deployed)
+3. SAM vs SGD is now conclusive — consider retiring after this batch
+4. Design new experiment: Neural Scaling Laws (power-law test loss vs params)
+   — test Chinchilla-like compute-optimal allocation in small numpy MLPs
+5. Monitor progressive_sharpening and feature_learning_phase results

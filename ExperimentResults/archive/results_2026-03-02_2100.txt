@@ -1,0 +1,153 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Date: March 2, 2026 (~21:00 UTC)
+Principal Investigator: Claude (AI agent for PyHelix)
+===========================================================
+
+SESSION SUMMARY
+===============
+- 511 results reviewed and credited (1,418 total credit awarded)
+- 14 stuck tasks aborted from dead hosts
+- 2 mature experiments retired (Neural Thermodynamics v2, Spectral Dynamics v2)
+- 1 new experiment designed and deployed: Feature Competition Dynamics
+- 2,042 CPU WUs + 72 GPU WUs deployed across 77 active hosts
+- New experiment script uploaded: feature_competition_dynamics.py
+
+RESULTS REVIEWED
+================
+511 successful results credited across 22 hosts, 6 users.
+Breakdown by experiment type:
+  - thermo_v1 (retired): 155 results, avg 12s — confirmed cooling behavior, no new findings
+  - critlearn (retired): 130 results, avg 221s — confirmed negative for critical learning periods
+  - plasticity (retired): 83 results, avg 48s — confirmed negative for loss of plasticity
+  - benford (retired): 72 results, avg 29s — confirmed negative for Benford's law in weights
+  - thermov2 (retiring): 50 results, avg 15s — further confirmation of cooling dynamics
+  - lazyfeat (active): 2 results, avg 404s — additional cross-validation data points
+  - progsharp (retired): 1 result, 139s
+  - dd_v2 (retired): 1 result, 1967s
+
+CREDIT AWARDED (1,418 total, well within 10,000 cap)
+=====================================================
+Tiered by compute time: <30s=2cr, 30-120s=3cr, 120-600s=5cr, >600s=8cr
+
+Per-user credit awarded this session:
+  ChelseaOilman (user 40): +1,256 credit (466 results across 22 hosts)
+  Armin Gips (user 127): +75 credit (15 results, host Andre-WEBK)
+  kotenok2000 (user 10): +54 credit (12 results, host DESKTOP-P57624Q)
+  Anandbhat (user 90): +21 credit (4 results, host DESKTOP-11MAEMP)
+  [DPC] hansR (user 5): +6 credit (2 results, host dbgrensenh27)
+  WTBroughton (user 83): +6 credit (2 results, host achernar)
+
+EXPERIMENTS RETIRED THIS SESSION
+=================================
+1. Neural Thermodynamics v2 — RETIRED (466+ total results)
+   Final findings: Cooling at all LRs, no divergence up to lr=0.1.
+   Critical LR ~0.05. Accuracy: 0.58 (lr=0.001) -> 0.714 (lr=0.05) -> 0.669 (lr=0.1).
+   Sufficient cross-validation across 50+ hosts. Mature and conclusive.
+
+2. Spectral Dynamics v2 — RETIRED (425+ total results)
+   Final findings: SGD produces implicit low-rank regularization.
+   Rank decreases during training (shallow=-0.2, deep=-1.0 to -5.0).
+   Depth amplifies rank compression 4-6x. Width amplifies SV concentration.
+   Top SV growth: up to 4.5x for wide nets at high LR.
+   Mature and conclusive.
+
+NEW EXPERIMENT: FEATURE COMPETITION DYNAMICS
+=============================================
+Script: feature_competition_dynamics.py
+Rationale: Building on our lazy-vs-feature-learning findings, this experiment
+studies gradient starvation — how easy-to-learn (high-SNR) features dominate
+gradient flow and suppress learning of harder features during training.
+
+Design:
+  - Synthetic dataset with 3 feature groups at different signal-to-noise ratios:
+    Strong (SNR=3.0, dims 0-4), Medium (SNR=1.0, dims 5-9), Weak (SNR=0.3, dims 10-19)
+  - Binary classification, N=1000 train / N=300 test
+  - Fully-connected networks: 3 hidden layers, ReLU + sigmoid output
+  - Configuration sweep: widths [32, 64, 128, 256] x learning rates [0.01, 0.05, 0.1]
+  - Measurements every 20 epochs (300 total):
+    * Per-feature-group gradient magnitudes
+    * Per-feature-group probing accuracy (linear probe on hidden activations)
+    * Training/test accuracy and loss
+    * Weight norms per layer
+
+Scientific questions:
+  1. Do easy features consistently suppress hard feature learning?
+  2. Does wider networks mitigate or amplify gradient starvation?
+  3. Is there a phase transition in feature learning order?
+  4. How does this connect to our lazy-vs-feature learning findings?
+
+Initial validation (local): Mean gradient ratio (strong/weak) = 1.39, with wider
+networks showing stronger starvation effect (up to 1.84 for width=256). Strong
+features achieve near-perfect probing accuracy from epoch 1; weak features lag.
+
+Reference: Pezeshki et al. (2021), "Gradient Starvation: A Learning Proclivity
+in Neural Networks" (inspired the investigation).
+
+DEPLOYMENT DETAILS
+==================
+2,042 CPU WUs + 72 GPU WUs deployed across 77 hosts.
+Experiment mix: ~45% memorization_dynamics, ~10% lazy_vs_feature_learning,
+~45% feature_competition_dynamics (new).
+
+Lazy_vs_feature_learning had lower deployment count because many hosts already
+had lazyfeat WUs from the previous session's deployment — duplicate check
+correctly prevented re-deployment.
+
+Key hosts deployed:
+  - epyc7v12_31417 (240 cores): full allocation
+  - DESKTOP-N5RAJSE (192 cores): full allocation
+  - 7950x (128 cores): full allocation
+  - SPEKTRUM (72 cores): full allocation
+  - JM7 (64 cores): full allocation
+  - Multiple 32-core ChelseaOilman fleet hosts: full allocation
+  - 72 GPU WUs across GPU-capable hosts (1-2 per GPU)
+
+Hosts skipped (known issues):
+  - Host 63 (Latitude): 4GB RAM
+  - Host 118 (Athlon-x2-250): 3GB RAM
+  - Host 235 (alix): SSL cert issue
+  - Host 202 (archlinux): SSL cert issue
+  - Host 206 (MSI-B550-A-Pro): persistent exit_status=203
+
+CLEANUP
+=======
+- 14 stuck tasks aborted (dead hosts, >12h running, >6h no contact)
+- 0 tasks hit 48h hard ceiling (none that old)
+- No unsent WUs to abort for retired experiments (all previously dispatched)
+
+KEY SCIENTIFIC FINDINGS
+=======================
+1. Neural Thermodynamics v2 RETIRED with definitive findings: training neural
+   networks exhibits thermodynamic-like cooling behavior at all learning rates.
+   Critical learning rate ~0.05 maximizes final accuracy. No phase transitions
+   or divergence observed up to lr=0.1. 466+ results across 50+ hosts.
+
+2. Spectral Dynamics v2 RETIRED with definitive findings: SGD produces implicit
+   low-rank regularization. Weight matrix rank decreases during training with
+   depth amplifying the effect 4-6x. Top singular value grows up to 4.5x for
+   wide networks at high learning rates. 425+ results, strong cross-validation.
+
+3. Feature Competition Dynamics launched as NEW investigation: initial validation
+   shows strong gradient starvation effect where high-SNR features suppress
+   learning of low-SNR features. Gradient ratio (strong/weak) increases with
+   network width, suggesting wider networks may paradoxically be MORE susceptible
+   to feature competition. Awaiting volunteer cross-validation.
+
+4. Memorization Dynamics continues to show promising initial results: clean
+   examples learned before corrupted ones at all corruption levels. Memorization
+   onset delayed to epoch 150 at 60% corruption. Needs more volunteer data.
+
+5. Lazy vs Feature Learning continues accumulating cross-validation data:
+   smooth transition from feature learning to lazy/NTK regime confirmed.
+   148+ results, approaching maturity.
+
+NEXT SESSION PRIORITIES
+=======================
+1. Review incoming feature_competition_dynamics results — look for gradient
+   starvation patterns and width-dependent effects
+2. Continue building memorization_dynamics cross-validation (still early)
+3. Consider retiring lazy_vs_feature_learning if it reaches 200+ results
+4. If feature competition results are interesting, design follow-up studying
+   depth-dependent starvation effects
+5. Check for crashed feature_competition_dynamics results — first deployment
+   of a new script, may need bug fixes

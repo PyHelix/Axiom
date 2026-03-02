@@ -1,0 +1,99 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Date: March 2, 2026 ~12:10 UTC
+Session Type: Maintenance & Pipeline Fix
+================================================================
+
+EXECUTIVE SUMMARY
+================================================================
+This was a maintenance session focused on unblocking the delivery pipeline.
+The previous session (03:43 UTC) deployed 2,254 workunits across the fleet
+but they were blocked by the BOINC transition_time bug (set 10 days in the
+future). This session fixed the bug, cleaned up stuck tasks, and deployed
+29 additional WUs to hosts that had only legacy work running.
+
+No new results were available to review or credit this session.
+
+ACTIONS TAKEN
+================================================================
+
+1. TRANSITION_TIME FIX (Critical)
+   - All 2,254 WUs from session s0302b had transition_time set to March 12
+     (10 days in the future), preventing the scheduler from dispatching them
+   - Fixed by setting transition_time=0 for all live WUs with error_mask=0
+   - Pushed 34,492 dead WUs (error_mask!=0) to far-future to keep them out
+     of the transitioner queue
+   - Ran transitioner --one_pass to process the queue
+
+2. STUCK TASK CLEANUP
+   - Aborted 15 stuck tasks from dead hosts (>12h running, >6h no contact)
+   - No tasks found running >48h (hard ceiling check passed)
+
+3. NEW WU DEPLOYMENT (Session s0302c)
+   Three hosts had running legacy work but no new experiment WUs queued:
+   - Host 159 (achernar, 12 CPUs, 62GB RAM): Deployed 12 CPU + 2 GPU = 14 WUs
+   - Host 319 (Dell-XPS-15-9560, 8 CPUs, 32GB RAM): Deployed 8 CPU + 2 GPU = 10 WUs
+   - Host 346 (ManU2, 4 CPUs, 12GB RAM): Deployed 4 CPU + 1 GPU = 5 WUs
+   Total: 29 new WUs created and queued
+
+   Experiments deployed: memorization_dynamics, feature_competition_dynamics,
+   representation_alignment, micro_scaling_laws (all 4 active experiments)
+
+4. TRANSITIONER BUG WORKAROUND
+   - Discovered that transitioner_flags=2 was set on new WUs but no results
+     were created (transitioner processed WUs silently without generating results)
+   - Fixed by resetting transitioner_flags=0 and transition_time=0, then
+     re-running transitioner, which successfully created 29 result entries
+
+FLEET STATUS
+================================================================
+Active hosts: 92 (last 72h contact)
+Hosts with queued work (s0302b+c): ~78 hosts (all viable hosts covered)
+Total unsent WUs: 2,283
+In-progress legacy tasks: 319
+
+Known skipped hosts:
+  - Host 63 (Latitude): 4GB RAM, below 6GB threshold
+  - Host 118 (Athlon-x2-250): 3GB RAM, below threshold
+  - Host 235 (alix): SSL CERTIFICATE_VERIFY_FAILED
+  - Host 202 (archlinux): SSL CERTIFICATE_VERIFY_FAILED
+  - Host 206 (MSI-B550-A-Pro): Consistent exit_status=203
+
+Overloaded hosts (legacy work, no new WUs needed):
+  - Host 212 (COB2): 96 tasks on 16 CPUs
+  - Host 113 (XYLENA): 41 tasks on 24 CPUs
+  - Host 61 (DESKTOP-3OOKN65): 28 tasks on 12 CPUs
+
+CREDIT AWARDED THIS SESSION
+================================================================
+None. No uncredited results found.
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+1. No new experimental results returned since the previous session. The 2,254
+   workunits deployed at 03:43 UTC were blocked by the transition_time bug and
+   never dispatched to hosts. This has now been fixed and work should begin
+   dispatching as hosts check in.
+
+2. Four active experiments await results: Memorization Dynamics (187 prior
+   results), Feature Competition Dynamics (0 results), Representation Alignment
+   (0 results), and Micro Scaling Laws (0 results). These were deployed in the
+   previous session and should begin returning data within hours.
+
+3. Pipeline reliability continues to be the primary bottleneck. The BOINC
+   transition_time bug has now been encountered and fixed in two consecutive
+   sessions. The workaround (manually setting transition_time=0 after create_work)
+   is reliable but requires post-deployment intervention.
+
+NEXT SESSION PRIORITIES
+================================================================
+1. Review results from the 4 active experiments (2,283 WUs should be completing)
+2. Award credit for completed work
+3. Analyze scientific findings from new experiments:
+   - Memorization Dynamics: Does generalization-before-memorization hold?
+   - Feature Competition: Quantify gradient starvation across widths
+   - Representation Alignment: Does CKA converge for wider networks?
+   - Micro Scaling Laws: Do power-law scaling relationships emerge at micro scale?
+4. If sufficient cross-validation achieved, consider retiring experiments and
+   designing new ones (potential directions: learning rate warmup dynamics,
+   batch normalization effects on loss landscape geometry, or
+   catastrophic forgetting in sequential task learning)

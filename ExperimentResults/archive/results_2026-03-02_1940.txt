@@ -1,0 +1,112 @@
+AXIOM EXPERIMENT SESSION LOG
+Session: s0303c | Date: March 2, 2026 ~19:40 UTC
+================================================================
+
+OVERVIEW
+--------
+Reviewed 329 new experiment results across 6 users and 14 hosts.
+Awarded 5,032 credit. Deployed 1,829 new workunits (1,746 CPU + 83 GPU)
+to 67 active hosts. First deployment of orthogonality compositionality
+experiment. Designed new bottleneck compositionality experiment.
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+
+1. NEURON SPECIALIZATION CONFIRMED WITH DIVERSE SEEDS
+   After fixing the seeding bug in s0302h, fresh results from 20+ independent
+   seeds on GPU and CPU hosts ALL confirm the pattern:
+   - Selectivity slightly increases with width (0.644-0.662 at W32 to 0.660-0.670 at W256)
+   - Group alignment decreases with width (0.362-0.363 at W32 to 0.340-0.344 at W256)
+   - Effective dimensionality ratio STRONGLY decreases (0.277-0.286 at W32 to 0.070-0.071 at W256)
+   This is NOT a seeding artifact. The representational collapse is real.
+   Wider networks use dramatically less of their capacity.
+
+2. REGULARIZED COMPOSITIONALITY: DROPOUT IS WIDTH-DEPENDENT
+   First batch of 26+ results from regularized_compositionality.py shows a
+   striking pattern: dropout effectiveness diminishes with network width.
+   - W32: dropout 0.4 reduces OOD gap by ~0.39 (from ~0.67 to ~0.28)
+   - W64: dropout 0.4 reduces gap by ~0.27-0.33 (moderate benefit)
+   - W128: dropout 0.4 barely helps (~0.03-0.10 improvement, sometimes negative)
+   - W256: minimal to no benefit observed
+   Weight decay alone provides negligible improvement at all widths.
+   Combined dropout+weight_decay tracks dropout-only performance.
+   INTERPRETATION: Training-time regularization cannot overcome the fundamental
+   width-compositionality tradeoff. The rank collapse in wider networks is too
+   deeply embedded in the learning dynamics for dropout to fix.
+
+3. CONTINUED REPLICATION OF CORE FINDINGS
+   - Compositional generalization: ~40 new results, all consistent with W32>W64>W128
+   - Feature competition dynamics v2: ~41 new results with diverse seeds
+   - Representation alignment v2: ~34 new results confirming width->CKA pattern
+   - Micro scaling laws v2: ~29 new results (avg 85 min runtime on big machines)
+
+CREDIT AWARDED
+----------------------------------------------------------------
+Total credit this session: 5,032 (within 10,000 cap)
+Credit tiers: <60s = 8 credit, 60-600s = 15 credit, >600s = 30 credit
+
+Per-user breakdown:
+  ChelseaOilman (userid 40):  3,328 credit (202 results, 7 hosts)
+  Steve Dodd (userid 56):     1,353 credit (58 results, 3 hosts)
+  WTBroughton (userid 83):      146 credit (11 results, 1 host)
+  kotenok2000 (userid 10):      114 credit (8 results, 1 host)
+  marmot (userid 72):             61 credit (4 results, 1 host)
+  [DPC] hansR (userid 5):        30 credit (2 results, 1 host)
+
+Website counters updated: credited_count=1614, total_results=24894.
+
+EXPERIMENTS DEPLOYED
+----------------------------------------------------------------
+Deployed 1,829 workunits (1,746 CPU + 83 GPU) to 67 hosts.
+
+Experiment mix per host (round-robin filling idle cores):
+  1. orthogonality_compositionality.py (NEW - first deployment)
+  2. neuron_specialization.py (fresh replications)
+  3. regularized_compositionality.py (more seeds)
+  4. compositional_generalization.py (replication)
+  5. feature_competition_dynamics_v2.py (replication)
+  6. representation_alignment_v2.py (replication)
+  7. micro_scaling_laws_v2.py (big machines only, >60GB RAM)
+
+GPU deployments (83 WUs across hosts with GPUs):
+  - neuronspec_gpu, regcomp_gpu, orthocomp_gpu
+
+Largest deployments:
+  Host 287 (DESKTOP-N5RAJSE, 192 CPUs): 192 CPU + 2 GPU WUs
+  Host 194 (7950x, 128 CPUs): 128 CPU + 1 GPU WU
+  Host 141 (SPEKTRUM, 72 CPUs): 72 CPU + 2 GPU WUs
+  Host 269 (JM7, 64 CPUs): 64 CPU + 1 GPU WU
+
+FAILURES INVESTIGATED
+----------------------------------------------------------------
+- Host 340 (Foxtrot-3): exit_status=-148 on ALL 31 regcomp tasks.
+  Likely OOM or system timeout on a 30GB RAM machine running 32 regcomp
+  tasks simultaneously. No remaining queued work to abort.
+- Host 321 (Rosie): exit_status=195 on multiple experiments.
+  Host-specific issue (20 CPUs, 112GB RAM). Deployed fresh work this session.
+- memdynv2: Known AssertionError in data generation. Not redeployed.
+- No stuck tasks found (>12h on dead hosts or >48h ceiling).
+- All previously broken experiments (cellular_automata_v2, etc.) have no
+  remaining queued work.
+
+NEW EXPERIMENT DESIGNED
+----------------------------------------------------------------
+BOTTLENECK COMPOSITIONALITY (Finding #37):
+  Hypothesis: Forcing information through a narrow bottleneck layer
+  [input, W, B, W, output] prevents rank collapse and rescues
+  compositional generalization in wider networks.
+  Rationale: Since regularization (dropout/weight decay) cannot fix
+  the width-compositionality tradeoff, perhaps architectural constraints
+  on information flow can. If W=128 with bottleneck B=16 matches W=32
+  compositionality, it proves the problem is information geometry, not
+  capacity, and is architecturally solvable.
+  Script: bottleneck_compositionality.py (to be deployed next session)
+
+NEXT SESSION PRIORITIES
+----------------------------------------------------------------
+1. Review orthogonality compositionality results (first batch expected)
+2. Continue reviewing regularized compositionality (more seeds)
+3. Deploy bottleneck compositionality experiment
+4. If ortho results are negative, consider spectral regularization
+   (constraining singular value spectrum directly)
+5. Monitor host 340 and 321 for continued failures

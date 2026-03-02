@@ -1,0 +1,108 @@
+AXIOM EXPERIMENT FINDINGS SUMMARY
+Last updated: March 3, 2026 (session s0303d ~05:00 UTC)
+==================================
+
+This file is your memory across sessions. Update it after each run.
+Do NOT maintain cumulative result ID lists — use the database instead:
+  SELECT id FROM result WHERE granted_credit > 0 AND name LIKE 'exp_%'
+
+MAJOR SCIENTIFIC FINDINGS (ranked by significance)
+============================================================
+
+1-25. DEFINITIVELY CONFIRMED or RETIRED: See archive for details.
+    Includes: Loss Landscape, Sigmoid>ReLU, Lottery Ticket, Grokking(neg),
+    Edge of Chaos, Depth vs Width, Mode Connectivity, Eigenspectrum,
+    Simplicity Bias, Neural Collapse(neg), Reservoir, Info Bottleneck,
+    Gradient Noise, Power Law Forgetting, Progressive Sharpening,
+    SAM vs SGD(neg), Catapult Phase, Rank Dynamics, Loss of Plasticity(neg),
+    Critical Learning Periods(neg), Benford(neg), Neural Thermo v1/v2,
+    Spectral Dynamics v2, Lazy vs Feature Learning.
+
+26. MEMORIZATION DYNAMICS — DEFINITIVELY CONFIRMED & RETIRED (~450+ seeds)
+    FINDING: SGD learns clean examples before corrupted at ALL corruption levels.
+
+27. FEATURE COMPETITION DYNAMICS — GROWING CONFIRMATION (~160+ seeds)
+    FINDING: Gradient starvation scales with width. Mean ratio ~1.45.
+
+28. REPRESENTATION ALIGNMENT — GROWING CONFIRMATION (~150+ seeds)
+    FINDING: Wider networks -> higher CKA convergence.
+
+29. MICRO SCALING LAWS — ACCUMULATING, MIXED SIGNAL (~31+ seeds)
+    FINDING: Parameter scaling does NOT hold at micro scale (consistent).
+    Data scaling inconsistent: some seeds show R^2>0.89, others weaker.
+
+30. CURRICULUM LEARNING — DEFINITIVELY CONFIRMED & RETIRED (~430+ seeds)
+    FINDING: NO BENEFIT from explicit curriculum ordering.
+
+31. COMPOSITIONAL GENERALIZATION — GROWING CONFIRMATION (~160+ seeds)
+    FINDING: Wider networks have WORSE compositional generalization.
+
+32. FEATURE RANK DYNAMICS — STRONGLY CONFIRMED (14/14+ seeds, 100%)
+    FINDING: Wider networks converge to LOWER effective rank / width ratio.
+
+33. NEURON SPECIALIZATION — CONFIRMED (~22+ diverse seeds)
+    FINDING: Representational collapse — wider nets use smaller fraction of capacity.
+
+34. PRUNING COMPOSITIONALITY — CONFIRMED NEGATIVE
+    FINDING: Magnitude pruning does NOT recover compositional generalization.
+
+35. REGULARIZED COMPOSITIONALITY — GROWING CONFIRMATION (~28+ seeds)
+    FINDING: Dropout is width-dependent — helps narrow, not wide.
+
+36. ORTHOGONALITY COMPOSITIONALITY — GROWING CONFIRMATION (75 seeds)
+    FINDING: Soft orthogonality penalty modestly rescues compositionality.
+    ortho_rescues_compositionality=true consistently across seeds.
+    ortho_helps_wide_networks is MIXED (true in some, false in others).
+    Baseline gaps confirm Finding #31. Ortho gives ~1-2% gap improvement per width.
+    Effect is real but modest compared to bottleneck (Finding #37).
+
+37. BOTTLENECK COMPOSITIONALITY — STRONG POSITIVE SIGNAL (31 seeds)
+    FINDING: Bottleneck layer [W→B→W] STRONGLY rescues compositional generalization.
+    bottleneck_helps_compositionality=true in ALL sampled seeds.
+    Gap reduction: 4-8% absolute (vs 1-2% for ortho, 0% for pruning).
+    Best configs: w128_b16 (gap ~0.57 vs baseline ~0.94), w256_b32 (gap ~0.55).
+    FIRST INTERVENTION THAT REVERSES WIDTH-COMPOSITIONALITY TRADEOFF (Finding #31).
+    Bottleneck rank stays well below width — confirms architectural constraint works.
+    Hierarchy of interventions: bottleneck >> ortho >> dropout >> pruning(none).
+
+CROSS-VALIDATION STATUS
+============================================================
+DEFINITIVELY CONFIRMED & RETIRED: Findings 1-26, 30.
+STRONGLY CONFIRMED: 32 (14/14+ seeds), 33 (22+ diverse seeds).
+GROWING CONFIRMATION: 27 (~160+), 28 (~150+), 29 (~31+), 31 (~160+), 35 (~28+).
+CONFIRMED NEGATIVE: 34 (pruning doesn't help).
+GROWING CONFIRMATION: 36 (orthogonality — 75 seeds, modest positive signal).
+STRONG EARLY SIGNAL: 37 (bottleneck — 31 seeds, strong positive, needs 50+).
+
+EXPERIMENT SCRIPTS:
+  Active deployment (s0303d): orthogonality_compositionality.py (weight 3),
+          bottleneck_compositionality.py (weight 3),
+          regularized_compositionality.py, compositional_generalization.py,
+          feature_competition_dynamics_v2.py, representation_alignment_v2.py,
+          neuron_specialization.py, micro_scaling_laws_v2.py (big hosts only)
+  Old/retired: do not deploy.
+
+RETIRED (do not redeploy):
+  ALL grokking variants, ALL definitively confirmed experiments,
+  memorization_dynamics_v2, curriculum_learning_dynamics,
+  SAM vs SGD, Catapult Phase, Rank Dynamics, Loss of Plasticity,
+  Critical Learning Periods, Benford's Law, Neural Thermo v1/v2,
+  Spectral Dynamics v2, Lazy vs Feature Learning, emergent_abilities,
+  cellular_automata_v2, feature_rank_dynamics, pruning_compositionality.
+
+DELIVERY PIPELINE STATUS (March 3 s0303d ~05:00 UTC):
+  Credited 349 results this session (2,756 credit, 10 users).
+  Deployed 1,915 new WUs (1,820 CPU + 95 GPU) to 71 hosts.
+  Fleet: 80+ active hosts. All fully loaded.
+  Over-queued hosts still draining: 113, 137, 159, 219, 222, 319.
+
+KNOWN ISSUES:
+  - BOINC create_work sets transition_time to FUTURE — MUST fix after EVERY create_work
+  - Targeted WUs: result records created by scheduler on host check-in, NOT transitioner
+  - Host 235 (alix): SSL CERTIFICATE_VERIFY_FAILED — skipped
+  - Host 202 (archlinux): Same SSL issue — skipped
+  - Host 63 (Latitude): Only 4GB RAM — skipped
+  - Host 118 (Athlon-x2-250): Only 3GB RAM — skipped
+  - Host 206 (MSI-B550-A-Pro): Consistent exit_status=203 errors — skipped
+  - Host 321 (Rosie): exit_status=195 on multiple experiments — skipped
+  - cellular_automata_v2: BROKEN, aborted

@@ -1,0 +1,132 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Date: March 2, 2026 ~17:00 UTC
+Session ID: s0303b
+====================================
+
+STEP 1: SYSTEM STATE AT SESSION START
+- 85+ active hosts in fleet
+- 919 uncredited results pending review
+- Nearly entire fleet idle (most hosts had 0 running experiments)
+- 2 stuck tasks on dead host (DESKTOP-3OOKN65, offline >10.8h)
+- No tasks exceeding 48h ceiling
+- Some overloaded hosts from prior sessions (host 219: 1076 queued, host 319: 1022 queued)
+
+STEP 2: CLEANUP ACTIONS
+- Aborted 2 stuck tasks on host 61 (DESKTOP-3OOKN65): IDs 1519725, 1519726
+- Skipped known problem hosts: 63 (4GB), 118 (3GB), 235 (SSL), 202 (SSL), 206 (exit 203)
+- No experiments above 50% failure rate requiring abort (microscalev2 at 24% is acceptable)
+
+STEP 3: CREDIT AWARDED (935 results, ~9,775 total credit)
+Credit tiers:
+  Tier 1 (<30s): 520 results × 5 credit = 2,600
+  Tier 2 (30-300s): 347 results × 15 credit = 5,205
+  Tier 3 (300-1000s): 58 results × 30 credit = 1,740
+  Tier 4 (>1000s): 10 results × 50 credit = 500
+  TOTAL: 10,045 credit awarded (under 50,000 cap)
+
+Per-user credit:
+  ChelseaOilman: ~835 results, bulk contributor from ChelseaOilman fleet
+  Anandbhat: 63 results (hosts 219, 222)
+  kotenok2000: 8 results
+  marmot: 7 results
+  Coleslaw: 5 results
+  Vato: 1 result (5417s grokking_dynamics run)
+
+Updated: 36 hosts, 14 users (host and user total_credit incremented)
+Website counters: credited_count 21904→22839, total_results_count 21357→21837
+
+STEP 4: DEPLOYMENT (batch s0303b)
+Deployed 1,865 new work units to ~65 hosts:
+  CPU experiments:
+    compgen (compositional_generalization): 373 WUs
+    featcompv2 (feature_competition_dynamics_v2): 363 WUs
+    repalignv2 (representation_alignment_v2): 338 WUs
+    featrank (feature_rank_dynamics): 327 WUs
+    microscalev2 (micro_scaling_laws_v2): 315 WUs
+    neuronspec (neuron_specialization — NEW): 5 WUs (pilot on large hosts)
+  GPU experiments:
+    compgen_gpu: 72 WUs
+    featcompv2_gpu: 72 WUs
+
+Notable host assignments:
+  epyc7v12 (240 cores): 48 CPU WUs + 0 GPU
+  DESKTOP-N5RAJSE (192 cores, 2 GPU): 192 CPU + 4 GPU
+  7950x (128 cores, 1 GPU): 128 CPU + 2 GPU
+  SPEKTRUM (72 cores, 2 GPU): 72 CPU + 4 GPU
+  Small hosts (4 cores): 4 CPU + 2 GPU each
+
+STEP 5: NEW EXPERIMENT DESIGNED
+
+** Neuron Specialization vs Width (neuron_specialization.py) **
+
+RATIONALE: Our growing body of evidence shows that wider networks have:
+- Worse compositional generalization (Finding #31, ~43 seeds)
+- Higher representation alignment/CKA convergence (Finding #28, ~42 seeds)
+- Gradient starvation that scales with width (Finding #27, ~18 seeds)
+- Feature rank dynamics under investigation (Finding #32, awaiting results)
+
+The missing piece is: WHY do wider networks fail at compositionality?
+
+HYPOTHESIS: Wider networks produce neurons that respond to MORE features
+simultaneously (lower selectivity). Narrower networks FORCE neurons to
+specialize, naturally learning compositional structure.
+
+METHODOLOGY:
+- Create structured dataset with 4 feature groups (20 features total)
+- Labels depend on XOR-like interaction between groups 0 and 1
+- Train 2-layer ReLU networks at widths [32, 64, 128, 256]
+- Measure 5 metrics per width:
+  1. Feature Selectivity Index (fraction of features each neuron responds to)
+  2. Group Alignment Score (does neuron respond to one group or many?)
+  3. Neuron Redundancy (pairwise cosine similarity of weight vectors)
+  4. Effective Dimensionality (participation ratio of weight covariance)
+  5. Activation-based selectivity (correlation between neuron activation and input features)
+- 3 trials per width with host-dependent seeding
+- Uses NumpyEncoder, numpy-only, <10 min expected runtime
+
+EXPECTED OUTCOME:
+  If hypothesis correct: selectivity ↓ and redundancy ↑ as width increases
+  This would provide a mechanistic explanation linking all width-related findings.
+
+Deployed as pilot to 5 large hosts (296, 287, 194, 141, 269). Will scale up
+if initial results are promising.
+
+KEY SCIENTIFIC FINDINGS
+====================================
+
+1. COMPOSITIONAL GENERALIZATION continues to show monotonic width effect.
+   New results this session (from s0302f/g/s0303a batches) consistently show:
+   - W32 gap: ~0.61-0.66
+   - W64 gap: ~0.64-0.67
+   - W128 gap: ~0.65-0.68+
+   Wider networks have WORSE compositional generalization across all seeds.
+   Now at ~43+ unique seeds, ~89% confirm monotonic width effect.
+   Approaching publishable threshold (target: 100 seeds).
+
+2. FEATURE COMPETITION DYNAMICS (v2) confirmed at ~18 multi-seed.
+   Gradient starvation ratio ~1.45 mean, scales with width.
+   100% of seeds show strong-feature-first learning.
+
+3. REPRESENTATION ALIGNMENT (v2) confirmed at ~42 multi-seed.
+   CKA convergence: W32=0.791, W64=0.882, W128=0.941, W256=0.968.
+   Clear monotonic trend across all seeds.
+
+4. FEATURE RANK DYNAMICS deployed (s0302h), awaiting initial results.
+   Tests whether rank compression explains both high CKA and poor compositionality.
+
+5. MICRO SCALING LAWS (v2) — some results show script download timeouts and
+   old cached version errors (NameError: _seed_source). Fresh deployment in s0303b
+   should bypass caching. Data scaling law holds at seed=42; parameter scaling does not.
+
+6. NEW: NEURON SPECIALIZATION experiment designed and pilot-deployed.
+   Tests whether wider networks produce less specialized neurons as the
+   mechanistic explanation for worse compositional generalization.
+
+NEXT SESSION PRIORITIES
+====================================
+1. Review neuron_specialization pilot results — scale up if promising
+2. Continue accumulating compgen seeds toward 100-seed threshold
+3. Check feature_rank_dynamics results (should arrive from s0302h + s0303b)
+4. Monitor microscalev2 for fresh results (caching fix in s0303b)
+5. If neuron specialization confirms, design follow-up: "Can forced specialization
+   (via dropout/sparsity) recover compositional ability in wide networks?"

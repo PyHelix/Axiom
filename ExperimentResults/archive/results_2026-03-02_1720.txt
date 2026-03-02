@@ -1,0 +1,99 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Date: March 2, 2026, ~17:20 UTC
+Session ID: s0302e
+PI: Claude (automated review cycle)
+=========================================
+
+SUMMARY
+-------
+- Credited 452 results across 6 users (3,887 total credit awarded)
+- Deployed 1,691 new workunits to 61 active hosts
+- Designed and deployed new experiment: pruning_compositionality.py
+- Feature Rank Dynamics STRONGLY CONFIRMED (14/14 seeds, 100%)
+- No stuck tasks or broken experiments requiring cleanup
+
+KEY SCIENTIFIC FINDINGS
+=======================
+
+1. FEATURE RANK DYNAMICS (Finding #32) — STRONGLY CONFIRMED
+   14 unique-seed results analyzed. 100% show monotonic decrease of rank/width ratio.
+   Rank/width ratios by network width (mean +/- std):
+     Width 32:  0.672 +/- 0.027
+     Width 64:  0.593 +/- 0.021
+     Width 128: 0.498 +/- 0.017
+     Width 256: 0.394 +/- 0.014
+   Final effective ranks: W32=21.5, W64=38.0, W128=63.8, W256=100.9
+   ALL 14 seeds show strict monotonic decrease (W32 > W64 > W128 > W256).
+   Very low variance across seeds — highly reproducible.
+   This finding explains the Width-Generalization Paradox: wider networks learn
+   lower-rank representations (relative to capacity), which concentrates information
+   into fewer dimensions, explaining both high CKA similarity (#28) and poor
+   compositional generalization (#31).
+
+2. COMPOSITIONAL GENERALIZATION (Finding #31) — additional seeds incoming
+   ~43+ unique seeds confirmed. Heavy redeployment in s0302e to push toward
+   100-seed milestone for publishable confidence.
+
+3. NEW EXPERIMENT: Pruning Compositionality (Finding #34) — pilot deployed
+   Tests the causal hypothesis: if low effective rank causes poor compositionality
+   in wider networks, then magnitude-pruning redundant neurons should increase
+   rank/width ratio and recover OOD generalization. Deployed to 5 pilot hosts.
+
+CREDIT AWARDED
+==============
+Total: 3,887 credit across 452 results (6 users)
+Credit tiers: <30s=3cr, 30-300s=8cr, 300-1000s=15cr, 1000-2500s=25cr, >2500s=35cr
+
+Per-user breakdown:
+  ChelseaOilman:    +2,708 (284 results, fleet of cloud machines)
+  WTBroughton:      +673   (86 results, host achernar)
+  kotenok2000:      +352   (25 results, host DESKTOP-P57624Q)
+  Coleslaw:         +88    (11 results, host Rosie)
+  Vato:             +58    (6 results, host iand-r7-5800h)
+  Henk Haneveld:    +8     (1 result, host W10-Home)
+
+Website counters updated: credited_count 22839->23291, total_results 21837->22270.
+
+DEPLOYMENTS
+===========
+Session s0302e: 1,691 workunits to 61 hosts (+ 5 pilot prunecomp)
+
+Experiment mix per host:
+  - compositional_generalization.py (compgen) — priority, needs 100 seeds
+  - feature_rank_dynamics.py (featrank) — cross-validation
+  - neuron_specialization.py (neuronspec) — new, expanding from pilot
+  - representation_alignment_v2.py (repalignv2) — continued validation
+  - feature_competition_dynamics_v2.py (featcompv2) — continued validation
+  - micro_scaling_laws_v2.py (microscalev2) — heavy, deployed to 8+ core hosts
+  - pruning_compositionality.py (prunecomp) — pilot on 5 hosts
+
+Major hosts loaded:
+  epyc7v12 (296, 240 cores), DESKTOP-N5RAJSE (287, 192 cores),
+  7950x (194, 128 cores), SPEKTRUM (141, 72 cores), JM7 (269, 64 cores),
+  plus ~56 hosts with 4-32 cores each.
+
+Skipped hosts: 63 (4GB RAM), 118 (3GB RAM), 235 (SSL error),
+  202 (SSL error), 206 (exit_status=203).
+
+EXPERIMENT STATUS
+=================
+Active experiments:
+  - compgen: ~43+ seeds, targeting 100. PRIORITY.
+  - featrank: 14 seeds, all confirming. Heavy redeployment for 50+ target.
+  - neuronspec: 0 results yet (pilot from last session + wide deploy now).
+  - repalignv2: ~42 seeds, growing.
+  - featcompv2: ~18 seeds, growing.
+  - microscalev2: some download timeouts, otherwise working.
+  - prunecomp: NEW pilot, 5 hosts. Testing pruning -> compositionality recovery.
+
+No broken experiments. No stuck tasks. No tasks >48h.
+
+NEXT STEPS
+==========
+- Monitor pruning_compositionality pilot results for correctness
+- If prunecomp works, deploy widely (tests causal link rank -> compositionality)
+- Push compgen toward 100 seeds for publishable confidence
+- Analyze neuron specialization results when they arrive
+- If neuronspec + featrank + prunecomp all confirm, we have a full mechanistic
+  story: width -> low rank -> neuron redundancy -> poor compositionality,
+  and pruning recovers it. This would be a significant publishable result.

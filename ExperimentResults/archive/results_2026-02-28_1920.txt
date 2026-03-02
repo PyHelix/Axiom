@@ -1,0 +1,159 @@
+============================================================
+AXIOM EXPERIMENT RESULTS — February 28, 2026 7:20 PM
+============================================================
+
+PREVIOUSLY RECORDED RESULT IDs (do not re-record these):
+1509027, 1509028, 1509029, 1509030, 1509031, 1509034, 1509035, 1509036, 1509037, 1509039, 1509040, 1509041, 1509042
+
+CREDITED RESULT IDs (do not re-credit these):
+1509034 (10cr ChelseaOilman), 1509035 (15cr philip-in-hongkong), 1509036 (15cr philip-in-hongkong), 1509037 (75cr Coleslaw), 1509039 (50cr makracz), 1509040 (15cr makracz), 1509041 (30cr makracz), 1509042 (10cr makracz)
+
+SUMMARY
+-------
+Total completed: 12 (11 successful, 1 failed)
+Total pending: 25 (5 sent to clients, 20 awaiting host check-in)
+Total failed: 1 (v6.02 GPU bcrypt corruption)
+Credit awarded this session: 220
+
+RESULTS (ranked by scientific interest)
+---------------------------------------
+
+1. INFORMATION BOTTLENECK — Host: Widmo (32 CPUs, 123GB Linux)
+   User: makracz
+   Runtime: 85s
+   Credit: 50 (Excellent — confirmed Tishby hypothesis)
+   Findings:
+     - Tishby's information bottleneck hypothesis SUPPORTED
+     - All 4 hidden layers showed compression phase after initial fitting
+     - Compression ratios: Layer 1=1.12x, Layer 2=1.66x, Layer 3=1.65x, Layer 4=2.76x
+     - Layer 4 (deepest) showed strongest compression (peak I(X;T)=1.18 -> final=0.43)
+     - 99.8% test accuracy, 100% train accuracy
+     - Clean replication — publishable quality data
+   Quality: Excellent
+
+2. RESERVOIR COMPUTING — Host: Rosie (20 CPUs, 112GB Windows)
+   User: Coleslaw
+   Runtime: 299s (full 5 minutes)
+   Credit: 75 (Excellent — clean scaling curves on chaotic prediction)
+   Findings:
+     - Echo state network on Lorenz attractor prediction
+     - Clear scaling: MSE dropped from 0.378 (100 neurons, radius 0.5) to ~0.031 (500 neurons, radius 0.95)
+     - Optimal spectral radius: 0.95-0.99 across all reservoir sizes
+     - Independently confirms edge-of-chaos theory for reservoir computing
+     - Higher radius (0.99) better than 0.95 for small reservoirs, converges for large
+     - Grid: 4 reservoir sizes x 4 spectral radii = 16 configurations tested
+   Quality: Excellent
+
+3. MODE CONNECTIVITY — Host: SPEKTRUM (72 CPUs, 191GB Windows)
+   User: makracz
+   Runtime: ~30s
+   Credit: 30 (Good — unexpected finding but models underfit)
+   Findings:
+     - Two models trained from different seeds: both only ~11% accuracy (10-class problem)
+     - Models are nearly orthogonal in weight space (cosine similarity = -0.011)
+     - 41 units apart in parameter distance
+     - UNEXPECTED: linear interpolation midpoint (alpha=0.5) has LOWER loss (2.63) than either endpoint (4.54, 4.33)
+     - Suggests wide flat valley in loss landscape even for underfit models
+     - Models didn't converge well — need more epochs or better hyperparameters
+   Quality: Good (interesting landscape finding despite underfitting)
+
+4. CELLULAR AUTOMATA x2 — Host: philip-23-q145hk (4 CPUs, 8GB Linux)
+   User: philip-in-hongkong
+   Runtime: ~60s each
+   Credit: 15 each (30 total) (Fair — negative result, GA plateaued)
+   Findings:
+     - GA evolved rules reaching fitness 0.455 on density classification
+     - Trivial all-1 baseline: 0.516 — evolved rule did NOT beat it
+     - Fitness history: [0.085, 0.085, 0.395, 0.425, 0.44, 0.455, 0.455, 0.455]
+     - Plateaued after generation 6 of 8
+     - Best rule had 60.9% ones fraction
+     - Negative result: density classification is genuinely hard for 1D CA with small populations
+     - Needs more generations, larger population, or tournament selection
+   Quality: Fair
+
+5. DOUBLE DESCENT — Host: Widmo (32 CPUs, 123GB Linux)
+   User: makracz
+   Runtime: 28s
+   Credit: 15 (Fair — didn't show expected phenomenon)
+   Findings:
+     - 10 widths from 5 to 5000 parameters
+     - Train accuracy hits 100% quickly across all widths
+     - Test accuracy terrible everywhere (3-9%)
+     - No visible double descent curve
+     - Missing ingredient: label noise (added in v2 redesign)
+     - The interpolation threshold peak requires noisy labels to appear
+   Quality: Fair (clean execution, wrong experimental design)
+
+6. POWER LAW FORGETTING — Host: SPEKTRUM (72 CPUs, 191GB Windows)
+   User: makracz
+   Runtime: 33s
+   Credit: 10 (Poor — uninformative result)
+   Findings:
+     - Zero forgetting detected in both naive SGD and EWC conditions
+     - Task A accuracy remained 100% after learning Task B
+     - EWC advantage: 0.0 (no difference)
+     - Fisher information norms: all zeros
+     - Root cause: Tasks A and B too separable — network solved both without interference
+     - Redesigned in v2: overlapping input representations + bottleneck architecture
+   Quality: Poor (valid execution, uninformative design)
+
+7. EDGE OF CHAOS — Host: Dell-9520 (20 CPUs, 32GB Windows)
+   User: ChelseaOilman
+   Runtime: short
+   Credit: 10 (Poor — only 2 data points)
+   Findings:
+     - Only tested spectral radii 0.1 and 0.2
+     - Both in ordered regime (negative Lyapunov exponents)
+     - Radius 0.1: Lyapunov=-2.31, memory=3.08
+     - Radius 0.2: Lyapunov=-1.62, memory=4.53
+     - Never reached the edge of chaos (around radius ~1.0)
+     - Likely hit time limit before exploring full range
+     - Redesigned in v2: 30 radii from 0.1 to 3.0
+   Quality: Poor (incomplete — didn't reach the interesting regime)
+
+FAILED
+------
+- double_descent_gpu_host1 (v6.02): bcrypt.pyd decompression error — corrupted PyInstaller bundle
+  Fixed in v6.03 by excluding bcrypt/paramiko/cryptography modules
+
+CREDIT LEDGER
+-------------
+makracz (userid=80):     105 credit (4 experiments: 50+30+15+10)
+Coleslaw (userid=122):    75 credit (1 experiment: reservoir computing)
+philip-in-hongkong (108): 30 credit (2 experiments: 15+15)
+ChelseaOilman (userid=40): 10 credit (1 experiment: edge of chaos)
+PyHelix (userid=1):        0 credit (self — test runs excluded)
+TOTAL AWARDED:           220 credit
+
+REDESIGNED EXPERIMENTS DEPLOYED (v2)
+-------------------------------------
+- edge_of_chaos_v2.py -> host 320 (Dell-9520, 20 CPUs) — 30 radii instead of 2
+- power_law_forgetting_v2.py -> host 141 (SPEKTRUM, 72 CPUs) — overlapping tasks + bottleneck + EWC
+- double_descent_v2.py -> host 194 (7950x, 128 CPUs) — 15% label noise for interpolation peak
+
+NEW EXPERIMENTS DEPLOYED
+------------------------
+- learning_rate_phase_transitions.py -> host 287 (192 CPUs) + host 323 (32 CPUs)
+- neural_network_pruning_lottery.py -> host 296 (240 CPUs)
+- critical_learning_periods.py -> host 85 (80 CPUs) + host 87 (80 CPUs)
+- weight_initialization_landscape.py -> host 269 (64 CPUs) + host 123 (80 CPUs)
+- gradient_descent_loss_landscapes.py -> host 209 (32 CPUs) + host 143 (32 CPUs) + host 177 (32 CPUs)
+- benford_law_neural_weights.py -> host 253 (16 CPUs) + host 7 (16 CPUs) + host 322 (16 CPUs)
+
+CROSS-VALIDATION COPIES
+------------------------
+- reservoir_computing -> host 249 (replication of Rosie's excellent result)
+- information_bottleneck -> host 105 (replication of Widmo's excellent result)
+- mode_connectivity -> host 95 (replication, check if models converge better)
+- cellular_automata -> host 15 (replication on different hardware)
+
+RECOMMENDATIONS FOR NEXT BATCH
+-------------------------------
+1. PRIORITY: Wait for v2 redesigns (edge_of_chaos, power_law_forgetting, double_descent) — these should produce the results the originals missed
+2. PRIORITY: Wait for new experiments (learning_rate_phase_transitions, critical_learning_periods) — these are the most scientifically interesting new designs
+3. If information_bottleneck replicates on host 105, consider writing a more detailed version that tracks I(X;T) and I(T;Y) at more granular epoch intervals
+4. If reservoir_computing replicates on host 249, extend to larger reservoirs (1000, 2000 neurons) on a high-RAM host
+5. Mode connectivity needs models that actually converge — consider increasing epochs or using a simpler task
+6. Cellular automata needs larger populations (500+) and more generations (100+) — send to a high-CPU host
+7. Consider new experiment: "grokking_dynamics" — track weight norm, loss, and generalization during the grokking phase transition at very fine time resolution
+8. Consider new experiment: "neural_tangent_kernel" — compare NTK predictions vs actual training dynamics at different widths

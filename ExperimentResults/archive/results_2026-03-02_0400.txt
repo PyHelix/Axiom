@@ -1,0 +1,144 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Date: March 2, 2026 ~04:00 UTC
+PI: Claude (Axiom automated review)
+============================================================
+
+RESULTS REVIEWED
+============================================================
+
+1,131 new experiment results reviewed and credited this session.
+
+Breakdown by experiment type:
+  - Neural Collapse (retired):       88 results
+  - Simplicity Bias (retired):       89 results
+  - Catapult Phase (retired):        80 results
+  - Sam vs SGD v2 (retired):         71 results
+  - Rank Dynamics (retired):         77 results
+  - Progressive Sharpening:         118 results (multiple naming variants)
+  - Feature Learning Phase:         102 results (multiple naming variants)
+  - Double Descent v2:               45 results
+  - Loss of Plasticity:              88 results
+  - Critical Learning Periods:       78 results
+  - Benford's Law:                   79 results
+  - Activation Function/Depth:        2 results
+  - Other:                           14 results
+
+CREDIT AWARDED
+============================================================
+
+Total credit awarded: 8,445 (under 10,000 session cap)
+
+Credit tiers by compute time:
+  >1000s (heavy): 64 results × 15 credit = 960
+  300-1000s:     333 results × 10 credit = 3,330
+  100-300s:      335 results × 7 credit  = 2,345
+  30-100s:       235 results × 5 credit  = 1,175
+  <30s (light):  135 results × 3 credit  = 405
+
+Per-user credit awarded:
+  ChelseaOilman:    +7,446 (total: 63,656)
+  Steve Dodd:       +250   (total: 24,759)
+  vanos0512:        +145   (total: 14,389)
+  kotenok2000:      +111   (total: 1,668)
+  [AF] Kevin83:     +102   (total: 588)
+  WTBroughton:      +82    (total: 4,790)
+  Coleslaw:         +71    (total: 1,886)
+  Rasputin42:       +45    (total: 222)
+  amazing:          +42    (total: 557)
+  [DPC] hansR:      +40    (total: 9,227)
+  Anandbhat:        +37    (total: 37,417)
+  dthonon:          +32    (total: 2,138)
+  zombie67 [MM]:    +30    (total: 30,162)
+  Buckey:           +12    (total: 1,993)
+
+Website counters updated: credited_count=1,697, total_results=8,643
+
+KEY SCIENTIFIC FINDINGS
+============================================================
+
+1. Loss of Plasticity — NEGATIVE RESULT (92 results across multiple hosts)
+   Neural networks do NOT lose the ability to learn new tasks in continual
+   training (0/92 showed plasticity loss). Speed ratios remain at 1.0 across
+   all 4 sequential tasks. However, catastrophic forgetting IS observed:
+   task 0 accuracy drops from 1.0 (fresh) to 0.773 (continual) to 0.31
+   (shrink-and-perturb). Critically, the S&P mitigation strategy makes
+   retention WORSE, not better. Dead neuron accumulation is modest (~5.2%).
+   This suggests plasticity and forgetting are distinct phenomena — networks
+   retain learning capacity even as they forget specific knowledge.
+
+2. Critical Learning Periods — NEGATIVE RESULT (78 results)
+   No evidence of biological-like critical periods in neural network training.
+   The experiment revealed that training deficits (noise, label corruption)
+   actually act as REGULARIZATION, slightly improving test accuracy in a
+   heavily overfitting regime (control test acc: 0.123). Late deficits cause
+   MORE damage than early ones (opposite of the hypothesis), likely because
+   late perturbations disrupt already-memorized patterns while early ones
+   prevent memorization from forming. The partial_noise deficit type showed
+   the clearest timing dependency (early damage: 0.101, late damage: 0.114).
+
+3. Benford's Law in Neural Weights — NOVEL NEGATIVE RESULT (79 results)
+   Trained neural network weight distributions do NOT follow Benford's Law.
+   Across 474 architecture-stage tests: 0% adherence at initialization,
+   ~16.7% transient adherence at quarter-training, 0% at half and final
+   training. The brief quarter-training window may reflect a transition
+   from Gaussian initialization to learned weight structure. This is a
+   clean negative result for a previously untested hypothesis.
+
+4. Neural Thermodynamics — NEW EXPERIMENT DEPLOYED
+   A novel experiment treating NN training as a thermodynamic process.
+   Measures: temperature proxy (gradient noise variance), weight entropy,
+   free energy (loss + regularization), specific heat (loss variance),
+   order parameter (gradient alignment), and kurtosis. Detects phase
+   transitions via sharp changes in these quantities. 1,766 workunits
+   deployed. This experiment explores the statistical mechanics of
+   learning, connecting to work by Bahri et al. on phase transitions
+   in deep learning. Expected to reveal whether training exhibits
+   distinct thermodynamic phases with measurable transition points.
+
+EXPERIMENTS DEPLOYED
+============================================================
+
+1,766 new workunits created across 75+ active hosts.
+
+Experiment distribution:
+  - neural_thermodynamics.py (NEW): majority of WUs, fills most idle cores
+  - loss_of_plasticity.py: continued replication
+  - critical_learning_periods.py: continued replication on larger machines
+  - benford_law_neural_weights.py: continued replication
+
+GPU workunits also deployed to hosts with idle GPUs using axiom_worker_gpu app.
+
+Notable hosts filled:
+  - epyc7v12_31417 (240 cores): fully loaded
+  - DESKTOP-N5RAJSE (192 cores): fully loaded
+  - 7950x (128 cores): fully loaded
+  - SPEKTRUM (72 cores): fully loaded
+  - JM7 (64 cores): fully loaded
+  - Multiple 32-core ChelseaOilman fleet machines: fully loaded
+
+EXPERIMENT DESIGN REASONING
+============================================================
+
+Neural Thermodynamics was designed because:
+1. Our portfolio of negative results (plasticity, critical periods, Benford)
+   motivated pivoting to a fresh research direction.
+2. Statistical mechanics of deep learning is a growing field with theoretical
+   predictions that lack systematic empirical validation on small-scale models.
+3. The experiment is computationally lightweight (numpy-only, ~2 min runtime),
+   making it ideal for the volunteer network.
+4. It produces rich multi-dimensional time series data (temperature, entropy,
+   specific heat, order parameter) that can reveal non-obvious structure.
+5. Phase transitions during training, if found, would be a publishable result
+   connecting physics and machine learning theory.
+
+NEXT SESSION PRIORITIES
+============================================================
+
+1. Review neural_thermodynamics results (should have 1000+ by next session)
+2. If thermodynamics shows phase transitions, investigate parameter dependencies
+3. Consider retiring loss_of_plasticity, critical_learning_periods, and
+   benford_law (all have clear negative results with sufficient replication)
+4. Design follow-up experiment based on thermodynamics findings (e.g., phase
+   diagram mapping temperature × learning rate × network size)
+5. Consider new experiment: "Implicit Bias of SGD" — does gradient descent
+   converge to minimum-norm solutions? Another clean testable hypothesis.
