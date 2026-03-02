@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303e ~00:45 UTC)
+Last updated: March 2, 2026 (session s0302cc ~21:00 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -84,6 +84,13 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     CONCLUSION: Width-compositionality tradeoff driven by rank COLLAPSE,
     not entanglement. Disentanglement is NOT the mechanism.
 
+41. COMPOSITIONALITY CRITICAL PERIOD — NEW (deployed s0302cc, 0 results yet)
+    HYPOTHESIS: There is a critical training epoch where compositional
+    generalization is lost. Wider networks may lose compositionality earlier.
+    Intervention (LR reduction or weight decay injection) at the inflection
+    point may preserve compositionality.
+    Script: compositionality_critical_period.py (20 WUs to 10 hosts).
+
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: Findings 1-26, 30, 32, 34, 37.
@@ -91,19 +98,21 @@ STRONGLY CONFIRMED: 29, 31, 33, 35, 36.
 GROWING CONFIRMATION: 27, 28, 38.
 PRELIMINARY: 39 (bottleneck_mechanism, 1 seed).
 PARTIALLY REFUTED: 40 (disentanglement hypothesis, 86 seeds).
+NEW/UNTESTED: 41 (compositionality critical period, deployed, awaiting results).
 
 EXPERIMENT SCRIPTS:
-  Active (s0303e): combined_compositionality.py (weight 5),
-          orthogonality_compositionality.py (weight 3),
-          regularized_compositionality.py (weight 2),
-          bottleneck_compositionality.py (weight 1),
-          compositional_generalization.py (weight 1),
-          feature_competition_dynamics_v2.py (weight 1),
-          representation_alignment_v2.py (weight 1),
+  Active (s0302cc): bottleneck_mechanism.py (weight 4, PRELIMINARY needs data),
+          combined_compositionality.py (weight 3),
+          feature_competition_dynamics_v2.py (weight 3, growing),
+          orthogonality_compositionality.py (weight 2),
+          representation_alignment_v2.py (weight 2, growing),
+          representation_disentanglement.py (weight 2),
+          compositional_generalization.py (weight 2),
           neuron_specialization.py (weight 1),
-          micro_scaling_laws_v2.py (big hosts only, weight 1),
-          bottleneck_mechanism.py (weight 1),
-          representation_disentanglement.py (weight 1)
+          regularized_compositionality.py (weight 1),
+          bottleneck_compositionality.py (weight 1),
+          micro_scaling_laws_v2.py (big hosts only, weight 2),
+          compositionality_critical_period.py (NEW, weight 1, test deploy)
 
 RETIRED (do not redeploy):
   ALL grokking variants, ALL definitively confirmed experiments,
@@ -113,11 +122,12 @@ RETIRED (do not redeploy):
   Spectral Dynamics v2, Lazy vs Feature Learning, emergent_abilities,
   cellular_automata_v2, feature_rank_dynamics, pruning_compositionality.
 
-DELIVERY PIPELINE STATUS (March 3 s0303e ~00:45 UTC):
-  Credited 859 results this session (6,665 credit, 7 users).
-  Deployed 1,629 CPU + 80 GPU WUs to 65 hosts (1,633 idle cores filled).
+DELIVERY PIPELINE STATUS (March 2 s0302cc ~21:00 UTC):
+  Credited 409 results this session (3,663 credit, 7 users).
+  Deployed 1,478 CPU + 81 GPU WUs to 66 hosts + 20 WUs new experiment.
   Fleet: 90+ active hosts. All fully loaded.
   Over-queued hosts still draining: 113, 137, 159, 219, 222, 319, 320, 335.
+  New experiment: compositionality_critical_period.py deployed to 10 hosts.
 
 KNOWN ISSUES:
   - BOINC create_work sets transition_time to FUTURE — MUST fix after EVERY create_work
