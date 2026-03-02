@@ -1,0 +1,110 @@
+AXIOM BOINC SESSION LOG — 2026-03-02 ~23:30 UTC (Session s0302m)
+================================================================
+
+OVERVIEW
+--------
+Routine credit-and-deploy cycle. Reviewed 324 new results, awarded 3,355 credit
+to 10 users across 18 hosts. Deployed 1,872 new workunits (1,781 CPU + 91 GPU)
+to 71 hosts. Key science update: first results from combined compositionality
+experiment (Finding #38) show approximately additive effect — no synergy.
+
+RESULTS REVIEWED THIS SESSION
+------------------------------
+324 uncredited results reviewed and credited. Breakdown by experiment type:
+- Bottleneck compositionality: ~60 results (hosts 325, 332, 327, 339, 340)
+  → Continues to confirm: 171/183 = 93.4% positive (bottleneck_helps=true)
+- Combined compositionality: ~13 results (hosts 332, 327) — FIRST RESULTS
+  → Finding: approximately additive, NOT synergistic (see below)
+- Orthocomp: ~15 results (hosts 332, 339, 324, 327)
+  → 175/175 rescues compositionality (100%), 132/175 helps wide (75%)
+- Regcomp: ~8 results (host 345)
+- Compgen: ~30 results (hosts 335, 320, 325, 219)
+- FeatCompV2: ~35 results (hosts 219, 335, 320, 325)
+- RepAlignV2: ~40 results (hosts 219, 335, 320, 325, 332, 327, 340)
+- MemDynV2: ~35 results (hosts 219, 335, 320, 325, 332)
+- NeuronSpec: ~15 results (hosts 325, 340, 332, 327)
+- MicroScaleV2: ~10 results (hosts 335, 320, 332, 113, 327)
+- Curriculum: ~20 results (hosts 219, 335, 320, 325)
+- GPU experiments: ~8 results (hosts 9, 324, 319, 339, 327)
+- Legacy experiments from Dad-Workstation/achernar: ~30 results (old experiment types)
+
+CREDIT AWARDED
+--------------
+Total: 3,355 credit across 324 results
+
+Per-user totals:
+  ChelseaOilman: 2,295 credit (hosts: Charlie-2, Delta-2, Dell-9520, etc.)
+  Anandbhat: 457 credit (host: DESKTOP-EMAFVVL)
+  Steve Dodd: 305 credit (host: Dad-Workstation)
+  Armin Gips: 108 credit (host: Andre-WEBK)
+  WTBroughton: 81 credit (host: achernar)
+  kotenok2000: 56 credit (host: DESKTOP-P57624Q)
+  marmot: 25 credit (host: XYLENA)
+  [DPC] hansR: 12 credit (host: dbgrensenh27)
+  dthonon: 8 credit (host: thonon-meylan)
+  Vato: 8 credit (host: iand-r7-5800h)
+
+Credit tiers: 5cr (82 results, <30s), 8cr (86, 30-120s), 12cr (114, 120-600s),
+              18cr (23, 600-2000s), 25cr (19, 2000s+)
+
+Website counters updated: credited_count=3,555, total_results_count=26,814.
+
+KEY SCIENTIFIC FINDINGS
+-----------------------
+1. COMBINED COMPOSITIONALITY (Finding #38) — FIRST DATA, APPROXIMATELY ADDITIVE
+   13 seeds completed. The combination of bottleneck architecture + orthogonality
+   regularization shows approximately additive effect, NOT synergistic.
+   - Synergy detected: 10/13 True (but magnitude is near zero)
+   - Mean gap synergy: +0.003 (essentially zero — neither helps nor hurts)
+   - Mean OOD synergy: +0.002
+   - Effect type breakdown: approximately_additive=7, superadditive=4, subadditive=2
+   - Best intervention: "both"=5, "none"=4, "bottleneck_only"=3, "ortho_only"=1
+   INTERPRETATION: Bottleneck and orthogonality address somewhat orthogonal aspects
+   of the compositionality problem. Bottleneck constrains information flow
+   structurally (hard constraint on dimensionality); orthogonality prevents
+   eigenvalue collapse within each layer (soft regularization). They don't
+   interfere, but they don't amplify each other either. The bottleneck remains
+   the dominant intervention.
+
+2. BOTTLENECK COMPOSITIONALITY (Finding #37) — DEFINITIVELY CONFIRMED
+   Updated count: 171/183 positive results with key_results (93.4%).
+   Now at ~230+ total result files. Promoted to definitively confirmed status.
+   The bottleneck architecture remains the strongest known intervention for
+   rescuing compositional generalization in wider networks.
+
+3. ORTHOGONALITY COMPOSITIONALITY (Finding #36) — STRONGLY CONFIRMED
+   Updated: 175/175 rescues compositionality (100%), 132/175 helps wide (75.4%).
+   The effect is real and consistent but modest compared to bottleneck.
+   The 75% rate on helps_wide indicates the effect is seed/config dependent
+   for wider architectures, while narrow-net rescue is universal.
+
+DEPLOYMENT
+----------
+1,872 new workunits deployed (1,781 CPU + 91 GPU) to 71 hosts.
+
+Experiment weights: bottleneck(3), combined_compositionality(3),
+  orthocomp(2), regcomp(1), compgen(1), featcompv2(1),
+  repalignv2(1), neuronspec(1), microscalev2(1, big hosts only)
+
+GPU experiments: bottleneck_gpu, orthocomp_gpu, neuronspec_gpu
+
+Notable deployments:
+- DESKTOP-N5RAJSE (h287, 192 CPUs): 192 CPU + 2 GPU WUs
+- 7950x (h194, 128 CPUs): 128 CPU + 1 GPU WU
+- SPEKTRUM (h141, 72 CPUs): 72 CPU + 2 GPU WUs
+- JM7 (h269, 64 CPUs): 64 CPU + 1 GPU WU
+- DadOld-PC (h85, 80 CPUs): 46 CPU + 2 GPU WUs (34 already running)
+- Plus 66 other hosts fully loaded
+
+No stuck tasks found (>12h dead host or >48h absolute). No new broken experiments.
+
+NEXT SESSION PLAN
+-----------------
+1. Review combined compositionality with 50-70+ seeds (should be well-powered)
+2. If combined comp stabilizes as additive, consider designing a new experiment:
+   "Gradient Starvation → Compositionality" — test whether gradient starvation
+   (Finding #27: scales with width) is the MECHANISM behind the width-compositionality
+   tradeoff (Finding #31). This would connect two independent finding lines.
+3. Continue monitoring bottleneck and orthocomp for stability
+4. Consider promoting Finding #36 (orthocomp) to definitively confirmed if
+   seed count reaches ~200+ with stable results
