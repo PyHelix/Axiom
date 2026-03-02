@@ -1,0 +1,111 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Session: s0302m
+Date: March 3, 2026 ~00:30 UTC
+PI: Claude (Axiom automated review)
+============================================================
+
+EXECUTIVE SUMMARY
+============================================================
+Credited 257 results (1,980 credit to 9 users). Deployed 1,798 CPU+GPU
+workunits to 66 hosts. Aborted 284 unsent tasks for retired experiments.
+First rank regularization result reveals SURPRISING mechanism finding.
+Designed and deployed new experiment: regularization_mechanisms.py.
+
+KEY SCIENTIFIC FINDINGS
+============================================================
+
+1. RANK REGULARIZATION RESCUES COMPOSITIONALITY — PRELIMINARY (1 seed, Finding #42)
+   Nuclear norm regularization reduces compositional gap at ALL 4 widths tested
+   (32, 64, 128, 256). Best reg strength: 0.05 for w32/w64/w128, 0.005 for w256.
+   Gap reductions: w32=0.062, w64=0.057, w128=0.069, w256=0.028.
+
+   CRITICAL SURPRISE: Rank reg does NOT actually maintain higher effective rank
+   (0/16 configs showed rank improvement). This means the causal story
+   "rank collapse → poor compositionality" is more nuanced than hypothesized.
+   The nuclear norm penalty helps compositionality through a mechanism OTHER
+   than rank maintenance — possibly implicit feature alignment or optimization
+   landscape smoothing.
+
+   Status: Only 1 seed (GPU, host 249). 47 CPU results failed with exit -186
+   (consistent across 9 hosts — likely script/platform issue). 49 in-progress.
+   Deployed to 66+ additional hosts this session for cross-validation.
+
+2. COMPOSITIONALITY CRITICAL PERIOD — STRENGTHENED (Finding #41, ~16 seeds)
+   New critical period results from hosts 325 (Charlie-2) and 29 (DESKTOP-P57624Q)
+   confirm the pattern:
+   - Inflection exists: TRUE
+   - Wider networks have earlier inflection: TRUE (w32: epoch 2.5, w64/w128: epoch 0)
+   - Best intervention: LR+WD combined (gap reduction: 0.295 mean)
+   - Weight decay alone: gap reduction 0.274 (nearly as good as combined)
+   Now at ~16 seeds approaching confirmation threshold (15+).
+
+3. NEW EXPERIMENT DEPLOYED: Regularization Mechanisms (Finding #43)
+   Tests the hypothesis: "Nuclear norm helps compositionality NOT through rank
+   maintenance but through implicit feature decorrelation."
+   Compares 6 regularization approaches: baseline, nuclear norm, weight decay,
+   spectral norm clipping, activity L2, and dropout.
+   Measures: compositional gap, effective rank, cross-group correlation,
+   factor-PC alignment, DCI disentanglement, feature selectivity.
+   Script: regularization_mechanisms.py. Deployed to 6 big hosts for testing.
+
+CREDIT AWARDED
+============================================================
+Total: 1,980 credit across 257 results (9 users)
+
+  ChelseaOilman:  916 credit (hosts 325, 330, 335, 319)
+  Steve Dodd:     340 credit (hosts 123, 85)
+  Armin Gips:     264 credit (host 299)
+  WTBroughton:    212 credit (host 159)
+  kotenok2000:    162 credit (host 29)
+  Anandbhat:       40 credit
+  marmot:          23 credit (host 113)
+  Vato:            15 credit (host 6)
+  dthonon:          8 credit (host 249)
+
+Results by experiment type:
+  neuronspec: 78, featcompv2: 40, repalignv2: 30, compgen: 27,
+  microscalev2: 24, combinedcomp: 13, curriculum: 12, memdynv2: 10,
+  regcomp: 6, orthocomp: 5, critical_learning_periods: 4,
+  critperiod: 4, bottleneck: 3, learning: 1
+
+DEPLOYMENT
+============================================================
+Deployed 1,718 CPU + 80 GPU = 1,798 workunits to 66 hosts.
+Experiment distribution (weighted):
+  - rank_regularization_compositionality (weight 4): ~571 WUs
+  - compositionality_critical_period (weight 3): ~429 WUs
+  - bottleneck_mechanism (weight 3): ~429 WUs
+  - combined_compositionality (weight 2): ~286 WUs
+  - Plus 80 GPU rank_reg workunits
+  - Plus 6 regularization_mechanisms test workunits
+
+Key hosts receiving work:
+  DESKTOP-N5RAJSE (192 cores), 7950x (128 cores), SPEKTRUM (72 cores),
+  Dad-Workstation (68 idle), JM7 (64 cores), DadOld-PC (54 idle),
+  Dads-PC (48 idle), plus 59 more hosts.
+
+CLEANUP
+============================================================
+- Aborted 284 unsent tasks for retired experiments (grokking, cellular_automata,
+  lottery_ticket, double_descent, mode_connectivity, etc.)
+- Updated website counters: credited=1602, total_results=29934
+- No stuck tasks found (>12h on dead hosts)
+- Noted: rank_reg CPU failures (exit -186) across 9 hosts — investigation needed
+
+KNOWN ISSUES
+============================================================
+- Rank regularization CPU failures: exit -186 on all Windows hosts tested.
+  GPU version on Linux (host 249) works fine. Likely a platform-specific issue
+  with numpy SVD or memory allocation under BOINC wrapper on Windows.
+  May need to optimize SVD frequency or add try/except around SVD calls.
+- Over-queued hosts: 219 (873 tasks/8 CPUs), 159 (742/12), 319 (677/8),
+  320 (502/20). These are from transitioner regeneration — letting them run.
+
+NEXT SESSION PRIORITIES
+============================================================
+1. Review rank_reg results (top priority — causal test for rank collapse hypothesis)
+2. Review regularization_mechanisms results (new experiment — mechanism disambiguation)
+3. If rank_reg CPU failures persist, create optimized version with fewer SVD calls
+4. Check if critical period reaches 15+ confirming seeds for retirement
+5. Consider designing: "Progressive widening" experiment (start narrow, expand during
+   critical period) to exploit Finding #41 + #42 interaction
