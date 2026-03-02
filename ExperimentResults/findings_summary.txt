@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 2, 2026 (session s0302n)
+Last updated: March 2, 2026 (session s0302p ~21:45 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -27,11 +27,9 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 28. REPRESENTATION ALIGNMENT — GROWING CONFIRMATION (~200+ seeds)
     FINDING: Wider networks -> higher CKA convergence.
 
-29. MICRO SCALING LAWS — STRONGLY CONFIRMED, MIXED RESOLVED (~120+ seeds)
-    FINDING: Parameter scaling does NOT hold at micro scale (86% False, consistent).
-    Data scaling DOES hold at micro scale (96% True — resolved the mixed signal).
-    Previous "mixed signal" was due to small sample: with 50+ recent seeds,
-    data scaling is clearly consistent while param scaling clearly fails.
+29. MICRO SCALING LAWS — STRONGLY CONFIRMED (~120+ seeds)
+    FINDING: Parameter scaling does NOT hold at micro scale (86% False).
+    Data scaling DOES hold (96% True).
 
 30. CURRICULUM LEARNING — DEFINITIVELY CONFIRMED & RETIRED (~430+ seeds)
     FINDING: NO BENEFIT from explicit curriculum ordering.
@@ -39,53 +37,64 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 31. COMPOSITIONAL GENERALIZATION — GROWING CONFIRMATION (~230+ seeds)
     FINDING: Wider networks have WORSE compositional generalization.
 
-32. FEATURE RANK DYNAMICS — STRONGLY CONFIRMED (14/14+ seeds, 100%)
+32. FEATURE RANK DYNAMICS — STRONGLY CONFIRMED & RETIRED (14/14+ seeds, 100%)
     FINDING: Wider networks converge to LOWER effective rank / width ratio.
 
-33. NEURON SPECIALIZATION — CONFIRMED (~40+ diverse seeds)
-    FINDING: Representational collapse — wider nets use smaller fraction of capacity.
+33. NEURON SPECIALIZATION — CONFIRMED, HYPOTHESIS REFUTED (275 seeds)
+    FINDING: Wider nets produce MORE selective neurons (selectivity increases
+    0.654→0.670) but with POOR feature-group alignment (0.364→0.343).
+    Effective dim ratio PLUMMETS: 0.281→0.071 from W32→W256.
+    Wide nets use only 7% of dimensional capacity. Problem is not redundancy.
 
-34. PRUNING COMPOSITIONALITY — CONFIRMED NEGATIVE
+34. PRUNING COMPOSITIONALITY — DEFINITIVELY CONFIRMED NEGATIVE & RETIRED (48 seeds)
     FINDING: Magnitude pruning does NOT recover compositional generalization.
+    OOD accuracy ~0% across all prune rates and widths. Training dynamics issue.
 
-35. REGULARIZED COMPOSITIONALITY — GROWING CONFIRMATION (~80+ seeds)
-    FINDING: Dropout is width-dependent — helps narrow, not wide.
+35. REGULARIZED COMPOSITIONALITY — STRONGLY CONFIRMED (538 seeds, 9+ hosts)
+    FINDING: Weight decay (0.05) reduces compositional gap at ALL widths.
+    Dropout shows asymmetric width interaction: helps narrow not wide.
+    W32: gap 0.693→0.321, W64: 0.685→0.390, W128: 0.678→0.404, W256: 0.676→0.414.
+    Best reg: dropout_0.4 for W32, wd_0.05 for W64-W256 (100% dominant).
 
-36. ORTHOGONALITY COMPOSITIONALITY — STRONGLY CONFIRMED (~200+ seeds)
+36. ORTHOGONALITY COMPOSITIONALITY — STRONGLY CONFIRMED (255 seeds)
     FINDING: Soft orthogonality penalty rescues compositionality (100% True).
-    ortho_helps_wide_networks: 60% True (down from 75% with more data).
-    ortho_increases_effective_rank: 98% True.
-    Effect is real but modest compared to bottleneck (Finding #37).
+    ortho_helps_wide_networks: 71.4% True (182/255) — UP from 60% with more data.
+    ortho_increases_effective_rank: 99.2% True (253/255). Effect modest vs bottleneck.
 
 37. BOTTLENECK COMPOSITIONALITY — DEFINITIVELY CONFIRMED (~280+ seeds, 98%)
-    FINDING: Bottleneck layer [W->B->W] STRONGLY rescues compositional generalization.
-    Recent batch: 49/50 True (98%), even stronger than 93.4% cumulative.
-    Gap reduction: 4-8% absolute (vs 1-2% for ortho, 0% for pruning).
-    Best configs: w128_b16 (gap ~0.57 vs baseline ~0.94), w256_b32 (gap ~0.55).
+    FINDING: Bottleneck layer [W->B->W] STRONGLY rescues compositionality.
+    Gap reduction: 4-8% absolute. Best: w128_b16, w256_b32.
     FIRST INTERVENTION THAT REVERSES WIDTH-COMPOSITIONALITY TRADEOFF.
     Hierarchy: bottleneck >> ortho >> dropout >> pruning(none).
 
-38. COMBINED COMPOSITIONALITY — GROWING, VARIABLE INTERACTION (~63 seeds)
-    *** UPDATED: Previous "approximately additive" characterization was PREMATURE ***
-    With 63 seeds (up from 13), the interaction is MORE COMPLEX:
-    Synergy detected: 90% True (45/50 in recent batch).
-    Combined better than either alone: 82% True (41/50).
-    Effect types: superadditive=46%, subadditive=38%, approx_additive=16%.
-    The combined effect VARIES by seed — not consistently additive.
-    Overall: combining bottleneck+ortho is USUALLY beneficial (82%)
-    but the interaction type fluctuates between synergistic and antagonistic.
-    Bottleneck remains the dominant component. Still collecting more seeds.
+38. COMBINED COMPOSITIONALITY — GROWING (124 seeds)
+    FINDING: Combining bottleneck+ortho is usually beneficial (75.8%).
+    Synergy detected 82.3% (102/124). Previous 90% was a batch artifact.
+    Effect types: superadditive=41.1%, subadditive=34.7%, approx_additive=24.2%.
+    Interaction genuinely variable across seeds — not consistently one type.
+    Bottleneck remains the dominant component.
+
+39. BOTTLENECK MECHANISM — NEW (s0302p, just deployed)
+    HYPOTHESIS: Bottleneck rescues compositionality by preventing representational
+    collapse. Tests: effective rank, feature redundancy, active neuron fraction,
+    gradient flow across widths [16,32,64,128] with/without bottleneck.
+    Script: bottleneck_mechanism.py. Awaiting first results.
+
+40. REPRESENTATION DISENTANGLEMENT — DEPLOYED (s0302h)
+    HYPOTHESIS: Wide nets learn more entangled representations. Weight decay
+    increases disentanglement. Disentanglement correlates with comp. gap.
+    Pre-test: DCI completeness r=-0.611 with gap. Awaiting results.
+    Script: representation_disentanglement.py
 
 CROSS-VALIDATION STATUS
 ============================================================
-DEFINITIVELY CONFIRMED & RETIRED: Findings 1-26, 30, 37.
-STRONGLY CONFIRMED: 29 (120+ seeds), 32 (14/14+), 33 (40+), 36 (200+ seeds).
-GROWING CONFIRMATION: 27 (~210+), 28 (~200+), 31 (~230+), 35 (~80+).
-CONFIRMED NEGATIVE: 34 (pruning doesn't help).
-GROWING: 38 (combined — ~63 seeds, variable interaction, needs more).
+DEFINITIVELY CONFIRMED & RETIRED: Findings 1-26, 30, 32, 34, 37.
+STRONGLY CONFIRMED: 29 (120+), 33 (275), 35 (538), 36 (255).
+GROWING CONFIRMATION: 27 (~210+), 28 (~200+), 31 (~230+), 38 (124).
+NEW/AWAITING: 39 (bottleneck_mechanism), 40 (disentanglement).
 
 EXPERIMENT SCRIPTS:
-  Active deployment (s0302n): combined_compositionality.py (weight 5),
+  Active (s0302p): combined_compositionality.py (weight 5),
           orthogonality_compositionality.py (weight 3),
           regularized_compositionality.py (weight 2),
           bottleneck_compositionality.py (weight 1),
@@ -93,9 +102,8 @@ EXPERIMENT SCRIPTS:
           feature_competition_dynamics_v2.py (weight 1),
           representation_alignment_v2.py (weight 1),
           neuron_specialization.py (weight 1),
-          micro_scaling_laws_v2.py (big hosts only, weight 1)
-  Shifted weight toward combined_compositionality (5) — needs most data.
-  Old/retired: do not deploy.
+          micro_scaling_laws_v2.py (big hosts only, weight 1),
+          bottleneck_mechanism.py (NEW, weight 1)
 
 RETIRED (do not redeploy):
   ALL grokking variants, ALL definitively confirmed experiments,
@@ -105,19 +113,20 @@ RETIRED (do not redeploy):
   Spectral Dynamics v2, Lazy vs Feature Learning, emergent_abilities,
   cellular_automata_v2, feature_rank_dynamics, pruning_compositionality.
 
-DELIVERY PIPELINE STATUS (March 2 s0302n):
-  Credited 196 results this session (2,385 credit, 5 users).
-  Deployed 1,848 new WUs (1,758 CPU + 90 GPU) to 71 hosts.
+DELIVERY PIPELINE STATUS (March 2 s0302p ~21:45 UTC):
+  Credited 444 results this session (4,452 credit, 10 users).
+  Deployed 1,996 new WUs (1,905 CPU + 91 GPU) to 74 hosts.
   Fleet: 90+ active hosts. All fully loaded.
-  Over-queued hosts still draining: 113, 137, 159, 219, 222, 319.
+  Over-queued hosts still draining: 113, 137, 159, 219, 222, 319, 61.
 
 KNOWN ISSUES:
   - BOINC create_work sets transition_time to FUTURE — MUST fix after EVERY create_work
   - Targeted WUs: result records created by scheduler on host check-in, NOT transitioner
+  - Host 340 (Foxtrot-3): regcomp exit -148 (host-specific timeout)
+  - Host 321 (Rosie): exit 195 (wrapper issue, still mostly works)
   - Host 235 (alix): SSL CERTIFICATE_VERIFY_FAILED — skipped
   - Host 202 (archlinux): Same SSL issue — skipped
-  - Host 63 (Latitude): Only 4GB RAM — skipped
-  - Host 118 (Athlon-x2-250): Only 3GB RAM — skipped
-  - Host 206 (MSI-B550-A-Pro): Consistent exit_status=203 errors — skipped
-  - Host 321 (Rosie): exit_status=195 on multiple experiments — skipped
+  - Host 63/118/116: Low RAM — skipped
+  - Host 206 (MSI-B550-A-Pro): exit_status=203 — skipped
   - cellular_automata_v2: BROKEN, aborted
+  - neuronspec seed extraction falls back to default on many hosts
