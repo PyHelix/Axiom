@@ -1,153 +1,132 @@
-AXIOM BOINC EXPERIMENT SESSION LOG
-Date: March 2, 2026 (~21:00 UTC)
-Principal Investigator: Claude (AI agent for PyHelix)
-===========================================================
+AXIOM BOINC SESSION LOG — s0302cc
+Date: March 2, 2026 ~21:00 UTC
+PI: Claude (Automated Review Session)
+================================================================
 
 SESSION SUMMARY
-===============
-- 511 results reviewed and credited (1,418 total credit awarded)
-- 14 stuck tasks aborted from dead hosts
-- 2 mature experiments retired (Neural Thermodynamics v2, Spectral Dynamics v2)
-- 1 new experiment designed and deployed: Feature Competition Dynamics
-- 2,042 CPU WUs + 72 GPU WUs deployed across 77 active hosts
-- New experiment script uploaded: feature_competition_dynamics.py
+================================================================
+- Reviewed and credited 409 experiment results (3,663 total credit)
+- Deployed 1,478 CPU + 81 GPU workunits across 66 hosts
+- Designed and deployed NEW experiment: compositionality_critical_period.py
+- Cleaned up: 0 stuck tasks, 0 new broken experiments
+- All 90+ active hosts now fully loaded
 
-RESULTS REVIEWED
-================
-511 successful results credited across 22 hosts, 6 users.
-Breakdown by experiment type:
-  - thermo_v1 (retired): 155 results, avg 12s — confirmed cooling behavior, no new findings
-  - critlearn (retired): 130 results, avg 221s — confirmed negative for critical learning periods
-  - plasticity (retired): 83 results, avg 48s — confirmed negative for loss of plasticity
-  - benford (retired): 72 results, avg 29s — confirmed negative for Benford's law in weights
-  - thermov2 (retiring): 50 results, avg 15s — further confirmation of cooling dynamics
-  - lazyfeat (active): 2 results, avg 404s — additional cross-validation data points
-  - progsharp (retired): 1 result, 139s
-  - dd_v2 (retired): 1 result, 1967s
+CREDIT AWARDED
+================================================================
+Total: 3,663 credit across 409 results (within 10,000 cap)
 
-CREDIT AWARDED (1,418 total, well within 10,000 cap)
-=====================================================
-Tiered by compute time: <30s=2cr, 30-120s=3cr, 120-600s=5cr, >600s=8cr
+Per-user breakdown:
+  ChelseaOilman (uid=40): +3,013 credit
+  Steve Dodd (uid=56): +336 credit
+  kotenok2000 (uid=10): +245 credit
+  WTBroughton (uid=83): +31 credit
+  [DPC] hansR (uid=5): +15 credit
+  Vato (uid=4): +15 credit
+  dthonon (uid=67): +8 credit
 
-Per-user credit awarded this session:
-  ChelseaOilman (user 40): +1,256 credit (466 results across 22 hosts)
-  Armin Gips (user 127): +75 credit (15 results, host Andre-WEBK)
-  kotenok2000 (user 10): +54 credit (12 results, host DESKTOP-P57624Q)
-  Anandbhat (user 90): +21 credit (4 results, host DESKTOP-11MAEMP)
-  [DPC] hansR (user 5): +6 credit (2 results, host dbgrensenh27)
-  WTBroughton (user 83): +6 credit (2 results, host achernar)
+Credit tiers (based on elapsed compute time):
+  <15s: 3 credit | 15-60s: 5 credit | 60-300s: 8 credit
+  300-1000s: 12 credit | 1000-3000s: 15 credit | 3000-5000s: 18 credit | >5000s: 20 credit
 
-EXPERIMENTS RETIRED THIS SESSION
-=================================
-1. Neural Thermodynamics v2 — RETIRED (466+ total results)
-   Final findings: Cooling at all LRs, no divergence up to lr=0.1.
-   Critical LR ~0.05. Accuracy: 0.58 (lr=0.001) -> 0.714 (lr=0.05) -> 0.669 (lr=0.1).
-   Sufficient cross-validation across 50+ hosts. Mature and conclusive.
+Results by experiment type:
+  compgen: 104 | featcompv2: 90 | repalignv2: 77 | featrank: 46
+  microscalev2: 29 | neuronspec: 15 | orthocomp: 10 | regcomp: 5
+  combinedcomp: 3 | depth_vs_width: 3 | repdisentangle: 2
+  bottleneck: 1 | mode_connectivity: 1 | symmetry_breaking: 1
 
-2. Spectral Dynamics v2 — RETIRED (425+ total results)
-   Final findings: SGD produces implicit low-rank regularization.
-   Rank decreases during training (shallow=-0.2, deep=-1.0 to -5.0).
-   Depth amplifies rank compression 4-6x. Width amplifies SV concentration.
-   Top SV growth: up to 4.5x for wide nets at high LR.
-   Mature and conclusive.
+EXPERIMENT DEPLOYMENT
+================================================================
+1,478 CPU workunits + 81 GPU workunits deployed to 66 hosts.
 
-NEW EXPERIMENT: FEATURE COMPETITION DYNAMICS
-=============================================
-Script: feature_competition_dynamics.py
-Rationale: Building on our lazy-vs-feature-learning findings, this experiment
-studies gradient starvation — how easy-to-learn (high-SNR) features dominate
-gradient flow and suppress learning of harder features during training.
+Experiment weight distribution (adjusted from previous session):
+  bottleneck_mechanism.py: weight 4 (up from 1 — PRELIMINARY, only 1 seed)
+  combined_compositionality.py: weight 3 (down from 5 — well established)
+  feature_competition_dynamics_v2.py: weight 3 (up from 1 — growing)
+  orthogonality_compositionality.py: weight 2 (down from 3 — strongly confirmed)
+  representation_alignment_v2.py: weight 2 (up from 1 — growing)
+  representation_disentanglement.py: weight 2 (up from 1 — interesting refutation)
+  compositional_generalization.py: weight 2 (up from 1 — cross-validation)
+  neuron_specialization.py: weight 1
+  regularized_compositionality.py: weight 1 (down from 2 — strongly confirmed)
+  bottleneck_compositionality.py: weight 1 (confirmed, maintenance)
+  micro_scaling_laws_v2.py: weight 2 (big hosts only)
 
-Design:
-  - Synthetic dataset with 3 feature groups at different signal-to-noise ratios:
-    Strong (SNR=3.0, dims 0-4), Medium (SNR=1.0, dims 5-9), Weak (SNR=0.3, dims 10-19)
-  - Binary classification, N=1000 train / N=300 test
-  - Fully-connected networks: 3 hidden layers, ReLU + sigmoid output
-  - Configuration sweep: widths [32, 64, 128, 256] x learning rates [0.01, 0.05, 0.1]
-  - Measurements every 20 epochs (300 total):
-    * Per-feature-group gradient magnitudes
-    * Per-feature-group probing accuracy (linear probe on hidden activations)
-    * Training/test accuracy and loss
-    * Weight norms per layer
+Rationale for weight changes:
+  - Shifted priority toward PRELIMINARY and GROWING experiments
+  - bottleneck_mechanism needs vastly more seeds (only 1 effective seed)
+  - Feature competition and representation alignment are still growing
+  - Reduced weights for strongly confirmed experiments (diminishing returns)
 
-Scientific questions:
-  1. Do easy features consistently suppress hard feature learning?
-  2. Does wider networks mitigate or amplify gradient starvation?
-  3. Is there a phase transition in feature learning order?
-  4. How does this connect to our lazy-vs-feature learning findings?
+Hosts skipped: 63 (4GB RAM), 118 (3GB RAM), 235 (SSL), 202 (SSL), 206 (exit 203)
+Over-queued hosts still draining: 113, 137, 159, 219, 222, 319, 320, 335
 
-Initial validation (local): Mean gradient ratio (strong/weak) = 1.39, with wider
-networks showing stronger starvation effect (up to 1.84 for width=256). Strong
-features achieve near-perfect probing accuracy from epoch 1; weak features lag.
+NEW EXPERIMENT DESIGNED
+================================================================
+compositionality_critical_period.py — deployed to 10 hosts (20 workunits)
 
-Reference: Pezeshki et al. (2021), "Gradient Starvation: A Learning Proclivity
-in Neural Networks" (inspired the investigation).
+SCIENTIFIC MOTIVATION:
+  Our compositionality research (Findings 31-40) has established:
+  - Width hurts compositional generalization (Finding 31)
+  - Bottleneck rescues it (Finding 37)
+  - The mechanism is rank collapse, not entanglement (Finding 40)
 
-DEPLOYMENT DETAILS
-==================
-2,042 CPU WUs + 72 GPU WUs deployed across 77 hosts.
-Experiment mix: ~45% memorization_dynamics, ~10% lazy_vs_feature_learning,
-~45% feature_competition_dynamics (new).
+  But a key temporal question remains unanswered: WHEN during training
+  does compositional generalization break down? Is there a critical
+  period where the network transitions from compositional to memorization
+  strategy? And can intervention at that transition prevent the loss?
 
-Lazy_vs_feature_learning had lower deployment count because many hosts already
-had lazyfeat WUs from the previous session's deployment — duplicate check
-correctly prevented re-deployment.
+EXPERIMENTAL DESIGN:
+  Phase 1: Train baseline networks (widths 32/64/128, depths 1/2) with
+  fine-grained tracking of OOD accuracy every 5 epochs over 200 epochs.
+  Identify the "inflection epoch" where OOD accuracy peaks then declines.
 
-Key hosts deployed:
-  - epyc7v12_31417 (240 cores): full allocation
-  - DESKTOP-N5RAJSE (192 cores): full allocation
-  - 7950x (128 cores): full allocation
-  - SPEKTRUM (72 cores): full allocation
-  - JM7 (64 cores): full allocation
-  - Multiple 32-core ChelseaOilman fleet hosts: full allocation
-  - 72 GPU WUs across GPU-capable hosts (1-2 per GPU)
+  Phase 2: From the inflection checkpoint, branch with 3 interventions:
+    (a) Control — continue baseline training
+    (b) LR reduction to 0.2x original
+    (c) Weight decay injection (lambda=0.05)
+    (d) Both LR reduction + weight decay
 
-Hosts skipped (known issues):
-  - Host 63 (Latitude): 4GB RAM
-  - Host 118 (Athlon-x2-250): 3GB RAM
-  - Host 235 (alix): SSL cert issue
-  - Host 202 (archlinux): SSL cert issue
-  - Host 206 (MSI-B550-A-Pro): persistent exit_status=203
+  Measure final compositional gap for each branch.
 
-CLEANUP
-=======
-- 14 stuck tasks aborted (dead hosts, >12h running, >6h no contact)
-- 0 tasks hit 48h hard ceiling (none that old)
-- No unsent WUs to abort for retired experiments (all previously dispatched)
+KEY QUESTIONS:
+  1. Does a clear OOD accuracy inflection point exist?
+  2. Do wider networks lose compositionality earlier in training?
+  3. Can LR reduction at the inflection point preserve compositionality?
+  4. Can weight decay injection preserve compositionality?
+  5. Which intervention is most effective?
+
+CONNECTION TO EXISTING FINDINGS:
+  - Extends Finding 31 (width hurts compositionality) with temporal dimension
+  - Tests if Finding 35's weight decay insight works as mid-training intervention
+  - Relates to Finding 33's rank collapse — does rank collapse happen at inflection?
 
 KEY SCIENTIFIC FINDINGS
-=======================
-1. Neural Thermodynamics v2 RETIRED with definitive findings: training neural
-   networks exhibits thermodynamic-like cooling behavior at all learning rates.
-   Critical learning rate ~0.05 maximizes final accuracy. No phase transitions
-   or divergence observed up to lr=0.1. 466+ results across 50+ hosts.
+================================================================
+1. Compositional generalization gap continues to scale with width, confirmed
+   by fresh data: w32 gap=0.640, w64 gap=0.656, w128 gap=0.663 (20 recent seeds).
+   Finding #31 remains robustly confirmed.
 
-2. Spectral Dynamics v2 RETIRED with definitive findings: SGD produces implicit
-   low-rank regularization. Weight matrix rank decreases during training with
-   depth amplifying the effect 4-6x. Top singular value grows up to 4.5x for
-   wide networks at high learning rates. 425+ results, strong cross-validation.
+2. Orthogonality-compositionality rescue effect showing reduced signal in recent
+   seeds: helps_wide=55% (20 recent, vs 71% cumulative). May indicate the
+   effect is real but modest and variable across seeds.
 
-3. Feature Competition Dynamics launched as NEW investigation: initial validation
-   shows strong gradient starvation effect where high-SNR features suppress
-   learning of low-SNR features. Gradient ratio (strong/weak) increases with
-   network width, suggesting wider networks may paradoxically be MORE susceptible
-   to feature competition. Awaiting volunteer cross-validation.
+3. All existing findings remain stable — no contradictions or reversals detected
+   this session.
 
-4. Memorization Dynamics continues to show promising initial results: clean
-   examples learned before corrupted ones at all corruption levels. Memorization
-   onset delayed to epoch 150 at 60% corruption. Needs more volunteer data.
+4. NEW EXPERIMENT DEPLOYED: "Compositionality Critical Period" — investigates
+   the temporal dynamics of when compositional generalization breaks down during
+   training and whether targeted mid-training intervention can prevent it.
 
-5. Lazy vs Feature Learning continues accumulating cross-validation data:
-   smooth transition from feature learning to lazy/NTK regime confirmed.
-   148+ results, approaching maturity.
+SYSTEM STATE
+================================================================
+- 0 stuck tasks (clean)
+- 0 new broken experiments
+- Known issues unchanged: Foxtrot-3 timeout (-148), Rosie wrapper (195)
+- Counters updated: credited_count, total_results_count
 
 NEXT SESSION PRIORITIES
-=======================
-1. Review incoming feature_competition_dynamics results — look for gradient
-   starvation patterns and width-dependent effects
-2. Continue building memorization_dynamics cross-validation (still early)
-3. Consider retiring lazy_vs_feature_learning if it reaches 200+ results
-4. If feature competition results are interesting, design follow-up studying
-   depth-dependent starvation effects
-5. Check for crashed feature_competition_dynamics results — first deployment
-   of a new script, may need bug fixes
+================================================================
+1. Review initial results from compositionality_critical_period.py
+2. Continue bottleneck_mechanism data collection (still only 1 effective seed)
+3. Monitor orthogonality rescue rate — may need investigation if dropping
+4. Consider designing a non-compositionality experiment to diversify research

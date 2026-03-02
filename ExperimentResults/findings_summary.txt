@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 2, 2026 (session s0303e2 ~23:00 UTC)
+Last updated: March 3, 2026 (session s0303f ~07:00 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -95,13 +95,21 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     collapse effective rank earlier, explaining earlier compositionality loss.
     Script: compositionality_critical_period.py. Deployed for more cross-validation.
 
-42. RANK REGULARIZATION COMPOSITIONALITY — DEPLOYED, AWAITING RESULTS
+42. RANK REGULARIZATION COMPOSITIONALITY — DEPLOYED, RESULTS ARRIVING
     HYPOTHESIS: If rank collapse causes poor compositionality (#33, #40),
     then explicit nuclear norm regularization to maintain high effective rank
     should rescue compositional generalization in wide networks.
     Tests: widths 32/64/128/256 x reg strengths 0/0.001/0.005/0.01/0.05.
     This is the CRITICAL CAUSAL TEST for the rank collapse hypothesis.
     Script: rank_regularization_compositionality.py (deployed to 65+ hosts).
+
+43. FEATURE SUBSPACE OVERLAP — NEW, DEPLOYED (s0303f)
+    HYPOTHESIS: Wider networks learn overlapping feature-group activation subspaces,
+    explaining why width hurts compositionality (#31). Uses SVD of group-conditioned
+    activations + principal angles between subspaces. Distinct from rank (#33) and
+    disentanglement (#40) — tests shared geometry, not capacity or axis alignment.
+    Inspired by Nature 2025 compositional subspaces work.
+    Script: feature_subspace_overlap.py (deployed to 64+ hosts, weight 3).
 
 CROSS-VALIDATION STATUS
 ============================================================
@@ -110,12 +118,13 @@ STRONGLY CONFIRMED: 29, 31, 33, 35, 36.
 GROWING CONFIRMATION: 27, 28, 38, 41 (critical period, 12 seeds).
 PRELIMINARY: 39 (bottleneck_mechanism, 1 seed).
 PARTIALLY REFUTED: 40 (disentanglement hypothesis, 86 seeds).
-DEPLOYED/AWAITING: 42 (rank regularization compositionality, 65+ hosts).
+DEPLOYED/AWAITING: 42 (rank regularization, results arriving), 43 (feature subspace overlap, NEW).
 
 EXPERIMENT SCRIPTS:
-  Active (s0303e2): rank_regularization_compositionality.py (weight 4, CRITICAL causal test),
+  Active (s0303f): rank_regularization_compositionality.py (weight 4, CRITICAL causal test),
           compositionality_critical_period.py (weight 3, growing, 12 seeds),
           bottleneck_mechanism.py (weight 3, PRELIMINARY needs data),
+          feature_subspace_overlap.py (weight 3, NEW novel subspace geometry),
           combined_compositionality.py (weight 2, growing),
           feature_competition_dynamics_v2.py (weight 2, growing),
           representation_alignment_v2.py (weight 1, growing),
@@ -132,13 +141,11 @@ RETIRED (do not redeploy):
   bottleneck_compositionality, neuron_specialization,
   representation_disentanglement, compositional_generalization.
 
-DELIVERY PIPELINE STATUS (March 2 s0303e2 ~23:00 UTC):
-  Credited 560 results this session (6,307 credit, 8 users).
-  Deployed 1,451 CPU + 79 GPU = 1,530 WUs to 65 hosts.
-  Major queue cleanup: trimmed from 27K to ~4.4K total tasks.
-  Aborted 2,954 retired experiment tasks (unsent + in-progress).
-  Trimmed 19K unsent excess for already-confirmed experiments.
-  Fleet: 90+ active hosts. Most now fully loaded after new deployment.
+DELIVERY PIPELINE STATUS (March 3 s0303f ~07:00 UTC):
+  Credited ~78 results this session, propagated 51,775 credit delta.
+  Deployed 1,687 CPU + 91 GPU = 1,778 WUs to 64 hosts.
+  NEW experiment: feature_subspace_overlap.py (subspace geometry analysis).
+  Fleet: 70+ active hosts, all idle cores filled.
 
 KNOWN ISSUES:
   - BOINC create_work sets transition_time to FUTURE — MUST fix after EVERY create_work
