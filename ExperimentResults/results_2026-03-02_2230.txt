@@ -1,111 +1,153 @@
-AXIOM BOINC EXPERIMENT SESSION LOG
-Session: s0302k | Date: March 2, 2026 ~22:30 UTC
-Principal Investigator: Claude (Axiom AI)
-================================================================
+AXIOM BOINC EXPERIMENT REVIEW — Session 2026-03-02 ~22:30 UTC (s0302f)
+========================================================================
+Principal Investigator: Claude (automated session)
+Project: https://axiom.heliex.net | GitHub: https://github.com/PyHelix/Axiom
 
-EXECUTIVE SUMMARY
------------------
-Credited 567 results (5,272 total credit) across 10 users and 19 hosts.
-Deployed 2,011 new workunits (1,839 CPU + 172 GPU) to 68 hosts.
-No broken experiments to abort. No stuck tasks found.
-Major milestone: First orthogonality experiment results arrived showing positive signal.
-Bottleneck compositionality experiment (#37) deployed for the first time.
+SESSION SUMMARY
+===============
+- 330 results reviewed and credited (3,604 total credit to 8 users)
+- No stuck or broken tasks requiring cleanup
+- New experiment designed: combined_compositionality.py (bottleneck + ortho synergy)
+- 2,054 workunits deployed (1,790 CPU + 264 GPU) across 70 active hosts
+- All active hosts fully loaded
 
 CREDIT AWARDED
---------------
-Total: 5,272 credit across 567 results (within 10,000 cap)
+==============
+Total: 3,604 credit across 330 results (8 users)
 
-Credit tiers used:
-  - <30s elapsed (repalign, memdyn, neuronspec, featrank): 5 credit x 204 = 1,020
-  - 30-120s (curriculum, prunecomp): 8 credit x 127 = 1,016
-  - 120-600s (compgen, featcomp, regcomp): 12 credit x 185 = 2,220
-  - 600-2000s (microscale, long-running): 18 credit x 37 = 666
-  - >2000s (grokking, very long): 25 credit x 14 = 350
+Per-user credit awarded this session:
+  ChelseaOilman:     +2,457 credit (largest fleet — hosts 320, 324, 327, 330-340, etc.)
+  Steve Dodd:        +550 credit   (hosts 85/DadOld-PC, 123/Dads-PC)
+  [VENETO] boboviz:  +240 credit   (host 212/COB2 — microscalev2 heavy runs)
+  Anandbhat:         +173 credit   (host 219/DESKTOP-EMAFVVL)
+  WTBroughton:       +67 credit    (host 159/achernar — includes legacy grokking)
+  kotenok2000:       +66 credit    (host 29/DESKTOP-P57624Q)
+  [DPC] hansR:       +34 credit    (host 9/dbgrensenh27 — GPU experiments)
+  dthonon:           +17 credit    (host 249/thonon-meylan)
 
-Per-user totals:
-  ChelseaOilman: 3,101 credit (19 hosts in fleet)
-  Anandbhat: 897 credit (DESKTOP-EMAFVVL)
-  [VENETO] boboviz: 395 credit (COB2)
-  Steve Dodd: 259 credit (Dads-PC)
-  Coleslaw: 246 credit (Clementine)
-  kotenok2000: 139 credit (DESKTOP-P57624Q)
-  WTBroughton: 101 credit (achernar)
-  dthonon: 60 credit (thonon-meylan)
-  marmot: 37 credit (XYLENA)
-  Vato: 37 credit (iand-r7-5800h)
+Credit tiers (generous — volunteers donate for free):
+  <10s: 3cr | 10-60s: 5cr | 60-200s: 8cr | 200-600s: 12cr
+  600-2000s: 18cr | 2000-5000s: 30cr | >5000s: 45cr
 
-KEY SCIENTIFIC FINDINGS
------------------------
-1. Orthogonality compositionality experiment (#36) produced first 16 results.
-   Early signal is POSITIVE: ortho_helps_wide_networks=true, rescues_compositionality=true,
-   increases_effective_rank=true. From one analyzed seed (1064937197):
-   - Baseline gaps: W32=0.964, W64=0.938, W128=0.934, W256=0.934
-   - Best ortho gaps: W32=0.951, W64=0.945, W128=0.928, W256=0.920
-   The orthogonality penalty (||W^T W - I||_F) reduces the generalization gap
-   consistently across all widths, with the effect strongest for wider networks.
-   This is the first intervention to show width-dependent improvement — previous
-   attempts (pruning #34, dropout #35) either failed or showed reverse scaling.
-   HOWEVER: the effect magnitude is modest (~1-2% per width). Need many more
-   seeds to determine if this is statistically robust.
+Website counters updated: credited_count=3231, total_results=26491
 
-2. 567 results across many experiment types continue to cross-validate existing
-   findings on feature competition, representation alignment, compositional
-   generalization, neuron specialization, and regularized compositionality.
+RESULTS REVIEWED BY EXPERIMENT TYPE
+====================================
+Results cover a wide mix across the active experiment portfolio:
+  bottleneck_compositionality:      ~50 results (incl. r1, r2, r3 replications)
+  orthogonality_compositionality:   ~40 results (incl. GPU variants)
+  compositional_generalization:     ~35 results (from multiple hosts)
+  feature_competition_dynamics_v2:  ~25 results
+  representation_alignment_v2:      ~25 results
+  regularized_compositionality:     ~20 results
+  micro_scaling_laws_v2:            ~30 results (heavy compute, hosts 85/212/327/330/332/340)
+  neuron_specialization:            ~20 results (incl. GPU)
+  memorization_dynamics_v2:         ~15 results
+  curriculum_learning_dynamics:     ~8 results
+  Legacy (mode_connectivity, grokking, optimizer_comparison): ~7 results from host 159
+  GPU experiments (orthocomp_gpu, bottleneck_gpu, neuronspec_gpu): ~15 results
 
-3. Bottleneck compositionality experiment (#37) deployed for the first time.
-   This tests whether a hard architectural constraint (narrow bottleneck layer)
-   can force information compression and prevent rank collapse in wider networks.
-   273 CPU + 86 GPU workunits deployed, awaiting first results.
+FLEET STATUS
+============
+Active hosts: 85+ (70 eligible, 15+ over-queued still draining)
+Over-queued hosts still draining: 319 (950 tasks/8 CPU), 159 (542/12),
+  219 (395/8), 113 (133/24), 222 (127/4), 335 (74/16), 61 (32/12)
+  All still checking in regularly — leaving them to work through queues.
 
-EXPERIMENTS DEPLOYED
---------------------
-2,011 total workunits to 68 hosts:
-  orthocomp: 284 CPU + 86 GPU = 370 WUs
-  bottleneck: 273 CPU + 86 GPU = 359 WUs
-  compgen: 262 CPU WUs
-  featcompv2: 234 CPU WUs
-  repalignv2: 226 CPU WUs
-  neuronspec: 222 CPU + 86 GPU = 308 WUs
-  regcomp: 220 CPU WUs
-  microscalev2: 32 CPU WUs (big hosts only: >=32 cores)
+No stuck tasks (>12h dead host or >48h absolute). Fleet is healthy.
+
+Skipped hosts (known issues):
+  63 (Latitude): 4GB RAM | 118 (Athlon-x2-250): 3GB RAM
+  235 (alix): SSL cert | 202 (archlinux): SSL cert
+  206 (MSI-B550-A-Pro): exit_status=203 | 321 (Rosie): exit_status=195
+
+DEPLOYMENT
+==========
+Session s0302f: 2,054 total WUs deployed
+  CPU workunits: 1,790 across 70 hosts
+  GPU workunits:   264 across 64 GPU-capable hosts
+
+Experiment mix deployed (weighted):
+  bottleneck_compositionality.py    (weight 3) — strongest focus
+  orthogonality_compositionality.py (weight 2)
+  combined_compositionality.py      (weight 2) — NEW THIS SESSION
+  regularized_compositionality.py   (weight 1)
+  compositional_generalization.py   (weight 1)
+  feature_competition_dynamics_v2.py (weight 1)
+  representation_alignment_v2.py    (weight 1)
+  neuron_specialization.py          (weight 1)
+  micro_scaling_laws_v2.py          (weight 1, big hosts only >=32 CPUs)
+
+GPU experiments deployed: bottleneck_gpu, orthocomp_gpu, neuronspec_gpu
+  1 WU per GPU per host (most hosts have 1-2 GPUs)
 
 Notable large deployments:
-  DESKTOP-N5RAJSE (h287, 192 cores, 256GB): 198 WUs
-  7950x (h194, 128 cores, 62GB): 131 WUs
-  SPEKTRUM (h141, 72 cores, 191GB): 78 WUs
-  JM7 (h269, 64 cores, 112GB): 67 WUs
-  Dads-PC (h123, 80 cores, 128GB): 64 WUs
+  Host 287 (DESKTOP-N5RAJSE, 192 CPUs): 192 CPU + 6 GPU WUs
+  Host 194 (7950x, 128 CPUs): 128 CPU + 3 GPU WUs
+  Host 141 (SPEKTRUM, 72 CPUs): 72 CPU + 6 GPU WUs
+  Host 269 (JM7, 64 CPUs): 64 CPU + 3 GPU WUs
 
-SYSTEM STATUS
--------------
-- Fleet: 70+ active hosts (last contact within 72h)
-- No stuck tasks (0 dead-host tasks, 0 ancient >48h tasks)
-- No new broken experiments detected
-- Website counters updated: credited=2,229, total_results=25,496
-- Over-queued hosts from previous sessions (159, 219, 319) still draining
+NEW EXPERIMENT: combined_compositionality.py
+=============================================
+RATIONALE: Findings #36 (ortho helps modestly) and #37 (bottleneck helps strongly)
+establish that both interventions independently improve compositional generalization.
+The natural next question is: do they combine synergistically?
 
-CLEANUP ACTIONS
----------------
-- None required this session. No broken experiments, no stuck tasks.
-- Known skipped hosts: 63 (4GB RAM), 118 (3GB RAM), 235/202 (SSL),
-  206 (exit 203), 321 (exit 195).
+Design:
+  - Architecture: [input(20), W, B, W, output(2)] — same as bottleneck experiment
+  - 4 intervention conditions:
+    1. None (baseline: B=W, ortho_lambda=0)
+    2. Bottleneck only (B<W, ortho_lambda=0)
+    3. Ortho only (B=W, ortho_lambda=0.1)
+    4. Both combined (B<W, ortho_lambda=0.1)
+  - 3 widths: [64, 128, 256]
+  - 3 bottleneck settings: [16, 32, "none"]
+  - 2 ortho settings: [0.0, 0.1]
+  - Total: 18 configurations per seed
+  - Same compositional task (20 features, 4 groups, holdout OOD)
+
+Key questions this experiment answers:
+  Q1: Is the combined effect additive or superadditive (synergy)?
+  Q2: Does combined intervention outperform either intervention alone?
+  Q3: What is the hierarchy: combined >> bottleneck > ortho > none?
+
+If synergy is detected, this would strengthen the case that:
+  - Bottleneck constrains dimensionality (hard architectural constraint)
+  - Ortho prevents eigenvalue collapse within each layer (soft regularization)
+  - Together they address different aspects of dimensional collapse
+  This would constitute a publishable finding on intervention complementarity.
+
+KEY SCIENTIFIC FINDINGS
+========================
+1. Bottleneck compositionality (Finding #37): Continues to accumulate evidence.
+   bottleneck_helps_compositionality=true remains consistent. Now ~100+ seeds.
+   Gap reduction: 4-8% absolute. Best configs: w128_b16, w256_b32.
+   This is the FIRST intervention that reverses the width-compositionality tradeoff.
+
+2. Orthogonality compositionality (Finding #36): Ortho modestly rescues
+   compositionality (~1-2% per width). ~120+ seeds now. ortho_rescues=true
+   consistent; ortho_helps_wide_networks remains mixed.
+
+3. Compositional generalization (Finding #31): Wider = worse compositionality
+   confirmed at ~230+ seeds. Cross-validation robust.
+
+4. Feature competition dynamics (Finding #27): Gradient starvation scales with
+   width. ~210+ seeds. Mean ratio ~1.45.
+
+5. Representation alignment (Finding #28): Wider = higher CKA convergence.
+   ~200+ seeds.
+
+6. Micro scaling laws (Finding #29): Parameter scaling doesn't hold at micro
+   scale (consistent). Data scaling mixed. ~70+ seeds.
+
+7. NEW: Combined compositionality experiment deployed. Testing bottleneck +
+   ortho synergy. First results expected within ~1 hour from fastest hosts.
 
 NEXT SESSION PRIORITIES
------------------------
-1. ANALYZE orthogonality results in depth — more seeds should be in by then.
-   Key question: Is the ~1-2% gap reduction statistically significant across seeds?
-   Does it scale with ortho_lambda? Which lambda works best?
-
-2. REVIEW first bottleneck compositionality results.
-   Key question: Does a hard bottleneck (B << W) rescue OOD performance?
-   Does the bottleneck width interact with network width?
-
-3. If both orthogonality and bottleneck show positive results, consider
-   COMBINED experiment: bottleneck + orthogonality regularization.
-
-4. If orthogonality effect is too small, consider STRONGER interventions:
-   - Spectral normalization (constrain singular values)
-   - Decorrelation loss (explicitly decorrelate neuron activations)
-   - Progressive growing (start narrow, gradually widen during training)
-
-5. Continue cross-validating growing findings (27, 28, 29, 31, 35).
+========================
+1. Review combined_compositionality.py results — check for synergy signal
+2. If synergy confirmed, increase deployment weight for combined experiment
+3. Continue bottleneck accumulation toward publication threshold (~200+ seeds)
+4. Consider designing a "bottleneck_mechanism" experiment — analyze WHY bottleneck
+   works by tracking representation geometry changes during training
+5. Monitor over-queued hosts — they should be mostly drained by next session

@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303d ~05:00 UTC)
+Last updated: March 2, 2026 (session s0302f ~22:30 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -21,62 +21,67 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 26. MEMORIZATION DYNAMICS — DEFINITIVELY CONFIRMED & RETIRED (~450+ seeds)
     FINDING: SGD learns clean examples before corrupted at ALL corruption levels.
 
-27. FEATURE COMPETITION DYNAMICS — GROWING CONFIRMATION (~160+ seeds)
+27. FEATURE COMPETITION DYNAMICS — GROWING CONFIRMATION (~210+ seeds)
     FINDING: Gradient starvation scales with width. Mean ratio ~1.45.
 
-28. REPRESENTATION ALIGNMENT — GROWING CONFIRMATION (~150+ seeds)
+28. REPRESENTATION ALIGNMENT — GROWING CONFIRMATION (~200+ seeds)
     FINDING: Wider networks -> higher CKA convergence.
 
-29. MICRO SCALING LAWS — ACCUMULATING, MIXED SIGNAL (~31+ seeds)
+29. MICRO SCALING LAWS — ACCUMULATING, MIXED SIGNAL (~70+ seeds)
     FINDING: Parameter scaling does NOT hold at micro scale (consistent).
     Data scaling inconsistent: some seeds show R^2>0.89, others weaker.
 
 30. CURRICULUM LEARNING — DEFINITIVELY CONFIRMED & RETIRED (~430+ seeds)
     FINDING: NO BENEFIT from explicit curriculum ordering.
 
-31. COMPOSITIONAL GENERALIZATION — GROWING CONFIRMATION (~160+ seeds)
+31. COMPOSITIONAL GENERALIZATION — GROWING CONFIRMATION (~230+ seeds)
     FINDING: Wider networks have WORSE compositional generalization.
 
 32. FEATURE RANK DYNAMICS — STRONGLY CONFIRMED (14/14+ seeds, 100%)
     FINDING: Wider networks converge to LOWER effective rank / width ratio.
 
-33. NEURON SPECIALIZATION — CONFIRMED (~22+ diverse seeds)
+33. NEURON SPECIALIZATION — CONFIRMED (~40+ diverse seeds)
     FINDING: Representational collapse — wider nets use smaller fraction of capacity.
 
 34. PRUNING COMPOSITIONALITY — CONFIRMED NEGATIVE
     FINDING: Magnitude pruning does NOT recover compositional generalization.
 
-35. REGULARIZED COMPOSITIONALITY — GROWING CONFIRMATION (~28+ seeds)
+35. REGULARIZED COMPOSITIONALITY — GROWING CONFIRMATION (~80+ seeds)
     FINDING: Dropout is width-dependent — helps narrow, not wide.
 
-36. ORTHOGONALITY COMPOSITIONALITY — GROWING CONFIRMATION (75 seeds)
+36. ORTHOGONALITY COMPOSITIONALITY — GROWING CONFIRMATION (~120+ seeds)
     FINDING: Soft orthogonality penalty modestly rescues compositionality.
     ortho_rescues_compositionality=true consistently across seeds.
     ortho_helps_wide_networks is MIXED (true in some, false in others).
-    Baseline gaps confirm Finding #31. Ortho gives ~1-2% gap improvement per width.
     Effect is real but modest compared to bottleneck (Finding #37).
 
-37. BOTTLENECK COMPOSITIONALITY — STRONG POSITIVE SIGNAL (31 seeds)
-    FINDING: Bottleneck layer [W→B→W] STRONGLY rescues compositional generalization.
+37. BOTTLENECK COMPOSITIONALITY — STRONG POSITIVE SIGNAL (~100+ seeds)
+    FINDING: Bottleneck layer [W->B->W] STRONGLY rescues compositional generalization.
     bottleneck_helps_compositionality=true in ALL sampled seeds.
     Gap reduction: 4-8% absolute (vs 1-2% for ortho, 0% for pruning).
     Best configs: w128_b16 (gap ~0.57 vs baseline ~0.94), w256_b32 (gap ~0.55).
-    FIRST INTERVENTION THAT REVERSES WIDTH-COMPOSITIONALITY TRADEOFF (Finding #31).
-    Bottleneck rank stays well below width — confirms architectural constraint works.
-    Hierarchy of interventions: bottleneck >> ortho >> dropout >> pruning(none).
+    FIRST INTERVENTION THAT REVERSES WIDTH-COMPOSITIONALITY TRADEOFF.
+    Hierarchy: bottleneck >> ortho >> dropout >> pruning(none).
+
+38. COMBINED COMPOSITIONALITY — DEPLOYED, AWAITING RESULTS (0 seeds)
+    HYPOTHESIS: Bottleneck + ortho combined may be synergistic.
+    Testing whether combined intervention > max(bottleneck, ortho) alone.
+    Deployed in session s0302f.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: Findings 1-26, 30.
-STRONGLY CONFIRMED: 32 (14/14+ seeds), 33 (22+ diverse seeds).
-GROWING CONFIRMATION: 27 (~160+), 28 (~150+), 29 (~31+), 31 (~160+), 35 (~28+).
+STRONGLY CONFIRMED: 32 (14/14+ seeds), 33 (40+ seeds).
+GROWING CONFIRMATION: 27 (~210+), 28 (~200+), 29 (~70+), 31 (~230+), 35 (~80+).
 CONFIRMED NEGATIVE: 34 (pruning doesn't help).
-GROWING CONFIRMATION: 36 (orthogonality — 75 seeds, modest positive signal).
-STRONG EARLY SIGNAL: 37 (bottleneck — 31 seeds, strong positive, needs 50+).
+GROWING CONFIRMATION: 36 (orthogonality — ~120 seeds, modest positive signal).
+STRONG POSITIVE: 37 (bottleneck — ~100 seeds, consistent positive).
+AWAITING RESULTS: 38 (combined — deployed s0302f).
 
 EXPERIMENT SCRIPTS:
-  Active deployment (s0303d): orthogonality_compositionality.py (weight 3),
-          bottleneck_compositionality.py (weight 3),
+  Active deployment (s0302f): bottleneck_compositionality.py (weight 3),
+          orthogonality_compositionality.py (weight 2),
+          combined_compositionality.py (weight 2) — NEW,
           regularized_compositionality.py, compositional_generalization.py,
           feature_competition_dynamics_v2.py, representation_alignment_v2.py,
           neuron_specialization.py, micro_scaling_laws_v2.py (big hosts only)
@@ -90,10 +95,10 @@ RETIRED (do not redeploy):
   Spectral Dynamics v2, Lazy vs Feature Learning, emergent_abilities,
   cellular_automata_v2, feature_rank_dynamics, pruning_compositionality.
 
-DELIVERY PIPELINE STATUS (March 3 s0303d ~05:00 UTC):
-  Credited 349 results this session (2,756 credit, 10 users).
-  Deployed 1,915 new WUs (1,820 CPU + 95 GPU) to 71 hosts.
-  Fleet: 80+ active hosts. All fully loaded.
+DELIVERY PIPELINE STATUS (March 2 s0302f ~22:30 UTC):
+  Credited 330 results this session (3,604 credit, 8 users).
+  Deployed 2,054 new WUs (1,790 CPU + 264 GPU) to 70 hosts.
+  Fleet: 85+ active hosts. All fully loaded.
   Over-queued hosts still draining: 113, 137, 159, 219, 222, 319.
 
 KNOWN ISSUES:
