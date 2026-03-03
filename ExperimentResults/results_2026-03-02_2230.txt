@@ -1,0 +1,125 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Session: s0302p — March 2, 2026 ~22:30 UTC
+===========================================
+
+KEY SCIENTIFIC FINDINGS
+=======================
+
+1. REGULARIZATION TIMING UNIVERSALITY — PARTIAL CONFIRMATION (Finding #47 updated):
+   New result from Delta-1 (seed=1652859793, independent) reveals that the inverse critical
+   period is NOT universal across all regularizers — it is PARTIAL, applying to 2 of 4 tested:
+
+   - WEIGHT DECAY: Inverse CP confirmed (late beats early at all widths, early hurts).
+   - DROPOUT: Inverse CP confirmed (late beats early at all widths, early hurts).
+     At w32: no_reg=0.710, always=0.440, early=0.724, late=0.540.
+     At w128: dropout less effective overall but inverse pattern still holds.
+   - L1 REGULARIZATION: No inverse CP — L1 is NOT effective for compositionality at all.
+     Gaps ~0.73 across all conditions, no meaningful variation.
+   - NOISE INJECTION: No inverse CP — noise is NOT effective for compositionality.
+     Gaps ~0.70 across all conditions, no meaningful variation.
+
+   INTERPRETATION: The inverse CP is specific to regularizers that compress weight structure
+   (weight decay) or reduce representation redundancy (dropout). L1 penalizes weight magnitude
+   but doesn't compress rank structure. Noise injection adds stochasticity but doesn't constrain
+   representations. This is a more interesting finding than simple universality — it identifies
+   the class of regularizers for which timing matters.
+
+2. INVERSE CRITICAL PERIOD (Finding #45) — continued confirmation with new independent seeds
+   from Charlie-1 (h324) and Delta-1 (h330). Seed 445848802 from Delta-1 shows:
+   w32: no_wd=0.612, always=0.328, early=0.703, late=0.335 (late ≈ always, early hurts)
+   w64: no_wd=0.649, always=0.331, early=0.729, late=0.338 (same pattern)
+   w128: no_wd=0.616, always=0.361, early=0.702, late=0.408 (same pattern)
+   100% consistent with prior 34 seeds.
+
+3. WD REBOUND DYNAMICS (Finding #46) — new result confirms preliminary negative:
+   seed=42 (fallback) shows P1=0.417, P2=1.0, P3=0.667, P4=-0.404 (negative correlation).
+   Rank rebound exists but is NEGATIVELY correlated with compositional gap, contradicting
+   the simple rebound hypothesis. The mechanism is likely more subtle.
+
+RESULTS REVIEWED & CREDIT AWARDED
+==================================
+Total results credited: 473
+Total credit awarded: 6,830
+Credit cap remaining: 3,170
+
+By user:
+  ChelseaOilman: 262 results, 3,755 credit (hosts: Dell-XPS-15-9560, Dell-9520, Hotel-3,
+    Charlie-1, Delta-1, Golf-1, Foxtrot-2, Foxtrot-3, and many more)
+  Anandbhat: 91 results, 1,155 credit (host: DESKTOP-EMAFVVL)
+  Steve Dodd: 38 results, 580 credit (host: Dads-PC)
+  WTBroughton: 29 results, 555 credit (host: achernar)
+  kotenok2000: 18 results, 310 credit (host: DESKTOP-P57624Q)
+  PyHelix: 23 results, 300 credit (host: Pyhelix)
+  Vato: 7 results, 105 credit (host: iand-r7-5800h)
+  dthonon: 5 results, 70 credit (host: thonon-meylan)
+
+By experiment type (top 10):
+  Retired experiments (compgen, featcompv2, microscalev2, neuronspec, etc.): ~350 results
+  intervtiming: 33 results (new independent seeds from Charlie-1, Delta-1, Pyhelix, DESKTOP-P57624Q)
+  regtimuniv: 18 results (new seeds from Charlie-1, Delta-1, DESKTOP-P57624Q)
+  wdrebound: 11 results
+  bottmech/bottlemech: 11 results
+  regmech: 10 results
+  rankreg: 10 results (from Dads-PC)
+  critperiod: 9 results
+
+CLEANUP ACTIONS
+===============
+- Aborted 2 stuck tasks from dead hosts (>12h running, >6h no contact)
+- 0 tasks over 48h ceiling
+- No new broken experiment patterns detected in active experiments
+
+DEPLOYMENT
+==========
+Total WUs deployed: 1,596 CPU workunits to 73 hosts
+No GPU workunits deployed (none of our active scripts use cupy/HAS_GPU)
+
+Experiment distribution:
+  representation_crystallization.py: 554 WUs (35%) — FIRST DEPLOYMENT of Finding #48
+  reg_timing_universality.py: 486 WUs (30%) — highest priority for more seeds
+  intervention_timing_compositionality.py: 245 WUs (15%) — continued replication
+  regularization_mechanisms.py: 166 WUs (10%) — needs diverse seeds
+  wd_rebound_dynamics.py: 92 WUs (6%) — mechanism test
+  bottleneck_mechanism.py: 53 WUs (3%) — low priority, seed=42 issue
+
+Top hosts by WUs deployed:
+  DESKTOP-N5RAJSE (192-core): 192 WUs
+  SPEKTRUM (72-core): 72 WUs
+  DadOld-PC (80-core): 68 WUs
+  JM7 (64-core): 64 WUs
+  20+ hosts with 32 WUs each
+
+EXPERIMENT DESIGN REASONING
+============================
+1. REPRESENTATION CRYSTALLIZATION (35% of deployment):
+   This is our newest experiment (Finding #48) and needs initial seeds urgently.
+   It tests the MECHANISM behind the inverse critical period — the hypothesis that
+   networks need unrestricted exploration to discover compositional features before
+   regularization can refine them. If confirmed, this explains WHY late WD works.
+
+2. REGULARIZATION TIMING UNIVERSALITY (30% of deployment):
+   The partial universality finding (WD + dropout show inverse CP; L1 + noise don't)
+   is extremely interesting and needs replication across many seeds and hosts.
+   This is potentially our second most publishable finding after #45 itself.
+
+3. INTERVENTION TIMING (15%):
+   Already strongly confirmed with 34+ seeds, but additional seeds from new hosts
+   continue to strengthen the statistical case for publication.
+
+4. REGULARIZATION MECHANISMS (10%):
+   Still at seed=42 only. Needs diverse seeds to determine whether nuclear norm
+   and other regularizers have consistent effects on compositionality.
+
+5. WD REBOUND (6%) and BOTTLENECK MECHANISM (3%):
+   Lower priority. WD rebound shows preliminary negative results (rank rebound
+   is negatively correlated with gap improvement). Bottleneck mechanism still has
+   seed extraction issues.
+
+NEXT STEPS
+==========
+- Await representation crystallization results (first results expected in 1-2 hours)
+- Monitor regtimuniv for more seeds confirming partial universality
+- Consider designing a new experiment testing WHY dropout shows inverse CP but L1 doesn't
+  (hypothesis: weight magnitude compression vs sparsity induction)
+- Investigate whether seed extraction can be fixed in bottleneck_mechanism.py
+- When repcrystal results arrive, analyze crystallization timing and diversity metrics
