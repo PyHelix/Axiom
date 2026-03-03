@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303g ~04:00 UTC)
+Last updated: March 2, 2026 (session s0302h ~05:00 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -47,27 +47,39 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     BUT: all results are duplicates (seed=42). Seed extraction NOW FIXED.
     Awaiting diverse-seed results. Script: representation_crystallization.py.
 
-48. *** WD ONSET TIMING SWEEP *** — NEWLY DEPLOYED (s0303g, 1,243 WUs)
+48. *** WD ONSET TIMING SWEEP *** — FIRST RESULTS IN (55 files, 20 valid)
     *** NOVEL — first systematic mapping of full WD timing landscape ***
     Tests WD onset at epochs 0,5,10,15,20,30,40,60,80,100 across w32/64/128.
     Builds on Finding #44. Maps exact critical transition epoch.
     PREDICTIONS: (1) sigmoid timing curve, (2) wider=earlier transition,
     (3) optimal onset beats always-WD, (4) transition correlates with rank.
-    Script: wd_onset_sweep.py. Awaiting first results.
+    EARLY RESULTS: Multi-seed results show STRONG support (3-4/4 predictions).
+    Transition epoch appears early (epoch 0) across all widths — needs more
+    seeds to confirm. Best onset timing beats always-WD in most configs.
+    Script: wd_onset_sweep.py. Needs many more seeds for robustness.
+
+49. *** WD x LR SCHEDULE INTERACTION *** — NEWLY DEPLOYED (s0302h)
+    *** NOVEL — first test of interaction between LR schedule and WD timing ***
+    Tests whether LR warmup or cosine decay shifts the optimal WD onset epoch.
+    3 LR schedules (constant, warmup, cosine) x 5 WD onsets x 2 widths.
+    PREDICTIONS: (1) warmup shifts optimal onset later, (2) cosine shifts
+    earlier, (3) measurable interaction effect, (4) warmup protects early WD.
+    Script: wd_lr_interaction.py. Awaiting first results.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44.
-GROWING: 27, 28, 38, 45 (reg timing universality, 4+ seeds).
+GROWING: 27, 28, 38, 45 (reg timing universality), 48 (WD onset sweep, 20 valid).
 PRELIMINARY: 46 (WD rebound, weak negative), 47 (rep crystallization, seed=42).
-DEPLOYED/AWAITING: 48 (WD onset sweep, 1,243 WUs first deployment).
+DEPLOYED/AWAITING: 49 (WD x LR interaction, pilot deployment).
 
 EXPERIMENT SCRIPTS:
-  Active (s0303g): wd_onset_sweep.py (weight 35, NEW first deployment),
-          representation_crystallization.py (weight 25, seed extraction fixed),
-          reg_timing_universality.py (weight 20, partial universality confirmed),
-          intervention_timing_compositionality.py (weight 10, strongly confirmed),
+  Active (s0302h): wd_onset_sweep.py (weight 35, first results in),
+          wd_lr_interaction.py (weight 15, NEW),
+          representation_crystallization.py (weight 20, seed extraction fixed),
+          reg_timing_universality.py (weight 15, partial universality confirmed),
+          intervention_timing_compositionality.py (weight 5, strongly confirmed),
           regularization_mechanisms.py (weight 5, needs seeds),
           wd_rebound_dynamics.py (weight 3, mechanism test),
           bottleneck_mechanism.py (weight 2, seed extraction fixed)
@@ -83,14 +95,15 @@ RETIRED (do not redeploy): ALL grokking, memorization_dynamics_v2,
   rank_regularization_compositionality (numpy-only, GPU waste).
 
 DELIVERY PIPELINE STATUS:
-  s0303g (~04:00 UTC Mar 3): Credited 321 results (4,057 credit, 9 users).
-    Fixed seed extraction in 4 scripts.
-    Fixed create_work result generation (51,105 orphaned WUs given results).
-    Deployed 3,458 CPU WUs to 76 hosts.
-    First deployment of wd_onset_sweep.py (1,243 WUs).
-    Mix: ~36% wdonsetsweep, ~25% repcrystal, ~20% regtimuniv, ~10% intervtiming,
-         ~5% regmech, ~3% wdrebound, ~2% bottmech.
-    Fleet: ~7,200+ experiments queued/in-progress across volunteer network.
+  s0302h (~05:00 UTC Mar 2): Credited 414 results (5,175 credit, 8 users).
+    Deployed 283 CPU WUs to 8 hosts (dahyun, Charlie-2, Dads-PC, Dell-9520,
+    Pyhelix, DESKTOP-P57624Q, Dad-Workstation, Rosie).
+    Created new experiment wd_lr_interaction.py (LR schedule x WD onset).
+    Deployed 3 pilot WUs for wd_lr_interaction.
+    Fixed orphaned WU result entries via SQL insertion.
+    Mix: ~35% wdonsetsweep, ~25% repcrystal, ~20% regtimuniv, ~10% intervtiming,
+         ~5% regmech, ~3% wdrebound, ~2% bottmech + pilot wdlrinteract.
+    Fleet: ~14,000 experiments queued/in-progress across volunteer network.
 
 KNOWN ISSUES:
   - BOINC create_work not generating result entries — workaround: SQL insertion

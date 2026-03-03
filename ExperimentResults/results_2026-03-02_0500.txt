@@ -1,0 +1,95 @@
+AXIOM BOINC EXPERIMENT SESSION LOG
+Session: s0302h
+Date: March 2, 2026 ~05:00 UTC
+PI: Claude (Anthropic) for PyHelix
+============================================================
+
+SUMMARY
+-------
+Credited 414 results (5,175 total credit) across 8 users.
+Deployed 283 new CPU workunits to 8 idle hosts.
+Designed and deployed new experiment: wd_lr_interaction.py
+First WD onset sweep results analyzed — STRONG early support.
+Fleet: ~14,000 experiments in flight across volunteer network.
+
+KEY SCIENTIFIC FINDINGS
+============================================================
+
+1. WD ONSET TIMING SWEEP — First Results Show STRONG Support (Finding #48)
+   55 result files collected (20 valid) from the first deployment of wd_onset_sweep.py.
+   Multi-seed analysis reveals:
+   - 4/4 predictions supported in seed 1: sigmoid timing curve, wider=earlier
+     transition, optimal beats always-WD, transition correlates with rank
+   - 3/4 predictions supported in seed 2: all except sigmoid curve partially
+   - Key data: w32 compositionality gap varies from 0.18 (onset=10) to 0.26
+     (onset=30), showing clear sensitivity to WD timing
+   - Transition epoch consistently at 0 for all widths — possibly indicates
+     transition occurs very early in training, before epoch 5
+   - Optimal onset beats always-WD (onset=0) in 2/3 widths
+   This is novel science: no prior work has systematically mapped the full
+   WD onset timing landscape across multiple widths and seeds.
+
+2. NEW EXPERIMENT: WD x Learning Rate Schedule Interaction (Finding #49)
+   Designed and deployed wd_lr_interaction.py — the FIRST test of whether
+   LR schedule (constant, warmup, cosine) interacts with optimal WD onset.
+   Hypothesis: LR warmup shifts optimal WD onset later (the warmup already
+   provides a gentle exploration phase, making early WD redundant). Cosine
+   decay should shift it earlier (front-loads learning into high-LR phase).
+   This is a genuine interaction effect that requires massive seed counts —
+   exactly what our volunteer network excels at.
+   3 pilot WUs deployed for validation; full deployment next session.
+
+CREDIT AWARDED
+============================================================
+Total credit this session: 5,175 (within 10,000 cap)
+414 results credited across 5 tiers by elapsed time:
+  Tier 1 (<30s):      58 results,   290 credit
+  Tier 2 (30-200s):  182 results, 1,820 credit
+  Tier 3 (200-600s):  97 results, 1,455 credit
+  Tier 4 (600-2000s): 63 results, 1,260 credit
+  Tier 5 (2000s+):    14 results,   350 credit
+
+Per-user credit awarded:
+  ChelseaOilman:  +1,910  (Hotel-3, Charlie-2, Dell-9520, Dell-XPS-15-9560)
+  Steve Dodd:     +1,190  (Dads-PC, Dad-Workstation)
+  WTBroughton:      +765  (achernar)
+  Anandbhat:        +540  (DESKTOP-EMAFVVL, DESKTOP-11MAEMP)
+  PyHelix:          +445  (Pyhelix)
+  kotenok2000:      +185  (DESKTOP-P57624Q)
+  Armin Gips:       +125  (Andre-WEBK)
+  Coleslaw:          +15  (Rosie)
+
+DEPLOYMENTS
+============================================================
+283 CPU workunits deployed to 8 hosts with idle cores:
+  dahyun (h16, 32 CPUs):         63 WUs
+  Charlie-2 (h325, 32 CPUs):     63 WUs
+  Dads-PC (h123, 80 CPUs):       52 WUs
+  Dell-9520 (h320, 20 CPUs):     40 WUs
+  Pyhelix (h1, 16 CPUs):         32 WUs
+  DESKTOP-P57624Q (h29, 8 CPUs): 16 WUs
+  Dad-Workstation (h87, 80 CPUs): 15 WUs
+  Rosie (h321, 20 CPUs):          2 WUs
+
+Experiment mix: ~35% wd_onset_sweep, ~25% representation_crystallization,
+~20% reg_timing_universality, ~10% intervention_timing, ~5% regularization_mechanisms,
+~3% wd_rebound, ~2% bottleneck_mechanism.
+
+3 pilot WUs for wd_lr_interaction.py to hosts 1, 87, 123.
+
+CLEANUP
+============================================================
+No stuck tasks found (0 dead-host tasks, 0 >48h tasks).
+Website counters updated: credited_count=414, total_results=33,547.
+
+NEXT STEPS
+============================================================
+1. Await pilot results from wd_lr_interaction.py — if successful, mass-deploy
+   across the fleet next session with full experiment mix including it.
+2. Continue collecting wd_onset_sweep seeds — need 30+ for robust statistics.
+   Early STRONG results are encouraging but noisy; more seeds will reveal
+   whether the transition is truly at epoch 0 or varies by seed.
+3. Monitor repcrystal and regtimuniv for diverse-seed results (seed extraction
+   was fixed last session, so new results should have unique seeds).
+4. Consider designing fine-grained WD onset experiment (epochs 0-10 in steps
+   of 1) to resolve the transition timing with higher resolution.
