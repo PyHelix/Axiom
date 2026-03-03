@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 2, 2026 (session s0302m ~22:40 UTC)
+Last updated: March 3, 2026 (session s0303a ~03:10 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -70,16 +70,25 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     as the mechanism. The mechanism may involve subtler representation changes.
     Script: wd_rebound_dynamics.py. Needs independent seeds.
 
-47. REGULARIZATION TIMING UNIVERSALITY — NEW, DEPLOYED (s0302m)
+47. REGULARIZATION TIMING UNIVERSALITY — EARLY POSITIVE (3 seeds from Pyhelix)
     *** HIGH PRIORITY — tests whether inverse CP is universal or WD-specific ***
     HYPOTHESIS: The inverse critical period generalizes beyond WD to dropout,
     L1 regularization, and Gaussian noise injection. Tests late > early for ALL
     regularizer types at widths [32, 64, 128].
-    PREDICTIONS: (1) Late > early for ALL regularizers, (2) always ≈ late,
-    (3) early hurts or is neutral, (4) 3+/4 regularizers show the effect.
-    If confirmed: universal principle contradicting critical period literature.
-    If only WD: weight decay has unique properties worth understanding.
+    EARLY RESULTS (3 seeds, WD component only):
+    WD inverse CP confirmed in universality framework: late beats early at all widths.
+    All 3 seeds: p1_late_beats_early=true, p2_always_approx_late=true, p3_early_hurts=true.
+    AWAITING: Results for dropout, L1, noise_injection from more hosts.
     Script: reg_timing_universality.py.
+
+48. REPRESENTATION CRYSTALLIZATION — NEW, UPLOADED (s0303a)
+    HYPOTHESIS: Inverse CP exists because networks need "free exploration" to discover
+    compositional features BEFORE regularization can refine them. Early WD constrains
+    prematurely; late WD compresses already-crystallized representations.
+    PREDICTIONS: (1) Late WD = higher rank at epoch 30, (2) Early WD = early collapse,
+    (3) Crystallization occurs before epoch 30, (4) Diversity at crystallization
+    predicts final compositionality.
+    Script: representation_crystallization.py. Not yet deployed via WUs.
 
 CROSS-VALIDATION STATUS
 ============================================================
@@ -88,15 +97,17 @@ STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 45.
 GROWING: 27, 28, 38.
 PRELIMINARY: 39 (bottleneck_mechanism, 1 seed), 42 (rank reg, 1 seed),
   44 (reg mechanisms, 2 results), 46 (WD rebound, weak negative).
-DEPLOYED/AWAITING: 47 (reg timing universality, NEW).
+EARLY POSITIVE: 47 (reg timing universality, 3 seeds).
+DEPLOYED/AWAITING: 48 (representation crystallization, NEW, not yet via WU).
 
 EXPERIMENT SCRIPTS:
-  Active (s0302m): intervention_timing_compositionality.py (weight 5, TOP PRIORITY),
-          reg_timing_universality.py (weight 4, NEW universality test),
+  Active (s0303a): intervention_timing_compositionality.py (weight 5, TOP PRIORITY),
+          reg_timing_universality.py (weight 4, universality test, early positive),
           wd_rebound_dynamics.py (weight 3, mechanism test for #45),
           regularization_mechanisms.py (weight 3, needs seeds),
           bottleneck_mechanism.py (weight 2, seed=42 issue persists),
-          rank_regularization_compositionality.py (weight 2, GPU only)
+          rank_regularization_compositionality.py (weight 2, GPU only),
+          representation_crystallization.py (weight 4, NEW mechanism test, not yet via WU)
 
 RETIRED (do not redeploy): ALL grokking, memorization_dynamics_v2,
   curriculum_learning_dynamics, SAM vs SGD, Catapult Phase, Rank Dynamics,
@@ -108,12 +119,11 @@ RETIRED (do not redeploy): ALL grokking, memorization_dynamics_v2,
   compositionality_critical_period, feature_subspace_overlap, combined_compositionality.
 
 DELIVERY PIPELINE STATUS:
-  s0302m (~22:40 UTC Mar 2): Credited 474 results (5,320 credit, 9 users).
-    Deployed 1,661 CPU + 174 GPU = 1,835 WUs to 73 hosts.
-    NEW experiment: reg_timing_universality.py (universality test for #45).
-    Mix: ~30% intervtiming, ~24% regtimuniv, ~18% wdrebound, ~18% regmech,
-         ~10% bottmech + GPU rankreg + GPU intervtiming.
-    Fleet: 73 active hosts, ~1,661 idle cores filled.
+  s0303a (~03:10 UTC Mar 3): Credited 12 results (233 credit, 4 users).
+    Deployed ~1,585 CPU + 96 GPU = ~1,681 WUs to 67 hosts.
+    NEW experiment script uploaded: representation_crystallization.py.
+    Mix: ~30% intervtiming, ~24% regtimuniv, ~18% wdrebound, ~18% regmech, ~10% bottmech.
+    Fleet: 2,834 experiments in progress across volunteer network.
 
 KNOWN ISSUES:
   - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.
