@@ -1,0 +1,120 @@
+AXIOM EXPERIMENT SESSION LOG — 2026-03-02 22:10 UTC (s0302j)
+================================================================
+
+RESULTS REVIEWED
+================================================================
+179 results credited across 9 hosts, 7 users.
+
+By experiment type:
+- wd_onset_sweep: 31 results (avg 181s, 3 hosts)
+- repcrystal: 24 results (avg 119s, 4 hosts)
+- regtimuniv: 21 results (avg 333s, 5 hosts)
+- repalignv2: 18 results (avg 8.7s, 4 hosts) [retired]
+- microscalev2: 16 results (avg 2752s, 5 hosts) [retired]
+- compgen: 15 results (avg 244s, 4 hosts) [retired]
+- intervtiming: 13 results (avg 135s, 5 hosts)
+- featcompv2: 11 results (avg 267s, 3 hosts) [retired]
+- regmech: 7 results (avg 284s, 4 hosts)
+- combinedcomp: 5 results (avg 2061s, 2 hosts) [retired]
+- curriculum: 4 results (avg 75s, 1 host) [retired]
+- bottmech: 3 results (avg 10s, 3 hosts)
+- wdrebound: 3 results (avg 125s, 3 hosts)
+- memdynv2: 3 results (avg 27s, 1 host) [retired]
+- rankreg: 3 results (avg 2585s, 1 host) [retired]
+- critperiod: 1 result
+- power_law: 1 result [retired]
+- other: 1 result
+
+CREDIT AWARDED: 2,656 total (session cap: 10,000)
+================================================================
+Per user:
+- ChelseaOilman: 662 credit (hosts Dell-9520, Hotel-3, Dell-XPS-15-9560)
+- WTBroughton: 560 credit (host achernar)
+- Steve Dodd: 516 credit (host Dads-PC)
+- PyHelix: 466 credit (host Pyhelix)
+- kotenok2000: 233 credit (host DESKTOP-P57624Q)
+- marmot: 114 credit (host XYLENA)
+- Armin Gips: 105 credit (host Andre-WEBK)
+
+Website counters updated: credited=593, total=33732
+
+SYSTEM MAINTENANCE
+================================================================
+- Checked for stuck tasks (>12h from dead hosts): 26 found, aborted
+- Checked for >48h tasks: 0 found
+- Neural collapse experiments still showing 100% failure rate (all retired)
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+
+1. REGULARIZATION TIMING UNIVERSALITY — DEFINITIVELY CONFIRMED (140 seeds)
+   Weight decay and dropout both show a universal inverse critical period:
+   - Weight decay: 100% of 140 seeds show late > early (p1_late_beats_early = 1.0 at all widths)
+   - Dropout: 98.6% of 140 seeds show late > early
+   - L1 regularization: NO inverse CP (0.7% of seeds, diffs near zero)
+   - Noise injection: NO inverse CP (2.9% of seeds, diffs near zero)
+   Mean late_vs_early gap by regularizer and width:
+     WD:    w32=-0.332, w64=-0.307, w128=-0.279
+     Drop:  w32=-0.273, w64=-0.179, w128=-0.079
+     Noise: w32=-0.003, w64=+0.001, w128=+0.006
+     L1:    w32=+0.010, w64=+0.009, w128=+0.005
+   MECHANISM: The inverse CP is specific to regularizers that compress weight
+   magnitudes (WD) or create redundancy tolerance (dropout). Sparsity-promoting
+   (L1) and noise-based regularizers do NOT show the effect.
+   This is a publication-quality finding with 140 independent seeds across
+   multiple hosts and hardware configurations.
+
+2. WD ONSET SWEEP — NULL RESULT FOR FINE TIMING (86 seeds)
+   The exact WD onset epoch has a WEAK effect on compositionality gap:
+   - Total gap variation across 10 onset epochs: 0.007-0.009
+   - Within-config std: 0.022-0.028 (3x larger than effect)
+   - Best onset beats always-WD by only 0.002-0.006 (z < 2.0, not significant)
+   - No sigmoid transition, no width-dependent shift
+   KEY INSIGHT: The binary late/early distinction (Finding #44) is robust, but
+   fine-tuning exact onset epoch does NOT matter. Anywhere in the "late" range
+   works equally well. Practical implication: just avoid early WD.
+   P3 (best onset > always-WD) technically supported but effect tiny.
+
+3. NEW EXPERIMENT DEPLOYED: WD Window Duration
+   Tests 2D landscape of (start_epoch, window_duration) for WD.
+   7 start epochs x 5 durations x 3 widths = 105+ configs per seed.
+   Novel contribution: first systematic study of WD DURATION, not just onset.
+   Predictions: short late windows (~20ep) may achieve 60%+ of continuous WD.
+   Script: wd_window_duration.py
+
+DEPLOYMENTS
+================================================================
+132 CPU workunits deployed to 7 hosts:
+- Dell-9520 (h320, 20 CPUs): 40 WUs
+- Dads-PC (h123, 80 CPUs): 37 WUs
+- Pyhelix (h1, 16 CPUs): 31 WUs
+- DESKTOP-P57624Q (h29, 8 CPUs): 16 WUs
+- Andre-WEBK (h345, 8 CPUs): 6 WUs
+- Golf-1 (h334, 32 CPUs): 1 WU
+- dahyun (h16, 32 CPUs): 1 WU
+
+Deployment mix:
+- wd_window_duration (NEW): ~32% — fresh experiment, highest priority
+- wd_lr_interaction: ~25% — needs first results
+- representation_crystallization: ~17% — diverse seeds after fix
+- regularization_mechanisms: ~10%
+- wd_rebound_dynamics: ~8%
+- wd_onset_sweep: ~4% — reduced (86 seeds sufficient, weak effect)
+- bottleneck_mechanism: ~5%
+
+EXPERIMENT STATUS & PRIORITIES
+================================================================
+REDUCE: wd_onset_sweep (86 seeds, null result for fine timing)
+REDUCE: reg_timing_universality (140 seeds, definitively confirmed)
+REDUCE: intervention_timing_compositionality (34+ seeds, fully confirmed)
+CONTINUE: representation_crystallization (diverse seeds flowing)
+CONTINUE: wd_lr_interaction (newly deployed, awaiting results)
+NEW: wd_window_duration (2D timing+duration landscape)
+BACKLOG: regularization_mechanisms, wd_rebound_dynamics, bottleneck_mechanism
+
+NEXT SESSION PRIORITIES
+================================================================
+1. Analyze wd_window_duration first results — is short late WD effective?
+2. Check wd_lr_interaction results — does LR schedule shift WD timing?
+3. Consider designing experiment on WD+dropout interaction timing
+4. Consider writing up findings for publication (WD timing universality)
