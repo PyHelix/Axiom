@@ -1,0 +1,135 @@
+Axiom BOINC Experiment Review — Session s0303b
+Date: 2026-03-03 ~04:55 UTC
+================================================================
+
+STEP 1: SYSTEM STATE
+- 82 active hosts (last 72h contact)
+- 97 uncredited results pending review
+- 6 stuck tasks aborted (host 323 Clementine, 12h+ running, 10h+ no contact)
+- No tasks >48h found
+- GPU hosts: 27 with 2 GPUs, 54 with 1 GPU — ALL had 0 GPU work queued
+
+STEP 2: RESULTS REVIEWED & CREDIT AWARDED (97 results, 1,031 credit)
+
+Per-user credit:
+  ChelseaOilman (hosts 319, 320, 335): 409 credit
+  Steve Dodd (host 123): 272 credit
+  WTBroughton (host 159): 235 credit
+  Armin Gips (host 345): 70 credit
+  marmot (host 113): 45 credit
+
+Results by experiment type:
+  wdwindur (12 results, host 320): ~94-123s each. All seed=42 (known bug, NOW FIXED).
+  wdlrinteract (8 results, host 320): ~129-147s each. Diverse seeds confirmed.
+  repcrystal (6 results, host 320): ~62-80s each.
+  regmech (2 results): 125-470s.
+  wdrebound (5 results): 67-337s.
+  wdonsetsweep (3 results, host 320): ~104-112s.
+  bottmech (2 results): 6-12s.
+  intervtiming (5 results, host 123): ~121-232s.
+  regtimuniv (8 results, host 123): ~508-802s.
+  microscalev2 (8 results): ~1021-9799s. Heavy computation.
+  featcompv2 (8 results, host 159): ~136-527s.
+  compgen (8 results): ~33-229s.
+  repalignv2 (8 results): ~4-10s. Quick results.
+  grokking_dynamics (3 results, host 335): ~4320-4414s. Long-running.
+  random_label_memorization (1 result, host 335): 381s.
+  curriculum (1 result, host 123): 102s.
+
+Result quality: All results contain valid experiment_result JSON with proper
+scientific data. No errors or crash results in this batch.
+
+STEP 3: BUGS FIXED
+
+WD Window Duration Seed Bug (FIXED):
+  - All 15+ wdwindur results had seed=42 despite unique WU names
+  - Root cause: os.listdir encounters a non-parseable JSON file before wu.json,
+    bare except catches the error and aborts the entire seed extraction loop
+  - Fix: Added inner try/except around json.load() with continue, so bad files
+    are skipped and the loop continues to find wu.json
+  - Also sorted os.listdir for deterministic iteration
+  - Fixed script deployed at /opt/axiom_boinc/html/user/experiments/wd_window_duration.py
+  - New deployments will have diverse seeds from WU name hashing
+
+STEP 4A: CPU DEPLOYMENT (125 tasks to 9 hosts)
+
+Hosts filled:
+  Host 320 (Dell-9520, 20 CPU): 37 tasks
+  Host 1 (Pyhelix, 16 CPU): 31 tasks
+  Host 137 (Note11Ste, 12 CPU): 19 tasks
+  Host 29 (DESKTOP-P57624Q, 8 CPU): 16 tasks
+  Host 87 (Dad-Workstation, 80 CPU): 10 tasks
+  Host 123 (Dads-PC, 80 CPU): 8 tasks
+  Host 345 (Andre-WEBK, 8 CPU): 2 tasks
+  Host 16 (dahyun, 32 CPU): 1 task
+  Host 334 (Golf-1, 32 CPU): 1 task
+
+Skipped: Host 63 (4GB RAM), Host 118 (3GB RAM) — low memory.
+
+Experiment mix (by script weight):
+  svd_rank_intervention.py (35%) — Causal mechanism test for inverse CP
+  percolation_scaling.py (20%) — Cross-disciplinary statistical physics
+  wd_lr_interaction.py (20%) — Growing, needs 18+ more seeds
+  wd_window_duration.py (10%) — Re-running with fixed seed extraction
+  representation_crystallization.py (5%)
+  regularization_mechanisms.py (5%)
+  wd_rebound_dynamics.py (3%)
+  bottleneck_mechanism.py (2%)
+
+STEP 4B: GPU DEPLOYMENT (216 tasks to 81 GPU hosts)
+
+NEW GPU EXPERIMENT: mp_universality_test.py
+  — Random Matrix Universality Test (Marchenko-Pastur law in neural networks)
+  — Tests when weight matrix eigenvalue distributions depart from random predictions
+  — GPU-accelerated eigendecomposition (cupy.linalg.eigvalsh) for 1024x1024 matrices
+  — Hypotheses: (H1) wider networks depart later, (H2) init scale affects timing,
+    (H3) layer position matters for departure order
+  — Cross-disciplinary: statistical physics + ML
+  — Uses HAS_GPU, cupy, GPU_NAME, GPU_MEMORY_MB — verified 9 references
+
+Deployed to:
+  27 hosts x 4 GPU tasks (2 GPUs each) = 108 tasks
+  54 hosts x 2 GPU tasks (1 GPU each) = 108 tasks
+  Total: 216 GPU tasks
+
+Previously only gpu_matmul_stress.py existed as GPU-aware script. Now
+mp_universality_test.py provides the first real scientific GPU experiment.
+
+STEP 5: WHAT'S NEXT
+
+Priority experiments for next session:
+1. Review SVD rank intervention results (causal mechanism test — critical for publication)
+2. Review percolation scaling results (cross-disciplinary statistical physics)
+3. Review mp_universality_test results (first GPU scientific experiment)
+4. Check wdwindur results with fixed seeds (should now have diverse seeds)
+5. If SVD causal test confirms rank compression mechanism, design follow-up:
+   — Intervention dosage: test partial SVD truncation (truncate 10%, 25%, 50%)
+   — Layer-specific effects: which layers drive the inverse CP?
+
+Safety cap check: 1,031 credit awarded (under 10,000 limit).
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+
+1. WD Window Duration Seed Bug Resolved: All previous wdwindur results (15+) were
+   identical due to seed extraction failure. Script fixed — new deployments will
+   produce independent replications. Previous wdwindur data should be treated as
+   single-seed (n=1) rather than 15 independent confirmations.
+
+2. First GPU Scientific Experiment Deployed: mp_universality_test.py tests
+   Marchenko-Pastur universality in neural network weight matrices during training.
+   This is a cross-disciplinary test (random matrix theory from statistical physics
+   applied to neural network training dynamics). 216 GPU workunits deployed across
+   81 hosts. Expected results within 10-30 minutes.
+
+3. SVD Rank Intervention and Percolation Scaling still awaiting first results
+   (deployed in previous session s0302k). These are the highest-priority experiments:
+   SVD tests the causal mechanism behind the inverse critical period (finding #44),
+   percolation tests finite-size scaling exponents for network percolation.
+
+4. WD x LR Interaction (finding #49): 8 more seeds from host 320 — growing toward
+   the 30+ seed target for full confirmation. P3 (interaction measurable) at 83%
+   support remains the strongest finding.
+
+5. Representation Crystallization (finding #47): 6 new diverse-seed results from
+   host 320. Previous data was all seed=42; now accumulating independent replications.

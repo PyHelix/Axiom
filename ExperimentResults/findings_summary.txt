@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0302k ~04:44 UTC)
+Last updated: March 3, 2026 (session s0303b ~04:55 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -41,22 +41,24 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 46. WD REBOUND DYNAMICS — PRELIMINARY NEGATIVE (seed=42 mostly)
     Rank rebound NOT strongly supported as mechanism (correlation r=0.09).
 
-47. REPRESENTATION CRYSTALLIZATION — PRELIMINARY (32 results, all seed=42)
-    Awaiting diverse-seed results.
+47. REPRESENTATION CRYSTALLIZATION — GROWING (38 results, 6 new diverse-seed)
+    First diverse-seed results from host 320 (s0303b). Previously all seed=42.
 
 48. *** WD ONSET TIMING SWEEP *** — NULL RESULT (86 seeds) — COMPLETE
     Exact onset epoch does NOT matter. Binary late/early distinction is robust.
 
-49. *** WD x LR SCHEDULE INTERACTION *** — INFORMATIVE NEGATIVE (12 seeds)
+49. *** WD x LR SCHEDULE INTERACTION *** — INFORMATIVE NEGATIVE (20 seeds)
     P3 (interaction measurable): 83% support — CONFIRMED.
     P1 (warmup shifts onset later): 25% — NOT confirmed.
     P2 (cosine shifts onset earlier): 0% — STRONGLY REJECTED.
     MEANING: LR schedule changes HOW MUCH WD timing matters, but NOT
     which timing is optimal. Practitioners can choose WD onset independently.
-    Needs 18+ more seeds for full confirmation. Script: wd_lr_interaction.py.
+    Needs 10+ more seeds for full confirmation. Script: wd_lr_interaction.py.
 
-50. WD WINDOW DURATION — SEED BUG (15 results, all seed=42 duplicates)
-    All results identical due to seed extraction failure. Script needs fix.
+50. WD WINDOW DURATION — SEED BUG FIXED (15 results seed=42, redeploying)
+    Previous results all seed=42 due to seed extraction bug (bare except
+    caught JSON parse error from bad file, aborting loop). Fixed s0303b:
+    inner try/except with continue. New deployments will have diverse seeds.
     Preliminary single-seed data: WD has zero effect at w32/w128.
     Script: wd_window_duration.py.
 
@@ -72,23 +74,31 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     Maps finite-size scaling exponents for bond percolation on ER vs BA graphs.
     BA scaling exponent debated in literature. Script: percolation_scaling.py.
 
+53. *** MP UNIVERSALITY TEST *** — NEWLY DEPLOYED (s0303b)
+    *** CROSS-DISCIPLINARY: random matrix theory + ML ***
+    Tests Marchenko-Pastur law in NN weight matrices during training.
+    GPU-accelerated eigendecomposition (cupy.linalg.eigvalsh).
+    Hypotheses: wider departs later, init scale affects timing, layer position.
+    Script: mp_universality_test.py. 216 GPU workunits deployed.
+
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43, 45, 48.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44.
-GROWING: 27, 28, 38, 49 (12 seeds, need 30+).
-PRELIMINARY: 46, 47 (seed=42), 50 (seed bug).
-DEPLOYED/AWAITING: 51 (SVD causal test, NEW), 52 (percolation, NEW).
+GROWING: 27, 28, 38, 47 (38 results), 49 (20 seeds, need 30+).
+PRELIMINARY: 46, 50 (seed fixed, redeploying).
+DEPLOYED/AWAITING: 51 (SVD causal), 52 (percolation), 53 (MP universality GPU).
 
 EXPERIMENT SCRIPTS:
-  Active (s0302k): svd_rank_intervention.py (weight 35, NEW),
-          percolation_scaling.py (weight 20, NEW),
+  Active CPU (s0303b): svd_rank_intervention.py (weight 35),
+          percolation_scaling.py (weight 20),
           wd_lr_interaction.py (weight 20, growing),
-          wd_window_duration.py (weight 10, needs seed fix),
+          wd_window_duration.py (weight 10, SEED FIXED),
           representation_crystallization.py (weight 5),
           regularization_mechanisms.py (weight 5),
           wd_rebound_dynamics.py (weight 3),
           bottleneck_mechanism.py (weight 2)
+  Active GPU (s0303b): mp_universality_test.py (NEW, 216 WUs deployed)
 
 RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   SAM vs SGD, Catapult Phase, Rank Dynamics, Loss of Plasticity,
@@ -101,13 +111,13 @@ RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   wd_onset_sweep (86 seeds DONE).
 
 DELIVERY PIPELINE STATUS:
+  s0303b (~04:55 UTC Mar 3): Credited 97 results (1,031 credit, 5 users).
+    Deployed 125 CPU WUs to 9 hosts + 216 GPU WUs to 81 hosts.
+    Fixed wdwindur seed bug. New GPU experiment: mp_universality_test.
   s0302k (~04:44 UTC Mar 3): Credited 131 results (1,800 credit, 6 users).
-    Deployed 125 CPU WUs to 8 hosts. New experiments: svd_rank_intervention,
-    percolation_scaling. Mix: 37% svdrank, 20% percolation, 20% wdlrinteract,
-    10% wdwindur, 5% repcrystal, 5% regmech, 2% wdrebound, 1% bottmech.
+    Deployed 125 CPU WUs to 8 hosts. New: svd_rank_intervention, percolation_scaling.
 
 KNOWN ISSUES:
   - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.
   - Hosts 63/118: Low RAM (<6GB) — skipped
-  - WD WINDOW DURATION SEED BUG: all results seed=42 despite unique WU names
-  - Seed extraction works in wdlrinteract but fails in wdwindur (same pattern)
+  - WD WINDOW DURATION SEED BUG: FIXED (s0303b). Inner try/except added.
