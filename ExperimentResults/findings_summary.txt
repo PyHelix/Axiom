@@ -1,107 +1,88 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part1_validate)
-=====================================================
+Last updated: March 3, 2026 (session s0303_part2_deploy)
+=========================================================
 
 CORE SCIENTIFIC STATUS
-- Inverse critical period (ICP) for weight decay is strongly established across multiple prior lines.
-- Many WD-family lines are now over-seeded and should stay retired unless a new mechanism question is introduced.
+- Inverse critical period behavior for weight decay (WD timing) remains established.
+- Many older WD-family and textbook lines remain over-seeded and should stay retired.
+- Current priority: interaction/mechanism lines that can falsify causal hypotheses.
 
-RETIREMENT ACTIONS THIS SESSION (unsent aborted)
-- svdrank: 34
-- wdlr: 29
-- wdwindow: 27
-- wdoptim: 81
-- wddepth: 54
-- wdtasksweep: 54
-- wdwidthtrans: 27
-- percolation/repcrystal/regmech unsent at action time: 0
-- Transitioner run after retirement.
+RETIREMENT CHECK THIS SESSION
+- Ran mandatory over-seeded scan.
+- Over-completed active-running lines observed: svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdlr, wdoptim, wdwidthtrans, wdwindow, repcrystal.
+- Unsent counts for these lines at check time were 0, so no abort UPDATE was needed this session.
 
-NEW EXPERIMENTS ADDED (THIS SESSION)
-1) wd_labelsmooth_interaction.py (CPU, numpy)
-- Hypothesis: label smoothing changes (attenuates or amplifies) the late-WD ICP effect.
-- Design: compositional task; conditions = no_reg, late_wd, label_smooth_only, late_wd_label_smooth, always_wd.
-- Mechanistic outputs: gap, confidence, effective rank, norm trajectories.
+NOVELTY CHECK LOG (MANDATORY)
+1) New CPU experiment: wd_imbalance_interaction.py
+- Query: "weight decay class imbalance neural network interaction"
+- Query: "arXiv Decoupled Weight Decay Regularization 1711.05101"
+- Query: "arXiv Class-Balanced Loss Based on Effective Number of Samples 1901.05555"
+- Found: AdamW / decoupled WD (Loshchilov & Hutter, arXiv:1711.05101), class-balanced reweighting (Cui et al., arXiv:1901.05555), but no direct late-WD-timing x class-imbalance interaction mechanism test in this controlled compositional setup.
+- Novel angle: tests whether late WD and class-balanced weighting combine additively or interact nonlinearly on minority OOD recall.
 
-2) wd_curvature_trigger_gpu.py (GPU-aware: cupy/numpy fallback)
-- Hypothesis: effective WD onset is gated by curvature stabilization.
-- Design: no_wd vs fixed_late_wd vs adaptive_curv_wd vs always_wd.
-- Adaptive rule: enable WD when curvature proxy EMA relative change stays low for patience window.
-- Outputs: trigger epoch, gap comparisons, curvature trajectory, rank/norm metrics.
+2) New GPU experiment: wd_anisotropy_trigger_gpu.py
+- Query: "adaptive weight decay schedule sharpness curvature neural network"
+- Query: "arXiv Adaptive Weight Decay for Deep Neural Networks 2001.04796"
+- Query: "arXiv Scheduled Weight Decay for Deep Neural Networks 2111.09764"
+- Query: "weight decay schedule based on representation geometry"
+- Found: prior adaptive/scheduled WD work exists, but no direct anisotropy-stabilization trigger test for WD onset versus fixed-late onset in this BOINC-style replicated trial framework.
+- Novel angle: causal test of representation-geometry gating for WD timing.
 
-NOVELTY CHECK LOG (MANDATORY LITERATURE SEARCH)
-A) For wd_labelsmooth_interaction.py
-- Query: "weight decay label smoothing interaction neural networks"
-- Found: arXiv:2010.16402 (Towards Understanding and Improving Label Smoothing),
-  arXiv:1706.05350 (Regularizing Neural Networks by Penalizing Confident Output Distributions),
-  arXiv:1910.00482 (When Does Label Smoothing Help?),
-  arXiv:1711.05101 (Decoupled Weight Decay Regularization).
-- Novel angle: direct interaction between WD timing (late-vs-early ICP regime) and label smoothing
-  in the same controlled setup was not found as an established result.
+NEW EXPERIMENT SCRIPTS ADDED (RUN-DURATION COMPLIANT)
+1) wd_imbalance_interaction.py (CPU, numpy)
+- Uses host-dependent seed from experiment_name hash.
+- Reads run_duration from WU JSON; runs independent trials until near deadline.
+- Tests CE-only, late-WD, class-balanced, interaction, and always-WD+CB conditions.
+- Outputs minority/majority recall dynamics and interaction excess metric.
 
-B) For wd_curvature_trigger_gpu.py
-- Query: "adaptive weight decay schedule deep learning"
-- Found: arXiv:2111.09764 (Scheduled Weight Decay for DNNs),
-  arXiv:2001.04796 (Adaptive Weight Decay for DNNs),
-  arXiv:2404.03672 (Adaptive Inference-Aware Weight Decay),
-  arXiv:2201.00519 (When Does Weight Decay Help Optimization?).
-- Novel angle: curvature-triggered WD onset as a causal mechanism test for ICP timing,
-  compared against fixed late onset, appears unaddressed directly.
+2) wd_anisotropy_trigger_gpu.py (GPU-aware: cupy/numpy fallback)
+- Uses HAS_GPU / cupy when available; numpy fallback otherwise.
+- Reads run_duration from WU JSON; runs independent replicated trials until near deadline.
+- Conditions: no_wd, fixed_late_wd, adaptive_aniso_wd, always_wd.
+- Adaptive trigger: enable WD when anisotropy proxy EMA relative change stabilizes.
 
-DEPLOYMENT SUMMARY (PART 2)
-- CPU targeted deployment pass: 2,844 WUs created (hosts seen: 79; skipped low RAM: 2).
-- GPU targeted deployment pass: 313 WUs created (script timeout in client, server-side creation persisted).
-- Due persistent target-host/result-creation mismatch, untargeted fallback was also used:
-  - CPU untargeted created: 2,788
-  - GPU untargeted created: 316
-- GPU script used for deployment: wd_curvature_trigger_gpu.py
+DEPLOYMENT SUMMARY (THIS SESSION)
+- CPU targeted host pass (appid=1, script=wd_imbalance_interaction.py): 2,561 WUs.
+- CPU untargeted fallback (for target-host dispatch mismatch buffering): 2,416 WUs.
+- CPU total created this session: 4,977 WUs.
+
+- GPU targeted host pass (appid=2, script=wd_anisotropy_trigger_gpu.py): 307 WUs.
+- GPU untargeted fallback: 280 WUs.
+- GPU total created this session: 587 WUs.
+
+- Transitioner/transition_time refresh executed after CPU and GPU creation passes.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity detected this session: 80 at query time.
-- GPU workunits deployed this session: 629 total (313 targeted + 316 untargeted fallback).
-- GPU-aware scripts available include wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
-  mp_universality_test.py, grad_subspace_wd_gpu.py.
+- GPU hosts with idle capacity found during this session: 79 hosts.
+- GPU workunits deployed this session: 587 total (307 targeted + 280 untargeted fallback).
+- GPU-aware script used for deployment: wd_anisotropy_trigger_gpu.py.
+- Other GPU-aware scripts present: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, mp_universality_test.py, gpu_matmul_stress.py.
 
 OPERATIONAL NOTES
-- `--target_host` still shows partial result-materialization behavior on this server:
-  many workunits created but only subset receives immediate result rows/dispatch.
-- Untargeted queueing remains the reliable fallback to avoid idle hosts.
-- Keep avoiding further seeding for over-completed lines (>200 complete or confirmed negatives).
+- Known server behavior persists: target-host WU creation does not always promptly materialize as host-bound queued results.
+- Untargeted fallback remains necessary to keep volunteer CPU/GPU slots fed between deployment cycles.
+- Transitioner logs still include unrelated legacy warnings: "WU has too many total results (1)" on old prefixes.
 
 NEXT SCIENCE PRIORITY
-- Evaluate interaction/mechanism results from the two new scripts above before opening further lines.
-- If curvature-triggered WD consistently beats fixed-late WD, prioritize scale/depth/task generalization tests.
+- Validate whether interaction_excess in wd_imbalance_interaction is consistently non-zero across hosts.
+- If anisotropy-trigger WD beats fixed-late WD robustly, extend to depth/width/task variants before large reseeding.
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1)
-- Credited 355 completed `exp_*` results this session for a total of 9,988 credit (session cap respected).
-- Session credit distribution: Steve Dodd +4,348; ChelseaOilman +2,538; WTBroughton +2,442; marmot +660.
-- Remaining uncredited successful results after this pass: 4,236 (to continue in future validation passes).
-- Reviewed result payload structure across credited results: all contained `experiment_result`; `error` key was present but typically null.
-- Main credited lines this pass were WD-family runs (`wdextwidth`, `wddepth`, `wdwindow`, `wdtasksweep`, `wdoptim`) plus `percolation`, `repcrystal`, `regmech`.
-- No new hard scientific reversal detected versus prior ICP/WD conclusions; this pass primarily increased replication counts.
-- Stuck-task cleanup checks executed: 0 tasks aborted by >12h dead-host rule and 0 by >48h hard ceiling.
-- Recent high-failure clusters were observed on several GPU-tagged prefixes and `cellular_automata_v2`; monitor/fix before further large seeding for those prefixes.
+VALIDATION UPDATE: March 4, 2026 (credit/validation session)
+- Credited 726 newly completed experiment results (all with experiment_result payloads).
+- No dead-host stuck tasks found by the >12h/>6h rule; no >48h runs found; no cleanup aborts required.
+- No currently active experiment line met the "clearly broken now" criterion after recent-outcome checks.
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1B)
-- Credited 460 completed `exp_*` results this session for a total of 4,342 credit (session cap respected).
-- Session user credit additions: ChelseaOilman +1,631; WTBroughton +1,284; Steve Dodd +711; _Scandinavian_ +240; marmot +229; PyHelix +95; rilian +105; plus small additions to Vato/amazing/philip-in-hongkong/Vladimir Petrov.
-- Remaining uncredited completed results after this pass: 85,729 (success: 5,174; failed: 80,555).
-- Reviewed 460 upload candidates: 260 outcome=1 and 200 outcome!=1; sampled payload paths were largely unavailable/empty at review time, so this pass prioritized compute-time fairness.
-- Additional replication credit this pass concentrated on `svdrank` (77), `wdextwidth` (53), `wddepth` (37), `wdtasksweep` (24), `cellular_automata_v2` (25), and `percolation` (9).
-- No new scientific reversal versus existing WD/ICP conclusions was detected in this batch; this was primarily a validation/credit maintenance pass.
-- Broken active prefixes with near-total recent failure were aborted to prevent wasted volunteer compute: `symmetry_breaking_dynamics` (3), `loss_landscape_curvature` (5), `mode_connectivity_v2` (4), `random_label_memorization` (1).
-- Stuck-task cleanup executed with no additional dead-host or >48h aborts triggered (0 / 0).
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1C)
-- Credited 884 completed `exp_*` results for 9,990 credit (session cap respected).
-- Session credit additions: Steve Dodd +3,600; WTBroughton +3,496; ChelseaOilman +1,706; zombie67 [MM] +646; Anandbhat +454; marmot +88.
-- Post-pass remaining uncredited completed results: success 4,918; failed 80,555.
-- Payload QA sample from this credited batch: 120/120 upload JSON files found and parsed; all had `experiment_result` with empty/null `error`.
-- Stuck-task cleanup executed: 0 aborted via dead-host >12h rule and 0 via >48h hard ceiling.
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1D)
-- Credited 1,358 completed `exp_*` results for 10,000 credit (session cap respected).
-- Session credit additions: ChelseaOilman +7,340; WTBroughton +1,232; Steve Dodd +720; Coleslaw +216; PyHelix +192; zombie67 [MM] +108; Anandbhat +104; marmot +72; kotenok2000 +16.
-- Main credited prefixes this pass: `wdlsint` (400), `wdcurv` (398), `wdwindow` (93), `wdtasksweep` (82), `wdoptim` (78), plus `percolation`/`wddepth`/`wdlr`/`svdrank`.
-- Post-pass remaining uncredited completed results: success 3,632; failed 80,578.
-- Payload QA sample: 80/80 sampled uploads were present and valid JSON with `experiment_result`; no non-empty `error` strings in sample.
-- Cleanup checks: 0 tasks aborted via dead-host >12h rule and 0 via >48h hard ceiling.
-- No additional active broken-prefix abort was applied this pass; previously known broken prefixes had no active unsent/in-progress rows at check time.
+CROSS-VALIDATION STATUS (NEWLY REVIEWED BATCH)
+- wd_imbalance_interaction: +88 host-runs reviewed.
+  Mean synergy_delta (late_wd_class_balanced vs max(late_wd, class_balanced)): +0.0634 (range 0.0597..0.0664).
+  Mean minority-recall lift vs CE-only: +0.2055 (range 0.2009..0.2104).
+- wd_labelsmooth_interaction: +151 host-runs reviewed.
+  prediction_3_interaction_present=true in 92.1% of runs; attenuation prediction true in 28.5%.
+- wd_batchnoise_interaction: +98 host-runs reviewed.
+  Mean interaction_gain_difference: +0.3256; interaction_positive_rate mean: 0.9990.
+- wd_anisotropy_trigger_gpu: +6 GPU host-runs reviewed.
+  adaptive_aniso_wd.trigger_epoch stable at 24.0; adaptive_minus_fixed mean effect approximately -0.00018 (mixed sign, no robust win yet).
+
+OPEN QUESTIONS / NEXT CHECK
+- Confirm whether anisotropy-trigger condition gains emerge with larger GPU sample count (>50 completed runs).
+- Keep testing whether the wd_imbalance_interaction synergy remains stable across wider host diversity and seeds.
