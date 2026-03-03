@@ -97,3 +97,11 @@ VALIDATION SESSION UPDATE (March 3, 2026, Part 1C)
 - Post-pass remaining uncredited completed results: success 4,918; failed 80,555.
 - Payload QA sample from this credited batch: 120/120 upload JSON files found and parsed; all had `experiment_result` with empty/null `error`.
 - Stuck-task cleanup executed: 0 aborted via dead-host >12h rule and 0 via >48h hard ceiling.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1D)
+- Credited 1,358 completed `exp_*` results for 10,000 credit (session cap respected).
+- Session credit additions: ChelseaOilman +7,340; WTBroughton +1,232; Steve Dodd +720; Coleslaw +216; PyHelix +192; zombie67 [MM] +108; Anandbhat +104; marmot +72; kotenok2000 +16.
+- Main credited prefixes this pass: `wdlsint` (400), `wdcurv` (398), `wdwindow` (93), `wdtasksweep` (82), `wdoptim` (78), plus `percolation`/`wddepth`/`wdlr`/`svdrank`.
+- Post-pass remaining uncredited completed results: success 3,632; failed 80,578.
+- Payload QA sample: 80/80 sampled uploads were present and valid JSON with `experiment_result`; no non-empty `error` strings in sample.
+- Cleanup checks: 0 tasks aborted via dead-host >12h rule and 0 via >48h hard ceiling.
+- No additional active broken-prefix abort was applied this pass; previously known broken prefixes had no active unsent/in-progress rows at check time.

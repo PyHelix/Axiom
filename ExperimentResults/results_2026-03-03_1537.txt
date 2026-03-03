@@ -1,0 +1,47 @@
+AXIOM BOINC SESSION RESULTS LOG - 2026-03-03 15:37:20
+Session: Part 3 save/upload (combining Part 1 validation + Part 2 research/deployment)
+
+RESULTS REVIEWED / CREDIT AWARDED (PART 1)
+- Reviewed and credited a batch of 1,358 completed exp_* results (summary by experiment family; no cumulative ID lists retained).
+- Total credit awarded this pass: 10,000 (session cap respected).
+- Credit additions by user: ChelseaOilman +7,340; WTBroughton +1,232; Steve Dodd +720; Coleslaw +216; PyHelix +192; zombie67 [MM] +108; Anandbhat +104; marmot +72; kotenok2000 +16.
+- Payload QA sample: 80/80 sampled uploads were valid JSON with experiment_result present; sampled error fields were empty/null.
+- Batch composition was dominated by WD-family replications (wdlsint/wdcurv/wdwindow/wdtasksweep/wdoptim), with additional percolation/wddepth/wdlr/svdrank coverage.
+
+STUCK / BROKEN TASK CLEANUP
+- Dead-host >12h running aborts: 0.
+- >48h hard-ceiling aborts: 0.
+- Previously broken prefixes checked (symmetry_breaking_dynamics, loss_landscape_curvature, mode_connectivity_v2, random_label_memorization, cellular_automata_v2): no active unsent/in-progress rows at check time; no new aborts applied.
+- Part 2 retirement pass re-checked over-seeded lines; unsent abort total this pass: 0.
+
+DEPLOYMENT SUMMARY (PART 2)
+CPU deployment:
+- Scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+- Hosts considered: 81.
+- Low-RAM hosts skipped (<6 GB): 2.
+- CPU workunits created: 2,937.
+
+GPU deployment:
+- GPU scripts targeted: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Latest run log shows GPU pass launch but was interrupted before final counters printed.
+- Recorded GPU checkpoint from findings memory for this session: 80 GPU hosts with idle capacity identified; 629 GPU WUs deployed (313 targeted + 316 untargeted fallback); GPU deployment script family included wd_curvature_trigger_gpu.py.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+1) wd_labelsmooth_interaction.py (CPU)
+- Question: does label smoothing attenuate/amplify late-weight-decay ICP effects?
+- Novelty check references reviewed: arXiv 2010.16402, 1706.05350, 1910.00482, 1711.05101.
+- Novel claim tested: explicit late-WD timing x label-smoothing interaction in one controlled setup was not found as an established prior result.
+
+2) wd_curvature_trigger_gpu.py (GPU-aware)
+- Question: is effective WD onset gated by curvature stabilization, versus fixed-late onset?
+- Novelty check references reviewed: arXiv 2111.09764, 2001.04796, 2404.03672, 2201.00519.
+- Novel claim tested: curvature-triggered WD onset as a direct ICP mechanism test appears not directly addressed in prior work.
+
+KEY SCIENTIFIC FINDINGS
+1. This validation batch further strengthened WD-family replication counts (especially wdlsint and wdcurv) without reversing prior inverse-critical-period conclusions.
+2. Quality checks showed reliable payload structure in sampled credited outputs (80/80 valid experiment_result JSON), supporting confidence in credited replication data.
+3. No new contradiction to established ICP/WD timing conclusions was observed in this pass; the session primarily expanded replication depth and deployment breadth for mechanism-focused next tests.
+
+KEY CONTEXT FOR NEXT SESSION
+- Post-validation queue state after this Part 1 pass: uncredited success 3,632; uncredited failed 80,578.
+- Priority remains analyzing new mechanism experiments (wd_labelsmooth_interaction, wd_curvature_trigger_gpu, wd_batchnoise_interaction) before opening additional new lines.
