@@ -1,86 +1,65 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session s0304_part2_deploy_b)
+Last updated: March 4, 2026 (session s0304_part1_validate_c)
 ==========================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964 results) — retired, finding established
-7. Percolation thresholds: completed (1290 results) — retired, textbook replication
-8. WD depth interaction: completed (1282 results) — retired
-9. WD task sweep: completed (1077 results) — retired
-10. WD optimizer interaction: completed (1043 results) — retired
-11. WD learning rate interaction: completed (1037 results) — retired
-12. WD width transition: completed (928 results) — retired
-13. WD window: completed (841 results) — retired
-14. Representation crystallization: completed (368 results) — retired
-
 CORE SCIENTIFIC STATUS
-- Inverse critical period behavior for weight decay timing remains established.
-- Current priority is interaction and mechanism tests that can falsify causal timing hypotheses.
+- Inverse critical-period behavior for weight-decay timing remains established.
+- Current strategy remains mechanism/interaction tests rather than additional seed-only replication.
 
-RETIREMENT CHECK THIS SESSION (MANDATORY)
-- Over-seeded scan run before new deployment.
-- Over-completed active lines still present: svdrank (1964), wdextwidth (1435), percolation (1290),
-  wddepth (1282), wdtasksweep (1077), wdoptim (1043), wdlr (1037), wdwidthtrans (928),
-  wdwindow (841), repcrystal (368).
-- Unsent count for these lines was 0 at check time, so no abort UPDATE was required.
+RETIREMENT STATUS (THIS SESSION)
+- Prior session retirement scan already showed major over-seeded lines (svdrank, percolation, wdlr,
+  wdwindow, wdoptim, wdextwidth, wddepth, wdtasksweep, wdwidthtrans, repcrystal) with no unsent backlog
+  at check time.
+- This session avoided deploying any new WUs into those retired/over-seeded families.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: wd_clipping_interaction.py (CPU)
-- Query: "weight decay gradient clipping interaction deep learning"
-- Query: "Delayed Weight Decay Regularization arxiv 1905.08694"
-- Query: "Deep Learning with Adaptive Gradient Clipping arxiv 1905.11881"
-- Query: "weight decay schedule gradient clipping"
-- Found: prior work studies clipping and decay separately (AGC: arXiv:1905.11881; delayed WD schedule work,
-  and decoupled WD/AdamW), but no direct controlled test of late-WD timing x clipping interaction under
-  compositional covariate shift with replicated independent seeds.
-- Novel angle: causal mechanism test for whether late WD acts through suppression of rare high-norm updates
-  that clipping could partially substitute.
+1) New experiment: wd_mixup_interaction.py (CPU)
+- Query: "weight decay mixup interaction deep learning study"
+- Query: "arxiv mixup: Beyond Empirical Risk Minimization"
+- Query: "AdamW Decoupled Weight Decay Regularization arxiv"
+- Query: "Delayed Weight Decay Regularization arxiv"
+- Found: established work exists for mixup regularization and for decoupled/late WD schedules, but no direct
+  controlled test of late-WD timing x mixup interaction under compositional covariate shift with repeated,
+  independent host-seeded trials.
+- Novel angle: tests whether late-WD gains are mechanistically redundant with vicinal smoothing (mixup),
+  using interaction_delta = (late_wd_gain_with_mixup - late_wd_gain_no_mixup).
 
 NEW SCRIPT ADDED
-1) wd_clipping_interaction.py
-- CPU numpy-only script, run-duration compliant (loops independent trials until run_duration-60s).
+1) wd_mixup_interaction.py
+- CPU numpy-only, run-duration compliant (loops independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Conditions: baseline, late_wd, clip_only, clip_late_wd, always_wd_clip.
-- Primary metric: interaction_delta = (late_wd_gain_with_clip - late_wd_gain_no_clip).
+- Conditions: baseline, late_wd, mixup_only, mixup_late_wd, always_wd_mixup.
+- Primary metric: interaction_delta between late-WD gains with/without mixup.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU targeted deployment pass: 2,181 WUs.
-- CPU top-up pass (collision-free replication indices): 2,153 WUs.
-- CPU new-experiment injection (wd_clipping_interaction): 234 WUs.
-- CPU total created this session: 4,568 WUs.
+- CPU host-targeted top-up: 2,248 WUs created (RAM<6GB hosts skipped: 2).
+- CPU new-experiment injection (wd_mixup_interaction): 240 WUs.
+- CPU total created this session: 2,488 WUs.
 
-- GPU targeted deployment pass: 278 WUs.
-- GPU top-up pass (collision-free replication indices): 276 WUs.
-- GPU total created this session: 554 WUs.
+- GPU host-targeted top-up: 269 WUs created.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 74.
-- GPU workunits deployed: 554 total.
+- GPU hosts with idle capacity found: 72.
+- GPU workunits deployed: 269.
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
 
 OPERATIONAL NOTES
-- Workunit creation succeeded at scale; host-queue SQL based on result.hostid appears laggy for freshly
-  created targeted work, so immediate post-create "needed" values can remain nonzero until scheduler flow catches up.
-- Transition refresh and one-pass transitioner were run after each CPU/GPU creation phase.
+- Transition refresh + one-pass transitioner executed after CPU, GPU, and final injection phases.
+- Queue-gap SQL based on result.hostid can lag immediately after creation; instantaneous "needed" values may
+  remain positive until scheduler/transition propagation catches up.
 
-VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_b)
-- Reviewed and credited 134 completed uncredited `exp_%` results from live DB + upload JSON payloads (110 science payloads, 24 explicit error payloads).
-- Credit awarded incrementally (safe add-only): +1,007 total credit across 6 users; per-user awarded this session: ChelseaOilman +612, WTBroughton +234, Steve Dodd +95, Armin Gips +36, zombie67 [MM] +18, marmot +12.
-- Credit cap respected (10,000 max/session).
+VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_c)
+- Reviewed and credited 1,060 completed uncredited `exp_%` results (credit-cap-constrained batch from 1,392 reviewed).
+- Credit awarded incrementally (add-only): +10,000 total credit across 8 users; per-user awarded this session:
+  ChelseaOilman +4,152, WTBroughton +2,214, Anandbhat +1,224, zombie67 [MM] +802, Steve Dodd +716,
+  Amapola +452, kotenok2000 +312, marmot +128.
+- Credit cap respected (10,000 max/session). Remaining uncredited completed `exp_%` results were left for next pass.
 
 CROSS-VALIDATION STATUS (THIS REVIEWED BATCH)
-- wd_imbalance_interaction: +40 host-runs reviewed; mean interaction_excess=+0.0949; mean minority-recall lift (late_wd_class_balanced - CE)=+0.2053.
-- wd_labelsmooth_interaction: +9 host-runs reviewed; interaction prediction true in 100.0%; attenuation prediction true in 66.7%; mean additivity residual=+0.0020 (near-additive overall).
-- wd_anisotropy_trigger_gpu: +2 GPU host-runs reviewed; adaptive_minus_fixed mean=+0.0005; adaptive trigger epoch mean=24.0 (stable, small effect).
-- wd_timing_depth: +2 host-runs reviewed; all-depth inverse-CP flag true in 50.0%; depth-vs-late-effectiveness correlation mean=-0.0286 (mixed with this small increment, needs more replications).
+- wd_labelsmooth_interaction: +89 host-runs credited; interaction-present prediction true in 86.5%;
+  attenuation prediction true in 23.6%; mean additivity residual +0.0393.
 
-OPERATIONS / CLEANUP
-- Aborted broken stale line `exp_regtimuniv_gpu_g1%`: 19 unsent tasks set to outcome=5 (prevent wasted volunteer compute).
-- No dead-host stuck-task candidates found by >12h runtime and >6h no-contact rule.
-- No >48h running experiment tasks found.
+OPEN QUESTIONS (UPDATED)
+- wd_labelsmooth interaction signal remains positive but attenuation support is currently weak/inconsistent in this batch.
+- Some payloads report `seed_source: random_fallback`; verify whether host-seeded determinism is being bypassed on a subset of runs.

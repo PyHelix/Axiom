@@ -1,0 +1,53 @@
+AXIOM SESSION RESULTS LOG - 2026-03-04 00:55
+Session context: Part 3 save/upload, based on Part 1 validation + Part 2 experiment operations
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed 1,392 completed uncredited exp_% results.
+- Credited 1,060 results this session under runtime-tiered crediting (science payloads confirmed).
+- Total credit awarded: +10,000 (session cap reached, not exceeded).
+- Per-user awards this session:
+  - ChelseaOilman: +4,152 across 433 results
+  - WTBroughton: +2,214 across 248 results
+  - Anandbhat: +1,224 across 127 results
+  - zombie67 [MM]: +802 across 63 results
+  - Steve Dodd: +716 across 66 results
+  - Amapola: +452 across 89 results
+  - kotenok2000: +312 across 19 results
+  - marmot: +128 across 15 results
+- Most-credited experiment family this batch: wd_labelsmooth_interaction (+89 credited runs).
+- Remaining completed uncredited exp_% results were deferred due to session credit cap.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host stuck-task cleanup (>12h run and >6h no contact): 0 tasks aborted.
+- Hard-ceiling cleanup (>48h runtime): 0 tasks aborted.
+- Broken experiment aborts: none (no cross-host deterministic crash pattern requiring blanket abort).
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+1) wd_mixup_interaction.py (CPU) designed and deployed.
+- Novelty-check queries executed:
+  - "weight decay mixup interaction deep learning study"
+  - "arxiv mixup: Beyond Empirical Risk Minimization"
+  - "AdamW Decoupled Weight Decay Regularization arxiv"
+  - "Delayed Weight Decay Regularization arxiv"
+- Novelty conclusion: prior work exists on mixup and decoupled/late weight decay individually, but no direct controlled test of late-WD timing x mixup interaction under compositional covariate shift with repeated independent host-seeded BOINC trials.
+- Mechanistic target metric: interaction_delta = (late_wd_gain_with_mixup - late_wd_gain_no_mixup).
+
+DEPLOYMENT SUMMARY (PART 2 CONTEXT)
+- CPU host-targeted top-up: 2,248 WUs (2 low-RAM hosts skipped).
+- CPU new experiment injection (wd_mixup_interaction): 240 WUs.
+- CPU total created: 2,488 WUs.
+- GPU host-targeted top-up: 269 WUs.
+- GPU hosts with idle capacity identified: 72.
+- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
+
+KEY SCIENTIFIC FINDINGS
+1. Inverse critical-period behavior for weight-decay timing remains established; strategy remains focused on mechanism/interaction testing rather than further seed-only replication.
+2. In wd_labelsmooth_interaction (newly credited +89 host-runs), the interaction-present prediction held in 86.5% of runs, supporting a positive interaction signal.
+3. The attenuation prediction held in only 23.6% of those runs, indicating attenuation is currently weak/inconsistent and should be targeted for follow-up.
+4. Mean additivity residual for wd_labelsmooth_interaction in this batch was +0.0393, consistent with a modest positive non-additive component.
+5. New wd_mixup_interaction deployments create a direct test of whether late-WD gains are mechanistically redundant with vicinal smoothing under compositional shift.
+
+OPERATIONAL NOTES
+- No experiment-script code patch was required from this validation pass.
+- Website counters were updated during validation operations.
+- Queue-gap readings may transiently lag immediately after WU creation due to scheduler/transition propagation.
