@@ -1,0 +1,213 @@
+Axiom BOINC Session Log — s0303r/s (~18:00-19:00 UTC, March 3, 2026)
+=====================================================================
+
+PART 1: VALIDATION & CREDIT (Session s0303r, ~18:00 UTC)
+=========================================================
+
+Credit Awarded: 148 results, ~669 credit, 9 users, 10 hosts
+----------------------------------------------------------------------
+
+| User            | Credit | Key Hosts & Details                                     |
+|-----------------|--------|---------------------------------------------------------|
+| Steve Dodd      | +380   | h123 Dads-PC (31 svdrank+perc+wdwidthmech) + h87 (5)   |
+| kotenok2000     | +84    | h29 (25 percolation + wdlr from s0303q deployment)      |
+| Anandbhat       | +79    | h222 (3 wdwindow 2012-2025s HEAVY + wdlr + repcrystal)  |
+| ChelseaOilman   | +38    | h319 GPU wdtimscale+mpuniv + h330 retired microscalev2  |
+| matszpk         | +24    | h322 gigas (24 GPU SSL errors — all failed)             |
+| PyHelix         | +20    | h1 (14 retired + 1 wdtimscale_gpu)                     |
+| marmot          | +16    | h113 XYLENA (10 retired experiments)                    |
+| [DPC] hansR     | +14    | h9 (3 wdtimscale_gpu)                                  |
+| Armin Gips      | +12    | h345 Andre-WEBK (1 svdrank 1154s)                      |
+
+Counters updated:
+  credited_count.txt: 2654 -> 2802 (+148)
+  total_results.txt: 159,180
+
+Cleanup: 362 tasks aborted
+----------------------------------------------------------------------
+
+  - 7 stuck tasks from dead host (Delta-2 h332, 12.6h running, 12.6h no contact)
+  - 355 retired experiment tasks on live hosts:
+      regcomp, rankreg, lottery_ticket, grokking, compgen, wdwidthmech,
+      wdcritwidth, and other experiments retired in previous sessions
+  - 0 broken experiments, 0 >48h tasks
+
+New Issue Discovered:
+  gigas (h322, matszpk, Fedora Linux 16-core): SSL certificate verification
+  failure prevents downloading experiment scripts. All 24 GPU results are
+  SSL CERTIFICATE_VERIFY_FAILED errors. Credited minimally. Low priority.
+
+KEY SCIENCE FROM VALIDATED RESULTS
+----------------------------------------------------------------------
+
+  Finding #51 (SVD Rank Intervention): +27 results -> 255+ total
+    26 from Dads-PC (h123, 807-1370s): ALL P1=TRUE (100%), P2=FALSE (0%).
+    1 from Andre-WEBK (h345, Armin Gips, 1154s heavy compute).
+    Late SVD truncation CONSISTENTLY reduces gen gap vs baseline (w32/64/128).
+    Perfectly consistent. STRONG CAUSAL EVIDENCE for inverse CP mechanism.
+
+  Finding #52 (Percolation Phase Transition): +23 results -> 156+ total
+    11 from Dads-PC (h123, 319-520s), 11 from kotenok2000 (h29, 239-323s),
+    1 from Dad-Workstation (h87, 580s).
+    ER p_c ~0.343 consistent across all new seeds. ROBUST cross-disciplinary result.
+
+  Finding #54 (WD Timing Scale GPU): +6 new seeds -> 30+ total, ALL FALSE
+    h319 Dell-XPS (2), h9 dbgrensenh27 (2), h1 Pyhelix (1), +1 prior uncredited.
+    30+/30+ ALL FALSE. 100% negative consistency.
+    PUBLICATION-QUALITY scope-limiting result: Inverse CP does NOT generalize to w64+.
+
+  Finding #49 (WD x LR Interaction): +8 results -> 126+ total
+    ALL 8 new results: P3=TRUE (interaction measurable). Completely consistent.
+
+  Finding #50 (WD Window Duration): +5 results -> 74+ total
+    P4 (diminishing returns): SUPPORTED. 3 HEAVY results from h222 (2012-2025s).
+
+  Finding #53 (MP Universality GPU): +2 -> 31+ total
+    From Dell-XPS h319 (GTX 1050, ~588-598s). H1 (wider departs later) NOT supported.
+
+  +5 wdwidthmech (#57, RETIRED), +1 wdrebound (#46), +1 repcrystal (#47, now 69+).
+
+PART 2: RESEARCH & DEPLOYMENT (Session s0303s, ~19:00 UTC)
+============================================================
+
+New Experiment Designed: Finding #60 (WD Timing Task Generality)
+----------------------------------------------------------------------
+
+Script: wd_timing_task_sweep.py
+
+  CRITICAL FOR PUBLICATION: All 34+ seeds confirming inverse CP (#44) used
+  only ONE task (compositional). This tests whether the effect generalizes
+  across structurally distinct tasks at width 32.
+
+  Design:
+    - IDENTICAL hyperparams to Finding #44 (WD=0.05, LR=0.01, w32, depth=2, 150 epochs, SGD)
+    - 4 structurally distinct tasks:
+        1. COMPOSITIONAL (exact #44 replication): group-structured binary classification
+        2. TEACHER-STUDENT: random teacher network generates labels for 20D input
+        3. HIDDEN MANIFOLD: low-rank structure in 20D with nonlinear boundary
+        4. SPIRAL: 2D spiral embedded in 20D with noise features
+    - 4 conditions: no_wd, always_wd, early_wd, late_wd
+    - Run duration: 1800s
+
+  Novelty check:
+    Builds directly on confirmed Finding #44 (34+ seeds, 100% at w32)
+    and scope-limiting Finding #54 (30+ seeds, ALL FALSE at w64+).
+    No prior experiment tested task generality of inverse CP.
+    All existing results used the same compositional task.
+    This is critical: if inverse CP holds across tasks, it's a GENERAL
+    narrow-network principle suitable for a strong paper.
+
+  Predictions:
+    P1: inverse_cp holds for compositional (replicates #44)
+    P2: inverse_cp holds for >= 2 other tasks (task generality)
+    P3: task complexity modulates inverse CP strength
+
+Deployment Summary: 749 WUs total (735 CPU + 14 GPU), 0 errors
+----------------------------------------------------------------------
+
+CPU Experiments (735 WUs, all untargeted BOINC-scheduled):
+
+  | Experiment                     | WUs | Finding | Weight |
+  |--------------------------------|-----|---------|--------|
+  | svd_rank_intervention          | 150 | #51     | 25     |
+  | wd_width_transition            | 120 | #59     | 20     |
+  | wd_timing_task_sweep (NEW)     | 105 | #60     | 18     |
+  | percolation_scaling            | 90  | #52     | 15     |
+  | wd_lr_interaction              | 72  | #49     | 12     |
+  | wd_window_duration             | 54  | #50     | 9      |
+  | wd_optimizer_interaction       | 36  | #56     | 6      |
+  | representation_crystallization | 36  | #47     | 6      |
+  | regularization_mechanisms      | 30  | —       | 5      |
+  | wd_rebound_dynamics            | 24  | #46     | 4      |
+  | bottleneck_mechanism           | 18  | —       | 3      |
+
+GPU Experiments (14 WUs, all untargeted BOINC-scheduled):
+
+  | Experiment                     | WUs | Finding | Notes                           |
+  |--------------------------------|-----|---------|---------------------------------|
+  | wd_timing_scale_gpu            | 6   | #54     | 30+ seeds all FALSE, robustness |
+  | mp_universality_test           | 8   | #53     | 31+ results, continuing         |
+
+GPU Checkpoint:
+  Active GPU hosts: 6+ confirmed
+    - Pyhelix (h1): RTX 3080 Laptop
+    - thonon-meylan (h249, dthonon): RTX 4060 Ti
+    - Dell-XPS-15-9560 (h319, ChelseaOilman): GTX 1050 x2
+    - W10-Home (h57, Henk Haneveld): GPU
+    - dbgrensenh27 (h9, [DPC] hansR): Quadro M4000M
+    - DESKTOP-P57624Q (h29, kotenok2000): GPU
+  GPU workunits this session: 14 (6 wdtimscale + 8 mpuniv)
+  GPU scripts active: wd_timing_scale_gpu.py, mp_universality_test.py
+  Retired GPU experiment: grad_subspace_wd_gpu.py (7 seeds, COMPLETE NEGATIVE)
+  Issue: gigas (h322) SSL cert failure — cannot download scripts (24 errors)
+
+Host Uptake:
+  Dads-PC (h123): Pulled 156 tasks immediately
+  XYLENA (h113): Pulled 45 tasks immediately
+  548 unsent WUs waiting for remaining 16 active hosts to check in
+  Skipped: Latitude/Athlon (<6GB RAM), Foxtrot-2/3, Delta-2 (dead >12h)
+
+Transitioner Note:
+  Errored on exp_percolation_s0303s_r39 (Error 1, likely duplicate key).
+  Re-ran transitioner; all WUs processed and results created successfully.
+
+KEY SCIENTIFIC FINDINGS — CUMULATIVE STATUS
+=============================================
+
+Publication-Ready:
+  1. Finding #44 (Inverse CP for WD): 34+ seeds, 100% consistent at w32.
+     Late WD effective (84-89% of always-WD). Early WD HURTS (-10%).
+     SCOPED AS NARROW-NETWORK PHENOMENON.
+
+  2. Finding #45 (Reg Timing Universality): 140 seeds, COMPLETE.
+     Inverse CP confirmed for WD (100%) and DROPOUT (98.6%).
+     NOT for L1 (0.7%) or noise injection (2.9%).
+
+  3. Finding #54 (WD Scale Dependence): 30+ seeds, ALL FALSE.
+     Inverse CP does NOT generalize to widths 64+.
+     PUBLICATION-QUALITY scope-limiting result.
+
+  4. Finding #51 (SVD Rank Intervention): 255+ seeds, DIVERSE.
+     Late SVD truncation consistently reduces gen gap. STRONG CAUSAL EVIDENCE.
+
+  5. Finding #52 (Percolation): 156+ seeds, ER p_c robustly 0.337-0.343.
+     Cross-disciplinary statistical physics result.
+
+Growing / Active:
+  - Finding #60 (Task Generality, NEW): 0 seeds, 105 WUs deployed.
+    FIRST DATA expected within 30-60 minutes.
+  - Finding #59 (Width Transition): 0 seeds, 220 WUs total (s0303q+s0303s).
+    Supersedes #57/#58 with correct hyperparams. First data expected soon.
+  - Finding #49 (WD x LR): 126+ seeds. P3 (interaction) at 83%.
+  - Finding #50 (WD Window): 74+ seeds. P4 (diminishing returns) supported.
+  - Finding #53 (MP Universality GPU): 31+ seeds. H1 NOT supported.
+  - Finding #56 (WD x Optimizer): 36+ seeds. Consistent with #54.
+  - Finding #47 (Rep Crystallization): 69+ seeds. Timing confirmed.
+  - Finding #46 (WD Rebound): Preliminary negative.
+
+Emerging Theme — Inverse CP Width Dependence:
+  w32:      100% confirmed (34+ seeds in #44)
+  w64+:     0% confirmed (30+ seeds in #54, ALL FALSE)
+  w64/128:  ~5-7% per optimizer (36+ seeds in #56)
+  Transition: Finding #59 will pinpoint exact boundary [24-64]
+  Task generality: Finding #60 tests across 4 tasks at w32
+
+KNOWN ISSUES
+=============
+  - gigas (h322) SSL cert failure — 24 GPU error results (low priority)
+  - Andre-WEBK (h345): Mixed success rate, host-specific (outcome=3/exit=202)
+  - Orphaned WUs (4,862) from --target_host bug (low priority cleanup)
+  - GPU CUDA arch mismatch on some hosts (Blackwell sm_120+)
+  - Dead hosts: Foxtrot-2/3, Delta-2 (tasks cleaned up this session)
+
+NEXT SESSION PRIORITIES
+========================
+  1. Analyze first wd_timing_task_sweep (#60) results — is inverse CP task-general?
+  2. Analyze first wd_width_transition (#59) results — where does inverse CP break?
+  3. Continue SVD rank intervention (#51) for publication dataset
+  4. Monitor GPU experiments (#54 robustness, #53 continuing)
+  5. Track gigas SSL issue if matszpk reaches out
+
+Session duration: ~18:00-19:15 UTC March 3, 2026
+Parts completed: Validation (s0303r) + Research/Deployment (s0303s) + Save (this log)
+Cumulative credited: 2,802 results | 159,180 total results in database
