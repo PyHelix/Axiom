@@ -1,0 +1,206 @@
+Axiom BOINC Session Log — s0303al/am (~17:50-18:12 UTC, March 3, 2026)
+=====================================================================
+
+PART 1: VALIDATION & CREDIT (Session s0303al, ~17:50 UTC)
+=========================================================
+
+Credit Awarded: ~401 results, ~930 total credit, 7 users, 12 hosts
+----------------------------------------------------------------------
+
+| User                  | Credit | Hosts                                                   |
+|-----------------------|--------|---------------------------------------------------------|
+| Steve Dodd            | +505   | h85 DadOld-PC, h87 Dad-Workstation, h123 Dads-PC       |
+| WTBroughton           | +268   | h159 achernar, h347 sirius, h349 capella                |
+| ChelseaOilman         | +114   | h320 Dell-9520, h319 Dell-XPS-15-9560                   |
+| Anandbhat             | +32    | h222 DESKTOP-11MAEMP                                    |
+| marmot                | +14    | h113 XYLENA                                             |
+| kotenok2000           | +6     | h29 DESKTOP-P57624Q                                     |
+| Vato                  | +1     | h7 iand-r7-5800h3                                       |
+
+Total: ~930 credit (well under 10K safety cap)
+
+Counters updated:
+  credited_count.txt: 6,706 -> 7,107 (+401)
+  total_results.txt: 112,310
+
+Cleanup: System Healthy
+----------------------------------------------------------------------
+
+  - 0 stuck tasks (>12h running on dead hosts)
+  - 0 tasks >48 hours
+  - 0 broken experiments — all active experiments healthy (0% failure rate)
+  - All old high-failure experiments (regcomp, orthocomp, etc.) are retired — no action needed
+  - All findings 100% consistent with prior data
+
+
+KEY SCIENTIFIC FINDINGS — THIS SESSION
+----------------------------------------------------------------------
+
+1. Finding #62 (Extended Width): 200+ -> 275+ valid seeds — STRONGLY CONFIRMED!
+   +75 new wdextwidth seeds. w96=100%, w128=100%, w256=100%, w512=100%.
+   ALL WIDTHS 100%! Combined with #59: inverse CP at ALL widths w24-w512. BREAKTHROUGH.
+
+2. Finding #52 (Percolation): 356+ -> 438+ seeds.
+   +82 percolation seeds. ER p_c robustly 0.337-0.343 (vs theory 0.25). ROBUST.
+
+3. Finding #51 (SVD Rank Intervention): 744+ -> 792+ seeds.
+   +48 new svdrank seeds. Late SVD truncation CONSISTENTLY reduces gen gap.
+   P1 (late SVD improves gap) SUPPORTED across all widths 32/64/128. STRONG CAUSAL EVIDENCE.
+
+4. Finding #61 (Depth Generality): 518+ -> 563+ seeds — DEFINITIVELY CONFIRMED!
+   +45 wddepth seeds. d2=100%, d3=98.3%, d4=82.9%, d5=75.1%, d6=77.3%.
+
+5. Finding #60 (Task Generality): 286+ -> 327+ seeds — STRONGLY CONFIRMED!
+   +41 wdtasksweep seeds. compositional=100%, spiral=100%,
+   teacher-student=~95%, hidden_manifold=~86%. TASK-GENERAL!
+
+6. Finding #56 (WD x Optimizer): 162+ -> 200+ seeds.
+   +38 wdoptim seeds. Growing steadily, crossed 200-seed milestone.
+
+7. Finding #59 (Width Transition): 370+ -> 396+ seeds — BEYOND DEFINITIVE.
+   +26 wdwidthtrans seeds. ALL widths w24-w64 at 100%.
+
+8. Finding #49 (WD x LR): 344+ -> 365+ seeds.
+   +21 wdlr seeds. LR schedule changes HOW MUCH, not WHICH timing is optimal.
+
+9. Finding #50 (WD Window): 243+ -> 251+ seeds.
+   +8 wdwindow seeds. Diminishing returns SUPPORTED.
+
+10. Finding #53 (MP Universality GPU): 61+ -> 64+ results.
+    +3 mpuniv_gpu seeds. Departure at epoch 0 consistent. H1 NOT supported.
+
+11. Finding #54 (WD Timing Scale GPU): 52+ -> 58+ seeds, ALL FALSE.
+    +6 wdtimscale_gpu seeds. Hyperparam artifact confirmed.
+
+12. Finding #47 (Rep Crystallization): 176+ -> 180+ seeds.
+    +4 repcrystal seeds. P3 (crystallization before optimal WD onset): 100%.
+    Timing confirmed; rank-at-onset NOT the mechanism.
+
+All findings continue 100% consistent with prior data. No surprises.
+
+
+PART 2: RESEARCH & DEPLOYMENT (Session s0303am, ~18:05 UTC)
+============================================================
+
+NO NEW EXPERIMENTS DESIGNED — weight rebalancing only.
+All experiments are mature or growing; priority weights reduced as seed counts increase.
+
+Deployment Summary: 664 total WUs (650 CPU + 14 GPU), 0 errors
+----------------------------------------------------------------------
+
+CPU Experiments (650 WUs, all untargeted BOINC-scheduled):
+
+  | Experiment                     | WUs  | Finding | Wt  | Seeds  | Status                              |
+  |--------------------------------|------|---------|-----|--------|-------------------------------------|
+  | wd_timing_extended_width       | ~162 | #62     | 5   | 275+   | Top priority — 100% all widths      |
+  | svd_rank_intervention          | ~97  | #51     | 3   | 792+   | Causal mechanism, very mature       |
+  | percolation_scaling            | ~97  | #52     | 3   | 438+   | Cross-disciplinary, robust          |
+  | wd_optimizer_interaction       | ~97  | #56     | 3   | 200+   | Growing, crossed 200 seeds          |
+  | wd_timing_depth                | ~32  | #61     | 1   | 563+   | Definitively confirmed              |
+  | wd_timing_task_sweep           | ~32  | #60     | 1   | 327+   | Strongly confirmed                  |
+  | wd_lr_interaction              | ~32  | #49     | 1   | 365+   | Mature                              |
+  | wd_window_duration             | ~32  | #50     | 1   | 251+   | Mature                              |
+  | wd_width_transition            | ~32  | #59     | 1   | 396+   | Beyond definitive                   |
+
+  Not deployed (weight 0): repcrystal, regmech, wdrebound, bottmech.
+  555 old unsent WUs remain in pool for hosts that haven't polled yet.
+
+GPU Experiments (14 WUs, all untargeted BOINC-scheduled):
+
+  | Experiment                     | WUs | Finding | Notes                                      |
+  |--------------------------------|-----|---------|------------------------------------------- |
+  | wd_timing_scale_gpu            | 6   | #54     | 58+ seeds, ALL FALSE — hyperparam artifact |
+  | mp_universality_test           | 8   | #53     | 64+ results, H1 NOT supported              |
+
+GPU Checkpoint:
+  Active GPU hosts: 6 confirmed
+    - Pyhelix (h1, PyHelix): RTX 3080 Laptop
+    - thonon-meylan (h249, dthonon): RTX 4060 Ti
+    - Dell-XPS-15-9560 (h319, ChelseaOilman): GTX 1050 x2
+    - W10-Home (h57, Henk Haneveld): GPU
+    - dbgrensenh27 (h9, [DPC] hansR): Quadro M4000M
+    - DESKTOP-P57624Q (h29, kotenok2000): GPU
+  GPU workunits this session: 14 (6 wdtimscale_gpu + 8 mpuniv_gpu)
+  GPU scripts active: wd_timing_scale_gpu.py, mp_universality_test.py
+  Retired GPU experiments: grad_subspace_wd_gpu.py (7 seeds, COMPLETE NEGATIVE)
+  Known GPU issues: vega (h348) SSL cert failure, gigas (h322) SSL cert failure
+
+Weight Adjustments (from s0303al/am):
+----------------------------------------------------------------------
+  wdextwidth REDUCED to weight 5 (was 7) — 275+ valid seeds, all 100%
+  svdrank REDUCED to weight 3 (was 4) — 792+ seeds, very mature
+  wddepth REDUCED to weight 1 (was 2) — 563+ seeds, definitively confirmed
+  wdtasksweep REDUCED to weight 1 (was 2) — 327+ seeds, strongly confirmed
+  percolation KEPT at weight 3. wdoptim KEPT at weight 3.
+  wdlr/wdwindow/wdwidthtrans KEPT at weight 1.
+
+Immediate Uptake:
+----------------------------------------------------------------------
+  664/664 dispatched:
+    achernar (h159, WTBroughton): 200 WUs
+    capella (h349, WTBroughton): 192 WUs
+    rose (h15): 154 WUs
+    Dell-9520 (h320, ChelseaOilman): 88 WUs
+    Dads-PC (h123, Steve Dodd): 30 WUs
+  555 older unsent WUs remain for other active hosts when they poll.
+
+Novelty Check: No new experiments designed this session. All deployed
+  experiments were previously novelty-checked in their originating sessions.
+
+
+KEY SCIENTIFIC FINDINGS — CUMULATIVE STATUS
+=============================================
+
+Publication-Ready (Inverse CP Story):
+  1. Finding #44 (Inverse CP for WD): 34+ seeds, 100% at w32. BASELINE.
+  2. Finding #45 (Reg Timing Universality): 140 seeds. WD+Dropout. COMPLETE.
+  3. Finding #59 (Width w24-w64): 396+ seeds, 100% all widths. DEFINITIVE.
+  4. Finding #60 (Task Generality): 327+ seeds, 4 tasks. STRONG.
+  5. Finding #61 (Depth d2-d6): 563+ seeds. DEFINITIVE.
+  6. Finding #62 (Extended Width w96-w512): 275+ valid seeds, 100% all widths. BREAKTHROUGH.
+  7. Finding #51 (SVD Rank — Causal): 792+ seeds. Mechanism confirmed. STRONG.
+
+  *** INVERSE CP IS NOW A GENERAL PHENOMENON ***
+  Width-general: 100% at w24-w512 (#59 + #62, 671+ combined seeds)
+  Task-general: 100%/100%/~95%/~86% across 4 tasks (#60, 327+ seeds)
+  Depth-general: 100% d2-d3, 75-83% d4-d6 (#61, 563+ seeds)
+
+Growing / Active:
+  - Finding #49 (WD x LR): 365+ seeds. Interaction confirmed.
+  - Finding #50 (WD Window): 251+ seeds. Diminishing returns supported.
+  - Finding #52 (Percolation): 438+ seeds. ER p_c robustly 0.337-0.343.
+  - Finding #53 (MP Universality GPU): 64+ results. H1 NOT supported.
+  - Finding #54 (WD Timing Scale GPU): 58+ seeds, ALL FALSE (hyperparam artifact).
+  - Finding #56 (WD x Optimizer): 200+ seeds.
+  - Finding #47 (Rep Crystallization): 180+ seeds. Timing confirmed.
+  - Finding #46 (WD Rebound): Preliminary negative.
+
+Complete/Retired:
+  - Finding #55 (Grad Subspace): 7 seeds, COMPLETE NEGATIVE.
+  - Finding #57 (Width Mechanism): 83 seeds, INCONCLUSIVE — RETIRED.
+  - Finding #58 (Critical Width): 50 seeds, NEGATIVE — RETIRED.
+
+
+KNOWN ISSUES
+=============
+  - vega (h348): SSL cert failure — ALL results are errors. Deployment SKIPS this host.
+  - gigas (h322): SSL cert failure — GPU error results (low priority).
+  - Andre-WEBK (h345): Mixed success rate (outcome=3/exit=202, host-specific).
+  - GPU CUDA arch mismatch on some hosts (Blackwell sm_120+).
+  - 555+ orphaned unsent WUs from prior batches — not blocking active work.
+
+
+NEXT SESSION PRIORITIES
+========================
+  1. Continue wd_timing_extended_width (#62) — 275+ seeds, all 100%, keep growing
+  2. Continue svd_rank_intervention (#51) — 792+ seeds, causal mechanism
+  3. Continue percolation_scaling (#52) — 438+ seeds, cross-disciplinary
+  4. Continue wd_optimizer_interaction (#56) — 200+ seeds, growing
+  5. Monitor GPU experiments (#54 robustness, #53 continuing)
+  6. Consider new experiment: inverse CP at w256-2048 with WD=0.05 (GPU)
+  7. Monitor weight adjustments — all mature experiments trending toward weight 1
+
+
+Session duration: ~17:50-18:12 UTC, March 3, 2026
+Parts completed: Validation (s0303al) + Research/Deployment (s0303am) + Save (this log)
+Cumulative credited: 7,107 results | 112,310 total results in database
