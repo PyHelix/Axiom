@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 2, 2026 (session s0302h2 ~20:30 UTC)
+Last updated: March 2, 2026 (session s0302j ~01:30 UTC Mar 3)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -18,19 +18,11 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     Critical Learning Periods(neg), Benford(neg), Neural Thermo v1/v2,
     Spectral Dynamics v2, Lazy vs Feature Learning.
 
-26. MEMORIZATION DYNAMICS — DEFINITIVELY CONFIRMED & RETIRED (~450+ seeds)
-27. FEATURE COMPETITION DYNAMICS — GROWING (~2000+ results). Ratio ~1.45.
-28. REPRESENTATION ALIGNMENT — GROWING (~1800+ results). Wider->higher CKA.
-29. MICRO SCALING LAWS — STRONGLY CONFIRMED (~1500+ results). Param=no, Data=yes.
-30. CURRICULUM LEARNING — DEFINITIVELY CONFIRMED & RETIRED (~430+ seeds)
-31. COMPOSITIONAL GENERALIZATION — STRONGLY CONFIRMED (~2000+ results)
-32. FEATURE RANK DYNAMICS — RETIRED (14+ seeds, 100%). Width->lower rank ratio.
-33. NEURON SPECIALIZATION — CONFIRMED (~1160+ results). Eff dim ratio plummets.
-34. PRUNING COMPOSITIONALITY — RETIRED NEGATIVE (48 seeds). No recovery.
-35. REGULARIZED COMPOSITIONALITY — STRONGLY CONFIRMED (~2400+ results).
-36. ORTHOGONALITY COMPOSITIONALITY — STRONGLY CONFIRMED (~1900+ results).
-37. BOTTLENECK COMPOSITIONALITY — RETIRED (~1800+ results, 98%). Best rescue.
-38. COMBINED COMPOSITIONALITY — GROWING (~1750+ results). Synergy ~82%.
+26-38. See archive for details. Includes Memorization Dynamics, Feature
+    Competition, Representation Alignment, Micro Scaling Laws, Curriculum,
+    Compositional Generalization, Feature Rank, Neuron Specialization,
+    Pruning Comp(neg), Regularized Comp, Orthogonality Comp, Bottleneck Comp,
+    Combined Compositionality.
 
 39. BOTTLENECK MECHANISM — PRELIMINARY (1 effective seed, seed=42 on all hosts)
     Gap reductions: W16->-0.015, W32->+0.110, W64->+0.140, W128->+0.085.
@@ -38,65 +30,59 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     Script: bottleneck_mechanism.py. ISSUE: seed extraction still fails.
 
 40. REPRESENTATION DISENTANGLEMENT — REFUTED & RETIRED (86 seeds)
-    Disentanglement is NOT the mechanism for width-compositionality tradeoff.
-
 41. COMPOSITIONALITY CRITICAL PERIOD — DEFINITIVELY CONFIRMED & RETIRED (48 seeds)
-    KEY FINDING: A compositionality critical period EXISTS.
-    any_intervention_helps: TRUE across ALL 48 seeds (100%).
-    best_intervention: weight_decay consistently.
-    inflection_exists: TRUE in many seeds; wider_has_earlier_inflection: TRUE.
-    WD gap reduction: 0.29-0.44. Combined LR+WD: 0.25-0.41.
-    Wider networks lose compositionality at EARLIER epochs.
-    This is DEFINITIVELY CONFIRMED. No further deployment needed.
-
-42. RANK REGULARIZATION — PRELIMINARY (1 effective seed=42, CPU failures persist)
-    Nuclear norm RESCUES compositionality at ALL 4 widths but does NOT maintain rank.
-    Gap reductions: w32=0.062, w64=0.057, w128=0.069, w256=0.028.
-    Mechanism is NOT rank preservation. CPU exit -186 on Windows persists.
-    GPU results from Charlie-1/Charlie-2 confirm seed=42 pattern. Need diverse seeds.
-    Script: rank_regularization_compositionality.py.
-
-43. FEATURE SUBSPACE OVERLAP — DEFINITIVELY REFUTED (14 unique seeds)
-    KEY FINDING: Width DECREASES subspace overlap (opposite of hypothesis).
-    Baseline overlap: w32≈0.93, w64≈0.95, w128≈0.85, w256≈0.79.
-    overlap_increases_with_width: FALSE across ALL 14 seeds (100%).
-    overlap_gap_correlation: consistently NEGATIVE (mean -0.67, range -0.29 to -0.75).
-    wd_reduces_overlap: FALSE — weight decay INCREASES overlap.
-    CONCLUSION: Width hurts compositionality NOT through shared feature-group
-    subspaces. More overlap correlates with BETTER compositionality.
-    Combined with #40 (not disentanglement) and #33 (rank collapse), the mechanism
-    remains rank collapse → unknown pathway → compositionality loss.
-    Script: feature_subspace_overlap.py. RETIRED — question answered.
+42. RANK REGULARIZATION — PRELIMINARY (1 effective seed=42). GPU only.
+43. FEATURE SUBSPACE OVERLAP — DEFINITIVELY REFUTED & RETIRED (14 seeds)
 
 44. REGULARIZATION MECHANISMS — PRELIMINARY (2 results, seed=42 only)
     Tests baseline/nuclear_norm/WD/spectral_norm/activity_l2/dropout at 3 widths.
-    Cross-group correlation always ~0 — features naturally decorrelated.
     Nuclear norm: modest gap reduction at w128 only. Activity L2 does NOT help.
-    Needs diverse seeds urgently.
-    Script: regularization_mechanisms.py.
+    Needs diverse seeds urgently. Script: regularization_mechanisms.py.
 
-45. INTERVENTION TIMING — DEPLOYED, AWAITING RESULTS (s0302g+s0302h2)
-    HYPOTHESIS: WD timing during critical period determines rescue magnitude.
-    Tests: no_wd, always_wd, early_wd, late_wd, brief_wd at widths 32/64/128.
-    Deployed to 260+ hosts. No results yet.
+45. *** INVERSE CRITICAL PERIOD FOR WEIGHT DECAY *** — STRONGLY CONFIRMED (34 seeds)
+    *** THIS IS OUR MOST NOVEL FINDING — POTENTIAL PUBLICATION ***
+    HYPOTHESIS TESTED: WD timing during critical period determines rescue magnitude.
+    RESULT: The OPPOSITE of expected. An INVERSE critical period exists.
+
+    KEY DATA (34 seeds, 100% consistency):
+    Condition    w32 gap       w64 gap       w128 gap
+    no_wd        0.691±0.046   0.693±0.047   0.683±0.034
+    always_wd    0.389±0.048   0.415±0.047   0.435±0.039
+    early_wd     0.757±0.035   0.757±0.041   0.752±0.028
+    late_wd      0.423±0.047   0.449±0.044   0.474±0.041
+    brief_wd     0.727±0.040   0.723±0.046   0.707±0.030
+
+    CRITICAL FINDINGS:
+    a) Late WD is VERY effective: 84-89% of always-WD effect across all widths.
+    b) Early WD HURTS: makes compositionality WORSE than no WD (-10% effect).
+    c) Brief WD (epochs 5-15) also hurts slightly (-4% to -5%).
+    d) 34/34 seeds (100%): late WD gap < no WD gap at EVERY width.
+    e) 0/34 seeds confirmed classic critical period hypothesis.
+    f) Mechanism: rank compression at convergence determines compositionality.
+       Only conditions with WD active at END of training achieve rank compression.
+       Early WD → rank rebounds → worse than baseline.
+
+    INTERPRETATION: What matters for compositionality is how training ENDS,
+    not how it begins. Early WD may create representations that "rebound"
+    into worse states when regularization is removed. Width modestly
+    attenuates the effect (44% reduction at w32 vs 36% at w128).
+
     Script: intervention_timing_compositionality.py.
+    DEPLOYED 1,200+ new WUs this session for more seeds.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43.
-STRONGLY CONFIRMED: 29, 31, 33, 35, 36.
+STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 45.
 GROWING: 27, 28, 38.
 PRELIMINARY: 39 (bottleneck_mechanism, 1 seed), 42 (rank reg, 1 seed),
-  44 (reg mechanisms, 1 seed).
-DEPLOYED/AWAITING: 45 (intervention timing).
+  44 (reg mechanisms, 2 results).
 
 EXPERIMENT SCRIPTS:
-  Active (s0302h2): intervention_timing_compositionality.py (weight 4, PRIORITY),
-          rank_regularization_compositionality.py (weight 3, GPU only),
-          bottleneck_mechanism.py (weight 2, needs seed fix),
-          regularization_mechanisms.py (weight 2),
-          combined_compositionality.py (weight 2),
-          feature_subspace_overlap.py (weight 2, confirmatory)
+  Active (s0302j): intervention_timing_compositionality.py (weight 5, TOP PRIORITY),
+          regularization_mechanisms.py (weight 3, needs seeds),
+          bottleneck_mechanism.py (weight 2, seed=42 issue persists),
+          rank_regularization_compositionality.py (weight 2, GPU only)
 
 RETIRED (do not redeploy): ALL grokking, memorization_dynamics_v2,
   curriculum_learning_dynamics, SAM vs SGD, Catapult Phase, Rank Dynamics,
@@ -105,19 +91,16 @@ RETIRED (do not redeploy): ALL grokking, memorization_dynamics_v2,
   feature_rank_dynamics, pruning_compositionality, orthogonality_compositionality,
   regularized_compositionality, bottleneck_compositionality, neuron_specialization,
   representation_disentanglement, compositional_generalization,
-  compositionality_critical_period (CONFIRMED at 48 seeds).
+  compositionality_critical_period, feature_subspace_overlap, combined_compositionality.
 
 DELIVERY PIPELINE STATUS:
-  s0302h2 (~20:30 UTC): Credited 260 results (1,064 credit, 7 users).
-    Deployed 1,548 CPU + GPU WUs to 64 idle hosts.
-    Key deployments: 260 intervtiming, 259 featsubovlp, 231 critperiod,
-      230 bottlemech, 207 combinedcomp, 207 regmech, 77 rankreg_gpu, 77 featsubovlp_gpu.
-    Fleet: 90+ active hosts, 64 hosts had idle cores now filled.
+  s0302j (~01:20 UTC Mar 3): Credited 67 results (298 credit, 3 users).
+    Deployed 1,651 CPU + 80 GPU WUs to 69 hosts with idle cores.
+    Experiment mix: ~70% intervtiming, ~20% regmech, ~10% bottlemech + GPU rankreg.
+    Fleet: 85+ active hosts. Total idle filled: 1,651 cores.
 
 KNOWN ISSUES:
-  - RANK REG CPU FAILURES: exit -186 on Windows (47 failures). GPU/Linux works.
+  - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.
   - BOINC create_work sets transition_time to FUTURE — fix after EVERY create_work
-  - Targeted WUs: result records created by scheduler on host check-in
   - bottleneck_mechanism: seed=42 fallback on most hosts (seed extraction fails)
-  - Host 340: regcomp exit -148; Host 321: exit 195; Host 235/202: SSL; Host 206: exit 203
-  - Hosts 63/118: Low RAM — skipped
+  - Hosts 63/118: Low RAM (<6GB) — skipped
