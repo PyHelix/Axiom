@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303c ~06:30 UTC)
+Last updated: March 3, 2026 (session s0303d ~06:51 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -69,23 +69,31 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     ER N=100 p_c measured at 0.337 (consistent with theory).
     Needs diverse seeds for meaningful scaling analysis.
 
-53. *** MP UNIVERSALITY TEST *** — PRELIMINARY (5 GPU results + 4 errors)
+53. *** MP UNIVERSALITY TEST *** — PRELIMINARY (15+ GPU results, 4 errors)
     *** CROSS-DISCIPLINARY: random matrix theory + ML ***
     FINDING: ALL weight matrices depart from MP universality at epoch 0.
     Even the first gradient update creates detectable non-random structure.
     H1 (wider departs later): NOT supported (correlation=0.0).
     Observed on RTX 3050 (4GB) and RTX 3080 (16GB).
     Host 159 CUDA arch mismatch failures (not script bug).
-    416 GPU WUs deployed total (216 s0303b + 200 s0303c).
+    416 GPU WUs deployed total (s0303b/c). Mostly complete.
     May be trivially expected from RMT (Pennington & Worah 2017).
+
+54. *** WD TIMING SCALE DEPENDENCE *** — DEPLOYED (s0303d, 196 GPU WUs)
+    *** EXTENDS KEY FINDING #44 TO LARGER NETWORKS ***
+    Tests inverse CP for WD at widths 64, 256, 512, 1024, 2048 (GPU-accelerated).
+    Our confirmed finding used widths 32-128 on CPU. Key question: is the inverse
+    CP scale-invariant? If yes → strengthens publication. If no → reveals mechanism
+    (lazy/NTK transition at wider widths).
+    Script: wd_timing_scale_gpu.py. Novelty confirmed via literature search.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43, 45, 48.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44.
 GROWING: 27, 28, 38, 47 (53+ results), 49 (35+ results, need diverse seeds).
-PRELIMINARY: 46, 50 (seed re-fixed), 51 (seed fixed), 52 (seed fixed), 53 (5 GPU).
-DEPLOYED/AWAITING: All above with seed fixes will get diverse results.
+PRELIMINARY: 46, 50 (seed re-fixed), 51 (seed fixed), 52 (seed fixed), 53 (15+ GPU).
+DEPLOYED/AWAITING: 54 (196 GPU WUs). All above with seed fixes will get diverse results.
 
 EXPERIMENT SCRIPTS:
   Active CPU (s0303c): svd_rank_intervention.py (weight 35, SEED FIXED),
@@ -96,7 +104,8 @@ EXPERIMENT SCRIPTS:
           regularization_mechanisms.py (weight 5, SEED FIXED),
           wd_rebound_dynamics.py (weight 3, SEED FIXED),
           bottleneck_mechanism.py (weight 2, SEED FIXED)
-  Active GPU (s0303c): mp_universality_test.py (416 total WUs deployed)
+  Active GPU (s0303d): wd_timing_scale_gpu.py (196 WUs, NEW),
+          mp_universality_test.py (416 WUs total, mostly complete)
 
 RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   SAM vs SGD, Catapult Phase, Rank Dynamics, Loss of Plasticity,
@@ -109,13 +118,13 @@ RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   wd_onset_sweep (86 seeds DONE).
 
 DELIVERY PIPELINE STATUS:
+  s0303d (~06:51 UTC Mar 3): Credited 116 results (~995 credit, 5 users).
+    Deployed 90 CPU WUs to 7 hosts + 196 GPU WUs to 75 hosts.
+    NEW: wd_timing_scale_gpu.py — tests inverse CP at larger network scales.
   s0303c (~06:30 UTC Mar 3): Credited 199 results (2,114 credit, 7 users).
-    Deployed 108 CPU WUs to 9 hosts + 200 GPU WUs to 82 hosts.
-    CRITICAL FIX: PID+time seed fallback added to 7 scripts.
+    Deployed 108 CPU WUs + 200 GPU WUs. PID+time seed fallback added.
   s0303b (~04:55 UTC Mar 3): Credited 97 results (1,031 credit, 5 users).
-    Deployed 125 CPU WUs + 216 GPU WUs. Fixed wdwindur inner try/except.
-  s0302k (~04:44 UTC Mar 3): Credited 131 results (1,800 credit, 6 users).
-    Deployed 125 CPU WUs. New: svd_rank_intervention, percolation_scaling.
+    Deployed 125 CPU WUs + 216 GPU WUs.
 
 KNOWN ISSUES:
   - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.

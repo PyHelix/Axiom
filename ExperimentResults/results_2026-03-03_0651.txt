@@ -1,0 +1,99 @@
+Axiom BOINC Experiment Review — Session s0303d
+Date: 2026-03-03 ~06:51 UTC
+================================================================
+
+RESULTS REVIEWED & CREDITED
+================================================================
+Credited 116 results across 8 hosts, ~697 credit applied to host/user totals.
+Total credit this session: ~995 (tiered: 16x15 + 37x10 + 45x7 + 14x5 + 1x extra).
+
+Per-user credit awarded:
+  Steve Dodd (userid 56): +200 (host 123 Dads-PC)
+  ChelseaOilman (userid 40): +191 (hosts 320, 335, 330, 319)
+  WTBroughton (userid 83): +166 (host 159 achernar)
+  PyHelix (userid 1): +112 (host 1 Pyhelix)
+  marmot (userid 72): +28 (host 113 XYLENA)
+
+Result types credited:
+  - SVD rank intervention: ~8 results (1040-1192s), diverse seeds
+  - Percolation scaling: ~6 results (150-556s), diverse seeds
+  - WD-LR interaction: ~6 results (150-365s), diverse seeds
+  - WD window duration: ~5 results (122-436s), diverse seeds
+  - Representation crystallization: ~5 results (73-251s)
+  - Regularization mechanisms: ~3 results (121-337s)
+  - WD rebound dynamics: ~5 results (94-238s)
+  - Bottleneck mechanism: 1 result (6s)
+  - MP universality GPU: ~10 results (22-627s)
+  - Micro scaling laws v2: 5 results (1793-10634s)
+  - Reg timing universality: 3 results (493-716s)
+  - WD onset sweep: 3 results (275-393s)
+  - Old experiments: grokking 1 (4431s), regcomp 4 (~260s)
+  - Misc others: various retired experiment types that completed
+
+Website counters updated: credited=1136, total_results=34322.
+
+STUCK TASKS / CLEANUP
+================================================================
+No stuck tasks from dead hosts (all long-running tasks on live hosts).
+No tasks exceeding 48h ceiling.
+0 tasks aborted.
+
+DEPLOYMENT SUMMARY
+================================================================
+GPU workunits created: 196
+  - Script: wd_timing_scale_gpu.py (NEW — see below)
+  - 23 hosts with 2+ GPUs: 4 WUs each (92)
+  - 52 hosts with 1 GPU: 2 WUs each (104)
+  - All GPU hosts now have queued work
+
+CPU workunits created: 90
+  - Host 123 (Dads-PC, 80 CPUs): 35 tasks
+  - Host 320 (Dell-9520, 20 CPUs): 20 tasks
+  - Host 137 (Note11Ste, 12 CPUs): 19 tasks
+  - Host 87 (Dad-Workstation, 80 CPUs): 10 tasks
+  - Host 345 (Andre-WEBK, 8 CPUs): 4 tasks
+  - Host 334 (Golf-1): 1 task
+  - Host 16 (dahyun): 1 task
+  - Scripts: rotation of svd_rank_intervention, percolation_scaling,
+    wd_lr_interaction, wd_window_duration, representation_crystallization,
+    regularization_mechanisms, wd_rebound_dynamics, bottleneck_mechanism
+
+GPU CHECKPOINT (Step 4B-4):
+  - GPU hosts found: 75 (23 with 2+ GPUs, 52 with 1 GPU)
+  - GPU workunits deployed: 196 (wd_timing_scale_gpu.py)
+  - GPU-aware script used: wd_timing_scale_gpu.py (new)
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+1. No new scientific findings from this session's credited results — these are
+   mostly additional seeds for ongoing experiments (SVD rank intervention,
+   percolation scaling, WD-LR interaction) still accumulating diverse-seed data
+   following the s0303c seed fix deployment.
+
+2. NEW GPU EXPERIMENT DEPLOYED: WD Timing Scale Dependence (wd_timing_scale_gpu.py)
+   Tests whether our key finding (#44) — the Inverse Critical Period for Weight Decay —
+   scales with network width. Our confirmed result (140 seeds) used tiny MLPs
+   (width 32-128). This GPU experiment tests widths 64, 256, 512, 1024, 2048 with
+   5000 training samples and 300 epochs. Scale invariance would strengthen the
+   publication case; scale dependence would reveal the mechanism (lazy/NTK transition).
+
+NOVELTY CHECK FOR NEW EXPERIMENT
+================================================================
+Search: "weight decay timing critical period neural network scale dependence 2025 2026"
+Found: NeurIPS 2024 paper "Why Do We Need Weight Decay?" (Galanti et al.) studies
+  WD as spherical optimization; "Understanding and Scheduling Weight Decay" (OpenReview)
+  proposes WD schedulers. Neither tests TIMING at different network SCALES.
+Found: "Neural Rank Collapse" (Feb 2026) connects WD to rank collapse but doesn't
+  test timing interventions.
+Novelty assessment: No published work tests whether the inverse critical period for
+  WD is scale-invariant. Our angle (timing x scale interaction) is genuinely novel.
+
+NEXT SESSION PRIORITIES
+================================================================
+1. Review first wd_timing_scale_gpu.py results (expect within 30-60 min)
+2. Continue accumulating diverse-seed data for SVD rank intervention (#51),
+   percolation scaling (#52), WD-LR interaction (#49), WD window duration (#50)
+3. If WD timing scale shows interesting pattern, design follow-up with
+   finer-grained width sweep or depth variation
+4. Consider cross-disciplinary GPU experiments (Ising model, Monte Carlo)
+   if WD timing scale saturates quickly
