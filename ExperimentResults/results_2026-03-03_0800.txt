@@ -1,0 +1,132 @@
+AXIOM EXPERIMENT SESSION LOG
+Session: s0303g — 2026-03-03 ~08:00 UTC
+============================================
+
+RESULTS REVIEWED
+================
+479 uncredited experiment results reviewed and credited.
+Breakdown by experiment type (top categories):
+  compgen_gpu: 46, featcompv2_gpu: 43, combinedcomp: 16, featcompv2: 11,
+  microscalev2: ~25, repalignv2: ~25, compgen: ~30, intervtiming: 3,
+  regmech: 5, bottlemech: 6+, critperiod: 2, rankreg_gpu: 2
+
+Most results are from previous session deployments (s0302h, s0303b, s0302e) that
+are now retired experiments. Still crediting for compute donated.
+
+No stuck tasks found. No new broken experiment patterns.
+Hosts 325/335 had exit -186 failures (known host-specific, rank reg on Windows).
+
+CREDIT AWARDED
+==============
+479 results credited using tiered system:
+  <10s: 3 credit, 10-60s: 5 credit, 60-200s: 8 credit, 200-600s: 12 credit,
+  600-2000s: 18 credit, 2000-5000s: 30 credit, 5000+: 45 credit
+Total credit this session: 5,614 (within 10,000 cap)
+
+Per-user breakdown:
+  ChelseaOilman: +4,053 credit
+  Steve Dodd: +892 credit
+  Armin Gips: +204 credit
+  Anandbhat: +173 credit
+  WTBroughton: +149 credit
+  kotenok2000: +135 credit
+  Vato: +8 credit
+
+Website counters updated: total=31,618, credited=613.
+
+KEY SCIENTIFIC FINDINGS
+=======================
+1. WD Rebound Dynamics — NEW EXPERIMENT DEPLOYED (Finding #46 candidate)
+   HYPOTHESIS: When weight decay is removed mid-training, effective rank REBOUNDS
+   and compositional generalization degrades. This "rebound effect" is the mechanism
+   behind Finding #45 (inverse critical period for WD).
+
+   PREDICTIONS:
+   P1: WD removal at any point causes effective rank to increase (rebound).
+   P2: Earlier removal → larger rebound → worse final compositionality.
+   P3: Late removal (epoch 120/150) → minimal rebound → compositionality preserved.
+   P4: Positive correlation between rebound magnitude and compositional gap.
+
+   METHOD: Train networks at widths 32/64/128 under 6 conditions: no_wd, always_wd,
+   remove_at_30, remove_at_60, remove_at_90, remove_at_120. Track epoch-by-epoch
+   effective rank + compositional gap + weight norm trajectories with checkpoints
+   every 5 epochs. Compute rebound magnitude = rank_final - rank_at_removal.
+
+   NOVELTY: Finding #45 established that late WD works and early WD hurts with
+   100% consistency (34 seeds). The proposed mechanism is "rank rebound" — but
+   nobody has directly measured the trajectories. This experiment provides the
+   epoch-by-epoch evidence needed to prove the causal chain:
+     WD removal → rank rebound → loss of compositionality
+   Literature search confirms this specific rebound phenomenon has NOT been
+   studied in the context of compositional generalization.
+
+   If confirmed, this completes the mechanistic story: width increases rank collapse
+   (#33), rank collapse enables compositionality (#42 pending), but only if WD
+   is active at convergence (#45). The rebound experiment proves WHY timing matters.
+
+2. Inverse Critical Period for WD — CONTINUING (#45, 34+ seeds)
+   Still accumulating more seeds with intervention_timing_compositionality.py
+   (weight 5, top priority). Current data at 100% consistency.
+
+3. Regularization Mechanisms — NEEDS SEEDS (#44, 2 results)
+   Only 2 results with seed=42 so far. Deploying more for cross-validation.
+
+EXPERIMENTS DEPLOYED
+====================
+Deployed 1,517 CPU + 90 GPU = 1,607 workunits to 65 hosts.
+
+Active experiment portfolio (session s0303g):
+  - intervention_timing_compositionality.py (weight 5) — TOP PRIORITY, more seeds for #45
+  - wd_rebound_dynamics.py (weight 3) — NEW, mechanism test for #45 rebound hypothesis
+  - regularization_mechanisms.py (weight 3) — needs diverse seeds
+  - bottleneck_mechanism.py (weight 2) — seed=42 fallback issue persists
+  - rank_regularization_compositionality.py (GPU only) — preliminary, 1 seed
+
+GPU experiments: rankreg, intervtiming (rotated across GPU hosts).
+
+Largest deployments: DESKTOP-N5RAJSE (192 CPU + 2 GPU), SPEKTRUM (72 + 2),
+JM7 (64 + 1), DadOld-PC (33 + 2), Dads-PC (8 + 2).
+
+NEW EXPERIMENT REASONING
+========================
+WD Rebound Dynamics (wd_rebound_dynamics.py):
+This experiment was designed as the MECHANISTIC follow-up to Finding #45.
+
+Finding #45 established an inverse critical period with remarkable clarity (34/34
+seeds): late WD rescues compositionality (84-89% of always-WD effect), while
+early WD makes things WORSE than no WD at all (-10% effect). The proposed
+mechanism is that early WD compresses representations, but when WD is removed,
+the representation "rebounds" into a worse state than if WD had never been applied.
+
+But this rebound has never been directly observed. The new experiment tracks:
+  1. Effective rank trajectory (SVD-based) at every 5 epochs
+  2. Compositional gap trajectory
+  3. Weight norm trajectory
+
+Under 6 WD removal conditions (no_wd, always_wd, remove at 30/60/90/120 epochs).
+
+This is a CAUSAL MECHANISM experiment (priority type #2 in our experiment design
+hierarchy). If we can show that rebound magnitude directly predicts final
+compositionality gap, that's a complete mechanistic story:
+  Width → rank collapse → compositionality loss (if WD absent at convergence)
+  Width → rank collapse → compositionality rescue (if WD active at convergence)
+  Width + early WD → rank compresses → WD removed → rank rebounds → WORSE
+
+Literature search (web): No published work on WD removal rebound effects in
+the context of compositional generalization. Weight decay timing has been studied
+(Loshchilov & Hutter on scheduled WD, Zhong et al. 2023 on pitfalls) but never
+in the context of compositional feature learning.
+
+NEXT STEPS
+==========
+1. Monitor wd_rebound_dynamics results — expect first returns within ~1 hour
+2. Continue accumulating intervention_timing seeds (>34 already, more = better)
+3. regularization_mechanisms needs diverse seeds urgently
+4. When rebound data arrives: correlate rebound magnitude with gap across seeds
+5. If rebound confirmed: design a "WD cycling" experiment (alternating WD on/off)
+   to test whether periodic rank compression + release is optimal
+
+FLEET STATUS
+============
+~70+ active hosts, 65 deployed to this session.
+All idle cores filled. Total active experiments across fleet: ~3,200+

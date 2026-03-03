@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 2, 2026 (session s0302j ~01:30 UTC Mar 3)
+Last updated: March 3, 2026 (session s0303g ~08:00 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -39,6 +39,15 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     Nuclear norm: modest gap reduction at w128 only. Activity L2 does NOT help.
     Needs diverse seeds urgently. Script: regularization_mechanisms.py.
 
+46. WD REBOUND DYNAMICS — NEW, DEPLOYED (s0303g)
+    HYPOTHESIS: When WD is removed mid-training, effective rank REBOUNDS (increases)
+    and compositionality degrades. This rebound effect explains WHY early WD hurts
+    in Finding #45. Tests: no_wd, always_wd, remove_at_30/60/90/120 at 3 widths.
+    Tracks epoch-by-epoch rank + comp gap trajectories. Script: wd_rebound_dynamics.py.
+    PREDICTIONS: (1) WD removal causes rank rebound, (2) earlier removal = larger
+    rebound, (3) late removal = minimal rebound, (4) rebound magnitude correlates
+    with final comp gap. If confirmed, this proves the MECHANISM behind #45.
+
 45. *** INVERSE CRITICAL PERIOD FOR WEIGHT DECAY *** — STRONGLY CONFIRMED (34 seeds)
     *** THIS IS OUR MOST NOVEL FINDING — POTENTIAL PUBLICATION ***
     HYPOTHESIS TESTED: WD timing during critical period determines rescue magnitude.
@@ -77,9 +86,11 @@ STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 45.
 GROWING: 27, 28, 38.
 PRELIMINARY: 39 (bottleneck_mechanism, 1 seed), 42 (rank reg, 1 seed),
   44 (reg mechanisms, 2 results).
+DEPLOYED/AWAITING: 46 (WD rebound dynamics, NEW mechanism test).
 
 EXPERIMENT SCRIPTS:
-  Active (s0302j): intervention_timing_compositionality.py (weight 5, TOP PRIORITY),
+  Active (s0303g): intervention_timing_compositionality.py (weight 5, TOP PRIORITY),
+          wd_rebound_dynamics.py (weight 3, NEW mechanism test for #45),
           regularization_mechanisms.py (weight 3, needs seeds),
           bottleneck_mechanism.py (weight 2, seed=42 issue persists),
           rank_regularization_compositionality.py (weight 2, GPU only)
@@ -94,10 +105,11 @@ RETIRED (do not redeploy): ALL grokking, memorization_dynamics_v2,
   compositionality_critical_period, feature_subspace_overlap, combined_compositionality.
 
 DELIVERY PIPELINE STATUS:
-  s0302j (~01:20 UTC Mar 3): Credited 67 results (298 credit, 3 users).
-    Deployed 1,651 CPU + 80 GPU WUs to 69 hosts with idle cores.
-    Experiment mix: ~70% intervtiming, ~20% regmech, ~10% bottlemech + GPU rankreg.
-    Fleet: 85+ active hosts. Total idle filled: 1,651 cores.
+  s0303g (~08:00 UTC Mar 3): Credited 479 results (5,614 credit, 7 users).
+    Deployed 1,517 CPU + 90 GPU = 1,607 WUs to 65 hosts.
+    NEW experiment: wd_rebound_dynamics.py (mechanism test for inverse critical period).
+    Mix: ~38% intervtiming, ~23% wdrebound, ~23% regmech, ~15% bottmech + GPU rankreg.
+    Fleet: 70+ active hosts.
 
 KNOWN ISSUES:
   - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.
