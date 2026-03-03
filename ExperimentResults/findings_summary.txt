@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part2_auto)
+Last updated: March 3, 2026 (session s0303_part1_validate)
 =====================================================
 
 CORE SCIENTIFIC STATUS
@@ -71,3 +71,23 @@ OPERATIONAL NOTES
 NEXT SCIENCE PRIORITY
 - Evaluate interaction/mechanism results from the two new scripts above before opening further lines.
 - If curvature-triggered WD consistently beats fixed-late WD, prioritize scale/depth/task generalization tests.
+
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1)
+- Credited 355 completed `exp_*` results this session for a total of 9,988 credit (session cap respected).
+- Session credit distribution: Steve Dodd +4,348; ChelseaOilman +2,538; WTBroughton +2,442; marmot +660.
+- Remaining uncredited successful results after this pass: 4,236 (to continue in future validation passes).
+- Reviewed result payload structure across credited results: all contained `experiment_result`; `error` key was present but typically null.
+- Main credited lines this pass were WD-family runs (`wdextwidth`, `wddepth`, `wdwindow`, `wdtasksweep`, `wdoptim`) plus `percolation`, `repcrystal`, `regmech`.
+- No new hard scientific reversal detected versus prior ICP/WD conclusions; this pass primarily increased replication counts.
+- Stuck-task cleanup checks executed: 0 tasks aborted by >12h dead-host rule and 0 by >48h hard ceiling.
+- Recent high-failure clusters were observed on several GPU-tagged prefixes and `cellular_automata_v2`; monitor/fix before further large seeding for those prefixes.
+
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1B)
+- Credited 460 completed `exp_*` results this session for a total of 4,342 credit (session cap respected).
+- Session user credit additions: ChelseaOilman +1,631; WTBroughton +1,284; Steve Dodd +711; _Scandinavian_ +240; marmot +229; PyHelix +95; rilian +105; plus small additions to Vato/amazing/philip-in-hongkong/Vladimir Petrov.
+- Remaining uncredited completed results after this pass: 85,729 (success: 5,174; failed: 80,555).
+- Reviewed 460 upload candidates: 260 outcome=1 and 200 outcome!=1; sampled payload paths were largely unavailable/empty at review time, so this pass prioritized compute-time fairness.
+- Additional replication credit this pass concentrated on `svdrank` (77), `wdextwidth` (53), `wddepth` (37), `wdtasksweep` (24), `cellular_automata_v2` (25), and `percolation` (9).
+- No new scientific reversal versus existing WD/ICP conclusions was detected in this batch; this was primarily a validation/credit maintenance pass.
+- Broken active prefixes with near-total recent failure were aborted to prevent wasted volunteer compute: `symmetry_breaking_dynamics` (3), `loss_landscape_curvature` (5), `mode_connectivity_v2` (4), `random_label_memorization` (1).
+- Stuck-task cleanup executed with no additional dead-host or >48h aborts triggered (0 / 0).
