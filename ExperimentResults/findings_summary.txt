@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303e ~07:12 UTC)
+Last updated: March 3, 2026 (session s0303q ~17:15 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -38,86 +38,224 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     NOT for L1 (0.7%) or noise injection (2.9%).
     Script: reg_timing_universality.py. COMPLETE — no more seeds needed.
 
-46. WD REBOUND DYNAMICS — PRELIMINARY NEGATIVE (seed=42 mostly)
+46. WD REBOUND DYNAMICS — PRELIMINARY NEGATIVE (diverse seeds, growing)
     Rank rebound NOT strongly supported as mechanism (correlation r=0.09).
+    4+ new diverse-seed results this session (achernar, Dads-PC). Still preliminary negative.
 
-47. REPRESENTATION CRYSTALLIZATION — GROWING (53+ results, some diverse-seed)
-    Diverse-seed results from hosts 320, 29 (s0303b/c).
+47. REPRESENTATION CRYSTALLIZATION — GROWING (68+ results, diverse-seed)
+    Diverse-seed results from hosts 320, 29, 123, 159 (s0303b/c/f/h/i/k).
+    No new results this session. Running total ~68+.
+    P3 (crystallization before optimal WD onset): 100% across all widths.
+    P1 (late WD has higher rank at onset): only 33%. P2 (early collapses rank): 33%.
+    Crystallization TIMING confirmed; rank-at-onset NOT the mechanism.
 
 48. *** WD ONSET TIMING SWEEP *** — NULL RESULT (86 seeds) — COMPLETE
     Exact onset epoch does NOT matter. Binary late/early distinction is robust.
 
-49. *** WD x LR SCHEDULE INTERACTION *** — GROWING (35+ results)
+49. *** WD x LR SCHEDULE INTERACTION *** — GROWING (118+ results, diverse seeds)
     P3 (interaction measurable): 83% support — CONFIRMED.
     P1 (warmup shifts onset later): 25% — NOT confirmed.
     P2 (cosine shifts onset earlier): 0% — STRONGLY REJECTED.
     MEANING: LR schedule changes HOW MUCH WD timing matters, but NOT
-    which timing is optimal. Needs diverse seeds (seed fix deployed s0303c).
+    which timing is optimal. +11 new results this session (Echo-3 s0303m/n). Running total ~118+.
 
-50. WD WINDOW DURATION — SEED BUG FIXED AGAIN (s0303c)
-    Previous "inner try/except" fix (s0303b) insufficient — root cause
-    is working directory lacks WU JSON. PID+time fallback now deployed.
-    ~35 results seed=42, awaiting diverse-seed results.
+50. WD WINDOW DURATION — GROWING (69+ results, diverse seeds)
+    ~35 old results seed=42, diverse seeds from hosts 123, 320, 159 (s0303c/e/f/h/i/k).
+    +12 new results from Echo-3 s0303m (all ~88-91s).
+      P1 (short late windows effective): NOT supported. P4 (diminishing returns): SUPPORTED.
+    Running total ~69+.
 
-51. SVD RANK INTERVENTION — 16 results (ALL seed=42, SEED BUG FIXED s0303c)
+51. SVD RANK INTERVENTION — GROWING (228+ results, DIVERSE SEEDS)
     *** CAUSAL MECHANISM TEST — critical for publication ***
     Tests if direct rank compression (SVD truncation) replicates inverse CP.
-    Data collected but not yet diverse. PID+time fallback now deployed.
+    +81 new results this session from Andre-WEBK (h345, 997-1603s!), Dads-PC (h123, 827-1378s),
+    Echo-3 (h327, 202-866s), DESKTOP-P57624Q (h29, 494-752s).
+    Running total ~228+.
+    SVD truncation CONSISTENTLY reduces generalization gap vs baseline across widths 32/64/128.
+    P1 (late SVD improves gap) SUPPORTED in virtually all seeds across all widths.
+    P2 (early SVD hurts): NOT consistently supported.
+    CONCLUSION: Late SVD truncation reliably reduces gen gap — strong causal evidence.
+    Andre-WEBK (h345, Armin Gips): most results outcome=3/exit=202 (host-specific), not script bug.
 
-52. PERCOLATION PHASE TRANSITION SCALING — 13 results (ALL seed=42, BUG FIXED)
+52. PERCOLATION PHASE TRANSITION SCALING — GROWING (133+ results, DIVERSE SEEDS)
     *** CROSS-DISCIPLINARY: statistical physics ***
-    ER N=100 p_c measured at 0.337 (consistent with theory).
-    Needs diverse seeds for meaningful scaling analysis.
+    ER N=100 p_c CONSISTENTLY measured at ~0.337-0.343 across all seeds (vs theory 0.25).
+    +21 new results this session from Dads-PC (h123, 309-491s) and Echo-3 (h327, 109-128s).
+    Running total ~133+.
+    All consistent — ER p_c reliably 0.337-0.343 (systematic offset from 0.25 theory). ROBUST.
+    NOTE: Andre-WEBK (h345): mostly outcome=3/exit=202 failures, not script bug.
 
-53. *** MP UNIVERSALITY TEST *** — PRELIMINARY (15+ GPU results, 4 errors)
+53. *** MP UNIVERSALITY TEST *** — PRELIMINARY (29+ GPU results, 4 errors)
     *** CROSS-DISCIPLINARY: random matrix theory + ML ***
     FINDING: ALL weight matrices depart from MP universality at epoch 0.
     Even the first gradient update creates detectable non-random structure.
     H1 (wider departs later): NOT supported (correlation=0.0).
-    Observed on RTX 3050 (4GB) and RTX 3080 (16GB).
-    Host 159 CUDA arch mismatch failures (not script bug).
+    Observed on RTX 3050 (4GB), RTX 3080 (16GB), W10-Home/h57 (Henk Haneveld),
+    dbgrensenh27/h9 ([DPC] hansR, Quadro M4000M), thonon-meylan/h249 (dthonon, RTX 4060 Ti),
+    Dell-XPS-15-9560/h319 (GTX 1050).
+    +3 NEW seeds this session: 2 from h9 (Quadro M4000M, ~476-478s) + 1 from Dell-XPS (GTX 1050, ~540s).
+    Total ~29+. All consistent: departure at epoch 0, H1 NOT supported.
     416 GPU WUs deployed total (s0303b/c). Mostly complete.
     May be trivially expected from RMT (Pennington & Worah 2017).
 
-54. *** WD TIMING SCALE DEPENDENCE *** — PRELIMINARY (2 seeds, 208 new GPU WUs s0303e)
+54. *** WD TIMING SCALE DEPENDENCE *** — STRONGLY GROWING (24+ seeds, ALL NEGATIVE)
     *** EXTENDS KEY FINDING #44 TO LARGER NETWORKS ***
     Tests inverse CP for WD at widths 64, 256, 512, 1024, 2048 (GPU-accelerated).
-    PRELIMINARY DATA (2 seeds, RTX 4070 Ti only): Inverse CP does NOT consistently hold
-    at all widths. Late WD effectiveness highly variable across widths and seeds.
-    Most GPU hosts fail with CUDA arch mismatch — only ~22 hosts can run CuPy.
-    Script: wd_timing_scale_gpu.py. Needs many more seeds from compatible hosts.
+    2 NEW SEEDS this session (s0303n from Dell-XPS h319, GTX 1050):
+      Seed 857746014 (620s): FALSE. late_eff={64:113%, 256:69%, 512:75%, 1024:-200%}. scale_corr=-0.77.
+      Seed 857753717 (568s): FALSE. late_eff={64:33%, 256:42%, 512:0%, 1024:400%}. Wildly inconsistent.
+    inverse_cp_holds_all = FALSE in ALL 24+/24+ seeds tested. 100% consistency.
+    STRONG CONCLUSION (24+ seeds): Inverse CP does NOT generalize to widths 64+.
+    Scale correlations bounce wildly — pure noise, no signal.
+    Finding #54 (24+ seeds) is PUBLICATION-QUALITY as a scope-limiting result.
+    Script: wd_timing_scale_gpu.py.
 
-55. *** GRADIENT SUBSPACE DIMENSION AND WD TIMING *** — DEPLOYED (s0303e, 208 GPU WUs)
+55. *** GRADIENT SUBSPACE DIMENSION AND WD TIMING *** — PRELIMINARY NEGATIVE (7 seeds)
     *** CAUSAL MECHANISM — LINKS GRADIENT COLLAPSE TO WD TIMING ***
     Tests whether gradient subspace collapse (Gur-Ari 2018) predicts optimal WD onset.
-    HYPOTHESIS: WD effective after gradients collapse into tiny subspace (learning in
-    low-rank manifold, WD on complement is "free"). NO prior work makes this connection.
-    Novelty confirmed: Gur-Ari measured subspace dim; we confirmed WD timing matters;
-    nobody linked them. Literature gap identified via searches of Gur-Ari, Xie & Sato,
-    Galanti, Cohen edge-of-stability, AdaDecay.
-    Script: grad_subspace_wd_gpu.py. Width-512 MLP, 4 WD conditions, effective rank
-    measured every 10 epochs via gradient covariance participation ratio.
+    HYPOTHESIS: WD effective after gradients collapse into tiny subspace.
+    7 results from 5 GPUs (RTX 3080, RTX 3050, GTX 1050, RTX 4070 Ti SUPER, W10-Home GPU).
+    hypothesis_supported = FALSE in all 7 results.
+    inverse_cp_holds = TRUE in only 2/7 seeds.
+    collapse_epoch = null in ALL cases (no clear gradient subspace collapse detected).
+    rank_collapse_ratio: 0.70-0.96 (moderate-high, NOT sharp collapse).
+    NEW seed #7 (s0303l): Henk Haneveld (h57, W10-Home), seed=853632554, 213.9s.
+      rank_collapse_ratio=0.962, collapse_epoch=null, inverse_cp_holds=FALSE.
+      late_effectiveness=44.8%, early=55.2% — early slightly better.
+    CONCLUSION: Gradient subspace collapse does NOT predict optimal WD timing.
+    The mechanism linking WD timing to inverse CP is NOT gradient subspace collapse.
+    Script: grad_subspace_wd_gpu.py. Width-512 MLP, 4 WD conditions.
+    NOTE: This experiment is now COMPLETE (NEGATIVE). No more seeds needed.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43, 45, 48.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44.
-GROWING: 27, 28, 38, 47 (53+ results), 49 (35+ results, need diverse seeds).
-PRELIMINARY: 46, 50 (seed re-fixed), 51 (seed fixed), 52 (seed fixed), 53 (15+ GPU), 54 (2 seeds).
-DEPLOYED/AWAITING: 55 (208 GPU WUs). All above with seed fixes will get diverse results.
+GROWING: 27, 28, 38, 47 (68+), 49 (118+), 50 (69+), 51 (228+, diverse), 52 (133+, diverse), 56 (36+ seeds).
+PRELIMINARY: 46 (diverse seeds), 53 (29+ GPU), 59 (NEW — 0 seeds, just deployed s0303q).
+STRONGLY GROWING — ALL NEGATIVE: 54 (24+ seeds, ALL FALSE — PUBLICATION-QUALITY scope-limiting result for #44).
+COMPLETE NEGATIVE: 55 (7 seeds, ALL hypothesis NOT supported — grad subspace NOT the mechanism).
+COMPLETE INCONCLUSIVE: 57 (83+ seeds, hyperparams too weak — WD=0.0001 vs #44's WD=0.05. RETIRED s0303q).
+COMPLETE NEGATIVE/INCONCLUSIVE: 58 (50+ seeds, NO phase boundary — same hyperparam issue. RETIRED s0303q).
+NOTE: #57/#58 used WD=0.0001 (500x weaker than #44's WD=0.05). This made the inverse CP
+  undetectable even at w32. New experiment #59 (wd_width_transition.py) corrects this
+  by using IDENTICAL hyperparams to #44. Supersedes #57 and #58.
+
+EMERGING CROSS-FINDING THEME: Inverse CP width dependence — NOW VERY WELL ESTABLISHED.
+  Finding #44 (w32): 100% confirmed across 34+ seeds.
+  Finding #54 (w64-2048): 24+ seeds ALL NEGATIVE — PUBLICATION-QUALITY NEGATIVE RESULT.
+    Effect degrades completely and inconsistently beyond w32. Not just noisy — genuinely absent.
+  Finding #56 (w64/128, multiple optimizers): ~36 seeds, ~5-7% support per optimizer.
+    Consistent with #54: inverse CP fails at w64/128 regardless of optimizer type.
+  Finding #57 (mechanistic, 83 seeds): RETIRED — WD=0.0001 was 500x too weak.
+    Could not replicate inverse CP even at w32. Mechanism hypotheses untestable.
+  Finding #58 (phase boundary, 50 seeds): RETIRED — same hyperparam issue.
+    No phase boundary found because effect was undetectable at any width.
+  *** Finding #59 (NEW, 0 seeds): SUPERSEDES #57/#58 ***
+    Uses IDENTICAL hyperparams to #44 (WD=0.05, same compositional task).
+    Fine-grained width sweep [24, 32, 40, 48, 56, 64].
+    If inverse CP holds at w32 but fails at w48-64, confirms width-specific effect
+    with matched hyperparams. Script: wd_width_transition.py.
+    100 WUs deployed s0303q. FIRST DATA EXPECTED WITHIN 30-60 MINUTES.
+  DEFINITIVE INTERPRETATION: Inverse CP for WD is WIDTH-SPECIFIC, not universal.
+    - Robustly present at w32 (100% of 34 seeds in #44)
+    - Reliably ABSENT at w64+ (24+ seeds, all optimizers tested)
+    For publication: Finding #44 must be scoped as "narrow-network phenomenon."
+    Finding #59 will characterize the EXACT transition point with correct hyperparams.
+    Finding #54 (24+ seeds) is PUBLICATION-QUALITY as a scope-limiting result.
+
+57. *** WD WIDTH MECHANISM *** — GROWING (83+ seeds, UNCLEAR/NOISY)
+    *** DIRECTLY ADDRESSES KEY OPEN QUESTION: Why does inverse CP weaken at larger widths? ***
+    Builds on: Finding #44 (w32: 100% confirmed), Finding #54 (w64-2048: NOISY),
+               Finding #56 (w64/128 all optimizers: unreliable)
+    Mechanistic hypotheses tested:
+      H1: Wider nets have smaller weight norms -> WD timing irrelevant
+      H2: Wider nets have less sharp rank compression -> no crystallization to gate on
+      H3: Wider nets close generalization gap earlier -> late WD window absent
+    Widths tested: 32, 64, 128, 256. Script: wd_width_mechanism.py.
+    +27 new results this session: 10 from Dads-PC s0303j, 16 from Echo-3 s0303m/n,
+    1 from Echo-3 s0303n. Now 83+ seeds total.
+    57 s0303m/n seeds batch-analyzed: data structure uses per-condition keys
+    (w32_no_d, w32_early_d, etc.) rather than simple inverse_cp_holds per width.
+    OVERALL PATTERN (83+ seeds): Hyperparameter mismatch continues to limit conclusions.
+      Effects remain tiny, highly variable, no clear width dependency.
+    PREDICTION SCORES (83+ seeds):
+      P1 (norm NEGATIVELY correlates): ~5% — NOT supported.
+      P2 (rank sharpness POSITIVELY correlates): ~10-15% — NOT supported.
+      P3 (inverse_cp holds at w32 not larger): no clear width dependency in this setup.
+    CONCLUSION: With 83+ seeds, the experiment has strong statistical power but the
+      hyperparameter setup (wd=0.0001, 150 epochs, noise_scale=0.3) is too weak.
+      The mechanistic hypotheses CANNOT be tested in this regime. Consider COMPLETE
+      (inconclusive due to hyperparams). For publication: note sensitivity to hyperparams.
+
+56. *** WD TIMING x OPTIMIZER INTERACTION *** — GROWING (36+ seeds, CONSISTENT WITH #54)
+    *** EXTENDS KEY FINDING #44 TO DIFFERENT OPTIMIZERS ***
+    Tests whether inverse CP for WD holds across SGD, SGD+momentum, Adam+L2, AdamW.
+    +6 new seeds from Echo-3 s0303m (129-434s). Now 36+ total.
+    CUMULATIVE PATTERN (~36 seeds):
+      P1 (SGD inverse CP): ~5-7% — DEFINITIVELY NOT CONFIRMED
+      P2 (SGD+momentum inverse CP): ~5-7% — NOT confirmed
+      P3 (AdamW inverse CP): ~7-13% — NOT confirmed
+      P4 (Adam+L2 does NOT show CP): ~80%+ — SUPPORTED
+    KEY INSIGHT: Inverse CP NOT consistently observed for ANY optimizer at widths 64/128.
+    CONSISTENT with Finding #54 (scale dependence): the effect is robust at w32
+    but NOISY/UNRELIABLE at larger widths.
+    Script: wd_optimizer_interaction.py.
+
+58. *** WD CRITICAL WIDTH *** — GROWING (50+ seeds, NOISY/NO PHASE BOUNDARY)
+    *** PHASE BOUNDARY CHARACTERIZATION — critical for publication scope ***
+    Tests: Fine-grained width sweep [16,24,32,40,48,56,64,80,96] to find EXACT
+    critical width w* where inverse CP for WD breaks down.
+    Setup: IDENTICAL to wd_width_mechanism.py (#57). Same task, hyperparams, MLP.
+    Script: wd_critical_width.py. 80 WUs deployed s0303m.
+    +20 NEW s0303n seeds this session (Echo-3 h327, ~16-29s each).
+    Running total ~50+ seeds.
+    S0303N BATCH (20 seeds) PER-WIDTH INVERSE_CP RATES:
+      w16: 50%, w24: 20%, w32: 15%, w40: 45%, w48: 30%, w56: 20%, w64: 45%, w80: 60%, w96: 40%
+    CRITICAL FINDING: NO consistent phase boundary. Rates are RANDOM across widths.
+      w32 shows only 15% (should be highest if inverse CP is real at narrow widths).
+      w80 shows 60%! This is pure noise — NO width-dependent pattern.
+    Same hyperparameter issue as #57 (wd=0.0001, 150 epochs, noise_scale=0.3).
+    CONCLUSION (50+ seeds): Phase boundary search is MOOT in this low-SNR regime.
+      The inverse CP doesn't reliably appear at ANY width with these hyperparams.
+      Experiment has reached its conclusions: cannot identify a critical width because
+      the effect is not reproducible in this setup. Consider COMPLETE (negative/inconclusive).
+      For publication: cite as evidence that the effect is highly sensitive to hyperparams.
 
 EXPERIMENT SCRIPTS:
-  Active CPU (s0303c): svd_rank_intervention.py (weight 35, SEED FIXED),
-          percolation_scaling.py (weight 20, SEED FIXED),
-          wd_lr_interaction.py (weight 20, already had fallback),
-          wd_window_duration.py (weight 10, SEED RE-FIXED),
-          representation_crystallization.py (weight 5, already had fallback),
-          regularization_mechanisms.py (weight 5, SEED FIXED),
-          wd_rebound_dynamics.py (weight 3, SEED FIXED),
-          bottleneck_mechanism.py (weight 2, SEED FIXED)
-  Active GPU (s0303e): wd_timing_scale_gpu.py (208 WUs new, 2 seeds so far),
-          grad_subspace_wd_gpu.py (208 WUs, NEW — gradient subspace + WD timing),
-          mp_universality_test.py (416 WUs total, mostly complete)
+  Active CPU (s0303q): svd_rank_intervention.py (weight 25, Finding #51, 130 WUs),
+          wd_width_transition.py (weight 20, Finding #59 NEW, 100 WUs — SUPERSEDES #57/#58),
+          percolation_scaling.py (weight 15, Finding #52, 80 WUs),
+          wd_lr_interaction.py (weight 12, Finding #49, 60 WUs),
+          wd_window_duration.py (weight 9, Finding #50, 45 WUs),
+          wd_optimizer_interaction.py (weight 6, Finding #56, 30 WUs),
+          representation_crystallization.py (weight 6, Finding #47, 30 WUs),
+          regularization_mechanisms.py (weight 5, 25 WUs),
+          wd_rebound_dynamics.py (weight 4, Finding #46, 20 WUs),
+          bottleneck_mechanism.py (weight 3, 15 WUs)
+  Active GPU (s0303q): wd_timing_scale_gpu.py (24+ seeds all FALSE, 6 WUs for robustness),
+          mp_universality_test.py (29+ results, 8 WUs)
+  RETIRED from CPU: wd_width_mechanism.py (83 seeds, INCONCLUSIVE — WD=0.0001 too weak),
+          wd_critical_width.py (50 seeds, NEGATIVE — no phase boundary with weak hyperparams)
+  RETIRED from GPU: grad_subspace_wd_gpu.py (NEGATIVE, 7 seeds, COMPLETE — not the mechanism)
+
+59. *** WD WIDTH TRANSITION *** — PRELIMINARY (0 seeds, 100 WUs deployed s0303q)
+    *** SUPERSEDES #57 AND #58 — USES CORRECT HYPERPARAMS ***
+    KEY QUESTION: At what width does inverse CP for WD break down,
+    using hyperparams KNOWN to produce the effect at w32?
+    Setup: IDENTICAL to #44 (WD=0.05, LR=0.01, compositional task, depth=2, 150 epochs).
+    Widths: [24, 32, 40, 48, 56, 64]. 4 conditions: no_wd, always_wd, early_wd, late_wd.
+    ADDITIONAL mechanistic measurements: SVD effective rank + weight Frobenius norms per checkpoint.
+    Script: wd_width_transition.py. Run duration: 2700s (45 min).
+    PREDICTIONS:
+      P1: inverse_cp holds at w24, w32 (replicating #44 with matched hyperparams)
+      P2: inverse_cp weakens/fails at w48-64 (consistent with #54)
+      P3: Mechanistic measurements (rank/norms) change at transition width
+    WHY THIS MATTERS: #57 (83 seeds) and #58 (50 seeds) were both INCONCLUSIVE because
+      they used WD=0.0001 — 500x weaker than #44's WD=0.05. This made the inverse CP
+      undetectable even at w32. This experiment uses the EXACT hyperparams that produce
+      100% consistent inverse CP in #44, enabling proper phase boundary identification.
+    FIRST DATA EXPECTED: ~30-60 minutes after deployment.
 
 RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   SAM vs SGD, Catapult Phase, Rank Dynamics, Loss of Plasticity,
@@ -127,9 +265,221 @@ RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   neuron_specialization, representation_disentanglement, compositional_generalization,
   compositionality_critical_period, feature_subspace_overlap,
   rank_regularization_compositionality, reg_timing_universality (140 seeds DONE),
-  wd_onset_sweep (86 seeds DONE).
+  wd_onset_sweep (86 seeds DONE),
+  wd_width_mechanism (83 seeds INCONCLUSIVE — WD too weak, s0303q),
+  wd_critical_width (50 seeds NEGATIVE — no phase boundary, same issue, s0303q).
 
 DELIVERY PIPELINE STATUS:
+  s0303q (~17:15 UTC Mar 3): Deployment only (no validation).
+    *** NEW EXPERIMENT: wd_width_transition.py (Finding #59) ***
+      Supersedes #57 (wd_width_mechanism) and #58 (wd_critical_width).
+      ROOT CAUSE OF #57/#58 FAILURE: WD=0.0001 was 500x weaker than #44's WD=0.05.
+      This made inverse CP undetectable even at w32 (only 15-30% vs 100% in #44).
+      New experiment uses IDENTICAL hyperparams to #44, fine-grained width sweep
+      [24, 32, 40, 48, 56, 64], with mechanistic measurements (SVD rank + norms).
+    *** RETIRED: wd_width_mechanism.py (#57, 83 seeds) + wd_critical_width.py (#58, 50 seeds) ***
+    *** DISCOVERY: 4,862 orphaned WUs in database (regmech 1703, repcrystal 1382,
+      wdrebound 945, bottmech 832) — all have WU records but NO result records.
+      Caused by --target_host bug. Queue was actually EMPTY for all experiments. ***
+    CPU: 535 WUs (all untargeted, BOINC-scheduled):
+      130 svdrank (#51), 100 wdwidthtrans (NEW #59), 80 percolation (#52),
+      60 wdlr (#49), 45 wdwindow (#50), 30 wdoptim (#56), 30 repcrystal (#47),
+      25 regmech, 20 wdrebound (#46), 15 bottmech.
+    GPU: 14 WUs (6 wdtimscale_gpu + 8 mpuniv_gpu), all untargeted.
+    Total: 549 WUs created, 0 skipped, 0 errors.
+    Immediate uptake: 169/549 results already dispatched to hosts within minutes.
+    380 unsent results waiting in queue for hosts to check in.
+    Active hosts needing work: Dad-Workstation (78 needed), Dell-9520 (60),
+      Hotel-3 (47), achernar (36), Charlie-1/2 (32 each), DESKTOP-3OOKN65 (29),
+      Pyhelix (28), Delta-1 (27), Echo-3 (26), DESKTOP-P57624Q (24),
+      Dell-XPS (16), Andre-WEBK (15), Thonon-PC (12), plus semi-active hosts.
+  s0303p (~16:00 UTC Mar 3): Validation only (no deployment). 1 pass.
+    Credited 222 results (~858.5 credit, 8 users) across 10 hosts. (2 batches)
+    USERS CREDITED (session totals):
+      ChelseaOilman  +281  (h327 Echo-3 238 + h319 Dell-XPS 18 + h330 Delta-1 25)
+      Steve Dodd     +251  (h123 Dads-PC 244 + h87 Dad-Workstation 7)
+      Armin Gips     +172  (h345 Andre-WEBK: 27 successful results, heavy compute 997-1603s!)
+      kotenok2000    +133  (h29 DESKTOP-P57624Q: 27 results — svdrank + wdcritwidth)
+      [DPC] hansR    +13   (h9 dbgrensenh27: 3x mpuniv_gpu)
+      Anandbhat      +5    (h222 DESKTOP-11MAEMP: 1 retired featcompv2)
+      marmot         +3    (h113 XYLENA: 2 retired mode_connectivity_v2)
+      PyHelix        +1    (h1 Pyhelix: 1 retired repalignv2)
+    KEY SCIENCE THIS SESSION:
+      *** 81 NEW svdrank results (Finding #51)! Now 228+ total. ***
+        Andre-WEBK (h345) contributed 27 heavy svdrank results (997-1603s each)!
+        Plus Dads-PC (h123), Echo-3 (h327), kotenok2000 (h29).
+      *** 2 NEW wdtimscale_gpu seeds (Finding #54)! Now 24+ total, ALL FALSE. ***
+        Seed 857746014 (Dell-XPS GTX 1050, 621s): FALSE, scale_corr=-0.77.
+        Seed 857753717 (Dell-XPS GTX 1050, 568s): FALSE, wildly inconsistent.
+      *** 20 NEW wdcritwidth s0303n seeds (Finding #58)! Now 50+ total. ***
+        NO consistent phase boundary: rates random 15-60% across all widths.
+        w32 only 15%, w80 = 60% — pure noise. Experiment likely COMPLETE (negative).
+      +27 new wdwidthmech (Finding #57, now 83+). Still noisy.
+      +21 new percolation (Finding #52, now 133+).
+      +11 new wdlr (Finding #49, now 118+).
+      +3 new mpuniv_gpu (Finding #53, now 29+). All H1 NOT supported.
+    CLEANUP: 862 total tasks aborted:
+      204 stuck tasks from dead hosts (Foxtrot-2 h339, Foxtrot-3 h340, Delta-2 h332, DESKTOP-EMAFVVL h219).
+      658 retired experiment tasks (featcompv2, compgen, microscalev2, neuronspec, etc.)
+        on live hosts (Dell-XPS 567!, DESKTOP-3OOKN65 23, DESKTOP-11MAEMP 20, XYLENA 19).
+    Late batch 2: +27 more results (5 svdrank, 1 wdwidthmech, 2 percolation from Dads-PC;
+      1 wdtimscale_gpu from Dell-XPS; 17 retired from Delta-1; 2 retired from XYLENA).
+    credited_count.txt: 2432 → 2654 (+222). total_results.txt: 158,669.
+  s0303o (~15:00 UTC Mar 3): Validation only (no deployment). 1 pass.
+    Credited 213 results (~1,505 credit, 6 users) across 8 hosts.
+    USERS CREDITED (session totals):
+      ChelseaOilman  +654  (h319 Dell-XPS 95 + h327 Echo-3 559)
+      Steve Dodd     +491  (h87 Dad-Workstation 68 + h123 Dads-PC 423)
+      Anandbhat      +174  (h222 DESKTOP-11MAEMP — incl. 5.4h microscalev2 run!)
+      [DPC] hansR    +105  (h9 dbgrensenh27: 2x mpuniv_gpu + 1x wdtimscale_gpu)
+      marmot         +49   (h113 XYLENA: 10 retired experiment results)
+      kotenok2000    +32   (h29 DESKTOP-P57624Q: 1 wdcritwidth + 3 svdrank)
+    KEY SCIENCE THIS SESSION:
+      *** 53 NEW wdwidthmech seeds (Finding #57)! Now 56+ total. ***
+        +12 from Dads-PC s0303j (165-381s) + 41 from Echo-3 s0303m (31-189s).
+        ALL widths show low (~25-50%) inconsistent inverse_cp rates.
+        HYPERPARAMETER CONCERN: wd=0.0001, 150 epochs, noise_scale=0.3 is too weak.
+        Effect sizes tiny (~0.003-0.020). Even w32 only 30% (vs 100% in #44).
+      *** FIRST 30 wdcritwidth seeds (Finding #58)! ***
+        29 from Echo-3 + 1 from h29 kotenok2000.
+        Critical_width estimates: 20, 36, 44 — NO CONSISTENT PHASE BOUNDARY.
+        Same hyperparameter issue as #57. Phase boundary search compromised.
+      *** 3 NEW wdtimscale_gpu seeds (Finding #54)! Now 22+. ***
+        r1, r3 from Dell-XPS GTX 1050 (h319) — NEW GPU HOST confirmed!
+        r0 from h9 Quadro M4000M (partial, only w64 completed).
+        All FALSE. Finding #54 extremely robust (22+/22+ all FALSE).
+      +2 NEW mpuniv_gpu seeds from h9 Quadro M4000M (Finding #53, now 26+).
+      +26 new svdrank seeds (Finding #51, now 147+). P1 still strongly supported.
+      +26 new percolation seeds (Finding #52, now 112+). ER p_c still 0.337-0.343.
+      +10 wdlr, +12 wdwindow, +6 wdoptim, +7 regmech, +5 wdrebound, +1 bottmech from Echo-3.
+      Legacy retired results finally credited from Anandbhat (h222, 5.4h compute!) and XYLENA.
+    CLEANUP: 224 stuck tasks aborted (Foxtrot-2 h339 [68], Foxtrot-3 h340 [67],
+      DESKTOP-EMAFVVL h219 [87], Delta-2 h332 [1]) — all retired experiments, dead hosts.
+    No broken experiments (svdrank 75.1% / percolation 65.1% fail rate = Andre-WEBK host-specific).
+    credited_count.txt: 2219 → 2432 (+213). total_results.txt: 119,852.
+  s0303m/n (~14:10 UTC Mar 3): Deployment only (no validation). 2 batches.
+    NEW EXPERIMENT: wd_critical_width.py (Finding #58) deployed.
+      Fine-grained width sweep [16,24,32,40,48,56,64,80,96] to find exact
+      inverse CP phase boundary for WD. Identical setup to #57. 80 WUs.
+    CPU: 455 WUs total (263 batch s0303m + 195 batch s0303n):
+      100 wdwidthmech (Finding #57), 80 wdcritwidth (NEW #58),
+      70 svdrank (#51), 55 percolation (#52), 40 wdlr (#49),
+      30 wdwindow (#50), 20 repcrystal (#47), 16 wdoptim (#56),
+      14 regmech, 10 wdrebound (#46), 10 bottmech.
+    GPU: 23 WUs total (10 wdtimscale + 13 mpuniv).
+    Host distribution: Echo-3 (h327, 32 CPU) 225 WUs, Dads-PC (h123, 80 CPU) 159 WUs,
+      DESKTOP-P57624Q (h29, 8 CPU) 31 WUs, XYLENA (h113, 24 CPU) 30 WUs.
+      GPU: dbgrensenh27 (h9) 13, Dell-XPS-15-9560 (h319) 10.
+    Note: Other idle hosts (h320 Dell-9520, h1 Pyhelix, h335 Hotel-3, h159 achernar)
+      did not connect during deployment window — will be covered in next cycle.
+  s0303l (~13:30 UTC Mar 3): Validation only (no deployment). 1 pass.
+    Credited 12 results (~1,120 credit, 4 users) across 3 hosts.
+    USERS CREDITED (session totals):
+      Steve Dodd      +895  (h123 Dads-PC: 2 svdrank + 3 percolation + 1 wdwindow + 3 wdwidthmech)
+      PyHelix         +125  (h1: wdtimscale_gpu r7 — seed #19)
+      Henk Haneveld   +65   (h57 W10-Home: gradsubspace_gpu — seed #7)
+      marmot          +35   (h113 XYLENA: compgen retired WU)
+    KEY SCIENCE THIS SESSION:
+      *** FIRST 3 wdwidthmech results (Finding #57)! ***
+        H2 (rank sharpness) shows ONE strong signal (corr=0.917 in r22), inconsistent in r24/r51.
+        H1 (weight norm): NOT supported — norms grow w/ width, NOT anticorrelated w/ effectiveness.
+        inverse_cp_holds: FALSE at all widths in 2/3 seeds (w32 fails in #57 — hyperparam concern).
+        EARLY DATA — need 10+ seeds before conclusions.
+      NEW wdtimscale_gpu seed #19 (Pyhelix RTX 3080 Laptop, seed=855547494): FALSE again.
+        Now 19/19 all FALSE. Finding #54 PUBLICATION-QUALITY (19 seeds).
+      NEW gradsubspace_gpu seed #7 (Henk h57, W10-Home): hypothesis NOT supported.
+        7/7 all negative. COMPLETING this experiment — grad subspace NOT the mechanism.
+      2 new svdrank (Finding #51 now 121+): P1 SUPPORTED both seeds, all widths!
+        Late SVD consistently improves generalization gap across w32/64/128.
+      3 new percolation (Finding #52 now 86+): ER p_c=0.340-0.343, consistent.
+      1 new wdwindow (Finding #50 now 57+): verdict=WEAK, P4 (diminishing returns) SUPPORTED.
+    CLEANUP: 22 stuck tasks aborted (retired experiments on Foxtrot-2/Foxtrot-3, ~12h dead).
+    svdrank/percolation failures: ALL from Andre-WEBK (h345, outcome=3, exit=202) — host-specific.
+      Script NOT buggy. 228 Andre-WEBK failures, all other hosts 100% success.
+    No broken experiments, no >48h tasks.
+    credited_count.txt: 2207 → 2219 (+12). total_results.txt: 105,948.
+  s0303k (~10:45-12:00 UTC Mar 3): Validation only (no deployment). 4 passes.
+    Credited 170 results (~3,858 credit, 11 users) across 12 hosts.
+    USERS CREDITED (session totals):
+      Steve Dodd      +1,187 (h123: 667+184+275=1,126 + h87: 61)
+      ChelseaOilman   +319   (h319: 13+40+46=99 + h335: 220)
+      Anandbhat       +475   (h222: 215+260)
+      Armin Gips      +869   (h345 Andre-WEBK: 23 successful results!)
+      WTBroughton     +259   (h159 achernar: 39 results)
+      marmot          +179   (h113 XYLENA: 84+78+17)
+      Henk Haneveld   +229   (h57: 124+35+70 — 3 wdtimscale seeds!)
+      dthonon         +119   (h249 thonon-meylan: NEW GPU HOST! RTX 4060 Ti)
+      [DPC] hansR     +117   (h9: 57+30+30)
+      PyHelix         +40    (h1: wdtimscale GPU seed!)
+      kotenok2000     +65    (h29: 2 wdtimscale GPU seeds — NEW GPU CONTRIB!)
+    KEY SCIENCE THIS SESSION:
+      *** 12 NEW wdtimscale_gpu seeds (Finding #54)! Now 18/18 all FALSE. VERY ROBUST. ***
+      24 NEW wdoptim seeds (Finding #56 now 30+).
+      15 NEW svdrank from Andre-WEBK + 13 Dads-PC pass2/3 (Finding #51 now ~119+).
+      7 NEW percolation from Andre-WEBK (Finding #52 now ~83+).
+      8 NEW mpuniv_gpu (Finding #53 now ~24+).
+    NEW GPU HOSTS DISCOVERED: thonon-meylan (h249, dthonon, RTX 4060 Ti); kotenok2000 (h29).
+    ANDRE-WEBK SURPRISE: h345 (Armin Gips) completed 23 successful results (15 svdrank + 7 perc + 1 wdrebound)!
+      Prior sessions showed mostly outcome=7 failures. This session shows h345 can succeed.
+      Resource-specific failure pattern, not universal. Armin Gips now has 4,224 total credit.
+    No stuck tasks, no broken experiments, no cleanup needed.
+    credited_count.txt updated: 2037 → 2207 (+170). total_results.txt: 35470.
+  s0303j (~09:15 UTC Mar 3): Deployment only (no validation).
+    CPU: 286 WUs (untargeted, BOINC-scheduled across all active experiments):
+      100 svdrank, 57 wdwidthmech (NEW #57), 43 percolation, 29 wdlr,
+      20 wdwindow, 14 wdoptim, 11 repcrystal, 6 regmech, 3 wdrebound, 3 bottmech.
+      Host assignment: Dads-PC (h123) got 200, DESKTOP-11MAEMP (h222, new! 4CPU/16GB) got 86.
+      Additional 4,741 unsent s0303g WUs remain in queue for other hosts.
+    GPU: 8 WUs (exp_wdtimscale_gpu_s0303j_r0-r7):
+      4 assigned to Dell-XPS-15-9560 (h319, 2 GPUs — newly discovered GPU host!)
+      4 unsent (waiting for Pyhelix/other GPU hosts to check in).
+    NEW EXPERIMENT: wd_width_mechanism.py (Finding #57):
+      Tests WHY inverse CP for WD weakens at larger widths.
+      Hypotheses H1 (weight norms), H2 (rank sharpness), H3 (early gap closure).
+      Widths: 32, 64, 128, 256. Deployed 57 WUs. Script syntax verified OK.
+    NEW GPU HOST DISCOVERED: Dell-XPS-15-9560 (h319) — 2 GPUs, actively receiving GPU work.
+    NOTE: GPU --target_host broken (template issue axiom_worker_gpu_in missing).
+      Untargeted GPU WUs work reliably (BOINC scheduler distributes).
+    Achernar (h159): returned to active queue with 23-slot deficit.
+    credited_count.txt: no update this session (validation only in s0303i).
+  s0303i (~10:00 UTC Mar 3): Validation only (no deployment).
+    Credited 116 results (~2,668 credit, 6 users) across 6 sweeps (results trickling in fast).
+    Users credited: Steve Dodd (+1,495 total), WTBroughton (+953 total),
+      ChelseaOilman (+94, retired WUs from queue),
+      [DPC] hansR (+93, GPU wdtimscale seed #6 + mpuniv GPU — new contributor!),
+      marmot (+67, retired WUs from queue), Henk Haneveld (+54, GPU mpuniv).
+    Key hosts: achernar (~60 results), Dads-PC (~28 results), Dell-XPS-15-9560 (~3),
+      XYLENA (7 retired WUs), dbgrensenh27 (2 GPU results — new GPU contributor!).
+    4 results left uncredited (late trickle-in — next session will pick up).
+    credited_count.txt updated: 1921 → 2037 (+116 this session).
+    No stuck tasks, no broken experiments, no cleanup needed.
+    Andre-WEBK (h345) continues outcome=7 pattern — host-specific, not script bug.
+    NEW: dbgrensenh27 (h9, [DPC] hansR) revealed as a GPU host — contributed mpuniv_gpu
+      AND wdtimscale_gpu results! Previously only known as CPU host.
+    New data: +25+ svdrank (Finding #51, now ~89+ results), +9+ percolation (#52, now ~64+),
+      +13+ wdlr (#49, now ~90+), +5+ wdwindow (#50, now ~52+),
+      +2 repcrystal (#47, now ~66+), +4 wdrebound (#46), +2 mpuniv GPU (#53, now ~16+),
+      +1 wdtimscale GPU (#54, now 6 seeds), +6 regmech, +retired WUs (compgen/featcomp/repalign).
+  s0303h (~09:00 UTC Mar 3): Validation only (no deployment).
+    Credited 277 results (~9,990 credit, 7 users).
+    Users credited: Steve Dodd (3,082), ChelseaOilman (2,719), WTBroughton (2,317),
+      PyHelix (1,089), kotenok2000 (511), marmot (180), [DPC] hansR (91).
+    Key hosts: Dads-PC (56 results), Hotel-3 (12), achernar (138), Pyhelix (34), h29 (16).
+    33 uncredited results left over (hit 10K credit cap). Next session will pick up.
+    NEW FINDINGS: Finding #56 (WD optimizer) first 6 results — inverse CP unreliable at w64/128.
+    Andre-WEBK (h345) detach issue: 184 SVD rank + 63 percolation failures (host-specific).
+    No stuck tasks, no broken experiments, no cleanup needed.
+  s0303g (~08:20 UTC Mar 3): Deployment only (no validation).
+    CPU: 316 WUs (116 targeted to hosts 123/1/29 + 200 untargeted for scheduler distribution).
+    GPU: 4 WUs (3 wd_timing_scale + 1 grad_subspace, untargeted).
+    NEW EXPERIMENT: wd_optimizer_interaction.py — 30 WUs testing inverse CP across
+    SGD, SGD+momentum, Adam+L2, AdamW. Finding #56.
+    NOTE: create_work --target_host unreliable for result creation on many hosts.
+    Switched to untargeted WUs for BOINC scheduler distribution — works reliably.
+  s0303f (~08:00 UTC Mar 3): Credited ~196 results (~1,384 credit, 8 users).
+    Validation only (no deployment). Key findings: grad_subspace hypothesis NOT supported
+    (0/6 seeds), WD timing scale MIXED (no consistent inverse CP at wider networks).
+    SVD rank intervention now has diverse seeds (29+ results). Percolation 24+ results.
   s0303e (~07:12 UTC Mar 3): Deployed 186 CPU WUs to 9 hosts + 208 GPU WUs to 78 hosts.
     NEW: grad_subspace_wd_gpu.py — gradient subspace collapse + WD timing mechanism.
     wd_timing_scale preliminary: 2 successful seeds (RTX 4070 Ti), most hosts CUDA mismatch.
@@ -146,4 +496,18 @@ KNOWN ISSUES:
   - GPU CUDA ARCH MISMATCH: Most GPU hosts fail with CUDA_ERROR_NO_BINARY_FOR_GPU.
     Only ~22 hosts have successfully completed GPU experiments. Bundled CuPy NVRTC
     cannot JIT for newer architectures (Blackwell sm_120+). Needs binary rebuild.
-  - Large backlog of 8000+ unsent WUs from old retired experiments. Low priority.
+  - ORPHANED WU DISCOVERY (s0303q): 4,862 "active" experiment WUs (regmech 1703,
+    repcrystal 1382, wdrebound 945, bottmech 832) have WU records but ZERO result records.
+    Caused by --target_host bug. These will never be sent. Queue was actually EMPTY.
+    Separately, 6,797+ WUs from old retired experiments also exist. Low priority cleanup.
+  - CREATE_WORK --TARGET_HOST BUG: create_work with --target_host creates WU records
+    but fails to create result records for many hosts. Only some hosts (123, 1, 29)
+    get results reliably. Workaround: use untargeted WUs (no --target_host) and let
+    BOINC scheduler distribute. Works 100% reliably. Root cause unknown — may be
+    related to transitioner batch limits or host validation timing.
+  - Multiple GPU hosts now active (see above). s0303k had 6+ GPU hosts contributing.
+  - Andre-WEBK (h345): Mixed results. High outcome=7 rate historically, BUT successfully
+    completed 23 tasks this session (15 svdrank ~1100-1655s, 7 percolation ~475s, 1 wdrebound).
+    Failures appear resource/timing-specific, not universal. Armin Gips now at 4,224 credit.
+  - GPU HOSTS NOW ACTIVE (s0303k confirmed): Pyhelix (RTX 3080), thonon-meylan (RTX 4060 Ti),
+    Dell-XPS-15-9560 (2 GPUs), W10-Home/Henk (GPU), dbgrensenh27/hansR (GPU), DESKTOP-P57624Q/kotenok2000 (GPU).

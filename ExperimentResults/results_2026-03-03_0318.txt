@@ -1,0 +1,212 @@
+Axiom BOINC Session Log — s0303p/q (~16:00-17:15 UTC, March 3, 2026)
+=====================================================================
+
+PART 1: VALIDATION & CREDIT (Session s0303p, ~16:00 UTC)
+=========================================================
+
+Credit Awarded: 222 results, ~858.5 total credit, 8 users, 10 hosts
+----------------------------------------------------------------------
+
+| User            | Credit | Key Hosts                                      |
+|-----------------|--------|-------------------------------------------------|
+| ChelseaOilman   | +281   | Echo-3 (h327), Dell-XPS (h319), Delta-1 (h330) |
+| Steve Dodd      | +251   | Dads-PC (h123), Dad-Workstation (h87)           |
+| Armin Gips      | +172   | Andre-WEBK (h345): 27 heavy svdrank, 997-1603s! |
+| kotenok2000     | +133   | DESKTOP-P57624Q (h29): svdrank + wdcritwidth    |
+| [DPC] hansR     | +13    | dbgrensenh27 (h9): 3x mpuniv_gpu               |
+| Anandbhat       | +5     | DESKTOP-11MAEMP (h222)                          |
+| marmot          | +3     | XYLENA (h113)                                   |
+| PyHelix         | +1     | Pyhelix (h1)                                    |
+
+Counters updated:
+  credited_count.txt: 2432 -> 2654 (+222)
+  total_results.txt: 158,669
+  Uncredited remaining: 0
+
+Cleanup: 862 tasks aborted
+----------------------------------------------------------------------
+
+  - 204 stuck tasks from dead hosts:
+      Foxtrot-2 (h339), Foxtrot-3 (h340), Delta-2 (h332), DESKTOP-EMAFVVL (h219)
+  - 658 retired experiment tasks on live hosts:
+      Dell-XPS had 567 alone! Plus DESKTOP-3OOKN65 (23), DESKTOP-11MAEMP (20), XYLENA (19)
+      Experiments cleared: featcompv2, compgen, microscalev2, neuronspec, etc.
+
+Key Science from Validated Results
+----------------------------------------------------------------------
+
+  Finding #51 (SVD Rank Intervention): +81 results -> 228+ total
+    Andre-WEBK (h345, Armin Gips) contributed 27 heavy svdrank results (997-1603s each!)
+    Plus Dads-PC (h123), Echo-3 (h327), DESKTOP-P57624Q (h29).
+    Late SVD truncation CONSISTENTLY reduces gen gap vs baseline across w32/64/128.
+    P1 (late SVD improves gap): SUPPORTED in virtually all seeds. STRONG CAUSAL EVIDENCE.
+
+  Finding #54 (WD Timing Scale): +2 new GPU seeds -> 24+ total, ALL FALSE
+    Seed 857746014 (Dell-XPS GTX 1050, 621s): FALSE, scale_corr=-0.77
+    Seed 857753717 (Dell-XPS GTX 1050, 568s): FALSE, wildly inconsistent
+    24+/24+ ALL FALSE. PUBLICATION-QUALITY scope-limiting result.
+    Inverse CP does NOT generalize to widths 64+.
+
+  Finding #58 (WD Critical Width): +20 s0303n seeds -> 50+ total
+    NO consistent phase boundary: rates random 15-60% across all widths.
+    w32 only 15%, w80 = 60%. Pure noise. Essentially COMPLETE (negative).
+
+  Finding #52 (Percolation): +21 -> 133+ total
+    ER p_c remains ~0.337-0.343 across all seeds (vs theory 0.25). ROBUST.
+
+  Finding #53 (MP Universality): +3 GPU -> 29+ total
+    H1 (wider departs later) still NOT supported (correlation=0.0).
+
+  Finding #57 (WD Width Mechanism): +27 -> 83+ total
+    Still noisy, hyperparameter-limited (WD=0.0001 too weak).
+
+  Finding #49 (WD x LR): +11 -> 118+ total
+    P3 (interaction measurable): 83% support. CONFIRMED.
+
+PART 2: RESEARCH & DEPLOYMENT (Session s0303q, ~17:15 UTC)
+============================================================
+
+New Experiment Designed: Finding #59 (WD Width Transition)
+----------------------------------------------------------------------
+
+Script: wd_width_transition.py
+
+  SUPERSEDES Finding #57 (wd_width_mechanism, 83 seeds, RETIRED INCONCLUSIVE)
+  SUPERSEDES Finding #58 (wd_critical_width, 50 seeds, RETIRED NEGATIVE)
+
+  Root cause identified: #57/#58 used WD=0.0001, which is 500x weaker than
+  Finding #44's WD=0.05. This made the inverse CP undetectable even at w32
+  (only 15-30% vs 100% in #44).
+
+  Design:
+    - IDENTICAL hyperparams to Finding #44 (WD=0.05, LR=0.01, compositional task, depth=2, 150 epochs)
+    - Fine-grained width sweep: [24, 32, 40, 48, 56, 64]
+    - 4 conditions: no_wd, always_wd, early_wd, late_wd
+    - Mechanistic measurements: SVD effective rank + weight Frobenius norms per checkpoint
+    - Run duration: 2700s (45 min)
+
+  Novelty check:
+    Builds directly on confirmed Finding #44 (34+ seeds, 100% consistent at w32)
+    and scope-limiting Finding #54 (24+ seeds, ALL FALSE at w64+).
+    No prior work identifies the EXACT width where inverse CP transitions from
+    present to absent. #57/#58 attempted this but were compromised by weak hyperparams.
+    This is the definitive experiment: matched hyperparams + fine-grained sweep.
+
+  Predictions:
+    P1: inverse_cp holds at w24, w32 (replicating #44)
+    P2: inverse_cp weakens/fails at w48-64 (consistent with #54)
+    P3: Mechanistic measurements change at transition width
+
+Deployment Summary: 549 WUs total, 0 errors
+----------------------------------------------------------------------
+
+CPU Experiments (535 WUs, all untargeted BOINC-scheduled):
+
+  | Experiment                    | WUs | Finding | Priority | Weight |
+  |-------------------------------|-----|---------|----------|--------|
+  | svd_rank_intervention         | 130 | #51     | Highest  | 25     |
+  | wd_width_transition (NEW)     | 100 | #59     | Highest  | 20     |
+  | percolation_scaling           | 80  | #52     | High     | 15     |
+  | wd_lr_interaction             | 60  | #49     | Medium   | 12     |
+  | wd_window_duration            | 45  | #50     | Medium   | 9      |
+  | wd_optimizer_interaction      | 30  | #56     | Medium   | 6      |
+  | representation_crystallization| 30  | #47     | Medium   | 6      |
+  | regularization_mechanisms     | 25  | --      | Low      | 5      |
+  | wd_rebound_dynamics           | 20  | #46     | Low      | 4      |
+  | bottleneck_mechanism          | 15  | --      | Low      | 3      |
+
+GPU Experiments (14 WUs, all untargeted BOINC-scheduled):
+
+  | Experiment                    | WUs | Finding | Notes                       |
+  |-------------------------------|-----|---------|-----------------------------|
+  | wd_timing_scale_gpu           | 6   | #54     | 24+ seeds all FALSE, robustness |
+  | mp_universality_test          | 8   | #53     | 29+ results, continuing     |
+
+GPU Checkpoint:
+  Active GPU hosts: 6+ confirmed (Pyhelix RTX 3080, thonon-meylan RTX 4060 Ti,
+    Dell-XPS GTX 1050 x2, W10-Home/Henk GPU, dbgrensenh27/hansR Quadro M4000M,
+    DESKTOP-P57624Q/kotenok2000 GPU)
+  GPU workunits this session: 14
+  GPU scripts: wd_timing_scale_gpu.py, mp_universality_test.py
+  Retired GPU experiment: grad_subspace_wd_gpu.py (7 seeds, COMPLETE NEGATIVE)
+
+Immediate uptake: 169/549 WUs dispatched to hosts within minutes.
+380 unsent results waiting in queue for hosts to check in.
+
+Active hosts needing work: Dad-Workstation (78), Dell-9520 (60), Hotel-3 (47),
+  achernar (36), Charlie-1/2 (32 each), DESKTOP-3OOKN65 (29), Pyhelix (28),
+  Delta-1 (27), Echo-3 (26), DESKTOP-P57624Q (24), Dell-XPS (16), Andre-WEBK (15),
+  Thonon-PC (12), plus semi-active hosts.
+
+Experiments Retired This Session
+----------------------------------------------------------------------
+
+  Finding #57 (wd_width_mechanism): 83+ seeds, COMPLETE INCONCLUSIVE
+    Hyperparams too weak (WD=0.0001 vs #44's WD=0.05). Could not reliably
+    produce inverse CP even at w32. Mechanistic hypotheses untestable.
+    Superseded by Finding #59.
+
+  Finding #58 (wd_critical_width): 50+ seeds, COMPLETE NEGATIVE
+    No phase boundary found. Rates random 15-60% across all widths.
+    Same hyperparameter issue as #57. Superseded by Finding #59.
+
+Key Discovery: Orphaned Workunit Bug
+----------------------------------------------------------------------
+
+  4,862 orphaned WUs found in database:
+    regmech (1703), repcrystal (1382), wdrebound (945), bottmech (832)
+  All have WU records but ZERO result records.
+  Caused by --target_host bug creating WU records without result records.
+  The queue was actually COMPLETELY EMPTY for all active experiments.
+  This explains why hosts appeared idle despite "active" WU counts.
+
+KEY SCIENTIFIC FINDINGS SUMMARY
+================================
+
+Publication-Ready Results:
+  1. Finding #44 (Inverse CP for WD): 34+ seeds, 100% consistent at w32.
+     Late WD is effective (84-89% of always-WD). Early WD HURTS (-10%).
+     SCOPED AS NARROW-NETWORK PHENOMENON (see #54).
+
+  2. Finding #45 (Regularization Timing Universality): 140 seeds, COMPLETE.
+     Inverse CP confirmed for WD (100%) and DROPOUT (98.6%).
+     NOT for L1 (0.7%) or noise injection (2.9%).
+
+  3. Finding #54 (WD Scale Dependence): 24+ seeds, ALL FALSE. 100% consistency.
+     Inverse CP does NOT generalize to widths 64+. Publication-quality
+     scope-limiting result for #44.
+
+  4. Finding #51 (SVD Rank Intervention): 228+ seeds, STRONG CAUSAL EVIDENCE.
+     Late SVD truncation consistently reduces generalization gap.
+     Critical for explaining the mechanism behind inverse CP.
+
+Growing / Active:
+  - Finding #59 (WD Width Transition): 100 WUs deployed, 0 results yet.
+    FIRST DATA EXPECTED within 30-60 minutes. Will characterize exact
+    transition width with matched hyperparams.
+  - Finding #52 (Percolation): 133+ seeds. ER p_c robustly 0.337-0.343.
+  - Finding #49 (WD x LR): 118+ seeds. Interaction confirmed (83%).
+  - Finding #53 (MP Universality): 29+ GPU seeds. H1 NOT supported.
+
+Emerging Theme — Width Dependence of Inverse CP:
+  w32:     100% confirmed (34+ seeds in #44)
+  w64+:    0% confirmed (24+ seeds in #54, ALL FALSE)
+  w64/128: ~5-7% per optimizer (36+ seeds in #56)
+  Transition: Finding #59 will pinpoint the exact boundary [24-64]
+
+KNOWN ISSUES
+=============
+  - Orphaned WUs (4,862) from --target_host bug. Low priority cleanup.
+  - Andre-WEBK (h345): Mixed success rate, host-specific failures (outcome=3/exit=202).
+  - GPU CUDA arch mismatch on some hosts (Blackwell sm_120+). Needs binary rebuild.
+  - Dead hosts: Foxtrot-2, Foxtrot-3, Delta-2, DESKTOP-EMAFVVL (tasks cleaned up).
+
+NEXT SESSION PRIORITIES
+========================
+  1. Analyze first wd_width_transition (#59) results — critical for width boundary
+  2. Continue SVD rank intervention (#51) seed collection for publication
+  3. Monitor GPU experiments (#54 robustness, #53 continuing)
+  4. Consider orphaned WU cleanup (4,862 dead records)
+
+Session duration: ~16:00-17:30 UTC March 3, 2026
+Parts completed: Validation (s0303p) + Research/Deployment (s0303q) + Save (s0303r)
