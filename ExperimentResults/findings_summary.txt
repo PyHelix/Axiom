@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303b ~04:55 UTC)
+Last updated: March 3, 2026 (session s0303c ~06:30 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -41,64 +41,62 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 46. WD REBOUND DYNAMICS — PRELIMINARY NEGATIVE (seed=42 mostly)
     Rank rebound NOT strongly supported as mechanism (correlation r=0.09).
 
-47. REPRESENTATION CRYSTALLIZATION — GROWING (38 results, 6 new diverse-seed)
-    First diverse-seed results from host 320 (s0303b). Previously all seed=42.
+47. REPRESENTATION CRYSTALLIZATION — GROWING (53+ results, some diverse-seed)
+    Diverse-seed results from hosts 320, 29 (s0303b/c).
 
 48. *** WD ONSET TIMING SWEEP *** — NULL RESULT (86 seeds) — COMPLETE
     Exact onset epoch does NOT matter. Binary late/early distinction is robust.
 
-49. *** WD x LR SCHEDULE INTERACTION *** — INFORMATIVE NEGATIVE (20 seeds)
+49. *** WD x LR SCHEDULE INTERACTION *** — GROWING (35+ results)
     P3 (interaction measurable): 83% support — CONFIRMED.
     P1 (warmup shifts onset later): 25% — NOT confirmed.
     P2 (cosine shifts onset earlier): 0% — STRONGLY REJECTED.
     MEANING: LR schedule changes HOW MUCH WD timing matters, but NOT
-    which timing is optimal. Practitioners can choose WD onset independently.
-    Needs 10+ more seeds for full confirmation. Script: wd_lr_interaction.py.
+    which timing is optimal. Needs diverse seeds (seed fix deployed s0303c).
 
-50. WD WINDOW DURATION — SEED BUG FIXED (15 results seed=42, redeploying)
-    Previous results all seed=42 due to seed extraction bug (bare except
-    caught JSON parse error from bad file, aborting loop). Fixed s0303b:
-    inner try/except with continue. New deployments will have diverse seeds.
-    Preliminary single-seed data: WD has zero effect at w32/w128.
-    Script: wd_window_duration.py.
+50. WD WINDOW DURATION — SEED BUG FIXED AGAIN (s0303c)
+    Previous "inner try/except" fix (s0303b) insufficient — root cause
+    is working directory lacks WU JSON. PID+time fallback now deployed.
+    ~35 results seed=42, awaiting diverse-seed results.
 
-51. SVD RANK INTERVENTION — NEWLY DEPLOYED (s0302k)
+51. SVD RANK INTERVENTION — 16 results (ALL seed=42, SEED BUG FIXED s0303c)
     *** CAUSAL MECHANISM TEST — critical for publication ***
     Tests if direct rank compression (SVD truncation) replicates inverse CP.
-    If late SVD improves generalization like late WD, rank compression IS causal.
-    Includes rescaled vs raw truncation to separate rank from magnitude.
-    Script: svd_rank_intervention.py. Awaiting first results.
+    Data collected but not yet diverse. PID+time fallback now deployed.
 
-52. PERCOLATION PHASE TRANSITION SCALING — NEWLY DEPLOYED (s0302k)
+52. PERCOLATION PHASE TRANSITION SCALING — 13 results (ALL seed=42, BUG FIXED)
     *** CROSS-DISCIPLINARY: statistical physics ***
-    Maps finite-size scaling exponents for bond percolation on ER vs BA graphs.
-    BA scaling exponent debated in literature. Script: percolation_scaling.py.
+    ER N=100 p_c measured at 0.337 (consistent with theory).
+    Needs diverse seeds for meaningful scaling analysis.
 
-53. *** MP UNIVERSALITY TEST *** — NEWLY DEPLOYED (s0303b)
+53. *** MP UNIVERSALITY TEST *** — PRELIMINARY (5 GPU results + 4 errors)
     *** CROSS-DISCIPLINARY: random matrix theory + ML ***
-    Tests Marchenko-Pastur law in NN weight matrices during training.
-    GPU-accelerated eigendecomposition (cupy.linalg.eigvalsh).
-    Hypotheses: wider departs later, init scale affects timing, layer position.
-    Script: mp_universality_test.py. 216 GPU workunits deployed.
+    FINDING: ALL weight matrices depart from MP universality at epoch 0.
+    Even the first gradient update creates detectable non-random structure.
+    H1 (wider departs later): NOT supported (correlation=0.0).
+    Observed on RTX 3050 (4GB) and RTX 3080 (16GB).
+    Host 159 CUDA arch mismatch failures (not script bug).
+    416 GPU WUs deployed total (216 s0303b + 200 s0303c).
+    May be trivially expected from RMT (Pennington & Worah 2017).
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43, 45, 48.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44.
-GROWING: 27, 28, 38, 47 (38 results), 49 (20 seeds, need 30+).
-PRELIMINARY: 46, 50 (seed fixed, redeploying).
-DEPLOYED/AWAITING: 51 (SVD causal), 52 (percolation), 53 (MP universality GPU).
+GROWING: 27, 28, 38, 47 (53+ results), 49 (35+ results, need diverse seeds).
+PRELIMINARY: 46, 50 (seed re-fixed), 51 (seed fixed), 52 (seed fixed), 53 (5 GPU).
+DEPLOYED/AWAITING: All above with seed fixes will get diverse results.
 
 EXPERIMENT SCRIPTS:
-  Active CPU (s0303b): svd_rank_intervention.py (weight 35),
-          percolation_scaling.py (weight 20),
-          wd_lr_interaction.py (weight 20, growing),
-          wd_window_duration.py (weight 10, SEED FIXED),
-          representation_crystallization.py (weight 5),
-          regularization_mechanisms.py (weight 5),
-          wd_rebound_dynamics.py (weight 3),
-          bottleneck_mechanism.py (weight 2)
-  Active GPU (s0303b): mp_universality_test.py (NEW, 216 WUs deployed)
+  Active CPU (s0303c): svd_rank_intervention.py (weight 35, SEED FIXED),
+          percolation_scaling.py (weight 20, SEED FIXED),
+          wd_lr_interaction.py (weight 20, already had fallback),
+          wd_window_duration.py (weight 10, SEED RE-FIXED),
+          representation_crystallization.py (weight 5, already had fallback),
+          regularization_mechanisms.py (weight 5, SEED FIXED),
+          wd_rebound_dynamics.py (weight 3, SEED FIXED),
+          bottleneck_mechanism.py (weight 2, SEED FIXED)
+  Active GPU (s0303c): mp_universality_test.py (416 total WUs deployed)
 
 RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   SAM vs SGD, Catapult Phase, Rank Dynamics, Loss of Plasticity,
@@ -111,13 +109,17 @@ RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   wd_onset_sweep (86 seeds DONE).
 
 DELIVERY PIPELINE STATUS:
+  s0303c (~06:30 UTC Mar 3): Credited 199 results (2,114 credit, 7 users).
+    Deployed 108 CPU WUs to 9 hosts + 200 GPU WUs to 82 hosts.
+    CRITICAL FIX: PID+time seed fallback added to 7 scripts.
   s0303b (~04:55 UTC Mar 3): Credited 97 results (1,031 credit, 5 users).
-    Deployed 125 CPU WUs to 9 hosts + 216 GPU WUs to 81 hosts.
-    Fixed wdwindur seed bug. New GPU experiment: mp_universality_test.
+    Deployed 125 CPU WUs + 216 GPU WUs. Fixed wdwindur inner try/except.
   s0302k (~04:44 UTC Mar 3): Credited 131 results (1,800 credit, 6 users).
-    Deployed 125 CPU WUs to 8 hosts. New: svd_rank_intervention, percolation_scaling.
+    Deployed 125 CPU WUs. New: svd_rank_intervention, percolation_scaling.
 
 KNOWN ISSUES:
   - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.
   - Hosts 63/118: Low RAM (<6GB) — skipped
-  - WD WINDOW DURATION SEED BUG: FIXED (s0303b). Inner try/except added.
+  - SEED BUG: FIXED s0303c. Root cause: experiment working directory lacks
+    WU JSON files. All scripts now have PID+time fallback.
+  - Host 159 GPU: CUDA arch mismatch for cupy binary. Known limitation.
