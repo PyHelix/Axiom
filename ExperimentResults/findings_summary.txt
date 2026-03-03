@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303d ~06:51 UTC)
+Last updated: March 3, 2026 (session s0303e ~07:12 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -79,21 +79,32 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     416 GPU WUs deployed total (s0303b/c). Mostly complete.
     May be trivially expected from RMT (Pennington & Worah 2017).
 
-54. *** WD TIMING SCALE DEPENDENCE *** — DEPLOYED (s0303d, 196 GPU WUs)
+54. *** WD TIMING SCALE DEPENDENCE *** — PRELIMINARY (2 seeds, 208 new GPU WUs s0303e)
     *** EXTENDS KEY FINDING #44 TO LARGER NETWORKS ***
     Tests inverse CP for WD at widths 64, 256, 512, 1024, 2048 (GPU-accelerated).
-    Our confirmed finding used widths 32-128 on CPU. Key question: is the inverse
-    CP scale-invariant? If yes → strengthens publication. If no → reveals mechanism
-    (lazy/NTK transition at wider widths).
-    Script: wd_timing_scale_gpu.py. Novelty confirmed via literature search.
+    PRELIMINARY DATA (2 seeds, RTX 4070 Ti only): Inverse CP does NOT consistently hold
+    at all widths. Late WD effectiveness highly variable across widths and seeds.
+    Most GPU hosts fail with CUDA arch mismatch — only ~22 hosts can run CuPy.
+    Script: wd_timing_scale_gpu.py. Needs many more seeds from compatible hosts.
+
+55. *** GRADIENT SUBSPACE DIMENSION AND WD TIMING *** — DEPLOYED (s0303e, 208 GPU WUs)
+    *** CAUSAL MECHANISM — LINKS GRADIENT COLLAPSE TO WD TIMING ***
+    Tests whether gradient subspace collapse (Gur-Ari 2018) predicts optimal WD onset.
+    HYPOTHESIS: WD effective after gradients collapse into tiny subspace (learning in
+    low-rank manifold, WD on complement is "free"). NO prior work makes this connection.
+    Novelty confirmed: Gur-Ari measured subspace dim; we confirmed WD timing matters;
+    nobody linked them. Literature gap identified via searches of Gur-Ari, Xie & Sato,
+    Galanti, Cohen edge-of-stability, AdaDecay.
+    Script: grad_subspace_wd_gpu.py. Width-512 MLP, 4 WD conditions, effective rank
+    measured every 10 epochs via gradient covariance participation ratio.
 
 CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43, 45, 48.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44.
 GROWING: 27, 28, 38, 47 (53+ results), 49 (35+ results, need diverse seeds).
-PRELIMINARY: 46, 50 (seed re-fixed), 51 (seed fixed), 52 (seed fixed), 53 (15+ GPU).
-DEPLOYED/AWAITING: 54 (196 GPU WUs). All above with seed fixes will get diverse results.
+PRELIMINARY: 46, 50 (seed re-fixed), 51 (seed fixed), 52 (seed fixed), 53 (15+ GPU), 54 (2 seeds).
+DEPLOYED/AWAITING: 55 (208 GPU WUs). All above with seed fixes will get diverse results.
 
 EXPERIMENT SCRIPTS:
   Active CPU (s0303c): svd_rank_intervention.py (weight 35, SEED FIXED),
@@ -104,7 +115,8 @@ EXPERIMENT SCRIPTS:
           regularization_mechanisms.py (weight 5, SEED FIXED),
           wd_rebound_dynamics.py (weight 3, SEED FIXED),
           bottleneck_mechanism.py (weight 2, SEED FIXED)
-  Active GPU (s0303d): wd_timing_scale_gpu.py (196 WUs, NEW),
+  Active GPU (s0303e): wd_timing_scale_gpu.py (208 WUs new, 2 seeds so far),
+          grad_subspace_wd_gpu.py (208 WUs, NEW — gradient subspace + WD timing),
           mp_universality_test.py (416 WUs total, mostly complete)
 
 RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
@@ -118,17 +130,20 @@ RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   wd_onset_sweep (86 seeds DONE).
 
 DELIVERY PIPELINE STATUS:
+  s0303e (~07:12 UTC Mar 3): Deployed 186 CPU WUs to 9 hosts + 208 GPU WUs to 78 hosts.
+    NEW: grad_subspace_wd_gpu.py — gradient subspace collapse + WD timing mechanism.
+    wd_timing_scale preliminary: 2 successful seeds (RTX 4070 Ti), most hosts CUDA mismatch.
   s0303d (~06:51 UTC Mar 3): Credited 116 results (~995 credit, 5 users).
     Deployed 90 CPU WUs to 7 hosts + 196 GPU WUs to 75 hosts.
-    NEW: wd_timing_scale_gpu.py — tests inverse CP at larger network scales.
   s0303c (~06:30 UTC Mar 3): Credited 199 results (2,114 credit, 7 users).
     Deployed 108 CPU WUs + 200 GPU WUs. PID+time seed fallback added.
-  s0303b (~04:55 UTC Mar 3): Credited 97 results (1,031 credit, 5 users).
-    Deployed 125 CPU WUs + 216 GPU WUs.
 
 KNOWN ISSUES:
   - RANK REG CPU FAILURES: exit -186 on Windows. GPU/Linux works fine.
   - Hosts 63/118: Low RAM (<6GB) — skipped
   - SEED BUG: FIXED s0303c. Root cause: experiment working directory lacks
     WU JSON files. All scripts now have PID+time fallback.
-  - Host 159 GPU: CUDA arch mismatch for cupy binary. Known limitation.
+  - GPU CUDA ARCH MISMATCH: Most GPU hosts fail with CUDA_ERROR_NO_BINARY_FOR_GPU.
+    Only ~22 hosts have successfully completed GPU experiments. Bundled CuPy NVRTC
+    cannot JIT for newer architectures (Blackwell sm_120+). Needs binary rebuild.
+  - Large backlog of 8000+ unsent WUs from old retired experiments. Low priority.
