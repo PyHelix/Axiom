@@ -91,3 +91,9 @@ VALIDATION SESSION UPDATE (March 3, 2026, Part 1B)
 - No new scientific reversal versus existing WD/ICP conclusions was detected in this batch; this was primarily a validation/credit maintenance pass.
 - Broken active prefixes with near-total recent failure were aborted to prevent wasted volunteer compute: `symmetry_breaking_dynamics` (3), `loss_landscape_curvature` (5), `mode_connectivity_v2` (4), `random_label_memorization` (1).
 - Stuck-task cleanup executed with no additional dead-host or >48h aborts triggered (0 / 0).
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1C)
+- Credited 884 completed `exp_*` results for 9,990 credit (session cap respected).
+- Session credit additions: Steve Dodd +3,600; WTBroughton +3,496; ChelseaOilman +1,706; zombie67 [MM] +646; Anandbhat +454; marmot +88.
+- Post-pass remaining uncredited completed results: success 4,918; failed 80,555.
+- Payload QA sample from this credited batch: 120/120 upload JSON files found and parsed; all had `experiment_result` with empty/null `error`.
+- Stuck-task cleanup executed: 0 aborted via dead-host >12h rule and 0 via >48h hard ceiling.
