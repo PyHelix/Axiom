@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303ao ~19:35 UTC)
+Last updated: March 3, 2026 (session s0303aq ~20:55 UTC)
 ==================================
 
 This file is your memory across sessions. Update it after each run.
@@ -45,7 +45,7 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
 47. REPRESENTATION CRYSTALLIZATION — GROWING (93+ results, diverse-seed)
     Diverse-seed results from hosts 320, 29, 123, 159 (s0303b/c/f/h/i/k).
     +14 repcrystal s0303z. +25 s0303ab. +1 s0303ad. +16 s0303af (h137, h85, h159). +28 s0303ah. +13 s0303aj. +4 s0303al. Running total ~180+.
-    +9 repcrystal s0303an. Running total ~189+.
+    +9 repcrystal s0303an. +2 s0303ap. Running total ~191+.
     P3 (crystallization before optimal WD onset): 100% across all widths.
     P1 (late WD has higher rank at onset): only 33%. P2 (early collapses rank): 33%.
     Crystallization TIMING confirmed; rank-at-onset NOT the mechanism.
@@ -58,12 +58,12 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     P1 (warmup shifts onset later): 25% — NOT confirmed.
     P2 (cosine shifts onset earlier): 0% — STRONGLY REJECTED.
     MEANING: LR schedule changes HOW MUCH WD timing matters, but NOT
-    which timing is optimal. +48 wdlr s0303z. +64 s0303ab. +26 s0303af (h85, h222, h137, h1). +12 s0303ah. +11 s0303aj. +21 s0303al. +59 s0303an. Running total ~424+.
+    which timing is optimal. +48 wdlr s0303z. +64 s0303ab. +26 s0303af (h85, h222, h137, h1). +12 s0303ah. +11 s0303aj. +21 s0303al. +59 s0303an. +14 s0303ap. Running total ~438+.
 
 50. WD WINDOW DURATION — GROWING (143+ results, diverse seeds)
     ~35 old results seed=42, diverse seeds from hosts 123, 320, 159 (s0303c/e/f/h/i/k).
     +37 wdwindow s0303z. +49 s0303ab. +23 s0303af (h159, h137). Running total ~215+.
-      P1 (short late windows effective): NOT supported. P4 (diminishing returns): SUPPORTED. +19 s0303ah. +9 s0303aj. +8 s0303al. +25 s0303an. Running total ~276+.
+      P1 (short late windows effective): NOT supported. P4 (diminishing returns): SUPPORTED. +19 s0303ah. +9 s0303aj. +8 s0303al. +25 s0303an. +12 s0303ap. Running total ~288+.
 
 51. SVD RANK INTERVENTION — GROWING (398+ results, DIVERSE SEEDS)
     *** CAUSAL MECHANISM TEST — critical for publication ***
@@ -74,13 +74,14 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     P2 (early SVD hurts): NOT consistently supported.
     CONCLUSION: Late SVD truncation reliably reduces gen gap — strong causal evidence.
     +48 s0303al. Running total ~792+.
-    +31 s0303an. Running total ~823+.
+    +31 s0303an. +26 s0303ap. Running total ~849+.
     Andre-WEBK (h345, Armin Gips): most results outcome=3/exit=202 (host-specific), not script bug.
 
 52. PERCOLATION PHASE TRANSITION SCALING — GROWING (243+ results, DIVERSE SEEDS)
     *** CROSS-DISCIPLINARY: statistical physics ***
     ER N=100 p_c CONSISTENTLY measured at ~0.337-0.343 across all seeds (vs theory 0.25).
     +44 percolation s0303z (h159, h347). +30 s0303ab. +26 s0303af (h85, h137, h57). +19 s0303ah. +38 s0303aj. +82 s0303al. +79 s0303an. Running total ~517+.
+    +59 percolation s0303ap. Running total ~576+.
     All consistent — ER p_c reliably 0.337-0.343 (systematic offset from 0.25 theory). ROBUST.
     NOTE: Andre-WEBK (h345): mostly outcome=3/exit=202 failures, not script bug.
 
@@ -90,6 +91,7 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     Even the first gradient update creates detectable non-random structure.
     H1 (wider departs later): NOT supported (correlation=0.0).
     +4 new mpuniv_gpu results this session s0303z (h9, h287, h23). +10 s0303ad (h159, h29, h23). +1 s0303af (h29). +5 s0303ah. +5 s0303aj. +3 s0303al. +10 s0303an. Total ~74+.
+    +9 mpuniv_gpu s0303ap. Total ~83+.
     All consistent: departure at epoch 0, H1 NOT supported.
     May be trivially expected from RMT (Pennington & Worah 2017).
 
@@ -97,7 +99,7 @@ MAJOR SCIENTIFIC FINDINGS (ranked by significance)
     *** NOW REINTERPRETED: HYPERPARAM SENSITIVITY, NOT WIDTH LIMITATION ***
     Tests inverse CP for WD at widths 64, 256, 512, 1024, 2048 (GPU-accelerated).
     Uses WD=0.001 (NOT the WD=0.05 from #44).
-    +3 NEW SEEDS s0303z (h159, h9). +6 s0303ad (h159, h29). +1 s0303af (h29). +5 s0303ah. +3 s0303aj. +6 s0303al. +6 s0303an.
+    +3 NEW SEEDS s0303z (h159, h9). +6 s0303ad (h159, h29). +1 s0303af (h29). +5 s0303ah. +3 s0303aj. +6 s0303al. +6 s0303an. +5 s0303ap.
     inverse_cp_holds_all = FALSE in 36+/38+ seeds (2 partial TRUE from Quadro M4000M).
     *** REINTERPRETATION (per Finding #59): This result shows HYPERPARAM SENSITIVITY,
       not a genuine width boundary. With WD=0.05 (matching #44), Finding #59 shows
@@ -127,13 +129,13 @@ CROSS-VALIDATION STATUS
 ============================================================
 DEFINITIVELY CONFIRMED & RETIRED: 1-26, 30, 32, 34, 37, 40, 41, 43, 45, 48, 59.
 STRONGLY CONFIRMED: 29, 31, 33, 35, 36, 44, 60.
-GROWING: 27, 28, 38, 47 (189+), 49 (424+), 50 (276+), 51 (823+, diverse), 52 (517+, diverse), 56 (210+ seeds).
+GROWING: 27, 28, 38, 47 (191+), 49 (438+), 50 (288+), 51 (849+, diverse), 52 (576+, diverse), 56 (216+ seeds).
 PRELIMINARY: 46 (diverse seeds), 53 (74+ GPU).
-*** DEFINITIVELY CONFIRMED: 59 (419+ seeds, ALL WIDTHS 100% — PARADIGM SHIFT COMPLETE!) ***
-*** STRONGLY CONFIRMED: 60 (396+ seeds, TASK-GENERAL — compositional 100%, spiral 100%, teacher-student ~95%, hidden manifold ~86%) ***
-*** DEFINITIVELY CONFIRMED: 61 (567+ seeds, DEPTH-GENERAL — d2=100%, d3=98.3%, d4=82.9%, d5=75.1%, d6=77.3%) ***
+*** DEFINITIVELY CONFIRMED: 59 (439+ seeds, ALL WIDTHS 100% — PARADIGM SHIFT COMPLETE!) ***
+*** STRONGLY CONFIRMED: 60 (426+ seeds, TASK-GENERAL — compositional 100%, spiral 100%, teacher-student ~95%, hidden manifold ~86%) ***
+*** DEFINITIVELY CONFIRMED: 61 (616+ seeds, DEPTH-GENERAL — d2=100%, d3=98.3%, d4=82.9%, d5=75.1%, d6=77.3%) ***
 STRONGLY GROWING — ALL NEGATIVE: 54 (64+ seeds, ALL FALSE — but now understood as hyperparam artifact per #59).
-*** STRONGLY CONFIRMED: 62 (337+ valid seeds, 100% at ALL widths w96-w512 — BREAKTHROUGH!) ***
+*** STRONGLY CONFIRMED: 62 (386+ valid seeds, 100% at ALL widths w96-w512 — BREAKTHROUGH!) ***
 COMPLETE NEGATIVE: 55 (7 seeds, ALL hypothesis NOT supported — grad subspace NOT the mechanism).
 COMPLETE INCONCLUSIVE: 57 (83+ seeds, hyperparams too weak — WD=0.0001 vs #44's WD=0.05. RETIRED s0303q).
 COMPLETE NEGATIVE/INCONCLUSIVE: 58 (50+ seeds, NO phase boundary — same hyperparam issue. RETIRED s0303q).
@@ -146,41 +148,41 @@ NOTE: #57/#58 used WD=0.0001 (500x weaker than #44's WD=0.05). This made the inv
 
 EMERGING CROSS-FINDING THEME: Inverse CP — CONFIRMED GENERAL PHENOMENON.
   *** ALL THREE GENERALIZATIONS NOW STRONGLY CONFIRMED: ***
-  1. WIDTH GENERALITY (#59+#62): 419+ seeds w24-w64 + 337+ seeds w96-w512 = 100% at ALL widths w24-w512. DEFINITIVE.
-  2. TASK GENERALITY (#60): 396+ seeds, 4 tasks (100%/100%/~95%/~86%). STRONG.
-  3. DEPTH GENERALITY (#61): 567+ seeds, d2=100%, d3=98.3%, d4=82.9%, d5=75.1%, d6=77.3%. DEFINITIVE.
+  1. WIDTH GENERALITY (#59+#62): 439+ seeds w24-w64 + 386+ seeds w96-w512 = 100% at ALL widths w24-w512. DEFINITIVE.
+  2. TASK GENERALITY (#60): 426+ seeds, 4 tasks (100%/100%/~95%/~86%). STRONG.
+  3. DEPTH GENERALITY (#61): 616+ seeds, d2=100%, d3=98.3%, d4=82.9%, d5=75.1%, d6=77.3%. DEFINITIVE.
 
   Finding #44 (w32): 100% confirmed across 34+ seeds. BASELINE.
   Finding #54 (w64-2048, WD=0.001): Hyperparameter artifact (WD 50x too weak).
-  Finding #59 (419+ seeds): DEFINITIVE — inverse CP at ALL widths w24-w64.
-  Finding #60 (396+ seeds): STRONG — inverse CP across compositional, spiral,
+  Finding #59 (439+ seeds): DEFINITIVE — inverse CP at ALL widths w24-w64.
+  Finding #60 (426+ seeds): STRONG — inverse CP across compositional, spiral,
     teacher-student, hidden manifold tasks. TASK-GENERAL.
-  Finding #61 (563+ seeds): DEFINITIVE — inverse CP at depths 2-6. d2-d3 near-perfect,
+  Finding #61 (616+ seeds): DEFINITIVE — inverse CP at depths 2-6. d2-d3 near-perfect,
     d4-d6 majority positive (75-83%). PUBLICATION-READY.
 
   REVISED INTERPRETATION: Inverse CP for WD is a GENERAL PHENOMENON!
-    - Width-general: 100% at w24-w512 with WD=0.05 (419+ seeds w24-w64, 337+ seeds w96-w512)
-    - Task-general: 100%/100%/~95%/~86% across 4 distinct tasks at w32 (396+ seeds)
-    - Depth-general: 100% at d2-d3, 75-83% at d4-d6 (567+ seeds)
+    - Width-general: 100% at w24-w512 with WD=0.05 (439+ seeds w24-w64, 386+ seeds w96-w512)
+    - Task-general: 100%/100%/~95%/~86% across 4 distinct tasks at w32 (426+ seeds)
+    - Depth-general: 100% at d2-d3, 75-83% at d4-d6 (616+ seeds)
     - The CRITICAL VARIABLE is WD magnitude (not width, task, or depth)
     For publication: VERY STRONG paper — inverse CP is general across width, task, AND depth.
     REMAINING QUESTION: Does it hold at w256+ with scaled WD? → ANSWERED: YES! Finding #62.
-    Finding #62 (337+ seeds): 100% at w96, w128, w256, w512. FULL WIDTH GENERALITY.
+    Finding #62 (386+ seeds): 100% at w96, w128, w256, w512. FULL WIDTH GENERALITY.
 
-62. *** WD TIMING EXTENDED WIDTH *** — STRONGLY CONFIRMED (337+ valid seeds, 100% ALL WIDTHS!)
+62. *** WD TIMING EXTENDED WIDTH *** — STRONGLY CONFIRMED (386+ valid seeds, 100% ALL WIDTHS!)
     *** BREAKTHROUGH: INVERSE CP HOLDS AT w96, w128, w256, AND w512! ***
     *** ADDRESSES KEY REMAINING QUESTION FOR PUBLICATION — NOW ANSWERED! ***
     Tests inverse CP at widths [96, 128, 256, 512] with WD=0.05.
     Setup IDENTICAL to #44 and #59 (compositional task, depth=2, 150 epochs).
-    337+ valid seeds from h87, h347, h29, h1, h57, h6, h85, h159, h320, h123.
+    386+ valid seeds from h87, h347, h29, h1, h57, h6, h85, h159, h320, h123, h340, h349, h15.
     Per-width inverse CP rates: ALL 100% across all seeds.
       w96:  100%, w128: 100%, w256: 100%, w512: 100%.
     *** ALL widths 100%! Inverse CP generalizes to networks up to width 512! ***
-    Combined with #59 (w24-w64 = 100%, 419+ seeds), inverse CP now confirmed
+    Combined with #59 (w24-w64 = 100%, 439+ seeds), inverse CP now confirmed
     at ALL widths from w24 to w512 — COMPLETE WIDTH GENERALITY.
     36 SSL error results from vega (h348) — these produced no valid data.
     Script: wd_timing_extended_width.py. Runtime: ~245-1990s.
-    +23 valid seeds s0303ab (h87, h347, h29). +21 s0303ad (h87, h347, h29). +48 s0303af (h1, h347, h87, h29, h57, h6, h85). +38 s0303ah. +70 s0303aj. +75 s0303al. +62 s0303an. Running total ~337+ valid.
+    +23 valid seeds s0303ab (h87, h347, h29). +21 s0303ad (h87, h347, h29). +48 s0303af (h1, h347, h87, h29, h57, h6, h85). +38 s0303ah. +70 s0303aj. +75 s0303al. +62 s0303an. +49 s0303ap. Running total ~386+ valid.
 
 57. *** WD WIDTH MECHANISM *** — GROWING (83+ seeds, UNCLEAR/NOISY)
     *** DIRECTLY ADDRESSES KEY OPEN QUESTION: Why does inverse CP weaken at larger widths? ***
@@ -209,7 +211,7 @@ EMERGING CROSS-FINDING THEME: Inverse CP — CONFIRMED GENERAL PHENOMENON.
 56. *** WD TIMING x OPTIMIZER INTERACTION *** — GROWING (70+ seeds, CONSISTENT WITH #54)
     *** EXTENDS KEY FINDING #44 TO DIFFERENT OPTIMIZERS ***
     Tests whether inverse CP for WD holds across SGD, SGD+momentum, Adam+L2, AdamW.
-    +12 wdoptim s0303z. +26 s0303ab. +14 s0303af (h159, h222, h137). +21 s0303ah. +31 s0303aj. +38 s0303al. +10 s0303an. Now 210+ total.
+    +12 wdoptim s0303z. +26 s0303ab. +14 s0303af (h159, h222, h137). +21 s0303ah. +31 s0303aj. +38 s0303al. +10 s0303an. +6 s0303ap. Now 216+ total.
     CUMULATIVE PATTERN (~58 seeds):
       P1 (SGD inverse CP): ~5-7% — DEFINITIVELY NOT CONFIRMED
       P2 (SGD+momentum inverse CP): ~5-7% — NOT confirmed
@@ -240,13 +242,13 @@ EMERGING CROSS-FINDING THEME: Inverse CP — CONFIRMED GENERAL PHENOMENON.
       the effect is not reproducible in this setup. Consider COMPLETE (negative/inconclusive).
       For publication: cite as evidence that the effect is highly sensitive to hyperparams.
 
-61. *** WD TIMING DEPTH DEPENDENCE *** — DEFINITIVELY CONFIRMED (311+ seeds, DEPTH-GENERAL!)
+61. *** WD TIMING DEPTH DEPENDENCE *** — DEFINITIVELY CONFIRMED (616+ seeds, DEPTH-GENERAL!)
     *** PUBLICATION-QUALITY: 311+ seeds across multiple hosts! ***
     KEY QUESTION: Does inverse CP hold at depths 3, 4, 5, 6 (beyond depth=2)?
     Setup: IDENTICAL to #44 (WD=0.05, LR=0.01, w32, 150 epochs, SGD, compositional task).
     5 depths tested: [2, 3, 4, 5, 6]. Depth=2 is #44 baseline replication.
-    567+ seeds from h287, h87, h159, h347, h85, h29, h1, h57, h123, h320.
-    +115 new seeds s0303z (h85, h87, h159, h347, h29). +70 s0303ad (h159, h347, h87). +60 s0303af (h347, h87, h85, h1, h29, h57). +179 s0303ah. +28 s0303aj. +45 s0303al. +4 s0303an. Running total ~567+.
+    616+ seeds from h287, h87, h159, h347, h85, h29, h1, h57, h123, h320, h340, h15, h349.
+    +115 new seeds s0303z (h85, h87, h159, h347, h29). +70 s0303ad (h159, h347, h87). +60 s0303af (h347, h87, h85, h1, h29, h57). +179 s0303ah. +28 s0303aj. +45 s0303al. +4 s0303an. +49 s0303ap. Running total ~616+.
     RESULTS (181 seeds — combined s0303x + s0303z):
       P1 (depth=2 replicates #44): 181/181 = 100%. DEFINITIVELY CONFIRMED.
       P2 (depth generality 3-4): VERY STRONG (d3=98.3%, d4=82.9%).
@@ -262,12 +264,12 @@ EMERGING CROSS-FINDING THEME: Inverse CP — CONFIRMED GENERAL PHENOMENON.
     181 seeds makes this PUBLICATION-DEFINITIVE.
     Script: wd_timing_depth.py. Run duration: ~27-193s.
 
-60. *** WD TIMING TASK GENERALITY *** — STRONGLY CONFIRMED (145+ seeds!)
+60. *** WD TIMING TASK GENERALITY *** — STRONGLY CONFIRMED (426+ seeds!)
     *** PUBLICATION-QUALITY: INVERSE CP IS TASK-GENERAL! ***
     KEY RESULT: Inverse CP holds across ALL 4 structurally distinct tasks!
     Setup: IDENTICAL to #44 (WD=0.05, LR=0.01, w32, depth=2, 150 epochs, SGD).
-    396+ seeds: h287 Amapola (86), h87, h159, h347, h29, h85, h320, h123, h349.
-    +11 new seeds s0303z (h87, h347, h29). +27 s0303ad (h159). +7 s0303af (h29, h85, h320). +108 s0303ah. +33 s0303aj. +41 s0303al. +69 s0303an. Running total ~396+.
+    426+ seeds: h287 Amapola (86), h87, h159, h347, h29, h85, h320, h123, h349, h340, h15, h222.
+    +11 new seeds s0303z (h87, h347, h29). +27 s0303ad (h159). +7 s0303af (h29, h85, h320). +108 s0303ah. +33 s0303aj. +41 s0303al. +69 s0303an. +30 s0303ap. Running total ~426+.
     4 tasks tested (~111 seeds):
       1. COMPOSITIONAL: ~100% inverse CP.
       2. SPIRAL: ~100% inverse CP.
@@ -277,14 +279,14 @@ EMERGING CROSS-FINDING THEME: Inverse CP — CONFIRMED GENERAL PHENOMENON.
     *** This dramatically strengthens the publication case for Finding #44. ***
     Script: wd_timing_task_sweep.py. Run duration: ~7-90s.
 
-59. *** WD WIDTH TRANSITION *** — DEFINITIVELY CONFIRMED (310+ seeds, ALL WIDTHS 100%!)
-    *** PUBLICATION-QUALITY: 310+ SEEDS, 100% CONSISTENCY AT ALL 6 WIDTHS ***
+59. *** WD WIDTH TRANSITION *** — DEFINITIVELY CONFIRMED (439+ seeds, ALL WIDTHS 100%!)
+    *** PUBLICATION-QUALITY: 439+ SEEDS, 100% CONSISTENCY AT ALL 6 WIDTHS ***
     *** SUPERSEDES #57 AND #58 — USES CORRECT HYPERPARAMS ***
     BREAKTHROUGH FINDING: With WD=0.05 (matching #44), inverse CP holds at ALL widths!
-    419+/419+ seeds show inverse_cp=TRUE at w24, w32, w40, w48, w56, AND w64.
-    +83 new seeds s0303z (h319, h123, h87, h159, h347, h29). +9 s0303ad (h123, h159). +36 s0303af (h319, h123, h85, h159). +22 s0303ah. +38 s0303aj. +26 s0303al. +23 s0303an. Running total ~419+.
+    439+/439+ seeds show inverse_cp=TRUE at w24, w32, w40, w48, w56, AND w64.
+    +83 new seeds s0303z (h319, h123, h87, h159, h347, h29). +9 s0303ad (h123, h159). +36 s0303af (h319, h123, h85, h159). +22 s0303ah. +38 s0303aj. +26 s0303al. +23 s0303an. +20 s0303ap. Running total ~439+.
     Per-width: w24=100%, w32=100%, w40=100%, w48=100%, w56=100%, w64=100%.
-    NOW 419+ seeds — utterly definitive beyond any doubt.
+    NOW 439+ seeds — utterly definitive beyond any doubt.
     *** THIS IS NOW DEFINITIVELY CONFIRMED. The width-specific conclusion from #54
       was a HYPERPARAMETER ARTIFACT (WD=0.001, 50x too weak). ***
     IMPLICATION: Finding #44 generalizes robustly to at least w64 with matched hyperparams.
@@ -304,26 +306,68 @@ RETIRED: ALL grokking, memorization_dynamics_v2, curriculum_learning_dynamics,
   wd_critical_width (50 seeds NEGATIVE — no phase boundary, same issue, s0303q).
 
 EXPERIMENT SCRIPTS:
-  Active CPU (s0303ao): wd_timing_extended_width.py (weight 4, Finding #62, 337+ valid seeds — confirmed 100% all widths!),
-          wd_optimizer_interaction.py (weight 3, Finding #56, 210+ seeds),
-          svd_rank_intervention.py (weight 2, Finding #51, 823+ seeds),
-          percolation_scaling.py (weight 2, Finding #52, 517+ seeds),
-          wd_timing_depth.py (weight 1, Finding #61, 567+ seeds — DEFINITIVELY CONFIRMED),
-          wd_timing_task_sweep.py (weight 1, Finding #60, 396+ seeds),
-          wd_lr_interaction.py (weight 1, Finding #49, 424+ seeds),
-          wd_window_duration.py (weight 1, Finding #50, 276+ seeds),
-          wd_width_transition.py (weight 1, Finding #59, 419+ seeds — BEYOND DEFINITIVE),
+  Active CPU (s0303aq): wd_timing_extended_width.py (weight 3, Finding #62, 386+ valid seeds — confirmed 100% all widths!),
+          wd_optimizer_interaction.py (weight 3, Finding #56, 216+ seeds),
+          svd_rank_intervention.py (weight 2, Finding #51, 849+ seeds),
+          percolation_scaling.py (weight 2, Finding #52, 576+ seeds),
+          wd_timing_depth.py (weight 1, Finding #61, 616+ seeds — DEFINITIVELY CONFIRMED),
+          wd_timing_task_sweep.py (weight 1, Finding #60, 426+ seeds),
+          wd_lr_interaction.py (weight 1, Finding #49, 438+ seeds),
+          wd_window_duration.py (weight 1, Finding #50, 288+ seeds),
+          wd_width_transition.py (weight 1, Finding #59, 439+ seeds — BEYOND DEFINITIVE),
           representation_crystallization.py (weight 0 — orphaned unsent cleared),
           regularization_mechanisms.py (weight 0 — orphaned unsent cleared),
           wd_rebound_dynamics.py (weight 0 — orphaned unsent cleared),
           bottleneck_mechanism.py (weight 0 — orphaned unsent cleared)
-  Active GPU (s0303ao): wd_timing_scale_gpu.py (64+ seeds),
-          mp_universality_test.py (74+ seeds)
+  Active GPU (s0303aq): wd_timing_scale_gpu.py (69+ seeds),
+          mp_universality_test.py (83+ seeds)
   RETIRED from CPU: wd_width_mechanism.py (83 seeds, INCONCLUSIVE — WD=0.0001 too weak),
           wd_critical_width.py (50 seeds, NEGATIVE — no phase boundary with weak hyperparams)
   RETIRED from GPU: grad_subspace_wd_gpu.py (NEGATIVE, 7 seeds, COMPLETE — not the mechanism)
 
 DELIVERY PIPELINE STATUS:
+  s0303aq (~20:55 UTC Mar 3): Deployment only (no validation).
+    CPU: 650 WUs (all untargeted, BOINC-scheduled):
+      130 wdextwidth (#62, weight 3 — 386+ valid seeds, all 100% all widths),
+      130 wdoptim (#56, weight 3), 87 svdrank (#51, weight 2),
+      87 percolation (#52, weight 2), 43 wddepth (#61, weight 1),
+      43 wdtasksweep (#60, weight 1), 43 wdlr (#49, weight 1),
+      43 wdwindow (#50, weight 1), 44 wdwidthtrans (#59, weight 1).
+    GPU: 14 WUs (6 wdtimscale_gpu + 8 mpuniv_gpu), all untargeted.
+    Total: 664 WUs created, 0 skipped, 0 errors.
+    Immediate uptake: 664/664 dispatched within seconds (ALL grabbed!).
+      achernar (h159): 203 dispatched (WTBroughton).
+      rose (h15): 196 dispatched (zombie67 [MM]).
+      Dell-XPS-15-9560 (h319): 136 dispatched (ChelseaOilman).
+      capella (h349): 64 dispatched (WTBroughton).
+      0 unsent remaining from this batch.
+    WEIGHT ADJUSTMENTS from s0303ao:
+      wdextwidth REDUCED to weight 3 (was 4) — 386+ valid seeds, all 100%.
+      All others KEPT: wdoptim=3, svdrank=2, percolation=2, rest=1.
+    QUEUE STATE: All queues were DEPLETED (0 unsent before this batch).
+      All 664 WUs grabbed immediately — hosts are VERY hungry.
+    Dead/skip: Latitude (h63, 3.9GB <6GB). Athlon (h118, 3.5GB <6GB).
+    SKIP: vega (h348) — SSL certificates STILL broken.
+  s0303ap (~20:15 UTC Mar 3): Validation only (no deployment).
+    Credited ~285 results (~751.5 credit, 8 users) across 13 hosts.
+    USERS CREDITED (session totals):
+      Steve Dodd     +174  (h123 Dads-PC 147 + h87 Dad-Workstation 27)
+      ChelseaOilman  +216  (h320 Dell-9520 94 + h340 Foxtrot-3 92 + h319 Dell-XPS 15 + h332 Delta-2 9 + h327 Echo-3 6)
+      WTBroughton    +167.5 (h349 capella 72 + h347 sirius 51 + h159 achernar 44.5)
+      zombie67 [MM]  +121  (h15 rose)
+      Anandbhat      +43   (h222 DESKTOP-11MAEMP)
+      marmot         +30   (h113 XYLENA)
+    KEY SCIENCE:
+      +59 percolation (#52, now 576+). +49 wdextwidth (#62, now 386+ valid).
+      +49 wddepth (#61, now 616+). +30 wdtasksweep (#60, now 426+).
+      +26 svdrank (#51, now 849+). +20 wdwidthtrans (#59, now 439+).
+      +14 wdlr (#49, now 438+). +12 wdwindow (#50, now 288+).
+      +9 mpuniv_gpu (#53, now 83+). +6 wdoptim (#56, now 216+).
+      +5 wdtimscale_gpu (#54, now 69+). +3 intervtiming. +2 repcrystal (#47, now 191+).
+      +1 regmech.
+      All findings continue 100% consistent with prior data. No surprises.
+    CLEANUP: No stuck tasks. No broken experiments (all active healthy). No >48h tasks.
+    credited_count.txt: 7506 -> 7791 (+285). total_results.txt: 121,614.
   s0303ao (~19:35 UTC Mar 3): Deployment only (no validation).
     CPU: 650 WUs (all untargeted, BOINC-scheduled):
       160 wdextwidth (#62, weight 4 — 337+ valid seeds, all 100% all widths),
