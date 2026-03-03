@@ -1,0 +1,51 @@
+AXIOM SESSION RESULTS - 2026-03-03 13:47:35 -07:00
+Session tag: s0303_save_part3
+Sources: validate_2026-03-03_1241.txt, run_2026-03-03_1210.log, findings_summary.txt
+
+PART 1 - VALIDATION, REVIEW, AND CREDIT
+- Reviewed and credited 1004 completed exp_* results (science=1003, error_payload=1).
+- Session credit awarded: 6904 (safety cap 10000).
+- Uncredited successful exp_* results remaining after pass: 55.
+- Bulk reviewed families (top volume): wdextwidth (263), wdoptim (128), wdlr (102), wdwidthtrans (81), svdrank (77), wdtasksweep (62), wdwindow (56).
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host stuck-task cleanup (>12h run and >6h no host contact): 0 rows updated.
+- Hard-ceiling cleanup (>48h run): 0 rows updated.
+- Broken experiment global aborts during validation: none.
+- Part 2 retirement cleanup (unsent queue only): svdrank 34, wdlr 29, wdwindow 27, wdoptim 81, wddepth 54, wdtasksweep 54, wdwidthtrans 27.
+
+PART 2 - DEPLOYMENT SUMMARY (CPU AND GPU)
+CPU deployment
+- Targeted pass: 2844 workunits created.
+- Host targeting scope: 79 CPU hosts seen; 2 low-RAM hosts skipped.
+- Untargeted fallback pass: 2788 workunits created due persistent target_host/result materialization mismatch.
+- CPU hosts targeted (highest-need examples from run log): 63 Latitude, 287 DESKTOP-N5RAJSE, 192 7950-X3D, 339 Foxtrot-2, 340 Foxtrot-3, 141 SPEKTRUM, 332 Delta-2, 327 Echo-3, 325 Charlie-2, 16 dahyun, 292 debi, 67 EliteMini600G9, 330 Delta-1, 324 Charlie-1, 80 MAIN, 143 SPECTRE, 1 Pyhelix, 326 Bravo, 321 Rosie.
+
+GPU deployment
+- Targeted pass: 313 GPU workunits created (client timeout observed; server-side creation persisted).
+- Untargeted fallback pass: 316 GPU workunits created.
+- GPU checkpoint: 80 GPU hosts with idle capacity detected; 629 total GPU workunits deployed (313 targeted + 316 untargeted).
+- GPU script used for deployment: wd_curvature_trigger_gpu.py.
+- GPU host set (top-demand examples): 6 iand-r7-5800h, 7 iand-r7-5800h3, 324 Charlie-1, 9 dbgrensenh27, 123 Dads-PC, 336 Hotel-1, 85 DadOld-PC, 86 DESKTOP-23QVBVH, 87 Dad-Workstation, 287 DESKTOP-N5RAJSE.
+
+NEW EXPERIMENTS AND NOVELTY CHECK
+- New CPU experiment: wd_labelsmooth_interaction.py (tests interaction of late WD ICP behavior with label smoothing; outputs include gap, confidence, effective rank, and norm trajectories).
+- New GPU-aware experiment: wd_curvature_trigger_gpu.py (tests curvature-triggered WD onset vs fixed-late WD; outputs include trigger epoch, gap comparisons, curvature trajectory, rank/norm metrics).
+- Novelty check documented in run log:
+  - Query: "weight decay label smoothing interaction neural networks"
+  - Query: "adaptive weight decay schedule deep learning"
+  - Prior related work was identified, but the specific controlled ICP-timing interaction test and curvature-triggered causal mechanism framing were logged as not established results.
+
+KEY SCIENTIFIC FINDINGS
+1. WD extended-width evidence remained strongly positive: inverse critical period behavior held across w96/w128/w256/w512 in the reviewed batch.
+2. WD width-transition results remained stable: small-width inverse-CP signal stayed positive while large-width failure condition remained absent (no transition detected in this pass).
+3. WD task-sweep remained strong on compositional/teacher-student/spiral tasks, with hidden-manifold still mixed.
+4. Depth generalization remained robust: d2-d3 uniformly positive; d4-d6 mostly positive with residual mixed cases.
+5. SVD-rank intervention continued to replicate late-SVD gains, while early-SVD-hurts stayed unsupported.
+6. Percolation family remained pattern-consistent: P1/P4 supported, P3 unsupported, P2 mixed.
+7. wdoptim/wdlr/wdwindow trend direction remained unchanged (mostly weak/partial to moderate evidence), and wdrebound remained not conclusively confirmed.
+8. New mechanism-focused experiments were deployed to test whether label smoothing modulates WD timing effects and whether curvature stabilization is a trigger for effective WD onset.
+
+OPERATIONAL NOTES
+- boincadm password auth remained denied in validation; root socket mysql was used for DB operations.
+- Known target_host/result-materialization mismatch persisted; untargeted queueing was used as fallback to keep hosts fed.
