@@ -1,88 +1,78 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part2_deploy)
+Last updated: March 4, 2026 (session s0304_part2_deploy)
 =========================================================
 
 CORE SCIENTIFIC STATUS
 - Inverse critical period behavior for weight decay (WD timing) remains established.
-- Many older WD-family and textbook lines remain over-seeded and should stay retired.
-- Current priority: interaction/mechanism lines that can falsify causal hypotheses.
+- Priority remains interaction and mechanism tests that can falsify causal timing hypotheses.
 
-RETIREMENT CHECK THIS SESSION
-- Ran mandatory over-seeded scan.
-- Over-completed active-running lines observed: svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdlr, wdoptim, wdwidthtrans, wdwindow, repcrystal.
-- Unsent counts for these lines at check time were 0, so no abort UPDATE was needed this session.
+RETIREMENT CHECK THIS SESSION (MANDATORY)
+- Ran over-seeded scan before deployment.
+- Over-completed active-running lines still present: svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdoptim, wdlr, wdwidthtrans, wdwindow, repcrystal.
+- For those lines, unsent count at check time was 0, so no abort UPDATE was required this session.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New CPU experiment: wd_imbalance_interaction.py
-- Query: "weight decay class imbalance neural network interaction"
-- Query: "arXiv Decoupled Weight Decay Regularization 1711.05101"
-- Query: "arXiv Class-Balanced Loss Based on Effective Number of Samples 1901.05555"
-- Found: AdamW / decoupled WD (Loshchilov & Hutter, arXiv:1711.05101), class-balanced reweighting (Cui et al., arXiv:1901.05555), but no direct late-WD-timing x class-imbalance interaction mechanism test in this controlled compositional setup.
-- Novel angle: tests whether late WD and class-balanced weighting combine additively or interact nonlinearly on minority OOD recall.
+1) New CPU experiment: wd_curriculum_interaction.py
+- Query: "arXiv 0904.1986 Curriculum Learning"
+- Query: "arXiv 1808.03766 On the Power of Curriculum Learning in Training Deep Networks"
+- Query: "arXiv anti-curriculum learning deep neural networks"
+- Query: "arXiv weight decay schedule curriculum interaction"
+- Found: curriculum/anti-curriculum effects are studied, but no direct controlled test of late-WD timing interaction with sample-order regime in this compositional-shift setup.
+- Novel angle: causal interaction test of whether WD timing gains depend on representation formation pace induced by data ordering.
 
-2) New GPU experiment: wd_anisotropy_trigger_gpu.py
-- Query: "adaptive weight decay schedule sharpness curvature neural network"
-- Query: "arXiv Adaptive Weight Decay for Deep Neural Networks 2001.04796"
-- Query: "arXiv Scheduled Weight Decay for Deep Neural Networks 2111.09764"
-- Query: "weight decay schedule based on representation geometry"
-- Found: prior adaptive/scheduled WD work exists, but no direct anisotropy-stabilization trigger test for WD onset versus fixed-late onset in this BOINC-style replicated trial framework.
-- Novel angle: causal test of representation-geometry gating for WD timing.
+2) New GPU experiment: wd_noise_trigger_gpu.py
+- Query: "An Empirical Model of Large-Batch Training gradient noise scale arXiv 1812.06162"
+- Query: "arxiv adaptive weight decay deep neural networks 2001.04796"
+- Query: "arxiv scheduled weight decay for deep neural networks 2111.09764"
+- Query: "arxiv gradient variance schedule regularization neural network"
+- Found: prior work on gradient-noise scale and adaptive/scheduled WD exists, but no direct trigger rule based on stabilization of a noise proxy compared against fixed-late WD in this replicated BOINC setting.
+- Novel angle: mechanism test that treats fixed late WD as a proxy and tests noise-stability as the causal gate.
 
 NEW EXPERIMENT SCRIPTS ADDED (RUN-DURATION COMPLIANT)
-1) wd_imbalance_interaction.py (CPU, numpy)
-- Uses host-dependent seed from experiment_name hash.
-- Reads run_duration from WU JSON; runs independent trials until near deadline.
-- Tests CE-only, late-WD, class-balanced, interaction, and always-WD+CB conditions.
-- Outputs minority/majority recall dynamics and interaction excess metric.
+1) wd_curriculum_interaction.py (CPU, numpy)
+- Host-dependent seed from experiment_name hash.
+- Reads run_duration from WU JSON and runs independent trials until deadline.
+- Conditions: random_no_wd, random_late_wd, curriculum_late_wd, anti_curriculum_late_wd, curriculum_no_wd.
+- Reports interaction metrics including anti_vs_curr_late_delta.
 
-2) wd_anisotropy_trigger_gpu.py (GPU-aware: cupy/numpy fallback)
-- Uses HAS_GPU / cupy when available; numpy fallback otherwise.
-- Reads run_duration from WU JSON; runs independent replicated trials until near deadline.
-- Conditions: no_wd, fixed_late_wd, adaptive_aniso_wd, always_wd.
-- Adaptive trigger: enable WD when anisotropy proxy EMA relative change stabilizes.
+2) wd_noise_trigger_gpu.py (GPU-aware, cupy/numpy fallback)
+- Uses HAS_GPU / cupy and GPU metadata when available; numpy fallback otherwise.
+- Reads run_duration from WU JSON and runs independent trials until deadline.
+- Conditions: no_wd, fixed_late_wd, adaptive_noise_wd, always_wd.
+- Adaptive rule enables WD when gradient-noise proxy EMA stabilizes.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU targeted host pass (appid=1, script=wd_imbalance_interaction.py): 2,561 WUs.
-- CPU untargeted fallback (for target-host dispatch mismatch buffering): 2,416 WUs.
-- CPU total created this session: 4,977 WUs.
+- CPU targeted host pass (appid=1): 2,231 WUs.
+- CPU untargeted fallback pass: 2,149 WUs.
+- CPU total created this session: 4,380 WUs.
 
-- GPU targeted host pass (appid=2, script=wd_anisotropy_trigger_gpu.py): 307 WUs.
-- GPU untargeted fallback: 280 WUs.
-- GPU total created this session: 587 WUs.
-
-- Transitioner/transition_time refresh executed after CPU and GPU creation passes.
+- GPU targeted host pass (appid=2): 280 WUs.
+- GPU untargeted fallback pass: 281 WUs.
+- GPU total created this session: 561 WUs.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found during this session: 79 hosts.
-- GPU workunits deployed this session: 587 total (307 targeted + 280 untargeted fallback).
-- GPU-aware script used for deployment: wd_anisotropy_trigger_gpu.py.
-- Other GPU-aware scripts present: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, mp_universality_test.py, gpu_matmul_stress.py.
+- GPU hosts with idle capacity found: 78.
+- GPU workunits deployed: 561 total (280 targeted + 281 fallback).
+- GPU-aware scripts used: wd_anisotropy_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_noise_trigger_gpu.py.
 
 OPERATIONAL NOTES
-- Known server behavior persists: target-host WU creation does not always promptly materialize as host-bound queued results.
-- Untargeted fallback remains necessary to keep volunteer CPU/GPU slots fed between deployment cycles.
-- Transitioner logs still include unrelated legacy warnings: "WU has too many total results (1)" on old prefixes.
+- Target-host dispatch underfills still observed; untargeted fallback remains necessary to keep hosts fed between cycles.
+- Transition refresh and transitioner one-pass were run after CPU/GPU creation passes.
 
-NEXT SCIENCE PRIORITY
-- Validate whether interaction_excess in wd_imbalance_interaction is consistently non-zero across hosts.
-- If anisotropy-trigger WD beats fixed-late WD robustly, extend to depth/width/task variants before large reseeding.
+VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate)
+- Reviewed 617 completed uncredited `exp_%` results across 4 validation passes from live DB + upload JSON files.
+- Payload quality: all reviewed results had valid `experiment_result` payloads (0 missing, 0 parse errors).
+- Credit workflow executed with incremental user/host updates and safety cap respected (planned total 2,641 credit; cap 10,000).
+- Likely session-applied credits (post-apply verification): 403 newly credited rows, +1,671 total credit.
+- Live queue kept filling during runtime; 6 newly arrived uncredited completions remained at final check.
 
-VALIDATION UPDATE: March 4, 2026 (credit/validation session)
-- Credited 726 newly completed experiment results (all with experiment_result payloads).
-- No dead-host stuck tasks found by the >12h/>6h rule; no >48h runs found; no cleanup aborts required.
-- No currently active experiment line met the "clearly broken now" criterion after recent-outcome checks.
+CROSS-VALIDATION STATUS (THIS REVIEWED BATCH)
+- wd_imbalance_interaction: +64 host-runs reviewed; mean interaction_excess=+0.0948; mean minority-recall lift (late_wd_class_balanced - CE)=+0.2056.
+- wd_labelsmooth_interaction/wdlsint: +67 host-runs reviewed; interaction-present prediction true in 94.0%; attenuation prediction true in 25.4%.
+- wd_batchnoise_interaction/wdbnoise: +23 host-runs reviewed; mean interaction_gain_difference=+0.3256; mean interaction_positive_rate=0.9992.
+- wd_anisotropy_trigger_gpu: +6 GPU host-runs reviewed; adaptive trigger epoch stable at 24.0; adaptive_minus_fixed mean=+0.00020 (small/mixed effect).
 
-CROSS-VALIDATION STATUS (NEWLY REVIEWED BATCH)
-- wd_imbalance_interaction: +88 host-runs reviewed.
-  Mean synergy_delta (late_wd_class_balanced vs max(late_wd, class_balanced)): +0.0634 (range 0.0597..0.0664).
-  Mean minority-recall lift vs CE-only: +0.2055 (range 0.2009..0.2104).
-- wd_labelsmooth_interaction: +151 host-runs reviewed.
-  prediction_3_interaction_present=true in 92.1% of runs; attenuation prediction true in 28.5%.
-- wd_batchnoise_interaction: +98 host-runs reviewed.
-  Mean interaction_gain_difference: +0.3256; interaction_positive_rate mean: 0.9990.
-- wd_anisotropy_trigger_gpu: +6 GPU host-runs reviewed.
-  adaptive_aniso_wd.trigger_epoch stable at 24.0; adaptive_minus_fixed mean effect approximately -0.00018 (mixed sign, no robust win yet).
-
-OPEN QUESTIONS / NEXT CHECK
-- Confirm whether anisotropy-trigger condition gains emerge with larger GPU sample count (>50 completed runs).
-- Keep testing whether the wd_imbalance_interaction synergy remains stable across wider host diversity and seeds.
+OPERATIONS / CLEANUP
+- Broken legacy lines `exp_power_law_forgetting` and `exp_power_law_forgetting_v2` repeatedly re-entered queue; 6 total active tasks were aborted this session (outcome=5).
+- No dead-host stuck-task candidates found by the >12h runtime and >6h no-contact rule.
+- No >48h running experiment tasks found.
