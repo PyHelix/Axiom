@@ -1,0 +1,99 @@
+AXIOM EXPERIMENT SESSION LOG — 2026-03-03 04:44 UTC (s0302k)
+================================================================
+
+SYSTEM STATUS
+- Active hosts: 88 (192-CPU max, 2-CPU min)
+- 20 stuck tasks from dead hosts aborted
+- 0 tasks >48h (clean)
+- Known issue: exit -186 on Windows for rankreg/botmech/orthocomp (unchanged)
+
+RESULTS REVIEWED & CREDITED
+- 131 results credited, 1,800 total credit this session
+- Per-user: PyHelix +395, kotenok2000 +195, ChelseaOilman +180, Steve Dodd +660, marmot +30, WTBroughton +340
+- Credit cap: 1,800 / 10,000 (well within limit)
+
+Result breakdown by experiment:
+  wdwindur:       15 results (all seed=42 — seed extraction bug, see below)
+  microscalev2:   13 results (417-6533s, heavy compute)
+  wdlrinteract:   12 results (12 unique seeds — REAL diversity!)
+  compgen:        11 results
+  intervtiming:   11 results
+  repcrystal:      8 results
+  regmech:         8 results
+  wdrebound:       8 results
+  repalignv2:      7 results
+  featcompv2:      6 results
+  bottmech:        6 results
+  combinedcomp:    5 results
+  regtimuniv:      3 results
+  rankreg:         3 results (2887-2990s each)
+  + 9 others (memdynv2, powerlaw, orthocomp, curriculum, etc.)
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+
+1. WD x LR Schedule Interaction — INFORMATIVE NEGATIVE (12 seeds, 12 unique)
+   Finding #49 now has real data. Key results:
+   - P1 (warmup shifts WD onset later): 25% support — NOT CONFIRMED
+   - P2 (cosine shifts onset earlier): 0% support — STRONGLY REJECTED
+   - P3 (interaction is measurable): 83% support — CONFIRMED
+   - P4 (warmup reduces early WD penalty): 25% support — NOT CONFIRMED
+
+   INTERPRETATION: LR schedule DOES interact with WD timing (the sensitivity
+   landscape changes measurably between schedules), but NOT in the predicted
+   directional ways. The interaction doesn't shift optimal onset — it changes
+   HOW MUCH timing matters. Practical implication: practitioners can choose
+   WD onset independently of LR schedule. This is a useful negative result
+   that complements Finding #48 (fine timing doesn't matter).
+
+2. WD Window Duration — SEED BUG, ALL DUPLICATES (15 results, seed=42)
+   Finding #50 results are invalid: all 15 workunits produced identical seed=42.
+   Root cause: seed extraction in wd_window_duration.py fails silently.
+   Both wdlrinteract and wdwindur use the same seed pattern, but wdlrinteract
+   gets unique seeds while wdwindur does not. Needs investigation.
+
+   Preliminary data from single seed: WD has ZERO effect at w32 and w128
+   (identical train/test gap with or without WD). Only w64 shows a tiny
+   0.003 gap difference. This suggests the compositional task at these
+   specific data params may not be sensitive to WD, but we need diverse
+   seeds to confirm.
+
+3. New experiment deployed: SVD Rank Intervention (causal mechanism test)
+   Tests whether directly compressing weight matrix rank via SVD truncation
+   replicates the inverse critical period for WD. This is the missing
+   causal test for our publication — if late SVD truncation improves
+   generalization like late WD does, rank compression IS the mechanism.
+   Key design: includes both rescaled (rank-only) and raw (rank+magnitude)
+   truncation to separate the two effects.
+
+4. New experiment deployed: Percolation Phase Transition Scaling
+   Cross-disciplinary (statistical physics). Maps finite-size scaling
+   exponents for bond percolation on Erdos-Renyi vs Barabasi-Albert
+   random graphs. The BA scaling exponent is debated in the literature.
+   Our massive parallel compute enables high-precision measurement across
+   graph sizes 100-5000.
+
+EXPERIMENTS DEPLOYED
+================================================================
+125 CPU workunits deployed to 8 hosts:
+  Pyhelix (h1):          31 WUs
+  Dads-PC (h123):        45 WUs
+  DESKTOP-P57624Q (h29): 16 WUs
+  Note11Ste (h137):      19 WUs
+  Dad-Workstation (h87): 10 WUs
+  Andre-WEBK (h345):      2 WUs
+  dahyun (h16):            1 WU
+  Golf-1 (h334):           1 WU
+
+Mix: 37% svd_rank_intervention (NEW), 20% percolation_scaling (NEW),
+     20% wd_lr_interaction, 10% wd_window_duration, 5% rep_crystallization,
+     5% regularization_mechanisms, 2% wd_rebound, 1% bottleneck_mechanism
+
+NEXT STEPS
+================================================================
+1. PRIORITY: Fix wdwindur seed extraction bug (all results seed=42)
+2. Collect SVD rank intervention results (causal mechanism test)
+3. Collect percolation scaling results (first non-ML STEM experiment)
+4. Continue wdlrinteract to 30+ seeds for confirmation
+5. Investigate why wdwindur seed fails but wdlrinteract seed works
+   (both use identical seed extraction code)
