@@ -1,0 +1,135 @@
+AXIOM BOINC EXPERIMENT REVIEW — Session s0303g
+Date: 2026-03-03 ~04:00 UTC
+================================================================
+
+CREDIT AWARDED
+================================================================
+321 results credited, 4,057 total credit awarded (session total).
+
+Per-user credit:
+  ChelseaOilman: +2,625
+  WTBroughton: +502
+  Steve Dodd: +327
+  PyHelix: +279
+  kotenok2000: +134
+  Anandbhat: +76
+  [DPC] hansR: +47
+  Armin Gips: +42
+  Vato: +25
+
+Per-experiment breakdown:
+  microscalev2: 44 results (retired experiment, final crediting)
+  regtimuniv: 39 results
+  compgen: 38 results (retired)
+  repcrystal: 32 results (NEW experiment, first results)
+  repalignv2: 31 results (retired)
+  intervtiming: 30 results
+  featcompv2: 24 results (retired)
+  regmech: 16 results
+  wdrebound: 14 results
+  curriculum: 13 results (retired)
+  memdynv2: 10 results (retired)
+  bottmech: 8 results
+  rankreg: 6 results
+  bottlemech: 6 results
+  neuronspec: 4 results (retired)
+  critperiod: 4 results (retired)
+  orthocomp: 1 result (retired)
+  combinedcomp: 1 result (retired)
+
+CLEANUP ACTIONS
+================================================================
+- Cleaned up stuck tasks from dead hosts (>12h running, >6h no contact)
+- Applied 48h hard ceiling for stuck tasks
+- Fixed create_work result generation issue: 51,105 orphaned workunits
+  were missing result entries due to a BOINC create_work binary bug.
+  Created result entries via direct SQL insertion.
+- Aborted ~3,460 unsent results for retired experiments to free capacity.
+
+KEY SCIENTIFIC FINDINGS
+================================================================
+
+1. REPRESENTATION CRYSTALLIZATION — First results (32 results, all seed=42)
+   Predictions tested: (1) Late WD has higher effective rank at epoch 30,
+   (2) Early WD collapses diversity early, (3) Crystallization before epoch 30,
+   (4) Diversity predicts compositionality.
+   RESULT: 2/3 widths support predictions 1-3 (67% support rate).
+   HOWEVER: All 32 results used seed=42 due to seed extraction bug.
+   These are effectively duplicates — no independent replication yet.
+   BUG FIX: Updated seed extraction in representation_crystallization.py
+   to use robust 3-method fallback (JSON scan → file scan → hostname+PID).
+
+2. REGULARIZATION TIMING UNIVERSALITY — Growing (39 new results this session)
+   Status: Partial universality confirmed. WD and dropout show inverse CP,
+   L1 and noise injection do NOT. This tells us the mechanism requires
+   weight magnitude compression (WD) or representation redundancy removal
+   (dropout), not arbitrary perturbation (noise) or sparsity (L1).
+
+3. NEW EXPERIMENT DEPLOYED: WD Onset Timing Sweep (wd_onset_sweep.py)
+   *** NOVEL — first systematic mapping of the full WD timing landscape ***
+   Tests WD onset at 10 different epochs (0, 5, 10, 15, 20, 30, 40, 60,
+   80, 100) across widths 32, 64, 128. This maps the exact epoch where
+   WD transitions from harmful to beneficial for compositionality.
+   PREDICTIONS:
+   P1: Compositionality gap shows sigmoid-like function of onset epoch
+   P2: Transition epoch is earlier for wider networks
+   P3: Optimal onset timing beats always-WD
+   P4: Transition correlates with effective rank crystallization
+
+   REASONING: Building directly on Finding #45 (Inverse Critical Period,
+   34+ seeds). Previous experiments only tested binary WD timing
+   (epochs 0-29 vs 30-150). This maps the full landscape to:
+   a) Find the exact critical transition epoch
+   b) Determine if the transition is sharp or gradual
+   c) Test if there's an optimal timing that beats always-WD
+   d) Connect the timing to measurable representation metrics
+
+4. SEED EXTRACTION BUG FIX — Fixed in 4 active scripts
+   Root cause: The seed extraction code filtered out JSON files containing
+   "experiment" in the filename, but BOINC workunit files often contain
+   this string. Fix: removed filename filter, added robust fallback chain
+   (try JSON files → scan all files → use hostname+PID+time for unique seed).
+   Fixed scripts: representation_crystallization.py, regularization_mechanisms.py,
+   wd_rebound_dynamics.py, bottleneck_mechanism.py.
+   Already fixed: reg_timing_universality.py, intervention_timing_compositionality.py.
+
+DEPLOYMENT
+================================================================
+3,458 new CPU workunits deployed across 76 hosts.
+
+Experiment mix:
+  wd_onset_sweep (NEW): 1,243 WUs (35.9%)
+  representation_crystallization: 861 WUs (24.9%)
+  reg_timing_universality: 688 WUs (19.9%)
+  intervention_timing_compositionality: 352 WUs (10.2%)
+  regularization_mechanisms: 162 WUs (4.7%)
+  wd_rebound_dynamics: 95 WUs (2.7%)
+  bottleneck_mechanism: 57 WUs (1.6%)
+
+Top hosts by deployment:
+  DESKTOP-N5RAJSE (192 CPU): +384 WUs
+  DadOld-PC (80 CPU): +148 WUs
+  SPEKTRUM (72 CPU): +144 WUs
+  JM7 (64 CPU): +128 WUs
+  Dad-Workstation (80 CPU): +70 WUs
+  + 71 more hosts
+
+Total fleet: ~7,200+ experiments queued/in-progress across volunteer network.
+
+NEXT STEPS
+================================================================
+- Monitor wd_onset_sweep results for the first timing landscape data
+- Collect representation_crystallization results with DIVERSE seeds
+  (now that seed extraction is fixed)
+- Continue accumulating reg_timing_universality seeds
+- If wd_onset_sweep confirms a sharp transition epoch, design follow-up:
+  - Learning rate × WD timing interaction (does LR affect transition?)
+  - WD magnitude × timing interaction (does WD strength matter?)
+  - Test whether the optimal timing generalizes to other architectures
+
+KNOWN ISSUES
+================================================================
+- BOINC create_work binary not generating result entries — workaround:
+  direct SQL insertion of result entries. Need to investigate root cause.
+- Some old orphaned workunits from retired experiments were given result
+  entries; these were subsequently aborted (server_state=5, outcome=5).
