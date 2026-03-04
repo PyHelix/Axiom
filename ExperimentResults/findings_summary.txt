@@ -1,10 +1,10 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_0822)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_0840)
 ============================================================
 
 CORE SCIENTIFIC STATUS
 - No reversal observed so far for the prior inverse critical-period / WD timing signal.
-- Active focus remains on WD trigger/timing families and delay-driven ecology/control families.
+- Active focus remains WD trigger/timing families and delay-driven ecology/control families.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
@@ -12,26 +12,22 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 - Test whether WD onset is curvature-triggered versus fixed-onset.
 
-CROSS-SESSION RELIABILITY SNAPSHOT (March 04, 2026)
-- Upload artifact retrieval for this pass: 129/129 reviewed files were present.
-- Payload quality in this pass: experiment_result=129, error=0, invalid_json=0, missing=0.
-- Persistent host-skewed GPU failures remain in historical data, but this credited batch was success-only.
-- Historically broken prefixes remain retired from active queue (all checked prefixes at 0 active rows).
-
-VALIDATION SESSION UPDATE (March 04, 2026, 08:22, Part 1)
-- Completed/terminal rows credited this session: 129 rows, 1278 total credit (under 10,000 cap).
-- Credited mix: success=129, failed=0; CPU(appid=1)=114, GPU(appid=2)=15.
-- Elapsed-time profile (credited rows): min=67.73s, median=844.54s, max=918.95s.
-- Dominant successful families this pass: interdep_flow_memory_shedding_tradeoff (11), nonmarkov_trap_release_window (9), metapop_allee_corridor (9), pit_delay_inhibitor_resonance (7), fiberbundle_delay (6), grayscott_delay_pulse_feedback (6).
+VALIDATION SESSION UPDATE (March 04, 2026, 08:40, Part 1)
+- Reviewed completed success rows: 116 (payload: experiment_result=105, missing_upload_artifact=11).
+- Credit posted this session: 101 rows, 1001 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=101 rows, GPU(appid=2)=15 rows reviewed.
+- Elapsed-time profile (reviewed rows): min=50.66s, median=844.90s, max=1011.92s.
+- Dominant reviewed families: pitinh (6), alleeclim (6), battres (6), chemcross (6), nmtrap (6), fishcull (6).
 - Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters updated: credited_count=4871; total_results_count=4895.
-- Cutoff snapshot after this pass: uncredited completed success rows=24; uncredited completed failure rows=0.
+- Website counters updated: credited_count=4972; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=109; uncredited completed failure rows=0.
 
-RELIABILITY NOTES (March 04, 2026, 08:22)
-- No cross-host 100%-failure active prefix was found in this pass; no broad experiment aborts were applied.
-- High historical fail-rate families still include several delay/control experiments; continue monitoring by host and appid.
+RELIABILITY NOTES (March 04, 2026, 08:40)
+- No cross-host 100%-failure active prefix was found in the active queue; no broad aborts were applied.
+- Historical high-failure families with 0 active rows remain effectively retired (e.g., rw_reset_fatigue_nonrenewal, oscillatory_roughchannel_lbm_resonance, adaptive_voter_delay_rewiring).
+- GPU families still show elevated but non-total recent failure rates (wd_anisotropy_trigger_gpu_gpu and gpu_matmul_stress_gpu near 50%); continue host-level monitoring.
 
 OPEN QUESTIONS
-1) Are remaining zero-elapsed GPU failures primarily host/driver issues versus experiment code defects?
-2) Should auto-pause be triggered only when high fail-rate is confirmed across multiple hosts for the same prefix?
-3) Should validation cadence increase further to reduce success-only uncredited backlog between snapshots?
+1) Are remaining intermittent GPU failures primarily host/driver instability versus experiment-specific CUDA defects?
+2) Should automatic pause thresholds require both high fail-rate and multi-host confirmation within a recent time window?
+3) Should validation cadence increase further to reduce the growing success-only uncredited backlog between snapshots?
