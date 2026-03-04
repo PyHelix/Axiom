@@ -1,0 +1,39 @@
+Axiom BOINC Validation Log
+Timestamp: 2026-03-04 17:26 UTC
+Session file: validate_2026-03-04_1826.txt
+
+1) Results reviewed this session
+- Queried uncredited completed experiment results: 158 total.
+- Reviewed IDs:
+1662306,1662312,1672925,1676976,1677897,1677900,1677902,1677905,1677906,1677907,1677909,1677978,1677983,1680373,1680374,1680375,1680377,1680379,1680384,1680390,1680396,1680402,1680406,1680409,1680415,1680416,1680420,1680421,1680424,1680434,1680439,1680440,1680442,1680445,1680446,1680453,1680460,1680462,1680464,1680465,1680468,1681239,1681247,1681248,1681257,1681259,1681261,1681275,1681280,1681281,1681287,1681295,1681296,1681318,1681319,1681333,1681334,1681742,1681766,1681767,1682097,1682102,1682104,1682108,1682110,1682179,1682180,1682181,1682184,1682185,1682188,1682189,1682192,1682193,1682194,1682195,1682196,1682199,1682200,1682203,1682204,1682209,1682210,1682239,1682241,1682242,1682243,1682244,1682245,1682246,1682247,1682250,1682251,1682252,1682253,1682256,1682257,1682260,1682261,1682263,1682264,1682267,1682268,1682272,1682273,1682276,1682277,1682278,1682279,1682282,1682283,1682286,1682289,1682292,1682297,1682299,1682300,1682302,1682303,1682304,1682306,1682308,1682309,1682310,1682311,1682312,1682314,1682329,1682339,1682340,1682345,1682346,1682348,1682350,1683348,1683353,1683354,1683363,1683364,1683365,1683605,1683607,1683617,1683621,1683692,1683716,1683717,1683718,1683719,1683720,1683721,1683722,1683723,1683725,1683726,1683727,1683728,1683734
+- Sanitized payload availability check:
+  - Matching sanitized payloads for current uncredited result names/workunits: 0 actionable matches.
+  - These results currently have no trusted numeric payload mapped for quality scoring; scientific-value credit cannot be assigned yet.
+
+2) Credit decisions
+- Credit awarded this session: 0 total (cap 10,000).
+- Results granted positive credit: 0.
+- Per-user credit increments: none.
+- Rationale: credit is based on returned scientific-value payloads in sanitized JSON; no mappable sanitized payloads were available for this uncredited batch.
+
+3) Cleanup actions
+- Broken experiment queue aborted:
+  - Pattern: exp_oscillatory_roughchannel_lbm_resonance%
+  - Evidence: 38 failures, 0 successes (server_state=5 history), 14 active in-progress tasks.
+  - Action: UPDATE result SET server_state=5, outcome=5 WHERE name LIKE 'exp_oscillatory_roughchannel_lbm_resonance%' AND server_state IN (2,4)
+  - Rows affected: 14
+- Stuck task cleanup (dead hosts >12h / hard >48h):
+  - Dead-host abort rows: 0
+  - Hard-ceiling abort rows: 0
+
+4) Experiment script bug check
+- Inspected failing family script compile health:
+  - /opt/axiom_boinc/html/user/experiments/oscillatory_roughchannel_lbm_resonance.py
+  - py_compile: OK
+- No traceback content available in stderr_out for failed rows, so no deterministic code fix was applied in this session.
+
+5) Counters updated
+- credited_count.txt incremented by 0 (unchanged)
+- total_results_count.txt updated to max(existing, DB count)
+  - final total_results_count: 1972
+
