@@ -1,0 +1,60 @@
+AXIOM SESSION RESULTS
+Timestamp: 2026-03-04 16:08 CET
+Session Scope: Consolidated Part 1 validation/credit outcomes and Part 2 experiment-design/deployment context.
+
+VALIDATION AND CREDIT SUMMARY (Part 1)
+- Validation log source: /opt/axiom/experiment_session/validate_2026-03-04_1606.txt
+- Results reviewed: 87 newly completed uncredited exp_% results.
+- Sanitized payload matches for reviewed results: 0 (sanitized directory check by result basename).
+- Credit awarded this session: 0 total, 0 results credited.
+- Reason no credit was awarded: reviewed completions lacked corresponding sanitized numeric payloads at validation time.
+- Safety cap status: credit safety cap (10,000) respected.
+
+CLEANUP AND QUEUE HEALTH
+- Stuck-task cleanup (>12h on dead hosts): 0 aborted.
+- Hard-ceiling cleanup (>48h running): 0 aborted.
+- Broken queue recheck (active server_state in {2,4}):
+  - adaptive_voter_delay_rewiring: 0 active
+  - rw_reset_fatigue_nonrenewal: 0 active
+  - oscillatory_roughchannel_lbm_resonance: 0 active
+- Crash signature check: no new outcome=3 concentration indicating a new script crash family in this pass.
+
+NEW EXPERIMENTS DESIGNED (Part 2)
+1. metapop_allee_corridor_hysteresis.py
+- Domain: ecology / metapopulation dynamics.
+- Hypothesis: corridor-control fatigue/recovery can produce a re-entrant optimum in trigger threshold under Allee risk.
+- Novelty check summary: prior Allee/connectivity and synchrony-risk literature exists; no direct match found for fatigue-driven adaptive corridor triggering with explicit threshold-reversal mapping.
+
+2. kuramoto_islanding_fatigue_reclosure.py
+- Domain: power-systems nonlinear dynamics.
+- Hypothesis: delayed adaptive islanding with fatigue/reclosure hysteresis yields re-entrant resilience vs trigger threshold.
+- Novelty check summary: transient stability and intentional islanding are established; no direct match found for delayed-control + fatigue + reclosure hysteresis re-entrant threshold mapping.
+
+3. cstr_poison_purge_reentrance.py
+- Domain: chemical engineering / CSTR reactor dynamics.
+- Hypothesis: fatigue-limited adaptive purge under stochastic feed creates an intermediate trigger optimum for net productivity.
+- Novelty check summary: catalyst deactivation/regeneration and adaptive CSTR control are known; no direct match found for explicit fatigue-threshold re-entrance testing.
+
+4. fput_adaptive_damping_fatigue.py
+- Domain: nonlinear physics / FPUT lattice dynamics.
+- Hypothesis: adaptive high-frequency damping with controller fatigue yields a re-entrant trigger threshold for recurrence retention.
+- Novelty check summary: FPUT recurrence and damping effects are well studied; no direct match found for fatigue-limited adaptive trigger policies with threshold re-entrance mapping.
+
+5. antibiotic_delay_fatigue_switch.py
+- Domain: epidemiology / antimicrobial resistance control.
+- Hypothesis: with diagnostic delay and switch-fatigue, antibiotic switching thresholds are re-entrant, with an intermediate trigger outperforming extremes.
+- Novelty check summary: cycling/adaptive AMR policies are known; no direct match found for combined delay + fatigue + hysteretic threshold re-entrance mapping.
+
+DEPLOYMENT CONTEXT SNAPSHOT (Part 2)
+- Mandatory backlog/cap checks executed across cycles; hard cap maintained (in_progress remained below 5000).
+- Repeated GPU checkpoints executed with active GPU top-up deployments.
+- New-experiment initial deployment batches were created for each experiment above.
+
+KEY SCIENTIFIC FINDINGS
+1. No newly reviewed completed result could be promoted this session because 0/87 reviewed completions had matching sanitized numeric payloads available for scoring.
+2. No new cross-validated result reached the 30+ seed promotion threshold in this validation pass.
+3. The dominant near-term bottleneck for scientific promotion is sanitized-payload availability, not completion return volume.
+4. The session added five new hypothesis-driven experiment families, each with documented novelty checks showing no direct prior match for the specific fatigue/hysteresis re-entrance formulations.
+
+SESSION END NOTE
+- This log intentionally omits cumulative credited-result ID lists; authoritative credit/accounting remains in the project database.
