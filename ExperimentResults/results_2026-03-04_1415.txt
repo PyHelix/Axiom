@@ -1,0 +1,60 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: 2026-03-04 15:14 CET
+Scope: Consolidated save report from validation/credit/cleanup (Part 1) and deployment/experiment design (Part 2)
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Validation queue reviewed: 286 successful, uncredited rows (`exp_%` scope at snapshot time).
+- Sanitized artifact attribution coverage for reviewed rows: 0/286 by exact `_result_name` or sanitized filename base.
+- Quality-based credit awards this session: 0 results, 0 total credit (10,000 safety cap respected).
+- Website counters refreshed with non-decreasing rule:
+  - `credited_count.txt` = 2641
+  - `total_results_count.txt` = 2930
+- Post-session DB snapshot from validation pass:
+  - success_total = 2931
+  - success_credited = 2641
+  - success_uncredited = 290
+
+STUCK/BROKEN TASK CLEANUP
+- Broken family cleanup:
+  - `abx_cycle`: aborted 1 in-progress row; family remains 0% success.
+  - `oscillatory_roughchannel_lbm_resonance`, `potts_pulse_anneal_resonance`, `spatial_pgg_delay_fatigue`: no active unsent/in-progress rows to abort.
+- Stuck task cleanup:
+  - Dead-host rule (>12h sent, >6h no RPC): aborted 0.
+  - Hard-ceiling rule (>48h): aborted 0.
+- Script check performed on `abx_cycle_hgt_delay_resonance.py`; no deterministic static crash signature found in this pass.
+
+PART 2 DEPLOYMENT AND EXPERIMENT DESIGN SUMMARY
+- Mandatory per-host cap enforcement executed before deployment windows; excess running tasks were cut where needed in earlier cycle, then later cycle required no cap aborts.
+- Backlog guard passed before deployments in both cycles (in_progress remained below 5000 cap at start checks).
+- CPU deployments completed across cycles for 3324 + 3677 host-targeted workunits.
+- GPU mandatory checkpoint/deployments completed across cycles for 281 + 24 workunits using active GPU script rotation.
+- Retirement scans run before deployments; no new unsent retire targets found.
+
+NEW EXPERIMENTS DESIGNED (WITH NOVELTY CHECK DOCUMENTATION)
+1. `rbn_delay_fatigue_control.py` (complex systems / network dynamics)
+- Hypothesis: delayed feedback plus intervention fatigue yields a re-entrant control regime in random Boolean networks.
+- Novelty checks logged:
+  - "random Boolean networks adaptive rewiring criticality"
+  - "Kauffman network delayed control damage spreading"
+  - "Boolean network intervention fatigue delay"
+- Summary outcome: adjacent prior work exists, but no direct match found for the specific delay-by-fatigue interaction map.
+- Sanitizer trust update completed (`trusted_params.json` extended).
+- Initial deployment: 120 CPU WUs.
+
+2. `adaptive_voter_delay_rewiring.py` (network science / statistical physics)
+- Hypothesis: delayed observation plus rewiring fatigue creates re-entrant control behavior in adaptive voter dynamics.
+- Novelty checks logged:
+  - "adaptive voter model rewiring delay polarization persistence"
+  - "voter model with time delay on adaptive networks"
+  - "homophily rewiring opinion dynamics stale information delay"
+- Summary outcome: delay or rewiring effects exist separately in literature; direct fatigue-coupled delayed adaptive-control mapping appears sparse/no direct prior match in retrieved checks.
+- Sanitizer trust update completed (`trusted_params.json` extended).
+- Initial deployment: 120 CPU WUs.
+
+KEY SCIENTIFIC FINDINGS
+1. No new promotable finding was established in this validation cycle because reviewed completed rows could not be attributed to sanitized numeric artifacts (0/286 matches), so quality-based credit remained deferred.
+2. The dominant operational/scientific bottleneck remains sanitizer/assimilator lag for newly completed successful rows; this directly blocks attribution, scoring, and promotion of additional findings.
+3. Previously confirmed findings remain stable in this session, including robust weight-decay interaction effects and completed retired lines (SVD rank intervention, percolation thresholds, WD depth/task/optimizer/LR/width/window, representation crystallization), with no contradiction introduced by current-cycle evidence.
+
+SESSION STATUS
+- Save workflow prepared for Git prior-art timestamping, public results upload, and archival rotation.
