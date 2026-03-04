@@ -1,0 +1,57 @@
+Axiom BOINC Session Results Log
+Session timestamp: 2026-03-04 03:56 America/Denver
+Source logs: validate_2026-03-04_0350.txt, run_2026-03-03_1352.log
+Scope: Consolidated Part 1 (validation/credit/cleanup) + Part 2 (deployment/research)
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Reviewed and credited 5,536 completed uncredited experiment rows.
+- Credit awarded this session: 995.45 total (cap check passed: <= 10,000).
+- Outcome mix credited: outcome=1 => 283; outcome=5 => 21; outcome=6 => 5,232.
+- Top user credit additions: Amapola +844.44, ChelseaOilman +82.31, Orange Kid +43.13, PyHelix +11.03.
+- Upload artifact status for reviewed rows: 0/5,536 JSON payloads found under upload paths.
+
+STUCK/BROKEN TASK CLEANUP
+- Paused clearly broken zero-success prefixes (active aborted):
+  - exp_abx_cycle%: 4
+  - exp_spatial_pgg_delay_fatigue%: 11
+  - exp_potts_pulse_anneal_resonance%: 6
+- Stuck task cleanup actions:
+  - >12h running on dead hosts (>6h no contact): 0 aborted
+  - >48h hard-ceiling aborts: 0
+- Additional retirement pass in Part 2 found over-seeded candidates, but unsent abort total was 0.
+
+DEPLOYMENTS (PART 2)
+CPU deployment
+- Host-targeted deployment completed.
+- CPU hosts processed: 81
+- Low-RAM hosts skipped (<6 GB): 2
+- CPU workunits created: 2,937
+- CPU scripts used:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+- Targeting rule used in run: each eligible CPU host filled toward ~3x CPU queued tasks.
+
+GPU deployment checkpoint
+- GPU deployment pass started separately (as required) with scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Run log capture was interrupted before final GPU summary counters printed, so this log records the checkpoint state and scripts used.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION (PART 2)
+- New/updated experiment development in run log included wd_batchnoise_interaction.py (uploaded and py_compile OK).
+- Mandatory novelty search queries documented in run log before/around design:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+
+KEY SCIENTIFIC FINDINGS
+1. No new payload-level measurements were extractable from the Part 1 reviewed batch because upload JSON artifacts were missing for all 5,536 reviewed rows.
+2. Reliability remains the dominant bottleneck: outcome=6 rows continue to dominate completion flow, indicating pipeline/validation instability rather than a confirmed scientific regime shift.
+3. Specific failing families (abx_cycle, spatial_pgg_delay_fatigue, potts_pulse_anneal_resonance) were paused after repeated zero-success patterns to reduce wasted volunteer compute.
+4. Part 2 prioritized WD interaction/trigger hypotheses (batch-noise interaction, label-smoothing interaction, curvature/timing GPU triggers); these were advanced via CPU queue fill and GPU deployment checkpoint scripts.
+
+KEY SESSION NOTES
+- Website counters after Part 1 update: credited_count=5790; total_results_count=303 (monotonic update preserved).
+- End-of-Part-1 snapshot: uncredited completed exp rows remaining=10 (new arrivals after transaction).

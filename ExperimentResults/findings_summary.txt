@@ -1,47 +1,35 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (validation session 13:03 CET)
-=================================================
+Last updated: March 4, 2026 (session p1_validate_2026-03-04_0350)
+============================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+CORE SCIENTIFIC STATUS
+- No reversal yet of the prior inverse critical-period / WD timing signal.
+- Active science queue still includes WD interaction/trigger families and ecological-delay families.
+- Result ingestion remains unstable: many completed rows still arrive with missing upload JSON payload artifacts.
 
-CORE STATUS
-- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this validation run.
-- Trusted sanitized-result lag remains the main blocker for credit assignment.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-ACTIVE EXPERIMENT CONTEXT
-- CPU scripts currently generating returns include delay-control ecology/PDE/network families
-  (pit_delay_inhibitor_resonance, chemostat_delay_crossfeeding_resonance,
-  tritrophic_delay_harvest_resilience, lorenz96_delay_assimilation_regime_shift,
-  grayscott_delay_pulse_feedback, fiberbundle_delay_healing_entropy, plus newer additions).
-- GPU scripts in active rotation: wd_noise_trigger_gpu, wd_curvature_trigger_gpu,
-  wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
+VALIDATION SESSION UPDATE (March 4, 2026, Part 1, 03:50)
+- Completed rows credited this session: 5,536 rows, 995.45 total credit (under 10,000 cap).
+- Outcome mix credited this session: outcome=1 -> 283 rows; outcome=5 -> 21 rows; outcome=6 -> 5,232 rows.
+- Credit concentration by user: Amapola +844.44, ChelseaOilman +82.31, Orange Kid +43.13, PyHelix +11.03.
+- Payload QC for credited rows: upload JSON found in 0/5,536 sampled paths (all missing artifacts).
+- Broken-prefix cleanup performed (active tasks aborted): abx_cycle=4, spatial_pgg_delay_fatigue=11, potts_pulse_anneal_resonance=6.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters refreshed and kept monotonic: credited_count=5790; total_results_count=303.
+- Cutoff snapshot at session end: uncredited completed exp rows=10; uncredited completed success rows=10.
 
-VALIDATION STATUS (March 4, 2026 13:03 CET)
-- Reviewed uncredited completed-success results: 51 (all `exp_%`, all currently missing matching `_safe.json` by result name).
-- Credit actions this session: 0 credited / 0 total credit added (cap respected).
-- Completed outcome snapshot: success=287; success credited=5489 cumulative rows; success uncredited=51.
-- Failure pattern snapshot: non-success completed rows are dominated by outcome=6 with exit_status=0
-  (consistent with abort/scheduler cleanup, not crash tracebacks).
-- CPU/GPU split for non-success completed rows: appid=1 -> outcome6=5193, outcome5=21; appid=2 -> outcome6=39.
-- Stuck-task cleanup run: dead-host >12h aborted 0; hard >48h aborted 0.
-- High fail-rate watchlist still includes battery_pulse_delay_plating_resonance and abx_cycle,
-  but no clear multi-host crash signature with active unsent/in-progress stock that justifies mass abort this pass.
-- Website counters refreshed: credited_count unchanged at 236 (+0); total_results_count set to 287 (non-decreasing rule).
+RELIABILITY NOTES
+- Dominant completion mode remains outcome=6 batches with little/no runtime and missing payload artifacts.
+- Recent high fail rates are strongly host-concentrated (notably host 287), with specific zero-success prefixes paused to avoid waste.
 
 OPEN QUESTIONS
-- Why assimilator visibility lags for recently completed result names (51 pending credit despite completion).
-- Separate server-abort policy effects from experiment-code defects before any broad experiment shutdown.
+1) Why are many completed rows missing upload artifacts despite terminal DB states?
+2) Should validator/outcome mapping be adjusted when server marks non-success but payload exists?
+3) Should auto-pause thresholds trigger earlier for repeated outcome=6 bursts on specific prefixes/hosts?
+4) Is a separate automatic timeout-credit policy needed to avoid repeated manual backlog sweeps?
+5) What BOINC-side path is dropping upload artifacts (assimilator, file_deleter timing, or result filename mapping)?
