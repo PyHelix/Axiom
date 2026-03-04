@@ -1,35 +1,33 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part1_validate_s)
+Last updated: March 3, 2026 (session s0303_part1_validate_t)
 ============================================================
 
 CORE SCIENTIFIC STATUS
-- No new scientific reversal versus established inverse critical-period (ICP) weight-decay timing findings.
-- This pass was dominated by validation/credit maintenance (missing payload artifacts), not new payload-driven inference.
+- No scientific reversal versus established inverse critical-period (ICP) WD timing findings.
+- This session was validation/credit heavy; upload payload artifacts were still unavailable for sampled uncredited results.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
-- Test whether label smoothing attenuates/amplifies late-WD ICP effects.
+- Quantify whether label smoothing attenuates/amplifies late-WD ICP effects.
 2) wd_curvature_trigger_gpu.py
 - Test whether WD onset is gated by curvature stabilization versus fixed late onset.
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1S)
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1T)
 - Credited 10,000 completed `exp_*` results for exactly 10,000 total credit (session cap reached exactly).
-- Credited batch outcome mix: 0 successful outcomes, 10,000 failed/error outcomes (all outcome=5 in batch).
-- Credited ID span: 1,568,843 through 1,588,935.
-- Uncredited backlog after pass: success 0; failed/error 12,106.
+- Credited batch outcome mix: outcome=3 (66), outcome=5 (9,933), outcome=6 (1), outcome=1 (0).
+- Credited ID span: 1,588,936 through 1,627,742.
+- Uncredited backlog after pass: success 0; failed/error 2,195.
 - Upload payload sampling remained fully missing: 240/240 sampled uncredited rows absent from `/opt/axiom_boinc/upload/*/exp_*`.
-- Batch host attribution note: 7,558 credited rows had unresolved host metadata (`resolved_hostid=0`); 2,442 credit was attributable to known hosts/users.
-- Top observed user additions from attributable subset: ChelseaOilman +407, makracz +217, Josemi +179, mmonnin +146, Steve Dodd +124, Orange Kid +104.
-- Queue health: 635 `exp_*` tasks in progress; 0 unsent.
+- Broken active prefixes aborted (unsent/in-progress only): `exp_metapop_corridor_delay_forecast*` (58), `exp_rps_delay_jitter_adaptive_mobility*` (29), `exp_wd_mixup_interaction*` (9).
 - Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Broken-experiment check: `exp_gpu_matmul_stress_gpu*` showed 9 recent zero-time failures across 4 hosts, but no active unsent/in-progress tasks remained to abort.
-- Website counters after update: credited_count=64,451; total_results_count=55,009.
+- Queue health after cleanup: 498 `exp_*` tasks in progress/unsent (from 594 pre-abort).
+- Website counters after update: credited_count=64,438; total_results_count=55,009.
 
 CROSS-SESSION TAKEAWAYS
-- Recent validation passes remain dominated by missing upload payloads; operational credit fairness remains the primary activity.
-- No new evidence yet overturns prior WD/ICP timing conclusions.
+- Recent validation passes are still dominated by missing upload payloads; operational fairness crediting remains the primary activity.
+- Some currently deployed prefixes show severe reliability issues (including 100% historical failure for selected active prefixes), requiring deployment-side gating.
 
 OPEN QUESTIONS
 1) Why are many completed result names absent from `/opt/axiom_boinc/upload/*/exp_*` at validation time (retention timing vs path/layout mismatch)?
-2) Should legacy rows with unresolved host metadata (`hostid=0` and non-recoverable name encoding) receive parallel user-level attribution handling?
-3) Should deployment-side safeguards prevent repeated seeding of known zero-time-fail legacy prefixes?
+2) Should unresolved-host legacy rows receive separate attribution handling when host metadata is incomplete?
+3) Should deployment-side safeguards block reseeding experiment prefixes with persistent zero-time crash signatures?
