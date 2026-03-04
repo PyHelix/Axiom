@@ -1,0 +1,42 @@
+AXIOM BOINC SESSION LOG
+Timestamp: 2026-03-04 (Europe/Berlin)
+Session scope: Part 3 save/upload, compiling Part 1 validation + Part 2 deployment/design context
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed the latest uncredited, host-executed completed result batch (`server_state=5`, `granted_credit=0`, `name LIKE 'exp_%'`, `hostid>0`) and spot-checked recent upload payloads for valid structured `experiment_result` JSON.
+- Awarded credit to 500 completed host-executed results.
+- Total credit granted this session: 8,875.0 (under the 10,000 session cap).
+- Incremental credit updates applied to user and host totals.
+- Counter updates:
+  - `credited_count.txt`: 42,661 -> 43,161 (+500)
+  - `total_results_count.txt`: 54,848 (non-decreasing DB completed-success count)
+
+CLEANUP AND OPERATIONS
+- Dead-host stuck-task cleanup (>12h sent and >6h no contact): no rows matched.
+- Hard runtime ceiling cleanup (>48h runtime): no rows matched.
+- Broken experiment abort pass (`server_state IN (2,4)`): no active line required abort.
+- No new deterministic crash signature observed in active high-throughput lines.
+
+EXPERIMENT DEPLOYMENT AND NEW DESIGN WORK
+- CPU top-up deployment: 2,359 WUs created (hosts seen/touched: 74/72; RAM<6GB skipped: 2).
+- GPU top-up deployment: 257 WUs created (GPU hosts seen/touched: 70/70).
+- Transitioner refresh/run executed after deployment phases.
+
+New experiment seeded this session:
+- `cascade_forecast_delay_shedding.py` (CPU, infrastructure resilience / network dynamics)
+- Staged to 30 high-capacity CPU hosts (r1)
+- Design: strategy {fixed, adaptive} x repair_delay {1,4,8} x forecast_noise {0.00,0.10,0.20}
+- Outputs: live-fraction, largest-component fraction, unserved energy, failures, adaptive-minus-fixed effect
+
+Novelty check documentation:
+- Prior art review indicates cascading failures, mitigation, delayed recovery, and uncertainty are studied, but direct replicated tests of adaptive-vs-fixed shedding under combined forecast noise plus explicit repair delay remain limited.
+- Proposed novelty: identifies the repair-delay x forecast-noise boundary where adaptive forecast-triggered shedding flips from protective to harmful versus fixed shedding.
+
+KEY SCIENTIFIC FINDINGS
+1. No new 30+ seed cross-validated finding was promoted in this validation cycle.
+2. Recent `wd_*` interaction pipelines continued returning structured `experiment_result` payloads, with no contradiction to existing confirmed WD interaction findings.
+3. Active lines (`wd_imbalance_interaction`, `wd_batchnoise_interaction`, `regtimuniv`, `wdonsetsweep`) did not show failure behavior requiring broad abort actions in this cycle.
+4. The new `cascade_forecast_delay_shedding` study introduces a novel threshold-focused test on when adaptive load shedding becomes net-harmful under delayed repair and forecast uncertainty.
+
+SESSION CLOSEOUT
+- Session log prepared for Git prior-art timestamping, publication to public results page, and archival rotation.

@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part2_deploy)
+Last updated: March 4, 2026 (session part1_validate)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -19,18 +19,21 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- Confirmed lines above remain stable; no new 30+ seed cross-validated finding added in this cycle.
-- Priority remains interaction-mechanism tests plus non-ML cross-disciplinary experiments.
+- No new 30+ seed cross-validated finding added in this cycle.
+- Priority remains non-retired interaction/mechanism studies plus non-ML STEM diversification.
+
+VALIDATION CONTEXT
+- No /opt/axiom/experiment_session/validate_*.txt file was present at runtime.
 
 RETIREMENT CHECK (THIS SESSION)
-- Over-seeded scan rerun; active over-completed lines still include svdrank, wdextwidth, percolation,
+- Over-seeded scan rerun; still over-completed and retired/retirable: svdrank, wdextwidth, percolation,
   wddepth, wdtasksweep, wdoptim, wdlr, wdwidthtrans, wdwindow, repcrystal.
 - Unsent backlog was 0 at check time; no abort UPDATE executed.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
 - CPU top-up pass: 2,359 WUs created (hosts seen/touched: 74/72; RAM<6GB skipped: 2).
 - GPU top-up pass: 257 WUs created (GPU hosts seen/touched: 70/70).
-- New experiment seeding: rps_delay_jitter_adaptive_mobility staged to 30 high-capacity CPU hosts (r1).
+- New experiment seeding: cascade_forecast_delay_shedding staged to 30 high-capacity CPU hosts (r1).
 - Transition refresh + one-pass transitioner executed after CPU, GPU, and new-experiment seeding.
 
 GPU CHECKPOINT (MANDATORY)
@@ -40,37 +43,29 @@ GPU CHECKPOINT (MANDATORY)
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: rps_delay_jitter_adaptive_mobility.py (CPU, spatial ecology / evolutionary dynamics)
-- Query: "rock-paper-scissors adaptive mobility delay response paper"
-- Query: "cyclic dominance response delay spatial game"
-- Query: "rock paper scissors environmental switching mobility"
-- Found: prior work reports adaptive mobility and environmental switching effects in cyclic-dominance systems,
-  but little direct evidence on adaptive-vs-fixed mobility under phase-jittered forcing with explicit sensing delay.
-- Novel angle: tests whether adaptive mobility benefit survives under jitter and delay, and identifies delay threshold
-  where adaptation becomes harmful (interaction of delay x forcing jitter).
+1) New experiment: cascade_forecast_delay_shedding.py (CPU, infrastructure resilience / network dynamics)
+- Query: "power grid cascading failure proactive load shedding forecast error repair delay study"
+- Query: "cascading failure network delayed repair adaptive mitigation simulation"
+- Query: "cascading failure forecast uncertainty proactive load shedding delay interaction"
+- Found: prior work covers cascading failures, mitigation, and delayed recovery separately; some work studies
+  uncertainty in control, but direct tests of adaptive-vs-fixed shedding under combined forecast noise and
+  explicit repair delay in one replicated framework are limited.
+- Novel angle: quantifies the delay x forecast-noise threshold where adaptive forecast-triggered shedding flips
+  from protective to harmful relative to fixed shedding.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) rps_delay_jitter_adaptive_mobility.py
+1) cascade_forecast_delay_shedding.py
 - CPU numpy-only, run-duration compliant (independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Conditions: fixed vs adaptive mobility across delay {0,5,15} and jitter {0.00,0.10,0.20}.
-- Outputs: coexistence fraction, diversity entropy, and adaptive-minus-fixed effect at jitter=0.10.
+- Conditions: strategy {fixed, adaptive} x repair_delay {1,4,8} x forecast_noise {0.00,0.10,0.20}.
+- Outputs: live-fraction, largest-component fraction, unserved energy, failures, adaptive-minus-fixed effect.
 
-OPERATIONAL NOTE
-- Queue-gap SQL based on result.hostid may lag immediately after create_work bursts.
-
-VALIDATION SUMMARY (March 4, 2026, part1_validate)
-- Credited 220 completed results (ID range 1648857..1656685), total awarded credit: 2,915 (session cap respected).
-- No stuck-task cleanup needed this pass: 0 tasks matched (>12h on dead hosts) and 0 matched hard >48h ceiling.
-- No active experiment was aborted as broken this pass; active families showed low failure (wd_imbalance 0.0%,
-  wd_batchnoise 4.0%, wd_curriculum 0.0%, wd_onset 0.0%, regtimuniv 12.4%).
-
-SCIENTIFIC UPDATE FROM THIS VALIDATION BATCH
-- WD+batch-noise interaction remained strongly positive in all reviewed seeds (n=28 in this batch):
-  interaction_gain_difference mean +0.322, interaction_positive_rate mean 0.999.
-- WD+imbalance interaction remained stable in direction and magnitude (n=67 in this batch):
-  interaction_excess mean +0.0945, joint_gain_vs_base mean +0.2053.
-- WD+label-smoothing interaction remained present but mixed-sign at seed level (n=36 in this batch):
-  additivity_residual mean +0.0278 (range -0.173 to +0.185), consistent with attenuation in a minority of seeds.
-- WD-LR interaction exploratory runs in this batch stayed weak/negative (5 runs: 2 WEAK, 3 NEGATIVE;
-  supported predictions mean 0.15/1.0), no upgrade to confirmed status.
+VALIDATION SUMMARY (2026-03-04 part1)
+- Reviewed latest uncredited host-completed outputs and confirmed recent files contain valid JSON payloads
+  under /opt/axiom_boinc/upload/*/exp_* (mostly {"experiment_result": ...} in the newest completed batch).
+- No broken active experiment required abort this pass: current active lines showed low completed fail rates
+  (wd_imbalance_interaction 0.0%, wd_batchnoise_interaction 4.0%, regtimuniv 12.4%, wdonsetsweep 0.0%).
+- Stuck-task cleanup checks were executed; no tasks matched dead-host >12h or hard-ceiling >48h criteria.
+- Credit awarded this session: 500 host-executed results, total 8,875.0 credit (incremental updates only).
+- No new 30+ seed confirmed finding promoted in this validation pass; current interaction studies continue
+  to produce non-null experiment_result payloads with no new contradiction to existing confirmed findings.
