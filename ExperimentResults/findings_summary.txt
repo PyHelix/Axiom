@@ -1,6 +1,6 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 18:02 CET)
-=================================================
+Last updated: March 4, 2026 (analysis session 18:02 CET + p1_validate_2026-03-04_0921)
+===============================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
 1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
@@ -40,3 +40,25 @@ EXPERIMENT STATUS
 - Confirmed this cycle (>=30 seeds with consistent direction): pit_delay_inhibitor_resonance, autocatalytic_dilution_memory_window, nonmarkov_trap_release_window.
 - Preliminary this cycle (10-29 seeds or mixed direction): none promoted.
 - Insufficient or no clear directional metric this cycle: remaining analyzed families.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 09:06, Part 1)
+- Reviewed completed success rows: 195 (payload: experiment_result=195; error payloads=0).
+- Credit posted this session: 195 rows, 2302 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=183 rows, GPU(appid=2)=12 rows.
+- Elapsed-time profile (reviewed rows): min=50.39s, median=845.06s, max=901.72s.
+- Dominant reviewed families: cstr_poison_purge_reentrance (20), toggle_delay_adaptive_control (17), grayscott_delay_pulse_feedback (11), tritrophic_delay_harvest_resilience (10), metapop_allee_corridor_hysteresis (10).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no qualifying high-failure multi-host pattern; no broad aborts applied.
+- Website counters updated: credited_count=5377; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 09:21, Part 1)
+- Reviewed completed success rows: 273 (payload: experiment_result=273; error payloads=0).
+- Credit posted this session: 273 rows, 3279 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=261 rows, GPU(appid=2)=12 rows.
+- Elapsed-time profile (reviewed rows): min=49.06s, median=846.10s, max=1221.28s.
+- Dominant reviewed families: toggle_delay_adaptive_control (14), cascade_forecast_delay_shedding (14), tritrophic_delay* (13), lorenz96_delay_assimilation_regime_shift (13), metapop_corridor_delay_forecast (13).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no qualifying high-failure multi-host pattern; no broad aborts applied.
+- Website counters updated: credited_count=5650; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=74; uncredited completed failure rows=0.
