@@ -1,0 +1,43 @@
+AXIOM VALIDATION & CREDIT LOG
+Session timestamp: 2026-03-05 00:43:30
+Step: Validation/Credit/Cleanup (Step 2 of 8)
+
+1) RESULTS REVIEWED THIS SESSION
+- Uncredited successful exp_ results reviewed: 101
+- Result IDs reviewed: 1686429, 1686430, 1686432, 1687582, 1687583, 1687751, 1687752, 1687753, 1687754, 1687755, 1687756, 1688393, 1688394, 1688395, 1688396, 1688397, 1688398, 1688399, 1688611, 1688620, 1688624, 1688627, 1688630, 1688691, 1688692, 1688693, 1688694, 1688695, 1688696, 1688697, 1688698, 1688699, 1688700, 1688701, 1688702, 1688703, 1688704, 1688705, 1688706, 1688708, 1688709, 1688710, 1688711, 1688712, 1688713, 1688715, 1688717, 1688719, 1688721, 1688723, 1688726, 1688727, 1688738, 1688740, 1688753, 1688754, 1688755, 1688756, 1688757, 1688758, 1688759, 1688760, 1688761, 1688762, 1688763, 1688764, 1688765, 1688802, 1688808, 1688867, 1688868, 1689188, 1689193, 1689232, 1689234, 1689235, 1689240, 1689241, 1689242, 1689245, 1689246, 1689290, 1689291, 1689292, 1689293, 1689294, 1689295, 1689296, 1689298, 1689299, 1689300, 1689301, 1689303, 1689305, 1689306, 1689309, 1689311, 1689312, 1689492, 1689638, 1689649
+- Sanitized exact matches found for these result IDs: 0
+- Quality decision: No credit granted this session because zero exact sanitized payload matches were available for the current uncredited IDs; attribution is deferred until assimilated safe files map directly to these result names.
+
+2) CREDIT AWARDED
+- Credited results this session: 0
+- Total credit awarded this session: 0 (cap: 10000)
+- Per-user credit additions: none (no result met safe-attribution requirements in this cycle)
+
+3) CLEANUP ACTIONS
+- Stuck tasks aborted (>12h running and host >6h silent): 0
+- Hard-ceiling aborts (>48h running): 0
+- Broken experiment mass-aborts: none (no active client/validation crash signature; recent non-successes are cancellations with exit_status=0)
+
+4) LIVE STATE SNAPSHOT
+- appid=1: success=191, canceled=749, client_err=0, validate_err=0, total=940
+- appid=2: success=13, canceled=0, client_err=0, validate_err=0, total=13
+- Running backlog (top 12 by count):
+  * schellingtax (appid=1): 205
+  * tritrophic_delay (appid=1): 57
+  * grayscott_delay_pulse_feedback (appid=1): 42
+  * metapop_corridor_delay_forecast (appid=1): 41
+  * lorenz96_delay_assimilation_regime_shift (appid=1): 38
+  * fisherkpp_delay_adaptive_refugia_gpu_gpu (appid=2): 34
+  * potts_rf_delay_adaptive_anneal_window_gpu_gpu (appid=2): 33
+  * allencahn_delay_adaptive_quench_window_gpu_gpu (appid=2): 32
+  * vicsek_delay_noise_window_gpu_gpu (appid=2): 32
+  * chemostat_delay_crossfeeding_resonance (appid=1): 31
+  * lbm_delay_adaptive_forcing_window_gpu_gpu (appid=2): 31
+  * pit_delay_inhibitor_resonance (appid=1): 30
+
+5) BUGS FOUND / FIXED IN EXPERIMENT SCRIPTS
+- None in this session (no script edits made in Step 2).
+
+6) COUNTERS UPDATED
+- /opt/axiom_boinc/html/user/credited_count.txt = 103
+- /opt/axiom_boinc/html/user/total_results_count.txt = 203
