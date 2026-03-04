@@ -1,0 +1,46 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: 2026-03-04 11:06 CET
+Session type: Validation + deployment/design wrap-up (Parts 1-2 summary)
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed 22 uncredited completed-success results from the latest validation batch.
+- Credit awarded this session: 0 results, 0 total credit.
+- Reason no credit was applied: corresponding trusted sanitized files were not yet present for all reviewed results at validation time.
+- Scientific quality assessment for that batch remains deferred until sanitized numeric payloads arrive.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host cleanup rule (>12h running and >6h no contact): 0 tasks aborted.
+- Hard runtime ceiling rule (>48h running): 0 tasks aborted.
+- Failure-state review remains dominated by completed non-success outcomes 5/6 with exit_status 0.
+- Broken experiment watchlist: battery_pulse_delay_plating_resonance remains failure-only (6 failures, 0 successes, 1 in-progress); no unsent tasks; no blanket abort executed.
+
+NEW EXPERIMENTS DESIGNED (PART 2 CONTEXT) + NOVELTY CHECK NOTES
+- Newly seeded/active CPU design set in this session cycle:
+  pit_delay_inhibitor_resonance.py
+  chemostat_delay_crossfeeding_resonance.py
+  tritrophic_delay_harvest_resilience.py
+  lorenz96_delay_assimilation_regime_shift.py
+  grayscott_delay_pulse_feedback.py
+  fiberbundle_delay_healing_entropy.py
+  schlogl_delay_adaptive_gain_resonance.py
+  potts_pulse_anneal_resonance.py
+- Newly seeded/active GPU design set in this session cycle:
+  wd_noise_trigger_gpu.py
+  wd_curvature_trigger_gpu.py
+  wd_timing_scale_gpu.py
+  grad_subspace_wd_gpu.py
+  wd_anisotropy_trigger_gpu.py
+  gpu_matmul_stress.py
+- Novelty check documentation status: design set tracked against established retired/confirmed WD and dynamical-systems findings in findings_summary; no duplicate rerun of retired canonical experiments was introduced in this cycle.
+
+KEY SCIENTIFIC FINDINGS
+1. No new finding was promotable this validation run because trusted sanitized numeric payloads were missing for all 22 reviewed completed-success results.
+2. The non-success landscape remains concentrated in outcome 5/6 with exit_status 0, reinforcing an operational/validation-path attrition interpretation over a confirmed compute-crash signature.
+3. No new 30+ seed cross-validated result met promotion criteria to CONFIRMED FINDINGS in this run.
+4. Established confirmed findings remain unchanged this session, including robust WD interaction effects (timing, label smoothing, batch noise, imbalance) and previously retired completed experiment families.
+
+SESSION METRICS SNAPSHOT
+- credited_count: unchanged at 66
+- total_results_count: 89
+- Latest validation log source: /opt/axiom/experiment_session/validate_2026-03-04_1105.txt
+
