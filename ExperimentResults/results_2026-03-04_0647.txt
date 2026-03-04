@@ -1,0 +1,76 @@
+AXIOM BOINC SESSION RESULTS LOG (Part 3 Consolidation)
+Session timestamp: 2026-03-04 06:47
+Sources: validate_2026-03-04_0643.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+KEY SCIENTIFIC FINDINGS
+1. Missing-payload regime persisted in this validation window: 460/460 credited rows had no retrievable upload JSON artifacts, continuing the assimilator/file lifecycle concern.
+2. Credited workload remained dominated by delay-family lines; observed failure bursts were concentrated in zero-elapsed timeout signatures (outcome=6, exit_status=0), supporting an infrastructure/runtime reliability bottleneck rather than interpretable payload failures.
+3. Part 2 prioritized mechanism-level WD interaction experiments: a new batch-noise interaction test was added and deployed to CPU queues, while GPU queue pressure remained focused on curvature-trigger and timing-scale WD mechanisms.
+
+PART 1 VALIDATION / CREDIT SUMMARY
+- Terminal uncredited rows reviewed: 460 total (success=396, failed=64).
+- App mix credited: CPU(appid=1)=442, GPU(appid=2)=18.
+- Total credit awarded: 2010.00 (session cap 10,000 respected).
+- Per-user credits were incrementally added to user.total_credit and host.total_credit (no absolute resets).
+- Website counters updated:
+  - credited_count.txt: 3043 -> 9112
+  - total_results_count.txt: 3164 -> 3466
+- Post-credit backlog snapshot:
+  - Uncredited completed success rows: 27
+  - Uncredited completed failure rows: 113
+
+STUCK / BROKEN TASK CLEANUP
+- Broken experiment active-task aborts:
+  - exp_oscillatory_roughchannel_lbm_resonance*: 13 aborted
+  - exp_potts_pulse_anneal_resonance*: 22 aborted
+  - exp_abx_cycle_hgt_delay_resonance*: 0
+  - exp_abx_cycle*: 0
+  - exp_spatial_pgg_delay_fatigue*: 0
+- Stuck-task cleanup:
+  - Dead-host >12h running aborts: 0
+  - Hard >48h running aborts: 0
+
+PART 2 RESEARCH / DEPLOYMENT SUMMARY
+- Retirement pass executed before deployment.
+- Retirement candidates were over-completed but had no unsent inventory at action time; ABORT_TOTAL=0.
+
+CPU DEPLOYMENT
+- CPU scripts used:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+- Host targeting: fill to ~3x CPU queue depth, skip hosts with RAM <6 GB.
+- CPU deployment checkpoint from run log:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2
+  - CPU_WU_CREATED=2937
+
+GPU DEPLOYMENT CHECKPOINT
+- GPU scripts targeted:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Part 2 run log terminated during GPU command capture on Windows (^C shown in log), so final in-log counters were not printed.
+- Live DB checkpoint query after run window (create_time >= 2026-03-03 13:52:00):
+  - GPU workunits created for these two script prefixes: 2721
+  - GPU hosts receiving these workunits: 14
+  - Currently queued for these two prefixes (server_state 1/2/4): 12 results across 7 hosts
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- Newly added script:
+  - wd_batchnoise_interaction.py
+- Core hypothesis:
+  - Late weight decay improves generalization more under high gradient-noise conditions (small batch) than low-noise conditions (large batch).
+- Novelty/literature search queries logged in Part 2 run:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "Scheduled Weight Decay paper arxiv 2021"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+  - "site:arxiv.org batch size weight decay generalization"
+  - "\"weight decay\" \"batch size\" \"schedule\" neural networks"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Novel angle recorded for this session:
+  - Targets a specific interaction effect (timing x gradient-noise regime) rather than a generic WD ablation; deployed with host-derived seeding and fixed run-duration compliance.
+
+OPERATIONAL NOTES
+- No script edits were made during Part 1 validation.
+- Persistent issue remains: frequent completed rows without retrievable payload artifacts at validation time.
