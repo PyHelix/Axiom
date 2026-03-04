@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_1245)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1403)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -81,3 +81,14 @@ VALIDATION SESSION UPDATE (March 04, 2026, 13:51, Part 1)
 - Broken-experiment screening (recent, nonzero-elapsed failures by appid): no candidate required broad abort.
 - Website counters normalized to non-decreasing values: credited_count=1867; total_results_count=1867.
 - Cutoff snapshot after this pass: uncredited completed success rows=5; uncredited completed failure rows=3575 (nonzero-elapsed failures pending credit: 0).
+VALIDATION SESSION UPDATE (March 04, 2026, 14:03, Part 1)
+- Reviewed/credited completed rows this session: 40 success rows (result IDs 1678805, 1684481, 1687321, 1687353, 1687354, 1687362, 1687363, 1687364, 1687365, 1687368, 1687396, 1687397, 1687398, 1687399, 1687400, 1687401, 1687404, 1687412, 1687413, 1687414, 1687415, 1687442, 1687443, 1687444, 1687445, 1687458, 1687459, 1687462, 1687463, 1687464, 1687465, 1687475, 1687476, 1687485, 1687486, 1687488, 1687492, 1687493, 1687494, 1687495).
+- Payload audit for credited rows: 40/40 valid `experiment_result` JSON payloads (via xml_doc_out filename resolution).
+- Credit posted this session: 40 rows, 754 total credit (under 10,000 cap).
+- Credit distribution (top contributors): ChelseaOilman 304; kotenok2000 128; WTBroughton 95; Orange Kid 76; PyHelix 38.
+- Success elapsed profile (credited batch): min=820.10s, median=844.23s, max=905.78s.
+- Dominant credited families: moranmig (23), chemostat (5), vicsekdelay_gpu (2), grayscott_delay_pulse_feedback (2), plus singletons from delay-ecology/control families.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening this pass: no recent nonzero-elapsed CPU/GPU crash family; no broad abort performed.
+- Website counters updated: credited_count=1907; total_results_count=1907.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows with nonzero elapsed=0.
