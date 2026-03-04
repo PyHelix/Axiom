@@ -1,0 +1,56 @@
+AXIOM BOINC SESSION RESULTS
+Timestamp: 2026-03-04 12:37 CET
+Host: local project server
+
+SESSION SUMMARY
+- Validation and deployment work from Parts 1 and 2 was consolidated in this closeout.
+- Scope covered result validation status, credit assignment checks, stuck-task cleanup, deployment status, and novelty checks for new experiment designs.
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Completed-success results reviewed this validation pass: 107 (exp-family workloads).
+- Sanitized exact `_result_name` coverage for reviewed rows: 0 exact matches at validation time.
+- Quality review outcome: no trustworthy sanitized payloads mapped to exact reviewed result names in this pass.
+- Credit awarded this session: 0 total (session cap respected).
+- Result/user/host credit updates: none applied in this pass.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running abort query: 0 rows updated.
+- Hard >48h running abort query: 0 rows updated.
+- Historical 100% failure families checked for active backlog:
+  oscillatory_roughchannel_lbm_resonance, abx_cycle_hgt_delay_resonance,
+  potts_pulse_anneal_resonance, spatial_pgg_delay_fatigue.
+- Active backlog for all families above: unsent=0 and in_progress=0; no mass-abort action required.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+1. `xy_delay_thermostat_reentrance` (2D XY lattice with delayed adaptive thermostat feedback)
+   - Literature/novelty checks run on delayed-feedback XY model queries and adjacent feedback-Ising literature.
+   - Outcome: no direct exact-match publication identified for this specific adaptive delayed-thermostat XY setup.
+   - Novel hypothesis retained: intermediate delay may improve ordering versus both zero-delay and large-delay regimes (re-entrant control benefit).
+
+2. `cahnhilliard_delay_feedback_window` (conserved phase separation with delayed adaptive mobility feedback)
+   - Literature/novelty checks run on delayed-feedback Cahn-Hilliard, phase-field delayed control, and nonlocal/global feedback coarsening papers.
+   - Outcome: related control literature exists, but no clear surfaced prior test of a delay-window advantage for adaptive domain-size tracking.
+   - Novel hypothesis retained: quantify re-entrant medium-delay benefit (d=0,4,8,16) in tracking-error and control-cost tradeoff.
+
+DEPLOYMENT CONTEXT SNAPSHOT
+- Backlog gate stayed below cap before deployment cycles.
+- CPU/GPU per-host cap enforcement checks run; no sustained pre-deploy offenders.
+- New WU creation in recent cycle included:
+  - CPU batches for active delay-control ecology/PDE/network families.
+  - GPU batches for active GPU-aware WD/curvature/timing/subspace/matmul stress scripts.
+  - Targeted first-pass sampling for new scripts: `xy_delay_thermostat_reentrance.py`, `cahnhilliard_delay_feedback_window.py`.
+- Transitioner passes executed after deployment stages.
+
+KEY SCIENTIFIC FINDINGS
+1. No new 30+ seed cross-validated result reached promotion threshold in this validation pass.
+2. The dominant blocker for assigning scientific-value credit remains assimilator lag: newly completed rows lacked matching sanitized files keyed by exact `_result_name` at review time.
+3. Previously identified 100% failure families currently have zero active unsent/in-progress backlog, reducing risk of further volunteer compute waste from those families this cycle.
+4. Confirmed-findings registry remains unchanged; no existing confirmed result was invalidated in this session.
+
+OPEN ISSUES TO MONITOR
+- Assimilator timing/visibility lag between completion and sanitized-name availability.
+- Point-in-time counter drift during concurrent background processing.
+
+COUNTER SNAPSHOT (SESSION CLOSE)
+- credited_count.txt: 1056
+- total_results_count.txt: 1170
