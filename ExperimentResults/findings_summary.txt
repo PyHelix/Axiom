@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_0853)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_0906)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -31,3 +31,14 @@ OPEN QUESTIONS
 1) Are remaining intermittent GPU failures primarily host/driver instability versus experiment-specific CUDA defects?
 2) Should automatic pause thresholds require both high fail-rate and multi-host confirmation within a recent time window?
 3) Should validation cadence increase further to reduce the growing success-only uncredited backlog between snapshots?
+
+VALIDATION SESSION UPDATE (March 04, 2026, 09:06, Part 1)
+- Reviewed completed success rows: 195 (payload: experiment_result=195; error payloads=0).
+- Credit posted this session: 195 rows, 2302 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=183 rows, GPU(appid=2)=12 rows.
+- Elapsed-time profile (reviewed rows): min=50.39s, median=845.06s, max=901.72s.
+- Dominant reviewed families: cstr_poison_purge_reentrance (20), toggle_delay_adaptive_control (17), grayscott_delay_pulse_feedback (11), tritrophic_delay_harvest_resilience (10), metapop_allee_corridor_hysteresis (10).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no qualifying high-failure multi-host pattern; no broad aborts applied.
+- Website counters updated: credited_count=5377; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
