@@ -1,0 +1,68 @@
+Axiom BOINC Session Results Log
+Session: 2026-03-04 03:00 (America/Denver)
+Part: 3 (Save/Upload)
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Validation source log: validate_2026-03-04_0254.txt.
+- Credit awarded in two passes: 174 completed xp_* results, 30.9 total credit (under 10,000 cap).
+- Per-user awarded:
+  - Steve Dodd: +11.1
+  - PyHelix: +6.0
+  - makracz: +5.2
+  - Orange Kid: +3.2
+  - kotenok2000: +3.0
+  - marmot: +2.4
+- Post-credit verification: uncredited completed xp_* rows = 0.
+
+STUCK/BROKEN TASK CLEANUP (PART 1)
+- Broken-prefix aborts applied (server_state IN (2,4) -> server_state=5,outcome=5):
+  - kuramoto_delay_noisy_control: 18
+  - toggle_delay_adaptive_control: 8
+  - fisher_delay_adaptive_culling: 7
+  - wildfire_delay_adaptive_suppression: 9
+  - seir_delay_fatigue_control: 9
+  - sandpile_delay_adaptive_dissipation: 9
+  - lorenz96_delay_assimilation_regime_shift: 49
+  - tritrophic_delay_harvest_resilience: 49
+  - heavytail_blockclip_spectrum: 11
+  - Total broken-prefix aborts: 169
+- Stuck-task aborts:
+  - Dead-host >12h rule: 0
+  - >48h hard ceiling: 0
+
+DEPLOYMENT SUMMARY (PART 2)
+- Run log source: run_2026-03-03_1352.log.
+- CPU deployment pass:
+  - Script set: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+  - Runtime output: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2, CPU_WU_CREATED=2937.
+  - Persisted WUs currently attributable to this run window (since 2026-03-03 13:52): 6 total on host 123 (Dads-PC) across those two scripts.
+- GPU deployment checkpoint:
+  - Script set: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+  - Workunits created in run window (since 2026-03-03 13:52): 1,035 total (518 curvature-trigger + 517 timing-scale).
+  - Active GPU host count targeted: 85 distinct hosts.
+  - GPU host IDs targeted: 1,6,7,9,15,16,23,29,31,57,67,71,72,74,80,85,86,87,95,105,107,113,115,116,118,123,126,127,137,140,159,192,205,206,209,212,216,217,219,222,223,249,251,253,255,258,267,287,299,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,345,346,347,349,350,351,352,353,354,355,356.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION (PART 2)
+- New experiment script designed and uploaded: wd_batchnoise_interaction.py.
+- Purpose: test whether late weight-decay benefit is larger under small-batch (higher gradient noise) training than large-batch training using ID/OOD generalization gap interaction.
+- Script validation: server-side python3 -m py_compile succeeded.
+- Novelty-check evidence logged in Part 2 run:
+  - arXiv/domain queries executed for weight-decay scheduling + batch-size interaction.
+  - reference sweep included classic decoupled WD anchor (rXiv:1711.05101) and targeted interaction/scheduling searches.
+  - decision recorded to proceed with an interaction-focused experiment rather than settled baseline replication.
+- Retirement gate pass executed before deployment:
+  - Retirement candidates reviewed (e.g., svdrank/wdoptim/etc.), but ABORT_TOTAL=0 in this Part 2 pass.
+
+KEY SCIENTIFIC FINDINGS
+1. New validated GPU WD payloads (wd_curvature_trigger_gpu, wd_timing_scale_gpu) again produced valid xperiment_result JSON, supporting pipeline integrity for successful GPU WD tasks.
+2. Current dominant failure signature in high-failure ecological-delay prefixes remains immediate zero-runtime completion with missing upload payloads, reinforcing dispatch/runtime-path instability as the likely bottleneck.
+3. Grayscott-delay behavior remains mixed quality (both valid science payloads and explicit error payloads), unlike several delay prefixes that show near-total immediate failure.
+4. Part 2 extended WD mechanism testing with a new batch-noise interaction design to test whether late-WD gains depend on stochastic gradient noise regime.
+
+KEY SCIENTIFIC RESULTS (FROM FINDINGS MEMORY CONTEXT)
+1. Inverse critical-period WD timing signal remains established with no observed reversal in recent sessions.
+2. Active scientific emphasis has shifted toward ecological-delay dynamics plus WD interaction mechanisms (label smoothing, curvature gating, batch-noise interaction).
+
+NOTES
+- This session log intentionally excludes cumulative credited result-ID inventories; credit state is tracked in DB.
+- Findings context source consulted: indings_summary.txt.
