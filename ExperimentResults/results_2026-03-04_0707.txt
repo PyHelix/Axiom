@@ -1,0 +1,37 @@
+AXIOM BOINC SESSION LOG
+Timestamp: 2026-03-04 07:07 CET
+Session scope: Part 1 validation/credit + Part 2 deployment/experiment design summary
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed latest uncredited completion from wd_timing_scale_gpu workload (single-seed validation pass).
+- Awarded credit for valid scientific payload: 120 credit granted.
+- User and host total_credit counters incremented accordingly.
+- Session credit total applied: 120 (within configured cap).
+- credited_count.txt incremented by 1 to 54439.
+- total_results_count.txt synchronized to 55058.
+
+STUCK/BROKEN TASK CLEANUP
+- Stuck task cleanup rule (>12h running on hosts offline >6h): 0 tasks updated.
+- Hard-ceiling cleanup rule (>48h running): 0 tasks updated.
+- Investigated high-failure GPU queue samples; sampled uploads contained completed JSON science payloads, so no mass abort was executed.
+
+NEW EXPERIMENTS DESIGNED AND DEPLOYED (WITH NOVELTY CHECK)
+- Added and seeded new CPU experiment: spatial_pgg_delay_fatigue.py.
+- Novelty documentation recorded from targeted literature queries on spatial public goods games, punishment delay, and cooperation dynamics.
+- Prior art found for punishment/delay dynamics, but no clear large replicated factorial adaptive-vs-fixed sanction study combining observation delay, sensing noise, and enforcement fatigue.
+- Novel hypothesis: delay-driven regime inversion where adaptive sanctions help at low delay but can underperform fixed sanctions at long delay under noise/fatigue.
+- New experiment initial seeding: 48 targeted CPU WUs across 24 active high-capacity hosts.
+
+DEPLOYMENT SUMMARY
+- CPU top-up deployed: 5,886 WUs (appid=1) across active RAM-qualified hosts.
+- GPU top-up deployed: 330 WUs (appid=2) across idle-capable GPU hosts.
+- Transition refresh and transitioner pass executed after deployment phases.
+- Retirement check executed before seeding; no experiment met retirement/abort criteria.
+
+KEY SCIENTIFIC FINDINGS
+1. Latest validated wd_timing_scale_gpu seed showed non-universal inverse critical-period behavior (inverse_cp_holds_all=false) with heterogeneous width effects; trend remained stable with weak positive scale correlation (0.1302).
+2. Spot-checks of recent GPU outcome!=1 records frequently contained completed science JSON payloads, supporting a validator/outcome-classification mismatch hypothesis rather than a uniform experiment-script crash.
+3. No new 30+ seed cross-validated finding met promotion threshold in this session; established findings remain unchanged while diversification progressed via a new evolutionary-game experiment.
+
+OPERATIONAL NOTES
+- One automation robustness fix was applied during session operations: mysql password handling switched to --password= quoting form.
