@@ -1,0 +1,41 @@
+AXIOM BOINC SESSION RESULTS
+Session timestamp: 2026-03-04 10:49 CET
+
+SCOPE
+- Consolidated summary of this session's validation/credit review, cleanup actions, deployment context, experiment design activity, and scientific findings.
+
+RESULTS REVIEWED AND CREDIT ACTIONS
+- Uncredited completed-success results reviewed: 3
+- Reviewed result IDs: 1662254, 1662258, 1662428
+- Trusted sanitized payload check: corresponding `_safe.json` files were not yet present under `/opt/axiom/experiment_results/sanitized/` during repeated polls.
+- Credit awarded this session: 0 results, total credit +0 (credit cap respected).
+- Credit deferral reason: quality/outlier review requires trusted sanitized numeric payloads before awarding credit.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host cleanup rule (>12h running and >6h host silence): 0 tasks cleaned.
+- Hard ceiling cleanup rule (>48h running): 0 tasks cleaned.
+
+BROKEN/FAILURE TRIAGE STATUS
+- Failure distribution remains dominated by outcome=5/6 with exit_status=0 and host-level clustering.
+- battery_pulse_delay_plating_resonance script syntax/compile re-check passed (`py_compile`).
+- No experiment-wide script crash signature confirmed in this validation cycle.
+
+NEW EXPERIMENTS DESIGNED / DEPLOYED CONTEXT
+- New experiment added: `schlogl_delay_adaptive_gain_resonance.py` (seeded to 20 high-capacity CPU hosts).
+- Hypothesis: delayed adaptive feedback in a bistable Schlögl-like kinetic system has an intermediate-delay resonance window where adaptive control improves switching coherence over fixed-gain control, with long-delay saturation expected to suppress gains.
+
+NOVELTY CHECK DOCUMENTATION
+- Query: "Schlogl model delay feedback stochastic resonance adaptive control"
+  Outcome: Related delayed-feedback/stochastic-resonance work exists in generic bistable systems, but not this exact adaptive-gain saturation mechanism in a Schlögl-style kinetic setup.
+- Query: "bistable reaction system colored noise delayed feedback coherence resonance chemical kinetics"
+  Outcome: Prior literature reports colored-noise and delayed-feedback resonance, generally without host-independent replication-heavy sweeps over delay with adaptive gain updates.
+- Query: "noise-induced resonance delayed feedback Schlogl chemical"
+  Outcome: No direct match found for this exact adaptive-vs-fixed, colored-noise, resonance-index design.
+
+KEY SCIENTIFIC FINDINGS
+1. No new finding was promoted to confirmed status in this validation cycle because newly completed results lacked trusted sanitized numeric payloads at review time.
+2. Cross-validated confirmed-findings set remains unchanged in this session.
+3. Ongoing signal quality note: failure outcomes remain concentrated in outcome=5/6 with exit_status=0 and host-skewed clustering, indicating a persistent infrastructure/process pattern rather than a newly confirmed experiment-wide script failure.
+
+SESSION NOTES
+- Pending for next validation pass once sanitized payloads appear: results 1662254, 1662258, 1662428.
