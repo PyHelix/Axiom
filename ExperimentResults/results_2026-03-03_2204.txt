@@ -1,0 +1,58 @@
+Axiom BOINC Session Results Log
+Session: 2026-03-03 22:04 (America/Denver)
+Workflow: Part 3 - consolidated save/upload summary from Part 1 + Part 2
+
+RESULTS REVIEWED AND CREDIT (PART 1)
+- Eligibility check found no uncredited completed experiment rows this session.
+- Credit awarded: 0 total (no xp_* rows with server_state=5 AND granted_credit=0).
+- Per-user increments: none.
+- Per-host increments: none.
+- Safety cap check: pass (0 <= 10,000).
+- Counter refresh after validation:
+  - credited_count.txt: 54,438
+  - 	otal_results_count.txt: 55,009
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host (>12h run, >6h no contact) cleanup: 0 rows.
+- Hard runtime (>48h) cleanup: 0 rows.
+- Broken-experiment retirement pass during deployment cycle:
+  - Retirement candidates were reviewed (svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdlr, wdwidthtrans, wdwindow, wdoptim, epcrystal).
+  - ABORT_TOTAL=0 (no new unsent rows to abort in that pass).
+- Failure clustering remained host-local (not global experiment-wide) in validation triage.
+
+EXPERIMENTS DEPLOYED (PART 2)
+CPU deployment
+- CPU hosts seen: 81
+- Hosts skipped for low RAM (<6 GB): 2
+- CPU workunits created: 2,937
+- CPU scripts deployed:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+
+GPU deployment checkpoint
+- GPU scripts used:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- GPU checkpoint (last 24h rows for deployed GPU prefixes):
+  - GPU hosts: 18
+  - GPU workunits/results rows: 218 total
+  - wd_curvature_trigger_gpu: 159 rows across 18 hosts
+  - wd_timing_scale_gpu: 59 rows across 16 hosts
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New script added/deployed: wd_batchnoise_interaction.py
+- Scientific question: whether late weight-decay gains are stronger under small-batch gradient noise (interaction effect).
+- Novelty check evidence (logged web/arXiv queries):
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - rxiv 1711.05101 decoupled weight decay regularization
+- Outcome: prior work on WD scheduling/decoupling exists, but no direct match to this specific late-WD x batch-noise interaction protocol as implemented.
+
+KEY SCIENTIFIC FINDINGS
+1. Fresh upload payload spot-checks continue to show full structured experiment outputs with substantial runtimes, confirming active experiments are generating usable scientific data.
+2. grad_subspace_wd_gpu sampled run preserved inverse-CP signal (inverse_cp_holds=true) while not supporting the specific low-rank-collapse trigger in that run.
+3. metapop_corridor_delay_forecast and grayscott_delay_pulse_feedback produced high-volume summaries over long runtime windows (~840s), indicating stable, non-trivial computation.
+4. Current elevated failure cluster was localized to one host in the reviewed window, supporting targeted host-level triage rather than broad experiment aborts.
+5. The new wd_batchnoise_interaction deployment extends the WD program toward a mechanism-level interaction test (late WD benefit dependence on gradient-noise regime).
