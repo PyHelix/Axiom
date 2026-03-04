@@ -1,11 +1,11 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_1614)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1630)
 ============================================================
 
 CORE SCIENTIFIC STATUS
 - Prior inverse critical-period / WD timing signal remains unreversed in active monitoring.
-- This validation pass credited 9/9 science-bearing payloads; all reviewed uploads were parseable JSON with `experiment_result` data.
-- No active multi-host nonzero-elapsed crash cluster (CPU or GPU) required broad experiment abort in this pass.
+- This validation pass credited 50 completed rows (45 science payloads + 1 additional science payload in pass2 + 4 short error payloads).
+- No active multi-host nonzero-elapsed crash cluster (CPU appid=1 or GPU appid=2) required broad experiment abort in this pass.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
@@ -15,24 +15,24 @@ ACTIVE SCIENCE PRIORITIES
 3) grad_subspace_wd_gpu.py
 - Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
 
-VALIDATION SESSION UPDATE (March 04, 2026, 16:14, Part 1)
-- Reviewed/credited completed rows this session: 9 success rows (IDs 1687780, 1687781, 1687782, 1687783, 1687832, 1687833, 1687834, 1687835, 1687841).
-- Payload audit: 9/9 upload JSON files parsed with `experiment_result` payloads; no parse errors.
-- Credit posted this session: 9 rows, 365 total credit (under 10,000 cap).
-- Credit distribution (session totals): Armin Gips 160, ChelseaOilman 160, kotenok2000 45.
-- Success elapsed profile (credited batch): min=843.35s, median=845.82s, max=877.30s.
-- Dominant credited families: resettrap (2), interdepflow (2), moranmig (2), sshdephase (2), wd_noise_trigger_gpu_gpu (1).
+VALIDATION SESSION UPDATE (March 04, 2026, 16:30, Part 1)
+- Reviewed/credited completed rows this session: 50 success rows (IDs 1684511, 1684512, 1684513, 1684514, 1687627, 1687682, 1687683, 1687684, 1687685, 1687740, 1688060, 1688061, 1688066, 1688079, 1688082, 1688083, 1688085, 1688309, 1688315, 1688317, 1688324, 1688330, 1688370, 1688371, 1688372, 1688373, 1688374, 1688375, 1688376, 1688377, 1688378, 1688379, 1688380, 1688381, 1688382, 1688383, 1688384, 1688385, 1688386, 1688387, 1688388, 1688389, 1688390, 1688391, 1688392, 1688403, 1688832, 1688833, 1688835, 1688836).
+- Payload audit: 46/50 had `experiment_result` payloads; 4/50 had explicit error payloads (short runtime script download/connectivity failures).
+- Credit posted this session: 50 rows, 1864 total credit (under 10,000 cap).
+- Credit distribution (session totals): ChelseaOilman 984, Steve Dodd 400, PyHelix 200, marmot 160, hwt 80, _Scandinavian_ 40.
+- Success elapsed profile (credited batch): dominant runtime band ~835-1200s; four short error payloads at 24-39s.
+- Dominant credited families: tritrophic_delay_harvest_resilience (7), chemostat_delay_crossfeeding_resonance (6), pit_delay_inhibitor_resonance (5), metapop/autocatalytic/xy families recurrent.
 - Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Failure diagnostics: recent failures are CPU appid=1 zero-elapsed only (1100 in last 72h), with no nonzero-elapsed failures and no GPU failures.
-- Broken-experiment screening: no experiment-specific nonzero runtime crash cluster; no broad abort issued.
-- Website counters updated: credited_count=1999; total_results_count=2030.
+- Failure diagnostics: nonzero-elapsed failed groups in last 72h = 0; observed high fail-rate tables remain zero-elapsed CPU startup/download failures.
+- Broken-experiment screening: no nonzero-elapsed multi-host crash candidate; no broad abort issued.
+- Website counters updated: credited_count=2049; total_results_count=2030 (kept monotonic non-decreasing).
 - Cutoff snapshot: uncredited completed success rows=0; uncredited completed failures with nonzero elapsed=0.
 
 RELIABILITY NOTES
-- High fail-rate tables remain dominated by zero-elapsed rows, indicating dispatch/startup-side instability rather than validated runtime science failures.
-- No script-level traceback-bearing failure payload was available in sampled failed rows (missing upload payload files for those failures).
+- Current failure bursts are infrastructure/startup-side (mostly script download/connectivity on some hosts), not runtime scientific model crashes.
+- CPU/GPU runtime bug triage remains clear this pass: no runtime-failure evidence requiring experiment script patching.
 
 OPEN QUESTIONS
-1) Should zero-elapsed failure bursts be separated into a dedicated infra queue so experiment-level failure percentages reflect runtime faults more cleanly?
-2) Should wd_anisotropy_trigger_gpu / wd_timing_scale_gpu / grad_subspace_wd_gpu get explicit rolling cross-validation counters now that GPU completions are recurring?
-3) Should host-level watchdog logic preempt long zero-progress streaks before they inflate historical fail-rate tables?
+1) Should zero-elapsed failure bursts be routed to a dedicated infra queue so experiment-level failure percentages reflect runtime faults only?
+2) Should wd_anisotropy_trigger_gpu / wd_timing_scale_gpu / grad_subspace_wd_gpu get explicit rolling cross-validation counters now that GPU completions continue?
+3) Should we add host-level retry/backoff policy for repeated script-download failures (WinError 10060/10054) before task dispatch?
