@@ -1,0 +1,50 @@
+AXIOM SESSION RESULTS LOG
+Date: 2026-03-04 06:33 CET
+Session: part3_save_upload
+
+PART 1 SUMMARY: VALIDATION, CREDIT, AND CLEANUP
+- Results reviewed and credited this session: 45
+- Credited experiment families (summary):
+  - WD/GPU interaction runs: wd_noise_trigger_gpu, wd_curvature_trigger_gpu, wd_timing_scale_gpu, wd_anisotropy_trigger_gpu
+  - Regularization/generalization runs: wd_clipping_interaction, reg_timing_universality
+  - Ecology/control and dynamics runs: grayscott_delay_pulse_feedback, cascade_forecast_delay_shedding, seasonal_metapop_vax_trigger,
+    metapop_allee_climate_dispersal, brusselator_delay_sensor_noise, ising_delay_adaptive_quench,
+    kuramoto_delay_noisy_control, rd_phasejitter_adaptive_forcing
+- Session credit awarded: 1938 (cap check: 1938 / 10000)
+- Credits by user:
+  - PyHelix: +935
+  - kotenok2000: +958
+  - Vato: +45
+- Runtime/payload quality check: successful outputs structurally valid JSON; runtime band mostly expected (~806-955s), including one short valid GPU completion.
+- Failure/bug review: recent failures concentrated in metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility, and wd_mixup_interaction; diagnostics indicate historical mixed payload formatting and intermittent missing uploads, not a newly introduced deterministic crash in current script versions.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host (>12h) abort update affected rows: 0
+- Hard-timeout (>48h) abort update affected rows: 0
+- Broken-experiment queue abort action: not executed this pass (no matching unsent/in-progress queue for known failing families)
+
+PART 2 SUMMARY: DEPLOYMENT AND NEW EXPERIMENT DESIGN
+- CPU queue top-up deployed: 5,462 WUs (appid=1) across active RAM-qualified hosts.
+- GPU queue top-up deployed: 327 WUs (appid=2); GPU idle-capacity hosts detected: 83.
+- Transition refresh/transitioner run after CPU deployment, GPU deployment, and new seeding.
+
+NEW EXPERIMENT(S) DESIGNED WITH NOVELTY CHECK DOCUMENTATION
+1. fisher_delay_adaptive_culling.py (CPU, spatial ecology/control)
+- Factorial design: strategy {fixed, adaptive} x delay_days {0,7,14} x obs_noise {0.00,0.12} x fatigue_rate {0.000,0.012} x climate_amp {0.00,0.25}.
+- Novelty-check literature queries executed:
+  - "reaction diffusion invasive species delayed control harvesting"
+  - "fisher kpp harvesting control delay"
+  - "invasive species control observation uncertainty model"
+- Prior art found on delayed invasive-species and reaction-diffusion control models (including DOI:10.3934/dcdsb.2024005, DOI:10.1016/j.ecolmodel.2016.05.013, DOI:10.1007/s10473-021-0314-y).
+- Novel contribution for Axiom BOINC workflow: explicit adaptive-vs-fixed control test under combined sensing delay, observation noise, and control fatigue to probe delay-driven regime inversion.
+- New seeding completed: 48 targeted CPU WUs across 24 high-capacity active hosts.
+
+MAJOR SCIENTIFIC FINDINGS
+1. Newly credited ecology/control and WD/GPU runs continue to return stable, structurally valid summaries at expected runtime, supporting current production reliability for active script families.
+2. No new 30+ seed cross-validated finding met promotion criteria in this validation/deployment cycle.
+3. The current failure cluster (metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility, wd_mixup_interaction) is most consistent with historical data-pipeline/output-shape issues and intermittent missing upload artifacts rather than a new deterministic code regression in current script versions.
+4. The newly launched fisher_delay_adaptive_culling experiment establishes a novel distributed testbed for delay/noise/fatigue regime inversion in spatial invasive-control dynamics.
+
+SESSION NOTES
+- findings_summary.txt integrated.
+- Latest validation source used: /opt/axiom/experiment_session/archive/validate_2026-03-04_0620.txt (no live validate_*.txt remained in /opt/axiom/experiment_session at save time).
