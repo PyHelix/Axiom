@@ -1,0 +1,49 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: 2026-03-04 08:30 CET
+Session type: save_upload_finalize (Part 3)
+Source logs: validate_2026-03-04_0829.txt, findings_summary.txt
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed 150 completed uncredited exp_* results from the Part 1 validation pass.
+- Payload quality summary: 149 science payloads, 1 error payload, 0 missing payloads.
+- Credit awarded this session: 8,900 total (within 10,000 cap).
+- Credit policy applied: elapsed-time tiering for science payloads and reduced credit for explicit error payloads.
+- Per-user increments: Steve Dodd +7080, kotenok2000 +1130, ChelseaOilman +460, zombie67 [MM] +230.
+- Per-host increments: Dad-Workstation +7080, DESKTOP-P57624Q +1130, Foxtrot-3 +460, jisoo +230.
+- Error note: one tritrophic run reported script download failure; handled with reduced credit and logged for infra follow-up.
+
+CLEANUP AND RELIABILITY ACTIONS
+- Stuck task cleanup (>12h running and >6h no contact): 0 aborted.
+- Hard-ceiling cleanup (>48h running): 0 aborted.
+- Broken experiment sweep: no experiment crossed abort threshold; no aborts issued.
+- Reliability follow-up retained: intermittent volunteer script-download failures (timeouts/refused/getaddrinfo).
+
+NEW EXPERIMENTS AND NOVELTY CHECK
+1. heavytail_blockclip_spectrum.py (CPU; random-matrix + robust-statistics domain)
+- Novelty queries executed:
+  - "random matrix heavy-tailed covariance winsorization eigenvalues"
+  - "entrywise truncation sample covariance heavy tails random matrix theory"
+  - "block correlation Wishart random matrix largest eigenvalue universality"
+- Prior art found on heavy-tail covariance spectra and truncation robustness, but no clear replicated factorial study focused on false-spike suppression vs signal-alignment loss over df x block-correlation x clip threshold.
+- Designed factors: nu {3,5,10} x rho {0.0,0.3,0.6} x clip_k {0.0,3.5,2.5,1.8}.
+- Primary outputs: false_spike_excess, eigenvector_alignment, clip-vs-baseline contrasts, hypothesis flags.
+
+DEPLOYMENT CONTEXT FROM PART 2
+- CPU top-up: 120 WUs created using approved CPU script pool.
+- GPU top-up: 96 WUs created using GPU-aware script pool.
+- Post-deploy backlog remained over cap; no additional WUs created beyond top-up passes.
+- GPU checkpoint: 80 GPU hosts with idle capacity identified; GPU-aware pool verified.
+
+KEY SCIENTIFIC FINDINGS
+1. reg_timing_universality received two additional long-duration successful replications (~1713s each), consistent with the previously observed inverse-critical-period timing behavior.
+2. wd_timing_scale_gpu and wd_noise_trigger_gpu added successful GPU replications without directional contradiction to earlier interaction findings.
+3. Delay-adaptive ecology/control families (including lotka, wildfire, seasonal_metapop, rd_phasejitter, brusselator, allee, fisher, lorenz96, toggle) expanded cross-host replication coverage in this pass.
+4. No new finding reached the >=30-seed promotion threshold for CONFIRMED FINDINGS during this cycle.
+5. One tritrophic result exposed continuing volunteer-side script fetch fragility, reinforcing infrastructure robustness as an active scientific throughput constraint.
+
+SESSION COUNTERS
+- credited_count.txt incremented by 150 in Part 1.
+- total_results_count.txt updated to 150 (max(existing, successful completed exp_* count)).
+
+END OF SESSION
+- This log consolidates Parts 1 and 2 and is prepared for repository timestamping, publication, and archival.

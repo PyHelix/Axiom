@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part2_deploy)
+Last updated: March 4, 2026 (session part1_validate)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -66,3 +66,14 @@ NEW SCRIPT ADDED (THIS SESSION)
 - Host-dependent seed from experiment_name hash.
 - Conditions: nu {3,5,10} x rho {0.0,0.3,0.6} x clip_k {0.0,3.5,2.5,1.8}.
 - Outputs: false_spike_excess, eigenvector alignment, clip-vs-baseline contrasts, hypothesis flags.
+
+VALIDATION UPDATE (March 4, 2026)
+- Credited 150 completed exp_* results (149 science payloads, 1 error payload), total session credit: 8,900.
+- No new 30+ seed cross-validated finding promoted to CONFIRMED FINDINGS in this pass.
+- reg_timing_universality received +2 new successful seeds (host 340), consistent with prior inverse critical period generality.
+- wd_timing_scale_gpu and wd_noise_trigger_gpu received new successful GPU replications (hosts 23 and 29), no contradiction with prior directionality.
+- Delay-adaptive ecology/control suite (lotka, wildfire, seasonal_metapop, rd_phasejitter, brusselator, allee, fisher, lorenz96, toggle) added broad successful replication coverage across hosts 29/87/340.
+- One tritrophic payload returned script-download error despite BOINC outcome=1; credited at reduced rate and tracked as infrastructure reliability issue.
+
+OPEN QUESTIONS
+- Intermittent volunteer-side script download failures persist (timeouts/refused/getaddrinfo in payloads); investigate distribution robustness and retry behavior in wrapper.
