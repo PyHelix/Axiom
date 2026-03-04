@@ -1,0 +1,37 @@
+Axiom BOINC Validation & Credit Log
+Timestamp: 2026-03-04_1954
+Step: 2 of 5 (validation, credit, cleanup)
+
+1) Session discovery snapshot (live DB)
+- Prior credited exp results in DB: 406
+- Most recent credited exp result IDs sampled: 1683874, 1683863, 1683852, 1683842, 1683734, 1683728, 1683727, 1683726, 1683725, 1683723, 1683722, 1683721, 1683720, 1683719, 1683718, 1683717, 1683716, 1683693, 1683692, 1683691
+- Successful uncredited exp results needing review at close of session: 0
+
+2) Results reviewed this session
+- Early in this session, result IDs 1683418 and 1683422 appeared as completed-success with granted_credit=0.
+- By final validation pass, both were already credited concurrently by the live system (granted_credit=20 each), so no manual credit writes were applied in this run.
+- No remaining completed-success uncredited exp_% results were present at execution close.
+
+3) Credit awarding
+- Results credited directly by this validation run: 0
+- Total credit awarded directly by this validation run: 0 (session cap 10,000 respected)
+- Per-user credit increments by this run: none
+- Per-host credit increments by this run: none
+- No manual UPDATE statements to result/user/host credit totals were executed in this run because there were no eligible rows at close.
+
+4) Cleanup actions
+- Stuck-task cleanup (>12h running and host silent >6h): 0 rows updated
+- Hard-ceiling cleanup (>48h running): 0 rows updated
+- Broken-experiment global aborts (server_state IN (2,4)): none applied (no active confirmed-broken signature in current snapshot)
+- Failed exp_% results remaining at close: 0
+
+5) Script bug review/fixes
+- Experiment script files modified: none
+- Bugs fixed and redeployed: none in this validation cycle
+
+6) Counters
+- credited_count.txt update: not required (N=0)
+- total_results_count.txt check performed with monotonic rule: unchanged (existing 2124; current DB completed success count 393)
+
+Operational note
+- findings_summary.txt was reviewed only for credit-quality context. No scientific findings were edited in this step.
