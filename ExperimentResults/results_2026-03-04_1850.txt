@@ -1,0 +1,49 @@
+AXIOM BOINC - SCIENTIFIC ANALYSIS
+Date: 2026-03-04 18:50 UTC
+Sanitized results analyzed: 1805 files
+
+KEY SCIENTIFIC FINDINGS
+
+FINDING #1: pit_delay_inhibitor_resonance (CONFIRMED REPLICATION BATCH, n=33 runs, 24 seeds, 7 hosts)
+
+  Hypothesis: Delayed adaptive inhibitor control creates a non-monotonic pit-depth resonance at intermediate flow pulse periods, amplified by heterogeneity.
+
+  Method: The script simulates corrosion pit growth under fixed, pulse, and adaptive inhibitor policies across pulse periods, delay settings, heterogeneity, and chloride levels; each run reports resonance and policy-difference summary metrics.
+
+  Results: adaptive_vs_pulse_pit_depth = +0.891791 +/- 0.008568 (33/33 positive), Cohen's d = 104.09. Cross-host reproducibility: consistent sign across 7 hosts.
+
+  Conclusion: SUPPORTED - strong, stable nonzero policy-difference signal persists in this replication batch.
+
+---
+
+FINDING #2: chemostat_delay_crossfeeding_resonance (PRACTICALLY WEAK EFFECT, n=30 runs, 30 seeds, 5 hosts)
+
+  Hypothesis: Adaptive nutrient control with sensing delay has period-dependent resonance that can reduce coexistence at intermediate forcing periods.
+
+  Method: The script simulates two cross-feeding populations in a delayed-control chemostat under fixed/pulse/adaptive nutrient policies, period sweep, delay sweep, heterogeneity, and forcing amplitude; coexistence deltas are aggregated per run.
+
+  Results: adaptive_vs_pulse_coexistence = -0.003069 +/- 0.002968 (26/30 negative), Cohen's d = -1.03. Absolute magnitude is ~0.31 percentage points.
+
+  Conclusion: INCONCLUSIVE - direction is mostly consistent, but effect size in raw units is small and below practical significance threshold.
+
+---
+
+FINDING #3: interdep_flow_memory_shedding_tradeoff (INCONCLUSIVE, n=9 runs, 9 seeds, 2 hosts)
+
+  Hypothesis: Intermediate memory windows improve survival versus edge windows in delayed forecast-based load-shedding for interdependent cascades.
+
+  Method: The script simulates coupled network cascades with delayed overload memory, forecast bias, shedding, spillover failures, and recovery; it reports medium-window gain and related resilience metrics.
+
+  Results: medium_window_gain = +1.000000 +/- 0.000000 (9/9 positive). n<10 and zero variance indicate likely quantization/schema artifact in this batch.
+
+  Conclusion: INCONCLUSIVE - insufficient independent seeds and non-physical zero-variance pattern prevent a defensible effect claim.
+
+EXPERIMENT STATUS
+pit_delay_inhibitor_resonance | 33 new results | 24 seeds | confirmed replication signal
+chemostat_delay_crossfeeding_resonance | 30 new results | 30 seeds | preliminary direction, practically weak
+interdep_flow_memory_shedding_tradeoff | 9 new results | 9 seeds | inconclusive (artifact risk)
+
+NOTES
+- 74 experiment families had >=5 new files in the 120-minute window.
+- Only families with schema-resolved named comparison metrics were used for scientific claims.
+- No new confirmed findings were added this cycle.
