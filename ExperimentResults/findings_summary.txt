@@ -1,39 +1,85 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 17:02 UTC)
-=================================================
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_0921)
+============================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
-15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
-16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
-17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
+CORE SCIENTIFIC STATUS
+- No reversal observed so far for the prior inverse critical-period / WD timing signal.
+- Active focus remains WD trigger/timing families and delay-driven ecology/control families.
 
-NEW PRELIMINARY FINDINGS (this cycle)
-- XY delay thermostat reentrance: `summary.reentrant_mean` = +0.01114 +/- 0.00173 across 188 new runs (123 r-seeds, 4 hosts), sign consistency 188/188 positive, Cohen's d=6.45. Status: preliminary support for positive reentrant window.
-- Interdependent-flow memory shedding tradeoff: `summary.mean_medium_window_gain` = -0.001340 +/- 0.000753 across 149 runs (105 r-seeds, 9 hosts), 87.9% negative, Cohen's d=-1.78. Status: preliminary evidence against medium-window benefit hypothesis.
-- Chemostat delay crossfeeding resonance: adaptive-vs-fixed coexistence = -0.003075 +/- 0.002488 (n=376, 165 r-seeds, 11 hosts, 90.4% negative, d=-1.24); adaptive-vs-pulse coexistence = -0.004060 +/- 0.002389 (96.5% negative, d=-1.70). Effect magnitude is <0.5 percentage points absolute coexistence; treat as statistically consistent but practically small.
-- Climate delay carbon hysteresis window: `summary.mean_reentrant_index` = +0.000083 +/- 0.002357 (n=144, 112 r-seeds, 2 hosts), sign consistency 89.6% positive but effect size d=0.035. `summary.mean_best_gain` remains negative (-0.04834 +/- 0.00005). Status: inconclusive for reentrant benefit.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance now includes 283 new runs in this 2h window (97 r-seeds, 17 hosts); resonance metrics remain positive and stable.
-- Autocatalytic dilution memory window adds 101 runs (86 r-seeds, 3 hosts); `summary.mean_reentrant_gain` remains positive (+0.002438 +/- 0.000491 in current schema output).
-- Nonmarkov trap release window adds 49 runs (24 r-seeds, 6 hosts); `summary.mean_reentrant_gain` remains positive (+0.000153 +/- 0.000023).
+VALIDATION SESSION UPDATE (March 04, 2026, 08:53, Part 1)
+- Reviewed completed success rows: 210 (payload: experiment_result=210).
+- Credit posted this session: 210 rows, 2469 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=186 rows, GPU(appid=2)=24 rows.
+- Elapsed-time profile (reviewed rows): min=21.07s, median=844.03s, max=1156.25s.
+- Dominant reviewed families: fputadamp (11), kuraisle (11), metacorr (11), antibswitch (10), lor96dar (8).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=5182; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=62; uncredited completed failure rows=0.
+
+RELIABILITY NOTES (March 04, 2026, 08:53)
+- No active broken experiment prefix with high multi-host crash evidence was detected; no broad aborts were applied.
+- Completed failed-row query returned none in this pass.
+- BOINC upload filenames include runtime suffixes (`_r...`); validation matching now accounts for that pattern.
 
 OPEN QUESTIONS
-- XY thermostat: does positive reentrant index persist under broader control-variance regimes and additional host architectures.
-- Interdependent-flow model: is negative medium-window gain robust to alternative load-shedding penalty formulations.
-- Chemostat model: are small negative coexistence deltas biologically meaningful after rescaling outcomes to relative (% of baseline) effect metrics.
-- Climate hysteresis model: can parameter sweeps increase mean reentrant index away from near-zero while avoiding the observed negative best-gain regime.
+1) Are remaining intermittent GPU failures primarily host/driver instability versus experiment-specific CUDA defects?
+2) Should automatic pause thresholds require both high fail-rate and multi-host confirmation within a recent time window?
+3) Should validation cadence increase further to reduce the growing success-only uncredited backlog between snapshots?
+
+VALIDATION SESSION UPDATE (March 04, 2026, 09:06, Part 1)
+- Reviewed completed success rows: 195 (payload: experiment_result=195; error payloads=0).
+- Credit posted this session: 195 rows, 2302 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=183 rows, GPU(appid=2)=12 rows.
+- Elapsed-time profile (reviewed rows): min=50.39s, median=845.06s, max=901.72s.
+- Dominant reviewed families: cstr_poison_purge_reentrance (20), toggle_delay_adaptive_control (17), grayscott_delay_pulse_feedback (11), tritrophic_delay_harvest_resilience (10), metapop_allee_corridor_hysteresis (10).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no qualifying high-failure multi-host pattern; no broad aborts applied.
+- Website counters updated: credited_count=5377; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 09:21, Part 1)
+- Reviewed completed success rows: 273 (payload: experiment_result=273; error payloads=0).
+- Credit posted this session: 273 rows, 3279 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=261 rows, GPU(appid=2)=12 rows.
+- Elapsed-time profile (reviewed rows): min=49.06s, median=846.10s, max=1221.28s.
+- Dominant reviewed families: toggle_delay_adaptive_control (14), cascade_forecast_delay_shedding (14), tritrophic_delay* (13), lorenz96_delay_assimilation_regime_shift (13), metapop_corridor_delay_forecast (13).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no qualifying high-failure multi-host pattern; no broad aborts applied.
+- Website counters updated: credited_count=5650; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=74; uncredited completed failure rows=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 09:49, Part 1)
+- Reviewed completed rows: 2605 (success=416; non-success=2189).
+- Payload audit for credited rows: experiment_result=455; missing/no-upload=2150.
+- Credit posted this session: 2605 rows, 7290 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=2558 rows, GPU(appid=2)=47 rows.
+- Success elapsed profile (credited): min=66.68s, median=846.39s, max=1064.80s.
+- Dominant data-producing families: lorenz96_delay_assimilation_regime_shift (23), metapop_corridor_delay_forecast (23), tritrophic_delay_harvest_resilience (22), wildfire_delay_adaptive_suppression (18), seasonal_metapop_vax_trigger (18).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screen (CPU/GPU split): high fail-rate clusters persist but are not single-prefix universal crashes; no broad experiment abort applied this pass.
+- Website counters updated: credited_count=8255; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=76; uncredited completed failure rows=0.
+
+RELIABILITY NOTES (March 04, 2026, 09:49)
+- Large non-success backlog credited this pass was mostly missing upload payloads (likely aborted/invalid returns), not new deterministic script-crash evidence from a single experiment prefix.
+- GPU high-failure families remain host-sensitive; W10-Home GPU shows repeated outcome=5 bursts across multiple GPU experiments, consistent with host/runtime instability rather than one experiment-specific CUDA bug.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 10:04, Part 1)
+- Reviewed/credited completed rows this session: 460 success rows (all outcome=1 in credited batches).
+- Credit posted this session: 460 rows, 5880 total credit (under 10,000 cap).
+- Credited mix from reviewed batches: CPU(appid=1)=441 rows, GPU(appid=2)=19 rows.
+- Initial payload audit sample (255 rows): experiment_result=255, error=0, missing=0, invalid_json=0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 24h CPU/GPU split): no qualifying multi-host high-failure active pattern; no broad aborts applied.
+- Website counters updated: credited_count=1613; total_results_count=1613.
+- Cutoff snapshot at end of pass: uncredited completed success rows=1; uncredited completed failure rows=0 (live queue still receiving new completions).
+
+RELIABILITY NOTES (March 04, 2026, 10:04)
+- Recent completed failures did not show an active experiment-wide crash cluster requiring emergency abort.
+- Throughput pressure remains high: completions continue arriving during validation, so nonzero tail backlog can reappear immediately after a clean pass.
