@@ -1,0 +1,74 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session Date: 2026-03-04 05:07 (America/Denver)
+Task: Part 3 - Save, Git Prior-Art Timestamp, Upload, Archive
+
+PART 1 VALIDATION / CREDIT SUMMARY (from validate_2026-03-04_0501.txt)
+- Completed experiment results credited this session: 251
+- Total credit awarded this session: 1965 (session cap check PASS, < 10,000)
+- Residual uncredited completed rows after batch: 4 (new arrivals after cutoff)
+- Bulk behavior reviewed: mostly successful ~830-900 second runs; upload JSON artifacts missing at audit time.
+
+Credit additions by contributor:
+- Amapola: +1313
+- Orange Kid: +267
+- ChelseaOilman: +199
+- Steve Dodd: +96
+- Remaining contributors combined: +90
+
+CLEANUP / STABILITY ACTIONS
+- Broken families monitored (no active rows to abort in this pass):
+  1) oscillatory_roughchannel_lbm_resonance
+  2) abx_cycle_hgt_delay_resonance
+  3) potts_pulse_anneal_resonance
+  4) spatial_pgg_delay_fatigue
+- Stuck-task cleanup checks: 0 rows matched (>12h dead-host rule), 0 rows matched (>48h hard ceiling).
+- No safe targeted patch applied this pass: failures remain outcome=5, exit_status=0, empty stderr signature.
+
+PART 2 DEPLOYMENT / RESEARCH SUMMARY (from run_2026-03-03_1352.log)
+- Retirement pass executed: ABORT_TOTAL=0 (no newly abortable unsent tasks in retirement candidates at that checkpoint).
+
+CPU DEPLOYMENT
+- CPU deployment pass completed.
+- Hosts considered for queue fill: 81
+- Hosts skipped for low RAM (<6GB): 2
+- CPU workunits created: 2937
+- CPU scripts used in deployment pass:
+  1) wd_batchnoise_interaction.py
+  2) wd_labelsmooth_interaction.py
+
+GPU DEPLOYMENT CHECKPOINT
+- Run log shows GPU deployment pass started with scripts:
+  1) wd_curvature_trigger_gpu.py
+  2) wd_timing_scale_gpu.py
+- The captured run log ended with an interrupt (^C) before GPU summary counters were printed.
+- Live checkpoint query after this session:
+  - GPU hosts with queued experiment tasks: 11
+  - Queued GPU experiment tasks: 36
+  - Total result rows currently present for wd_curvature_trigger_gpu*: 47
+  - Total result rows currently present for wd_timing_scale_gpu*: 37
+  - Active queued GPU tasks observed on hosts: 355, 57, 1, 159, 299
+
+NEW/UPDATED EXPERIMENT DESIGN + NOVELTY CHECK NOTES
+- New script written and compiled in Part 2:
+  1) wd_batchnoise_interaction.py (py_compile OK)
+- Existing active scripts reviewed/deployed:
+  1) wd_labelsmooth_interaction.py
+  2) wd_curvature_trigger_gpu.py
+  3) wd_timing_scale_gpu.py
+- Novelty-check evidence recorded in run log via literature/web search terms:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "Scheduled Weight Decay paper arxiv 2021"
+- Novel hypothesis focus retained: interaction effects for late-WD timing versus gradient-noise/batch regime and confidence-smoothing regime, plus GPU curvature-triggered onset tests.
+
+KEY SCIENTIFIC FINDINGS
+1. High-throughput volunteer compute remains stable at runtime level (dominant successful completions in the ~13-15 minute window), supporting continued large-batch exploration.
+2. Reliability bottleneck remains the primary blocker: many successful terminal rows still lack recoverable upload JSON payloads, limiting scientific extraction despite valid compute donation.
+3. Four failure-prone experiment families remain effectively paused/contained this session, with no additional active rows requiring abort.
+4. The active research direction is now explicitly interaction-centric (late WD x batch-noise regime, late WD x label smoothing, and GPU curvature-triggered onset), with a new CPU interaction script added and compiled.
+
+FILES USED FOR THIS SESSION LOG
+- C:\GPT3.5PrmtScpts\ExperimentResults\validate_2026-03-04_0501.txt
+- C:\GPT3.5PrmtScpts\AutoReviewLogs\run_2026-03-03_1352.log
+- C:\GPT3.5PrmtScpts\ExperimentResults\findings_summary.txt
