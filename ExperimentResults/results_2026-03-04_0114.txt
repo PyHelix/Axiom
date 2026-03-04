@@ -1,0 +1,54 @@
+Axiom BOINC Session Results Log
+Timestamp: 2026-03-04T01:14:42+01:00
+Session scope: Validation/credit finalization + deployment/findings consolidation (Parts 1-2)
+
+SUMMARY
+- Reviewed and processed 941 completed uncredited exp_% results in the validation pass.
+- Awarded 10,000 total credit (session cap respected) across 7 users using add-only credit updates.
+- Updated counters: credited_count +941 (35416 -> 36357); total_results_count updated to 54714 (monotonic max).
+- Stuck/broken cleanup run completed; no tasks met abort thresholds in this pass.
+
+VALIDATION AND CREDIT (PART 1)
+- Results reviewed this session: 941 completed uncredited exp_% tasks.
+- Total credit awarded: 10,000 (cap reached, verification query confirmed batch totals).
+- Per-user awarded this session:
+  - ChelseaOilman: +6667
+  - Amapola: +1821
+  - Steve Dodd: +822
+  - kotenok2000: +334
+  - WTBroughton: +209
+  - Armin Gips: +108
+  - [DPC] hansR: +39
+
+STUCK/BROKEN TASK CLEANUP
+- Aborts for >12h running and >6h no host contact: 0
+- Hard-ceiling aborts for >48h running: 0
+- No active healthy WD family was aborted.
+- Historical high-failure legacy families remain mostly retired/non-priority; no active broken line required targeted abort in this pass.
+
+NEW EXPERIMENTS AND NOVELTY CHECK (PART 2)
+- New experiment deployed: metapop_allee_climate_dispersal (CPU ecology line).
+- Novelty-check documentation performed via targeted literature/web query set on:
+  - Allee effect + climate change + dispersal metapopulation persistence
+  - long-distance dispersal climate tracking metapopulation
+  - stochastic perturbations with Allee thresholds
+  - intermediate dispersal maximizing persistence
+- Novel contribution documented: explicit interaction-mechanism test of climate-drifted habitat + Allee threshold + mixed local/long-range dispersal, measuring rescue benefit vs synchrony-collapse risk and testing whether intermediate long-range fraction is optimal.
+- Script added in prior step: metapop_allee_climate_dispersal.py (numpy-only, host-seeded trials, run-duration compliant).
+
+DEPLOYMENT CONTEXT (PART 2)
+- CPU top-up created: 2,074 WUs.
+- New CPU experiment injection created: 159 WUs for metapop_allee_climate_dispersal.
+- Total CPU WUs created this session: 2,233.
+- GPU top-up created: 263 WUs across available GPU hosts.
+
+KEY SCIENTIFIC FINDINGS
+1. wd_labelsmooth_interaction remains strongly interaction-positive in the reviewed credited batch (interaction-present rate 0.8879 over n=116).
+2. Attenuation prediction support remains weak/inconsistent in current batch evidence (attenuation rate 0.1983).
+3. Mean late_wd_gain is +0.2963, mean late_wd_gain_with_label_smoothing is +0.3455, and mean additivity residual is +0.0492, indicating a persistent positive non-additive interaction signal.
+4. The confirmed program-level status remains stable: inverse WD timing critical-period behavior is established, and interaction/mechanism tests remain the priority frontier.
+5. Newly deployed ecology experiment targets a novel predicted non-monotonic persistence optimum at intermediate long-range dispersal under climate drift + Allee constraints.
+
+OPERATIONAL NOTES
+- This report intentionally omits cumulative result-ID lists; DB records track credited results.
+- Source context used: latest validate log + findings_summary consolidation.
