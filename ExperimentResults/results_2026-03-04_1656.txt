@@ -1,0 +1,67 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: p3_save_2026-03-04_1656
+Timestamp: 2026-03-04 16:56 (America/Denver)
+
+PART 1 VALIDATION / CREDIT SUMMARY
+- Reviewed completed uncredited exp_% results in rolling passes while queue remained live.
+- Credited this session: 934 rows total, 6208 total credit (session cap 10000 respected).
+- Credit pass details:
+  - Primary pass: 924 rows, 6032 credit.
+  - Incremental pass 2: 2 rows, 40 credit.
+  - Incremental pass 3: 8 rows, 136 credit.
+  - Final stabilization pass: 0 additional rows.
+- Per-user credit awarded:
+  - ChelseaOilman 3226; Steve Dodd 1370; WTBroughton 340; _Scandinavian_ 302; Armin Gips 212; PyHelix 148; vanos0512 140; kotenok2000 124; Orange Kid 88; koll 84; Ncard00 66; marmot 56; [VENETO] boboviz 28; hwt 12; [DPC] hansR 12.
+- Result quality notes:
+  - No nonzero-elapsed runtime-crash clusters (CPU appid=1 and GPU appid=2 clean of multi-host runtime crash signatures).
+  - Failure-heavy groups remained dominated by zero-elapsed startup/download/connectivity errors.
+
+STUCK / BROKEN TASK CLEANUP
+- Dead-host >12h running aborts: 0.
+- Hard >48h running aborts: 0.
+- Broken experiment broad aborts: none this validation pass.
+- Retirement cleanup pass in research/deploy log reported ABORT_TOTAL=0.
+
+PART 2 DEPLOYMENT / RESEARCH SUMMARY
+- CPU deployment pass executed with host-targeted queue fill (target 3x CPU queue, RAM filter <6GB skipped).
+- CPU deployment stats from run log:
+  - CPU hosts seen: 81
+  - CPU hosts skipped for low RAM: 2
+  - CPU workunits created: 2937
+  - CPU scripts used: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- GPU deployment pass started with GPU-only scripts and 3x GPU queue targeting:
+  - GPU scripts used: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+  - Latest run log was interrupted before final GPU creation totals were printed.
+
+GPU CHECKPOINT (CURRENT LIVE SNAPSHOT)
+- Active GPU-capable hosts (last 72h): 82
+- Current queued WUs for wd_curvature_trigger_gpu: 6
+- Current queued WUs for wd_timing_scale_gpu: 8
+- Current total queued GPU exp_% WUs: 202
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New experiment script added in Part 2: wd_batchnoise_interaction.py
+  - Hypothesis: late weight-decay gains are stronger under high-noise (small-batch) training than low-noise (large-batch) training.
+  - Script includes run_duration time-budget loop and host-derived seeding for BOINC deployment compatibility.
+- Existing active mechanism/interaction lines retained and deployed: wd_labelsmooth_interaction.py and wd_curvature_trigger_gpu.py.
+- Novelty check evidence documented in run log via targeted literature searches, including:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "Scheduled Weight Decay paper arxiv 2021"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+  - "site:arxiv.org batch size weight decay generalization"
+
+WEBSITE COUNTER CONTEXT (FROM VALIDATION LOG)
+- credited_count.txt: 1037
+- total_results_count.txt: 298 (monotonic max rule)
+
+KEY SCIENTIFIC FINDINGS
+1. No new nonzero-elapsed runtime crash cluster appeared; instability signal remained startup/download-side rather than model-runtime-side.
+2. No experiment family met the evidence threshold for broad-abort actions in this session.
+3. The inverse critical-period / WD timing signal remains unreversed; active work is now focused on mechanism/interaction disambiguation (label smoothing interaction, curvature-triggered timing, batch-noise interaction).
+4. A new interaction-focused line (wd_batchnoise_interaction) was introduced after novelty checks to test a mechanism-level prediction not settled by prior main-effect studies.
+
+NOTES
+- Cumulative result ID lists intentionally omitted; database remains source of truth for credited rows.
+- Live queue continued updating around cutoffs; this log captures the session snapshots used for save/upload.
