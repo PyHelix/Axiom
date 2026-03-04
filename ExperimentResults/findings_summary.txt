@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 18:50 UTC; 1805 new sanitized files in last 120 min, 74 families with >=5 files scanned)
+Last updated: March 4, 2026 (analysis session 19:10 UTC; 1805 new sanitized files in last 120 min, 74 families with >=5 files scanned)
 =================================================
 
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
@@ -24,27 +24,21 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
 
 NEW PRELIMINARY FINDINGS (this cycle)
-- Chemostat delay crossfeeding resonance: adaptive_vs_pulse_coexistence = -0.003069 +/- 0.002968 (n=30 runs, 30 seeds, 5 hosts), 26/30 negative, Cohen's d=-1.03. Direction is mostly consistent but absolute effect is small (<0.5 percentage points); classify as preliminary and practically weak.
+- Chemostat delay crossfeeding resonance: adaptive_vs_pulse_coexistence = -0.003069 +/- 0.002968 (n=30 runs, 24 seeds, 5 hosts), 26/30 negative, Cohen's d=-1.03, host-mean span=0.00254. Direction is consistent but absolute effect is very small (<0.5 percentage points), so this remains preliminary and practically weak.
 
 REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance: 33 new runs (24 seeds, 7 hosts) remain directionally consistent: resonance_mean = +0.069729 +/- 0.002598 (33/33 positive), resonance_positive_rate = 0.891791 +/- 0.008568, adaptive_minus_fixed_mean = -0.002526 +/- 0.000886 (33/33 negative).
+- Pit delay inhibitor resonance: 33 new runs (20 seeds, 7 hosts) remain directionally consistent: resonance_mean = +0.069729 +/- 0.002598 (33/33 positive, d=26.84, host-mean span=0.00789), adaptive_minus_fixed_mean = -0.002526 +/- 0.000886 (33/33 negative, d=-2.85, host-mean span=0.00313).
 
 OPEN QUESTIONS
-- Interdependent-flow memory shedding tradeoff: current 2-hour batch (n=9, 2 hosts) yields a quantized medium_window_gain signal (+1.0 in all runs, sd=0), suggesting a schema/adapter artifact; hold for additional schema-stable runs before inference.
-- Climate delay carbon hysteresis window: current 2-hour batch (n=12) remains schema-ambiguous across legacy adapters; additional schema-stable samples are required before interpretation.
-- SIS delay adaptive rewiring tradeoff: current 2-hour batch has n=9 runs across 3 hosts but only one effective seed in this window; insufficient independent seeds for inference.
-
-NOVELTY CHECK LOG (new experiment design this cycle)
-- Query: "Oregonator delayed feedback control oscillations", "Belousov-Zhabotinsky delayed feedback control adaptive pulses", "Belousov-Zhabotinsky reaction delayed feedback chaos control paper".
-- Findings: delayed feedback control in BZ/Oregonator is established in prior literature, but we found no direct prior study of adaptive-vs-periodic illumination with simultaneous delay-window sweep plus observation noise.
-- Novel angle and value: new script `oregonator_delay_adaptive_illumination_window.py` tests whether adaptive control has a mid-delay performance window (non-monotonic gain) under noisy delayed sensing; both positive and null/negative outcomes are publishable.
+- Interdependent-flow memory shedding tradeoff: current batch has n=9 runs (8 seeds, 2 hosts), mean_medium_window_gain = -0.001049 +/- 0.001156 (4/9 positive, d=-0.91, host-mean span=0.00217). N<10 and mixed signs; classify as inconclusive.
+- 71 additional families had >=5 files but unresolved schema alignment in this window; no claim is made for them until script/adapter schema is unambiguous.
 
 ANALYSIS COVERAGE NOTE
 - 1805 sanitized files detected in the last 120 minutes.
-- 74 experiment families had >=5 new files and were scanned for numeric metrics.
-- Only families with schema-resolved named comparison metrics were used for scientific claims.
+- 74 experiment families had >=5 new files.
+- Scientific claims were restricted to families with script-resolved scalar schema and named comparison metrics.
 
 CURRENT CYCLE UPDATE
 - No new confirmed findings were added this cycle.
-- Chemostat delay crossfeeding resonance remains preliminary and practically small (adaptive_vs_pulse_coexistence = -0.00307 +/- 0.00297; 26/30 negative; d=-1.03).
-- Pit delay inhibitor resonance replication remains directionally stable in this batch (adaptive_vs_pulse_pit_depth positive in 33/33 runs across 7 hosts).
+- One preliminary finding remains (chemostat delay crossfeeding resonance).
+- One confirmed finding received replication support (pit delay inhibitor resonance).
