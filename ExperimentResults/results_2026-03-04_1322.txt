@@ -1,0 +1,45 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: March 4, 2026 13:22 CET
+Scope: Consolidated summary from Part 1 (validation/credit/cleanup) and Part 2 (deployment/experiment design)
+
+PART 1 — VALIDATION / CREDIT / CLEANUP SUMMARY
+- Reviewed uncredited successful result rows: 123 (exp_% range in validation window).
+- Sanitized linkage outcome: 0/123 had attributable sanitized numeric artifacts by result name.
+- Credit awarded this session: 0 total credit; 0 credited rows (safety cap respected).
+- Per-user / per-host credit deltas: none this pass.
+- Stuck/broken cleanup:
+  - Dead-host cleanup (>12h running, >6h no contact): 0 aborted.
+  - Hard-ceiling cleanup (>48h running): 0 aborted.
+  - Historically broken families checked: oscillatory_roughchannel_lbm_resonance, abx_cycle_hgt_delay_resonance, potts_pulse_anneal_resonance, spatial_pgg_delay_fatigue.
+  - Active unsent/in-progress backlog for those families: none.
+- Counter refresh (non-decreasing rule): credited_count=1829, total_results_count=1952.
+
+PART 2 — DEPLOYMENT / EXPERIMENT DESIGN SUMMARY
+- Backlog gate and per-host cap checks passed before creation; no mandatory retirement aborts triggered this cycle.
+- Workunit deployment executed:
+  - CPU WUs created: 3443 (RAM>=6GB filter, 3x target-gap logic).
+  - GPU WUs created: 279 (GPU-aware scripts only).
+  - GPU hosts with idle capacity at checkpoint: 77.
+- New experiment deployed in this cycle:
+  - autocatalytic_dilution_memory_window.py (first-pass sampling: 354 WUs).
+
+NOVELTY CHECK DOCUMENTATION (PART 2)
+- Experiment: autocatalytic_dilution_memory_window (chemical evolution/systems chemistry).
+- Query set and outcomes:
+  1) "serial transfer enriches for autocatalytic sets PNAS 2024"
+     - Related enrichment prior art exists, but no direct test of memory-windowed adaptive dilution with re-entrant window hypothesis.
+  2) "hypercycle model dilution stochastic collapse rescue"
+     - Hypercycle/dilution instability literature exists, but no isolated intermediate-memory control-window mechanism in surfaced work.
+  3) "adaptive dilution control autocatalytic network model delay"
+     - No direct match found for this specific adaptive-memory dilution protocol and survival+biomass-control-cost objective.
+- Retained novelty angle: explicit test of re-entrant performance where intermediate control-memory windows outperform both short and long windows.
+
+KEY SCIENTIFIC FINDINGS
+1. No new finding reached promotion threshold in this validation window because reviewed completed-success results lacked attributable sanitized numeric artifacts for quality scoring.
+2. Assimilator visibility lag remains the dominant bottleneck for evidence-based credit assignment, despite continued growth in completed-success rows.
+3. Current high-failure historical families were confirmed to have zero active unsent/in-progress backlog, indicating prior cleanup/depletion actions remain effective.
+4. A new experiment (autocatalytic_dilution_memory_window) was introduced with documented novelty centered on a re-entrant memory-window control effect not directly matched in surfaced prior literature.
+
+NOTES
+- Database remains source of truth for credit/row status.
+- Sanitized result policy respected; raw upload files were not accessed.
