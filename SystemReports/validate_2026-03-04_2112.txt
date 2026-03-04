@@ -1,0 +1,32 @@
+AXIOM VALIDATION LOG - 2026-03-04 21:12:36
+Step: Validation/Credit/Cleanup (Operational)
+
+1) Results reviewed this session
+- Uncredited successful exp results reviewed: 75
+- Result IDs: 1672780, 1672920, 1684709, 1684790, 1684937, 1685193, 1685196, 1685197, 1685198, 1685201, 1685205, 1685206, 1685207, 1685210, 1685211, 1685212, 1685215, 1685216, 1685217, 1685220, 1685221, 1685222, 1685225, 1685226, 1685227, 1685228, 1685229, 1685232, 1685233, 1685234, 1685237, 1685238, 1685239, 1685241, 1685242, 1685243, 1685244, 1685245, 1685246, 1685247, 1685248, 1685249, 1685250, 1685251, 1685253, 1685254, 1685255, 1685257, 1685259, 1685261, 1685264, 1685265, 1685269, 1685524, 1685525, 1685526, 1685527, 1685528, 1685529, 1685530, 1685531, 1685532, 1685533, 1685534, 1685535, 1685536, 1685537, 1685538, 1685539, 1685540, 1685541, 1685630, 1685631, 1685997, 1686603
+- Quality assessment source: /opt/axiom/experiment_results/sanitized/*_safe.json only (no raw upload files used).
+- Mapping status: 0/75 reviewed result names matched a sanitized _safe.json record at review time.
+- Interpretation: these successful DB rows are pending sanitization/assimilation availability; no numeric quality payload available yet for defensible scoring.
+- Reviewed appid split: appid=1 count=71, appid=2 count=4
+
+2) Credit awarded
+- Total credit awarded this session: 0.0 (session safety cap 10,000 respected).
+- Credited results this session: 0
+- Per-user credit increments: none (no sanitized quality payloads available for reviewed IDs).
+- Per-host credit increments: none.
+
+3) Cleanup actions
+- Stuck tasks cleanup (>12h run and >6h host silence): 0 rows updated.
+- Hard-ceiling cleanup (>48h running): 0 rows updated.
+- Broken experiment aborts (unsent/in-progress): none applied in this session.
+- Failure diagnostics: recent failures are predominantly outcome!=1 with exit_status=0; no crash-like nonzero exit_status pattern detected in sampled recent window.
+
+4) Script bug fixes
+- No experiment script modifications were required this session (no traceback signature identified from allowed diagnostics).
+
+5) Counter updates
+- credited_count.txt: 1597 -> 1597 (N=0)
+- total_results_count.txt: 1667 -> 1678 (max(existing, DB completed count))
+
+6) Notes for next validation run
+- Re-run validation after assimilator writes sanitized files for reviewed IDs; then score quality from numeric payloads and award incremental credit.
