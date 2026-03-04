@@ -1,0 +1,39 @@
+Axiom BOINC Session Results Log
+Date: 2026-03-04
+Session scope: Part 1 validation/credit + Part 2 deployment/design consolidation
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Validation pass (14:49 CET): reviewed 237 completed uncredited `exp_%` results (ID range 1662450..1675467).
+- Validation pass (15:14 CET): reviewed 367 completed uncredited `exp_%` results (ID range 1662481..1677752).
+- Sanitized data match in latest pass: 0/367 (`/opt/axiom/experiment_results/sanitized/*_safe.json`).
+- Credit awarded this session: 0.00 across 0 results.
+- Reason for zero credit: reviewed results did not yet have matching sanitized numeric payloads for quality scoring.
+- Safety cap check: pass (0.00 <= 10000).
+
+STUCK/BROKEN TASK CLEANUP
+- Broken active queues aborted after sustained 24h 100% failure:
+  - `rw_reset_fatigue_nonrenewal`: 68 tasks aborted.
+  - `adaptive_voter_delay_rewiring`: 23 tasks aborted.
+- Dead-host stuck sweep (>12h running and >6h no host contact): 0 aborted in latest validation pass.
+- Hard-ceiling stuck sweep (>48h running): 0 aborted in latest validation pass.
+- Crash-pattern threshold scan: no new hard-failure cluster requiring queue abort in latest validation pass.
+
+NEW EXPERIMENTS DESIGNED AND NOVELTY CHECK DOCUMENTATION
+1. `metapop_allee_corridor_hysteresis.py` (ecology / metapopulation dynamics)
+- Hypothesis: controller fatigue/recovery in adaptive corridor opening creates a re-entrant optimal trigger threshold under Allee-risk dynamics.
+- Novelty checks executed against literature on Allee dispersal thresholds, connectivity-driven synchrony risk, and adaptive refugia/corridor management.
+- Outcome: adjacent prior art found, but no direct match for fatigue-and-recovery adaptive threshold reversal mapping coupled to Allee nonlinearities.
+
+2. `kuramoto_islanding_fatigue_reclosure.py` (power-systems nonlinear dynamics)
+- Hypothesis: delayed adaptive islanding with fatigue/reclosure hysteresis yields re-entrant resilience vs trigger threshold.
+- Novelty checks executed against literature on Kuramoto/swing stability, delayed control/load shedding, and intentional islanding methods.
+- Outcome: related foundations found, but no direct match for combined delayed control + fatigue saturation + adaptive trip/reclose hysteresis with explicit threshold-reversal mapping.
+
+KEY SCIENTIFIC FINDINGS
+1. No new promotable cross-validated finding was added in this session; no 30+ seed confirmation threshold was reached in current validation passes.
+2. Assimilation lag is currently the gating factor for scientific promotion and credit assignment: newest sanitized output remained at 2026-03-04 11:37 CET while later `exp_%` completions accumulated.
+3. Existing confirmed findings remain intact (including established WD interaction findings and retired completed experiment families); this session introduced no contradictions.
+
+OPERATIONS NOTES
+- GPU checkpoint and deployment logic executed in Part 2 with active host capacity and capped backlog.
+- Database remains source of truth for credited-result tracking; cumulative result ID lists intentionally omitted.
