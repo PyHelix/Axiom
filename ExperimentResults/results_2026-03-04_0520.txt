@@ -1,0 +1,43 @@
+AXIOM BOINC SESSION RESULTS
+Session date: March 4, 2026
+Scope: Validation, credit, cleanup, deployment, experiment design
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed latest uncredited uploads and manually verified file-backed scientific payloads across CPU delay-control, CPU WD-interaction, and GPU stress experiment families.
+- Wrapper/schema mismatch identified in two CPU scripts and fixed:
+  - metapop_corridor_delay_forecast.py now writes raw JSON result objects.
+  - rps_delay_jitter_adaptive_mobility.py now writes raw JSON result objects.
+- Incremental credit granted this session: 7 results credited, total +192 credit.
+- Credit tiering applied as configured (long CPU runs at full tier; short GPU stress run at lower tier).
+- Website counters updated: credited_count advanced to 54438; total_results_count synchronized to 55009.
+
+PART 1: STUCK/BROKEN TASK CLEANUP
+- Dead-host cleanup pass (>12h sent and >6h no host contact): no rows required cleanup.
+- Hard-ceiling cleanup pass (>48h running): no rows required cleanup.
+- No experiment-wide aborts were required.
+
+PART 2: NEW EXPERIMENTS DESIGNED AND DEPLOYED
+- Retirement guardrails were rechecked before deployment; over-seeded completed families remained retired.
+- CPU queue top-up deployed: 5,793 workunits across active RAM>=6GB hosts.
+- GPU queue top-up deployed: 322 workunits; GPU capacity check confirmed 81 hosts with idle slots.
+- Transitioner refresh and one-pass transitioner were run after deployment waves.
+
+NEW EXPERIMENT + NOVELTY CHECK DOCUMENTATION
+1. toggle_delay_adaptive_control.py (CPU, systems biology/control)
+- Novelty search queries executed around adaptive feedback control, delayed measurement, and noise-driven switching in genetic toggle systems.
+- Prior art confirms real-time control studies and delayed/noisy toggle dynamics independently.
+- No direct prior factorial adaptive-vs-fixed sweep jointly mapping observation delay and sensor noise with explicit overcorrection metrics was found.
+- New hypothesis tested: adaptive control improves stability at short delay but can overcorrect and increase switching under long-delay/high-noise sensing.
+- Initial dedicated seeding deployed: 36 targeted CPU workunits.
+
+KEY SCIENTIFIC FINDINGS
+1. In sampled metapop_corridor_delay_forecast outputs, adaptive-minus-fixed persistence deltas were negative across inspected delay/noise conditions, indicating fixed strategy currently outperforms adaptive in this regime.
+2. In sampled rps_delay_jitter_adaptive_mobility outputs, adaptive benefit at jitter=0.10 was near zero in current low-trial snapshots.
+3. No new 30+ seed cross-validated result met promotion threshold in this session; previously confirmed findings remain unchanged.
+4. This deployment pass prioritized queue refill and infrastructure continuity while opening a new non-ML systems-biology line (toggle_delay_adaptive_control) for next-session validation.
+
+SESSION OUTCOME
+- Validation/credit actions completed.
+- Cleanup checks completed.
+- CPU/GPU deployment completed.
+- Findings summary updated and preserved for continuity.

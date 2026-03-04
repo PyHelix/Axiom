@@ -20,72 +20,59 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 
 CORE SCIENTIFIC STATUS
 - No new 30+ seed cross-validated finding promoted this deployment pass.
-- This pass prioritized queue refill plus one new non-ML ecology/control hypothesis.
+- This pass prioritized full CPU/GPU queue refill plus one new non-ML systems-biology hypothesis.
 
 RETIREMENT CHECK (THIS SESSION)
-- Mandatory retirement check executed before deployment.
-- Over-seeded retired families checked: svdrank(2018), percolation(1300), wdlr(1063), wdwindow(868), regmech(292),
+- Mandatory retirement query executed before deployment.
+- Over-seeded families rechecked: svdrank(2018), percolation(1300), wdlr(1063), wdwindow(868), regmech(292),
   wdrebound(215), bottmech(170), repcrystal(368), intervtiming(271), wdoptim(1104).
-- Unsent backlog for all above families: 0. No abort UPDATE required this session.
+- Query for (completed>50 AND unsent>0/running>50) returned no rows; no abort UPDATE required.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 4,021 WUs created across active RAM>=6GB hosts using non-retired experiment families.
-- CPU script mix used for refill: wildfire_delay_adaptive_suppression, lotka_delay_adaptive_harvest,
-  ising_delay_adaptive_quench, kuramoto_delay_noisy_control, sandpile_delay_adaptive_dissipation,
-  grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast, cascade_forecast_delay_shedding,
-  seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility, brusselator_delay_sensor_noise,
-  rd_phasejitter_adaptive_forcing, metapop_allee_climate_dispersal.
-- GPU top-up pass (appid=2): 324 WUs created.
-- Transition refresh + one-pass transitioner executed after CPU/GPU/new-experiment creation.
+- CPU top-up pass (appid=1): 5,793 WUs created across active RAM>=6GB hosts (3x CPU target fill).
+- CPU script mix used: grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast,
+  cascade_forecast_delay_shedding, sandpile_delay_adaptive_dissipation, ising_delay_adaptive_quench,
+  brusselator_delay_sensor_noise, lotka_delay_adaptive_harvest, wildfire_delay_adaptive_suppression,
+  seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility, kuramoto_delay_noisy_control,
+  rd_phasejitter_adaptive_forcing.
+- GPU top-up pass (appid=2): 322 WUs created.
+- Transition refresh + one-pass transitioner executed after CPU deployment, GPU deployment, and new seeding.
 
 GPU CHECKPOINT (MANDATORY)
 - GPU hosts with idle capacity found: 81.
-- GPU workunits deployed: 324.
+- GPU workunits deployed: 322.
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: lotka_delay_adaptive_harvest.py (CPU, ecological dynamics / control)
-- Query: "adaptive harvesting predator-prey with delayed information"
-- Query: "predator prey fishery harvest control rule observation error delay numerical simulation paper"
-- Query: "ecosystem-based fisheries management observation error delay control"
-- Found: prior literature studies delayed harvesting and observation uncertainty in fisheries/ecosystem control,
-  but no direct match was identified for a factorial adaptive-vs-fixed prey harvest policy test that jointly sweeps
-  observation delay and noise in a stochastic two-species trophic model with explicit delay-inversion criterion.
-- Novel angle: tests whether adaptive control provides yield gains at low delay but flips to lower yield/higher collapse
-  risk at long delay/noisy sensing, quantifying mechanism-level tradeoffs (yield, collapse rate, effort variance).
+1) New experiment: toggle_delay_adaptive_control.py (CPU, systems biology / control)
+- Query: "adaptive feedback control genetic toggle switch delayed measurement noise"
+- Query: "real-time feedback control synthetic genetic toggle switch"
+- Query: "noise induced switching genetic toggle delayed repression"
+- Found: prior studies report real-time feedback control of synthetic circuits and classical delayed/noisy
+  stochastic toggle-switch dynamics, but no direct factorial adaptive-vs-fixed control sweep jointly mapping
+  observation delay and sensor noise with explicit overcorrection metrics.
+- Novel angle: tests delay/noise regime inversion hypothesis: adaptive feedback improves stability at short delay,
+  then overcorrects and increases state switching at long delay/high-noise sensing.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) lotka_delay_adaptive_harvest.py
+1) toggle_delay_adaptive_control.py
 - CPU numpy-only; run-duration compliant (independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x delay_steps {0,10,30} x obs_noise {0.00,0.08} x env_noise {0.03,0.09}.
-- Outputs: yield, mean prey/predator biomass, collapse rate/time, effort variance, adaptive-minus-fixed deltas.
+- Conditions: strategy {fixed, adaptive} x delay_steps {0,4,12} x obs_noise {0.00,0.08} x proc_noise {0.02,0.06}.
+- Outputs: switch_rate, balance_frac, effort_rms, clip_frac, adaptive-minus-fixed deltas per condition.
 
 NEW EXPERIMENT SEEDING (THIS SESSION)
-- Dedicated initial seeding: 36 targeted CPU WUs for lotka_delay_adaptive_harvest on high-capacity active hosts.
-- Total lotka WUs currently queued/created this pass: 205 (includes refill replications).
+- Dedicated initial seeding: 36 targeted CPU WUs for toggle_delay_adaptive_control on high-capacity active hosts.
 
 QUEUE STATUS SNAPSHOT (POST-DEPLOY)
-- Live `exp_%` results: unsent=0, running=635.
-- Host-attributed deficit query still shows lagging attribution after large dispatch waves
-  (CPU deficit hosts=90 sum 5,793; GPU deficit hosts=81 sum 322).
-- No `validate_*.txt` file was present in `/opt/axiom/experiment_session/` during this run.
+- Live exp_% results: unsent=0, running=635.
+- Deficit query lag persists after large targeted dispatch waves (CPU deficit hosts=90 sum 5,793;
+  GPU deficit hosts=81 sum 322), consistent with delayed host attribution in prior sessions.
 
-VALIDATION SUMMARY — March 4, 2026 (session part1_validate)
-- Reviewed and validated 32 newly completed `exp_%` result files from upload storage; all parsed as `experiment_result` payloads (no malformed JSON in this batch).
-- Credit state now clean for completed successful experiment results: uncredited success queue reduced to 0.
-- Credit actually applied in this session: 13 results, total +940 credit (within 10,000 cap). Remaining candidates were already credited by concurrent activity before writeback.
-
-CROSS-VALIDATION INCREMENTS (THIS VALIDATION PASS)
-- kuramoto_delay_noisy_control: +12 seeds reviewed (all completed payloads).
-- grayscott_delay_pulse_feedback: +3 seeds; brusselator_delay_sensor_noise: +2 seeds.
-- reg_timing_universality: +2 seeds; rd_phasejitter_adaptive_forcing: +2 seeds.
-- wd_noise_trigger_gpu (GPU): +2 seeds; ising_delay_adaptive_quench: +2 seeds.
-- feature_subspace_overlap: +2 seeds; wd_onset_sweep: +2 seeds.
-- seasonal_metapop_vax_trigger: +1 seed; wd_clipping_interaction: +1 seed; weight_initialization_landscape: +1 seed.
-
-OPEN SCIENTIFIC NOTES (NOT YET PROMOTED)
-- No new finding reached 30+ seed consistency threshold in this validation pass.
-- In this batch, delay-inversion flags were not observed for kuramoto/grayscott/brusselator samples; treat as provisional due to low incremental n.
-- reg_timing_universality batch increment remained mixed (universality flag false in both newly reviewed seeds); continue seeding before any retirement decision.
+VALIDATION STATUS (March 4, 2026, part1_validate)
+- Reviewed latest uncredited uploads; verified wrapper/schema mismatch for two CPU scripts caused valid outputs to be tagged as failures.
+- Script fix applied: metapop_corridor_delay_forecast.py and rps_delay_jitter_adaptive_mobility.py now write raw result JSON (no nested experiment_result key).
+- Scientific trend check (not yet confirmable): in sampled metapop_corridor_delay_forecast runs, fixed strategy persistence remained above adaptive across d2/d10/d20 with small negative adaptive-fixed deltas.
+- Scientific trend check (not yet confirmable): sampled rps_delay_jitter_adaptive_mobility outputs show near-zero adaptive benefit at jitter=0.10 with current small trial counts per condition.
+- No new 30+ seed cross-validated result this validation pass; CONFIRMED FINDINGS unchanged.
