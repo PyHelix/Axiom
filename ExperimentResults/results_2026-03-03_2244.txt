@@ -1,0 +1,70 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: 2026-03-03 22:44 (Part 3 Save/Upload)
+Sources: validate_2026-03-03_2240.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1 VALIDATION / CREDIT / CLEANUP SUMMARY
+- Reviewed uncredited completed exp_* rows (server_state=5, outcome=1, granted_credit=0): 0 rows.
+- Credit awarded this session: 0 total credit (no eligible uncredited completed rows).
+- Payload quality control sample (newest 100 upload JSON files under /opt/axiom_boinc/upload/*/exp_*):
+  - experiment_result payloads: 100
+  - error payloads: 0
+  - parse failures: 0
+- Stuck/broken task cleanup:
+  - Dead-host >12h running aborts: 0 rows changed.
+  - >48h hard-ceiling aborts: 0 rows changed.
+  - Experiment-level blanket aborts: none applied in this validation pass.
+- Counter refresh after validation:
+  - credited_count.txt: 54,438
+  - total_results_count.txt: 55,054
+  - Credited exp_* rows in DB (granted_credit>0): 148,534
+
+PART 2 RESEARCH / DEPLOYMENT SUMMARY
+- New/active CPU experiment scripts in this run:
+  - wd_batchnoise_interaction.py (newly authored and py_compile verified)
+  - wd_labelsmooth_interaction.py (existing active line)
+- CPU deployment execution result from Part 2 run log:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2 (<6 GB RAM)
+  - CPU_WU_CREATED=2937
+- CPU host targeting model:
+  - Host-specific targeted WUs were created using exp_*_h<hostid> naming.
+  - Heaviest targeted hosts in this run window included:
+    - 287 DESKTOP-N5RAJSE (192 CPU)
+    - 192 7950-X3D (32 CPU)
+    - 141 SPEKTRUM (72 CPU)
+    - 292 debi (20 CPU)
+    - 16 dahyun (32 CPU)
+    - 325 Charlie-2 (32 CPU)
+
+GPU CHECKPOINT
+- GPU deployment scripts configured for this pass:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Part 2 run log was interrupted during GPU deployment command (Ctrl-C recorded in run log), but queue checkpoint confirms active GPU deployment state for this pass:
+  - GPU hosts with queued wd_timing_scale_gpu WUs: 4
+    - host 339 Foxtrot-2: 3 queued
+    - host 23 jisoo: 2 queued
+    - host 1 Pyhelix: 1 queued
+    - host 29 DESKTOP-P57624Q: 1 queued
+  - Total confirmed GPU WUs at checkpoint: 7
+  - Confirmed at checkpoint: wd_timing_scale_gpu in queue; wd_curvature_trigger_gpu had 0 queued at that checkpoint
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New experiment designed in Part 2: wd_batchnoise_interaction.py
+- Hypothesis: late weight decay benefit is stronger under small-batch gradient noise than large-batch regimes (interaction test).
+- Novelty check recorded in run log via web/arXiv searches:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle retained for Axiom run queue: explicit interaction quantification of late-WD gain across small- vs large-batch conditions in a controlled synthetic task with per-trial aggregate metrics.
+
+KEY SCIENTIFIC FINDINGS
+1. Latest payload integrity remains strong: 100/100 newest upload JSON payloads were science-bearing (experiment_result present, no parse failures).
+2. No current evidence of active-queue collapse in the validation window: no active experiment prefix crossed the >50% failure threshold in the recent health check.
+3. Prior zero-runtime failure bursts remain concentrated in non-active prefixes (e.g., metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility), supporting a historical dispatch/runtime instability interpretation rather than immediate active-queue script failure.
+4. New wd_batchnoise_interaction line extends the existing ICP/late-WD program by directly measuring batch-noise interaction effects on generalization gap dynamics.
+
+NOTES
+- Per policy, no cumulative result ID lists are included in this session log.
