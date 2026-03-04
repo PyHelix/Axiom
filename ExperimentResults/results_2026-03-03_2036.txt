@@ -1,0 +1,60 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-03 20:36 (America/Denver)
+Session scope: Part 1 validation/credit + Part 2 deployment/research consolidation
+Source logs: validate_2026-03-03_2031.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed and credited 10,000 uncredited completed exp_* results (session cap reached exactly).
+- Credited result ID span: 1,547,203-1,560,167.
+- Outcome mix in credited set: success=0, failed/error=10,000.
+- Upload audit: 10,000/10,000 credited rows had missing payloads from /opt/axiom_boinc/upload/*/exp_*.
+- Credit policy used: 1 credit per reviewed result for this legacy missing-payload tranche.
+- Total awarded this session: 10,000 credits.
+- Legacy host attribution correction was applied via name parsing to preserve host/user incremental totals.
+- Top user increments in this pass: ChelseaOilman +1,502; Amapola +1,266; mmonnin +956; makracz +811; Landjunge +576; Josemi +569; Steve Dodd +443.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h rule aborts: 0.
+- >48h hard-ceiling aborts: 0.
+- Broken experiment bulk aborts: 0.
+- Active queue diagnostics checked; no traceback-evidenced new code-break requiring emergency disablement.
+
+PART 2: DEPLOYMENT AND RESEARCH ACTIONS
+- New CPU experiment script authored and uploaded: wd_batchnoise_interaction.py.
+- Existing active scripts used in this cycle: wd_labelsmooth_interaction.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Retirement sweep executed against high-completion candidates; ABORT_TOTAL=0 in this pass.
+
+CPU DEPLOYMENT
+- CPU host targeting pass completed.
+- Reported by run log: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2, CPU_WU_CREATED=2937.
+- CPU scripts deployed: wd_batchnoise_interaction.py and wd_labelsmooth_interaction.py.
+- CPU host IDs receiving this deployment window: 1,6,7,9,16,23,29,31,57,60,61,67,71,72,74,80,85,86,95,105,107,115,116,123,126,127,137,140,141,143,192,202,205,206,209,212,216,217,219,223,235,249,251,253,255,258,267,270,287,292,299,321,322,323,324,325,326,327,328,329,330,331,332,333,336,337,338,339,340,341,342,343,344,345,346,347,348,350,351.
+
+GPU DEPLOYMENT CHECKPOINT (MANDATORY REPORT)
+- GPU pass was started with scripts wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+- Console log was interrupted before final GPU summary printout.
+- Database audit of workunit creation during the Part 2 UTC window (2026-03-03T20:52:00 to 2026-03-03T21:40:00) shows:
+  - GPU hosts targeted: 79.
+  - GPU workunits created: 315 total.
+  - By script: wd_curvature_trigger_gpu=184, wd_timing_scale_gpu=131.
+  - GPU host IDs receiving workunits: 1,6,7,9,15,16,23,29,31,57,67,71,72,74,80,85,86,87,95,105,107,113,115,116,118,123,126,127,137,140,141,159,192,205,206,209,212,216,217,219,222,223,249,251,253,255,258,267,270,287,319,321,322,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,345,346,347,349,350,351.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New script: wd_batchnoise_interaction.py.
+- Hypothesis: late weight-decay gains interact with gradient-noise regime (small-batch vs large-batch), testing whether late-WD benefit is stronger under small-batch noise.
+- Novelty-check search traces recorded in run log included targeted literature queries:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Positioning decision: proceed with mechanism-isolation interaction test (batch-noise x late-WD) as a targeted extension, not a simple seed expansion.
+
+KEY SCIENTIFIC FINDINGS
+1. No new scientific reversal was observed against established inverse critical period / weight-decay timing conclusions in this session's validation tranche.
+2. The credited batch was fully legacy missing-payload failures, so Part 1 primarily advanced compute-fairness credit maintenance rather than payload-derived interpretation.
+3. Part 2 shifted compute toward mechanism-isolating WD lines (label-smoothing interaction, batch-noise interaction, curvature-trigger and timing-scale GPU checks), establishing the next evidence-generating queue.
+4. Immediate operational risk remained low in reviewed active cohorts: no fresh traceback-confirmed broken experiment required emergency blanket abort this pass.
+
+SCIENTIFIC/OPERATIONS CONTEXT LINK
+- findings_summary.txt retains cumulative cross-session context, open questions, and prioritization state used for this deployment wave.
