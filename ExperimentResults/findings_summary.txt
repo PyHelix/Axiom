@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (deploy session 14:47-14:52 CET)
+Last updated: March 4, 2026 (deploy session 14:16-14:24 CET)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -19,90 +19,51 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE STATUS
-- No new 30+ seed cross-validated result reached promotion threshold in this session.
-- Scientific crediting remains blocked by sanitized-result lag for newly completed rows.
+- No new 30+ seed cross-validated result reached promotion threshold this cycle.
+- Sanitized-result lag remains the main blocker for quality-based crediting of fresh successes.
 
-ACTIVE EXPERIMENT CONTEXT
-- CPU delay/control families remain active (ecology, PDE, network and climate-delay lines).
-- GPU families active in rotation: wd_noise_trigger_gpu, wd_curvature_trigger_gpu,
-  wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
+LATEST VALIDATION SNAPSHOT (March 4, 2026 14:13 CET)
+- Success rows reviewed: 286 (`exp_%`); newly matched sanitized artifacts: 0.
+- Crediting this pass: 0 rows, 0 total credit (safety cap respected).
+- Completed-success totals: 2931 total, 2641 credited, 290 uncredited.
+- Cleanup: broken-family backlog (`abx_cycle`) reduced to zero active rows.
 
-VALIDATION STATUS (March 4, 2026 14:46 CET)
-- Uncredited completed-success rows reviewed: 248 (`exp_%`, live DB snapshot).
-- Sanitized match coverage for reviewed rows: 0/248 by `_result_name`; 0/248 by workunit name.
-- Quality-based credit awarded this session: 0 results, 0 total credit (safety cap respected).
-- Completed outcome snapshot: success total=2381; success credited rows=2133; success uncredited=248.
-- Stuck-task cleanup executed: dead-host >12h aborted 0; hard >48h aborted 0.
-- High-failure families remain: oscillatory_roughchannel_lbm_resonance (0/214 success),
-  abx_cycle (0/66), potts_pulse_anneal_resonance (0/21), spatial_pgg_delay_fatigue (0/20).
-- Active backlog for those failure families is currently zero unsent and zero in-progress;
-  no targeted abort action required this pass.
-- Website counters refreshed (non-decreasing rule): credited_count=2133, total_results_count=2381.
+DEPLOYMENT STATUS (March 4, 2026 14:24 CET)
+- Mandatory cap enforcement at cycle start: host 347 GPU running cut 121 -> 6 (aborted 115 excess).
+- Backlog guard before creation: unsent=0, in_progress=1117 (below hard cap 5000).
+- Retirement scan run (`completed>50` with unsent/running criteria): no retire targets this cycle.
+- CPU deployment pass executed with host-targeted 3x queue logic and RAM>=6GB filter.
+- GPU MANDATORY checkpoint: 80 GPU hosts with idle capacity; 291 GPU WUs deployed.
+- GPU scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
+  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
+- Post-deploy hard-cap enforcement rerun: host 354 CPU running cut 160 -> 96 (aborted 64 excess).
+- Post-enforcement cap check: no remaining >4x running-cap violations.
+
+NEW EXPERIMENT DESIGNED (for next validation cycles)
+- Script added: `rw_reset_fatigue_nonrenewal.py` (statistical physics / random-search dynamics).
+- Hypothesis: reset-control fatigue with partial recovery induces a re-entrant optimum,
+  where aggressive reset rates lose optimality under cumulative control burden.
+- Runtime: host-seeded independent trials until `run_duration`; small-world parameter sweeps;
+  ordered numeric-only output via `build_ordered_experiment_output`.
+- Trusted sanitizer registration updated: `trusted_params.json` includes `rw_reset_fatigue_nonrenewal`.
+- Initial deployment: 120 CPU WUs (`exp_rw_reset_fatigue_nonrenewal_*`) to high-capacity hosts.
+
+NOVELTY CHECK LOG (mandatory pre-design)
+- Query: "stochastic resetting refractory period random walk"
+  Finding: refractory-return / non-instantaneous reset variants exist with fixed reset mechanisms.
+- Query: "random walk on network stochastic resetting mean first passage"
+  Finding: network-resetting MFPT optimization is established, including targeted reset variants.
+- Query: "stochastic resetting fatigue" and "search with resetting costs"
+  Finding: cost-aware models exist, but no direct prior match found for adaptive fatigue-and-recovery
+  reset propensity coupled to topology-dependent re-entrant optimum mapping in small-world search.
 
 OPEN QUESTIONS
-- Why sanitizer/assimilator artifacts for newest successful results remain unavailable at validation time.
-- Whether specific 100% failure scripts now include fixes in source rotation, since no stderr tracebacks
-  are retained in DB rows for recent outcome=5 failures.
+- Why sanitizer artifacts for newly successful results are delayed beyond current validation windows.
+- Whether high-failure families (e.g., roughchannel_lbm, potts_pulse_anneal) need parameter-safe fallbacks.
 
-DEPLOYMENT STATUS (March 4, 2026 14:52 CET)
-- Mandatory per-host cap enforcement executed before deployment:
-  host 354 CPU running cut 169 -> 96 (aborted 73 excess), host 353 GPU running cut 11 -> 3 (aborted 8 excess).
-- Backlog guard check passed before deployment (unsent=0, in_progress=1275 at start; below 5000 cap).
-- Retirement scan executed for over-seeded lines (`completed>50` with unsent/running criteria): no new abort targets.
-- CPU work deployment executed with host targeting and 3x queue objective; create_work submissions succeeded for 3324 CPU WUs.
-- GPU MANDATORY checkpoint: 74 GPU hosts found with idle capacity; 281 GPU WUs deployed.
-- GPU scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
-  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
-
-NEW EXPERIMENT DESIGNED (for next validation cycles)
-- Script added: `rbn_delay_fatigue_control.py` (cross-disciplinary complex systems / network dynamics).
-- Hypothesis: delayed feedback plus intervention fatigue creates a re-entrant control regime in random Boolean
-  networks, where moderate delay remains stabilizing but high delay + fatigue collapses control effectiveness.
-- Runtime design: host-seeded independent trials loop until `run_duration` budget; multi-parameter sweep per trial;
-  ordered numeric-only output via `build_ordered_experiment_output`.
-- Trusted sanitizer registration updated: `trusted_params.json` now includes `rbn_delay_fatigue_control` keys.
-- Initial deployment: 120 CPU WUs (`exp_rbn_delay_fatigue_control_*`) targeted to high-capacity host(s).
-
-NOVELTY CHECK LOG (mandatory pre-design)
-- Query: "random Boolean networks adaptive rewiring criticality"
-  Finding: prior work confirms adaptive rewiring/criticality links in RBNs, but not this delayed-feedback + fatigue coupling.
-- Query: "Kauffman network delayed control damage spreading"
-  Finding: damage-spreading and control are studied separately; little direct evidence for delay-by-fatigue interaction maps.
-- Query: "Boolean network intervention fatigue delay"
-  Finding: no direct prior match found in retrieved sources; supports novelty as a mechanism-interaction study.
-
-DEPLOYMENT STATUS (March 4, 2026 15:05 CET)
-- Mandatory cap enforcement run: no hosts exceeded hard 4x running cap this cycle (CPU_ABORTED=0, GPU_ABORTED=0).
-- Backlog guard passed at start (unsent=0, in_progress=1323; under 5000 cap).
-- Retirement scan run before deployment: no unsent retire targets found.
-- CPU deployment submissions completed for 3677 host-targeted WUs (3x queue objective pass).
-- GPU MANDATORY checkpoint: 80 GPU hosts found with idle capacity; 24 new GPU WUs submitted this cycle.
-- GPU scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
-  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
-
-NEW EXPERIMENT DESIGNED (for next validation cycles)
-- Script added: `adaptive_voter_delay_rewiring.py` (network science / statistical physics).
-- Hypothesis: delayed observation plus rewiring fatigue creates re-entrant control behavior:
-  moderate delay lowers late discordance, but high delay + fatigue degrades control gains.
-- Runtime design: host-seeded independent trials until `run_duration`; per-trial delay/fatigue grid;
-  ordered numeric-only output via `build_ordered_experiment_output`.
-- Trusted sanitizer registration updated: `trusted_params.json` now includes `adaptive_voter_delay_rewiring` keys.
-- Initial deployment: 120 CPU WUs (`exp_adaptive_voter_delay_rewiring_*`) to high-capacity hosts.
-
-NOVELTY CHECK LOG (mandatory pre-design)
-- Query: "adaptive voter model rewiring delay polarization persistence"
-  Finding: adaptive-voter rewiring literature exists, but explicit delayed-observation + fatigue interaction mapping is sparse.
-- Query: "voter model with time delay on adaptive networks"
-  Finding: delay effects are studied in fixed-network voter variants, not this fatigue-controlled rewiring regime.
-- Query: "homophily rewiring opinion dynamics stale information delay"
-  Finding: no direct prior match for the re-entrant delay-by-fatigue control hypothesis in retrieved sources.
-
-VALIDATION STATUS (March 4, 2026 14:13 CET)
-- Uncredited completed-success rows reviewed: 286 (`exp_%`, live DB snapshot).
-- Sanitized match coverage for reviewed rows: 0/286 by exact `_result_name` or sanitized filename base.
-- Quality-based credit awarded this session: 0 results, 0 total credit (safety cap respected).
-- Completed outcome snapshot after cleanup: success total=2931; success credited rows=2641; success uncredited=290.
-- Broken-family cleanup executed: `abx_cycle` active backlog aborted 1 row (unsent=0, in_progress now=0).
-- Stuck-task cleanup executed: dead-host >12h aborted 0; hard >48h aborted 0.
-- Source check on `abx_cycle_hgt_delay_resonance.py`: no deterministic script-level exception found from static inspection; DB failure rows show `exit_status=0` only.
-- Website counters refreshed (non-decreasing rule): credited_count=2641, total_results_count=2930.
+LATEST VALIDATION SNAPSHOT (March 4, 2026 14:29 CET)
+- Success rows reviewed: 121 (`exp_%`); newly matched sanitized artifacts: 0.
+- Crediting this pass: 0 rows, 0 total credit (safety cap respected).
+- Completed-success totals: 3164 total, 3043 credited, 121 uncredited.
+- Cleanup: no active rows remained for known broken families (`oscillatory_roughchannel_lbm_resonance`, `abx_cycle`, `potts_pulse_anneal_resonance`, `spatial_pgg_delay_fatigue`); no stuck-task aborts triggered.
+- Script health check: `py_compile` passed for the four high-failure experiment scripts; no code patch applied in this validation pass.

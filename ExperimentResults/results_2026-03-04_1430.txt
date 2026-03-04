@@ -1,0 +1,39 @@
+AXIOM SESSION RESULTS
+Timestamp: 2026-03-04 14:29 CET validation + 14:16-14:24 CET deploy/design context
+Session scope: Validation, credit adjudication, cleanup confirmation, experiment design documentation
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Successful uncredited results reviewed this session: 121 (exp_% families)
+- Sanitized numeric artifacts matched at validation time: 0/121
+- Credit awarded this session: 0 total across 0 results (safety cap respected)
+- Per-user additions: none this pass
+- Counter state after validation: 3164 completed successes, 3043 credited successes, 121 uncredited successes
+
+STUCK/BROKEN TASK CLEANUP
+- Broken-family abort sweep executed for:
+  1. exp_oscillatory_roughchannel_lbm_resonance%
+  2. exp_abx_cycle%
+  3. exp_potts_pulse_anneal_resonance%
+  4. exp_spatial_pgg_delay_fatigue%
+- Outcome: 0 rows aborted in each family (no active unsent/in-progress rows)
+- Stuck dead-host sweep (>12h sent and >6h host silent): 0 rows aborted
+- Hard-ceiling sweep (>48h running): 0 rows aborted
+- Script integrity check: py_compile passed for four high-failure scripts; no code fix required in this pass
+
+NEW EXPERIMENTS DESIGNED AND NOVELTY CHECK
+- New experiment script prepared for deployment cycle context: rw_reset_fatigue_nonrenewal.py
+- Scientific hypothesis: reset-control fatigue with partial recovery can induce a re-entrant optimum in small-world random search, reducing performance of overly aggressive reset rates.
+- Deployment context: initial 120 CPU workunits dispatched for exp_rw_reset_fatigue_nonrenewal_*.
+- Novelty check documentation:
+  1. "stochastic resetting refractory period random walk" -> related refractory/non-instantaneous reset literature exists.
+  2. "random walk on network stochastic resetting mean first passage" -> established MFPT optimization literature exists.
+  3. "stochastic resetting fatigue" / "search with resetting costs" -> cost-aware variants exist, but no direct prior match found for adaptive fatigue-and-recovery reset propensity coupled to topology-dependent re-entrant optimum mapping.
+
+KEY SCIENTIFIC FINDINGS
+1. No new finding was promoted this cycle because newly successful rows lacked matched sanitized numeric payloads at validation time (0/121 matched), preventing quality-based adjudication.
+2. Sanitizer lag remains the primary operational bottleneck for converting successful returns into creditable, quality-verified scientific outputs.
+3. High-failure experimental families (oscillatory_roughchannel_lbm_resonance, abx_cycle, potts_pulse_anneal_resonance, spatial_pgg_delay_fatigue) had no active backlog at this timestamp, indicating cleanup saturation rather than ongoing failure accumulation.
+4. The newly designed rw_reset_fatigue_nonrenewal experiment targets a potentially novel regime: fatigue-and-recovery-controlled resetting with topology-dependent re-entrant performance behavior in small-world search.
+
+FOLLOW-UP
+- Re-run validation after sanitizer catch-up to process the current 121 uncredited successful rows using sanitized numeric outputs.
