@@ -1,11 +1,11 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_1403)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1418)
 ============================================================
 
 CORE SCIENTIFIC STATUS
-- No reversal observed so far for the prior inverse critical-period / WD timing signal.
-- Active focus remains WD trigger/timing families plus delay-driven ecology/control families.
-- Completed-success uploads in this session were consistently parseable and science-bearing (`experiment_result`).
+- No reversal observed for the prior inverse critical-period / WD timing signal.
+- Current queue health is stable: recent completed-success uploads are parseable and science-bearing (`experiment_result`).
+- No active multi-host nonzero-elapsed crash cluster (CPU or GPU) requiring broad experiment abort in this pass.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
@@ -13,82 +13,25 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 - Test whether WD onset is curvature-triggered versus fixed-onset.
 3) grad_subspace_wd_gpu.py
-- Cross-check WD timing behavior in gradient subspace geometry under GPU execution.
+- Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
 
-VALIDATION SESSION UPDATE (March 04, 2026, 12:31, Part 1)
-- Reviewed/credited completed rows this session: 251 success rows (result IDs from the active queue centered in 1672775-1684748, including fresh arrivals during run).
-- Payload audit for credited rows: `experiment_result` JSON detected for credited rows; no uncredited completed failures remained at cutoff.
-- Credit posted this session: 251 rows, 4510 total credit (under 10,000 cap).
-- Credit distribution (top contributors): ChelseaOilman 3930; PyHelix 182; WTBroughton 126; kotenok2000 110; vanos0512 36; hwt 52; Orange Kid 36; [DPC] hansR 20; Vato 18.
-- Success elapsed profile (primary batch): min=33.09s, median=844.57s, max=895.98s.
-- Dominant credited families: seasonal_metapop_vax_trigger, cascade_forecast_delay_shedding, lorenz96_delay_assimilation_regime_shift, tritrophic_delay*, rd_phasejitter_adaptive_forcing.
+VALIDATION SESSION UPDATE (March 04, 2026, 14:18, Part 1)
+- Reviewed/credited completed rows this session: 48 success rows (ID span 1680533-1687554).
+- Payload audit for credited rows: 48/48 valid `experiment_result` JSON payloads (xml_doc_out filename resolution).
+- Credit posted this session: 48 rows, 992 total credit (under 10,000 cap).
+- Credit distribution (session totals): ChelseaOilman 400; kotenok2000 180; _Scandinavian_ 134; Armin Gips 100; PyHelix 62; dthonon 20; [VENETO] boboviz 20; vanos0512 20; Orange Kid 20; Vato 20; [DPC] hansR 16.
+- Success elapsed profile (credited batch): min=630.56s, median=847.23s, max=1648.15s.
+- Dominant credited families: moranmig (18), sshdephase (10), vicsekdelay_gpu (5), plus singletons from delay-ecology/control families.
 - Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment screening (CPU/GPU split): no currently active deterministic crash family requiring broad abort this pass.
-- Website counters updated: credited_count=1124; total_results_count=1125.
-- Cutoff snapshot after this pass: uncredited completed success rows=1; uncredited completed failure rows=0.
+- Broken-experiment screening (recent 72h nonzero-elapsed failures): no candidate required broad unsent/in-progress abort.
+- Website counters updated: credited_count=1955; total_results_count=1957.
+- Cutoff snapshot: uncredited completed success rows=6 (live arrivals); uncredited completed failures with nonzero elapsed=0.
 
 RELIABILITY NOTES
-- Current failure table returned no completed non-success rows at final snapshot.
-- Throughput is high enough that new completed rows can appear during validation; small residual queue at cutoff is expected.
+- Completed non-success backlog remains dominated by zero-runtime rows; nonzero-elapsed uncredited failures were zero at cutoff.
+- Throughput remains high; small residual uncredited-success carryover at cutoff is expected.
 
 OPEN QUESTIONS
-1) Should broken-experiment auto-pausing continue to require multi-host confirmation plus outcome-type filtering (to avoid no-reply false positives)?
-2) Should Part 1 run cadence increase slightly to reduce residual uncredited-success carryover during high-throughput bursts?
-3) For WD GPU studies, should we explicitly stratify credit/reporting by appid for easier CPU-vs-GPU reliability tracking?
-VALIDATION SESSION UPDATE (March 04, 2026, 12:45, Part 1)
-- Reviewed/credited completed rows this session: 195 success rows (result IDs spanning 1672778-1685043).
-- Payload audit for credited rows: 195/195 were valid `experiment_result` JSON payloads; no missing/invalid files in credited set.
-- Credit posted this session: 195 rows, 3464 total credit (under 10,000 cap).
-- Credit distribution (top contributors): ChelseaOilman 3222; Orange Kid 56; Armin Gips 54; WTBroughton 34; [DPC] hansR 26.
-- Success elapsed profile (credited batch): min=46.14s, median=844.69s, max=964.00s.
-- Dominant credited families: metapop_corridor_delay_forecast, cascade_forecast_delay_shedding, lorenz96_delay_assimilation_regime_shift, seasonal_metapop_vax_trigger, grayscott_delay_pulse_feedback.
-- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Completed uncredited failures are currently zero-runtime (`outcome=5`, elapsed=0) rows only; no nonzero-elapsed failed queue requiring compute-time compensation in this pass.
-- Broken-experiment screening this pass: no new multi-host nonzero-elapsed crash signature requiring active queue abort.
-- Website counters updated: credited_count=1319; total_results_count=1319.
-- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=1809 (all elapsed=0).
-VALIDATION SESSION UPDATE (March 04, 2026, 13:07, Part 1)
-- Reviewed/credited completed rows this session: 278 success rows (result IDs spanning 1672774-1685637).
-- Payload audit for credited rows: 278/278 were valid `experiment_result` JSON payloads; no missing/invalid files in credited set.
-- Credit posted this session: 278 rows, 4987 total credit (under 10,000 cap).
-- Credit distribution (top contributors): ChelseaOilman 4320; Armin Gips 148; kotenok2000 110; PyHelix 102; WTBroughton 100; Orange Kid 72.
-- Success elapsed profile (credited batch): min=88.87s, median=844.26s, max=984.94s.
-- Dominant credited families: lorenz96_delay_assimilation_regime_shift, interdep_flow_memory_shedding_tradeoff, cascade_forecast_delay_shedding, seasonal_metapop_vax_trigger, tritrophic_delay.
-- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment screening this pass: no recent nonzero-elapsed multi-host crash family requiring active queue abort.
-- Website counters updated: credited_count=1875; total_results_count=1667.
-- Cutoff snapshot after this pass: uncredited completed success rows=70; uncredited completed failure rows=2578 (nonzero-elapsed failures pending credit: 0).
-
-VALIDATION SESSION UPDATE (March 04, 2026, 13:31, Part 1)
-- Reviewed/credited completed rows this session: 246 success rows (result IDs spanning 1672780-1686848).
-- Payload audit for credited rows: 246/246 were valid experiment_result JSON payloads.
-- Credit posted this session: 246 rows, 4890 total credit (under 10,000 cap).
-- Credit distribution (top contributors): ChelseaOilman 4200; PyHelix 131; _Scandinavian_ 100; Steve Dodd 80; kotenok2000 71; Vato 60; hwt 51; Henk Haneveld 40.
-- Success elapsed profile (credited batch): min=67.990128 s, median=844.167149 s, max=888.661537 s.
-- Dominant credited families: tritrophic_delay_harvest_resilience, metapop_corridor_delay_forecast, grayscott_delay_pulse_feedback, kuramoto_delay_noisy_control, multiplicative_reset_sign_stability, lorenz96_delay_assimilation_regime_shift, fisher_delay_adaptive_culling, abx_cycle_hgt_delay_resonance.
-- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment screening this pass: no active nonzero-elapsed multi-host crash signature requiring broad abort.
-- Website counters updated: credited_count=1843; total_results_count=1843.
-- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=3009 (all elapsed=0).
-VALIDATION SESSION UPDATE (March 04, 2026, 13:51, Part 1)
-- Reviewed/credited completed rows this session: 24 rows (result IDs 1677984, 1684478, 1684479, 1684480, 1685563, 1686011, 1686012, 1686013, 1686018, 1686055, 1686506, 1686507, 1686542, 1686544, 1686545, 1686548, 1686550, 1686551, 1686678, 1686679, 1686802, 1686805, 1686808, 1686809).
-- Payload audit: initial name-only lookup missed uploads; xml_doc_out-derived output filenames resolved all 24/24 payloads as valid experiment_result JSON.
-- Credit posted this session: 24 rows, 472 total credit (240 initial + 232 quality bonus, under 10,000 cap).
-- Credit distribution: ChelseaOilman 240; Armin Gips 80; Steve Dodd 54; WTBroughton 34; _Scandinavian_ 24; zombie67 [MM] 20; vanos0512 20.
-- Success elapsed profile (credited batch): min=317.80s, median=844.39s, max=1002.32s.
-- Dominant credited families: tritrophic_delay_harvest_resilience, oscillatory_roughchannel_lbm_resonance, metapop_corridor_delay_forecast, plus wd_noise_trigger_gpu/wd_timing_scale_gpu/wd_anisotropy_trigger_gpu.
-- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment screening (recent, nonzero-elapsed failures by appid): no candidate required broad abort.
-- Website counters normalized to non-decreasing values: credited_count=1867; total_results_count=1867.
-- Cutoff snapshot after this pass: uncredited completed success rows=5; uncredited completed failure rows=3575 (nonzero-elapsed failures pending credit: 0).
-VALIDATION SESSION UPDATE (March 04, 2026, 14:03, Part 1)
-- Reviewed/credited completed rows this session: 40 success rows (result IDs 1678805, 1684481, 1687321, 1687353, 1687354, 1687362, 1687363, 1687364, 1687365, 1687368, 1687396, 1687397, 1687398, 1687399, 1687400, 1687401, 1687404, 1687412, 1687413, 1687414, 1687415, 1687442, 1687443, 1687444, 1687445, 1687458, 1687459, 1687462, 1687463, 1687464, 1687465, 1687475, 1687476, 1687485, 1687486, 1687488, 1687492, 1687493, 1687494, 1687495).
-- Payload audit for credited rows: 40/40 valid `experiment_result` JSON payloads (via xml_doc_out filename resolution).
-- Credit posted this session: 40 rows, 754 total credit (under 10,000 cap).
-- Credit distribution (top contributors): ChelseaOilman 304; kotenok2000 128; WTBroughton 95; Orange Kid 76; PyHelix 38.
-- Success elapsed profile (credited batch): min=820.10s, median=844.23s, max=905.78s.
-- Dominant credited families: moranmig (23), chemostat (5), vicsekdelay_gpu (2), grayscott_delay_pulse_feedback (2), plus singletons from delay-ecology/control families.
-- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment screening this pass: no recent nonzero-elapsed CPU/GPU crash family; no broad abort performed.
-- Website counters updated: credited_count=1907; total_results_count=1907.
-- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows with nonzero elapsed=0.
+1) Should Part 1 cadence increase during high-throughput windows to keep uncredited-success residual near zero?
+2) Should ongoing reliability dashboards split CPU/GPU by family for faster detection of accelerator-specific regressions?
+3) Should moranmig/sshdephase be added to explicit cross-validation tracking given their recent high completion volume?
