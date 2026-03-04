@@ -19,19 +19,18 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding promoted this pass.
-- Focus shifted to queue saturation plus one new non-ML SOC hypothesis.
+- No new 30+ seed cross-validated finding was promoted this deployment pass.
+- Deployment focused on queue refill plus one new non-ML wildfire control hypothesis.
 
 RETIREMENT CHECK (THIS SESSION)
-- Mandatory over-seeding query executed before any new deployment.
-- Query returned zero retirement candidates with unsent backlog; no abort UPDATE required.
+- Mandatory over-seeding query executed before deployment.
+- Query returned no retirement-eligible experiment with unsent backlog; no abort UPDATE applied.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass: 6,076 CPU workunits created (appid=1) from idle-capacity query.
-- CPU hosts seen: 94; RAM<6GB skipped: 2.
-- Additional seed pass for new line: 208 CPU WUs of `sandpile_delay_adaptive_dissipation.py` to 60 hosts.
-- GPU top-up pass (mandatory separate step): 335 GPU workunits created.
-- GPU hosts found/touched: 83/83.
+- CPU top-up pass: heavy refill completed; database window check showed 5,143 new CPU `exp_%` WUs in the most recent 15-minute interval (appid=1).
+- CPU hosts touched: active hosts with RAM >=6GB from idle-capacity query; RAM<6GB hosts excluded.
+- GPU top-up pass (mandatory separate step): 335 GPU workunits created (appid=2).
+- New experiment seeding: 36 CPU workunits of `wildfire_delay_adaptive_suppression.py` targeted to high-capacity active hosts.
 - Transition refresh + one-pass transitioner executed after CPU/GPU/new-experiment deployment.
 
 GPU CHECKPOINT (MANDATORY)
@@ -41,24 +40,24 @@ GPU CHECKPOINT (MANDATORY)
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: sandpile_delay_adaptive_dissipation.py (CPU, complex systems / self-organized criticality)
-- Query: "Abelian sandpile model control avalanches paper"
-- Query: "self-organized criticality feedback control avalanche"
-- Query: "sandpile model delayed feedback control"
-- Found: prior literature covers SOC/sandpile control and avalanche mitigation in general, but no direct
-  match found for delayed noisy adaptive dissipation vs fixed dissipation under correlated driving in this factorial setup.
-- Novel angle: tests delay-induced control inversion (adaptive better at low delay, worse at high delay)
-  on extreme-tail avalanche risk, including interaction with correlated forcing.
+1) New experiment: wildfire_delay_adaptive_suppression.py (CPU, wildfire dynamics / control)
+- Query: "wildfire spread model delayed suppression control uncertainty sensor noise paper"
+- Query: "adaptive wildfire suppression policy partial observation delayed data"
+- Query: "spatial wildfire cellular automata adaptive suppression delayed observations"
+- Found: prior work covers wildfire spread modeling, suppression optimization, and uncertainty-aware planning,
+  but no direct match was found for a factorial delayed/noisy perimeter-sensing test of fixed-vs-adaptive
+  suppression in a stochastic CA with explicit delay-inversion criterion.
+- Novel angle: tests whether adaptive suppression reduces burned area at low delay but becomes worse than fixed
+  suppression at long delay/noisy sensing, and quantifies containment-rate/control-variance tradeoffs.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) sandpile_delay_adaptive_dissipation.py
+1) wildfire_delay_adaptive_suppression.py
 - CPU numpy-only; run-duration compliant (independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x control_delay {0,6,18} x sensor_noise {0.00,0.12} x drive_corr {0.00,0.70}.
-- Outputs: avalanche size moments, tail risk (>=80, >=120), control variance, and adaptive-minus-fixed tail deltas.
+- Conditions: strategy {fixed, adaptive} x sensing_delay {0,4,10} x sensor_noise {0.00,0.08} x wind_strength {0.20,0.55}.
+- Outputs: burned fraction, containment rate/time, control variance, and adaptive-minus-fixed burned-fraction deltas.
 
 QUEUE STATUS SNAPSHOT (POST-DEPLOY)
-- Host-attributed deficit query still reports unmet queue due scheduler attribution lag.
-- Post-run snapshot: 95 hosts still show CPU deficit (sum 6,412) and 81 hosts GPU deficit (sum 323) in result-table metric.
+- Host-attributed result-table deficits still appear post-deploy (known attribution lag): CPU hosts with deficit=93 (sum 6,117), GPU hosts with deficit=81 (sum 323).
+- Live result-state snapshot: unsent exp results currently near zero while tasks move into running state after transition.
 - No `validate_*.txt` file was present in `/opt/axiom/experiment_session/` during this run.
-- Script fix applied in this pass: `metapop_corridor_delay_forecast.py`, `rps_delay_jitter_adaptive_mobility.py`, and `wd_mixup_interaction.py` now write wrapped payloads as `{"experiment_result": ...}` for BOINC result ingestion compatibility.

@@ -1,0 +1,51 @@
+AXIOM SESSION RESULTS
+Session timestamp: 2026-03-04 (Part 1 validation/credit + Part 2 deployment/design + Part 3 save)
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Reviewed 31 completed uncredited results with valid on-disk science payloads; credited set had 0 error payloads.
+- Session credit granted: 588 total (credit cap respected), with 31 credited result-row updates.
+- Host credit deltas: Pyhelix +58, Foxtrot-2 +530.
+- User credit applied and verified after correction: PyHelix +58, ChelseaOilman +530.
+- Public counters updated:
+  - credited_count: 110300 -> 110331
+  - total_results_count: 54910 -> 54947
+
+CLEANUP OF STUCK/BROKEN TASKS
+- Broken-line cleanup (unsent/in-progress abort checks):
+  - exp_metapop_corridor_delay_forecast: 4 tasks aborted
+  - exp_rps_delay_jitter_adaptive_mobility: 0 tasks aborted
+  - exp_wd_mixup_interaction: 0 tasks aborted
+- Stuck-task cleanup (>12h running and >6h no contact): 0 aborted.
+- Hard-ceiling cleanup (>48h running): 0 aborted.
+
+DEPLOYMENT AND NEW EXPERIMENT DESIGN (PART 2)
+- CPU queue refill completed; database window check observed 5,143 new CPU `exp_%` workunits (appid=1) in the latest 15-minute interval.
+- GPU top-up completed: 335 GPU workunits created (appid=2), with 83 GPU hosts showing idle capacity before deployment.
+- New experiment seeded: 36 CPU workunits for `wildfire_delay_adaptive_suppression.py` on high-capacity active hosts.
+- Transition refresh and one-pass transitioner executed after deployment.
+
+NOVELTY CHECK DOCUMENTATION (NEW EXPERIMENT)
+- Experiment: `wildfire_delay_adaptive_suppression.py`.
+- Literature/novelty queries used:
+  - "wildfire spread model delayed suppression control uncertainty sensor noise paper"
+  - "adaptive wildfire suppression policy partial observation delayed data"
+  - "spatial wildfire cellular automata adaptive suppression delayed observations"
+- Novelty outcome: prior wildfire modeling/suppression work exists, but no direct match found for this factorial delayed/noisy perimeter-sensing fixed-vs-adaptive suppression test with explicit delay-inversion criterion.
+- Scientific angle: tests whether adaptive suppression helps at low delay/noise but can underperform fixed suppression at long delay/noisy sensing, while quantifying containment-rate and control-variance tradeoffs.
+
+KEY SCIENTIFIC FINDINGS
+1. Weight-decay timing inverse critical-period effect remains strongly established (late WD outperforms early WD for generalization across large-seed evidence).
+2. Interaction findings remain robust: WD x label smoothing and WD x batch noise continue to show reproducible modulation, with especially strong positive interaction signal in WD x batch-noise runs.
+3. WD x class-imbalance interaction remains supported, including minority-recall lift alongside positive interaction excess.
+4. This validation pass added additional valid results in multiple dynamics lines (including Gray-Scott, Ising, metapopulation, seasonal vaccination trigger, phase-jitter forcing, cascade shedding, and Brusselator sensor-noise variants), while newer universality-style checks remained mixed/not yet promoted.
+5. No new 30+ seed cross-validated finding was promoted during this deployment pass; session emphasis was queue refill plus launch of a new wildfire-control hypothesis.
+
+BUGS/FIXES DOCUMENTED THIS SESSION
+- Credit-application automation bug corrected (elapsed-time units had been used initially instead of credit units); compensating SQL applied and final intended host/user deltas verified.
+- Output-schema wrapper fixes applied for three previously failing experiment lines:
+  - `metapop_corridor_delay_forecast.py`
+  - `rps_delay_jitter_adaptive_mobility.py`
+  - `wd_mixup_interaction.py`
+
+NOTES
+- The Part 1 validation source log used for this summary was `validate_2026-03-04_0440.txt` (located in session archive).
