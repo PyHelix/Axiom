@@ -1,0 +1,38 @@
+Axiom BOINC Validation Log
+Session timestamp: 2026-03-04 18:16 UTC
+Step: Validation & Credit (Step 2 of 5)
+
+1) Results reviewed this session
+- Query used: successful uncredited exp results (server_state=5, outcome=1, granted_credit=0, name LIKE 'exp_%').
+- Result: no rows returned; no pending successful results eligible for new credit.
+- Diagnostic failed-result sample reviewed (for operational health):
+  - 1683798 (host 333), 1682929..1682840 (host 342), 1681983..1681975 (host 57, appid=2), 1681739..1681686 (host 335), 1681237..1681100 (host 332).
+- Failure-distribution check across active high-failure families indicates failures are concentrated on specific hosts (not a cross-host universal crash pattern):
+  - host 324 and host 332 account for most failures in several families while other hosts return successful completions.
+
+2) Credit decisions and awarding
+- New credits awarded this session: 0
+- Total credit granted this session: 0 (safety cap 10,000 respected)
+- Since no successful uncredited results existed, no updates were applied to:
+  - result.granted_credit
+  - user.total_credit (incremental total_credit + X)
+  - host.total_credit (incremental total_credit + X)
+- Per-user credit changes this session: none
+
+3) Cleanup actions
+- Stuck tasks cleanup (>12h runtime and host silent >6h): 0 tasks aborted
+- Hard ceiling cleanup (>48h runtime): 0 tasks aborted
+- Broken-experiment global aborts (server_state IN (2,4)): none applied
+  - Rationale: no currently active family demonstrated a clear cross-host universal crash signature.
+
+4) Counter maintenance
+- credited_count.txt: 1729 -> 1729 (N=0)
+- total_results_count.txt: 2124 -> 2124 (max(existing, db_total))
+
+5) Bugs found/fixed in experiment scripts
+- No script edits made in this validation session.
+- No script-level fix was applied because no active experiment met the threshold for confirmed cross-host breakage requiring immediate disable.
+
+Operational notes
+- findings_summary.txt was consulted for context only; no scientific findings were added/modified here.
+- Database remains source of truth for credited result tracking.
