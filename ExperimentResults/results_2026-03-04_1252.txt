@@ -1,0 +1,51 @@
+AXIOM BOINC SESSION RESULTS - PART 3 SAVE
+Session timestamp: 2026-03-04 12:52 (A52erica/Denver)
+============================================================
+
+PART 1 SUMMARY: VALIDATION, CREDIT, CLEANUP (from validate_2026-03-04_1245.txt)
+- Completed-success results reviewed and credited this pass: 195.
+- Credit awarded this pass: 3464 total (session cap check passed).
+- Top credited experiment families (bulk summary):
+  - metapop_corridor_delay_forecast
+  - cascade_forecast_delay_shedding
+  - lorenz96_delay_assimilation_regime_shift
+  - seasonal_metapop_vax_trigger
+  - grayscott_delay_pulse_feedback
+- Stuck/broken cleanup:
+  - Dead-host >12h running aborts: 0
+  - Hard >48h running aborts: 0
+  - Broad broken-experiment aborts: none
+- Reliability status:
+  - Credited payload audit: 195/195 valid xperiment_result JSON payloads.
+  - No nonzero-elapsed failed rows required compensation in this pass.
+
+PART 2 SUMMARY: RESEARCH, EXPERIMENT DESIGN, AND DEPLOYMENT (from run_2026-03-03_1352.log)
+- Novelty check documentation (performed before adding new line):
+  - Web/arXiv searches logged for weight decay x label smoothing interaction, adaptive/scheduled weight decay, and batch-size x weight-decay interaction literature.
+- New experiment designed and added:
+  - wd_batchnoise_interaction.py
+  - Purpose: test whether late weight decay gains are stronger in high-noise (small-batch) training than low-noise (large-batch) training.
+  - Script was uploaded and compiled successfully (python3 -m py_compile -> OK).
+- Retirement pass:
+  - Retirement candidates were rechecked; unsent counts were zero across listed over-completed families at execution time.
+  - Abort total in this pass: 0.
+- CPU deployment:
+  - CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+  - CPU hosts evaluated for fill: 81
+  - Low-RAM hosts skipped (<6 GB): 2
+  - CPU workunits created: 2937
+- GPU deployment checkpoint:
+  - GPU scripts selected for deployment: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+  - Active GPU-capable hosts observed in 72h state snapshot: 82
+  - Run log shows GPU deployment phase started but session was interrupted before completion output.
+  - DB checkpoint since run start (2026-03-03 13:52):
+    - New workunits created for wd_curvature_trigger_gpu: 0
+    - New workunits created for wd_timing_scale_gpu: 0
+  - Interpretation: no new GPU workunits from the two selected GPU scripts were committed in this run window.
+
+KEY SCIENTIFIC FINDINGS
+1. The latest credited batch remained fully science-bearing: all 195 credited rows carried valid xperiment_result payloads with no JSON/schema failures.
+2. Delay/ecology-control experiment families continued to dominate validated throughput, extending continuity for cross-session comparison without introducing new crash signatures.
+3. Runtime behavior stayed stable (median ~845s in the credited batch), supporting consistent comparison across ongoing CPU-heavy families.
+4. A new mechanism-focused experiment (wd_batchnoise_interaction) was introduced after novelty checks to directly test whether gradient-noise regime (batch size) modulates late-WD benefit magnitude.
+5. GPU expansion scripts were prepared (wd_curvature_trigger_gpu, wd_timing_scale_gpu), but this specific run did not commit new GPU workunits for those scripts before interruption; GPU queue expansion remains pending completion in the next deployment pass.

@@ -32,6 +32,9 @@ REPLICATION UPDATES (confirmed findings, new samples)
 OPEN QUESTIONS
 - Interdependent-flow memory shedding tradeoff: current batch has n=9 runs (8 seeds, 2 hosts), mean_medium_window_gain = -0.001049 +/- 0.001156 (4/9 positive, d=-0.91, host-mean span=0.00217). N<10 and mixed signs; classify as inconclusive.
 - 71 additional families had >=5 files but unresolved schema alignment in this window; no claim is made for them until script/adapter schema is unambiguous.
+- Should broken-experiment auto-pausing continue to require multi-host confirmation plus outcome-type filtering (to avoid no-reply false positives)?
+- Should Part 1 run cadence increase slightly to reduce residual uncredited-success carryover during high-throughput bursts?
+- For WD GPU studies, should credit/reporting be stratified by appid for easier CPU-vs-GPU reliability tracking?
 
 ANALYSIS COVERAGE NOTE
 - 1805 sanitized files detected in the last 120 minutes.
@@ -42,3 +45,15 @@ CURRENT CYCLE UPDATE
 - No new confirmed findings were added this cycle.
 - One preliminary finding remains (chemostat delay crossfeeding resonance).
 - One confirmed finding received replication support (pit delay inhibitor resonance).
+VALIDATION SESSION UPDATE (March 04, 2026, 12:45, Part 1)
+- Reviewed/credited completed rows this session: 195 success rows (result IDs spanning 1672778-1685043).
+- Payload audit for credited rows: 195/195 were valid `experiment_result` JSON payloads; no missing/invalid files in credited set.
+- Credit posted this session: 195 rows, 3464 total credit (under 10,000 cap).
+- Credit distribution (top contributors): ChelseaOilman 3222; Orange Kid 56; Armin Gips 54; WTBroughton 34; [DPC] hansR 26.
+- Success elapsed profile (credited batch): min=46.14s, median=844.69s, max=964.00s.
+- Dominant credited families: metapop_corridor_delay_forecast, cascade_forecast_delay_shedding, lorenz96_delay_assimilation_regime_shift, seasonal_metapop_vax_trigger, grayscott_delay_pulse_feedback.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Completed uncredited failures are currently zero-runtime (`outcome=5`, elapsed=0) rows only; no nonzero-elapsed failed queue requiring compute-time compensation in this pass.
+- Broken-experiment screening this pass: no new multi-host nonzero-elapsed crash signature requiring active queue abort.
+- Website counters updated: credited_count=1319; total_results_count=1319.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=1809 (all elapsed=0).
