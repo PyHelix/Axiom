@@ -85,3 +85,14 @@ VALIDATION SESSION UPDATE (March 3, 2026, Part 1K)
 - Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
 - Website counters updated: credited_count 52,495 -> 59,480; total_results_count stayed at 54,848.
 - Post-pass uncredited completed backlog: success 22,802; failed 64,492.
+
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1L)
+- Credited 4,331 completed `exp_*` results for exactly 10,000 total credit (session cap reached exactly).
+- Outcome mix in credited batch: 2,745 successful outcomes and 1,586 failed/error outcomes (ID span 1,546,514 to 1,573,024).
+- Upload payload quality review on planned-credit sample: success sample 500/500 missing, failed/error sample 500/500 missing from `/opt/axiom_boinc/upload/*/exp_*` at validation time; this pass was compute-fairness credit maintenance.
+- Session credit additions by user: ChelseaOilman +5,181; WTBroughton +1,906; Anandbhat +1,861; kotenok2000 +423; Steve Dodd +410; Armin Gips +112; marmot +59; Vato +21; [DPC] hansR +12; rilian +10; dthonon +5.
+- Dominant credited prefixes in this pass: combinedcomp (206), compgen (111), repalignv2 (107), featcompv2 (103), microscalev2 (94), featrank (92), neuronspec (92).
+- Active crash-pattern review: several legacy prefixes remain high-failure historically, but there are currently no active unsent/in-progress `exp_*` rows to abort.
+- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
+- Website counters updated: credited_count 60,380 -> 64,711; total_results_count stayed at 54,848.
+- Post-pass uncredited completed backlog: success 19,157; failed 74,715.

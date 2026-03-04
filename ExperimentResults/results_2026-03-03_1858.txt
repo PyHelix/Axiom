@@ -1,0 +1,70 @@
+AXIOM BOINC SESSION LOG - PART 3 (SAVE & UPLOAD)
+Session timestamp (local): 2026-03-03
+Compiled from:
+- validate_2026-03-03_1854.txt (Part 1)
+- run_2026-03-03_1352.log (Part 2)
+- findings_summary.txt
+
+PART 1 - VALIDATION / CREDIT SUMMARY
+- Reviewed and credited completed backlog from result ID 1546514 through 1573024.
+- Total credited rows: 4331
+- Credit awarded this session: 10000 (session cap respected)
+- Credited outcome mix: success=2745, failed/error=1586
+- Dominant credited prefixes: combinedcomp (206), compgen (111), repalignv2 (107), featcompv2 (103), microscalev2 (94), featrank (92), neuronspec (92).
+
+CREDIT AWARDED (SESSION ADDITIONS)
+- ChelseaOilman +5181
+- WTBroughton +1906
+- Anandbhat +1861
+- kotenok2000 +423
+- Steve Dodd +410
+- Armin Gips +112
+- marmot +59
+- Vato +21
+- [DPC] hansR +12
+- rilian +10
+- dthonon +5
+
+CLEANUP / HEALTH ACTIONS
+- Stuck tasks (>12h on dead hosts): 0 aborted.
+- Hard-ceiling tasks (>48h): 0 aborted.
+- Active unsent/in-progress broken-prefix tasks: none; no broken-prefix abort applied.
+- Part 2 retirement pass check: ABORT_TOTAL=0.
+
+PART 2 - RESEARCH / DEPLOYMENT SUMMARY
+New/active experiment scripts used this session:
+- CPU: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- GPU: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+
+CPU deployment
+- Run log reported CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2, CPU_WU_CREATED=2937.
+- DB session checkpoint (from Part 2 window): 5652 CPU workunits across 18 targeted hosts.
+- CPU script split (session window):
+  - wd_batchnoise_interaction: 3052 WU
+  - wd_labelsmooth_interaction: 2600 WU
+- CPU target hosts (18): Pyhelix, iand-r7-5800h, iand-r7-5800h3, DESKTOP-P57624Q, DadOld-PC, Dads-PC, DESKTOP-N5RAJSE, Rosie, Charlie-1, Echo-3, Delta-1, Delta-2, Golf-2, Foxtrot-2, Foxtrot-3, PC-1, Andre-WEBK, sirius.
+
+GPU deployment checkpoint
+- Part 2 run log was interrupted during GPU deploy output capture, so checkpoint was reconstructed from DB session-window counts.
+- GPU hosts targeted: 14
+- GPU workunits created (session window): 1695
+- GPU script split:
+  - wd_curvature_trigger_gpu.py: 944 WU
+  - wd_timing_scale_gpu.py: 751 WU
+- GPU target hosts (14): Pyhelix, dbgrensenh27, DESKTOP-P57624Q, achernar, DESKTOP-N5RAJSE, Dell-XPS-15-9560, Rosie, Charlie-1, Echo-3, Delta-1, Delta-2, Foxtrot-2, Foxtrot-3, sirius.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK NOTES
+- Added/compiled: wd_batchnoise_interaction.py (validated with python3 -m py_compile).
+- Novelty review evidence captured in run log via web queries including:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "Scheduled Weight Decay paper arxiv 2021"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org batch size weight decay generalization"
+- Novel angle retained for this session's deployment: interaction-focused tests on late WD timing effects under batch-noise and GPU timing/curvature conditions rather than re-running settled baseline WD-only claims.
+
+KEY SCIENTIFIC FINDINGS
+1. No new scientific reversal was observed versus the established inverse critical-period (ICP) direction for weight decay timing.
+2. Validation outputs this pass were dominated by compute-fairness credit maintenance, with sampled upload JSON payloads missing at validation time in both success and failure samples.
+3. Part 2 deployments focused on mechanistic interaction tests (batch-noise x late-WD, label-smoothing x late-WD, GPU curvature/timing gates) to generate new differentiating evidence rather than repeating over-seeded legacy lines.
+4. Queue health remained stable this session: no stuck-task cleanup triggers and no additional retirement aborts were required.
