@@ -19,40 +19,59 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding promoted this pass.
-- Active focus remains on novel mechanism lines outside retired/confirmed families.
+- No new 30+ seed cross-validated finding was promoted this deployment pass.
+- Deployment focus remained on queue refill plus one new non-ML dynamical-systems hypothesis.
 
 RETIREMENT CHECK (THIS SESSION)
-- Checked over-seeded families (`svdrank`, `percolation`, `wdwindow`, `repcrystal`, `wdoptim`).
-- Completed counts remain high (2018, 1300, 868, 368, 1104 respectively), but unsent backlog was 0 for each.
-- No abort UPDATE required this pass.
+- Mandatory over-seeding query executed before deployment.
+- No retirement-eligible unsent backlog was returned, so no abort UPDATE was applied.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up: 5,681 WUs created (from `/tmp/axiom_cpu_deploy*.log` line counts; active hosts seen: 93, RAM<6GB skipped: 2).
-- GPU top-up: 614 WUs created total (279 + 335 across GPU deploy passes).
-- Transition refresh + one-pass transitioner executed after CPU and GPU deployment passes.
+- CPU top-up pass: 7,729 CPU workunits created (appid=1, exp_%, create_time >= 2026-03-04 03:56:40 UTC).
+- CPU hosts touched (from WU name host tags): 56.
+- RAM<6GB hosts were excluded from CPU deployment.
+- GPU top-up pass (mandatory separate step): 335 GPU workunits created.
+- GPU hosts found/touched: 83/83.
+- New experiment seeding: kuramoto_delay_noisy_control staged to 30 high-capacity CPU hosts.
+- Transition refresh + one-pass transitioner executed after CPU/GPU/new-experiment deployment.
 
 GPU CHECKPOINT (MANDATORY)
 - GPU hosts with idle capacity found: 83.
-- GPU workunits deployed: 614 total this pass.
-- GPU-aware scripts used for deployment: `wd_noise_trigger_gpu.py`, `wd_curvature_trigger_gpu.py`, `wd_timing_scale_gpu.py`, `grad_subspace_wd_gpu.py`, `wd_anisotropy_trigger_gpu.py`, `gpu_matmul_stress.py`.
+- GPU workunits deployed: 335.
+- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
+  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: `grayscott_delay_pulse_feedback.py` (CPU, reaction-diffusion control)
-- Query: "Gray-Scott model delayed feedback control pattern formation paper"
-- Query: "reaction diffusion adaptive control with measurement delay noise"
-- Query: "Gray-Scott reaction diffusion stochastic forcing spatial heterogeneity"
-- Found: prior studies cover Gray-Scott pattern regimes, delayed/feedback control ideas, and stochastic effects separately; no direct prior result found for adaptive pulsed feed control under explicit delay + sensor-noise + spatial-heterogeneity interaction in this exact factorial setup.
-- Novel angle: tests delay-induced inversion (adaptive better at low delay but worse at high delay), with noise/heterogeneity interaction terms and publishable negative/positive outcomes.
+1) New experiment: kuramoto_delay_noisy_control.py (CPU, nonlinear dynamics / network synchronization)
+- Query: "Kuramoto model delayed coupling adaptive control noise"
+- Query: "Synchronization in phase-coupled Kuramoto oscillator networks with axonal delay and synaptic plasticity"
+- Query: "Emergent dynamics of the Kuramoto model with adaptive coupling on undirected networks 2025"
+- Found: prior work confirms adaptive coupling and delay effects are studied in Kuramoto variants,
+  but the specific regime of delayed noisy order-parameter sensing with explicit fixed-vs-adaptive
+  control inversion test across sparse vs denser random networks is not directly covered.
+- Novel angle: tests a delay-induced control inversion mechanism under observation noise and network density,
+  measuring synchronization fraction and control-variance tradeoffs per regime.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) `grayscott_delay_pulse_feedback.py`
-- CPU numpy-only; run-duration compliant (independent trials until `run_duration-60s`).
-- Host-dependent seed from `experiment_name` hash.
-- Conditions: strategy `{fixed, adaptive}` x control_delay `{0,8,20}` x sensor_noise `{0.00,0.02}` x hetero_sigma `{0.00,0.12}`.
-- Outputs: pattern score, persistence, collapse fraction, control variance, adaptive-minus-fixed deltas, and delay inversion indicator.
+1) kuramoto_delay_noisy_control.py
+- CPU numpy-only; run-duration compliant (independent trials until run_duration-60s).
+- Host-dependent seed from experiment_name hash.
+- Conditions: strategy {fixed, adaptive} x control_delay {0,8,20} x obs_noise {0.00,0.05} x edge_prob {0.08,0.18}.
+- Outputs: mean order parameter, synchronization fraction, control variance, and adaptive-minus-fixed deltas.
 
-QUEUE STATUS SNAPSHOT (POST-DEPLOY QUERY)
-- Remaining CPU queue deficit to 3x target (result-table metric): 6,303 tasks across 92 hosts.
-- Remaining GPU queue deficit to 3x target (result-table metric): 335 tasks across 83 hosts.
-- Note: targeted WUs are created and transitioned; deficit metric may lag until scheduler assignment updates per-host result rows.
+QUEUE STATUS SNAPSHOT (POST-DEPLOY)
+- Host-attributed queue metric (result.hostid based) still reports deficits; this metric undercounts
+  unsent target-host work that is not yet host-attributed in result rows.
+- Workunit creation confirms substantial refill this session (CPU 7,729; GPU 335; plus 30 kuramoto seeds).
+
+VALIDATION UPDATE (March 4, 2026, part1_validate)
+- Reviewed and credited 46 completed `exp_%` results with on-disk JSON payloads (590 total credit).
+- No new 30+ seed cross-validated finding to promote to CONFIRMED FINDINGS.
+- `feature_subspace_overlap` (n=5 this pass): overlap-gap correlation remained strongly negative (mean -0.732), while `wd_reduces_overlap` stayed false in all reviewed seeds.
+- `reg_timing_universality` (n=2 this pass): inverse critical-period signal present in 2/4 regularizers; universality flag remained false.
+- `wd_clipping_interaction` (n=2 this pass): interaction delta stayed near zero (mean -1.77e-4), suggesting small/mixed clipping-mediated modulation.
+- New dynamics lines produced valid outputs and are accumulating replication seeds:
+  `grayscott_delay_pulse_feedback` (n=4), `ising_delay_adaptive_quench` (n=5),
+  `metapop_allee_climate_dispersal` (n=4), `seasonal_metapop_vax_trigger` (n=3),
+  `rd_phasejitter_adaptive_forcing` (n=3), `cascade_forecast_delay_shedding` (n=4),
+  `brusselator_delay_sensor_noise` (n=3).
