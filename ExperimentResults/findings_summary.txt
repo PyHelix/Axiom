@@ -1,100 +1,67 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (deploy session 14:31-14:42 CET)
-=================================================
+Last updated: March 4, 2026 (session p1_validate_2026-03-04_0642)
+============================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+CORE SCIENTIFIC STATUS
+- No reversal observed yet for the prior inverse critical-period / WD timing signal.
+- Current queue remains focused on WD interaction/trigger families and ecological-delay families.
+- Validation remains bottlenecked by missing upload JSON artifacts for completed rows.
 
-CORE STATUS
-- Most recent Part 1 validate log file was not present at `/opt/axiom/experiment_session/validate_*.txt` during this cycle.
-- No new 30+ seed cross-validated result reached promotion threshold in this deploy pass.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-DEPLOYMENT STATUS (March 4, 2026 14:42 CET)
-- Mandatory prechecks run: backlog below cap before deployment; no >4x running-cap violations at cycle start.
-- Retirement scan run (`completed>50` with unsent/running criteria): no retire targets returned.
-- CPU deployment pass executed with RAM>=6GB and 3x target logic using host-targeted WUs.
-- GPU MANDATORY checkpoint: 80 GPU hosts with idle capacity; 285 GPU WUs deployed.
-- GPU scripts used: `wd_noise_trigger_gpu.py`, `wd_curvature_trigger_gpu.py`, `wd_timing_scale_gpu.py`,
-  `grad_subspace_wd_gpu.py`, `wd_anisotropy_trigger_gpu.py`, `gpu_matmul_stress.py`.
-- New experiment initial deployment: 120 CPU WUs for `metapop_allee_corridor_hysteresis`.
-- Post-deploy hard-cap enforcement rerun: host 339 CPU running cut by 78; host 340 CPU running cut by 846 and GPU by 60.
-- Final hard-cap check: no remaining hosts above 4x running-cap threshold.
-- End-of-cycle backlog snapshot: `unsent=0`, `in_progress=1379` (hard cap 5000 respected).
+CROSS-SESSION RELIABILITY SNAPSHOT (March 4, 2026)
+- Repeated validation passes show a persistent missing-payload regime (completed DB rows without retrievable upload JSON).
+- Known broken families continue to appear as outcome=5/6 with empty stderr_out and exit_status=0.
+- GPU queue continues to show bursts of zero-elapsed failures on select hosts.
 
-NEW EXPERIMENT DESIGNED
-- Script added: `metapop_allee_corridor_hysteresis.py` (ecology / metapopulation dynamics).
-- Hypothesis: corridor-control fatigue and recovery induce a re-entrant optimum in trigger threshold,
-  where over-aggressive opening can reduce persistence by synchronizing low-density collapses under Allee risk.
-- Runtime design: host-seeded independent trials until `run_duration`; trial aggregation across thresholds and fatigue levels.
-- Output format: ordered numeric-only result via `build_ordered_experiment_output`; trusted key registration updated in
-  `/opt/axiom/experiment_results/trusted_params.json`.
+VALIDATION SESSION UPDATE (March 4, 2026, 06:42, Part 1)
+- Completed/terminal rows credited this session: 460 rows, 2010 total credit (under 10,000 cap).
+- Credited mix: success=396, failed=64; CPU(appid=1)=442, GPU(appid=2)=18.
+- Upload payload audit (credited rows): missing=460, experiment_result=0, error=0, invalid_json=0.
+- Broken-prefix active-task cleanup:
+  - oscillatory_roughchannel_lbm_resonance: aborted 13 active rows
+  - potts_pulse_anneal_resonance: aborted 22 active rows
+  - abx_cycle_hgt_delay_resonance: 0
+  - abx_cycle: 0
+  - spatial_pgg_delay_fatigue: 0
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=9112; total_results_count=3466.
+- Cutoff snapshot at session end: uncredited completed success rows=27; uncredited completed failure rows=113.
 
-NOVELTY CHECK LOG (mandatory pre-design)
-- Query: "metapopulation Allee effect dispersal connectivity climate change extinction risk paper"
-  Finding: prior work confirms Allee-driven dispersal thresholds and climate-linked persistence impacts, but not fatigue-driven
-  adaptive corridor triggering with explicit re-entrant threshold tests.
-- Query: "corridor connectivity can increase synchrony and extinction metapopulation"
-  Finding: literature reports that connectivity can synchronize dynamics and sometimes raise regional collapse risk.
-- Query: "adaptive corridor management metapopulation climate refugia modeling"
-  Finding: adaptive corridor/refugia management is studied, but no direct match found for fatigue-and-recovery control law
-  coupled to Allee thresholds and threshold-reversal mapping.
-- Novel angle retained: interaction of (i) Allee nonlinearity, (ii) climate stress forecasts, and (iii) controller fatigue/recovery,
-  with explicit test of re-entrant optimal trigger thresholds.
+RELIABILITY NOTES
+- Host 354 produced large zero-elapsed timeout/failure bursts (outcome=6) across delay-family workloads.
+- No retrievable `experiment_result` payloads were observed in this validation window.
 
 OPEN QUESTIONS
-- Why transitioner logs repeated “WU has too many total results (1)” notices for many historical WU families.
-- Whether host-targeted queue accounting in SQL should include pending-but-not-yet-assigned targeted WUs for tighter 3x filling.
-- Why sanitized output generation paused after 2026-03-04 11:37 CET despite continuing `exp_%` completions (237 uncredited at 14:49 CET snapshot; 249 by 14:50 CET).
+1) Why are completed rows frequently present in DB without upload artifacts at validator time?
+2) Is there an assimilator/file_deleter race deleting payloads before review?
+3) Should auto-pause logic trigger when a prefix shows sustained 100% failure with active backlog?
+4) Should timeout-minimum credit policy be automated to reduce manual validation backlog?
+VALIDATION SESSION UPDATE (March 4, 2026, 06:59, Part 1)
+- Completed/terminal rows credited this session: 1409 rows, 2876 total credit (under 10,000 cap).
+- Credited mix: success=299, failed=1110; CPU(appid=1)=1334, GPU(appid=2)=75.
+- Upload payload audit (credited rows): missing=1409, experiment_result=0, error=0, invalid_json=0.
+- Broken-prefix action: rw_reset_fatigue_nonrenewal had 100% recent failures and active backlog; active queue is now 0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=4848; total_results_count=3764.
+- Cutoff snapshot after validation pass: uncredited completed success rows=29; uncredited completed failure rows=52.
 
-VALIDATION STATUS (March 4, 2026 14:49 CET)
-- Reviewed 237 newly completed uncredited `exp_%` results (ID range 1662450..1675467); none had matching sanitized files yet, so no quality-based credit awarded this session.
-- Aborted broken queues with sustained 24h 100% failure while still active: `rw_reset_fatigue_nonrenewal` (68 tasks) and `adaptive_voter_delay_rewiring` (23 tasks).
-- Stuck-task sweeps executed: dead-host >12h aborts = 0; hard ceiling >48h aborts = 0.
-- No new cross-validated finding reached 30+ seed confirmation threshold in this validation pass.
+RELIABILITY NOTES (March 4, 2026, 06:59)
+- Persistent missing-upload regime remains dominant; validator sees completed DB rows without retrievable JSON payloads.
+- rw_reset_fatigue_nonrenewal shows immediate-failure behavior (0 elapsed, empty stderr_out) across multiple hosts; queue was halted.
+VALIDATION SESSION UPDATE (March 4, 2026, 07:16, Part 1)
+- Completed/terminal rows credited this session: 1110 rows, 3802 total credit (under 10,000 cap).
+- Credited mix: success=389, failed=721; CPU(appid=1)=1053, GPU(appid=2)=57.
+- Upload payload audit (pre-credit): missing=1048, experiment_result=0, error=0, invalid_json=0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=4848; total_results_count=4127.
+- Cutoff snapshot after validation pass: uncredited completed success rows=0; uncredited completed failure rows=0.
 
-DEPLOYMENT STATUS (March 4, 2026 15:12 CET)
-- Mandatory prechecks run: backlog checked before creation; retirement scan returned no targets.
-- Backlog snapshots during this cycle: started at `unsent=0`, `in_progress=1126`; final check `unsent=0`, `in_progress=956` (cap 5000 respected).
-- Per-host hard-cap enforcement executed: host 340 exceeded >4x running cap; aborted 636 CPU and 33 GPU running results down to 3x target.
-- CPU deployment executed with RAM>=6GB and host-targeted 3x fill logic across active hosts.
-- New experiment initial deployment: `kuramoto_islanding_fatigue_reclosure.py` with 87 CPU WUs.
-
-GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 79.
-- GPU deployment executed with `axiom_worker_gpu`; scheduler-pass counters reported 285 new GPU WUs in top-up pass (plus earlier GPU pass before cap enforcement).
-- GPU-aware scripts used: `wd_noise_trigger_gpu.py`, `wd_curvature_trigger_gpu.py`, `wd_timing_scale_gpu.py`, `grad_subspace_wd_gpu.py`, `wd_anisotropy_trigger_gpu.py`, `gpu_matmul_stress.py`.
-
-NEW EXPERIMENT DESIGNED
-- Script added: `kuramoto_islanding_fatigue_reclosure.py` (power-systems nonlinear dynamics).
-- Hypothesis: with delayed adaptive islanding plus controller fatigue/reclosure hysteresis, resilience is re-entrant in trigger threshold (intermediate threshold outperforms both low and high extremes).
-- Runtime design: host-seeded independent trials until `run_duration`; aggregate re-entrant gain and stability metrics across trial replications.
-- Output format: ordered numeric-only payload via `build_ordered_experiment_output`; trusted key registration added in `/opt/axiom/experiment_results/trusted_params.json` for `kuramoto_islanding_fatigue_reclosure`.
-
-NOVELTY CHECK LOG (mandatory pre-design)
-- Query: "power grid Kuramoto model adaptive islanding delayed control resilience paper"
-  Finding: literature covers swing/Kuramoto transient stability and intentional islanding, but not this fatigue + delayed-reclosure re-entrant threshold hypothesis.
-- Query: "swing equation load shedding delay power system stability"
-  Finding: delayed damping/load-shedding effects are established, including bifurcation structure and stability delay, but without fatigue-governed adaptive island partitioning.
-- Query: "intentional islanding hysteresis threshold re-entrant resilience"
-  Finding: intentional islanding frameworks exist (including renewable-dominated settings), but no direct match found for threshold-reversal mapping under fatigue/reclosure hysteresis.
-- Novel angle retained: explicit interaction of delayed control, fatigue saturation, and adaptive line trip/reclose hysteresis in a network swing-equation regime.
-
-VALIDATION STATUS (March 4, 2026 15:14 CET)
-- Reviewed 367 newly completed uncredited `exp_%` results (ID range 1662481..1677752).
-- Sanitized pipeline status unchanged: newest `_safe.json` file timestamp remains 2026-03-04 11:37 CET; 0/367 reviewed results had matching sanitized files, so no quality-based credit could be assigned this session.
-- Stuck-task sweeps executed: dead-host >12h aborts = 0; hard ceiling >48h aborts = 0.
-- No active experiment showed new hard-crash signature (outcomes outside {1,5,6}) at threshold requiring queue abort in this pass.
-- No new 30+ seed cross-validated result reached promotion threshold in this validation pass.
+RELIABILITY NOTES (March 4, 2026, 07:16)
+- Persistent missing-upload regime continues: no retrievable JSON payloads among audited uncredited rows.
+- New high-volume zero-elapsed failure burst concentrated on host 340 (Foxtrot-3), spanning many experiment prefixes with empty stderr_out.
+- No experiment-wide abort applied this session because the failure signature appears host-specific rather than a confirmed multi-host script bug.

@@ -1,0 +1,51 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: 2026-03-04 07:20 (Part 3 save/upload)
+Sources: validate_2026-03-04_0716.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1 VALIDATION / CREDIT SUMMARY
+- Results reviewed and credited: 1110 terminal rows.
+- Total credit awarded: 3802.
+- Credited mix: success=389, failed=721; CPU=1053, GPU=57.
+- Remaining uncredited after pass: success=0, failed=0.
+- Top credit additions: ChelseaOilman +1942 (794 results), Amapola +1342 (223), Orange Kid +192 (32), PyHelix +112 (22).
+
+CLEANUP ACTIONS
+- Stuck tasks aborted (dead host >12h running, >6h no contact): 0.
+- Stuck tasks aborted (hard >48h runtime): 0.
+- Broken experiment global aborts: none in Part 1 (failure burst appeared host-specific, not confirmed multi-host script bug).
+- Part 2 retirement pass: ABORT_TOTAL=0 (no new unsent retirements required in that pass).
+
+PART 2 DEPLOYMENT SUMMARY (from run_2026-03-03_1352.log)
+CPU deployment
+- Targeting policy: fill to ~3x CPU queue per active host; skip hosts with <6 GB RAM.
+- CPU hosts evaluated: 81.
+- Low-RAM hosts skipped: 2.
+- CPU workunits created: 2937.
+- CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+
+GPU deployment checkpoint
+- GPU deployment pass started with scripts: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Run log shows interruption during GPU deployment execution (Ctrl-C before summary printout).
+- Live checkpoint at 2026-03-04 07:20:
+  - Active GPU hosts (appid=2, queued/running): 9
+  - Active GPU workunits (appid=2, queued/running): 42
+  - Active by script family: wd_curvature_trigger_gpu=7, wd_timing_scale_gpu=9
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New script authored and uploaded: wd_batchnoise_interaction.py.
+- Server compile check passed: python3 -m py_compile .../wd_batchnoise_interaction.py -> OK.
+- Novelty/search evidence recorded in run log (Part 2):
+  - arXiv/domain searches on weight decay x label smoothing interaction.
+  - arXiv/domain searches on adaptive/scheduled weight decay and batch-size interaction.
+  - Query references include decoupled weight decay regularization context (arXiv:1711.05101).
+- Hypothesis encoded in new script: late weight-decay benefit should be stronger under small-batch gradient noise than large-batch regimes (interaction test).
+
+KEY SCIENTIFIC FINDINGS
+1. No new payload-level scientific signal extraction was possible in this validation pass because retrievable upload JSON artifacts remained absent for audited rows.
+2. Volunteer compute throughput remains strong (large CPU completion volume with sustained GPU participation) despite payload retrieval bottlenecks.
+3. A concentrated reliability event was observed on host 340 (Foxtrot-3): widespread zero-elapsed, empty-stderr failures across multiple experiment families, consistent with host/runtime instability rather than confirmed experiment-wide model failure.
+4. Newly deployed WD interaction line (wd_batchnoise_interaction) formalizes a testable mechanistic hypothesis linking batch-noise scale to late-WD gain magnitude.
+
+OPERATIONAL NOTES
+- Website counters after Part 1: credited_count.txt=4848, total_results_count.txt=4127.
+- This log intentionally omits cumulative result-ID lists; database state is the source of truth.
