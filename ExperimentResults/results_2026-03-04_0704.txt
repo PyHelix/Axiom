@@ -1,0 +1,52 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-04 07:04 (America/Denver)
+Workflow: Part 3 Save & Upload (compiled from Part 1 + Part 2 logs)
+
+PART 1 VALIDATION / CREDIT SUMMARY
+- Source log: validate_2026-03-04_0700.txt
+- Results reviewed this session: 1409 completed terminal exp_* rows (bulk-reviewed by experiment/type tiers).
+- Credit awarded this session: 2876.00 total credit across 1409 rows.
+- Mix credited: success=299, failed=1110, CPU(appid=1)=1334, GPU(appid=2)=75.
+- Upload payload audit in this pass: experiment_result=0, error=0, missing=1409, invalid_json=0.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken queue halted: rw_reset_fatigue_nonrenewal active queue reduced to 0 due reproducible immediate-failure pattern.
+- Dead-host stuck-task cleanup (>12h running + >6h no contact): 0 aborted.
+- Hard-ceiling cleanup (>48h): 0 aborted.
+
+PART 2 DEPLOYMENT SUMMARY (from run_2026-03-03_1352.log + live checkpoint)
+CPU deployment
+- Host-targeted CPU fill pass scanned 81 active CPU hosts; skipped 2 hosts below 6 GB RAM.
+- CPU workunits created in pass: 2937.
+- CPU scripts used: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+- Targeting model used in run: fill toward ~3x CPU core queue per eligible host.
+
+GPU deployment checkpoint
+- GPU scripts used: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Run log shows GPU deployment pass started as mandatory separate appid=2 phase.
+- Live checkpoint (post-run) for these GPU scripts: 7 active GPU hosts carrying 13 active WUs total.
+- Active GPU host IDs at checkpoint: 355, 287, 340, 9, 159, 299, 341.
+- Active GPU WU split at checkpoint: wd_curvature_trigger_gpu=5, wd_timing_scale_gpu=8.
+
+NEW EXPERIMENTS / NOVELTY CHECK DOCUMENTATION
+- New experiment script added and compiled: wd_batchnoise_interaction.py.
+- Hypothesis focus: interaction between batch-noise regime and late weight-decay benefit magnitude.
+- Literature/novelty search queries logged during Part 2:
+  1. site:arxiv.org weight decay label smoothing interaction
+  2. site:arxiv.org adaptive weight decay deep neural networks
+  3. site:arxiv.org batch size weight decay generalization
+  4. "weight decay" "batch size" "schedule" neural networks
+  5. arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle documented in deployment session: direct interaction test (late WD gain under small vs large batch noise regimes) and dedicated GPU trigger/timing follow-up lines.
+
+RETIREMENT / QUEUE MANAGEMENT ACTIONS
+- Retirement candidate sweep executed in Part 2.
+- Candidate families identified with high completed counts; unsent abort action in that pass: ABORT_TOTAL=0.
+
+KEY SCIENTIFIC FINDINGS
+1. Validation pass found no newly retrievable experiment_result payloads among 1409 credited rows (all missing payload artifacts), reinforcing the persistent DB-vs-upload reliability gap.
+2. rw_reset_fatigue_nonrenewal displayed reproducible immediate-failure behavior (0 elapsed, empty stderr signatures across hosts), justifying queue halt to prevent wasted volunteer compute.
+3. The active research line now emphasizes mechanism discrimination for weight-decay timing effects via batch-noise interaction (CPU) and curvature/timing trigger tests (GPU).
+
+NOTES
+- This session log intentionally omits cumulative credited result ID lists; database state remains source of truth.
