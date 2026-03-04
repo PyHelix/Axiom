@@ -1,0 +1,62 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-04 04:11 (America/Denver)
+Source logs: validate_2026-03-04_0408.txt, run_2026-03-03_1352.log
+
+PART 1 SUMMARY: VALIDATION, CREDIT, CLEANUP
+- Results reviewed this session: 365 completed experiment rows (317 success rows, 48 failed/aborted rows).
+- Total credit awarded: 1,588 (session cap check passed: <= 10,000).
+- Uncredited completed experiment rows at cutoff: 0.
+- Per-user credit increments (top): Amapola +942, ChelseaOilman +172, Orange Kid +162, Steve Dodd +159, PyHelix +91.
+- Upload/payload QC: audited 253 uncredited-success rows, upload JSON present in 0 rows, missing in 253 rows.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken prefixes aborted (server_state IN 2,4 -> 5, outcome=5):
+  - exp_oscillatory_roughchannel_lbm_resonance%: 33
+  - exp_abx_cycle%: 5
+  - exp_spatial_pgg_delay_fatigue%: 2
+  - exp_potts_pulse_anneal_resonance%: 8
+- Stuck-task cleanup actions:
+  - >12h running on dead hosts (>6h no contact): 0
+  - Hard ceiling >48h running: 0
+
+PART 2 SUMMARY: DEPLOYMENT + RESEARCH
+- Retirement sweep executed before deployment; retirement candidates remained over-completed but unsent backlog was zero at action time.
+- Retirement pass result: ABORT_TOTAL=0.
+- New CPU experiment script designed and uploaded:
+  - wd_batchnoise_interaction.py
+  - Server compile check passed (python3 -m py_compile -> OK).
+
+CPU DEPLOYMENT
+- CPU queue fill completed.
+- Host coverage: 81 active CPU hosts evaluated.
+- Low-RAM skip policy applied: 2 hosts skipped (<6 GB RAM).
+- CPU workunits created: 2,937.
+- CPU scripts used for assignment/fill:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+
+GPU CHECKPOINT
+- GPU deployment pass was initiated as a separate appid=2 stage but the logged run was interrupted before final counters were printed.
+- GPU scripts configured for that pass:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- GPU host/workunit counts were not emitted in this run log due to interruption; rerun/next session should confirm final GPU_HOSTS_FOUND and GPU_WU_CREATED outputs.
+
+NEW EXPERIMENTS + NOVELTY CHECK DOCUMENTATION
+- New experiment added this session:
+  - wd_batchnoise_interaction.py
+  - Hypothesis: late weight-decay gains are stronger under small-batch gradient noise (interaction effect test).
+- Novelty check evidence recorded in run log searches:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle retained for deployment: explicit interaction term (late-WD benefit difference between small and large batch regimes), not just main effects.
+
+KEY SCIENTIFIC FINDINGS
+1. This validation pass yielded no new experiment-level signal because audited payload artifacts remained unavailable (0/253 sampled successes had upload JSON).
+2. The dominant blocker remains artifact ingestion/retention reliability rather than volunteer throughput.
+3. High-failure prefixes with poor yield were paused, reducing wasted compute while preserving rows for follow-up.
+4. The deployment pipeline expanded CPU-side interaction testing at scale (2,937 CPU WUs) and introduced wd_batchnoise_interaction as a new mechanism-focused line.
+5. Prior core status remains unchanged this session: no reversal of the established inverse critical-period / late weight-decay timing signal.

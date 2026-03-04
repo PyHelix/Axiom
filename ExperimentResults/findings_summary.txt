@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session p1_validate_2026-03-04_0350)
+Last updated: March 4, 2026 (session p1_validate_2026-03-04_0408)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -13,15 +13,15 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 - Test whether WD onset is curvature-triggered versus fixed-onset.
 
-VALIDATION SESSION UPDATE (March 4, 2026, Part 1, 03:50)
-- Completed rows credited this session: 5,536 rows, 995.45 total credit (under 10,000 cap).
-- Outcome mix credited this session: outcome=1 -> 283 rows; outcome=5 -> 21 rows; outcome=6 -> 5,232 rows.
-- Credit concentration by user: Amapola +844.44, ChelseaOilman +82.31, Orange Kid +43.13, PyHelix +11.03.
-- Payload QC for credited rows: upload JSON found in 0/5,536 sampled paths (all missing artifacts).
-- Broken-prefix cleanup performed (active tasks aborted): abx_cycle=4, spatial_pgg_delay_fatigue=11, potts_pulse_anneal_resonance=6.
+VALIDATION SESSION UPDATE (March 4, 2026, Part 1, 04:08)
+- Completed rows credited this session: 365 rows, 1,588 total credit (under 10,000 cap).
+- Outcome mix credited this session: outcome=1 -> 317 rows; outcome=5 -> 48 rows.
+- Credit concentration by user: Amapola +942, ChelseaOilman +172, Orange Kid +162, Steve Dodd +159, PyHelix +91.
+- Payload QC: upload JSON found in 0/253 audited uncredited-success rows (all missing artifacts).
+- Broken-prefix cleanup performed (active tasks aborted): oscillatory_roughchannel_lbm_resonance=33, abx_cycle=5, spatial_pgg_delay_fatigue=2, potts_pulse_anneal_resonance=8.
 - Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters refreshed and kept monotonic: credited_count=5790; total_results_count=303.
-- Cutoff snapshot at session end: uncredited completed exp rows=10; uncredited completed success rows=10.
+- Website counters refreshed and kept monotonic: credited_count=601; total_results_count=553.
+- Cutoff snapshot at session end: uncredited completed exp rows=0; uncredited completed success rows=0.
 
 RELIABILITY NOTES
 - Dominant completion mode remains outcome=6 batches with little/no runtime and missing payload artifacts.
