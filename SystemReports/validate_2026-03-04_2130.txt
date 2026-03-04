@@ -1,0 +1,49 @@
+AXIOM VALIDATION / CREDIT / CLEANUP LOG
+Timestamp: 2026-03-04 20:30 UTC
+Local time: 2026-03-04 21:30 CET
+Session scope: Step 2 (validation, credit, cleanup only)
+
+1) Results reviewed this session
+- Successful uncredited exp results pending review: 0
+  Query: result.server_state=5 AND outcome=1 AND granted_credit=0 AND name LIKE 'exp_%'
+- Sanitized files quality spot-check: reviewed most recent 400 *_safe.json files.
+  - Files with experiment_result payload: 400
+  - Files missing experiment_result payload: 0
+- Step 1 findings summary reviewed to align quality expectations; no contradiction requiring credit downgrade.
+
+2) Credit awarded
+- No credit granted this session (0 results eligible).
+- Credit cap check: awarded 0 / 10,000 max.
+- No user or host total_credit increments executed.
+
+3) Cleanup actions
+- Dead-host stuck cleanup executed:
+  Criteria: server_state=4, sent>12h, host no RPC>6h
+  Rows updated: 0
+- Hard ceiling cleanup executed:
+  Criteria: server_state=4, sent>48h
+  Rows updated: 0
+- Running task age check:
+  - Max current running age: 10.62 hours
+  - Tasks >12h: 0
+
+4) Failure diagnostics
+- Completed exp outcomes (server_state=5):
+  - outcome=1 (success): 1843
+  - outcome=5: 3009
+- By appid:
+  - appid=1: success=1766, outcome5=2985
+  - appid=2: success=77, outcome5=24
+- Recent failed sample showed exit_status=0 paired with outcome=5, consistent with operational terminations rather than script traceback crashes.
+- No specific experiment was identified as consistently crashing across hosts in this session, so no experiment-wide abort was applied.
+
+5) Website counters updated
+- credited_count.txt incremented by 0 (unchanged): 1843
+- total_results_count.txt reconciled with DB completed count (max(existing, db)): 1843
+
+6) Bugs found/fixed in experiment scripts
+- None in this session.
+
+Notes
+- Database remained source of truth for credit state.
+- No cumulative result-ID file maintained.
