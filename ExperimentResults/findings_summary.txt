@@ -1,196 +1,56 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (validation session 12:23-12:25 CET)
-=================================================
+Last updated: March 4, 2026 (session p1_validate_2026-03-04_0446)
+============================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+CORE SCIENTIFIC STATUS
+- No reversal observed yet for prior inverse critical-period / WD timing signal.
+- Current queue still emphasizes WD interaction/trigger families plus ecological-delay families.
+- Reliability bottleneck persists: completed rows continue to arrive without upload JSON artifacts.
 
-CORE STATUS
-- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this validation run.
-- Trusted sanitized-result lag remains the main blocker for credit assignment.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-ACTIVE EXPERIMENT CONTEXT
-- CPU scripts currently generating returns include delay-control ecology/PDE/network families
-  (pit_delay_inhibitor_resonance, chemostat_delay_crossfeeding_resonance,
-  tritrophic_delay_harvest_resilience, lorenz96_delay_assimilation_regime_shift,
-  grayscott_delay_pulse_feedback, fiberbundle_delay_healing_entropy, plus newer additions).
-- GPU scripts in active rotation: wd_noise_trigger_gpu, wd_curvature_trigger_gpu,
-  wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
+VALIDATION SESSION UPDATE (March 4, 2026, 04:46, Part 1)
+- Completed rows credited this session: 268 rows, 2057 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: 268/268 missing JSON artifacts at audit time.
+- Broken-prefix active-task cleanup attempted: oscillatory_roughchannel_lbm_resonance=0, abx_cycle=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0 (no active rows matched).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters repaired/updated: credited_count=6731; total_results_count=1344.
+- Cutoff snapshot at session end: uncredited completed exp success rows=21 (new arrivals after credit batches).
 
-VALIDATION STATUS (March 4, 2026 13:03 CET)
-- Reviewed uncredited completed-success results: 51 (all `exp_%`, all currently missing matching `_safe.json` by result name).
-- Credit actions this session: 0 credited / 0 total credit added (cap respected).
-- Completed outcome snapshot: success=287; success credited=5489 cumulative rows; success uncredited=51.
-- Failure pattern snapshot: non-success completed rows are dominated by outcome=6 with exit_status=0
-  (consistent with abort/scheduler cleanup, not crash tracebacks).
-- CPU/GPU split for non-success completed rows: appid=1 -> outcome6=5193, outcome5=21; appid=2 -> outcome6=39.
-- Stuck-task cleanup run: dead-host >12h aborted 0; hard >48h aborted 0.
-- High fail-rate watchlist still includes battery_pulse_delay_plating_resonance and abx_cycle,
-  but no clear multi-host crash signature with active unsent/in-progress stock that justifies mass abort this pass.
-- Website counters refreshed: credited_count unchanged at 236 (+0); total_results_count set to 287 (non-decreasing rule).
+RELIABILITY NOTES
+- Dominant failure mode in broken prefixes remains outcome=5/6 with empty stderr and missing upload artifacts.
+- Host 287 continues to contribute large high-failure bursts across delay-family workloads.
 
 OPEN QUESTIONS
-- Why assimilator visibility lags for recently completed result names (51 pending credit despite completion).
-- Separate server-abort policy effects from experiment-code defects before any broad experiment shutdown.
+1) Why do many completed rows still have no upload artifact despite terminal server_state=5 outcomes?
+2) Is an assimilator/file_deleter timing race removing payloads before validator review?
+3) Should BOINC-side timeout/credit policy become automatic to reduce manual backlogs?
+4) Should per-prefix auto-pause trigger on repeated empty-stderr outcome 5/6 bursts?
 
-DEPLOYMENT STATUS (March 4, 2026 12:13 CET)
-- Backlog gate passed before deployment (`unsent + in_progress < 5000`).
-- Per-host cap enforcement query run for CPU/GPU (>4x checks): no offenders requiring abort at check time.
-- Retirement query for over-seeded experiments run: no experiment matched mandatory retirement criteria this cycle.
-- CPU deployment created 3414 new CPU WUs (appid=1), with host RAM>=6GB filter and 3x queue-target logic.
-- GPU deployment created 307 new GPU WUs (appid=2) across active GPU hosts using GPU-aware scripts only.
-- New script deployment: `xy_delay_thermostat_reentrance.py` created on 115 targeted CPU WUs for first-pass sampling.
-- Transitioner executed after CPU and GPU creation; extra transition passes run to flush future transition times.
-- Post-deploy cap correction applied on two GPU hosts that crossed >4x running tasks; excess tasks aborted down to 3x target.
+VALIDATION SESSION UPDATE (March 4, 2026, 05:01, Part 1)
+- Completed rows credited this session: 251 rows, 1965 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: 251/251 missing JSON artifacts at audit time (no xperiment_result blobs found).
+- Broken-prefix active-task cleanup: oscillatory_roughchannel_lbm_resonance=0, abx_cycle_hgt_delay_resonance=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0 active rows (none to abort this pass).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=1575; total_results_count=1575.
+- Cutoff snapshot at session end: uncredited completed exp rows=4 (new arrivals after credit batch).
 
-GPU CHECKPOINT (MANDATORY STEP 3)
-- GPU hosts with idle capacity found: yes (multi-host set, total immediate demand observed: 307 WUs).
-- GPU WUs deployed: 307 (not skipped; not "all GPU slots full").
-- GPU-aware scripts used: wd_noise_trigger_gpu, wd_curvature_trigger_gpu, wd_timing_scale_gpu,
-  grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
+RELIABILITY NOTES
+- Broken families still show deterministic failure signatures (outcome=5, exit_status=0, empty stderr_out).
+- Completed rows continue to be marked successful without corresponding upload JSON artifacts.
 
-NEW EXPERIMENT NOVELTY CHECKS (MANDATORY 4A)
-- Experiment: `xy_delay_thermostat_reentrance` (statistical physics; 2D XY lattice with delayed adaptive thermostat feedback).
-- Query 1: "2D XY model delayed feedback temperature control magnetization study"
-  Finding: no direct prior study found for this exact delayed-thermostat XY setup in lattice simulation form.
-- Query 2: "\"feedback Ising model\" 2025 arxiv"
-  Finding: related Ising-feedback literature exists, but it is not the same model class (XY continuous spins) or control protocol.
-- Query 3: "\"time-delayed\" \"XY model\" lattice"
-  Finding: no clear exact-match publication for re-entrant delay window under adaptive cooling feedback.
-- Novel angle retained: tests whether intermediate controller delay improves ordering versus both zero-delay and large-delay regimes
-  (re-entrant control benefit), extending feedback-spin literature beyond Ising/discrete-spin settings.
+VALIDATION SESSION UPDATE (March 4, 2026, 05:15, Part 1)
+- Completed rows credited this session: 254 rows, 1765 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: missing=254, experiment_result=0, error=0.
+- Broken-prefix active-task cleanup: oscillatory_roughchannel_lbm_resonance=0, abx_cycle=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=1829; total_results_count=1830.
+- Cutoff snapshot at session end: uncredited completed exp success rows=1.
 
-VALIDATION STATUS (March 4, 2026 12:23 CET)
-- No new 30+ seed cross-validation reached promotion threshold; CONFIRMED FINDINGS unchanged.
-- Latest reviewed uncredited-success IDs in this pass: 1662293, 1666451, 1666858, 1666859, 1666861.
-- For reviewed IDs above, matching sanitized files were not yet present (`*_safe.json` missing), so quality-based credit = 0 this session.
-- High-failure CPU experiment families remain at 100% completed-failure historically:
-  `oscillatory_roughchannel_lbm_resonance` (0/214 success), `abx_cycle` (0/66),
-  `spatial_pgg_delay_fatigue` (0/20), `potts_pulse_anneal_resonance` (0/15).
-- Active backlog for those broken families is now zero (no unsent and no in-progress rows currently visible).
-- Stuck-task cleanup queries executed this pass: dead-host >12h aborted 0; hard >48h aborted 0.
-- Counter refresh executed with non-decreasing rule; website counter files now show:
-  `credited_count=7218`, `total_results_count=889` at write time.
-
-OPEN QUESTIONS (updated)
-- Sanitized-result availability is still lagging individual completions, intermittently blocking per-result quality review.
-- Concurrent background crediting/assimilation changes DB totals during validation windows; use point-in-time snapshots in logs.
-
-DEPLOYMENT STATUS (March 4, 2026 12:32 CET)
-- Backlog cap check before deployment: `unsent=0`, `in_progress=1140` (<5000 cap).
-- Per-host cap enforcement query run before deployment (CPU/GPU >4x checks): no offenders.
-- Retirement query for over-seeded experiments run: no rows matched mandatory abort criteria.
-- CPU deployment created 3692 new CPU WUs (appid=1, 15-minute window count), with RAM>=6GB filter and 3x queue-target logic.
-- GPU deployment created 287 new GPU WUs (appid=2) using GPU-aware scripts only.
-- New script deployment: `cahnhilliard_delay_feedback_window.py` created on 120 targeted CPU WUs (first-pass sampling).
-- Transitioner executed after CPU deployment, after GPU deployment, and after new-script deployment.
-
-GPU CHECKPOINT (MANDATORY STEP 3)
-- GPU hosts with idle capacity found: 80.
-- GPU WUs deployed: 287.
-- GPU-aware scripts used: wd_noise_trigger_gpu, wd_curvature_trigger_gpu, wd_timing_scale_gpu,
-  grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
-
-NEW EXPERIMENT NOVELTY CHECKS (MANDATORY 4A)
-- Experiment: `cahnhilliard_delay_feedback_window` (materials/statistical physics; conserved phase separation with delayed adaptive mobility feedback).
-- Query 1: "Cahn-Hilliard equation time-delayed feedback control phase separation domain size"
-  Finding: related delayed/controlled Cahn-Hilliard and active phase-separation studies exist, but no clear direct test of delay-window advantage for adaptive domain-size tracking.
-- Query 2: "phase-field model delayed feedback control spinodal decomposition"
-  Finding: control-theoretic phase-field papers focus on stabilization/optimal control regimes, not the re-entrant medium-delay vs zero/high-delay performance window.
-- Query 3: "nonlocal or global feedback control coarsening Cahn-Hilliard"
-  Finding: global/nonlocal feedback has prior art, but this specific hypothesis (intermediate sensing delay improves target-tracking with lower oscillatory control cost) remains unverified in the surfaced results.
-- Novel angle retained: quantify re-entrant delay benefit in adaptive coarsening control by comparing delay-specific tracking-error gains (d=0,4,8,16).
-
-VALIDATION STATUS (March 4, 2026 12:36 CET)
-- No new 30+ seed cross-validation reached promotion threshold; CONFIRMED FINDINGS unchanged.
-- Uncredited completed-success rows at review time: 107; sanitized exact `_result_name` matches: 0, so quality-based credit awarded this pass: 0.
-- Stuck-task cleanup run: dead-host >12h aborted 0; hard >48h aborted 0.
-- 100% historical-failure families (`oscillatory_roughchannel_lbm_resonance`, `abx_cycle_hgt_delay_resonance`,
-  `potts_pulse_anneal_resonance`, `spatial_pgg_delay_fatigue`) have zero active unsent/in-progress backlog; no abort action required.
-- Website counters refreshed with non-decreasing rule: `credited_count=1056`, `total_results_count=1170`.
-
-OPEN QUESTIONS (updated)
-- Assimilator lag remains the dominant blocker for per-result scientific-quality credit assignment because new completed rows are not yet visible in sanitized `_result_name` entries.
-
-DEPLOYMENT STATUS (March 4, 2026 12:49 CET)
-- Backlog cap check before deployment: `unsent=0`, `in_progress=1415` (<5000 cap).
-- Per-host cap enforcement checks (CPU/GPU >4x running): no offenders before creation; no post-deploy offenders detected.
-- Retirement query for over-seeded experiments: no rows matched mandatory abort criteria this cycle.
-- CPU deployment created 3400 new CPU WUs (appid=1) with RAM>=6GB filter and 3x queue-target gap logic.
-- GPU deployment created 282 new GPU WUs (appid=2) on active GPU hosts using GPU-aware scripts only.
-- New script deployment: `interdep_flow_memory_shedding_tradeoff.py` created on 120 targeted CPU WUs for first-pass sampling.
-- Transitioner executed after GPU creation, after CPU creation, and after new-script deployment.
-
-GPU CHECKPOINT (MANDATORY STEP 3)
-- GPU hosts with idle capacity found: 80.
-- GPU WUs deployed: 282.
-- GPU-aware scripts used: wd_noise_trigger_gpu, wd_curvature_trigger_gpu, wd_timing_scale_gpu,
-  grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
-
-NEW EXPERIMENT NOVELTY CHECKS (MANDATORY 4A)
-- Experiment: `interdep_flow_memory_shedding_tradeoff` (network science/infrastructure resilience; interdependent cascade dynamics with memory-windowed recovery and forecast-biased shedding).
-- Query 1: "interdependent network cascading failures recovery strategy multiplex networks paper 2024"
-  Finding: interdependent cascade + recovery literature exists, but typically uses fixed/Markovian recovery without explicit memory-window interaction with forecast-biased mitigation.
-- Query 2: "non-Markovian recovery dynamics cascading failures network"
-  Finding: non-Markovian recovery has prior work in network dynamics, but not this combined hypothesis with multiplex load-shedding control.
-- Query 3: "adaptive load shedding cascading failures power grid network model"
-  Finding: adaptive shedding studies exist for power-grid cascades, but surfaced results do not isolate a re-entrant memory-window benefit under coupled interdependency.
-- Novel angle retained: tests whether intermediate recovery-memory windows outperform both short-memory and long-memory regimes when proactive shedding decisions are forecast-biased.
-
-VALIDATION STATUS (March 4, 2026 12:55 CET)
-- Reviewed uncredited completed-success results: 136 (`exp_%`, IDs 1662022-1673414).
-- Sanitized match status: 0/136 had matching `*_safe.json` by `_result_name`; quality-based credit awarded: 0.
-- Completed outcome snapshot at validation close: success uncredited=136 (point-in-time), success total=1545.
-- Stuck-task cleanup run: dead-host >12h aborted 0; hard >48h aborted 0.
-- Failure diagnostics: active high-failure families are outcome=6 dominated (no_reply/cleanup pattern), while clear crash-prone families (`oscillatory_roughchannel_lbm_resonance`, `abx_cycle`, `potts_pulse_anneal_resonance`, `spatial_pgg_delay_fatigue`) currently have zero unsent/in-progress backlog.
-- Website counters refreshed: credited_count=1324, total_results_count=1545.
-
-OPEN QUESTIONS (updated)
-- Assimilator lag remains the primary blocker for value-based crediting: many successful completed results are not yet visible as sanitized `_result_name` matches at validation time.
-
-DEPLOYMENT STATUS (March 4, 2026 14:13 CET)
-- Backlog cap check before creation: unsent=0, in_progress=1339, capacity to cap=3661 (<5000 cap respected).
-- Per-host enforcement pre-check (>4x running) found no offenders; retirement query found no mandatory-retire rows this cycle.
-- CPU deployment created 3365 new CPU WUs (appid=1), RAM>=6GB hosts only, targeting 3x CPU queue depth.
-- GPU deployment created 296 new GPU WUs (appid=2) using GPU-aware scripts only.
-- New script deployment: climate_delay_carbon_hysteresis_window.py included in heavy-host CPU rotation.
-- Post-deploy strict 3x cap correction applied: host 299 CPU excess 3 aborted; host 57 GPU excess 1 aborted; transitioner re-run.
-
-GPU CHECKPOINT (MANDATORY STEP 3)
-- GPU hosts with idle capacity found: 80.
-- GPU WUs deployed: 296.
-- GPU-aware scripts used: wd_noise_trigger_gpu, wd_curvature_trigger_gpu, wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
-
-NEW EXPERIMENT NOVELTY CHECKS (MANDATORY 4A)
-- Experiment: climate_delay_carbon_hysteresis_window (climate dynamics; stochastic low-order energy-balance + carbon reservoir with delayed adaptive CDR control).
-- Query 1: "energy balance climate model delayed mitigation tipping hysteresis publication"
-  Finding: prior climate tipping/overshoot work exists (e.g., Nature Climate Change tipping-risk economics; Nature Communications net-zero/tipping risk), but no direct match surfaced for delay-window optimization in delayed adaptive CDR on a stochastic low-order EBM.
-- Query 2: "zero-dimensional energy balance model time-delayed carbon removal control"
-  Finding: related delayed-feedback climate dynamics and late-tipping analyses exist (including EBM with dynamic albedo), but not this exact controller design and objective function.
-- Query 3: "climate tipping control delay carbon removal model"
-  Finding: mitigation-delay and tipping-risk papers are present; surfaced literature focuses on policy timing/tipping risk, not re-entrant control-delay performance in adaptive CDR.
-- Novel angle retained: test whether intermediate feedback delays outperform both immediate and very-late policy-response delays on a joint overshoot+control-cost metric under stochastic forcing.
-
-VALIDATION STATUS (March 4, 2026 13:07 CET)
-- Reviewed uncredited completed-success results: 133 (`exp_%`, IDs 1662294-1673682).
-- Sanitized match status: 0/133 had matching `_result_name` or `_wu_name` in `/opt/axiom/experiment_results/sanitized/*_safe.json`; quality-based credit awarded this pass: 0.
-- Completed outcome snapshot: success_total=1708; success_credited_rows=1575; success_uncredited=133.
-- Stuck-task cleanup run: dead-host >12h aborted 0; hard >48h aborted 0.
-- 100% historical-failure families (`oscillatory_roughchannel_lbm_resonance`, `abx_cycle`, `potts_pulse_anneal_resonance`, `spatial_pgg_delay_fatigue`) still have zero active unsent/in-progress backlog; no abort action required.
-- Website counters refreshed with non-decreasing rule: `credited_count=1575`, `total_results_count=1708`.
-
-OPEN QUESTIONS (updated)
-- Assimilator lag remains the direct blocker for scientific-value crediting: no sanitized artifacts were attributable to the current uncredited-success set.
+RELIABILITY NOTES
+- Completed rows continue to outnumber retrievable JSON artifacts; validator still sees a missing-payload regime.
+- Broken families still present as outcome=5/6 with exit_status=0 and empty stderr_out in recent failures.
