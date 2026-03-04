@@ -1,0 +1,54 @@
+Axiom BOINC Session Results
+Timestamp: 2026-03-04 04:09 CET
+Session parts: Part 1 validation/credit + Part 2 deployment/experiment design + Part 3 save/upload
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed 28 newly completed, previously uncredited results with valid upload payloads.
+- Batch composition summary:
+1) 18 wd_timing_task_sweep results (condition-level metrics present).
+2) 10 svd_rank_intervention results (per-config intervention metrics present).
+- No explicit error JSON payloads were found in the reviewed batch.
+- Credit policy tiers applied by elapsed runtime (<10s: 3, >=10s: 6, >=60s: 12, >=1200s: 80).
+- Total credit awarded this session: 968 (within 10,000 safety cap).
+- Entity totals after update:
+1) User 56 (Steve Dodd): 113210.08000000005
+2) Host 87 (Dad-Workstation): 27205.969999999998
+- Counter updates:
+1) credited_count.txt: 100226 -> 100254
+2) total_results_count.txt: 54859 -> 54862
+
+STUCK/BROKEN TASK CLEANUP
+- Proactive broken-line mitigation applied for recent 100% failure signatures:
+1) exp_metapop_corridor_delay_forecast%
+2) exp_rps_delay_jitter_adaptive_mobility%
+3) exp_wd_mixup_interaction%
+- In-progress/unsent rows aborted: 25
+- Stuck task sweeps:
+1) >12h running with dead host >6h: 0
+2) >48h hard-ceiling running tasks: 0
+- Note: failed rows in the sampled window had missing stderr and missing upload artifacts, so traceback-level patching was not possible in that pass.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK
+1) New CPU experiment added: grayscott_delay_pulse_feedback.py
+- Design: strategy {fixed, adaptive} x control_delay {0,8,20} x sensor_noise {0.00,0.02} x hetero_sigma {0.00,0.12}
+- Outputs include pattern score, persistence, collapse fraction, control variance, adaptive-minus-fixed deltas, and delay inversion indicator.
+- Novelty queries executed:
+1) Gray-Scott model delayed feedback control pattern formation paper
+2) reaction diffusion adaptive control with measurement delay noise
+3) Gray-Scott reaction diffusion stochastic forcing spatial heterogeneity
+- Novelty conclusion: prior literature covers component ideas separately, but no direct prior result was identified for this exact adaptive pulsed-feed, delay+noise+heterogeneity factorial interaction.
+
+DEPLOYMENT SUMMARY (PART 2)
+- CPU top-up workunits created: 5,681
+- GPU top-up workunits created: 614 (279 + 335)
+- GPU hosts with idle capacity detected: 83
+- Transition refresh + transitioner pass executed after deploy passes.
+- Post-deploy queue deficit snapshot:
+1) CPU deficit to 3x target metric: 6,303 across 92 hosts
+2) GPU deficit to 3x target metric: 335 across 83 hosts
+
+KEY SCIENTIFIC FINDINGS
+1. Current wd_timing_task_sweep batch remains consistent with the established inverse critical-period result: later WD timing generally outperforms earlier timing in this line.
+2. Current svd_rank_intervention batch remains consistent with the already retired/established intervention finding; no contradictions were observed.
+3. No new finding in this session met the 30+ seed cross-validated promotion threshold.
+4. A new mechanistic line was launched in Gray-Scott delayed adaptive pulse control to test a potential delay-induced strategy inversion under sensor noise and spatial heterogeneity.
