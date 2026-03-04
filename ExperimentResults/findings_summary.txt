@@ -1,71 +1,67 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part1_validate)
-=================================================
-
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+Last updated: March 3, 2026 (session s0303_part1_validate_i)
+=====================================================
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding added in this cycle.
-- Priority remains non-retired interaction/mechanism studies plus non-ML STEM diversification.
+- Inverse critical period (ICP) for weight decay timing remains strongly supported by prior replicated WD-family lines.
+- WD-family baseline lines are still over-seeded; keep retired unless testing a clearly new mechanism.
 
-VALIDATION CONTEXT
-- No /opt/axiom/experiment_session/validate_*.txt file was present at runtime.
+ACTIVE SCIENCE LINES TO PRIORITIZE
+1) wd_labelsmooth_interaction.py
+- Goal: test whether label smoothing attenuates/amplifies late-WD ICP effects.
 
-RETIREMENT CHECK (THIS SESSION)
-- Over-seeded scan rerun; still over-completed and retired/retirable: svdrank, wdextwidth, percolation,
-  wddepth, wdtasksweep, wdoptim, wdlr, wdwidthtrans, wdwindow, repcrystal.
-- Unsent backlog was 0 at check time; no abort UPDATE executed.
+2) wd_curvature_trigger_gpu.py
+- Goal: test whether WD onset is gated by curvature stabilization vs fixed late onset.
 
-DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass: 2,359 WUs created (hosts seen/touched: 74/72; RAM<6GB skipped: 2).
-- GPU top-up pass: 257 WUs created (GPU hosts seen/touched: 70/70).
-- New experiment seeding: cascade_forecast_delay_shedding staged to 30 high-capacity CPU hosts (r1).
-- Transition refresh + one-pass transitioner executed after CPU, GPU, and new-experiment seeding.
+OPERATIONAL STATUS
+- GPU-aware and CPU experiment coverage remains broad; untargeted queueing is still the reliable fallback when host targeting partially materializes.
+- Previously flagged broken prefixes (symmetry_breaking_dynamics, loss_landscape_curvature, mode_connectivity_v2, random_label_memorization) had no active unsent/in-progress rows in this validation pass.
 
-GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 70.
-- GPU workunits deployed: 257.
-- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
-  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1F)
+- Credited 8,935 completed `exp_*` results for exactly 10,000 credit (session cap respected).
+- Credit mix applied: 215 successful outcomes and 8,720 failed/error outcomes (compute-time compensation retained).
+- Session credit additions were broad (47 users); top additions: ChelseaOilman +1,755; Steve Dodd +1,128; Amapola +782; makracz +755; mmonnin +626; Landjunge +613; Josemi +525.
+- Result ID span credited this pass: 1,605,284 through 1,653,657.
+- Prefixes most represented in this credited batch: spectral (2,791), repcrystal (1,345), regmech (961), rankreg (907), sam (514), rank (486).
+- Upload payload checks for candidate successful rows found missing upload JSON paths in this pass (`quality=missing` for 215 success candidates), so this session was treated primarily as compute-fairness credit maintenance.
+- No new stuck-task cleanup actions triggered: 0 aborted via dead-host >12h rule and 0 via >48h hard ceiling.
+- No additional active broken-prefix abort was applied in this pass.
+- Post-pass uncredited completed backlog: success 234; failed 71,236.
 
-NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: cascade_forecast_delay_shedding.py (CPU, infrastructure resilience / network dynamics)
-- Query: "power grid cascading failure proactive load shedding forecast error repair delay study"
-- Query: "cascading failure network delayed repair adaptive mitigation simulation"
-- Query: "cascading failure forecast uncertainty proactive load shedding delay interaction"
-- Found: prior work covers cascading failures, mitigation, and delayed recovery separately; some work studies
-  uncertainty in control, but direct tests of adaptive-vs-fixed shedding under combined forecast noise and
-  explicit repair delay in one replicated framework are limited.
-- Novel angle: quantifies the delay x forecast-noise threshold where adaptive forecast-triggered shedding flips
-  from protective to harmful relative to fixed shedding.
+CROSS-SESSION CONSOLIDATED TAKEAWAYS
+- No scientific reversal vs established WD/ICP conclusions has appeared in recent validation passes.
+- Recent validation sessions are increasingly dominated by failure/error backlog crediting; successful-result scientific interpretation currently depends on obtaining accessible upload payloads for new success rows.
 
-NEW SCRIPT ADDED (THIS SESSION)
-1) cascade_forecast_delay_shedding.py
-- CPU numpy-only, run-duration compliant (independent trials until run_duration-60s).
-- Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x repair_delay {1,4,8} x forecast_noise {0.00,0.10,0.20}.
-- Outputs: live-fraction, largest-component fraction, unserved energy, failures, adaptive-minus-fixed effect.
+OPEN QUESTIONS
+1) Why are many recent credited success candidates missing from `/opt/axiom_boinc/upload/*/exp_*` path checks at validation time (retention timing vs path/layout mismatch)?
+2) Should extremely old instant-fail batches continue receiving minimal credit (1-point floor), or should policy split by elapsed_time and exit_status severity bands?
+3) Which high-failure prefixes (e.g., spectral/repcrystal/regmech/rankreg cohorts) still have active seeding pressure that should be reduced upstream in deployment logic?
 
-VALIDATION SUMMARY (2026-03-04 part1)
-- Reviewed latest uncredited host-completed outputs and confirmed recent files contain valid JSON payloads
-  under /opt/axiom_boinc/upload/*/exp_* (mostly {"experiment_result": ...} in the newest completed batch).
-- No broken active experiment required abort this pass: current active lines showed low completed fail rates
-  (wd_imbalance_interaction 0.0%, wd_batchnoise_interaction 4.0%, regtimuniv 12.4%, wdonsetsweep 0.0%).
-- Stuck-task cleanup checks were executed; no tasks matched dead-host >12h or hard-ceiling >48h criteria.
-- Credit awarded this session: 500 host-executed results, total 8,875.0 credit (incremental updates only).
-- No new 30+ seed confirmed finding promoted in this validation pass; current interaction studies continue
-  to produce non-null experiment_result payloads with no new contradiction to existing confirmed findings.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1G)
+- Credited 2,400 completed `exp_*` results for 9,998 total credit (cap respected after corrective rollback of an initial over-cap pass).
+- Credited outcomes in final pass: 2,400 success, 0 failed/error (ID span 1,517,037 to 1,529,339).
+- Upload payload review: all currently sampled uncredited successes mapped to present JSON files with `experiment_result` payloads (583/583 in review set).
+- Failed/error sample review (first 400 oldest uncredited failures): 388 missing upload JSON paths, 12 retained `experiment_result`, 0 explicit `error` payloads.
+- Dominant credited prefixes in this pass were older `memdyn_*` and `featcomp_*` cohorts; no reversal observed relative to prior WD/ICP conclusions.
+- No stuck-task cleanup actions triggered (0 aborted by dead-host >12h rule, 0 by >48h hard ceiling).
+- No active broken-prefix abort applied: currently active high-volume lines (wd_imbalance_interaction, wd_batchnoise_interaction, wd_labelsmooth_interaction) do not show crash-rate evidence warranting blanket abort.
+- Post-pass uncredited completed backlog: success 5,682; failed 71,261.
+
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1H)
+- Credited 300 completed `exp_*` results for 504 total credit (well below 10,000 cap).
+- Outcome mix in credited batch: 204 successful outcomes and 96 failed/error outcomes (ID span 1,516,891 to 1,521,993).
+- Upload payload quality in this reviewed batch: 61 `experiment_result`, 154 `error` payloads, 85 missing files at validation time.
+- Session credit additions by user: ChelseaOilman +459; Manuel Stenschke +21; Steve Dodd +11; Coleslaw +7; rilian +6.
+- Active-prefix crash check in this pass did not show evidence requiring blanket abort of currently active WD-family prefixes.
+- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
+- Website counters updated: credited_count 36,657 -> 36,957; total_results_count set to 54,848.
+
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1I)
+- Credited 5,484 completed `exp_*` results for exactly 10,000 credit (session cap reached exactly).
+- Outcome mix in credited batch: 4,056 successful outcomes and 1,428 failed/error outcomes (ID span 1,521,994 to 1,532,431).
+- Upload payload quality check on entire credited batch: 5,484/5,484 missing from `/opt/axiom_boinc/upload/*/exp_*` at validation time (`quality=missing`), so this pass was compute-fairness credit maintenance rather than payload-driven scientific interpretation.
+- Session credit additions by user: ChelseaOilman +9,644; kotenok2000 +243; [DPC] hansR +106; amazing +4; Anandbhat +3.
+- Active-prefix crash review: current high-volume active prefixes (wd_imbalance_interaction, wd_batchnoise_interaction, wd_onset_sweep and reg_timing_universality shards) did not present a clear new blanket-abort target in this pass.
+- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
+- Website counters updated: credited_count 37,177 -> 42,661; total_results_count stayed at 54,848.
+- Post-pass uncredited completed backlog: success 34,429; failed 69,684.

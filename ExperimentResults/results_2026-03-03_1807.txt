@@ -1,0 +1,48 @@
+AXIOM BOINC SESSION LOG (PART 3 SAVE)
+Session timestamp: 2026-03-03 18:07:14 -07:00
+Source sessions consolidated: Part 1 validation (validate_2026-03-03_1802.txt) + Part 2 deploy/research (run_2026-03-03_1352.log + live queue reconstruction)
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Reviewed and credited 5,484 completed exp_* results (ID span 1,521,994 to 1,532,431).
+- Credit awarded: 10,000 total (session cap reached exactly).
+- Outcome mix in credited batch: 4,056 success, 1,428 failed/error.
+- Upload payload scan for credited batch: 5,484 missing, 0 experiment_result, 0 error (compute-fairness maintenance pass).
+- Per-user additions: ChelseaOilman +9,644; kotenok2000 +243; [DPC] hansR +106; amazing +4; Anandbhat +3.
+- Website counters: credited_count 37,177 -> 42,661; total_results_count held at 54,848.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running aborts: 0
+- Hard >48h running aborts: 0
+- Broken-experiment blanket aborts: none
+- Retirement sweep in Part 2 found over-seeded historical lines but unsent backlog to abort was 0 (ABORT_TOTAL=0).
+
+DEPLOYMENT SUMMARY (PART 2)
+CPU deployment
+- CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- Hosts seen for CPU fill: 81
+- Hosts skipped for low RAM (<6GB): 2
+- CPU workunits created in deployment pass: 2,937
+- CPU host-targeted queueing confirmed across active hosts; highest queue footprint included host 345 (Andre-WEBK), 287 (DESKTOP-N5RAJSE), 335 (Hotel-3), 159 (achernar), 333 (Golf-2).
+
+GPU deployment checkpoint
+- GPU scripts used: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+- Active GPU hosts with queued WD GPU work: 9
+- GPU workunits/rows queued for WD GPU lines: 101
+- GPU hosts observed with WD GPU assignments: 287 (DESKTOP-N5RAJSE), 23 (jisoo), 16 (dahyun), 319 (Dell-XPS-15-9560), 353 (Thing0L_4000), 327 (Echo-3), 330 (Delta-1), 159 (achernar), 340 (Foxtrot-3).
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New/active mechanism-focused lines this cycle:
+  1) wd_batchnoise_interaction.py (newly written/deployed in Part 2)
+  2) wd_labelsmooth_interaction.py (active priority line)
+  3) wd_curvature_trigger_gpu.py (active GPU priority line)
+- Novelty check actions recorded in run log: targeted literature/web searches executed around weight decay interaction mechanisms (label smoothing interaction, adaptive/decoupled weight decay, batch-size interaction effects) before deployment decisions.
+- Novelty rationale: these lines test mechanistic interaction hypotheses (noise-regime dependence, regularizer interaction, curvature-trigger timing) rather than repeating retired baseline WD sweeps.
+
+KEY SCIENTIFIC FINDINGS
+1. No new contradiction to established inverse critical period (ICP) behavior for weight-decay timing appeared in this session’s reviewed evidence.
+2. The credited Part 1 batch was dominated by missing upload payload files at validation time (5,484/5,484 missing), so this pass primarily strengthened compute-fairness crediting rather than adding payload-level inference.
+3. Deployment emphasis shifted toward mechanism-testing WD interaction lines (batch-noise interaction, label-smoothing interaction, curvature-trigger GPU timing), increasing near-term capacity for hypothesis-discriminating results.
+4. Stuck-task and broken-prefix checks found no new blanket-abort target among currently active WD-family lines.
+
+NOTES
+- Cumulative result ID ledgers were intentionally not maintained here; database remains source of truth for credited rows.
