@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 18:02 UTC; 1805 new sanitized files in last 120 min, 1199 schema-resolved)
+Last updated: March 4, 2026 (analysis session 18:14 UTC; 1805 new sanitized files in last 120 min, 9 schema-resolved families)
 =================================================
 
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
@@ -41,3 +41,9 @@ OPEN QUESTIONS
 
 ANALYSIS COVERAGE NOTE
 - Scientific claims were restricted to families with schema-resolved named summary metrics from sanitized numeric outputs.
+
+CURRENT CYCLE UPDATE
+- 1805 new sanitized files were detected (window: 120 min).
+- Schema-resolved quantitative analysis completed for 9 legacy families with scalar summary metrics.
+- No new preliminary/confirmed findings added this cycle: all analyzed families had <10 independent seeds (most had 1 seed).
+- 33 additional families had >=5 new files but require explicit legacy schema adapters before defensible field-level claims.

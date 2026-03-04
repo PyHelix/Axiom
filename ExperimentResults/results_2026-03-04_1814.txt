@@ -1,0 +1,120 @@
+AXIOM BOINC - SCIENTIFIC ANALYSIS
+Date: 2026-03-04 18:14 UTC
+Sanitized results analyzed: 1805 files
+
+KEY SCIENTIFIC FINDINGS
+
+FINDING #1: antibiotic_delay_fatigue_switch (INSUFFICIENT DATA, 1 seeds, 3 hosts)
+
+  Hypothesis: Hypothesis field in script is numeric placeholder (1); interpreted using summary metric semantics.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=mean_reentrant_gain; mean=-0.265375 +/- 0.000003 (n=17 files); sign consistency=17/17 (100.0%); Cohen's d=-86958.37; host mean spread=0.000008.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #2: kuramoto_islanding_fatigue_reclosure (INSUFFICIENT DATA, 1 seeds, 7 hosts)
+
+  Hypothesis: Hypothesis field in script is numeric placeholder (1); interpreted using summary metric semantics.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=mean_reentrant_gain; mean=+0.000000 +/- 0.000000 (n=27 files); sign consistency=0/27 (0.0%); Cohen's d=inf; host mean spread=0.000000.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #3: cstr_poison_purge_reentrance (INSUFFICIENT DATA, 1 seeds, 5 hosts)
+
+  Hypothesis: Hypothesis field in script is numeric placeholder (1); interpreted using summary metric semantics.
+
+  Method: AR(1) feed disturbance (weather/operations-driven variability)
+
+  Results: metric=mean_reentrant_gain; mean=-0.011134 +/- 0.000002 (n=57 files); sign consistency=57/57 (100.0%); Cohen's d=-5194.02; host mean spread=0.000004.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #4: xy_delay_thermostat_reentrance (INSUFFICIENT DATA, 1 seeds, 2 hosts)
+
+  Hypothesis: Hypothesis field in script is numeric placeholder (1); interpreted using summary metric semantics.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=best_gain_mean; mean=+7.809801 +/- 0.030803 (n=10 files); sign consistency=10/10 (100.0%); Cohen's d=+253.54; host mean spread=0.003431.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #5: climate_delay_carbon_hysteresis_window (INSUFFICIENT DATA, 1 seeds, 3 hosts)
+
+  Hypothesis: Hypothesis text unavailable in sanitized script payload; interpreted from summary metric names.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=mean_best_gain; mean=-0.048221 +/- 0.000203 (n=12 files); sign consistency=12/12 (100.0%); Cohen's d=-237.30; host mean spread=0.000464.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #6: fput_adaptive_damping_fatigue (INSUFFICIENT DATA, 1 seeds, 4 hosts)
+
+  Hypothesis: Hypothesis field in script is numeric placeholder (1); interpreted using summary metric semantics.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=mean_reentrant_gain; mean=-0.020766 +/- 0.000377 (n=23 files); sign consistency=23/23 (100.0%); Cohen's d=-55.14; host mean spread=0.000803.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #7: nonmarkov_trap_release_window (INSUFFICIENT DATA, 1 seeds, 4 hosts)
+
+  Hypothesis: Hypothesis text unavailable in sanitized script payload; interpreted from summary metric names.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=mean_reentrant_gain; mean=+0.000134 +/- 0.000059 (n=12 files); sign consistency=12/12 (100.0%); Cohen's d=+2.27; host mean spread=0.000033.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #8: sis_delay_adaptive_rewiring_tradeoff (INSUFFICIENT DATA, 1 seeds, 3 hosts)
+
+  Hypothesis: Hypothesis text unavailable in sanitized script payload; interpreted from summary metric names.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=best_score_mean; mean=+0.000113 +/- 0.000087 (n=9 files); sign consistency=8/9 (88.9%); Cohen's d=+1.29; host mean spread=0.000073.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+FINDING #9: interdep_flow_memory_shedding_tradeoff (INSUFFICIENT DATA, 1 seeds, 2 hosts)
+
+  Hypothesis: Hypothesis text unavailable in sanitized script payload; interpreted from summary metric names.
+
+  Method: Simulation in run_trial()/run_one_trial with multiple trials; summary aggregates trial-level statistics.
+
+  Results: metric=mean_medium_window_gain; mean=-0.001049 +/- 0.001156 (n=9 files); sign consistency=5/9 (55.6%); Cohen's d=-0.91; host mean spread=0.002170.
+  Conclusion: INCONCLUSIVE - insufficient independent seeds (<10).
+
+---
+
+EXPERIMENT STATUS
+experiment family | total results | seeds | status
+cstr_poison_purge_reentrance | 57 | 1 | INSUFFICIENT DATA
+kuramoto_islanding_fatigue_reclosure | 27 | 1 | INSUFFICIENT DATA
+fput_adaptive_damping_fatigue | 23 | 1 | INSUFFICIENT DATA
+antibiotic_delay_fatigue_switch | 17 | 1 | INSUFFICIENT DATA
+climate_delay_carbon_hysteresis_window | 12 | 1 | INSUFFICIENT DATA
+nonmarkov_trap_release_window | 12 | 1 | INSUFFICIENT DATA
+xy_delay_thermostat_reentrance | 10 | 1 | INSUFFICIENT DATA
+interdep_flow_memory_shedding_tradeoff | 9 | 1 | INSUFFICIENT DATA
+sis_delay_adaptive_rewiring_tradeoff | 9 | 1 | INSUFFICIENT DATA
+
+NOTES
+- 33 families with >=5 new files were not fully schema-resolved from legacy ordered outputs in this cycle; excluded from hypothesis claims.
+- No new preliminary or confirmed findings were added this cycle due insufficient seed diversity in schema-resolved families.
