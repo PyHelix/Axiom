@@ -1,0 +1,39 @@
+AXIOM VALIDATION / CREDIT LOG
+Timestamp: 2026-03-04 18:47:05 
+Session step: Validation & Credit (Step 2 of 5)
+
+1) CONTEXT REVIEWED
+- Read: /opt/axiom/experiment_session/findings_summary.txt
+- Focus: prioritize scientifically complete results; do not reward failures/empty outputs.
+
+2) LIVE SYSTEM STATE (this session)
+- Uncredited completed exp results: 295
+- Active exp tasks observed: yes (multiple experiment families)
+- Failed exp tasks observed: yes (many outcome=5 records; exit_status=0)
+- Nonzero exit_status failures: 0
+
+3) RESULTS REVIEWED THIS SESSION
+- Reviewed result IDs (count=295): 1662263, 1662280, 1662306, 1662312, 1672901, 1672925, 1676938, 1676976, 1677897, 1677900, 1677902, 1677905-1677907, 1677909, 1677978, 1677983, 1677986-1677988, 1677991, 1677993, 1680373-1680375, 1680377, 1680379, 1680384, 1680390, 1680396, 1680402, 1680406, 1680409, 1680415-1680416, 1680420-1680421, 1680424, 1680434, 1680439-1680440, 1680442, 1680445-1680446, 1680453, 1680460, 1680462, 1680464-1680465, 1680468, 1681239, 1681247-1681248, 1681257, 1681259, 1681261, 1681275, 1681280-1681281, 1681287, 1681295-1681296, 1681318-1681319, 1681333-1681334, 1681742, 1681766-1681767, 1681984, 1682097, 1682102, 1682104, 1682108, 1682110, 1682179-1682181, 1682184-1682185, 1682188-1682189, 1682192-1682196, 1682199-1682200, 1682203-1682204, 1682209-1682210, 1682239, 1682241-1682247, 1682250-1682253, 1682256-1682257, 1682260-1682261, 1682263-1682264, 1682267-1682268, 1682272-1682273, 1682276-1682279, 1682282-1682283, 1682286, 1682289, 1682292, 1682297, 1682299-1682300, 1682302-1682304, 1682306, 1682308-1682324, 1682329, 1682331-1682351, 1682353-1682359, 1682426, 1682433, 1682452, 1682461, 1682477, 1682505, 1682537, 1682550-1682551, 1682562-1682563, 1682565, 1682582, 1682636, 1682656, 1682708, 1682734, 1682752, 1682757, 1682776, 1682781, 1682796, 1682838, 1682848, 1682852, 1682858, 1682879, 1682895, 1682904, 1682938, 1682941, 1682951, 1682957, 1682963, 1682981, 1683023, 1683030, 1683033, 1683292-1683294, 1683297-1683304, 1683306-1683310, 1683313-1683320, 1683322-1683324, 1683329-1683330, 1683334-1683335, 1683338-1683339, 1683342-1683343, 1683346-1683354, 1683356, 1683358, 1683363-1683365, 1683408-1683409, 1683420, 1683605-1683607, 1683617-1683618, 1683621, 1683639-1683640, 1683643, 1683646, 1683652, 1683691-1683693, 1683716-1683723, 1683725-1683728, 1683734, 1683795
+- Sample IDs: 1662263, 1662280, 1662306, 1662312, 1672901, 1672925, 1676938, 1676976, 1677897, 1677900, 1677902, 1677905, 1677906, 1677907, 1677909, 1677978, 1677983, 1677986, 1677987, 1677988, 1677991, 1677993, 1680373, 1680374, 1680375, 1680377, 1680379, 1680384, 1680390, 1680396 ...
+- Sanitized file availability check: matched_safe_files_for_uncredited=0
+- Assessment: no current uncredited completed result has a corresponding sanitized *_safe.json artifact yet, so scientific-value scoring could not be performed safely for this batch.
+
+4) CREDIT ACTIONS
+- Credited results this session: 0
+- Total credit awarded this session: 0
+- Per-user increments: none
+- Per-host increments: none
+- Safety cap status (<=10,000): satisfied
+
+5) CLEANUP ACTIONS
+- Stuck task cleanup (>12h running on >6h-dead hosts): 0 rows updated
+- Hard-ceiling cleanup (>48h running): 0 rows updated
+- Broken experiment abort action: none applied (no active nonzero-exit crash signature to justify blanket abort)
+
+6) BUGS FOUND / FIXED
+- No experiment-script bug fix applied in this validation pass.
+- Rationale: failures in sampled groups were outcome=5 with exit_status=0 (abort/state transitions), not executable crash tracebacks.
+
+7) OPERATIONAL NOTES
+- Crediting for these 295 completed/uncredited results is deferred until corresponding sanitized outputs are present under /opt/axiom/experiment_results/sanitized/.
+- Next validation run should re-check same DB query; DB remains source of truth for uncredited set.
