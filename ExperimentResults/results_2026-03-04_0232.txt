@@ -1,0 +1,54 @@
+AXIOM BOINC SESSION RESULTS
+Timestamp: 2026-03-04 02:32:39
+Source logs: validate_2026-03-04_0229.txt, run_2026-03-03_1352.log
+
+SESSION SUMMARY
+- This report consolidates Part 1 (validation/credit/cleanup) and Part 2 (deployment/research) status for the current automation cycle.
+
+PART 1: VALIDATION, CREDIT, CLEANUP
+- Reviewed completed uncredited experiment rows: 1,135 total (IDs spanning 1657698-1661962; server_state=5).
+- Outcome mix reviewed: 124 success (outcome=1), 923 immediate-failure (outcome=5), 88 timeout/no-reply (outcome=6).
+- Credit awarded this session: 1,044.3 total (under 10,000 cap) across 1,135 results.
+- Per-user credit highlights: Steve Dodd +494.5, Orange Kid +205.3, ChelseaOilman +102.0, PyHelix +57.0, plus additional contributors.
+- Remaining uncredited completed exp_* rows after pass: 0.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken-prefix scan: battery_pulse_delay_plating_resonance remained 0 success / 9 failed (100% fail in completed sample).
+- Active aborts for broken prefix (server_state IN 2,4): 0 rows (no active tasks to abort).
+- Stuck-task cleanup (>12h running and >6h host silence): 0 aborted.
+- Hard-ceiling cleanup (>48h running): 0 aborted.
+
+PART 2: DEPLOYMENT & EXPERIMENT DESIGN
+CPU deployment (from run_2026-03-03_1352.log)
+- CPU host scan seen: 81 hosts.
+- Hosts skipped for RAM <6GB: 2.
+- CPU workunits created: 2,937.
+- CPU scripts used:
+  1. wd_batchnoise_interaction.py
+  2. wd_labelsmooth_interaction.py
+- Effective target hosts for CPU creation: 79 (81 seen minus 2 low-RAM skipped).
+
+GPU checkpoint (from same run log)
+- GPU scripts selected:
+  1. wd_curvature_trigger_gpu.py
+  2. wd_timing_scale_gpu.py
+- GPU deployment command was started but log ended during execution (interrupted, no terminal GPU_HOSTS_FOUND/GPU_WU_CREATED summary lines recorded).
+- Live post-check at report time showed no active exp_* GPU queue entries, indicating no persistent queued GPU workload from that interrupted pass.
+- Recorded GPU checkpoint for this session report: GPU hosts confirmed deployed = 0, GPU workunits confirmed deployed = 0 (based on available completed log output + live queue check).
+
+NEW EXPERIMENTS / NOVELTY CHECK DOCUMENTATION
+- New/active experiment family for this cycle focuses on WD interaction mechanisms:
+  1. wd_batchnoise_interaction.py (batch-size/gradient-noise interaction with late WD effect)
+  2. wd_labelsmooth_interaction.py (label smoothing x WD timing interaction)
+  3. wd_curvature_trigger_gpu.py (GPU curvature-gated WD trigger test)
+  4. wd_timing_scale_gpu.py (GPU timing-scale sensitivity test)
+- Novelty/related-work check was logged in Part 2 via targeted arXiv/web queries before deployment, including searches on:
+  - weight decay x label smoothing interaction
+  - adaptive/decoupled weight decay
+  - batch-size x weight decay x generalization schedule literature
+
+KEY SCIENTIFIC FINDINGS
+1. Newly credited science-success rows were fully payload-valid in this pass (124/124 with experiment_result JSON), preserving scientific usability.
+2. The dominant reliability failure signature remained infrastructure-like (zero elapsed runtime + missing upload payload), not malformed scientific output.
+3. battery_pulse_delay_plating_resonance continues to exhibit complete failure in current completed-history sample (0/9 success), supporting continued retirement until runtime-path diagnostics are resolved.
+4. Current experiment design direction remains focused on mechanism-level WD interactions (batch noise, label smoothing, and curvature/timing GPU hypotheses) to test whether late-WD gains depend on training dynamics rather than a single fixed schedule effect.
