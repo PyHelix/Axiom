@@ -83,3 +83,18 @@ CROSS-VALIDATION INCREMENTS (post-credit completed success counts)
 
 OPEN QUESTIONS
 - Are occasional host-side script download timeouts (WinError 10060) correlated with a specific CDN/path or transient WAN issue on high-throughput host 123?
+
+VALIDATION UPDATE — March 4, 2026 (session part1_validate_0854)
+- Reviewed and credited 3 completed uncredited exp_* results (3 experiment_result JSON, 0 error JSON).
+- Session credit granted: +120 total (kotenok2000 +120), using incremental total_credit updates only.
+- Cleanup checks: 0 dead-host stuck tasks (>12h run, >6h offline) and 0 tasks exceeding 48h hard ceiling.
+- Failure stream remains dominated by outcome=6 no-reply events concentrated on hosts 340/339/342; no reproducible experiment-code crash signature detected.
+
+CROSS-VALIDATION INCREMENTS (post-credit completed success counts)
+- sandpile_delay_adaptive_dissipation: 12
+- toggle_delay_adaptive_control: 2
+- allee_delay_climate_harvest: 5
+- No experiment reached 30+ consistent seeds in this validation pass; no new CONFIRMED FINDINGS appended.
+
+OPEN QUESTIONS
+- What is driving concentrated no-reply outcome=6 bursts on hosts Foxtrot-3 (340), Foxtrot-2 (339), and PC-1 (342): host stability/network path vs scheduler saturation?
