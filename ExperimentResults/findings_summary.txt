@@ -1,10 +1,10 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part1_validate_v)
+Last updated: March 3, 2026 (session s0303_part1_validate_vi)
 ============================================================
 
 CORE SCIENTIFIC STATUS
 - No scientific reversal versus established inverse critical-period (ICP) WD timing findings.
-- This session was validation/credit and reliability triage; no newly credited rows, but fresh payload spot-checks confirm successful science is being produced.
+- Latest payload review again shows successful science outputs from active ecological-delay and WD experiments.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
@@ -12,24 +12,27 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 - Test whether WD onset is gated by curvature stabilization versus fixed late onset.
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1V)
-- Uncredited completed backlog: 0 rows (`exp_*`, `server_state=5`, `granted_credit=0`).
-- Credit awarded this session: 0 (no eligible uncredited rows; under 10,000 cap).
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1VI)
+- Uncredited completed backlog: 0 rows (`exp_*`, `server_state=5`, `granted_credit=0`, all outcomes).
+- Credit awarded this session: 0 (under 10,000 cap).
 - Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Active queue remains 512 tasks (`server_state IN (2,4)`).
 - Website counters after refresh: credited_count=54,438; total_results_count=55,009.
+- Credited experiment rows in DB (`granted_credit>0`): 148,467.
 
 PAYLOAD VALIDATION NOTES
-- Spot-checked upload payloads contain valid completed science JSON with substantial runtime:
-  - `exp_grad_subspace_wd_gpu_gpu_h1_3975477_1772596437_1_*` (~188s) reported inverse CP holds=true but hypothesis_supported=false for subspace-collapse trigger.
-  - `exp_wd_noise_trigger_gpu_gpu_h1_r2_3975477_1772596437_14_*` (~862s) produced full condition summary (no_wd/fixed_late/adaptive_noise/always_wd).
-  - `exp_metapop_corridor_delay_forecast_h123_r37_3980039_1772596631_37_*` (~840s) produced multi-condition persistence statistics.
-- Recent `outcome!=1` clusters for several active WD prefixes are currently concentrated on host 341 only (single-host failure domain), so no global experiment abort was applied.
+- Parsed 60 newest upload payloads under `/opt/axiom_boinc/upload/*/exp_*`: 60/60 had `experiment_result`; 0 parse errors; 0 explicit `error` payloads.
+- Representative long-runtime successful payloads (~840-918s) observed for:
+  - `exp_kuramoto_delay_noisy_control*`
+  - `exp_ising_delay_adaptive_quench*`
+  - `exp_metapop_corridor_delay_forecast*`
+  - `exp_rps_delay_jitter_adaptive_mobility*`
+  - `exp_wd_noise_trigger_gpu_gpu*`
+- Recent rows with `outcome!=1` still include valid uploaded `experiment_result` payloads in multiple cases, indicating outcome-classification divergence from payload quality.
 
-CROSS-SESSION TAKEAWAYS
-- Database shows no unpaid completed experiment work at this time.
-- Some rows marked `outcome=5` still have rich uploaded payloads, indicating validator/outcome classification can diverge from payload quality.
+RELIABILITY / ABORT DECISIONS
+- No experiment was globally aborted this session.
+- Reason: high historical/rolling failure percentages are present for some prefixes, but current active queue is dominated by other prefixes and sampled recent payloads are valid science outputs rather than clear cross-host crash traces.
 
 OPEN QUESTIONS
-1) Should host-level auto-quarantine be added when a host shows repeated zero-elapsed `outcome!=1` clusters across multiple prefixes?
-2) Should credit policy explicitly include a secondary pass for payload-backed rows flagged `outcome!=1` when already credited minimally?
+1) Should validator/outcome mapping be adjusted when valid `experiment_result` payload exists but row lands as `outcome!=1`?
+2) Should host-level auto-quarantine be added for repeated zero-elapsed `outcome=5` streaks to reduce noisy failure inflation?
