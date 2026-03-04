@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part2_deploy)
+Last updated: March 4, 2026 (session part1_validate)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -19,69 +19,63 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding promoted this deployment pass.
-- This pass prioritized full CPU/GPU queue refill plus one new non-ML systems-biology hypothesis.
+- No new 30+ seed cross-validated finding promoted this pass.
+- This pass prioritized full CPU/GPU refill and one new non-ML ecology/control experiment.
 
-RETIREMENT CHECK (THIS SESSION)
+SESSION CONTEXT
+- Step-1 context loaded from findings_summary.txt.
+- No validate_*.txt file present in /opt/axiom/experiment_session during this run.
+
+RETIREMENT CHECK (MANDATORY)
 - Mandatory retirement query executed before deployment.
-- Over-seeded families rechecked: svdrank(2018), percolation(1300), wdlr(1063), wdwindow(868), regmech(292),
-  wdrebound(215), bottmech(170), repcrystal(368), intervtiming(271), wdoptim(1104).
-- Query for (completed>50 AND unsent>0/running>50) returned no rows; no abort UPDATE required.
+- No rows matched (completed>50 and (unsent>0 or running>50)); no abort UPDATE required.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 5,793 WUs created across active RAM>=6GB hosts (3x CPU target fill).
-- CPU script mix used: grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast,
-  cascade_forecast_delay_shedding, sandpile_delay_adaptive_dissipation, ising_delay_adaptive_quench,
-  brusselator_delay_sensor_noise, lotka_delay_adaptive_harvest, wildfire_delay_adaptive_suppression,
-  seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility, kuramoto_delay_noisy_control,
-  rd_phasejitter_adaptive_forcing.
-- GPU top-up pass (appid=2): 322 WUs created.
+- CPU top-up pass (appid=1): 5,841 WUs created for active hosts with RAM>=6GB.
+- CPU script pool used: grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast,
+  cascade_forecast_delay_shedding, ising_delay_adaptive_quench, kuramoto_delay_noisy_control,
+  rd_phasejitter_adaptive_forcing, sandpile_delay_adaptive_dissipation, lotka_delay_adaptive_harvest,
+  wildfire_delay_adaptive_suppression, seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility,
+  brusselator_delay_sensor_noise, toggle_delay_adaptive_control.
+- GPU top-up pass (appid=2): 324 WUs created.
 - Transition refresh + one-pass transitioner executed after CPU deployment, GPU deployment, and new seeding.
 
 GPU CHECKPOINT (MANDATORY)
 - GPU hosts with idle capacity found: 81.
-- GPU workunits deployed: 322.
+- GPU workunits deployed: 324.
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: toggle_delay_adaptive_control.py (CPU, systems biology / control)
-- Query: "adaptive feedback control genetic toggle switch delayed measurement noise"
-- Query: "real-time feedback control synthetic genetic toggle switch"
-- Query: "noise induced switching genetic toggle delayed repression"
-- Found: prior studies report real-time feedback control of synthetic circuits and classical delayed/noisy
-  stochastic toggle-switch dynamics, but no direct factorial adaptive-vs-fixed control sweep jointly mapping
-  observation delay and sensor noise with explicit overcorrection metrics.
-- Novel angle: tests delay/noise regime inversion hypothesis: adaptive feedback improves stability at short delay,
-  then overcorrects and increases state switching at long delay/high-noise sensing.
+1) New experiment: tritrophic_delay_harvest_resilience.py (CPU, ecology/control)
+- Query: "adaptive harvesting delayed observation tri-trophic model collapse"
+- Query: "fisheries feedback control delayed measurements predator prey model"
+- Query: "tri-trophic ecosystem model adaptive control noise delay"
+- Found: prior work reports delayed ecological control and harvesting dynamics, but no clear factorial
+  adaptive-vs-fixed harvest sweep jointly mapping sensing delay, observation noise, and seasonal forcing
+  in one tri-trophic resilience test with explicit overharvest diagnostics.
+- Novel angle: test regime inversion hypothesis where adaptive control helps persistence/yield at short
+  delay but overcorrects and raises collapse risk under longer delay/noisier sensing plus climate forcing.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) toggle_delay_adaptive_control.py
-- CPU numpy-only; run-duration compliant (independent trials until run_duration-60s).
+1) tritrophic_delay_harvest_resilience.py
+- CPU numpy-only; run-duration compliant loop (independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x delay_steps {0,4,12} x obs_noise {0.00,0.08} x proc_noise {0.02,0.06}.
-- Outputs: switch_rate, balance_frac, effort_rms, clip_frac, adaptive-minus-fixed deltas per condition.
+- Conditions: strategy {fixed, adaptive} x delay_steps {0,8,20} x obs_noise {0.00,0.06} x climate_amp {0.00,0.25}.
+- Outputs: mean_yield, yield_cv, persistence_frac, collapse_frac, overharvest_frac, control_var,
+  final biomasses, and adaptive-minus-fixed deltas.
 
 NEW EXPERIMENT SEEDING (THIS SESSION)
-- Dedicated initial seeding: 36 targeted CPU WUs for toggle_delay_adaptive_control on high-capacity active hosts.
+- Dedicated initial seeding: 48 targeted CPU WUs for tritrophic_delay_harvest_resilience
+  across 24 active high-capacity hosts.
 
-QUEUE STATUS SNAPSHOT (POST-DEPLOY)
-- Live exp_% results: unsent=0, running=635.
-- Deficit query lag persists after large targeted dispatch waves (CPU deficit hosts=90 sum 5,793;
-  GPU deficit hosts=81 sum 322), consistent with delayed host attribution in prior sessions.
-
-VALIDATION STATUS (March 4, 2026, part1_validate)
-- Reviewed latest uncredited uploads; verified wrapper/schema mismatch for two CPU scripts caused valid outputs to be tagged as failures.
-- Script fix applied: metapop_corridor_delay_forecast.py and rps_delay_jitter_adaptive_mobility.py now write raw result JSON (no nested experiment_result key).
-- Scientific trend check (not yet confirmable): in sampled metapop_corridor_delay_forecast runs, fixed strategy persistence remained above adaptive across d2/d10/d20 with small negative adaptive-fixed deltas.
-- Scientific trend check (not yet confirmable): sampled rps_delay_jitter_adaptive_mobility outputs show near-zero adaptive benefit at jitter=0.10 with current small trial counts per condition.
-- No new 30+ seed cross-validated result this validation pass; CONFIRMED FINDINGS unchanged.
-
-VALIDATION STATUS (March 4, 2026, part1_validate_b)
-- Credited 2,195 previously uncredited completed results (IDs 1627743-1658128), total session credit awarded: 2,396.00 (within 10,000 cap).
-- Payload audit: 67/2,195 had retrievable upload JSON with completed data; 2,128 had no retained upload file and were credited at minimum goodwill rate.
-- Scientific trend check (metapop_corridor_delay_forecast, n=13 payload-backed): adaptive-minus-fixed persistence remained negative (mean -0.0200; range -0.0208 to -0.0195); adaptive_helps_low_delay false in 13/13 and adaptive_hurts_high_delay true in 13/13.
-- Scientific trend check (rps_delay_jitter_adaptive_mobility, n=5 payload-backed): adaptive-minus-fixed coexistence at jitter=0.10 remained 0.0 across sampled runs.
-- Reliability action: aborted 10 active/unsent results for exp_wd_curvature_trigger_gpu_gpu after recent-window failure rate remained high (16 fail, 2 success).
-- Stuck-task cleanup query executed: no >12h-dead-host tasks and no >48h tasks found.
-- No new 30+ seed cross-validated result this validation pass; CONFIRMED FINDINGS unchanged.
+VALIDATION UPDATE (2026-03-04)
+- No new 30+ seed cross-validated finding promoted in this validation pass.
+- Reviewed recent successful outputs (e.g., IDs 1657700, 1657518, 1657510, 1657505):
+  delay-control ecology/control scripts are producing structured summaries at expected runtime (~840-950s).
+- Provisional signal (not confirmed): wd_clipping_interaction continues to show late WD increasing ID more than OOD
+  (larger generalization gap), with clipping changing optimization statistics (clip events) but limited OOD lift.
+- Provisional signal (not confirmed): metapop_corridor_delay_forecast and rps_delay_jitter_adaptive_mobility
+  payloads suggest small or negative adaptive-minus-fixed effects under tested delays/noise.
+- Data-quality fix applied: wd_mixup_interaction.py output format corrected to avoid double-wrapped
+  experiment_result payloads that can trigger validator outcome=5 despite completed compute.
