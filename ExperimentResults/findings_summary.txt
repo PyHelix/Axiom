@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part2_deploy)
+Last updated: March 4, 2026 (session validate_2026-03-04_1000)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -20,61 +20,57 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 
 CORE STATUS
 - No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this run.
-- Recent non-ML additions now seeded: abx_cycle_hgt_delay_resonance.py, oscillatory_roughchannel_lbm_resonance.py,
-  battery_pulse_delay_plating_resonance.py.
+- Latest validate log file: /opt/axiom/experiment_session/validate_2026-03-04_1000.txt.
+
+VALIDATION STATUS (THIS SESSION)
+- Reviewed uncredited completed results: 137 records currently in DB (server_state=5, outcome=1, granted_credit=0).
+- Trusted sanitized payloads for these uncredited records were not yet available in /opt/axiom/experiment_results/sanitized
+  at validation time, so quality scoring and credit grants were deferred (0 credit awarded this session).
+- Broken experiment triage: battery_pulse_delay_plating_resonance showed 100% failure; aborted queued/running tasks and fixed
+  result serialization to trusted `experiment_result` format in experiment script.
 
 MANDATORY PRECHECKS (THIS SESSION)
-- Initial backlog: unsent=0, in_progress=1136, active_hosts=94 (cap=5000).
+- Initial backlog: unsent=0, in_progress=1104, active_hosts=94 (cap=5000).
 - Retirement scan (>50 completed with unsent/running): no abortable unsent queue found.
-- Per-host cap enforcement: trimmed GPU host 57 by 6 running tasks; trimmed CPU host 354 by 69 running tasks.
-- Final cap check: cpu_over4x=0, gpu_over4x=0.
+- Per-host cap enforcement check: cpu_over4x=0, gpu_over4x=0 (no abort required).
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 3374 WUs created with RAM>=6GB filter and host-targeted assignment.
-- GPU top-up pass (appid=2): 305 WUs created using GPU-aware scripts only.
-- New-script seed wave: 180 CPU WUs for battery_pulse_delay_plating_resonance.py.
+- CPU top-up pass (appid=1): 3414 WUs created with RAM>=6GB filter and host-targeted assignment.
+- GPU top-up pass (appid=2): 303 WUs created using GPU-aware scripts only.
+- New-script seed wave: 178 CPU WUs for pit_delay_inhibitor_resonance.py.
 - Transition refresh + one-pass transitioner executed after CPU pass, GPU pass, and new-script seeding.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts found: 84
-- GPU hosts with idle capacity at scan time: 79
-- GPU workunits deployed: 305
+- GPU hosts with idle capacity at scan time: 78
+- GPU workunits deployed: 303
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
-  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
+  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
 
 NOVELTY CHECK LOG (NEW EXPERIMENT, THIS SESSION)
-1) battery_pulse_delay_plating_resonance.py (electrochemical energy systems)
-- Search query: "lithium plating pulse charging delay estimation diffusion heterogeneity model"
-- Search query: "battery fast charging pulse protocol lithium plating simulation study"
-- Search query: "electrochemical model delayed feedback charging control lithium ion battery"
-- Search query: "graphite electrode heterogeneity lithium plating fast charging model"
-- Found: prior literature covers pulse charging for plating mitigation and overpotential-aware fast-charge control,
-  but direct factorial tests of period x delayed-control x diffusion-heterogeneity interactions are sparse.
-- Novel angle retained: quantify whether delayed adaptive pulse control develops a non-monotonic plating-burden
-  resonance specifically in high-heterogeneity regimes, relative to fixed pulse and zero-delay adaptive baselines.
+1) pit_delay_inhibitor_resonance.py (corrosion science / control)
+- Search query: "pitting corrosion inhibitor dosing delay pulsed flow simulation model"
+- Search query: "localized corrosion stochastic pit growth delayed inhibitor control"
+- Search query: "electrochemical corrosion pulsed flow inhibitor feedback control study"
+- Found: prior work covers pitting models, inhibitor dosing, and flow effects, but direct factorial treatment of
+  pulse-period x sensing-delay x heterogeneity under adaptive control appears sparse.
+- Novel angle retained: test whether delayed adaptive dosing induces a non-monotonic pit-depth resonance at
+  intermediate pulse periods, especially under high heterogeneity.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) battery_pulse_delay_plating_resonance.py
+1) pit_delay_inhibitor_resonance.py
 - CPU numpy-only; reads run_duration; host-dependent hashed seed; loops independent trials until run_duration-60s.
-- Toy electrochemical dynamics with SOC, surface/bulk Li, SEI growth, plating/stripping, thermal feedback,
-  switching-fatigue, and delayed overpotential-based adaptive pulse control.
-- Factorial conditions: policy {cc,pulse,adaptive_pulse} x period {20,60,180} x delay {0,8,24}
-  x heterogeneity {0.05,0.20} x ambient {20,35}.
-- Outputs: plating AUC, final plated Li, max overpotential, ripple, time-to-80% SOC, throughput, SEI, plus hypothesis signal.
+- Simulates pit growth, inhibitor-film dynamics, chloride/flow forcing, and delayed adaptive inhibitor control.
+- Factorial conditions: policy {fixed,pulse,adaptive} x period {24,72,216} x delay {0,10,30}
+  x heterogeneity {0.05,0.22} x chloride {0.7,1.1}.
+- Outputs resonance and control-effect metrics in experiment_result.summary and sample_trials.
+
+TRUSTED PARAMS REGISTRY UPDATE
+- Added /opt/axiom/experiment_results/trusted_params.json entry:
+  pit_delay_inhibitor_resonance -> resonance_strength, adaptive_vs_fixed_pit_depth,
+  adaptive_vs_pulse_pit_depth, delay_damage_slope, high_heterogeneity_pit_depth,
+  low_heterogeneity_pit_depth, high_heterogeneity_pit_auc, overall_corrosion_mean,
+  overall_inhibitor_use.
 
 CURRENT QUEUE SNAPSHOT (POST-DEPLOY)
-- unsent=0, in_progress=1145, active_hosts=94.
-
-VALIDATION UPDATE (March 4, 2026, Part 1)
-- Reviewed 60 newly completed results; awarded nonzero credit to 51 results (session credit: 5790).
-- No new 30+ seed cross-validated finding eligible for promotion to CONFIRMED FINDINGS.
-- Multi-seed consistency observed for lotka_delay_adaptive_harvest, ising_delay_adaptive_quench,
-  grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast, and sandpile_delay_adaptive_dissipation
-  in this batch (2-5 fresh seeds each, stable numeric ranges).
-- seasonal_metapop_vax_trigger: both fresh runs (1772 and 1826 paired trials) show fixed trigger beating adaptive
-  trigger on attack rate (fixed-minus-adaptive reduction remained negative across couplings), consistent with prior signal.
-- Data-quality issue still open: allee_delay_climate_harvest results repeatedly report zero completed trials despite
-  populated numeric summary payload; keep under observation before further scaling.
-- New experiment issue identified and patched: battery_pulse_delay_plating_resonance had deterministic crash
-  (array length mismatch in ripple computation). All in-flight tasks for this experiment were aborted; script fixed
-  by switching moving-average implementation to length-preserving convolution.
+- unsent=0, in_progress=1037, active_hosts=94.
+- Final cap check: cpu_over4x=0, gpu_over4x=0.
