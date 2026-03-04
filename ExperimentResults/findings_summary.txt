@@ -70,3 +70,14 @@ VALIDATION SESSION UPDATE (March 04, 2026, 13:31, Part 1)
 - Broken-experiment screening this pass: no active nonzero-elapsed multi-host crash signature requiring broad abort.
 - Website counters updated: credited_count=1843; total_results_count=1843.
 - Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=3009 (all elapsed=0).
+VALIDATION SESSION UPDATE (March 04, 2026, 13:51, Part 1)
+- Reviewed/credited completed rows this session: 24 rows (result IDs 1677984, 1684478, 1684479, 1684480, 1685563, 1686011, 1686012, 1686013, 1686018, 1686055, 1686506, 1686507, 1686542, 1686544, 1686545, 1686548, 1686550, 1686551, 1686678, 1686679, 1686802, 1686805, 1686808, 1686809).
+- Payload audit: initial name-only lookup missed uploads; xml_doc_out-derived output filenames resolved all 24/24 payloads as valid experiment_result JSON.
+- Credit posted this session: 24 rows, 472 total credit (240 initial + 232 quality bonus, under 10,000 cap).
+- Credit distribution: ChelseaOilman 240; Armin Gips 80; Steve Dodd 54; WTBroughton 34; _Scandinavian_ 24; zombie67 [MM] 20; vanos0512 20.
+- Success elapsed profile (credited batch): min=317.80s, median=844.39s, max=1002.32s.
+- Dominant credited families: tritrophic_delay_harvest_resilience, oscillatory_roughchannel_lbm_resonance, metapop_corridor_delay_forecast, plus wd_noise_trigger_gpu/wd_timing_scale_gpu/wd_anisotropy_trigger_gpu.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent, nonzero-elapsed failures by appid): no candidate required broad abort.
+- Website counters normalized to non-decreasing values: credited_count=1867; total_results_count=1867.
+- Cutoff snapshot after this pass: uncredited completed success rows=5; uncredited completed failure rows=3575 (nonzero-elapsed failures pending credit: 0).
