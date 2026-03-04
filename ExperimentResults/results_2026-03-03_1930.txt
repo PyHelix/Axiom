@@ -1,0 +1,52 @@
+AXIOM BOINC SESSION LOG - Part 3 (Save & Upload)
+Session timestamp: 2026-03-03 19:30 -07:00
+Source logs: validate_2026-03-03_1927.txt, run_2026-03-03_1352.log
+
+PART 1 SUMMARY: VALIDATION, CREDIT, CLEANUP
+- Reviewed and credited 10,000 completed uncredited exp_* results (credit cap reached exactly).
+- Outcome mix in reviewed batch: success=0, failed/error=10,000.
+- Upload artifact check: 10,000/10,000 missing at /opt/axiom_boinc/upload/*/exp_*.
+- Credit awarded this session: 10,000 total (1 credit per reviewed result in missing-payload legacy/error cohort).
+- Top recipient additions in this pass included ChelseaOilman (+1135), Amapola (+1022), mmonnin (+915), makracz (+804), and Landjunge (+799).
+
+BROKEN/STUCK TASK CLEANUP
+- Aborted broken queue tasks: exp_wd_width_mechanism* (4 tasks).
+- Aborted broken queue tasks: exp_cellular_automata_v2* (3 tasks).
+- Stuck-task cleanup (>12h running + >6h dead host): 0 tasks.
+- Hard-ceiling cleanup (>48h running): 0 tasks.
+
+PART 2 SUMMARY: RESEARCH & DEPLOYMENT
+CPU deployment
+- CPU queue fill pass completed.
+- Hosts processed: 81
+- Hosts skipped for low RAM (<6 GB): 2
+- CPU workunits created: 2937
+- CPU scripts in active deployment mix: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+
+GPU checkpoint
+- Part 2 run log shows GPU deployment command started but session was interrupted before final counters were printed.
+- Live BOINC snapshot after run: 83 GPU-capable active hosts seen in last 72h.
+- Current queued GPU exp_* tasks (appid=2, states 1/2/4): 0.
+- GPU script families in use: wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+- Existing GPU workunit totals by family (database snapshot):
+  - exp_wd_curvature_trigger_gpu*: 1037
+  - exp_wd_timing_scale_gpu*: 751
+- Distinct hosts with those GPU experiment results:
+  - wd_curvature_trigger_gpu: 18 hosts
+  - wd_timing_scale_gpu: 15 hosts
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK NOTES
+- New CPU experiment script added in Part 2: wd_batchnoise_interaction.py.
+- Purpose: test whether late weight-decay gain depends on gradient-noise regime (small-batch vs large-batch interaction).
+- Novelty-check process was run in Part 2 with targeted literature/web search before creation; script compiled successfully on server (py_compile OK).
+- Existing priority lines retained: wd_labelsmooth_interaction.py and wd_curvature_trigger_gpu.py.
+
+KEY SCIENTIFIC FINDINGS
+1. This validation pass produced no new payload-level evidence because all 10,000 reviewed results were missing upload JSON artifacts.
+2. No reversal signal was observed against established inverse critical period (ICP) findings for weight-decay timing.
+3. Queue hygiene improved by aborting known-broken wd_width_mechanism and cellular_automata_v2 task cohorts, reducing wasted volunteer compute.
+4. New experiment design focus shifted from broad WD over-seeding toward mechanism isolation (batch-noise interaction and GPU curvature-triggered timing tests).
+
+OPERATIONAL NOTES
+- Cumulative result-ID ledgers are intentionally omitted; credited state is tracked in the BOINC database.
+- findings_summary.txt was used as cross-session scientific memory context.
