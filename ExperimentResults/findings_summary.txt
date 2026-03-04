@@ -68,3 +68,28 @@ VALIDATION UPDATE (2026-03-04 09:14 CET, part1_validate)
 - Sanitized result artifacts for this batch contained completion metadata only (no numeric scientific payload), so no new quantitative scientific effect estimate extracted in this validation pass.
 - Failure cluster remains concentrated on hosts 9 and 340 (outcome=6 no-reply) across several GPU experiment families; current evidence indicates host/availability issues rather than a cross-host experiment script bug.
 - Stuck-task cleanup checks executed: 0 tasks met >12h dead-host criterion; 0 tasks met >48h hard ceiling.
+
+SESSION UPDATE (March 4, 2026, part2_deploy current run)
+- Prechecks: unsent=0, in_progress=1006 at start; no CPU/GPU hosts above 4x running cap; retirement scan returned no abortable over-seeded experiment with unsent queue.
+- CPU deployment: large top-up executed toward 3x/core targets with RAM>=6GB filter and host-targeted assignment; additional focused seed wave created for new script.
+- GPU deployment (mandatory): 84 GPU hosts detected, 80 had idle GPU capacity at scan time, 308 GPU WUs created using GPU-aware scripts only.
+- GPU scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
+
+NOVELTY CHECK LOG (NEW EXPERIMENT)
+1) oscillatory_roughchannel_lbm_resonance.py (fluid dynamics / transport in rough channels)
+- Search query: "lattice Boltzmann rough channel periodic forcing pressure gradient oscillatory flow study"
+- Search query: "D2Q9 lattice Boltzmann oscillatory flow rough walls correlation length"
+- Search query: "oscillatory flow through rough channels drag reduction resonance numerical simulation"
+- Found: prior work exists on oscillatory channel flow and separate rough-wall/rough-channel transport, but limited direct tests of forcing-period x roughness-correlation interaction for transport-efficiency resonance in a compact D2Q9 framework.
+- Novel angle retained: test whether intermediate forcing period yields a resonance in transport efficiency that appears strongly for long-correlation roughness and weak/absent for short-correlation roughness.
+
+NEW SCRIPT ADDED
+1) oscillatory_roughchannel_lbm_resonance.py
+- CPU numpy-only D2Q9 lattice-Boltzmann rough-channel simulation.
+- Reads run_duration from WU JSON, uses host-dependent hashed seed, and runs independent trials until run_duration-60s.
+- Factorial conditions: roughness correlation {3,11} x forcing period {20,50,120} x forcing amplitude {0.0,0.70}.
+- Outputs mean flow, dissipation proxy, transport efficiency, per-condition aggregates, and a correlation-dependent resonance hypothesis signal.
+
+CURRENT SNAPSHOT (post deployment)
+- unsent=0, in_progress=1122, active_hosts=94.
+- No host exceeds 4x running cap in CPU (appid=1) or GPU (appid=2) at post-check.

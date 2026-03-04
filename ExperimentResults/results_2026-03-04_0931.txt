@@ -1,0 +1,44 @@
+AXIOM BOINC SESSION LOG
+Session timestamp: 2026-03-04 09:31:39 CET
+Workflow stage: Part 3 (save + upload)
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Validation source: latest validate_*.txt file not present at save time; using Part 1 validation summary recorded in findings_summary.txt.
+- Credited 26 newly completed exp_* results this session (total 489 credit), using elapsed-time-tiered awards.
+- No uncredited successful exp_* results remained after validation pass.
+- Sanitized artifacts in this batch contained completion metadata only; no new numeric scientific payload extracted during validation.
+
+STUCK/BROKEN TASK CLEANUP
+- Stuck-task cleanup checks executed in Part 1:
+  - 0 tasks met >12h dead-host criterion.
+  - 0 tasks met >48h hard-ceiling criterion.
+- Failure concentration still observed on hosts 9 and 340 (outcome=6 no-reply), primarily in GPU families; current evidence indicates host availability/reliability issues rather than a cross-host script defect.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+1) abx_cycle_hgt_delay_resonance.py (microbial evolution / epidemiological control)
+- Novelty check queries covered antibiotic cycling + HGT + delayed surveillance + non-monotonic cycling effects.
+- Prior art found on cycling and HGT separately; limited direct factorial tests of delay x HGT intensity x compliance-fatigue on R12 takeover burden/timing.
+- Novel retained hypothesis: delay-induced policy resonance where delayed adaptive control can outperform at low delay but become worse than fixed cycling and zero-delay adaptive control when fatigue and HGT are jointly high.
+- Deployment in this session lineage: 120 CPU WUs seeded.
+
+2) oscillatory_roughchannel_lbm_resonance.py (fluid dynamics / transport)
+- Novelty check queries covered D2Q9 LBM oscillatory rough-channel flow, roughness correlation, and resonance effects.
+- Prior art found for oscillatory flow and rough channels independently; limited direct tests of forcing-period x roughness-correlation interaction in compact D2Q9 setup.
+- Novel retained hypothesis: intermediate forcing period yields a transport-efficiency resonance, strong for long-correlation roughness and weak/absent for short-correlation roughness.
+- Deployment in this session lineage: included in CPU top-up/seed strategy from Part 2.
+
+DEPLOYMENT AND OPERATIONS SUMMARY
+- Precheck/backlog control enforced with host-cap policy and queue hygiene.
+- CPU top-up performed with RAM>=6GB filter and host-targeted deficit fill.
+- GPU top-up performed using GPU-aware scripts only.
+- Transitioner refresh and one-pass transition execution completed after seeding.
+- Queue remained controlled post-deploy with no host over 4x running cap.
+
+KEY SCIENTIFIC FINDINGS
+1. No new 30+ seed cross-validated effect was promoted to CONFIRMED FINDINGS in this session.
+2. Validation batch provided operational completion metadata but no new numeric scientific estimates, so effect-size registry is unchanged this pass.
+3. Experiment program expanded with two novel, hypothesis-driven studies: (a) delay-HGT-fatigue resonance in adaptive antibiotic cycling and (b) forcing-period/roughness-correlation resonance in oscillatory rough-channel transport.
+4. Existing confirmed interaction landscape remains stable (including strong WD interaction signals and previously retired high-power findings), with this session primarily strengthening coverage and future testability rather than altering established conclusions.
+
+REFERENCE CONTEXT
+- findings_summary source: /opt/axiom/experiment_session/findings_summary.txt
