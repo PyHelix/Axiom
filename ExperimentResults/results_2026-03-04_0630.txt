@@ -1,0 +1,51 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: 2026-03-04 06:30 (America/Denver) - Part 3 Consolidation
+Sources: validate_2026-03-04_0621.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1 - VALIDATION, CREDIT, AND CLEANUP
+- Results reviewed/credited this session: 519 rows total.
+- Session credit awarded: 3241.00 (cap <= 10,000 respected).
+- Batch summary:
+  - Batch A (mixed completed rows): 292 rows, +2308.00 credit.
+  - Batch B (zero-elapsed failed rows): 116 rows, +58.00 credit.
+  - Batch C (new success arrivals): 111 rows, +875.00 credit.
+- Upload/quality audit:
+  - Success payloads recoverable: 0/402 (missing artifacts: 402).
+  - Batch B failures: 116/116 had elapsed_time=0, mostly outcome 6.
+- Stuck/broken cleanup performed:
+  - Broken-prefix active aborts: potts_pulse_anneal_resonance=1; other watched broken prefixes=0.
+  - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters after validation pass:
+  - credited_count.txt=3160
+  - total_results_count.txt=3043
+- Cutoff after final sweep: uncredited success=79, uncredited fail=64 (new arrivals after final credit sweep).
+
+PART 2 - RESEARCH, DEPLOYMENT, AND EXPERIMENT DESIGN (from run log)
+- Retirement pass executed before deployment:
+  - Retirement candidates reviewed; ABORT_TOTAL=0 (no newly unsent retirement tasks to abort).
+- New experiment designed/added:
+  - wd_batchnoise_interaction.py
+  - Script deployed to /opt/axiom_boinc/html/user/experiments/ and py_compile check returned OK.
+- Novelty check documentation captured in run log:
+  - Search topics included weight decay x label smoothing interaction, adaptive/decoupled WD, and batch-size x WD generalization literature (arXiv/web queries recorded in run_2026-03-03_1352.log).
+- CPU deployment (explicit run output):
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2 (<6 GB)
+  - CPU_WU_CREATED=2937
+  - CPU scripts used: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+  - Effective target scope: 79 eligible CPU hosts (81 seen minus 2 skipped low-RAM hosts).
+- GPU deployment/checkpoint:
+  - GPU deployment pass launched with scripts: wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+  - Run transcript was interrupted before final GPU deployment summary line; no final per-pass created count was printed in run_2026-03-03_1352.log.
+  - Current server checkpoint for these GPU scripts (live query during Part 3):
+    - GPU hosts with queued WUs across these scripts: 85 hosts
+    - GPU workunits queued: 2634 total (1328 wd_curvature_trigger_gpu + 1306 wd_timing_scale_gpu)
+
+KEY SCIENTIFIC FINDINGS
+1. This validation cycle found no recoverable new experiment JSON payloads (0/402 success rows had upload artifacts), confirming artifact persistence remains the dominant reliability bottleneck.
+2. Delay-family completed jobs continue to cluster around long runtimes (~800-900s) with frequent missing upload payloads, indicating compute is occurring but data retention/assimilation remains the limiting step.
+3. A concentrated GPU failure burst (116 zero-elapsed rows, mostly host 347) indicates dispatch/runtime instability episodes rather than numerical divergence during long execution.
+4. Research/deployment pipeline advanced mechanism testing by adding wd_batchnoise_interaction.py and continuing GPU mechanism lines (wd_curvature_trigger_gpu, wd_timing_scale_gpu) with broad host coverage in the active queue.
+
+NOTES
+- Cumulative result ID lists intentionally omitted; database remains the source of truth for credited rows.
