@@ -1,0 +1,46 @@
+AXIOM BOINC SESSION LOG (Part 3 Save/Upload)
+Session timestamp: 2026-03-04 15:54:52 -07:00
+Source logs: validate_2026-03-04_1551.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1 - VALIDATION, CREDIT, AND CLEANUP SUMMARY
+- Uncredited completed-success results reviewed at cutoff: 0 (live query returned no rows).
+- Uncredited completed failures with nonzero elapsed reviewed: 0.
+- Credit awarded this pass: 0 total credit, 0 result rows updated.
+- Safety cap check (<=10000/session): PASS.
+- Stuck/broken cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0; broad broken-experiment aborts=none.
+- Recent 72h failure-pattern scan: no experiment crossed multi-host >50% crash threshold requiring global abort.
+- Counter snapshot at validation cutoff: credited_count.txt=1966; total_results_count.txt=2030.
+
+PART 2 - RESEARCH/DEPLOYMENT SUMMARY
+- Retirement/oversaturation pass executed; candidates were identified but had no unsent backlog to retire.
+- Retirement output: ABORT_TOTAL=0.
+
+CPU DEPLOYMENT
+- CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+- Host-targeted CPU queue fill processed hosts_seen=81, skipped_low_ram(<6GB)=2.
+- CPU workunits created in deployment pass: 2937.
+- Queue strategy used in run: per-host assignment of missing experiment families first, then replicated backfill toward 3x CPU queue target.
+
+GPU DEPLOYMENT CHECKPOINT
+- GPU scripts used in deployment script: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Part 2 log capture was interrupted during GPU pass (^C), so final printed counters were not preserved in the run log.
+- Live checkpoint after run (queued appid=2 tasks for these families):
+  - GPU hosts with queued targeted tasks: 2
+  - GPU queued workunits (targeted families): 9
+  - Breakdown: wd_timing_scale_gpu=5, wd_curvature_trigger_gpu=4
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New script created this session: wd_batchnoise_interaction.py (uploaded and python3 -m py_compile passed).
+- Existing related scripts reviewed for overlap before deployment: wd_labelsmooth_interaction.py, wd_curvature_trigger_gpu.py.
+- Novelty-check research was documented in the run log via targeted literature/web searches, including:
+  - arXiv/domain searches on weight decay x label smoothing interactions
+  - adaptive/decoupled weight decay prior work checks
+  - batch-size x weight-decay generalization interaction checks
+- Scientific intent of new design: test whether late weight-decay benefit is amplified under higher small-batch gradient-noise regimes (interaction, not just main effects).
+
+KEY SCIENTIFIC FINDINGS
+1. No new uncredited scientific payloads were present at the Part 1 cutoff, so scientific conclusions from prior validated sessions remain unchanged in this pass.
+2. Reliability remained stable: zero nonzero-elapsed uncredited failures and no stuck-task backlog requiring cleanup intervention.
+3. No cross-host crash cluster exceeded the abort threshold in the recent 72h window (CPU or GPU), so no broad experiment-family abort was justified.
+4. The Part 2 research cycle advanced mechanism testing by adding wd_batchnoise_interaction.py, extending the weight-decay critical-period program with an explicit batch-noise interaction hypothesis.
+5. GPU-targeted mechanism lines remained active with queued coverage (wd_timing_scale_gpu and wd_curvature_trigger_gpu), supporting continued CPU/GPU comparative analysis in subsequent validation windows.

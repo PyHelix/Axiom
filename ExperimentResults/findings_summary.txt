@@ -1,180 +1,92 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (CPU research/deploy session 21:01 UTC)
-=================================================
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1511)
+============================================================
 
-CONFIRMED FINDINGS (append-only - never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) - retired, finding established
-7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
-8. WD depth interaction: completed (1282+ results) - retired
-9. WD task sweep: completed (1077+ results) - retired
-10. WD optimizer interaction: completed (1043+ results) - retired
-11. WD learning rate interaction: completed (1037+ results) - retired
-12. WD width transition: completed (928+ results) - retired
-13. WD window: completed (841+ results) - retired
-14. Representation crystallization: completed (368+ results) - retired
-15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
-16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
-17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
-18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
-19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
+CORE SCIENTIFIC STATUS
+- No reversal observed for the prior inverse critical-period / WD timing signal.
+- Current queue health is stable: recent completed-success uploads are parseable and science-bearing (experiment_result).
+- No active multi-host nonzero-elapsed crash cluster (CPU or GPU) requiring broad experiment abort in this pass.
 
-NEW PRELIMINARY FINDINGS (this cycle)
-- Chemostat delay crossfeeding resonance: adaptive_vs_pulse_coexistence = -0.003069 +/- 0.002968 (n=30 runs, 24 seeds, 5 hosts), 26/30 negative, Cohen's d=-1.03, host-mean span=0.00254. Direction is consistent but absolute effect is very small (<0.5 percentage points), so this remains preliminary and practically weak.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
+3) grad_subspace_wd_gpu.py
+- Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
 
-REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance: 33 new runs (20 seeds, 7 hosts) remain directionally consistent: resonance_mean = +0.069729 +/- 0.002598 (33/33 positive, d=26.84, host-mean span=0.00789), adaptive_minus_fixed_mean = -0.002526 +/- 0.000886 (33/33 negative, d=-2.85, host-mean span=0.00313).
+VALIDATION SESSION UPDATE (March 04, 2026, 14:18, Part 1)
+- Reviewed/credited completed rows this session: 48 success rows (ID span 1680533-1687554).
+- Payload audit for credited rows: 48/48 valid experiment_result JSON payloads (xml_doc_out filename resolution).
+- Credit posted this session: 48 rows, 992 total credit (under 10,000 cap).
+- Credit distribution (session totals): ChelseaOilman 400; kotenok2000 180; _Scandinavian_ 134; Armin Gips 100; PyHelix 62; dthonon 20; [VENETO] boboviz 20; vanos0512 20; Orange Kid 20; Vato 20; [DPC] hansR 16.
+- Success elapsed profile (credited batch): min=630.56s, median=847.23s, max=1648.15s.
+- Dominant credited families: moranmig (18), sshdephase (10), vicsekdelay_gpu (5), plus singletons from delay-ecology/control families.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 72h nonzero-elapsed failures): no candidate required broad unsent/in-progress abort.
+- Website counters updated: credited_count=1955; total_results_count=1957.
+- Cutoff snapshot: uncredited completed success rows=6 (live arrivals); uncredited completed failures with nonzero elapsed=0.
 
-OPEN QUESTIONS
-- Interdependent-flow memory shedding tradeoff: current batch has n=9 runs (8 seeds, 2 hosts), mean_medium_window_gain = -0.001049 +/- 0.001156 (4/9 positive, d=-0.91, host-mean span=0.00217). N<10 and mixed signs; classify as inconclusive.
-- 71 additional families had >=5 files but unresolved schema alignment in this window; no claim is made for them until script/adapter schema is unambiguous.
+VALIDATION SESSION UPDATE (March 04, 2026, 15:02, Part 1)
+- Reviewed/credited completed rows this session: 20 success rows (ID span 1685981-1687600).
+- Payload audit for credited rows: 20/20 valid experiment_result JSON payloads (xml_doc_out filename resolution).
+- Credit posted this session: 20 rows, 405 total credit (under 10,000 cap).
+- Credit distribution (session totals): Orange Kid 100; Steve Dodd 84; ChelseaOilman 80; WTBroughton 61; Armin Gips 40; PyHelix 20; vanos0512 20.
+- Success elapsed profile (credited batch): min=822.12s, median=846.51s, max=1022.45s.
+- Dominant credited families: moranmig (6), tritrophic_delay_harvest_resilience (3), sshdephase (3), vicsekdelay_gpu (2), plus delay-ecology singletons.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 72h nonzero-elapsed failures, CPU+GPU): no candidate required broad unsent/in-progress abort.
+- Website counters updated: credited_count=1698; total_results_count=1979.
+- Cutoff snapshot: uncredited completed success rows=4 (live arrivals); uncredited completed failures with nonzero elapsed=0.
 
-ANALYSIS COVERAGE NOTE
-- 1805 sanitized files detected in the last 120 minutes.
-- 74 experiment families had >=5 new files.
-- Scientific claims were restricted to families with script-resolved scalar schema and named comparison metrics.
+VALIDATION SESSION UPDATE (March 04, 2026, 14:40, Part 1)
+- Reviewed/credited completed rows this session: 22 success rows (ID span 1662470-1687628).
+- Payload audit for credited rows: 22/22 valid experiment_result JSON payloads (upload filename resolution via `${result_name}_r*`).
+- Credit posted this session: 22 rows, 436 total credit (under 10,000 cap).
+- Credit distribution (session totals): kotenok2000 180; makracz 80; WTBroughton 60; Armin Gips 40; PyHelix 20; vanos0512 20; _Scandinavian_ 20; [DPC] hansR 16.
+- Success elapsed profile (credited batch): min=633.87s, median=849.62s, max=888.81s.
+- Dominant credited families: moranmig (6), sshdephase (5), lbmroughdelay_gpu (3), vicsekdelay_gpu (2), grayscott_delay_pulse_feedback (2), plus metapop/seasonal/kuramoto singletons.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 72h, nonzero-elapsed failures, CPU+GPU): no candidate required broad unsent/in-progress abort.
+- Website counters updated: credited_count=1720; total_results_count=1997.
+- Cutoff snapshot: uncredited completed success rows with elapsed_time>0 = 0.
 
-CURRENT CYCLE UPDATE
-- No new confirmed findings were added this cycle.
-- One preliminary finding remains (chemostat delay crossfeeding resonance).
-- One confirmed finding received replication support (pit delay inhibitor resonance).
-
-NEW EXPERIMENTS QUEUED (this cycle)
-- spin_glass_delay_anneal_window: tests whether delayed acceptance-feedback temperature control in 2D Edwards-Anderson spin-glass annealing has a non-monotonic delay window that outperforms fixed cooling on best-energy density. 12 host-targeted CPU WUs deployed for initial evidence collection.
-
-CURRENT DEPLOYMENT CHECKPOINT (2026-03-04)
-- CPU fill pass: 260 host-targeted CPU WUs created (appid=1), using throughput-based 3x fill targets with low-RAM (<6GB) hosts skipped.
-- GPU fill pass (mandatory): 78 GPU hosts had idle capacity; 164 GPU WUs created (appid=2).
-- GPU scripts used: wd_anisotropy_trigger_gpu, wd_curvature_trigger_gpu, wd_noise_trigger_gpu, wd_timing_scale_gpu, grad_subspace_wd_gpu, gpu_matmul_stress.
-- Per-host cap enforcement: pre-create unsent overfill trimmed on CPU hosts 327/325/324/334/333 and GPU host 159; post-create audit found no remaining unsent tasks to trim.
-
-NOVELTY CHECK (this cycle)
-- New experiment: aah_delay_dephasing_window (Aubry-Andre quasiperiodic transport under fixed vs delayed-adaptive dephasing).
-- Search query: "Aubry-Andre model dephasing transport environment-assisted localization delocalization paper".
-- Search query: "quantum Zeno anti-Zeno dephasing localization Aubry Andre".
-- Search query: "feedback-controlled dephasing localization transport quasiperiodic lattice".
-- Literature scan found prior work on environment-assisted transport/dephasing and Zeno/anti-Zeno effects in disordered or quasiperiodic systems; no direct match was found for delayed-feedback adaptive dephasing interval control optimized against localization metrics in this setting.
-- Novel angle: test whether delayed IPR feedback produces a non-monotonic dephasing window that increases wavepacket spread versus fixed-rate dephasing at matched compute budget.
-- New experiment deployment: 24 CPU WUs queued for initial evidence.
-
-CPU RESEARCH & DEPLOY UPDATE (2026-03-04)
-- New experiment script added: moran_delay_migration_window.py (evolutionary metapopulation dynamics under periodic environment switching, fixed vs delayed-adaptive migration feedback).
-- Novelty search query: "Moran process environmental switching migration rate fixation time".
-- Novelty search query: "evolutionary game delayed feedback migration metapopulation fixation".
-- Novelty search query: "lagged adaptive migration evolutionary rescue model".
-- Novelty search query: "stochastic Moran metapopulation periodic environment".
-- Prior literature covers delay effects in fixation and fluctuating-environment metapopulations, but no direct match was found for delayed diversity-feedback migration-control window tests against fixed migration in this setting.
-- Novel angle: test for a reentrant delay window where lagged adaptive migration increases polymorphism persistence / absorption-time gain versus fixed migration at equal compute budget.
-- CPU deployment this pass: workunits created in DB by prefix = moranmig 318, spinglass 4, chemostat 79 (total 401).
-- Per-host cap enforcement run pre and post creation; over-4x hosts 87/325/330/332 had zero unsent tasks available to trim (all excess already running).
-- Workunit transition nudge query was temporarily blocked by a long-running maintenance lock on `workunit`; retry is needed once that lock clears.
-
-GPU RESEARCH & DEPLOY UPDATE (2026-03-04)
-- New GPU experiment script added: vicsek_delay_noise_window_gpu.py (Vicsek-style lattice alignment under obstacle disorder, fixed vs delayed-adaptive noise control).
-- Novelty search query: "Vicsek model delayed feedback noise control alignment".
-- Novelty search query: "Vicsek model obstacle disorder alignment noise".
-- Novelty search query: "active matter delayed feedback control Vicsek obstacles".
-- Literature scan found prior work on delayed-interaction Vicsek dynamics and separate obstacle/geometry effects, but no direct match for delay-window testing of adaptive noise feedback under obstacle disorder.
-- Novel angle: test whether an intermediate delay in adaptive angular-noise control yields reentrant alignment gains versus fixed noise at matched compute budget.
-- GPU retirement pass: no over-seeded GPU experiments met retirement criteria this cycle.
-- GPU fill pass: 80 hosts with idle GPU capacity; 159 GPU WUs created (appid=2) using throughput-based 3x targets.
-- GPU script(s) used: vicsek_delay_noise_window_gpu.
-- Per-host cap enforcement: no hosts exceeded the 4x abort threshold before or after creation.
-- Backlog after deploy: unsent=43, in_progress=674 (total=717, below 5000 cap).
-- Transitioner nudge attempted but blocked by DB lock timeout on workunit update; retry required after lock clears.
-
-CPU RESEARCH & DEPLOY UPDATE (2026-03-04, pass 2)
-- New experiment script added: ssh_delay_dephasing_edge_window.py (disordered SSH-chain transport under fixed vs delayed-adaptive dephasing control).
-- Novelty search queries: "Su-Schrieffer-Heeger chain dephasing transport edge state disorder paper", "feedback-controlled dephasing quantum transport delayed feedback paper", "SSH chain delayed feedback dephasing control transport".
-- Literature scan found ENAQT/dephasing and feedback-control papers in related open-quantum settings, but no direct match for delayed IPR-feedback dephasing-window tests on disordered SSH edge transport.
-- Novel angle: test for a reentrant delay window where adaptive dephasing improves edge-to-edge transfer over fixed dephasing at matched runtime.
-- Retirement action: aborted 10 unsent WUs from confirmed/prelim-negative families (`chemostat*`, `chemxfeed*`, `pit_delay*`, `xy_delay*`, `autocatalytic*`).
-- CPU deployment this pass: 316 WUs created (sshdephase 160, moranmig 156) across 70 hosts, with low-RAM hosts (<6GB) skipped.
-- Per-host cap enforcement: no host exceeded 4x threshold before or after creation; therefore no Robin Hood redistribution was needed this pass.
-- Backlog after deploy: unsent=46, in_progress=132 (total=178, below 5000 cap).
-- Transitioner nudge retry again hit `workunit` lock timeout; requires later retry once maintenance lock clears.
-
-GPU RESEARCH & DEPLOY UPDATE (2026-03-04, pass 2)
-- New GPU experiment script added: lbm_delay_adaptive_forcing_window_gpu.py (rough-channel D2Q9 lattice Boltzmann flow under fixed oscillatory forcing vs delayed-adaptive forcing control).
-- Novelty search query: "lattice Boltzmann delayed feedback flow control rough channel".
-- Novelty search query: "GPU lattice Boltzmann oscillatory rough channel resonance mixing".
-- Novelty search query: "adaptive feedback control lattice Boltzmann fluid simulation".
-- Literature scan found delayed/feedback fluid-control and LBM control work in related settings, but no direct match for delay-window testing of adaptive forcing in rough-channel LBM transport-efficiency metrics.
-- Novel angle: test for a reentrant delay window where delayed forcing adaptation improves transport efficiency versus fixed forcing at matched runtime.
-- GPU retirement pass: no over-seeded GPU experiments met retirement criteria this pass.
-- GPU fill pass: 78 hosts with idle GPU capacity; 161 host-targeted GPU WUs created (appid=2).
-- GPU script(s) used: lbm_delay_adaptive_forcing_window_gpu.
-- Per-host cap enforcement: no hosts exceeded 4x abort threshold before or after creation; no Robin Hood redistribution needed (no trimmed unsent tasks).
-- Backlog after deploy: unsent=77, in_progress=140 (total=217, below 5000 cap).
-- Transition-time nudge on `workunit` remains intermittently lock-blocked; deployment succeeded, and timestamp checkpoint was updated for next throughput window.
-
-CPU RESEARCH & DEPLOY UPDATE (2026-03-04, pass 3)
-- New experiment script added: resettrap_delay_window.py (first-passage transport with heavy-tailed trap residence under fixed vs delayed-adaptive stochastic resetting).
-- Novelty search query: "stochastic resetting random walk non-Markovian trap release delayed feedback control".
-- Novelty search query: "first-passage with trapping and stochastic resetting delayed adaptive rate".
-- Novelty search query: "time-delayed feedback control stochastic resetting first passage".
-- Literature scan found broad prior work on stochastic resetting and first-passage optimization, including trap/return variants and lattice models, but no direct match for delay-window testing of adaptive reset-rate control coupled to crowding-dependent heavy-tailed trap release.
-- Novel angle: test whether intermediate feedback delays (vs zero or long delay) produce a reentrant success-rate advantage for target hitting in a trap-dominated transport process.
-- Retirement action: unsent WUs for preliminary-negative chemostat line were aborted (`exp_chemostat_delay_crossfeeding_resonance*`, `exp_chemxfeed*`); remaining unsent after action = 0 for these patterns.
-- CPU deployment this pass: 481 host-targeted CPU WUs created (mix of resettrap/interdepflow/moranmig/sshdephase) with low-RAM (<6GB) hosts skipped.
-- Backlog after deploy: unsent=99, in_progress=66 (total=165, below 5000 cap).
-- Transitioner nudge on `workunit` was lock-blocked (lock wait timeout) during this pass; deployment still completed and throughput timestamp checkpoint was updated.
-
-GPU RESEARCH & DEPLOY UPDATE (2026-03-04, pass 3)
-- New GPU experiment script added: allencahn_delay_adaptive_quench_window_gpu.py (disordered 2D Allen-Cahn coarsening under fixed vs delayed-adaptive quench-depth control).
-- Novelty search query: "Allen-Cahn delayed feedback control phase separation quench rate".
-- Novelty search query: "time-delayed feedback Cahn-Hilliard control".
-- Novelty search query: "phase-field grain growth feedback control".
-- Literature scan found related delayed-feedback control work in phase-field/solidification settings and broader Allen-Cahn/Cahn-Hilliard control studies, but no direct match for a delay-window test of adaptive quench-depth control against fixed schedules in disordered Allen-Cahn coarsening.
-- Novel angle: test whether an intermediate delay yields reentrant adaptive-minus-fixed coarsening-efficiency gains versus both short- and long-delay control.
-- GPU retirement pass: no over-seeded GPU experiments met retirement criteria (query returned none).
-- GPU fill capacity scan: 79 GPU hosts had idle capacity under throughput-based 3x fill targets.
-- Deployment status: create_work inserts for new GPU WUs were blocked by long-running `workunit` table lock contention this pass; timeout-guarded probe WU creation also failed to commit, so 0 new GPU WUs were created.
-- Per-host cap enforcement (pre/post): no hosts exceeded the 4x abort threshold; therefore no trims and no Robin Hood redistribution actions were required.
-- Backlog after pass: unsent=129, in_progress=164 (total=293, below 5000 cap).
-
-CPU RESEARCH & DEPLOY UPDATE (2026-03-04, pass 4)
-- New experiment script added: fractal_sis_delay_distancing_window.py (SIS/contact-process style spread on a Sierpinski-carpet substrate under fixed vs delayed-adaptive distancing control).
-- Novelty search query: "contact process on Sierpinski carpet critical behavior paper".
-- Novelty search query: "effect of adaptive rewiring delay in an SIS network epidemic model".
-- Novelty search query: "SIS on fractal network with delayed adaptive social distancing".
-- Literature scan found prior work on (a) contact-process criticality on Sierpinski carpets and (b) delayed adaptive rewiring/behavior in SIS models, but no direct match for delayed adaptive distancing-window tests specifically on a fractal (Sierpinski-carpet) contact substrate.
-- Novel angle: test whether an intermediate feedback delay yields reentrant adaptive-minus-fixed control-efficiency gains (prevalence + intervention cost objective) in fractal-constrained epidemic transport.
-- Retirement gate: no CPU experiment met over-seeded retirement criteria this pass (query returned none).
-- CPU deployment this pass: 80 host-targeted CPU WUs created (fracsis/resettrap/moranmig/spinglass mix) across 10 underfilled hosts, with per-host live queue checks and <6GB hosts excluded.
-- Per-host cap enforcement (post-create): over-4x hosts detected (123/85/87/324), but unsent trim capacity was zero on each (all excess already running), so no aborts and no Robin Hood redistribution were possible.
-- Backlog after deploy: unsent=105, in_progress=863 (total=968, below 5000 cap).
-- Transition nudge applied after clearing transient metadata-lock contention on `workunit`.
-
-GPU RESEARCH & DEPLOY UPDATE (2026-03-04, pass 4)
-- New GPU experiment script added: potts_rf_delay_adaptive_anneal_window_gpu.py (2D random-field q-state Potts Monte Carlo with fixed vs delayed-adaptive temperature control).
-- Novelty search query: "random-field Potts model delayed feedback temperature control Monte Carlo".
-- Novelty search query: "Ising time-delayed feedback control Monte Carlo temperature".
-- Novelty search query: "adaptive annealing schedule Potts model quenched disorder".
-- Literature scan found prior work on Potts/Ising Monte Carlo, random-field disorder effects, and delayed-feedback control in related statistical-physics systems; no direct match was found for delay-window testing of adaptive temperature control in random-field Potts ordering.
-- Novel angle: test whether an intermediate delay yields reentrant adaptive-minus-fixed gains in final ordering/energy under quenched random fields at matched runtime.
-- GPU retirement pass (mandatory): no over-seeded GPU experiment met retirement criteria in this pass.
-- Per-host cap enforcement (mandatory): no hosts exceeded the 4x abort threshold in pre/post checks.
-- GPU fill capacity scan: 82 active GPU hosts had spare capacity under throughput-based 3x fill targets.
-- Deployment outcome: `create_work`/`workunit` operations were lock-blocked during this pass; new GPU WU creation could not be completed safely before timeout.
-- Backlog snapshot after pass: unsent=133, in_progress=872 (total=1005, below 5000 cap).
-- Transitioner nudge update query timed out under lock contention; retry required when lock pressure clears.
-
-SCIENTIFIC ANALYSIS UPDATE (2026-03-04 22:47 UTC)
-- Data window: 1999 sanitized files in last 120 minutes; 70 families had >=5 files.
-- Claim gate: only families with script-resolved scalar schema were used for scientific claims this cycle.
-
-NEW PRELIMINARY FINDINGS (this cycle)
-- Pit delay inhibitor resonance: n=27 runs (23 seeds, 6 hosts), resonance_mean = +0.070302 +/- 0.002204, 27/27 positive, Cohen's d=31.90; adaptive_minus_fixed_mean = -0.001821 +/- 0.000727, 27/27 negative, d=-2.50. Interpretation: delayed adaptive inhibitor control continues to show a resonance regime while outperforming fixed control.
-- Chemostat delay crossfeeding resonance (weak): n=38 runs (25 seeds, 10 hosts), adaptive_vs_pulse_coexistence = -0.004292 +/- 0.002816, 35/38 negative, d=-1.52; resonance_strength = -0.000730 +/- 0.004410, mixed signs (18 positive / 20 negative), d=-0.17. Direction is mostly negative, but absolute magnitude is small.
+RELIABILITY NOTES
+- Completed non-success backlog remains dominated by zero-runtime rows; nonzero-elapsed uncredited failures were zero at cutoff.
+- Throughput remains high; small residual uncredited-success carryover at cutoff is expected.
 
 OPEN QUESTIONS
-- Interdependent-flow memory shedding tradeoff: n=31 runs (24 seeds, 6 hosts), mean_medium_window_gain = -0.000554 +/- 0.001007, mixed signs (11 positive / 20 negative), d=-0.55. Current batch does not support a stable medium-window advantage.
-- 67 additional families had >=5 files but were not claimed due unresolved schema alignment for robust field mapping this cycle.
+1) Should Part 1 cadence increase during high-throughput windows to keep uncredited-success residual near zero?
+2) Should ongoing reliability dashboards split CPU/GPU by family for faster detection of accelerator-specific regressions?
+3) Should moranmig/sshdephase be added to explicit cross-validation tracking given their recent high completion volume?
 
-CURRENT CYCLE UPDATE
-- No new confirmed findings were added this cycle (no new effect reached >=30 consistent seeds with a resolved schema).
+VALIDATION SESSION UPDATE (March 04, 2026, 15:11, Part 1)
+- Reviewed/credited completed rows this session: 278 success rows (ID span 1672774-1685637).
+- Payload audit for credited rows: 278/278 valid experiment_result JSON payloads (upload filename resolution during review).
+- Credit posted this session: 278 rows, 5489 total credit (under 10,000 cap).
+- Credit distribution (session totals): ChelseaOilman 4800; Armin Gips 160; kotenok2000 112; WTBroughton 106; PyHelix 100; Orange Kid 80; hwt 43; Henk Haneveld 20; vanos0512 20; Vato 20; zombie67 [MM] 20; [DPC] hansR 8.
+- Success elapsed profile (credited batch): min=88.87s, median=844.26s, max=984.94s.
+- Dominant credited families: lorenz96_delay_assimilation_regime_shift (18), interdep_flow_memory_shedding_tradeoff (18), cascade_forecast_delay_shedding (17), seasonal_metapop_vax_trigger (15), abx_cycle_hgt_delay_resonance (14).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 72h nonzero-elapsed failures, CPU+GPU): no candidate required broad unsent/in-progress abort.
+- Website counters updated: credited_count=1956; total_results_count=2022.
+- Cutoff snapshot: uncredited completed success rows=26 (live arrivals); uncredited completed failures with nonzero elapsed=0.
+
+
+VALIDATION SESSION UPDATE (March 04, 2026, 15:32, Part 1)
+- Reviewed completed-success candidates at start of pass: 33 rows (ID span 1683289-1687840).
+- Payload audit on reviewed set: 26/33 parseable experiment_result JSON; 7/33 upload files unavailable at review time (credited conservatively by other concurrent validator before apply).
+- Credit posting in this pass: 0 rows, 0 total credit (all reviewed rows were already credited by the time guarded updates executed; cap respected).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (72h, elapsed>0, CPU+GPU): no active experiment showed >50% recent crash ratio; no broad experiment abort issued.
+- Website counters snapshot after pass: credited_count=1956; total_results_count=2030.
+- Cutoff snapshot: uncredited completed success rows=0; uncredited completed failures with nonzero elapsed=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 15:50, Part 1)
+- Reviewed/credited completed rows this session: 0 (no uncredited completed-success rows at live cutoff).
+- Credit posted this session: 0 rows, 0 total credit (session cap respected).
+- Payload audit: not applicable this pass (no uncredited success/error rows requiring review).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 72h, elapsed>0, CPU+GPU): no experiment met broad-abort criteria (>50% multi-host crash cluster).
+- Website counters updated: credited_count=1966; total_results_count=2030.
+- Cutoff snapshot: uncredited completed success rows=0; uncredited completed failures with nonzero elapsed=0.
