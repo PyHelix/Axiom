@@ -1,0 +1,44 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: 2026-03-04 13:58 CET
+Session scope: Validation, credit review, cleanup, deployment context consolidation, and experiment design logging.
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed completed-success uncredited results: 253.
+- Sanitized coverage for reviewed rows: 0/253 exact matches in `/opt/axiom/experiment_results/sanitized/*_safe.json`.
+- Quality-based credit awarded this session: 0 results.
+- Total credit awarded this session: 0 (within safety cap).
+- Reason no credit was issued: reviewed successful rows had no corresponding sanitized artifact available at validation time, so defensible quality scoring was not possible.
+
+CLEANUP AND QUEUE HEALTH
+- Dead-host stuck cleanup (>12h running on hosts offline >6h): 0 tasks aborted.
+- Hard ceiling cleanup (>48h running): 0 tasks aborted.
+- Broken/high-failure families reviewed with no active backlog requiring abort:
+  - oscillatory_roughchannel_lbm_resonance (0/214 success)
+  - abx_cycle_hgt_delay_resonance (0/66 success)
+  - potts_pulse_anneal_resonance (0/21 success)
+  - spatial_pgg_delay_fatigue (0/20 success)
+- Queue snapshot at validation: unsent=0, in_progress=1243.
+- Counters refreshed: success total=2639, success credited=2386, success uncredited=253.
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+- New experiment designed and added in prior deployment session:
+  - `rbn_delay_fatigue_control.py`
+- Hypothesis: delayed feedback combined with intervention fatigue creates a re-entrant control regime in random Boolean networks; moderate delay can remain stabilizing while high delay plus fatigue reduces control effectiveness.
+- Implementation details logged:
+  - Numeric-only ordered output construction for sanitizer compatibility.
+  - Trusted sanitizer parameters updated in `trusted_params.json` for `rbn_delay_fatigue_control` keys.
+  - Initial deployment completed: 120 CPU workunits (`exp_rbn_delay_fatigue_control_*`).
+- Novelty checks completed pre-design:
+  - "random Boolean networks adaptive rewiring criticality" -> prior literature supports adaptive rewiring/criticality links, but not the specific delay+fatigue control coupling.
+  - "Kauffman network delayed control damage spreading" -> damage spreading and control are studied, but direct delay-by-fatigue interaction mapping appears sparse.
+  - "Boolean network intervention fatigue delay" -> no direct prior match identified in retrieved sources; novelty supported as a mechanism-interaction study.
+
+KEY SCIENTIFIC FINDINGS
+1. No new promotable finding emerged from this validation pass because sanitizer artifacts were unavailable for all 253 newly reviewed completed-success results.
+2. Cross-validated promotion status remains unchanged; no additional active line reached the 30+ seed confirmation threshold in this cycle.
+3. Backlog concentration remains highest in delay/control families (notably lorenz96 delay assimilation and climate/interdependence delay lines), indicating scientific throughput is currently gated by sanitizer availability rather than compute completion.
+4. A new cross-disciplinary random Boolean network experiment line was established with a documented novelty check and deployed for future validation cycles.
+
+NOTES
+- No experiment script bugfixes were applied in this validation pass.
+- No DB traceback payloads were available for targeted failure forensics in this cycle.
