@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part2_deploy)
+Last updated: March 4, 2026 (session part1_validate)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -20,59 +20,66 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 
 CORE SCIENTIFIC STATUS
 - No new 30+ seed cross-validated finding promoted in this pass.
-- Priority this pass: keep CPU/GPU queues full and diversify with a new non-ML evolutionary-game experiment.
+- Priority this pass: keep CPU/GPU queues full and diversify with one new non-ML dynamical-systems experiment.
 
 SESSION CONTEXT
 - findings_summary.txt loaded.
 - No validate_*.txt present in /opt/axiom/experiment_session at runtime.
 
 RETIREMENT CHECK (MANDATORY)
-- Over-seeded retirement query executed before deployment.
-- No rows matched retirement criteria; no abort UPDATE issued.
+- Targeted retirement checks executed for: svdrank, percolation, wdlr, wdwindow, regmech, wdrebound, bottmech, repcrystal, intervtiming, wdoptim.
+- Over-seeded confirmed families were already fully drained (unsent=0), so no abort UPDATE was required.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
 - CPU top-up pass (appid=1): 5,886 WUs created for active hosts with RAM>=6GB.
-- CPU script pool used: grayscott_delay_pulse_feedback, lorenz96_delay_assimilation_regime_shift,
-  metapop_corridor_delay_forecast, cascade_forecast_delay_shedding, ising_delay_adaptive_quench,
-  kuramoto_delay_noisy_control, tritrophic_delay_harvest_resilience, rd_phasejitter_adaptive_forcing,
-  seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility, brusselator_delay_sensor_noise,
-  toggle_delay_adaptive_control, lotka_delay_adaptive_harvest, allee_delay_climate_harvest,
-  fisher_delay_adaptive_culling, wildfire_delay_adaptive_suppression.
-- GPU top-up pass (appid=2): 330 WUs created.
-- Transition refresh + one-pass transitioner executed after CPU deployment, GPU deployment, and new seeding.
+- CPU script pool used: lorenz96_delay_assimilation_regime_shift, metapop_corridor_delay_forecast,
+  cascade_forecast_delay_shedding, tritrophic_delay_harvest_resilience, ising_delay_adaptive_quench,
+  fisher_delay_adaptive_culling, kuramoto_delay_noisy_control, lotka_delay_adaptive_harvest,
+  brusselator_delay_sensor_noise, grayscott_delay_pulse_feedback, seir_delay_fatigue_control,
+  toggle_delay_adaptive_control, rps_delay_jitter_adaptive_mobility, seasonal_metapop_vax_trigger,
+  rd_phasejitter_adaptive_forcing, wildfire_delay_adaptive_suppression, allee_delay_climate_harvest.
+- GPU top-up pass (appid=2): 334 WUs created.
+- Transition refresh + transitioner one-pass executed after CPU deployment, GPU deployment, and new seeding.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 83.
-- GPU workunits deployed: 330.
+- GPU hosts with idle capacity found: 84.
+- GPU workunits deployed: 334.
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: spatial_pgg_delay_fatigue.py (CPU, evolutionary game theory)
-- Query: "spatial public goods game adaptive punishment cooperation"
-- Query: "public goods game punishment delay model"
-- Query: "time delay punishment public goods game cooperation"
-- Found related prior work on punishment in spatial PGG and on delay effects in punishment dynamics
-  (e.g., DOI:10.1016/j.chaos.2015.06.002, DOI:10.1016/j.chaos.2018.01.019,
-  DOI:10.1016/j.chaos.2022.112206), but no clear factorial adaptive-vs-fixed sanction study combining
-  observation delay + sensing noise + enforcement fatigue in a large replicated lattice framework.
-- Novel angle: test delay-driven regime inversion where adaptive sanctions improve cooperation under
-  low delay but can underperform fixed sanctions at long delay under noise/fatigue.
+1) New experiment: bistable_rednoise_adaptive_sampling.py (CPU, nonlinear dynamics / climate-ecology methods)
+- Query: "critical slowing down colored noise early warning tipping points review"
+- Query: "adaptive sampling frequency early warning signals tipping points autocorrelation variance"
+- Query: "red noise early warning signals false positives autocorrelation variance"
+- Found substantial prior work on classic early-warning indicators and known red-noise confounding,
+  but no clear factorial adaptive-vs-fixed sampling study jointly testing colored-noise correlation,
+  observation delay, and sensor noise in one replicated simulation framework.
+- Novel angle: test delay-driven regime inversion where adaptive sampling improves lead time at short delay
+  but can underperform fixed cadence at long delay under red-noise/noisy observations.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) spatial_pgg_delay_fatigue.py
+1) bistable_rednoise_adaptive_sampling.py
 - CPU numpy-only; run-duration compliant loop until run_duration-60s.
 - Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x delay_steps {0,8,20} x obs_noise {0.00,0.06}
-  x fatigue_rate {0.000,0.020} x synergy {1.55,1.85}.
-- Outputs: cooperation final/mean/min, collapse fraction, adaptive-minus-fixed deltas, and delay inversion flag.
+- Conditions: strategy {fixed, adaptive} x noise_tau {0.3,1.2,3.5} x obs_noise {0.00,0.08,0.16}
+  x obs_delay_steps {0,6,12}.
+- Outputs: detection/miss/false-positive rates, lead-time stats, adaptive-minus-fixed contrasts,
+  and regime-inversion flag.
 
 NEW EXPERIMENT SEEDING (THIS SESSION)
-- Dedicated initial seeding: 48 targeted CPU WUs for spatial_pgg_delay_fatigue across 24 active high-capacity hosts.
+- Dedicated initial seeding: 48 targeted CPU WUs for bistable_rednoise_adaptive_sampling
+  across 24 active high-capacity hosts.
 
-VALIDATION UPDATE (2026-03-04 07:04)
-- Reviewed newly completed uncredited result id 1657568 (wd_timing_scale_gpu_gpu, GTX 1650, elapsed ~442s payload / ~531s BOINC elapsed).
-- Scientific signal from this seed: inverse_cp_holds_all=false with heterogeneous width effects; reported scale_trend='stable' and low scale_correlation (0.1302).
-- This is single-seed evidence only; no confirmed-finding promotion.
-- Spot-check of recent outcome!=1 GPU entries showed completed JSON payloads with valid summaries, indicating validator/outcome mismatch or host-runtime issues rather than a clear script crash.
-- No stuck-task cleanup triggered this pass (0 rows at >12h/dead-host rule; 0 rows at >48h hard-ceiling rule).
+VALIDATION SUMMARY (THIS SESSION)
+- Reviewed latest uncredited-success window and corresponding upload JSON outputs; 19 recent successful results were already credited by a concurrent credit process before this pass wrote updates.
+- One remaining uncredited successful result was credited in this pass after race-safe recheck:
+  result 1658507 (exp_wd_onset_sweep_h340_r1772580513_279773_1772606105_87), +24 credit.
+- Session credit addition: 24 (below 10,000 cap).
+- Website counters refreshed: credited_count preserved and total_results_count updated with max(existing, DB count).
+- High-failure families checked: metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility, wd_mixup_interaction.
+  Aborts were issued for unsent/in-progress tasks; no remaining state (2,4) tasks were found for these families at execution time.
+- Stuck-task cleanup run:
+  - >12h running on dead hosts (>6h no contact): 0 aborted
+  - >48h hard ceiling: 0 aborted
+- Scientific status unchanged in this validation pass: no new 30+ seed cross-validated finding promoted.
