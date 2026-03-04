@@ -73,3 +73,11 @@ VALIDATION SESSION UPDATE (March 04, 2026, 15:11, Part 1)
 - Cutoff snapshot: uncredited completed success rows=26 (live arrivals); uncredited completed failures with nonzero elapsed=0.
 
 
+VALIDATION SESSION UPDATE (March 04, 2026, 15:32, Part 1)
+- Reviewed completed-success candidates at start of pass: 33 rows (ID span 1683289-1687840).
+- Payload audit on reviewed set: 26/33 parseable experiment_result JSON; 7/33 upload files unavailable at review time (credited conservatively by other concurrent validator before apply).
+- Credit posting in this pass: 0 rows, 0 total credit (all reviewed rows were already credited by the time guarded updates executed; cap respected).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (72h, elapsed>0, CPU+GPU): no active experiment showed >50% recent crash ratio; no broad experiment abort issued.
+- Website counters snapshot after pass: credited_count=1956; total_results_count=2030.
+- Cutoff snapshot: uncredited completed success rows=0; uncredited completed failures with nonzero elapsed=0.

@@ -1,0 +1,52 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-04 15:42 (America/Denver)
+Coverage: Part 1 validation/credit + Part 2 research/deployment consolidation
+
+PART 1 - VALIDATION, CREDIT, AND CLEANUP SUMMARY
+- Reviewed completed-success candidates in latest validation pass: 33 rows (ID span 1683289-1687840).
+- Payload audit: 26/33 parseable experiment_result JSON files; 7 unavailable at review time.
+- Credit awarded in latest pass: 0 rows, 0 total credit (guarded update found all reviewed rows had already been credited concurrently).
+- Session counters post-check: credited_count=1956; total_results_count=2030.
+- Stuck/broken cleanup: deadhost_gt12h=0; hard_gt48h=0.
+- Crash-pattern screening (72h, elapsed>0, CPU+GPU): no experiment above broad-abort threshold; no unsent/in-progress mass abort issued.
+
+PART 2 - DEPLOYMENT AND RESEARCH SUMMARY (from newest AutoReview run log)
+- Retirement sweep executed before deploy: retirement candidates rechecked; unsent abort total=0 (no additional unsent backlog to purge in that pass).
+- CPU deployment pass completed:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2 (hosts <6 GB RAM skipped by deploy logic)
+  - CPU_WU_CREATED=2937
+  - CPU scripts deployed: wd_batchnoise_interaction.py and wd_labelsmooth_interaction.py
+  - Targeting model: host-targeted creation toward ~3x CPU queue depth per active host.
+- GPU deployment pass launched with appid=2 and GPU-only scripts:
+  - Scripts: wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py
+  - Newest run log was interrupted before final GPU_CREATED printout; follow-up DB snapshot confirms active GPU deployment presence for both scripts.
+
+GPU CHECKPOINT (post-run server snapshot)
+- GPU scripts in active queue/result stream: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Current queued GPU work (server_state in 1/2/4):
+  - wd_timing_scale_gpu_gpu: 5 queued rows
+  - wd_curvature_trigger_gpu_gpu: 4 queued rows
+- Current queued GPU hosts observed: at least 3 hosts (from experiment-host aggregation).
+- GPU host/result footprint observed in result table (all states): 10 hosts, 45 rows total (28 curvature-trigger rows, 17 timing-scale rows).
+
+NEW EXPERIMENT DESIGN + NOVELTY-CHECK DOCUMENTATION
+- Newly added/used mechanism-interaction lines in this cycle:
+  - wd_batchnoise_interaction.py (newly authored in Part 2 run)
+  - wd_labelsmooth_interaction.py (interaction line used for deployment)
+  - wd_curvature_trigger_gpu.py (mechanism line used for GPU deployment)
+  - wd_timing_scale_gpu.py (GPU timing-scale comparison line used for deployment)
+- Novelty-check evidence logged in run output:
+  - Search queries executed included:
+    - "weight decay batch size interaction neural networks"
+    - "arxiv weight decay batch size interaction deep learning"
+    - "site:arxiv.org weight decay label smoothing interaction"
+    - "site:arxiv.org batch size weight decay generalization"
+    - "arxiv 1711.05101 decoupled weight decay regularization"
+  - Positioning used in Part 2: mechanism/interaction framing (not just additional seed replication of already-settled WD timing effects).
+
+KEY SCIENTIFIC FINDINGS
+1. Latest validated batch remains dominated by delay-dynamics families (resettrap, sshdephase, interdepflow, moranmig), and parseable experiment_result payload quality remains high where files are present.
+2. No active 72h elapsed-time crash cluster exceeded the broad-abort threshold, indicating stable current experiment mix across CPU and GPU lanes.
+3. GPU WD-mechanism lines are actively producing queue/result activity (curvature-trigger and timing-scale scripts both observed), supporting continued testing of causal timing hypotheses beyond previously established inverse critical-period effects.
+4. Part 2 expanded into interaction/mechanism-focused WD experiments (batch-noise and label-smoothing interaction framing), which is aligned with novelty requirements and avoids simple over-seeding of already-confirmed lines.
