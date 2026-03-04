@@ -1,0 +1,45 @@
+Axiom BOINC Session Results Log
+Timestamp: March 4, 2026 12:55 CET
+Host: io
+
+SESSION SUMMARY
+- Completed validation/credit review and deployment/design cycle for active CPU/GPU experiment families.
+- Reviewed recent completed-success results and refreshed website counters.
+- Deployed additional CPU/GPU workunits and introduced three new experimental families after novelty checks.
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed 136 uncredited completed-success results (`exp_%` families) in this validation pass.
+- Credit awarded this session: 0 results, 0 total credit added.
+- Reason for zero credit: trusted sanitized payloads were missing for the reviewed result names at validation time, so quality scoring could not be computed.
+- Counter snapshot after refresh: `credited_count=1324`, `total_results_count=1545`.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host stuck-task cleanup (>12h running and >6h host silence): 0 aborts.
+- Hard-ceiling cleanup (>48h running): 0 aborts.
+- Broken-family abort action: none required this pass because known crash-prone families had no active unsent/in-progress backlog.
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+1. `xy_delay_thermostat_reentrance`
+- Domain: 2D XY lattice control with delayed adaptive thermostat feedback.
+- Novelty checks found related feedback-spin work (mainly Ising/discrete-spin), but no direct prior match for this XY delayed-thermostat re-entrant delay-window test.
+- Hypothesis: intermediate delay improves ordering versus both zero-delay and high-delay regimes.
+
+2. `cahnhilliard_delay_feedback_window`
+- Domain: conserved phase separation with delayed adaptive mobility feedback.
+- Novelty checks found delayed/control phase-field literature, but no clear direct test of a re-entrant delay-window advantage for adaptive domain-size tracking.
+- Hypothesis: medium feedback delay can improve tracking-error/cost tradeoff versus very short or very long delay.
+
+3. `interdep_flow_memory_shedding_tradeoff`
+- Domain: interdependent-network cascade resilience with memory-windowed recovery and forecast-biased shedding.
+- Novelty checks found prior interdependent cascade, non-Markovian recovery, and adaptive shedding studies, but no clear direct match for the combined memory-window + forecast-biased shedding re-entrant benefit test.
+- Hypothesis: intermediate recovery-memory windows outperform short/long windows under coupled cascade mitigation.
+
+KEY SCIENTIFIC FINDINGS
+1. No new 30+ seed cross-validated result reached promotion threshold in this session; confirmed-findings list remains unchanged.
+2. Scientific value scoring for currently reviewed completed-success rows remains blocked by sanitized-result lag (missing trusted `_safe` matches at validation time).
+3. Active delay-ecology/PDE/network experiment families continue returning completed results, preserving throughput while the pipeline waits for sanitized visibility to unlock credit-quality evaluation.
+4. Outcome diagnostics remain dominated by outcome=6 cleanup/no-reply patterns rather than an active multi-host crash signature requiring broad abort intervention.
+
+NOTES
+- This log intentionally summarizes by experiment family/type and does not store cumulative result-ID lists.
+- Database fields (`result.granted_credit`) remain the source of truth for credited status.
