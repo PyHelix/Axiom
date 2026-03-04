@@ -1,0 +1,74 @@
+AXIOM BOINC SESSION LOG
+Session timestamp: 2026-03-04 15:01 (America/Denver)
+Scope: Part 1 validation/credit + Part 2 research/deployment summary
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed and credited 22 completed success results in this session pass (Part 1 validation log: validate_2026-03-04_1440.txt).
+- Payload quality audit: 22/22 parseable JSON payloads with top-level experiment_result objects.
+- Elapsed-time profile for credited batch: min 633.865s, median 849.624s, max 888.814s.
+- Total credit awarded: 436 (session safety cap 10,000 respected).
+- Per-user incremental credit posted:
+  - kotenok2000: +180
+  - makracz: +80
+  - WTBroughton: +60
+  - Armin Gips: +40
+  - PyHelix: +20
+  - vanos0512: +20
+  - _Scandinavian_: +20
+  - [DPC] hansR: +16
+- Counter updates from Part 1:
+  - credited_count.txt: 1720
+  - total_results_count.txt: 1997
+  - Remaining uncredited completed successes (elapsed_time > 0): 0
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host stuck-task cleanup (>12h running and >6h no host contact): 0 aborted.
+- Hard runtime ceiling cleanup (>48h running): 0 aborted.
+- 72h crash-pattern screen (CPU/GPU separated): no broken experiment required broad unsent/in-progress abort.
+- Part 2 retirement sweep re-check: over-completed families had unsent=0 at action time; ABORT_TOTAL=0.
+
+PART 2: DEPLOYMENT SUMMARY (RESEARCH & QUEUE FILL)
+CPU deployment
+- CPU queue-fill pass completed with host-targeted work creation.
+- CPU hosts evaluated for fill: 81
+- Hosts skipped for low RAM (<6GB): 2
+- CPU workunits created: 2937
+- CPU scripts used during this deployment pass:
+  - wd_batchnoise_interaction.py (new this session)
+  - wd_labelsmooth_interaction.py
+- Targeting mode: host-specific naming/assignment (per-host 3x CPU queue target logic).
+
+GPU deployment checkpoint
+- GPU deployment was initiated in Part 2 with GPU-only scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Post-run checkpoint query confirms active deployments for these scripts:
+  - GPU hosts receiving these deployments: 9
+  - GPU workunits/results observed for these two scripts: 43 total
+    - wd_curvature_trigger_gpu: 27
+    - wd_timing_scale_gpu: 16
+- GPU hosts observed in assignment rows:
+  - Pyhelix (host 1)
+  - dbgrensenh27 (host 9)
+  - DESKTOP-P57624Q (host 29)
+  - achernar (host 159)
+  - Raimund-PC (host 299)
+  - DESKTOP-ELBSBOI (host 341)
+  - sirius (host 347)
+  - Thing0L_4000 (host 353)
+  - DESKTOP-DUVULOS (host 355)
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- New experiment script added and syntax-checked:
+  - wd_batchnoise_interaction.py
+  - py_compile check returned OK before deployment.
+- Novelty/relevance review documented in Part 2 run log via targeted literature/web checks (including arXiv-focused searches) around:
+  - weight decay x batch-size interaction
+  - scheduled/adaptive weight decay literature
+- Novel angle retained for deployment: explicit interaction test of late weight decay benefit under high-noise (small batch) vs low-noise (large batch) training, rather than a main-effect-only replication.
+
+KEY SCIENTIFIC FINDINGS
+1. Validation quality remained strong: all 22 newly credited results were parseable experiment_result payloads, supporting continued data-integrity confidence for active families.
+2. Credited runtime behavior remained stable (roughly 10.6 to 14.8 minutes) with no abrupt zero-runtime artifacts in this credited success pass.
+3. No new CPU or GPU multi-host nonzero-elapsed crash cluster was detected in the review window, so no emergency broad abort was justified.
+4. Part 2 expanded mechanistic WD testing with a newly introduced batch-noise interaction line and continued GPU mechanism-focused lines (curvature-trigger and timing-scale), improving coverage of causal hypotheses beyond prior ICP confirmation.

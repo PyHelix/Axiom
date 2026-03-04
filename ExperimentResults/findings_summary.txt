@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_1502)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1440)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -38,6 +38,18 @@ VALIDATION SESSION UPDATE (March 04, 2026, 15:02, Part 1)
 - Broken-experiment screening (recent 72h nonzero-elapsed failures, CPU+GPU): no candidate required broad unsent/in-progress abort.
 - Website counters updated: credited_count=1698; total_results_count=1979.
 - Cutoff snapshot: uncredited completed success rows=4 (live arrivals); uncredited completed failures with nonzero elapsed=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 14:40, Part 1)
+- Reviewed/credited completed rows this session: 22 success rows (ID span 1662470-1687628).
+- Payload audit for credited rows: 22/22 valid `experiment_result` JSON payloads (upload filename resolution via `${result_name}_r*`).
+- Credit posted this session: 22 rows, 436 total credit (under 10,000 cap).
+- Credit distribution (session totals): kotenok2000 180; makracz 80; WTBroughton 60; Armin Gips 40; PyHelix 20; vanos0512 20; _Scandinavian_ 20; [DPC] hansR 16.
+- Success elapsed profile (credited batch): min=633.87s, median=849.62s, max=888.81s.
+- Dominant credited families: moranmig (6), sshdephase (5), lbmroughdelay_gpu (3), vicsekdelay_gpu (2), grayscott_delay_pulse_feedback (2), plus metapop/seasonal/kuramoto singletons.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (recent 72h, nonzero-elapsed failures, CPU+GPU): no candidate required broad unsent/in-progress abort.
+- Website counters updated: credited_count=1720; total_results_count=1997.
+- Cutoff snapshot: uncredited completed success rows with elapsed_time>0 = 0.
 
 RELIABILITY NOTES
 - Completed non-success backlog remains dominated by zero-runtime rows; nonzero-elapsed uncredited failures were zero at cutoff.
