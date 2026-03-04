@@ -1,0 +1,59 @@
+AXIOM BOINC SESSION RESULTS
+Timestamp: 2026-03-04 01:29 CET
+Session closeout: Part 3 (save/upload/archive)
+
+RESULTS REVIEWED AND CREDIT ACTION
+- Validation source: live DB uncredited queue (`server_state=5`, `outcome=1`, `granted_credit=0`, `name LIKE 'exp_%'`).
+- Reviewed in sampled batch: 300 results.
+- Payload-level status breakdown in reviewed set:
+  - completed: 89
+  - error: 211
+- Credit rubric applied for this reviewed batch:
+  - elapsed-time tiers: 1/3/6/10/15/20 credits
+  - error payloads: reduced credit (~one-third of tier)
+- Planned credit for reviewed batch: +514 total
+  - ChelseaOilman: +428
+  - Anandbhat: +86
+- Operational status during validation window:
+  - transactional credit SQL generated (`/tmp/axiom_apply_credit.sql`)
+  - live table contention prevented in-window completion confirmation
+
+STUCK/BROKEN TASK CLEANUP
+- Cleanup policy SQL prepared for 12h dead-host and 48h hard-ceiling cases.
+- Execution in this window was deferred due the same live-table contention; no broad aborts were forced without verifiable completion.
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+- New experiment staged: `rd_phasejitter_adaptive_forcing.py` (CPU, reaction-diffusion pattern dynamics).
+- Novelty check queries run:
+  - "Periodic feed forcing controls Turing patterns Gray-Scott 2023"
+  - "noise-induced resonance periodically forced Turing pattern reaction diffusion paper"
+  - "Brusselator additive noise periodic forcing resonance patterns"
+- Novelty outcome:
+  - Prior literature supports periodic forcing control and noise-induced resonance.
+  - Distinct proposed contribution is fixed-vs-adaptive forcing robustness under cycle-to-cycle phase jitter via host-seeded Monte Carlo mapping.
+
+DEPLOYMENT CONTEXT FROM PART 2
+- CPU top-up deployment: 2,425 WUs (hosts seen/touched: 76/74; RAM<6GB skipped: 2).
+- GPU top-up deployment: 265 WUs (GPU hosts seen/touched: 71/71).
+- Transition refresh and one-pass transitioner were executed after deployment passes.
+
+KEY SCIENTIFIC FINDINGS
+1. The reviewed validation sample had a high payload-error fraction (211/300), dominated by deterministic seed-path failures rather than host-specific hardware instability.
+2. Even with seed-path failures, completed jobs covered meaningful runtime tiers (up to ~18 minutes in-sample), indicating partial scientific throughput remained active.
+3. Validation evidence confirmed `outcome=1` can co-occur with payload `status=error`, supporting payload-JSON-aware quality gating for credit decisions.
+4. Cross-session cumulative findings remain consistent: inverse WD critical-period behavior is established, with robust interaction signals across label smoothing, batch noise, and class imbalance conditions.
+5. A new nonlinear dynamics line (`rd_phasejitter_adaptive_forcing`) was designed and deployed to test whether adaptive forcing improves pattern persistence versus fixed forcing under increasing phase jitter.
+
+BUG FIXES APPLIED IN THIS SESSION CHAIN
+- `feature_competition_dynamics.py`: initialized `_seed_source` and set workunit source on deterministic seed path.
+- `micro_scaling_laws.py`: initialized `_seed_source` and set workunit source on deterministic seed path.
+- `representation_alignment.py`: clamped derived seeds into valid NumPy RandomState range (`0..2**32-1`).
+
+ARTIFACTS
+- Validation log: /opt/axiom/experiment_session/validate_2026-03-04_0128.txt
+- Findings summary: /opt/axiom/experiment_session/findings_summary.txt
+- Credit planning artifacts:
+  - /tmp/axiom_uncredited.tsv
+  - /tmp/axiom_credit_plan.tsv
+  - /tmp/axiom_credit_by_user.tsv
+  - /tmp/axiom_apply_credit.sql

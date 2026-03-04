@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session s0304_part1_validate_d)
+Last updated: March 4, 2026 (session s0304_part2_deploy_d)
 ==========================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -20,68 +20,50 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 
 CORE SCIENTIFIC STATUS
 - Inverse critical-period behavior for WD timing remains established.
-- Priority remains mechanism/interaction tests plus non-ML cross-disciplinary experiments.
+- Priority: mechanism/interaction tests plus non-ML cross-disciplinary lines.
 
-RETIREMENT CHECK (MANDATORY, THIS SESSION)
-- Over-seeded scan rerun from live DB.
-- Active over-completed lines still present with running tasks but unsent=0 at check time:
-  svdrank (2005 complete), wdextwidth (1444), percolation (1294), wddepth (1291),
-  wdtasksweep (1119), wdoptim (1070), wdlr (1063), wdwidthtrans (943), wdwindow (868), repcrystal (368).
-- No abort UPDATE was required because unsent backlog was zero.
+RETIREMENT CHECK (THIS SESSION)
+- Over-seeded scan rerun: svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdoptim,
+  wdlr, wdwidthtrans, wdwindow, repcrystal still over-completed.
+- Unsent backlog was 0 at check time; no abort UPDATE action required.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass: 2,074 WUs created (hosts seen: 71, touched: 69; RAM<6GB skipped).
-- CPU new-experiment injection: 159 WUs created for `metapop_allee_climate_dispersal`.
-- CPU total created this session: 2,233 WUs.
-- GPU top-up pass: 263 WUs created (hosts seen/touched: 70/70).
+- CPU top-up pass: 2,425 WUs created (hosts seen/touched: 76/74; RAM<6GB skipped: 2).
+- GPU top-up pass: 265 WUs created (GPU hosts seen/touched: 71/71).
+- New experiment seeding: rd_phasejitter_adaptive_forcing staged to 30 target hosts (r1 seeds).
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 70.
-- GPU workunits deployed: 263.
+- GPU hosts with idle capacity found: 71.
+- GPU workunits deployed: 265.
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: metapop_allee_climate_dispersal.py (CPU, ecology)
-- Query: "allee effect climate change dispersal metapopulation persistence"
-- Query: "long-distance dispersal climate tracking metapopulation"
-- Query: "stochastic perturbations Allee effect metapopulation"
-- Query: "intermediate dispersal maximizes persistence Allee"
-- Found: prior work covers pieces separately (Allee + climate stress, stochastic extinction,
-  long-distance dispersal, connectivity), but no clear direct test of the specific interaction:
-  climate-drifted habitat + Allee threshold + mixed local/long-range dispersal with host-seeded
-  replicated Monte Carlo to test whether intermediate long-range fraction is optimal.
-- Novel angle: explicit interaction-mechanism test of rescue benefit vs synchrony-collapse risk
-  across long-range dispersal fractions under moving climate suitability.
+1) New experiment: rd_phasejitter_adaptive_forcing.py (CPU, nonlinear chemistry / pattern dynamics)
+- Query: "Periodic feed forcing controls Turing patterns Gray-Scott 2023"
+- Query: "noise-induced resonance periodically forced Turing pattern reaction diffusion paper"
+- Query: "Brusselator additive noise periodic forcing resonance patterns"
+- Found: prior work shows periodic forcing control and noise-induced resonance in reaction-diffusion systems,
+  but does not clearly map fixed-vs-adaptive forcing robustness under cycle-to-cycle phase jitter.
+- Novel angle: host-seeded Monte Carlo map of phase-jitter robustness in Gray-Scott dynamics,
+  directly testing whether adaptive forcing preserves pattern persistence better than fixed forcing.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) metapop_allee_climate_dispersal.py
-- CPU numpy-only script, run-duration compliant (loops independent trials until run_duration-60s).
+1) rd_phasejitter_adaptive_forcing.py
+- CPU numpy-only, run-duration compliant (independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Tests long-range dispersal fractions {0.00, 0.05, 0.15, 0.35}.
-- Primary outputs: persistence_fraction, final_occupancy, best_long_range_fraction,
-  and flag `best_is_intermediate`.
+- Scenarios: fixed vs adaptive forcing across jitter {0.00, 0.02, 0.05, 0.10}.
+- Outputs: pattern persistence/entropy summaries and adaptive-minus-fixed persistence effect.
 
 OPERATIONAL NOTES
-- Transition refresh + one-pass transitioner executed after CPU, GPU, and new-experiment phases.
-- Queue-gap SQL based on `result.hostid` can lag immediately after creation.
+- Transition refresh + one-pass transitioner executed after CPU and GPU deployment passes.
+- Queue-gap SQL based on result.hostid can lag immediately after create_work bursts.
 
-VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_d)
-- Reviewed and credited 941 completed uncredited `exp_%` results (live DB-driven batch).
-- Credit awarded incrementally (add-only): +10,000 total credit across 7 users; per-user awarded this session:
-  ChelseaOilman +6,667, Amapola +1,821, Steve Dodd +822, kotenok2000 +334, WTBroughton +209,
-  Armin Gips +108, [DPC] hansR +39.
-- Credit cap respected (10,000 max/session).
-- Stuck/dead-host cleanup executed:
-  - 12h running + 6h no contact aborts: 0
-  - Hard 48h aborts: 0
-
-CROSS-VALIDATION STATUS (THIS REVIEWED BATCH)
-- wd_labelsmooth_interaction: +116 host-runs credited.
-- Interaction-present prediction true in 88.8%; attenuation prediction true in 19.8%.
-- Mean late_wd_gain: +0.2963; mean late_wd_gain_with_label_smoothing: +0.3455.
-- Mean additivity residual: +0.0492 (interaction remains positive; attenuation support still weak).
-
-OPEN QUESTIONS (UPDATED)
-- `seed_source: random_fallback` still appears in a subset of payloads; verify host-seeded determinism path.
-- No completed `wd_mixup_interaction` payloads were credited in this capped batch; re-check after next validation pass.
+VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_e)
+- Reviewed 300 uncredited `exp_%` uploads (sampled from live queue) with payload-level checks.
+- Payload snapshot in reviewed set: 89 `status=completed`, 211 `status=error`.
+- Recurrent error signatures:
+  - `NameError: name '_seed_source' is not defined` in `feature_competition_dynamics.py` and `micro_scaling_laws.py`.
+  - `ValueError: Seed must be between 0 and 2**32 - 1` in `representation_alignment.py`.
+- Script fixes applied in `/opt/axiom_boinc/html/user/experiments/` for both seed-path failures.
+- Open operational question: some rows have `result.outcome=1` while payload JSON reports `status=error`; credit/validation should key on payload status in addition to BOINC outcome.
