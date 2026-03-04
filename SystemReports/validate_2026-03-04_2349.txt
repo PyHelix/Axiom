@@ -1,0 +1,39 @@
+Axiom BOINC Validation & Credit Log
+Timestamp: 2026-03-04 23:49:12 CET
+Session type: Step 2 validation/credit/cleanup
+
+1) Results reviewed this session
+- Query: completed successful exp_% results with granted_credit=0
+- Result: none found (0 rows)
+- Reviewed IDs: none (no uncredited successful results available)
+
+2) Credit awarded
+- Credit policy applied: quality-based (sanitized result review gate)
+- Because there were no uncredited successful results, no credit was granted.
+- Session credit awarded total: 0 (cap 10,000 respected)
+- Per-user credit increments this session: none
+- Per-host credit increments this session: none
+
+3) Failure/health checks
+- Completed outcome distribution for exp_% (server_state=5):
+  - outcome=1 (success): 2030
+  - outcome=5 (aborted): 4390
+  - outcome=6 (no reply/timeout cleanup): 6
+- Stuck-task cleanup checks:
+  - >12h running on hosts silent >6h: 0 candidates, 0 updated
+  - >48h hard ceiling: 0 candidates, 0 updated
+- Crash-pattern review:
+  - No stderr traceback-based crash signature found in sampled failed records.
+  - High fail_pct families are dominated by abort outcomes (5), not runtime crash exits.
+  - No experiment-specific emergency abort action taken in this session.
+
+4) Script bugs fixed
+- None in this session (no actionable traceback or reproducible script crash identified).
+
+5) Counter updates
+- credited_count.txt incremented by N=0 (no change in value)
+- total_results_count.txt refreshed using max(existing, current completed count)
+
+6) Notes
+- Raw upload files were not accessed.
+- Validation step did not write anything to /opt/axiom_boinc/html/user/experiment_results/.
