@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_0840)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_0853)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -12,20 +12,20 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 - Test whether WD onset is curvature-triggered versus fixed-onset.
 
-VALIDATION SESSION UPDATE (March 04, 2026, 08:40, Part 1)
-- Reviewed completed success rows: 116 (payload: experiment_result=105, missing_upload_artifact=11).
-- Credit posted this session: 101 rows, 1001 total credit (under 10,000 cap).
-- Credited mix from reviewed batch: CPU(appid=1)=101 rows, GPU(appid=2)=15 rows reviewed.
-- Elapsed-time profile (reviewed rows): min=50.66s, median=844.90s, max=1011.92s.
-- Dominant reviewed families: pitinh (6), alleeclim (6), battres (6), chemcross (6), nmtrap (6), fishcull (6).
+VALIDATION SESSION UPDATE (March 04, 2026, 08:53, Part 1)
+- Reviewed completed success rows: 210 (payload: experiment_result=210).
+- Credit posted this session: 210 rows, 2469 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=186 rows, GPU(appid=2)=24 rows.
+- Elapsed-time profile (reviewed rows): min=21.07s, median=844.03s, max=1156.25s.
+- Dominant reviewed families: fputadamp (11), kuraisle (11), metacorr (11), antibswitch (10), lor96dar (8).
 - Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters updated: credited_count=4972; total_results_count=4896.
-- Cutoff snapshot after this pass: uncredited completed success rows=109; uncredited completed failure rows=0.
+- Website counters updated: credited_count=5182; total_results_count=4896.
+- Cutoff snapshot after this pass: uncredited completed success rows=62; uncredited completed failure rows=0.
 
-RELIABILITY NOTES (March 04, 2026, 08:40)
-- No cross-host 100%-failure active prefix was found in the active queue; no broad aborts were applied.
-- Historical high-failure families with 0 active rows remain effectively retired (e.g., rw_reset_fatigue_nonrenewal, oscillatory_roughchannel_lbm_resonance, adaptive_voter_delay_rewiring).
-- GPU families still show elevated but non-total recent failure rates (wd_anisotropy_trigger_gpu_gpu and gpu_matmul_stress_gpu near 50%); continue host-level monitoring.
+RELIABILITY NOTES (March 04, 2026, 08:53)
+- No active broken experiment prefix with high multi-host crash evidence was detected; no broad aborts were applied.
+- Completed failed-row query returned none in this pass.
+- BOINC upload filenames include runtime suffixes (`_r...`); validation matching now accounts for that pattern.
 
 OPEN QUESTIONS
 1) Are remaining intermittent GPU failures primarily host/driver instability versus experiment-specific CUDA defects?
