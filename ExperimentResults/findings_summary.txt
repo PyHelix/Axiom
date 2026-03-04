@@ -1,98 +1,39 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part1_validate_i)
+Last updated: March 3, 2026 (session s0303_part1_validate_m)
 =====================================================
 
 CORE SCIENTIFIC STATUS
-- Inverse critical period (ICP) for weight decay timing remains strongly supported by prior replicated WD-family lines.
-- WD-family baseline lines are still over-seeded; keep retired unless testing a clearly new mechanism.
+- Inverse critical period (ICP) for weight decay timing remains supported by prior replicated WD-family lines.
+- No new reversal signal appeared in this validation pass.
+- WD-family baseline lines remain over-seeded; continue prioritizing mechanism-isolating variants.
 
 ACTIVE SCIENCE LINES TO PRIORITIZE
 1) wd_labelsmooth_interaction.py
-- Goal: test whether label smoothing attenuates/amplifies late-WD ICP effects.
-
+- Test whether label smoothing attenuates/amplifies late-WD ICP effects.
 2) wd_curvature_trigger_gpu.py
-- Goal: test whether WD onset is gated by curvature stabilization vs fixed late onset.
+- Test whether WD onset is gated by curvature stabilization versus fixed late onset.
 
 OPERATIONAL STATUS
-- GPU-aware and CPU experiment coverage remains broad; untargeted queueing is still the reliable fallback when host targeting partially materializes.
-- Previously flagged broken prefixes (symmetry_breaking_dynamics, loss_landscape_curvature, mode_connectivity_v2, random_label_memorization) had no active unsent/in-progress rows in this validation pass.
+- This pass again showed heavy backlog credit maintenance pressure.
+- No active unsent/in-progress `exp_*` tasks were present at review time.
+- No stuck-task cleanup triggers fired (>12h dead-host rule or >48h hard ceiling).
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1F)
-- Credited 8,935 completed `exp_*` results for exactly 10,000 credit (session cap respected).
-- Credit mix applied: 215 successful outcomes and 8,720 failed/error outcomes (compute-time compensation retained).
-- Session credit additions were broad (47 users); top additions: ChelseaOilman +1,755; Steve Dodd +1,128; Amapola +782; makracz +755; mmonnin +626; Landjunge +613; Josemi +525.
-- Result ID span credited this pass: 1,605,284 through 1,653,657.
-- Prefixes most represented in this credited batch: spectral (2,791), repcrystal (1,345), regmech (961), rankreg (907), sam (514), rank (486).
-- Upload payload checks for candidate successful rows found missing upload JSON paths in this pass (`quality=missing` for 215 success candidates), so this session was treated primarily as compute-fairness credit maintenance.
-- No new stuck-task cleanup actions triggered: 0 aborted via dead-host >12h rule and 0 via >48h hard ceiling.
-- No additional active broken-prefix abort was applied in this pass.
-- Post-pass uncredited completed backlog: success 234; failed 71,236.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1M)
+- Credited 8,439 completed `exp_*` results for exactly 10,000 total credit (session cap reached exactly).
+- Outcome mix: 1,605 successful outcomes and 6,834 failed/error outcomes.
+- Credited ID span: 1,573,025 through 1,587,373.
+- Upload payload quality for credited batch: 8,439/8,439 missing from `/opt/axiom_boinc/upload/*/exp_*` at validation time (`quality=missing`).
+- Session credit additions were broad (46 users); top additions: ChelseaOilman +2,020; Steve Dodd +1,508; Amapola +639; mmonnin +593; Landjunge +586; makracz +534.
+- Dominant credited prefixes in this pass: catapult_phase (481), catapult (393), dbldesv2 (339), double_descent_v2 (230), critperiod (192), combinedcomp (181).
+- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
+- Website counters updated: credited_count 64,711 -> 73,150; total_results_count stayed at 54,848.
+- Post-pass uncredited backlog: success 17,552; failed 67,908.
 
 CROSS-SESSION CONSOLIDATED TAKEAWAYS
-- No scientific reversal vs established WD/ICP conclusions has appeared in recent validation passes.
-- Recent validation sessions are increasingly dominated by failure/error backlog crediting; successful-result scientific interpretation currently depends on obtaining accessible upload payloads for new success rows.
+- No scientific reversal versus established WD/ICP conclusions has appeared in recent validation passes.
+- Recent validation sessions remain dominated by missing upload payloads, so most passes are compute-fairness credit maintenance rather than payload-driven interpretation.
 
 OPEN QUESTIONS
-1) Why are many recent credited success candidates missing from `/opt/axiom_boinc/upload/*/exp_*` path checks at validation time (retention timing vs path/layout mismatch)?
-2) Should extremely old instant-fail batches continue receiving minimal credit (1-point floor), or should policy split by elapsed_time and exit_status severity bands?
-3) Which high-failure prefixes (e.g., spectral/repcrystal/regmech/rankreg cohorts) still have active seeding pressure that should be reduced upstream in deployment logic?
-
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1G)
-- Credited 2,400 completed `exp_*` results for 9,998 total credit (cap respected after corrective rollback of an initial over-cap pass).
-- Credited outcomes in final pass: 2,400 success, 0 failed/error (ID span 1,517,037 to 1,529,339).
-- Upload payload review: all currently sampled uncredited successes mapped to present JSON files with `experiment_result` payloads (583/583 in review set).
-- Failed/error sample review (first 400 oldest uncredited failures): 388 missing upload JSON paths, 12 retained `experiment_result`, 0 explicit `error` payloads.
-- Dominant credited prefixes in this pass were older `memdyn_*` and `featcomp_*` cohorts; no reversal observed relative to prior WD/ICP conclusions.
-- No stuck-task cleanup actions triggered (0 aborted by dead-host >12h rule, 0 by >48h hard ceiling).
-- No active broken-prefix abort applied: currently active high-volume lines (wd_imbalance_interaction, wd_batchnoise_interaction, wd_labelsmooth_interaction) do not show crash-rate evidence warranting blanket abort.
-- Post-pass uncredited completed backlog: success 5,682; failed 71,261.
-
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1H)
-- Credited 300 completed `exp_*` results for 504 total credit (well below 10,000 cap).
-- Outcome mix in credited batch: 204 successful outcomes and 96 failed/error outcomes (ID span 1,516,891 to 1,521,993).
-- Upload payload quality in this reviewed batch: 61 `experiment_result`, 154 `error` payloads, 85 missing files at validation time.
-- Session credit additions by user: ChelseaOilman +459; Manuel Stenschke +21; Steve Dodd +11; Coleslaw +7; rilian +6.
-- Active-prefix crash check in this pass did not show evidence requiring blanket abort of currently active WD-family prefixes.
-- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
-- Website counters updated: credited_count 36,657 -> 36,957; total_results_count set to 54,848.
-
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1I)
-- Credited 5,484 completed `exp_*` results for exactly 10,000 credit (session cap reached exactly).
-- Outcome mix in credited batch: 4,056 successful outcomes and 1,428 failed/error outcomes (ID span 1,521,994 to 1,532,431).
-- Upload payload quality check on entire credited batch: 5,484/5,484 missing from `/opt/axiom_boinc/upload/*/exp_*` at validation time (`quality=missing`), so this pass was compute-fairness credit maintenance rather than payload-driven scientific interpretation.
-- Session credit additions by user: ChelseaOilman +9,644; kotenok2000 +243; [DPC] hansR +106; amazing +4; Anandbhat +3.
-- Active-prefix crash review: current high-volume active prefixes (wd_imbalance_interaction, wd_batchnoise_interaction, wd_onset_sweep and reg_timing_universality shards) did not present a clear new blanket-abort target in this pass.
-- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
-- Website counters updated: credited_count 37,177 -> 42,661; total_results_count stayed at 54,848.
-- Post-pass uncredited completed backlog: success 34,429; failed 69,684.
-
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1J)
-- Credited 8,934 completed xp_* results for exactly 10,000 credit (session cap reached exactly).
-- Outcome mix in credited batch: 6,591 successful outcomes and 2,343 failed/error outcomes (ID span 1,532,432 to 1,542,029).
-- Upload payload quality check for credited rows: 8,934/8,934 missing from /opt/axiom_boinc/upload/*/exp_* at validation time, so this pass was compute-fairness credit maintenance rather than payload-driven scientific interpretation.
-- Session credit additions by user: ChelseaOilman +6,658; Anandbhat +1,280; Steve Dodd +781; WTBroughton +687; marmot +219; kotenok2000 +167; Coleslaw +81.
-- Active-prefix crash review: only eservoir_extended met >50% recent failure with active work (3 success / 18 failed, 1 active task); no blanket abort applied because recent queue evidence was mixed and active volume minimal.
-- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
-- Website counters updated: credited_count 43,161 -> 52,095; total_results_count stayed at 54,848.
-- Post-pass uncredited completed backlog: success 27,338; failed 67,341.
-
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1K)
-- Credited 6,985 completed `exp_*` results for exactly 10,000 credit (session cap reached exactly).
-- Outcome mix in credited batch: 4,136 successful outcomes and 2,849 failed/error outcomes (ID span 1,524,033 to 1,546,513).
-- Upload payload quality sample (first 500 in credited batch): 0 `experiment_result`, 0 `error`, 500 missing from `/opt/axiom_boinc/upload/*/exp_*` at validation time; this pass was compute-fairness credit maintenance.
-- Session credit additions by user: ChelseaOilman +6,161; Steve Dodd +493; WTBroughton +167; marmot +129; [VENETO] boboviz +104; kotenok2000 +103; Coleslaw +65; Armin Gips +65; [DPC] hansR +54.
-- Active crash-pattern review: several legacy prefixes remain >50% historical failure, but currently active queues are mixed-success and low volume per prefix; no blanket broken-prefix abort was applied in this pass.
-- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
-- Website counters updated: credited_count 52,495 -> 59,480; total_results_count stayed at 54,848.
-- Post-pass uncredited completed backlog: success 22,802; failed 64,492.
-
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1L)
-- Credited 4,331 completed `exp_*` results for exactly 10,000 total credit (session cap reached exactly).
-- Outcome mix in credited batch: 2,745 successful outcomes and 1,586 failed/error outcomes (ID span 1,546,514 to 1,573,024).
-- Upload payload quality review on planned-credit sample: success sample 500/500 missing, failed/error sample 500/500 missing from `/opt/axiom_boinc/upload/*/exp_*` at validation time; this pass was compute-fairness credit maintenance.
-- Session credit additions by user: ChelseaOilman +5,181; WTBroughton +1,906; Anandbhat +1,861; kotenok2000 +423; Steve Dodd +410; Armin Gips +112; marmot +59; Vato +21; [DPC] hansR +12; rilian +10; dthonon +5.
-- Dominant credited prefixes in this pass: combinedcomp (206), compgen (111), repalignv2 (107), featcompv2 (103), microscalev2 (94), featrank (92), neuronspec (92).
-- Active crash-pattern review: several legacy prefixes remain high-failure historically, but there are currently no active unsent/in-progress `exp_*` rows to abort.
-- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 aborted by >48h hard ceiling.
-- Website counters updated: credited_count 60,380 -> 64,711; total_results_count stayed at 54,848.
-- Post-pass uncredited completed backlog: success 19,157; failed 74,715.
+1) Why are many completed result names absent from `/opt/axiom_boinc/upload/*/exp_*` at validation time (retention timing vs path/layout mismatch)?
+2) Should minimal-credit policy for instant-fail legacy batches be further split by elapsed_time and exit_status bands?
+3) Which high-failure legacy prefixes should be reduced upstream in deployment seeding to limit recurring dead-on-arrival cohorts?

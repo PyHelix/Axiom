@@ -1,0 +1,51 @@
+AXIOM BOINC SESSION RESULTS
+Timestamp: 2026-03-03 (America/Denver)
+Session sources: validate_2026-03-03_1909.txt + run_2026-03-03_1352.log
+
+PART 1 VALIDATION AND CREDIT SUMMARY
+- Reviewed and credited completed exp_* results in ID span 1573025 through 1587373.
+- Total reviewed+credited this pass: 8439.
+- Outcome mix: success=1605, failed/error=6834.
+- Upload payload quality in this credited batch: missing=8439, experiment_result=0, error=0.
+- Credit awarded: 10000 total (session cap respected), across 46 users.
+- Top session additions: ChelseaOilman +2020, Steve Dodd +1508, Amapola +639, mmonnin +593, Landjunge +586.
+- Website counters updated: credited_count 64711 -> 73150; total_results_count remained 54848 (non-decreasing rule preserved).
+
+CLEANUP AND STUCK/BROKEN TASK ACTIONS
+- Validation cleanup: dead-host stuck-task aborts (>12h run and >6h no contact): 0.
+- Validation cleanup: hard-ceiling aborts (>48h): 0.
+- Broken-prefix blanket aborts during validation: none applied (no active unsent/in-progress exp_* at review time).
+- Part 2 retirement pass was rerun from live state: retirement candidates found but unsent backlog for listed candidates was 0, so ABORT_TOTAL=0.
+
+PART 2 DEPLOYMENT SUMMARY
+CPU deployment
+- Deployment scripts: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+- Host-targeted fill policy used in run: queue to 3x CPU per active host, skip hosts with <6 GB RAM.
+- CPU hosts considered: 81.
+- Hosts skipped for RAM floor: 2.
+- CPU workunits created: 2937.
+
+GPU deployment checkpoint
+- Intended GPU scripts in run: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- The logged GPU deployment command was interrupted before completion in run_2026-03-03_1352.log.
+- Post-run checkpoint query for this session window (since 2026-03-03 13:52) found: GPU hosts assigned=0, GPU workunits created=0.
+
+EXPERIMENT DESIGN AND NOVELTY CHECK NOTES
+- New experiment script created in this session: wd_batchnoise_interaction.py.
+- Novelty/related-work checks were documented in the run log via targeted searches, including:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Design intent of wd_batchnoise_interaction.py: test whether late weight decay gains are stronger under small-batch gradient-noise conditions than large-batch conditions.
+
+KEY SCIENTIFIC FINDINGS
+1. No new reversal signal was observed against the established inverse critical-period (ICP) weight-decay conclusions in the validated batch.
+2. The credited validation batch was dominated by missing upload payloads (8439/8439), so this pass primarily advanced fairness/credit maintenance rather than new payload-level mechanistic interpretation.
+3. Mechanism-focused experiment design progressed via wd_batchnoise_interaction.py to isolate batch-noise x late-weight-decay interaction effects, with novelty checks documented before deployment actions.
+4. Operationally, CPU queue fill succeeded at scale (2937 WUs), while GPU deployment for the same run did not complete and produced zero new GPU WUs in the tracked session window.
+
+KEY OPEN QUESTIONS
+- Root cause of repeated missing upload payloads for completed rows (retention timing, path/layout mismatch, or ingestion pipeline behavior).
+- Whether GPU deployment interruption was transient execution/tooling interruption versus scheduler-state saturation at run time.
