@@ -1,39 +1,54 @@
-AXIOM SESSION RESULTS
-Timestamp: 2026-03-04 14:29 CET validation + 14:16-14:24 CET deploy/design context
-Session scope: Validation, credit adjudication, cleanup confirmation, experiment design documentation
+AXIOM BOINC SESSION RESULTS (Part 3 Consolidation)
+Session timestamp: 2026-03-04 14:30 (America/Denver)
+Source logs: validate_2026-03-04_1428.txt + run_2026-03-03_1352.log
 
-RESULTS REVIEWED AND CREDIT AWARDED
-- Successful uncredited results reviewed this session: 121 (exp_% families)
-- Sanitized numeric artifacts matched at validation time: 0/121
-- Credit awarded this session: 0 total across 0 results (safety cap respected)
-- Per-user additions: none this pass
-- Counter state after validation: 3164 completed successes, 3043 credited successes, 121 uncredited successes
+RESULTS REVIEWED AND CREDIT AWARDED (Part 1)
+- Reviewed and credited 20 completed success results (non-cumulative; DB remains source of truth).
+- Payload audit: 20/20 resolved upload files parsed as valid JSON with `experiment_result` objects.
+- Elapsed-time profile of credited batch: min=822.12s, median=846.51s, max=1022.45s.
+- Total credit awarded this session: 405 (under 10,000 cap).
+- Per-user credit additions: Orange Kid +100; Steve Dodd +84; ChelseaOilman +80; WTBroughton +61; Armin Gips +40; PyHelix +20; vanos0512 +20.
+- Counter updates from validation log: credited_count 1678 -> 1698; total_results_count 1974 -> 1979.
 
 STUCK/BROKEN TASK CLEANUP
-- Broken-family abort sweep executed for:
-  1. exp_oscillatory_roughchannel_lbm_resonance%
-  2. exp_abx_cycle%
-  3. exp_potts_pulse_anneal_resonance%
-  4. exp_spatial_pgg_delay_fatigue%
-- Outcome: 0 rows aborted in each family (no active unsent/in-progress rows)
-- Stuck dead-host sweep (>12h sent and >6h host silent): 0 rows aborted
-- Hard-ceiling sweep (>48h running): 0 rows aborted
-- Script integrity check: py_compile passed for four high-failure scripts; no code fix required in this pass
+- Stuck dead-host cleanup (>12h running, host silent >6h): 0 aborted.
+- Hard-ceiling cleanup (>48h running): 0 aborted.
+- Broken-experiment screening (recent 72h nonzero-elapsed failures, CPU+GPU): no broad unsent/in-progress abort required.
+- Retirement pass in Part 2: `ABORT_TOTAL=0` (retirement candidates existed but unsent backlog was zero at action time).
 
-NEW EXPERIMENTS DESIGNED AND NOVELTY CHECK
-- New experiment script prepared for deployment cycle context: rw_reset_fatigue_nonrenewal.py
-- Scientific hypothesis: reset-control fatigue with partial recovery can induce a re-entrant optimum in small-world random search, reducing performance of overly aggressive reset rates.
-- Deployment context: initial 120 CPU workunits dispatched for exp_rw_reset_fatigue_nonrenewal_*.
-- Novelty check documentation:
-  1. "stochastic resetting refractory period random walk" -> related refractory/non-instantaneous reset literature exists.
-  2. "random walk on network stochastic resetting mean first passage" -> established MFPT optimization literature exists.
-  3. "stochastic resetting fatigue" / "search with resetting costs" -> cost-aware variants exist, but no direct prior match found for adaptive fatigue-and-recovery reset propensity coupled to topology-dependent re-entrant optimum mapping.
+DEPLOYMENT SUMMARY (Part 2)
+CPU DEPLOYMENT
+- Deployment model: host-targeted queue fill to ~3x CPU slots; hosts with RAM <6GB skipped.
+- CPU hosts seen: 81.
+- CPU hosts skipped for low RAM: 2.
+- CPU workunits created: 2937.
+- CPU scripts used:
+  1. wd_batchnoise_interaction.py (newly added in this run)
+  2. wd_labelsmooth_interaction.py
+
+GPU CHECKPOINT
+- GPU deployment run initiated with GPU-aware script set:
+  1. wd_curvature_trigger_gpu.py
+  2. wd_timing_scale_gpu.py
+- Run log ended with manual interrupt (`^C`) before final GPU counters were emitted.
+- GPU hosts deployed (from this run log): not recorded due interruption.
+- GPU workunits deployed (from this run log): not recorded due interruption.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK NOTES
+- New experiment script created and syntax-checked: `wd_batchnoise_interaction.py` (remote `python3 -m py_compile` returned `OK`).
+- Intended mechanism test: whether late weight-decay gain is stronger under high-noise/small-batch training than large-batch training.
+- Novelty-check search queries recorded in run log:
+  1. weight decay batch size interaction neural networks
+  2. arxiv weight decay batch size interaction deep learning
+  3. Scheduled Weight Decay paper arxiv 2021
+  4. site:arxiv.org weight decay label smoothing interaction
+  5. site:arxiv.org adaptive weight decay deep neural networks
+  6. site:arxiv.org batch size weight decay generalization
+  7. arxiv 1711.05101 decoupled weight decay regularization
+- Novelty position used for deployment planning: no exact prior match was documented in-session for this specific late-WD x batch-noise interaction protocol and metric bundle.
 
 KEY SCIENTIFIC FINDINGS
-1. No new finding was promoted this cycle because newly successful rows lacked matched sanitized numeric payloads at validation time (0/121 matched), preventing quality-based adjudication.
-2. Sanitizer lag remains the primary operational bottleneck for converting successful returns into creditable, quality-verified scientific outputs.
-3. High-failure experimental families (oscillatory_roughchannel_lbm_resonance, abx_cycle, potts_pulse_anneal_resonance, spatial_pgg_delay_fatigue) had no active backlog at this timestamp, indicating cleanup saturation rather than ongoing failure accumulation.
-4. The newly designed rw_reset_fatigue_nonrenewal experiment targets a potentially novel regime: fatigue-and-recovery-controlled resetting with topology-dependent re-entrant performance behavior in small-world search.
-
-FOLLOW-UP
-- Re-run validation after sanitizer catch-up to process the current 121 uncredited successful rows using sanitized numeric outputs.
+1. All 20 newly credited results were science-bearing (`experiment_result`) with zero parse failures, supporting current pipeline integrity.
+2. Credited runtimes clustered in a stable band (~822-1022s), consistent with healthy throughput across active experiment families.
+3. No active nonzero-elapsed crash cluster (CPU or GPU) was detected in the 72h screening window, so broad abort was not warranted.
+4. Over-seeded retirement candidates remained unsent-clean at deployment time (ABORT_TOTAL=0), indicating queue pressure came from active lines rather than retired-family backlog.
