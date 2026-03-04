@@ -1,0 +1,40 @@
+AXIOM BOINC SESSION RESULTS
+Timestamp: 2026-03-04 05:08 CET
+Session: part3_save_upload
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Validation pass reviewed 32 newly completed successful experiment results; all payloads parsed as valid experiment_result JSON (no malformed JSON).
+- Successful uncredited results at start: 32; remaining after session: 0.
+- Credit awarded this session: 940 total across 13 results (session cap 10,000).
+- Credit recipients:
+  * user_id=56 (Steve Dodd): +900
+  * user_id=124 (Time_Traveler): +40
+- Bulk review mix (counts): kuramoto_delay_noisy_control (12), grayscott_delay_pulse_feedback (3), brusselator_delay_sensor_noise (2), reg_timing_universality (2), rd_phasejitter_adaptive_forcing (2), ising_delay_adaptive_quench (2), feature_subspace_overlap (2), wd_onset_sweep (2), wd_noise_trigger_gpu_gpu (2), seasonal_metapop_vax_trigger (1), wd_clipping_interaction (1), weight_initialization_landscape (1).
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h stuck aborts: 0
+- Hard-ceiling >48h aborts: 0
+- Failure health check: recent failures dominated by unreturned/aborted outcomes; no recurrent experiment-specific crash signature detected in returned stderr JSON.
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+- New experiment added: lotka_delay_adaptive_harvest.py (CPU; ecological dynamics/control).
+- Novelty check performed with targeted literature-style query set on delayed observation/control in predator-prey fisheries.
+- Prior work on delayed harvesting and observation uncertainty exists, but no direct match identified for the exact factorial adaptive-vs-fixed harvest design with joint delay/noise sweeps and explicit delay-inversion criterion.
+- Novel contribution being tested: whether adaptive control yields higher short-delay performance but reverses (lower yield/higher collapse risk) under long-delay, noisy sensing.
+- Initial seeding and deployment:
+  * Dedicated targeted lotka seeds: 36 CPU WUs
+  * Total lotka WUs created this pass (including refill replications): 205
+  * CPU top-up: 4,021 WUs across active non-retired families
+  * GPU top-up: 324 WUs
+
+KEY SCIENTIFIC FINDINGS
+1. Kuramoto delay/noisy-control increment (+12 seeds) showed no delay-inversion flag in this batch; still provisional due to low incremental sample count.
+2. Gray-Scott delay pulse feedback (+3) and Brusselator delay sensor noise (+2) also showed no delay-inversion flags in this pass; evidence remains provisional.
+3. Regularization timing universality increment (+2) remained negative for universality in the new seeds, so no promotion to a confirmed universality finding.
+4. RD phase-jitter adaptive forcing increment (+2) did not show adaptive-over-fixed benefit under jitter in this batch; continue seeding.
+5. No finding crossed the 30+ seed consistency threshold in this session; confirmed findings list remains unchanged.
+
+DEPLOYMENT AND QUEUE STATUS SNAPSHOT
+- Retirement check executed before deployment; no unsent backlog found in over-seeded retired families and no retirement abort update required.
+- Post-deploy queue snapshot: exp_% unsent=0, running=635.
+- Transition refresh and one-pass transitioner run completed after new WU creation.

@@ -19,45 +19,73 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding was promoted this deployment pass.
-- Deployment focused on queue refill plus one new non-ML wildfire control hypothesis.
+- No new 30+ seed cross-validated finding promoted this deployment pass.
+- This pass prioritized queue refill plus one new non-ML ecology/control hypothesis.
 
 RETIREMENT CHECK (THIS SESSION)
-- Mandatory over-seeding query executed before deployment.
-- Query returned no retirement-eligible experiment with unsent backlog; no abort UPDATE applied.
+- Mandatory retirement check executed before deployment.
+- Over-seeded retired families checked: svdrank(2018), percolation(1300), wdlr(1063), wdwindow(868), regmech(292),
+  wdrebound(215), bottmech(170), repcrystal(368), intervtiming(271), wdoptim(1104).
+- Unsent backlog for all above families: 0. No abort UPDATE required this session.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass: heavy refill completed; database window check showed 5,143 new CPU `exp_%` WUs in the most recent 15-minute interval (appid=1).
-- CPU hosts touched: active hosts with RAM >=6GB from idle-capacity query; RAM<6GB hosts excluded.
-- GPU top-up pass (mandatory separate step): 335 GPU workunits created (appid=2).
-- New experiment seeding: 36 CPU workunits of `wildfire_delay_adaptive_suppression.py` targeted to high-capacity active hosts.
-- Transition refresh + one-pass transitioner executed after CPU/GPU/new-experiment deployment.
+- CPU top-up pass (appid=1): 4,021 WUs created across active RAM>=6GB hosts using non-retired experiment families.
+- CPU script mix used for refill: wildfire_delay_adaptive_suppression, lotka_delay_adaptive_harvest,
+  ising_delay_adaptive_quench, kuramoto_delay_noisy_control, sandpile_delay_adaptive_dissipation,
+  grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast, cascade_forecast_delay_shedding,
+  seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility, brusselator_delay_sensor_noise,
+  rd_phasejitter_adaptive_forcing, metapop_allee_climate_dispersal.
+- GPU top-up pass (appid=2): 324 WUs created.
+- Transition refresh + one-pass transitioner executed after CPU/GPU/new-experiment creation.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 83.
-- GPU workunits deployed: 335.
+- GPU hosts with idle capacity found: 81.
+- GPU workunits deployed: 324.
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
   wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: wildfire_delay_adaptive_suppression.py (CPU, wildfire dynamics / control)
-- Query: "wildfire spread model delayed suppression control uncertainty sensor noise paper"
-- Query: "adaptive wildfire suppression policy partial observation delayed data"
-- Query: "spatial wildfire cellular automata adaptive suppression delayed observations"
-- Found: prior work covers wildfire spread modeling, suppression optimization, and uncertainty-aware planning,
-  but no direct match was found for a factorial delayed/noisy perimeter-sensing test of fixed-vs-adaptive
-  suppression in a stochastic CA with explicit delay-inversion criterion.
-- Novel angle: tests whether adaptive suppression reduces burned area at low delay but becomes worse than fixed
-  suppression at long delay/noisy sensing, and quantifies containment-rate/control-variance tradeoffs.
+1) New experiment: lotka_delay_adaptive_harvest.py (CPU, ecological dynamics / control)
+- Query: "adaptive harvesting predator-prey with delayed information"
+- Query: "predator prey fishery harvest control rule observation error delay numerical simulation paper"
+- Query: "ecosystem-based fisheries management observation error delay control"
+- Found: prior literature studies delayed harvesting and observation uncertainty in fisheries/ecosystem control,
+  but no direct match was identified for a factorial adaptive-vs-fixed prey harvest policy test that jointly sweeps
+  observation delay and noise in a stochastic two-species trophic model with explicit delay-inversion criterion.
+- Novel angle: tests whether adaptive control provides yield gains at low delay but flips to lower yield/higher collapse
+  risk at long delay/noisy sensing, quantifying mechanism-level tradeoffs (yield, collapse rate, effort variance).
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) wildfire_delay_adaptive_suppression.py
+1) lotka_delay_adaptive_harvest.py
 - CPU numpy-only; run-duration compliant (independent trials until run_duration-60s).
 - Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x sensing_delay {0,4,10} x sensor_noise {0.00,0.08} x wind_strength {0.20,0.55}.
-- Outputs: burned fraction, containment rate/time, control variance, and adaptive-minus-fixed burned-fraction deltas.
+- Conditions: strategy {fixed, adaptive} x delay_steps {0,10,30} x obs_noise {0.00,0.08} x env_noise {0.03,0.09}.
+- Outputs: yield, mean prey/predator biomass, collapse rate/time, effort variance, adaptive-minus-fixed deltas.
+
+NEW EXPERIMENT SEEDING (THIS SESSION)
+- Dedicated initial seeding: 36 targeted CPU WUs for lotka_delay_adaptive_harvest on high-capacity active hosts.
+- Total lotka WUs currently queued/created this pass: 205 (includes refill replications).
 
 QUEUE STATUS SNAPSHOT (POST-DEPLOY)
-- Host-attributed result-table deficits still appear post-deploy (known attribution lag): CPU hosts with deficit=93 (sum 6,117), GPU hosts with deficit=81 (sum 323).
-- Live result-state snapshot: unsent exp results currently near zero while tasks move into running state after transition.
+- Live `exp_%` results: unsent=0, running=635.
+- Host-attributed deficit query still shows lagging attribution after large dispatch waves
+  (CPU deficit hosts=90 sum 5,793; GPU deficit hosts=81 sum 322).
 - No `validate_*.txt` file was present in `/opt/axiom/experiment_session/` during this run.
+
+VALIDATION SUMMARY — March 4, 2026 (session part1_validate)
+- Reviewed and validated 32 newly completed `exp_%` result files from upload storage; all parsed as `experiment_result` payloads (no malformed JSON in this batch).
+- Credit state now clean for completed successful experiment results: uncredited success queue reduced to 0.
+- Credit actually applied in this session: 13 results, total +940 credit (within 10,000 cap). Remaining candidates were already credited by concurrent activity before writeback.
+
+CROSS-VALIDATION INCREMENTS (THIS VALIDATION PASS)
+- kuramoto_delay_noisy_control: +12 seeds reviewed (all completed payloads).
+- grayscott_delay_pulse_feedback: +3 seeds; brusselator_delay_sensor_noise: +2 seeds.
+- reg_timing_universality: +2 seeds; rd_phasejitter_adaptive_forcing: +2 seeds.
+- wd_noise_trigger_gpu (GPU): +2 seeds; ising_delay_adaptive_quench: +2 seeds.
+- feature_subspace_overlap: +2 seeds; wd_onset_sweep: +2 seeds.
+- seasonal_metapop_vax_trigger: +1 seed; wd_clipping_interaction: +1 seed; weight_initialization_landscape: +1 seed.
+
+OPEN SCIENTIFIC NOTES (NOT YET PROMOTED)
+- No new finding reached 30+ seed consistency threshold in this validation pass.
+- In this batch, delay-inversion flags were not observed for kuramoto/grayscott/brusselator samples; treat as provisional due to low incremental n.
+- reg_timing_universality batch increment remained mixed (universality flag false in both newly reviewed seeds); continue seeding before any retirement decision.
