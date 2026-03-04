@@ -1,65 +1,48 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session s0304_part1_validate_c)
-==========================================================
+Last updated: March 3, 2026 (session s0303_part1_validate_f)
+=====================================================
 
 CORE SCIENTIFIC STATUS
-- Inverse critical-period behavior for weight-decay timing remains established.
-- Current strategy remains mechanism/interaction tests rather than additional seed-only replication.
+- Inverse critical period (ICP) for weight decay timing remains strongly supported by prior replicated WD-family lines.
+- WD-family baseline lines are still over-seeded; keep retired unless testing a clearly new mechanism.
 
-RETIREMENT STATUS (THIS SESSION)
-- Prior session retirement scan already showed major over-seeded lines (svdrank, percolation, wdlr,
-  wdwindow, wdoptim, wdextwidth, wddepth, wdtasksweep, wdwidthtrans, repcrystal) with no unsent backlog
-  at check time.
-- This session avoided deploying any new WUs into those retired/over-seeded families.
+ACTIVE SCIENCE LINES TO PRIORITIZE
+1) wd_labelsmooth_interaction.py
+- Goal: test whether label smoothing attenuates/amplifies late-WD ICP effects.
 
-NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: wd_mixup_interaction.py (CPU)
-- Query: "weight decay mixup interaction deep learning study"
-- Query: "arxiv mixup: Beyond Empirical Risk Minimization"
-- Query: "AdamW Decoupled Weight Decay Regularization arxiv"
-- Query: "Delayed Weight Decay Regularization arxiv"
-- Found: established work exists for mixup regularization and for decoupled/late WD schedules, but no direct
-  controlled test of late-WD timing x mixup interaction under compositional covariate shift with repeated,
-  independent host-seeded trials.
-- Novel angle: tests whether late-WD gains are mechanistically redundant with vicinal smoothing (mixup),
-  using interaction_delta = (late_wd_gain_with_mixup - late_wd_gain_no_mixup).
+2) wd_curvature_trigger_gpu.py
+- Goal: test whether WD onset is gated by curvature stabilization vs fixed late onset.
 
-NEW SCRIPT ADDED
-1) wd_mixup_interaction.py
-- CPU numpy-only, run-duration compliant (loops independent trials until run_duration-60s).
-- Host-dependent seed from experiment_name hash.
-- Conditions: baseline, late_wd, mixup_only, mixup_late_wd, always_wd_mixup.
-- Primary metric: interaction_delta between late-WD gains with/without mixup.
+OPERATIONAL STATUS
+- GPU-aware and CPU experiment coverage remains broad; untargeted queueing is still the reliable fallback when host targeting partially materializes.
+- Previously flagged broken prefixes (symmetry_breaking_dynamics, loss_landscape_curvature, mode_connectivity_v2, random_label_memorization) had no active unsent/in-progress rows in this validation pass.
 
-DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU host-targeted top-up: 2,248 WUs created (RAM<6GB hosts skipped: 2).
-- CPU new-experiment injection (wd_mixup_interaction): 240 WUs.
-- CPU total created this session: 2,488 WUs.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1F)
+- Credited 8,935 completed `exp_*` results for exactly 10,000 credit (session cap respected).
+- Credit mix applied: 215 successful outcomes and 8,720 failed/error outcomes (compute-time compensation retained).
+- Session credit additions were broad (47 users); top additions: ChelseaOilman +1,755; Steve Dodd +1,128; Amapola +782; makracz +755; mmonnin +626; Landjunge +613; Josemi +525.
+- Result ID span credited this pass: 1,605,284 through 1,653,657.
+- Prefixes most represented in this credited batch: spectral (2,791), repcrystal (1,345), regmech (961), rankreg (907), sam (514), rank (486).
+- Upload payload checks for candidate successful rows found missing upload JSON paths in this pass (`quality=missing` for 215 success candidates), so this session was treated primarily as compute-fairness credit maintenance.
+- No new stuck-task cleanup actions triggered: 0 aborted via dead-host >12h rule and 0 via >48h hard ceiling.
+- No additional active broken-prefix abort was applied in this pass.
+- Post-pass uncredited completed backlog: success 234; failed 71,236.
 
-- GPU host-targeted top-up: 269 WUs created.
+CROSS-SESSION CONSOLIDATED TAKEAWAYS
+- No scientific reversal vs established WD/ICP conclusions has appeared in recent validation passes.
+- Recent validation sessions are increasingly dominated by failure/error backlog crediting; successful-result scientific interpretation currently depends on obtaining accessible upload payloads for new success rows.
 
-GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 72.
-- GPU workunits deployed: 269.
-- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
-  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
+OPEN QUESTIONS
+1) Why are many recent credited success candidates missing from `/opt/axiom_boinc/upload/*/exp_*` path checks at validation time (retention timing vs path/layout mismatch)?
+2) Should extremely old instant-fail batches continue receiving minimal credit (1-point floor), or should policy split by elapsed_time and exit_status severity bands?
+3) Which high-failure prefixes (e.g., spectral/repcrystal/regmech/rankreg cohorts) still have active seeding pressure that should be reduced upstream in deployment logic?
 
-OPERATIONAL NOTES
-- Transition refresh + one-pass transitioner executed after CPU, GPU, and final injection phases.
-- Queue-gap SQL based on result.hostid can lag immediately after creation; instantaneous "needed" values may
-  remain positive until scheduler/transition propagation catches up.
-
-VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_c)
-- Reviewed and credited 1,060 completed uncredited `exp_%` results (credit-cap-constrained batch from 1,392 reviewed).
-- Credit awarded incrementally (add-only): +10,000 total credit across 8 users; per-user awarded this session:
-  ChelseaOilman +4,152, WTBroughton +2,214, Anandbhat +1,224, zombie67 [MM] +802, Steve Dodd +716,
-  Amapola +452, kotenok2000 +312, marmot +128.
-- Credit cap respected (10,000 max/session). Remaining uncredited completed `exp_%` results were left for next pass.
-
-CROSS-VALIDATION STATUS (THIS REVIEWED BATCH)
-- wd_labelsmooth_interaction: +89 host-runs credited; interaction-present prediction true in 86.5%;
-  attenuation prediction true in 23.6%; mean additivity residual +0.0393.
-
-OPEN QUESTIONS (UPDATED)
-- wd_labelsmooth interaction signal remains positive but attenuation support is currently weak/inconsistent in this batch.
-- Some payloads report `seed_source: random_fallback`; verify whether host-seeded determinism is being bypassed on a subset of runs.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1G)
+- Credited 2,400 completed `exp_*` results for 9,998 total credit (cap respected after corrective rollback of an initial over-cap pass).
+- Credited outcomes in final pass: 2,400 success, 0 failed/error (ID span 1,517,037 to 1,529,339).
+- Upload payload review: all currently sampled uncredited successes mapped to present JSON files with `experiment_result` payloads (583/583 in review set).
+- Failed/error sample review (first 400 oldest uncredited failures): 388 missing upload JSON paths, 12 retained `experiment_result`, 0 explicit `error` payloads.
+- Dominant credited prefixes in this pass were older `memdyn_*` and `featcomp_*` cohorts; no reversal observed relative to prior WD/ICP conclusions.
+- No stuck-task cleanup actions triggered (0 aborted by dead-host >12h rule, 0 by >48h hard ceiling).
+- No active broken-prefix abort applied: currently active high-volume lines (wd_imbalance_interaction, wd_batchnoise_interaction, wd_labelsmooth_interaction) do not show crash-rate evidence warranting blanket abort.
+- Post-pass uncredited completed backlog: success 5,682; failed 71,261.
