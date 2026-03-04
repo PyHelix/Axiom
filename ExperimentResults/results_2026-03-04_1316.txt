@@ -1,0 +1,53 @@
+AXIOM BOINC SESSION RESULTS (PART 3 SAVE)
+Session timestamp: 2026-03-04 13:16 (America/Denver)
+Source logs: validate_2026-03-04_1307.txt, run_2026-03-03_1352.log
+
+PART 1 - VALIDATION, CREDIT, AND CLEANUP SUMMARY
+- Reviewed and credited 278 completed-success experiment results (science-bearing outputs).
+- Credit awarded this session: 4,987 total (278 rows; session cap check passed).
+- Top credited contributors: ChelseaOilman (+4320), Armin Gips (+148), kotenok2000 (+110), PyHelix (+102), WTBroughton (+100), Orange Kid (+72).
+- Payload/file quality audit: 278/278 uploaded JSON files parsed successfully with experiment_result payloads.
+- Runtime profile for credited batch: min 88.87s, median 844.26s, max 984.94s.
+- Dominant reviewed experiment families: lorenz96_delay_assimilation_regime_shift, interdep_flow_memory_shedding_tradeoff, cascade_forecast_delay_shedding, seasonal_metapop_vax_trigger, tritrophic_delay.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running abort updates: 0
+- Hard >48h running abort updates: 0
+- Recent nonzero-elapsed failure clusters: none detected
+- Broad broken-experiment aborts: none executed this pass
+
+PART 2 - DEPLOYMENT / RESEARCH SUMMARY
+- Retirement checkpoint executed in Part 2: over-completed families were checked and no unsent backlog was present at execution time (ABORT_TOTAL=0).
+- CPU deployment pass completed with host-targeted queue fill.
+- CPU deployment telemetry from run log:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2
+  - CPU_WU_CREATED=2937
+  - CPU scripts selected for deployment pass: wd_batchnoise_interaction.py and wd_labelsmooth_interaction.py
+- GPU deployment command was initiated as a separate pass with scripts wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+- GPU checkpoint (live DB snapshot at save time):
+  - GPU hosts with wd_curvature_trigger_gpu / wd_timing_scale_gpu rows present: 8
+  - Total rows present for these GPU families: 34 (22 curvature, 12 timing)
+  - Currently queued (server_state in 1,2,4) for these families at save time: 3
+  - Hosts currently showing queued rows: host 159 (achernar) with 2 queued, host 299 (Raimund-PC) with 1 queued
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New CPU experiment script authored in Part 2: wd_batchnoise_interaction.py
+- Hypothesis focus: whether late weight-decay benefit is stronger under small-batch gradient-noise conditions (interaction test).
+- Novelty search documentation captured in run log included targeted literature/search queries:
+  - weight decay + batch size interaction neural networks
+  - arXiv searches on weight decay schedule/generalization/interaction
+  - decoupled weight decay reference check (arXiv:1711.05101)
+- Existing scripts reused/deployed in the same cycle: wd_labelsmooth_interaction.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+
+KEY SCIENTIFIC FINDINGS
+1. The credited batch remained fully science-bearing: all 278 reviewed outputs parsed successfully as structured experiment_result JSON payloads with no parse failures.
+2. Runtime behavior remained stable in the long-duration regime (median 844.26s), supporting continued operation of delay-focused workload families without immediate retuning.
+3. Dominant successful families in this review window continued to be delay/control/ecology lines (lorenz96_delay_assimilation_regime_shift, interdep_flow_memory_shedding_tradeoff, cascade_forecast_delay_shedding, seasonal_metapop_vax_trigger, tritrophic_delay), with no new reversal signal against prior WD timing observations.
+
+COUNTER SNAPSHOT (POST-VALIDATION)
+- credited_count.txt: 1875
+- total_results_count.txt: 1667
+- Uncredited completed success at cutoff: 70
+- Uncredited completed failure at cutoff: 2578
+- Uncredited completed failures with nonzero elapsed at cutoff: 0
