@@ -1,38 +1,80 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session s0303_part1_validate_vi)
-============================================================
+Last updated: March 4, 2026 (session part2_deploy)
+=================================================
+
+CONFIRMED FINDINGS (append-only — never remove or re-test these)
+1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
+2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
+3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
+4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
+5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
+6. SVD rank intervention: completed (1964+ results) — retired, finding established
+7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
+8. WD depth interaction: completed (1282+ results) — retired
+9. WD task sweep: completed (1077+ results) — retired
+10. WD optimizer interaction: completed (1043+ results) — retired
+11. WD learning rate interaction: completed (1037+ results) — retired
+12. WD width transition: completed (928+ results) — retired
+13. WD window: completed (841+ results) — retired
+14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No scientific reversal versus established inverse critical-period (ICP) WD timing findings.
-- Latest payload review again shows successful science outputs from active ecological-delay and WD experiments.
+- No new 30+ seed cross-validated finding promoted in this pass.
+- Focus this pass: refill CPU/GPU queues and launch one new non-ML epidemiology experiment.
 
-ACTIVE SCIENCE PRIORITIES
-1) wd_labelsmooth_interaction.py
-- Quantify whether label smoothing attenuates/amplifies late-WD ICP effects.
-2) wd_curvature_trigger_gpu.py
-- Test whether WD onset is gated by curvature stabilization versus fixed late onset.
+SESSION CONTEXT
+- Context loaded from findings_summary.txt.
+- No validate_*.txt present in /opt/axiom/experiment_session at runtime.
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1VI)
-- Uncredited completed backlog: 0 rows (`exp_*`, `server_state=5`, `granted_credit=0`, all outcomes).
-- Credit awarded this session: 0 (under 10,000 cap).
-- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Website counters after refresh: credited_count=54,438; total_results_count=55,009.
-- Credited experiment rows in DB (`granted_credit>0`): 148,467.
+RETIREMENT CHECK (MANDATORY)
+- Mandatory over-seeded retirement query executed before deployment.
+- No rows matched retirement criteria; no abort UPDATE issued.
 
-PAYLOAD VALIDATION NOTES
-- Parsed 60 newest upload payloads under `/opt/axiom_boinc/upload/*/exp_*`: 60/60 had `experiment_result`; 0 parse errors; 0 explicit `error` payloads.
-- Representative long-runtime successful payloads (~840-918s) observed for:
-  - `exp_kuramoto_delay_noisy_control*`
-  - `exp_ising_delay_adaptive_quench*`
-  - `exp_metapop_corridor_delay_forecast*`
-  - `exp_rps_delay_jitter_adaptive_mobility*`
-  - `exp_wd_noise_trigger_gpu_gpu*`
-- Recent rows with `outcome!=1` still include valid uploaded `experiment_result` payloads in multiple cases, indicating outcome-classification divergence from payload quality.
+DEPLOYMENT SUMMARY (THIS SESSION)
+- CPU top-up pass (appid=1): 5,841 WUs created for active hosts with RAM>=6GB.
+- CPU script pool used: grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast,
+  lorenz96_delay_assimilation_regime_shift, cascade_forecast_delay_shedding,
+  ising_delay_adaptive_quench, lotka_delay_adaptive_harvest, tritrophic_delay_harvest_resilience,
+  kuramoto_delay_noisy_control, rd_phasejitter_adaptive_forcing,
+  sandpile_delay_adaptive_dissipation, seasonal_metapop_vax_trigger,
+  rps_delay_jitter_adaptive_mobility, brusselator_delay_sensor_noise, toggle_delay_adaptive_control.
+- GPU top-up pass (appid=2): 324 WUs created.
+- Transition refresh + one-pass transitioner executed after CPU deployment, GPU deployment, and new seeding.
 
-RELIABILITY / ABORT DECISIONS
-- No experiment was globally aborted this session.
-- Reason: high historical/rolling failure percentages are present for some prefixes, but current active queue is dominated by other prefixes and sampled recent payloads are valid science outputs rather than clear cross-host crash traces.
+GPU CHECKPOINT (MANDATORY)
+- GPU hosts with idle capacity found: 81.
+- GPU workunits deployed: 324.
+- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
+  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
-OPEN QUESTIONS
-1) Should validator/outcome mapping be adjusted when valid `experiment_result` payload exists but row lands as `outcome!=1`?
-2) Should host-level auto-quarantine be added for repeated zero-elapsed `outcome=5` streaks to reduce noisy failure inflation?
+NOVELTY CHECK LOG (MANDATORY)
+1) New experiment: seir_delay_fatigue_control.py (CPU, epidemiology/control)
+- Query: "SEIR delayed feedback control non-pharmaceutical interventions oscillations"
+- Query: "epidemic model delayed behavioral response overshoot"
+- Query: "stochastic SEIR adaptive contact reduction observation noise"
+- Found: prior work studies delayed behavioral/policy feedback and epidemic oscillations,
+  but no clear factorial testing adaptive-vs-fixed control with reporting delay, observation noise,
+  compliance fatigue, and seasonal forcing in one distributed replication framework.
+- Novel angle: test delay-driven regime inversion where adaptive control reduces burden at low delay,
+  then increases attack rate/hospital overload under longer delays once fatigue/noise are present.
+
+NEW SCRIPT ADDED (THIS SESSION)
+1) seir_delay_fatigue_control.py
+- CPU numpy-only; run-duration compliant loop until run_duration-60s.
+- Host-dependent seed from experiment_name hash.
+- Conditions: strategy {fixed, adaptive} x delay_days {0,7,14} x obs_noise {0.00,0.15}
+  x fatigue_rate {0.000,0.010} x climate_amp {0.00,0.20}.
+- Outputs: attack_rate, peak_prevalence, overload_days, strict_days, endemic_tail,
+  and adaptive-minus-fixed deltas with delay inversion flag.
+
+NEW EXPERIMENT SEEDING (THIS SESSION)
+- Dedicated initial seeding: 48 targeted CPU WUs for seir_delay_fatigue_control
+  across 24 active high-capacity hosts.
+
+VALIDATION UPDATE (2026-03-04 part1_validate_b)
+- Credited 45 newly validated `exp_*` results (total session credit: 1,938; cap check: 1,938/10,000).
+- Recent successful ecology/control payloads (grayscott/cascade/ising/kuramoto/rd/metapop seasonal+allee/brusselator) are structurally valid and runtime-consistent (~806-955s, except one short GPU run).
+- No uncredited failed results with nonzero elapsed time found in recent result IDs (errors with donated compute this pass: 0).
+- Failure diagnostics: many `outcome=5` rows for metapop_corridor_delay_forecast/rps_delay_jitter_adaptive_mobility/wd_mixup_interaction show mixed historical payload formatting (some double-wrapped `experiment_result`) and intermittent missing upload files.
+- Current experiment script versions for those families already emit single payload objects to `experiment_result.json`; no additional script fix required this pass.
+- Cleanup checks executed: dead-host>12h aborts=0, hard >48h aborts=0.

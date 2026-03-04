@@ -1,0 +1,51 @@
+AXIOM SESSION RESULTS
+Date: 2026-03-04 06:21 CET
+Session: part1_validate + part2_deploy + part3_save
+
+SUMMARY
+- Validation and credit pass completed, followed by queue refill/deployment and novelty-checked new experiment seeding.
+- Session credit awarded: 1,938 (cap check: 1,938 / 10,000).
+- No stuck-task cleanup actions were required this pass (no rows matched abort criteria).
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Newly validated and credited results this session: 45.
+- Credited experiment families in this pass included WD-trigger GPU runs plus ecology/control workloads (grayscott, cascade, ising, kuramoto, reaction-diffusion phase jitter, seasonal metapop, brusselator, and related runs).
+- Payload quality check: successful outputs were structurally valid JSON experiment summaries with expected runtime behavior (mostly ~806-955s, with one short but valid GPU completion).
+- Credits by user in this session:
+  - PyHelix: +935
+  - kotenok2000: +958
+  - Vato: +45
+- Credit policy applied: elapsed-time tiering with payload-structure quality checks; no uncredited failed rows with donated runtime found in reviewed recent results.
+
+FAILURE/STABILITY REVIEW
+- Elevated failure signatures remained concentrated in metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility, and wd_mixup_interaction historical streams.
+- Diagnostics indicate mixed historical payload formatting (including older double-wrapped shapes) plus intermittent missing upload files.
+- Current experiment script versions already emit single-object experiment payloads; no additional script patch required in this session.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h aborts applied: 0
+- Hard >48h aborts applied: 0
+- Broken-experiment queue abort: not executed (no matching unsent/in-progress queue requiring action)
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+1. New experiment added: seir_delay_fatigue_control.py (CPU, epidemiology/control)
+- Novelty search queries executed:
+  - "SEIR delayed feedback control non-pharmaceutical interventions oscillations"
+  - "epidemic model delayed behavioral response overshoot"
+  - "stochastic SEIR adaptive contact reduction observation noise"
+- Prior-art readout: delayed behavioral/policy feedback and oscillatory epidemic dynamics are known, but no clear prior factorial benchmark combining adaptive-vs-fixed control with reporting delay, observation noise, compliance fatigue, and seasonal forcing in one distributed replication framework.
+- Novel hypothesis tested: delay-driven regime inversion where adaptive control helps at short delays but can worsen attack rate/hospital overload under longer delays with fatigue/noise.
+- Initial dedicated seeding: 48 targeted CPU WUs across high-capacity active hosts.
+
+DEPLOYMENT ACTIONS THIS SESSION
+- CPU top-up deployment: 5,841 WUs (appid=1).
+- GPU top-up deployment: 324 WUs (appid=2), after confirming idle-capacity GPU hosts.
+- Transition refresh and one-pass transitioner executed after deployment phases.
+- Retirement check query executed before deployment; no experiment met mandatory retirement criteria this pass.
+
+KEY SCIENTIFIC FINDINGS
+1. Newly credited ecology/control and WD-trigger runs were structurally valid and runtime-consistent, supporting continued reliability of the active production experiment mix.
+2. No new 30+ seed cross-validated finding reached promotion threshold in this pass; previously confirmed findings remain intact.
+3. Failure concentration in metapop_corridor_delay_forecast and rps_delay_jitter_adaptive_mobility is most consistent with historical formatting/upload-path artifacts rather than a newly introduced deterministic defect in current scripts.
+4. A new epidemiology/control experiment (seir_delay_fatigue_control) was launched with documented novelty and an explicit delay-fatigue-noise interaction hypothesis focused on possible adaptive-control regime inversion.
+
