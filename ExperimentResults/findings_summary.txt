@@ -19,82 +19,52 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this deployment pass.
-- New non-ML physics/materials script added and seeded: fiberbundle_delay_healing_entropy.py.
+- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this pass.
+- New cross-disciplinary biology script added and seeded: abx_cycle_hgt_delay_resonance.py.
 
-MANDATORY PRECHECKS
-- Backlog precheck before creation: unsent=0, in_progress=2650, active_hosts=95, cap=5000.
-- Retirement scan (>50 completed with unsent/running): no additional abort actions required in this pass.
+MANDATORY PRECHECKS AND ENFORCEMENT
+- Initial backlog check: unsent=0, in_progress=1176, active_hosts=94 (cap=5000).
+- Per-host cap enforcement executed before creation: trimmed overfilled GPU running queues on hosts 340 and 9 down to 3x GPU target.
+- Retirement scan (>50 completed with unsent/running): no additional unsent abort actions required.
 
-DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 2029 WUs created, with RAM>=6GB host filter and 3x-core targeting logic.
-- GPU top-up pass (appid=2): 321 WUs created using GPU-aware scripts only.
-- New experiment seed wave: 120 CPU WUs for fiberbundle_delay_healing_entropy.py.
+DEPLOYMENT SUMMARY (CURRENT SESSION)
+- CPU top-up pass (appid=1): 3536 WUs created, RAM>=6GB filter applied, host-targeted to fill deficits within backlog budget.
+- GPU top-up pass (appid=2): 310 WUs created using GPU-aware scripts only.
+- New script seed wave: 120 CPU WUs for abx_cycle_hgt_delay_resonance.py.
 - Transition refresh + one-pass transitioner executed after CPU, GPU, and new-script seeding.
 
-CPU SCRIPT POOL USED
-- lorenz96_delay_assimilation_regime_shift, metapop_corridor_delay_forecast, heavytail_blockclip_spectrum,
-  tritrophic_delay_harvest_resilience, cascade_forecast_delay_shedding, ising_delay_adaptive_quench,
-  grayscott_delay_pulse_feedback, kuramoto_delay_noisy_control, seasonal_metapop_vax_trigger,
-  rd_phasejitter_adaptive_forcing, sandpile_delay_adaptive_dissipation, brusselator_delay_sensor_noise,
-  lotka_delay_adaptive_harvest, fisher_delay_adaptive_culling, seir_delay_fatigue_control,
-  toggle_delay_adaptive_control, allee_delay_climate_harvest, metapop_allee_climate_dispersal,
-  rps_delay_jitter_adaptive_mobility, wildfire_delay_adaptive_suppression.
-
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 81.
-- GPU workunits deployed: 321.
+- GPU hosts found: 84
+- GPU hosts with idle capacity at scan time: 81
+- GPU workunits deployed: 310
 - GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
   grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
 NOVELTY CHECK LOG (NEW EXPERIMENT)
-1) New experiment: fiberbundle_delay_healing_entropy.py (physics/materials fracture dynamics)
-- Search query: "fiber bundle model healing delay catastrophic failure burst statistics"
-- Search query: "self-healing fiber bundle model delayed healing dynamics"
-- Search query: "equal load sharing fiber bundle avalanche entropy disorder exponent"
-- Found prior work on time-dependent FBM fracture/healing and avalanche exponents, including snow-focused
-  healing FBM and thermal/time-dependent ELS models.
-- Novel angle retained: factorial sweep of healing delay x disorder x healing strength under strict finite-repair
-  capacity, with host-level replicated estimation of both failure-load shift and burst-entropy shift (early-warning
-  informativeness), which is not directly established in the reviewed literature.
+1) New experiment: abx_cycle_hgt_delay_resonance.py (microbial evolution / epidemiological control)
+- Search query: "antibiotic cycling horizontal gene transfer multidrug resistance mathematical model periodic treatment"
+- Search query: "adaptive antibiotic cycling based on resistance surveillance delay model"
+- Search query: "non-monotonic effect of antibiotic cycling period on multidrug resistance"
+- Found: prior work on antibiotic cycling and separate work on HGT-driven resistance spread; adaptive delayed-surveillance
+  policies are discussed, but direct factorial tests of delay x HGT intensity x compliance-fatigue interaction on R12 takeover
+  timing/burden are limited.
+- Novel angle retained: quantify delay-induced resonance where delayed adaptive policy can outperform at low delay yet become
+  worse than both fixed cycling and zero-delay adaptive control when switching-fatigue and HGT are jointly high.
 
-NEW SCRIPT ADDED (THIS SESSION)
-1) fiberbundle_delay_healing_entropy.py
-- CPU numpy-only; reads run_duration, loops until run_duration-60s, host-dependent seed from experiment_name hash.
-- Conditions: Weibull disorder shape k {1.5,2.5,4.0} x delay {0,4,16,64} x healing strength {0.75,0.90}.
-- Outputs: failure_load, burst_entropy, burst_rate, tail_burst_cv, delay-vs-zero contrasts, hypothesis flags.
+NEW SCRIPT ADDED (CURRENT SESSION)
+1) abx_cycle_hgt_delay_resonance.py
+- CPU numpy-only; reads run_duration and loops trials until run_duration-60s with host-dependent hashed seed.
+- Four-compartment resistance system (S, RA, RB, RAB), with mutation + HGT + policy-dependent drug pressure.
+- Factorial conditions: policy {fixed, adaptive} x cycle period {3,7,14} x surveillance delay {0,2,6}
+  x HGT rate {0.0015,0.0040} x fatigue rate {0.02,0.10}.
+- Outputs: time-to-RAB50, resistance AUC, final/peak RAB, compliance, switch rate, and interaction hypothesis signal.
 
-VALIDATION UPDATE — March 4, 2026 (session part1_validate)
-- Reviewed and credited 66 completed uncredited exp_* results (63 experiment_result JSON, 3 error JSON).
-- Session credit granted: +2279 total (kotenok2000 +400; Steve Dodd +1879), using incremental total_credit updates only.
-- No high-failure experiment signature detected in completed results (no experiment with failed>2 at this checkpoint).
-- Cleanup checks: 0 dead-host stuck tasks (>12h run, >6h offline) and 0 tasks exceeding 48h hard ceiling.
-- Error pattern observed (3 results on host 123): transient script download timeout (WinError 10060), not a reproducible experiment-code crash.
+CURRENT QUEUE SNAPSHOT (post-deploy)
+- unsent=0, in_progress=1026, active_hosts=94.
+- No hosts currently exceed 4x running cap in CPU (appid=1) or GPU (appid=2).
 
-CROSS-VALIDATION INCREMENTS (post-credit completed success counts)
-- brusselator_delay_sensor_noise: 19
-- seasonal_metapop_vax_trigger: 18
-- cascade_forecast_delay_shedding: 17
-- ising_delay_adaptive_quench: 15
-- metapop_allee_climate_dispersal: 14
-- grayscott_delay_pulse_feedback: 14
-- rd_phasejitter_adaptive_forcing: 14
-- No experiment reached 30+ consistent seeds in this validation pass; no new CONFIRMED FINDINGS appended.
-
-OPEN QUESTIONS
-- Are occasional host-side script download timeouts (WinError 10060) correlated with a specific CDN/path or transient WAN issue on high-throughput host 123?
-
-VALIDATION UPDATE — March 4, 2026 (session part1_validate_0854)
-- Reviewed and credited 3 completed uncredited exp_* results (3 experiment_result JSON, 0 error JSON).
-- Session credit granted: +120 total (kotenok2000 +120), using incremental total_credit updates only.
-- Cleanup checks: 0 dead-host stuck tasks (>12h run, >6h offline) and 0 tasks exceeding 48h hard ceiling.
-- Failure stream remains dominated by outcome=6 no-reply events concentrated on hosts 340/339/342; no reproducible experiment-code crash signature detected.
-
-CROSS-VALIDATION INCREMENTS (post-credit completed success counts)
-- sandpile_delay_adaptive_dissipation: 12
-- toggle_delay_adaptive_control: 2
-- allee_delay_climate_harvest: 5
-- No experiment reached 30+ consistent seeds in this validation pass; no new CONFIRMED FINDINGS appended.
-
-OPEN QUESTIONS
-- What is driving concentrated no-reply outcome=6 bursts on hosts Foxtrot-3 (340), Foxtrot-2 (339), and PC-1 (342): host stability/network path vs scheduler saturation?
+VALIDATION UPDATE (2026-03-04 09:14 CET, part1_validate)
+- Credited 26 newly completed exp_* results this session (total 489 credit), with elapsed-time-tiered awards; no uncredited successful exp_* results remain.
+- Sanitized result artifacts for this batch contained completion metadata only (no numeric scientific payload), so no new quantitative scientific effect estimate extracted in this validation pass.
+- Failure cluster remains concentrated on hosts 9 and 340 (outcome=6 no-reply) across several GPU experiment families; current evidence indicates host/availability issues rather than a cross-host experiment script bug.
+- Stuck-task cleanup checks executed: 0 tasks met >12h dead-host criterion; 0 tasks met >48h hard ceiling.
