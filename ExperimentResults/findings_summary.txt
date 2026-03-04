@@ -62,3 +62,13 @@ VALIDATION SESSION UPDATE (March 04, 2026, 11:37, Part 1)
 - Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
 - Website counters updated: credited_count=1805; total_results_count=2124.
 - Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 11:45, Part 1)
+- Reviewed completed rows this session: latest 80 completed rows (success=79, non-success=1 in sample).
+- Payload audit for reviewed rows: experiment_result payloads=80/80; explicit error payloads=0; missing payloads=0.
+- Latest 30 completed failures audit: 16 had experiment_result uploads, 14 were missing upload files; all had elapsed_time=0 and outcome=5.
+- Credit posting this session: 0 rows, 0 total credit (no uncredited completed rows available).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening: oscillatory_roughchannel_lbm_resonance remains 0 success / 52 failed completed (CPU), but active unsent/in-progress queue is 0 so no broad abort action was required.
+- Website counters updated: credited_count=1805; total_results_count=2124.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
