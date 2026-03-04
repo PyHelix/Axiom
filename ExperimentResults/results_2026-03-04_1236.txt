@@ -1,0 +1,58 @@
+Axiom BOINC Session Results Log
+Session timestamp: 2026-03-04 12:36 (America/Denver)
+Source logs: validate_2026-03-04_1231.txt + run_2026-03-03_1352.log
+
+PART 1: VALIDATION, CREDIT, AND CLEANUP
+- Completed success results reviewed and credited: 251
+- Session credit awarded: 4510 (cap check passed, <= 10000)
+- Top credit increments: ChelseaOilman +3930; PyHelix +182; WTBroughton +126; kotenok2000 +110; hwt +52; Orange Kid +36; vanos0512 +36; [DPC] hansR +20; Vato +18
+- Reviewed queue window centered on result IDs 1672775 through 1684748 plus live arrivals
+- Payload quality: credited rows were science-bearing and parseable (xperiment_result JSON)
+- Stuck/dead-host cleanup (>12h running and >6h silent): 0 aborted
+- Hard-ceiling cleanup (>48h running): 0 aborted
+- Broken experiment broad-abort action in Part 1: none required
+- Website counters after Part 1: credited_count.txt=1124; total_results_count.txt=1125
+- Cutoff snapshot: uncredited completed success=1 (live-arrival residual), uncredited completed failure=0
+
+PART 2: RESEARCH, DEPLOYMENT, AND EXPERIMENT DESIGN
+Deployment actions (from run_2026-03-03_1352.log):
+- Retirement/over-seeding check ran before deployment; candidates listed but unsent abort total was 0 (ABORT_TOTAL=0)
+
+CPU deployment:
+- CPU queue fill completed with host-targeted assignment and duplicate checks
+- Host scan for CPU fill: 81 hosts seen; 2 low-RAM hosts skipped (<6 GB)
+- CPU workunits created in this run: 2937
+- CPU scripts used for deployment:
+  1) wd_batchnoise_interaction.py
+  2) wd_labelsmooth_interaction.py
+- Host targeting mode: per-host targeted naming (xp_<experiment>_h<hostid>[_rN]) to fill host queues toward 3x CPU depth
+
+GPU deployment checkpoint:
+- GPU deployment pass was started as a separate appid=2 pass
+- GPU scripts selected in run log:
+  1) wd_curvature_trigger_gpu.py
+  2) wd_timing_scale_gpu.py
+- Run log capture ended during GPU command execution; final GPU_HOSTS_FOUND / GPU_WU_CREATED lines were not emitted in this file
+- Live checkpoint snapshot now shows active GPU queue on 5 hosts (host IDs: 9, 29, 299, 353, 355) with 7 active GPU results total across the two GPU scripts
+  - wd_curvature_trigger_gpu*: 4 active results on 3 hosts
+  - wd_timing_scale_gpu*: 3 active results on 2 hosts
+
+New experiment design and novelty documentation:
+- New CPU experiment script added and syntax-checked:
+  - wd_batchnoise_interaction.py (uploaded to /opt/axiom_boinc/html/user/experiments/ and py_compile OK)
+- Novelty-check evidence documented in run log via literature/web search before deployment planning, including targeted searches on:
+  - weight decay + label smoothing interaction
+  - adaptive/scheduled weight decay
+  - batch size + weight decay generalization
+  - decoupled weight decay baseline literature
+- Research intent: test interaction effects (batch-gradient noise x late weight decay) rather than re-running already saturated WD lines
+
+KEY SCIENTIFIC FINDINGS
+1. High-throughput ecology/control/delay families continued producing stable, parseable xperiment_result outputs in this session, with no new crash cluster in the credited batch.
+2. Median elapsed time in the primary credited batch remained around 845s, indicating sustained volunteer throughput with substantive compute donation rather than trivial short-run completions.
+3. Cross-host replication expanded for seasonal_metapop_vax_trigger, cascade_forecast_delay_shedding, lorenz96_delay_assimilation_regime_shift, tritrophic_delay*, and rd_phasejitter_adaptive_forcing without introducing new deterministic failure signatures.
+4. WD-focused lines remained productive in mixed CPU/GPU usage, and Part 2 introduced/advanced interaction-focused WD hypotheses (notably batch-noise x late-WD), with explicit novelty search recorded before script deployment.
+5. No broad broken-experiment abort was required this session; cleanup controls (dead-host and >48h hard ceiling) remained active but did not trigger.
+
+Notes
+- This log intentionally excludes cumulative credited result-ID lists; the database remains the source of truth for historical credit tracking.

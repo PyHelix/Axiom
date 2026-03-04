@@ -1,44 +1,37 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 19:26 UTC; 1805 new sanitized files in last 120 min, 74 families with >=5 files scanned)
-=================================================
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1231)
+============================================================
 
-CONFIRMED FINDINGS (append-only - never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) - retired, finding established
-7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
-8. WD depth interaction: completed (1282+ results) - retired
-9. WD task sweep: completed (1077+ results) - retired
-10. WD optimizer interaction: completed (1043+ results) - retired
-11. WD learning rate interaction: completed (1037+ results) - retired
-12. WD width transition: completed (928+ results) - retired
-13. WD window: completed (841+ results) - retired
-14. Representation crystallization: completed (368+ results) - retired
-15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
-16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
-17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
-18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
-19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
+CORE SCIENTIFIC STATUS
+- No reversal observed so far for the prior inverse critical-period / WD timing signal.
+- Active focus remains WD trigger/timing families plus delay-driven ecology/control families.
+- Completed-success uploads in this session were consistently parseable and science-bearing (`experiment_result`).
 
-NEW PRELIMINARY FINDINGS (this cycle)
-- Chemostat delay crossfeeding resonance: adaptive_vs_pulse_coexistence = -0.003069 +/- 0.002968 (n=30 runs, 24 seeds, 5 hosts), 26/30 negative, Cohen's d=-1.03, host-mean span=0.00254. Direction is consistent but absolute effect is very small (<0.5 percentage points), so this remains preliminary and practically weak.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
+3) grad_subspace_wd_gpu.py
+- Cross-check WD timing behavior in gradient subspace geometry under GPU execution.
 
-REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance: 33 new runs (20 seeds, 7 hosts) remain directionally consistent: resonance_mean = +0.069729 +/- 0.002598 (33/33 positive, d=26.84, host-mean span=0.00789), adaptive_minus_fixed_mean = -0.002526 +/- 0.000886 (33/33 negative, d=-2.85, host-mean span=0.00313).
+VALIDATION SESSION UPDATE (March 04, 2026, 12:31, Part 1)
+- Reviewed/credited completed rows this session: 251 success rows (result IDs from the active queue centered in 1672775-1684748, including fresh arrivals during run).
+- Payload audit for credited rows: `experiment_result` JSON detected for credited rows; no uncredited completed failures remained at cutoff.
+- Credit posted this session: 251 rows, 4510 total credit (under 10,000 cap).
+- Credit distribution (top contributors): ChelseaOilman 3930; PyHelix 182; WTBroughton 126; kotenok2000 110; vanos0512 36; hwt 52; Orange Kid 36; [DPC] hansR 20; Vato 18.
+- Success elapsed profile (primary batch): min=33.09s, median=844.57s, max=895.98s.
+- Dominant credited families: seasonal_metapop_vax_trigger, cascade_forecast_delay_shedding, lorenz96_delay_assimilation_regime_shift, tritrophic_delay*, rd_phasejitter_adaptive_forcing.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no currently active deterministic crash family requiring broad abort this pass.
+- Website counters updated: credited_count=1124; total_results_count=1125.
+- Cutoff snapshot after this pass: uncredited completed success rows=1; uncredited completed failure rows=0.
+
+RELIABILITY NOTES
+- Current failure table returned no completed non-success rows at final snapshot.
+- Throughput is high enough that new completed rows can appear during validation; small residual queue at cutoff is expected.
 
 OPEN QUESTIONS
-- Interdependent-flow memory shedding tradeoff: current batch has n=9 runs (8 seeds, 2 hosts), mean_medium_window_gain = -0.001049 +/- 0.001156 (4/9 positive, d=-0.91, host-mean span=0.00217). N<10 and mixed signs; classify as inconclusive.
-- 71 additional families had >=5 files but unresolved schema alignment in this window; no claim is made for them until script/adapter schema is unambiguous.
-
-ANALYSIS COVERAGE NOTE
-- 1805 sanitized files detected in the last 120 minutes.
-- 74 experiment families had >=5 new files.
-- Scientific claims were restricted to families with script-resolved scalar schema and named comparison metrics.
-
-CURRENT CYCLE UPDATE
-- No new confirmed findings were added this cycle.
-- One preliminary finding remains (chemostat delay crossfeeding resonance).
-- One confirmed finding received replication support (pit delay inhibitor resonance).
+1) Should broken-experiment auto-pausing continue to require multi-host confirmation plus outcome-type filtering (to avoid no-reply false positives)?
+2) Should Part 1 run cadence increase slightly to reduce residual uncredited-success carryover during high-throughput bursts?
+3) For WD GPU studies, should we explicitly stratify credit/reporting by appid for easier CPU-vs-GPU reliability tracking?

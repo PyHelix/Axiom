@@ -1,0 +1,54 @@
+AXIOM BOINC SESSION RESULTS (PART 3 COMBINED LOG)
+Timestamp: 2026-03-04 12:03 (America/Denver)
+Source logs: validate_2026-03-04_1157.txt, run_2026-03-03_1352.log
+
+PART 1 - VALIDATION, CREDIT, CLEANUP
+- Reviewed and credited 75 completed success rows this session.
+- All 75 credited uploads were valid, parseable `experiment_result` JSON payloads.
+- Credit awarded this session: 1,746 total across 75 rows (within 10,000 cap).
+- Per-user increments: Steve Dodd +1392, vanos0512 +120, marmot +96, ChelseaOilman +56, PyHelix +40, [DPC] hansR +26, Orange Kid +16.
+- Elapsed profile for credited set: min 30.44s, median 833.83s, max 892.50s.
+- Website counters updated: credited_count.txt=1880, total_results_count.txt=2124.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running aborts: 0.
+- Hard >48h running aborts: 0.
+- Broken-experiment broad aborts in validation pass: 0.
+- Failure screen at execution time (`server_state=5 AND outcome!=1`): 0 rows.
+- Part 2 retirement pass also found over-seeded families but unsent backlog was zero, so no unsent aborts were applied (ABORT_TOTAL=0).
+
+PART 2 - DEPLOYMENT SUMMARY
+CPU deployment
+- CPU scripts used: `wd_batchnoise_interaction.py`, `wd_labelsmooth_interaction.py`.
+- CPU host targeting logic: active hosts with CPU deficit to 3x-CPU queue target; hosts with <6 GB RAM skipped.
+- Deployment metrics from run log: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2, CPU_WU_CREATED=2937.
+- Effective CPU host coverage: 79 eligible hosts (81 seen minus 2 low-RAM skips), filled by host-targeted placement and replication naming.
+
+GPU deployment checkpoint
+- GPU deployment pass was launched with scripts: `wd_curvature_trigger_gpu.py`, `wd_timing_scale_gpu.py`.
+- The run log shows the GPU deploy script start, but the execution was interrupted before completion output (`^C`), so per-host and total GPU WU creation counts were not emitted in `run_2026-03-03_1352.log`.
+- GPU checkpoint status for this session log: host/WU totals not recorded in the captured Part 2 log; scripts selected are documented above.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK RECORD
+1) `wd_batchnoise_interaction.py` (new CPU experiment script added and py_compile validated).
+- Hypothesis: late WD benefit is stronger under high-noise (small-batch) training than low-noise (large-batch).
+- Novelty/search record from Part 2 log:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "Scheduled Weight Decay paper arxiv 2021"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+  - "site:arxiv.org batch size weight decay generalization"
+  - "\"weight decay\" \"batch size\" \"schedule\" neural networks"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Novel angle documented in script description: explicit interaction-effect test (small vs large batch) rather than a WD main-effect rerun.
+
+KEY SCIENTIFIC FINDINGS
+1. The latest validated 75-result batch maintained 100% parseable `experiment_result` payloads with no JSON parse failures, indicating stable end-to-end result serialization.
+2. Runtime distribution (median 833.83s, max 892.50s) stayed in the expected long-run compute regime for substantive volunteer work rather than instant-failure artifacts.
+3. A short-runtime subset (30-38s) still produced valid payloads, supporting interpretation as legitimate completed computations in that batch.
+4. Current research direction remains focused on WD timing/trigger mechanisms and interaction tests (label-smoothing and batch-noise lines), with new batch-noise interaction script prepared and deployed in CPU queue fill.
+
+SESSION NOTES
+- No cumulative credited-ID lists are included here; database remains source of truth.
+- This combined log intentionally consolidates Part 1 validation/credit outcomes and Part 2 deployment/research actions for website and archival use.
