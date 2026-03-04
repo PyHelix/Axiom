@@ -1,0 +1,95 @@
+Axiom BOINC Session Results
+Session file: results_2026-03-04_0312
+Date: March 4, 2026
+
+SOURCES
+- Part 1 validation log: validate_2026-03-04_0309.txt
+- Part 2 run log: run_2026-03-03_1352.log
+- Findings context: findings_summary.txt
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed uncredited completed exp_* rows at credit time: 112
+- Credited this session: 112 results, 129.10 total credit (within 10,000 cap)
+- Outcome mix in credited batch:
+  - outcome=1: 31 rows (121.0 credit total)
+  - outcome=5: 73 rows (7.3 credit total)
+  - outcome=6: 8 rows (0.8 credit total)
+- Per-user credit additions:
+  - Orange Kid +84.40
+  - makracz +21.00
+  - marmot +8.00
+  - _Scandinavian_ +4.10
+  - kotenok2000 +4.10
+  - PyHelix +4.10
+  - Steve Dodd +1.40
+  - dthonon +1.00
+  - [DPC] hansR +0.70
+  - rilian +0.20
+  - Henk Haneveld +0.10
+
+STUCK/BROKEN TASK CLEANUP
+- Stuck cleanup (>12h running + dead host >6h): 0 aborted
+- Hard ceiling cleanup (>48h running): 0 aborted
+- Broken-prefix cleanup (unsent + in-progress only): 73 aborted total
+  - abx_cycle_hgt_delay_resonance 13
+  - lotka_delay_adaptive_harvest 6
+  - allee_delay_climate_harvest 5
+  - fisher_delay_adaptive_culling 5
+  - grad_subspace_wd_gpu_gpu 7
+  - heavytail_blockclip_spectrum 5
+  - kuramoto_delay_noisy_control 5
+  - sandpile_delay_adaptive_dissipation 5
+  - wildfire_delay_adaptive_suppression 5
+  - lorenz96_delay_assimilation_regime_shift 4
+  - seir_delay_fatigue_control 4
+  - toggle_delay_adaptive_control 4
+  - tritrophic_delay_harvest_resilience 4
+  - battery_pulse_delay_plating_resonance 1
+
+PART 2: DEPLOYMENT AND RESEARCH SUMMARY
+CPU deployment
+- Host-targeted CPU queue fill to ~3x CPU per host
+- CPU hosts seen: 81
+- Hosts skipped for low RAM (<6 GB): 2
+- CPU workunits created: 2937
+- CPU scripts used:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+
+GPU deployment checkpoint
+- Run log shows GPU deployment started with GPU scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Newest run log ended during GPU deployment (interrupted), so final created count was not printed there.
+- Live checkpoint after run:
+  - Active GPU-capable hosts (last 72h): 83
+  - Queued GPU exp_* results (appid=2, states 1/2/4): 46
+  - Queued with prefix exp_wd_curvature_trigger_gpu_gpu_h*: 7
+  - Queued with prefix exp_wd_timing_scale_gpu_gpu_h*: 9
+
+NEW/ACTIVE EXPERIMENT DESIGN NOTES + NOVELTY CHECK
+- New CPU experiment script deployed in Part 2:
+  - wd_batchnoise_interaction.py
+  - Hypothesis: late weight decay gain interacts with gradient-noise regime (small vs large batch), not just main-effect WD timing.
+- Existing active mechanism/interaction lines continued:
+  - wd_labelsmooth_interaction.py
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Novelty check documentation recorded in run log via literature/web searches before deployment, including:
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+  - "site:arxiv.org batch size weight decay generalization"
+  - "\"weight decay\" \"batch size\" \"schedule\" neural networks"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Novel angle emphasized: interaction and mechanism testing in BOINC-distributed, time-bounded repeated-trial format, rather than repeating settled main-effect WD confirmations.
+
+KEY SCIENTIFIC FINDINGS
+1. No new payload-derived scientific reversal was established in this session; the prior inverse critical-period/WD timing signal remains not reversed.
+2. Validation QC still found missing upload artifacts as the dominant reliability issue (sampled 31/31 missing in the reviewed pre-credit sample), constraining direct content-level interpretation.
+3. Operationally, successful compute-bearing outcomes continue to arrive (31 outcome=1 rows credited this session), indicating partial pipeline health despite artifact-loss failures.
+4. Failure-heavy prefixes were actively pruned (73 tasks aborted) to reduce wasted volunteer compute and redirect capacity to novel interaction/mechanism experiments.
+5. New and active deployment focus is now interaction/mechanism testing (batch-noise x WD timing, label smoothing x WD timing, and GPU curvature-trigger timing variants), which is the highest-value path for next interpretable findings.
+
+END STATE
+- Part 1 credit queue status after run: remaining uncredited completed exp_* rows = 0.
+- Website counters in Part 1 were updated (credited_count and total_results_count) per validation log.

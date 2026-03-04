@@ -1,44 +1,48 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (validation session 11:05 CET)
-=================================================
+Last updated: March 4, 2026 (session p1_validate_2026-03-04)
+============================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+CORE SCIENTIFIC STATUS
+- No reversal yet of the prior inverse critical-period/WD timing signal.
+- Current active science queue still includes WD interaction and ecological-delay families.
+- This session produced limited new scientific interpretation because upload payload files for reviewed rows were missing on disk.
 
-CORE STATUS
-- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this validation run.
-- Latest validation log: /opt/axiom/experiment_session/validate_2026-03-04_1105.txt
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-ACTIVE EXPERIMENT CONTEXT
-- Recently seeded CPU scripts include: pit_delay_inhibitor_resonance.py, chemostat_delay_crossfeeding_resonance.py,
-  tritrophic_delay_harvest_resilience.py, lorenz96_delay_assimilation_regime_shift.py,
-  grayscott_delay_pulse_feedback.py, fiberbundle_delay_healing_entropy.py,
-  schlogl_delay_adaptive_gain_resonance.py, potts_pulse_anneal_resonance.py.
-- Active GPU scripts include: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
-  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
+VALIDATION SESSION UPDATE (March 4, 2026, Part 1)
+- Uncredited completed rows reviewed and credited: 112 rows, 129.10 total credit (under 10,000 cap).
+- Outcome mix in credited batch: outcome=1 -> 31 rows (121.0 credit), outcome=5 -> 73 rows (7.3 credit), outcome=6 -> 8 rows (0.8 credit).
+- Session credit recipients: Orange Kid +84.4, makracz +21.0, marmot +8.0, _Scandinavian_ +4.1, kotenok2000 +4.1, PyHelix +4.1, Steve Dodd +1.4, dthonon +1.0, [DPC] hansR +0.7, rilian +0.2, Henk Haneveld +0.1.
+- Payload QC on then-uncredited rows: 31/31 sampled rows had missing upload JSON files (no parseable payload recovered).
+- Broken-prefix mitigation applied (unsent+in-progress aborted):
+  abx_cycle_hgt_delay_resonance +13
+  lotka_delay_adaptive_harvest +6
+  allee_delay_climate_harvest +5
+  fisher_delay_adaptive_culling +5
+  grad_subspace_wd_gpu_gpu +7
+  heavytail_blockclip_spectrum +5
+  kuramoto_delay_noisy_control +5
+  sandpile_delay_adaptive_dissipation +5
+  wildfire_delay_adaptive_suppression +5
+  lorenz96_delay_assimilation_regime_shift +4
+  seir_delay_fatigue_control +4
+  toggle_delay_adaptive_control +4
+  tritrophic_delay_harvest_resilience +4
+  battery_pulse_delay_plating_resonance +1
+  Total aborted: 73.
+- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
+- Website counters refreshed: credited_count=178; total_results_count=97.
+- Post-check: credited exp rows=1361; remaining uncredited completed rows=0; remaining uncredited success rows=0.
 
-VALIDATION STATUS (March 4, 2026 11:05 CET)
-- Reviewed uncredited completed-success results: 22 (IDs 1662259, 1662331, 1662334, 1662335, 1662336, 1662337, 1662340, 1662341, 1662342, 1662343, 1662346, 1662347, 1662348, 1662349, 1662352, 1662353, 1662354, 1662355, 1662358, 1662359, 1662360, 1662361).
-- Credit actions this session: 0 credited / 0 total credit added (all 22 missing corresponding sanitized `_safe.json`; latest sanitized timestamp trails this WU batch).
-- Failure-state review: completed outcomes now outcome=1:89, outcome=5:1095, outcome=6:94; failures remain dominated by outcome 5/6 with exit_status 0.
-- CPU/GPU failure split (completed non-success): appid=1 -> outcome5:1064, outcome6:88; appid=2 -> outcome5:31, outcome6:6.
-- Stuck-task cleanup rules executed: dead-host >12h cleanup aborted 0; hard >48h ceiling aborted 0.
-- Broken experiment watchlist: battery_pulse_delay_plating_resonance remains 6 failures, 0 successes, 1 in-progress task (no unsent); no mass abort applied pending fresh sanitized evidence.
-- Website counters refreshed: credited_count unchanged (+0) at 66; total_results_count advanced to 89 (non-decreasing rule).
+RELIABILITY NOTES
+- Dominant failure signature remains zero-runtime completion with missing upload artifact.
+- Multiple active prefixes reached 100% failure prior to abort, indicating persistent dispatch/runtime-path or validation-path instability for those specific prefixes.
 
 OPEN QUESTIONS
-- Outcome=5/6 dominates failures with exit_status=0; classify root cause path (manual aborts vs no-reply vs validator state) before disabling additional experiments.
-- Re-evaluate battery_pulse_delay_plating_resonance when new trusted sanitized completions arrive.
+1) Why are many completed rows missing upload payload artifacts despite terminal DB states?
+2) Should validator/outcome mapping be adjusted when server marks non-success but science payload exists (seen in prior sessions)?
+3) Should auto-pause rules trigger earlier for prefixes that hit repeated 100% fail streaks across hosts?
