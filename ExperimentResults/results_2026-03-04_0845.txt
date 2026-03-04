@@ -1,0 +1,45 @@
+AXIOM BOINC SESSION RESULTS LOG
+Timestamp: 2026-03-04 CET
+Session Scope: Part 1 validation/credit/cleanup + Part 2 deployment/experiment design + Part 3 save/upload
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed 66 completed uncredited exp_* results from this session window.
+- Payload quality split: 63 successful scientific JSON payloads and 3 error payloads.
+- Credit policy applied to all 66 results using runtime-tiered scoring for successful runs and reduced credit for error payloads.
+- Total incremental credit granted this session: +2279 (cap check passed).
+- User credit increments:
+  - kotenok2000: +400
+  - Steve Dodd: +1879
+- Host credit increments:
+  - host 29 (DESKTOP-P57624Q): +400
+  - host 123 (Dads-PC): +1879
+- Counter updates:
+  - credited_count.txt: +66 (to 209)
+  - total_results_count.txt synchronized to 209
+
+STUCK OR BROKEN TASK CLEANUP
+- Broken experiment abort scan (>50% failure signature): no aborts triggered.
+- Stuck-task cleanup (>12h running and >6h offline): 0 tasks aborted.
+- Hard-ceiling cleanup (>48h running): 0 tasks aborted.
+
+NEW EXPERIMENTS DESIGNED AND DEPLOYED (WITH NOVELTY CHECK)
+1) fiberbundle_delay_healing_entropy.py (new physics/materials experiment)
+- Novelty check completed against prior fiber-bundle fracture/healing literature and avalanche-statistics work.
+- Prior art exists for delayed/time-dependent healing FBM and avalanche exponents.
+- Retained novel contribution: factorial delay x disorder x healing-strength sweep under finite repair capacity, estimating both failure-load shift and burst-entropy shift with replicated host-level runs.
+- Seed deployment this session: 120 new CPU WUs.
+
+DEPLOYMENT SUMMARY (PART 2 CONTEXT)
+- Backlog precheck before creation: unsent=0, in_progress=2650, active_hosts=95, cap=5000.
+- CPU top-up deployment: 2029 WUs created (RAM>=6GB filter, 3x-core targeting).
+- GPU top-up deployment: 321 WUs created across GPU-aware scripts.
+- Transitioner refresh executed after deployment waves.
+
+KEY SCIENTIFIC FINDINGS
+1. This session produced 63 new successful scientific payloads, with strongest replication growth across delay-dynamics ecological/physics workloads (including brusselator, seasonal metapop, cascade shedding, ising delay, grayscott, rd-phasejitter, and metapop-allee families).
+2. Cross-validation counts increased materially in active delay-model scripts (top increments: brusselator 19, seasonal metapop 18, cascade shedding 17, ising delay 15), but no experiment reached the 30+ consistent-seed promotion threshold this pass.
+3. Three error payloads were transient host-side script-download timeouts (WinError 10060) concentrated on one host, indicating connectivity variance rather than reproducible model or script instability.
+4. The newly introduced fiberbundle_delay_healing_entropy experiment expands the project beyond prior ML-focused studies into replicated fracture/healing early-warning science, with explicit entropy-based burst diagnostics.
+
+SESSION NOTE
+- No reproducible experiment script crash signature was identified in this validation pass; no experiment script hotfix was required.

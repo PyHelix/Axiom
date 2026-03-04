@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part1_validate)
+Last updated: March 4, 2026 (session part2_deploy)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -19,61 +19,67 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 14. Representation crystallization: completed (368+ results) — retired
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding promoted in this pass.
-- New non-ML script added in random-matrix/robust-statistics domain for next validation cycles.
-
-SESSION CONTEXT
-- findings_summary.txt loaded.
-- No validate_*.txt present in /opt/axiom/experiment_session at runtime.
+- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this deployment pass.
+- New non-ML physics/materials script added and seeded: fiberbundle_delay_healing_entropy.py.
 
 MANDATORY PRECHECKS
-- Backlog check: unsent=0, in_progress=2335, active_hosts=95, max_allowed=475 (already over cap before deployment).
-- Retirement query (svdrank/percolation/wdlr/wdwindow/regmech/wdrebound/bottmech/repcrystal/intervtiming/wdoptim): no rows required abort action.
+- Backlog precheck before creation: unsent=0, in_progress=2650, active_hosts=95, cap=5000.
+- Retirement scan (>50 completed with unsent/running): no additional abort actions required in this pass.
 
 DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 120 WUs created (RAM>=6GB hosts only, 3x-core targeting logic, non-duplicate naming).
-- CPU scripts used: lorenz96_delay_assimilation_regime_shift, tritrophic_delay_harvest_resilience,
-  grayscott_delay_pulse_feedback, ising_delay_adaptive_quench, seir_delay_fatigue_control,
-  fisher_delay_adaptive_culling, cascade_forecast_delay_shedding, kuramoto_delay_noisy_control,
-  lotka_delay_adaptive_harvest, brusselator_delay_sensor_noise, toggle_delay_adaptive_control,
-  seasonal_metapop_vax_trigger, rd_phasejitter_adaptive_forcing, allee_delay_climate_harvest,
-  sandpile_delay_adaptive_dissipation, metapop_allee_climate_dispersal.
-- GPU top-up pass (appid=2): 96 WUs created using only GPU-aware scripts.
-- GPU scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
-  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
-- Transition refresh + one-pass transitioner executed after CPU and after GPU deployment.
-- Post-deploy backlog: unsent=0, in_progress=2821, active_hosts=95 (cap still exceeded; no further WUs created).
+- CPU top-up pass (appid=1): 2029 WUs created, with RAM>=6GB host filter and 3x-core targeting logic.
+- GPU top-up pass (appid=2): 321 WUs created using GPU-aware scripts only.
+- New experiment seed wave: 120 CPU WUs for fiberbundle_delay_healing_entropy.py.
+- Transition refresh + one-pass transitioner executed after CPU, GPU, and new-script seeding.
+
+CPU SCRIPT POOL USED
+- lorenz96_delay_assimilation_regime_shift, metapop_corridor_delay_forecast, heavytail_blockclip_spectrum,
+  tritrophic_delay_harvest_resilience, cascade_forecast_delay_shedding, ising_delay_adaptive_quench,
+  grayscott_delay_pulse_feedback, kuramoto_delay_noisy_control, seasonal_metapop_vax_trigger,
+  rd_phasejitter_adaptive_forcing, sandpile_delay_adaptive_dissipation, brusselator_delay_sensor_noise,
+  lotka_delay_adaptive_harvest, fisher_delay_adaptive_culling, seir_delay_fatigue_control,
+  toggle_delay_adaptive_control, allee_delay_climate_harvest, metapop_allee_climate_dispersal,
+  rps_delay_jitter_adaptive_mobility, wildfire_delay_adaptive_suppression.
 
 GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 80.
-- GPU workunits deployed: 96.
-- GPU-aware script pool verified via grep(HAS_GPU|cupy): 7 files available.
+- GPU hosts with idle capacity found: 81.
+- GPU workunits deployed: 321.
+- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
+  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
 
-NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: heavytail_blockclip_spectrum.py (CPU, random matrix theory + robust statistics)
-- Query: "random matrix heavy-tailed covariance winsorization eigenvalues"
-- Query: "entrywise truncation sample covariance heavy tails random matrix theory"
-- Query: "block correlation Wishart random matrix largest eigenvalue universality"
-- Found prior work on heavy-tailed covariance spectra, robustness/truncation, and block/spiked covariance behavior,
-  but no clear factorial simulation of heavy-tail df x block-correlation strength x winsorization threshold with
-  replicated host-level trials focused on false-spike suppression vs signal-alignment loss.
-- Novel angle: quantify non-monotonic tradeoff where clipping can reduce spurious edge inflation at low rho but
-  degrade top-eigenvector alignment when true block structure is strong (high rho).
+NOVELTY CHECK LOG (NEW EXPERIMENT)
+1) New experiment: fiberbundle_delay_healing_entropy.py (physics/materials fracture dynamics)
+- Search query: "fiber bundle model healing delay catastrophic failure burst statistics"
+- Search query: "self-healing fiber bundle model delayed healing dynamics"
+- Search query: "equal load sharing fiber bundle avalanche entropy disorder exponent"
+- Found prior work on time-dependent FBM fracture/healing and avalanche exponents, including snow-focused
+  healing FBM and thermal/time-dependent ELS models.
+- Novel angle retained: factorial sweep of healing delay x disorder x healing strength under strict finite-repair
+  capacity, with host-level replicated estimation of both failure-load shift and burst-entropy shift (early-warning
+  informativeness), which is not directly established in the reviewed literature.
 
 NEW SCRIPT ADDED (THIS SESSION)
-1) heavytail_blockclip_spectrum.py
-- CPU numpy-only; reads run_duration and loops until run_duration-60s.
-- Host-dependent seed from experiment_name hash.
-- Conditions: nu {3,5,10} x rho {0.0,0.3,0.6} x clip_k {0.0,3.5,2.5,1.8}.
-- Outputs: false_spike_excess, eigenvector alignment, clip-vs-baseline contrasts, hypothesis flags.
+1) fiberbundle_delay_healing_entropy.py
+- CPU numpy-only; reads run_duration, loops until run_duration-60s, host-dependent seed from experiment_name hash.
+- Conditions: Weibull disorder shape k {1.5,2.5,4.0} x delay {0,4,16,64} x healing strength {0.75,0.90}.
+- Outputs: failure_load, burst_entropy, burst_rate, tail_burst_cv, delay-vs-zero contrasts, hypothesis flags.
 
-VALIDATION UPDATE (March 4, 2026)
-- Credited 150 completed exp_* results (149 science payloads, 1 error payload), total session credit: 8,900.
-- No new 30+ seed cross-validated finding promoted to CONFIRMED FINDINGS in this pass.
-- reg_timing_universality received +2 new successful seeds (host 340), consistent with prior inverse critical period generality.
-- wd_timing_scale_gpu and wd_noise_trigger_gpu received new successful GPU replications (hosts 23 and 29), no contradiction with prior directionality.
-- Delay-adaptive ecology/control suite (lotka, wildfire, seasonal_metapop, rd_phasejitter, brusselator, allee, fisher, lorenz96, toggle) added broad successful replication coverage across hosts 29/87/340.
-- One tritrophic payload returned script-download error despite BOINC outcome=1; credited at reduced rate and tracked as infrastructure reliability issue.
+VALIDATION UPDATE — March 4, 2026 (session part1_validate)
+- Reviewed and credited 66 completed uncredited exp_* results (63 experiment_result JSON, 3 error JSON).
+- Session credit granted: +2279 total (kotenok2000 +400; Steve Dodd +1879), using incremental total_credit updates only.
+- No high-failure experiment signature detected in completed results (no experiment with failed>2 at this checkpoint).
+- Cleanup checks: 0 dead-host stuck tasks (>12h run, >6h offline) and 0 tasks exceeding 48h hard ceiling.
+- Error pattern observed (3 results on host 123): transient script download timeout (WinError 10060), not a reproducible experiment-code crash.
+
+CROSS-VALIDATION INCREMENTS (post-credit completed success counts)
+- brusselator_delay_sensor_noise: 19
+- seasonal_metapop_vax_trigger: 18
+- cascade_forecast_delay_shedding: 17
+- ising_delay_adaptive_quench: 15
+- metapop_allee_climate_dispersal: 14
+- grayscott_delay_pulse_feedback: 14
+- rd_phasejitter_adaptive_forcing: 14
+- No experiment reached 30+ consistent seeds in this validation pass; no new CONFIRMED FINDINGS appended.
 
 OPEN QUESTIONS
-- Intermittent volunteer-side script download failures persist (timeouts/refused/getaddrinfo in payloads); investigate distribution robustness and retry behavior in wrapper.
+- Are occasional host-side script download timeouts (WinError 10060) correlated with a specific CDN/path or transient WAN issue on high-throughput host 123?
