@@ -1,0 +1,52 @@
+Axiom BOINC Session Results Log
+Timestamp: 2026-03-04 11:27 (America/Denver)
+Source logs: validate_2026-03-04_1122.txt, run_2026-03-03_1352.log
+
+SESSION SUMMARY
+- Part 1 validation review completed with no new credit awarded this pass (0 results, 0 credit).
+- Part 1 stuck/broken cleanup executed: dead-host >12h aborts=0; hard >48h aborts=0.
+- Historical failure cluster oscillatory_roughchannel_lbm_resonance remains known-problematic (52/52 historical failures), but active unsent/in-progress queue was 0, so no abort was issued.
+- Counter refresh remained unchanged this pass: credited_count 1729 -> 1729; total_results_count 2124 -> 2124.
+
+RESULTS REVIEWED AND CREDIT STATUS (PART 1)
+- Reviewed most-recent 60 completed rows for payload quality.
+- Payload integrity: 60/60 valid JSON payloads with expected top-level structure, including experiment_result in all reviewed rows.
+- Reviewed sample mix: 59 success rows and 1 non-success row (structured payload still present on the non-success row).
+- Credit action this pass: no uncredited completed rows available; no incremental user/host credit postings were needed.
+
+STUCK/BROKEN TASK CLEANUP
+- Stuck-task SQL policy checks executed with zero affected rows.
+- Broken-family check executed for oscillatory_roughchannel_lbm_resonance; no active queue remained to clean up.
+- Retirement sweep during research/deploy pass identified over-seeded families but unsent counts were 0 at action time; ABORT_TOTAL=0.
+
+DEPLOYMENT SUMMARY (PART 2)
+CPU deployment
+- Host-targeted queue fill completed.
+- CPU hosts considered: 81.
+- Hosts skipped for RAM <6 GB: 2.
+- CPU workunits created: 2937.
+- CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+
+GPU checkpoint
+- GPU deployment pass was initiated separately (as required) using scripts wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+- The run log shows an interruption (^C) before final GPU counters were printed.
+- GPU host count in that run: not recorded in final output.
+- GPU workunits created in that run: not recorded in final output.
+
+NEW EXPERIMENTS AND NOVELTY CHECK DOCUMENTATION
+- New experiment script created and uploaded: wd_batchnoise_interaction.py.
+- Server-side validation: python3 -m py_compile returned OK after upload.
+- Literature/novelty searches logged in Part 2:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle pursued: direct interaction testing of late weight decay effects under small- vs large-batch noise regimes via explicit interaction metric (interaction_gain_difference).
+
+KEY SCIENTIFIC FINDINGS
+1. Latest validation sample preserved full payload integrity (60/60 parseable JSON with structured experiment_result), supporting a stable upload/serialization path.
+2. CPU delay/ecology families in the reviewed set continue to cluster near ~14-minute walltimes with successful completions, consistent with prior throughput stability.
+3. GPU WD families in the reviewed set (wd_curvature_trigger_gpu_gpu, grad_subspace_wd_gpu_gpu, wd_timing_scale_gpu_gpu, wd_noise_trigger_gpu_gpu) continued returning structured outputs over wide elapsed durations.
+4. oscillatory_roughchannel_lbm_resonance remains a persistent historical failure family, but no active queue remained to abort during this session.
+5. A new mechanism-focused experiment (wd_batchnoise_interaction) was introduced to test whether late-WD benefit depends on gradient-noise regime (small vs large batch), extending prior ICP/WD findings into an interaction-level hypothesis.

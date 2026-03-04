@@ -44,3 +44,12 @@ OPEN QUESTIONS
 1) Should automated broken-experiment pausing require outcome-type filtering (e.g., discount outcome=5/no-reply) plus multi-host confirmation?
 2) Are recurring GPU bursts on specific Windows hosts primarily runtime/driver instability vs experiment-specific CUDA defects?
 3) Should validation cadence increase further to keep the success tail near zero while throughput spikes?
+
+VALIDATION SESSION UPDATE (March 04, 2026, 11:22, Part 1)
+- Reviewed completed rows this session: 60 most-recent completed rows (success=59, non-success=1 in the reviewed sample).
+- Payload audit for reviewed rows: experiment_result payloads=60/60 with valid JSON at `/opt/axiom_boinc/upload/*/exp_*` (prefix-matched filenames).
+- Credit posting this session: 0 rows, 0 total credit (credit cap respected; no uncredited completed rows were available).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Failure-pattern check: `oscillatory_roughchannel_lbm_resonance` remains completed-failure only (outcome=5, 52 historical rows across hosts 324/332/342/333), but active unsent/in-progress queue for this family is 0 so no abort action was required this pass.
+- Website counters refreshed (no increment this pass): credited_count=1729; total_results_count=2124.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
