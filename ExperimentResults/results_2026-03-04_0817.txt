@@ -1,0 +1,41 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: 2026-03-04 08:17 CET
+Session: part3_save_upload
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Validation review covered 19 recent successful uncredited candidates with valid experiment_result payloads (primarily delay-dynamics and WD interaction families).
+- A race-safe credit pass detected that 19 reviewed candidates had already been credited by a concurrent process before write phase.
+- One remaining uncredited successful result was awarded in this session pass.
+- Incremental credit awarded this pass: +24 (ChelseaOilman +24).
+- Session cap status during validation pass: 24 / 10,000.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken-family cleanup commands executed for:
+  metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility, wd_mixup_interaction.
+- No queued unsent/in-progress tasks remained to abort for those families at execution time.
+- Stuck cleanup (>12h running on hosts offline >6h): 0 aborted.
+- Hard ceiling cleanup (>48h running): 0 aborted.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK
+1. heavytail_blockclip_spectrum.py (CPU; random matrix + robust statistics)
+- Novelty check queries covered heavy-tailed covariance spectra, truncation/winsorization, and block/spiked covariance behavior.
+- Prior literature exists on each component, but no clear prior factorial host-level simulation across:
+  heavy-tail df x block-correlation strength x clipping threshold
+  with replicated false-spike suppression vs signal-alignment tradeoff tracking.
+- Novel scientific angle retained for deployment: non-monotonic clipping tradeoff where clipping can reduce spurious edge inflation at low rho but hurt top-eigenvector alignment when true block structure is strong.
+
+DEPLOYMENT CONTEXT (PART 2)
+- CPU top-up deployment: 120 WUs (RAM>=6GB host targeting logic).
+- GPU top-up deployment: 96 WUs (GPU-aware script pool only).
+- Transition refresh/transitioner executed after CPU and GPU deployment stages.
+- Backlog remained above cap after deployment; no additional WUs created.
+
+KEY SCIENTIFIC FINDINGS
+1. No new 30+ seed cross-validated finding reached promotion threshold in this cycle.
+2. Newly reviewed successful outputs remained consistent with established findings for delay-dynamics and WD interaction behavior; no contradictory signal was observed.
+3. Three historically unhealthy families (metapop_corridor_delay_forecast, rps_delay_jitter_adaptive_mobility, wd_mixup_interaction) showed no active queued tasks requiring further abort action at execution time.
+4. A new heavy-tail random-matrix experiment line was added to quantify clipping-driven false-spike suppression vs eigenvector-alignment loss across df/rho/clip regimes.
+
+OPERATIONAL NOTES
+- No experiment script bugfix patch was required in the validation pass.
+- Counter maintenance in validation pass: credited_count incremented by +1; total_results_count refreshed with max(existing, DB-computed success total).
