@@ -1,81 +1,31 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part1_validate)
-=================================================
-
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+Last updated: March 3, 2026 (session s0303_part1_validate_u)
+============================================================
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding promoted this pass.
-- This pass prioritized full CPU/GPU refill and one new non-ML ecology/control experiment.
+- No scientific reversal versus established inverse critical-period (ICP) WD timing findings.
+- This session was validation/credit and reliability triage heavy; no new payload-backed science due missing upload artifacts.
 
-SESSION CONTEXT
-- Step-1 context loaded from findings_summary.txt.
-- No validate_*.txt file present in /opt/axiom/experiment_session during this run.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Quantify whether label smoothing attenuates/amplifies late-WD ICP effects.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is gated by curvature stabilization versus fixed late onset.
 
-RETIREMENT CHECK (MANDATORY)
-- Mandatory retirement query executed before deployment.
-- No rows matched (completed>50 and (unsent>0 or running>50)); no abort UPDATE required.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1U)
+- Credited 27 completed `exp_*` results for 270 total credit (all outcome=5, appid=2, elapsed_time=0).
+- Credited ID span: 1,657,457 through 1,657,651.
+- Uncredited backlog after pass: 0 completed `exp_*` rows.
+- Upload payload availability for credited batch: 0/27 files present in `/opt/axiom_boinc/upload/*/exp_*` (all missing).
+- Broken active prefixes aborted (in-progress): `exp_grad_subspace_wd_gpu_gpu*` (7), `exp_wd_noise_trigger_gpu_gpu*` (10).
+- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
+- Queue health after cleanup: 512 `exp_*` tasks still in progress/unsent.
+- Website counters after update: credited_count=56,660; total_results_count=55,009.
 
-DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 5,841 WUs created for active hosts with RAM>=6GB.
-- CPU script pool used: grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast,
-  cascade_forecast_delay_shedding, ising_delay_adaptive_quench, kuramoto_delay_noisy_control,
-  rd_phasejitter_adaptive_forcing, sandpile_delay_adaptive_dissipation, lotka_delay_adaptive_harvest,
-  wildfire_delay_adaptive_suppression, seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility,
-  brusselator_delay_sensor_noise, toggle_delay_adaptive_control.
-- GPU top-up pass (appid=2): 324 WUs created.
-- Transition refresh + one-pass transitioner executed after CPU deployment, GPU deployment, and new seeding.
+CROSS-SESSION TAKEAWAYS
+- Missing upload payloads continue to dominate validation, forcing fairness-first crediting on completed error rows.
+- GPU experiment stability remains prefix-dependent; some GPU prefixes show mixed success while others still exhibit cross-host zero-time crash signatures.
 
-GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 81.
-- GPU workunits deployed: 324.
-- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
-  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
-
-NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: tritrophic_delay_harvest_resilience.py (CPU, ecology/control)
-- Query: "adaptive harvesting delayed observation tri-trophic model collapse"
-- Query: "fisheries feedback control delayed measurements predator prey model"
-- Query: "tri-trophic ecosystem model adaptive control noise delay"
-- Found: prior work reports delayed ecological control and harvesting dynamics, but no clear factorial
-  adaptive-vs-fixed harvest sweep jointly mapping sensing delay, observation noise, and seasonal forcing
-  in one tri-trophic resilience test with explicit overharvest diagnostics.
-- Novel angle: test regime inversion hypothesis where adaptive control helps persistence/yield at short
-  delay but overcorrects and raises collapse risk under longer delay/noisier sensing plus climate forcing.
-
-NEW SCRIPT ADDED (THIS SESSION)
-1) tritrophic_delay_harvest_resilience.py
-- CPU numpy-only; run-duration compliant loop (independent trials until run_duration-60s).
-- Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x delay_steps {0,8,20} x obs_noise {0.00,0.06} x climate_amp {0.00,0.25}.
-- Outputs: mean_yield, yield_cv, persistence_frac, collapse_frac, overharvest_frac, control_var,
-  final biomasses, and adaptive-minus-fixed deltas.
-
-NEW EXPERIMENT SEEDING (THIS SESSION)
-- Dedicated initial seeding: 48 targeted CPU WUs for tritrophic_delay_harvest_resilience
-  across 24 active high-capacity hosts.
-
-VALIDATION UPDATE (2026-03-04)
-- No new 30+ seed cross-validated finding promoted in this validation pass.
-- Reviewed recent successful outputs (e.g., IDs 1657700, 1657518, 1657510, 1657505):
-  delay-control ecology/control scripts are producing structured summaries at expected runtime (~840-950s).
-- Provisional signal (not confirmed): wd_clipping_interaction continues to show late WD increasing ID more than OOD
-  (larger generalization gap), with clipping changing optimization statistics (clip events) but limited OOD lift.
-- Provisional signal (not confirmed): metapop_corridor_delay_forecast and rps_delay_jitter_adaptive_mobility
-  payloads suggest small or negative adaptive-minus-fixed effects under tested delays/noise.
-- Data-quality fix applied: wd_mixup_interaction.py output format corrected to avoid double-wrapped
-  experiment_result payloads that can trigger validator outcome=5 despite completed compute.
+OPEN QUESTIONS
+1) Why are many completed result names absent from `/opt/axiom_boinc/upload/*/exp_*` at validation time (retention timing vs path/layout mismatch)?
+2) Should deployment-side gating auto-stop prefixes once cross-host failure with zero elapsed time exceeds a threshold?

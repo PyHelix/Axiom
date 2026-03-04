@@ -1,0 +1,64 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-03 21:49:34
+Scope: Part 1 validation/credit + Part 2 research/deploy
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Reviewed 27 completed uncredited exp_* rows (all outcome=5, GPU appid=2, elapsed_time=0).
+- Credited results this session: 27
+- Credit policy used: 10 credit per completed uncredited error row
+- Total session credit awarded: 270 (below 10,000 cap)
+- Per-user credit awarded:
+  - PyHelix: +100
+  - ChelseaOilman: +70
+  - zombie67 [MM]: +60
+  - kotenok2000: +40
+- Upload payload availability for reviewed batch: 0/27 JSON payload files present under /opt/axiom_boinc/upload/*/exp_*
+
+STUCK/BROKEN TASK CLEANUP
+- Broken active prefixes aborted from in-progress queue:
+  - exp_grad_subspace_wd_gpu_gpu*: 7 tasks aborted
+  - exp_wd_noise_trigger_gpu_gpu*: 10 tasks aborted
+- Dead-host stuck-task cleanup (>12h running, >6h no host contact): 0 aborted
+- Hard-ceiling cleanup (>48h runtime): 0 aborted
+- Retirement pass during Part 2 found over-seeded families but unsent queue for those families was 0 at execution time (ABORT_TOTAL=0).
+
+DEPLOYMENT SUMMARY (PART 2)
+CPU deployment
+- CPU scripts targeted: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- CPU hosts seen for fill logic: 81
+- Hosts skipped for low RAM (<6GB): 2
+- CPU workunits created in deployment pass: 2937
+- CPU deployment policy used: fill toward 3x CPU queue per host, assign unassigned experiment types first, then replicate with duplicate-check naming.
+
+GPU deployment checkpoint
+- GPU scripts targeted: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+- Part 2 run log shows GPU deployment pass started but was interrupted before final totals were printed.
+- Live queue checkpoint after session:
+  - Active GPU hosts (appid=2, server_state in 1/2/4): 4
+  - Active GPU workunits (appid=2, exp_*): 30
+  - Active GPU WUs by target prefix:
+    - exp_wd_timing_scale_gpu_gpu*: 9
+    - exp_wd_curvature_trigger_gpu_gpu*: 0
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK (PART 2)
+- New experiment script authored and compiled: wd_batchnoise_interaction.py
+- Hypothesis tested: late weight decay gain should be stronger under small-batch gradient noise than large-batch settings (interaction test).
+- Novelty/literature checks documented in run log via targeted search queries, including:
+  - weight decay batch size interaction neural networks
+  - arxiv weight decay batch size interaction deep learning
+  - Scheduled Weight Decay paper arxiv 2021
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Additional deployment-side script set included wd_labelsmooth_interaction.py (CPU) and GPU probes wd_curvature_trigger_gpu.py / wd_timing_scale_gpu.py.
+
+KEY SCIENTIFIC FINDINGS
+1. No new payload-backed scientific signal was extracted from the Part 1 credited batch because all 27 reviewed rows were missing upload artifacts.
+2. Reliability evidence remains prefix-specific, not global: two GPU prefixes showed cross-host zero-time crash behavior and were cleaned from active queue, supporting prefix-level gating.
+3. No reversal of established inverse critical-period weight-decay timing conclusions was observed in this session.
+4. Part 2 introduced a new mechanistic hypothesis test (batch-noise x late-WD interaction) to probe whether gradient-noise regime modulates late-WD generalization gains.
+
+KEY SCIENTIFIC RESULTS CONTEXT
+- findings_summary.txt remains the persistent cross-session memory and should be read with this session log for longitudinal interpretation.
