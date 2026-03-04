@@ -1,0 +1,45 @@
+AXIOM BOINC SESSION LOG
+Session timestamp: March 4, 2026
+
+SUMMARY
+- Validation and credit review completed for latest completed payloads and in-progress queue checks.
+- Credit awarding run performed with database as source of truth.
+- Cleanup checks for stuck/broken tasks executed.
+- Deployment context and experiment-design novelty checks incorporated from findings_summary.
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Delay-control and interaction experiment payloads reviewed (Gray-Scott delay pulse feedback, Ising delay adaptive quench, Kuramoto delay noisy control, WD timing-scale GPU, plus recent WD interaction families).
+- Payload quality: reviewed JSON artifacts were parseable and scientifically interpretable for the sampled families.
+- Credit outcome this session: no newly creditable completed results were present at review time.
+- Newly credited results: 0
+- Total credit added: 0
+- Per-user credit deltas: none
+- Counter state: credited_count unchanged (54438), total_results_count unchanged (55054).
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h stuck-task abort pass: 0 rows affected.
+- >48h hard-ceiling abort pass: 0 rows affected.
+- Broken experiment global aborts: none applied.
+- No active experiment family met criteria for queue-wide abort in this pass.
+
+NEW EXPERIMENTS DESIGNED AND NOVELTY CHECK DOCUMENTATION
+1) fisher_delay_adaptive_culling (CPU spatial ecology/control)
+- Design: factorial comparison of fixed vs adaptive culling under sensing delay, observation noise, control fatigue, and climate forcing.
+- Conditions: strategy {fixed, adaptive} x delay_days {0,7,14} x obs_noise {0.00,0.12} x fatigue_rate {0.000,0.012} x climate_amp {0.00,0.25}.
+- Novelty check queries run:
+  - "reaction diffusion invasive species delayed control harvesting"
+  - "fisher kpp harvesting control delay"
+  - "invasive species control observation uncertainty model"
+- Prior art reviewed included delayed invasive-species and reaction-diffusion control literature (DOI:10.3934/dcdsb.2024005, DOI:10.1016/j.ecolmodel.2016.05.013, DOI:10.1007/s10473-021-0314-y).
+- Novel angle documented: explicit adaptive-vs-fixed regime inversion test across combined delay + noise + fatigue factors in distributed replication.
+- Seeding status from session context: 48 targeted CPU WUs launched across 24 active high-capacity hosts.
+
+KEY SCIENTIFIC FINDINGS
+1. Ising delay adaptive-quench outputs continue to indicate adaptive reductions in interface-defect metrics across multiple tested conditions.
+2. Kuramoto delay noisy-control outputs remain directionally consistent: fixed control is near-perfect synchronization in tested settings, while adaptive control is lower under delay/noise stress.
+3. Gray-Scott delay pulse-feedback outputs show high collapse fractions overall; adaptive gains appear narrow and modest in current conditions.
+4. Recent WD batch-noise and WD imbalance interaction outputs remain directionally consistent with established interaction findings and show no contradiction.
+5. No new 30+ seed cross-validated result met promotion criteria in this pass.
+
+NOTES
+- Session log intentionally omits cumulative credited-result ID lists; credit provenance remains in database records.
