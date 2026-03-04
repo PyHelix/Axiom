@@ -1,0 +1,47 @@
+Axiom BOINC Validation & Credit Log
+Timestamp: 2026-03-04 22:27:55 CET
+Step: Validation/Credit/Cleanup (Step 2 of 8)
+
+1) Results reviewed this session
+- Reviewed uncredited successful result IDs: 1687481, 1687499, 1687584, 1687586.
+- Numeric DB state for reviewed results:
+  - (id=1687481, hostid=9, userid=5, appid=2, workunitid=1978784)
+  - (id=1687499, hostid=341, userid=99, appid=2, workunitid=1978840)
+  - (id=1687584, hostid=345, userid=127, appid=1, workunitid=1979313)
+  - (id=1687586, hostid=345, userid=127, appid=1, workunitid=1979315)
+- Sanitized data check (`/opt/axiom/experiment_results/sanitized/*_safe.json`): no matching safe files yet for these four (matched by numeric `(host_id, workunitid)` from parsed `_result_name`).
+- Credit decision: deferred until sanitized numeric payloads arrive, to enforce quality-based credit policy.
+
+2) Credit awarded this session
+- Session credit awarded total: 0
+- Credited results count this session: 0
+- Credit cap check (<=10,000): PASS
+- Per-user totals after session (no change):
+  - user id 5: total_credit=11819.509000000002 (delta +0)
+  - user id 99: total_credit=1226.43 (delta +0)
+  - user id 127: total_credit=6382.199999999993 (delta +0)
+- Per-host totals after session (no change):
+  - host id 9: total_credit=8352.508999999998 (delta +0)
+  - host id 341: total_credit=1226.43 (delta +0)
+  - host id 345: total_credit=6382.199999999993 (delta +0)
+
+3) Cleanup actions
+- Stuck-task cleanup (>12h runtime and >6h host silence): 0 rows updated.
+- Hard-ceiling cleanup (>48h runtime): 0 rows updated.
+
+4) Failure/broken-work review
+- Completed result aggregate (exp_*):
+  - appid=1 outcome=1 exit_status=0: 1885
+  - appid=1 outcome=5 exit_status=0: 3578
+  - appid=2 outcome=1 exit_status=0: 94
+  - appid=2 outcome=5 exit_status=0: 24
+- No compute-crash signature observed in this pass (no nonzero exit_status clusters in completed set).
+- No experiment script changes made in this validation pass.
+
+5) Counter updates
+- `/opt/axiom_boinc/html/user/credited_count.txt`: unchanged at 1698 (N=0 this session).
+- `/opt/axiom_boinc/html/user/total_results_count.txt`: updated with max(existing, live total) => 1979.
+
+6) Notes
+- DB is source of truth for credited status; no cumulative result ID tracking file maintained.
+- Crediting remains pending for the 4 reviewed IDs until corresponding sanitized numeric result files are present.
