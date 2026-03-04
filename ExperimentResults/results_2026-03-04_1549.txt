@@ -1,0 +1,54 @@
+Axiom BOINC Session Results
+Timestamp: 2026-03-04 15:48 CET validation pass (compiled on server)
+Host: local project server
+
+SESSION SUMMARY
+- Final validation pass reviewed 43 newly completed uncredited exp results (ID range 1662268..1677980).
+- Sanitized numeric payload availability was 0/43 for this pass, so quality scoring could not run.
+- Credit awarded this pass: 0 total (session cap 10000).
+- User/host total_credit values remained unchanged in this pass.
+
+VALIDATION AND CREDIT (PART 1)
+- Reviewed uncredited completed results: 43.
+- Matching sanitized files found: 0/43 in /opt/axiom/experiment_results/sanitized/.
+- Quality outcome: no sanitized numeric payloads available; no per-result credit updates applied.
+- Total credit awarded: 0.
+
+CLEANUP AND OPERATIONS
+- Dead-host stuck-task sweep (>12h running and >6h no contact): 0 aborted.
+- Hard-ceiling sweep (>48h running): 0 aborted.
+- Broken-queue status at final pass: exp_rw_reset_fatigue_nonrenewal active=0, exp_adaptive_voter_delay_rewiring active=0.
+- Session context from earlier validation cycles: broken active queues were drained/aborted when failing persistently, and remained fully drained by the final pass.
+- Fail-rate diagnostics: elevated failures continue to be dominated by administrative abort/no-reply (outcome=6), especially on hosts 287 and 340, not reproducible script-crash signatures.
+
+NEW EXPERIMENTS DESIGNED AND DEPLOYED (PART 2)
+1. metapop_allee_corridor_hysteresis.py (ecology)
+- Hypothesis: fatigue/recovery in adaptive corridor control can create re-entrant threshold optimality under Allee risk.
+- Deployment: 120 initial CPU WUs.
+- Novelty check: literature supports Allee/connectivity threshold effects and synchrony risks, but no direct match for fatigue-driven adaptive corridor trigger re-entrance mapping.
+
+2. kuramoto_islanding_fatigue_reclosure.py (power-systems nonlinear dynamics)
+- Hypothesis: delayed adaptive islanding with fatigue/reclosure hysteresis yields re-entrant resilience vs threshold.
+- Deployment: 87 initial CPU WUs.
+- Novelty check: islanding and delay effects are known, but no direct prior match found for fatigue + delayed reclosure threshold-reversal mapping.
+
+3. cstr_poison_purge_reentrance.py (chemical reactor dynamics)
+- Hypothesis: adaptive purge with fatigue-limited effectiveness produces an intermediate threshold productivity optimum under stochastic feed disturbances.
+- Deployment: 120 initial CPU WUs.
+- Novelty check: catalyst deactivation/regeneration and adaptive control are established, but not this explicit fatigue-threshold re-entrance test design.
+
+4. fput_adaptive_damping_fatigue.py (nonlinear lattice physics)
+- Hypothesis: adaptive high-frequency damping with controller fatigue yields re-entrant threshold behavior for recurrence retention under stochastic forcing.
+- Deployment: 120 initial CPU WUs.
+- Novelty check: recurrence/damping studies exist, but no direct match surfaced for fatigue-limited adaptive trigger re-entrance mapping.
+
+KEY SCIENTIFIC FINDINGS
+1. No new validated scientific result was promoted this session because sanitized numeric outputs were unavailable for reviewed completed results.
+2. The 30+ seed cross-validation promotion threshold was not reached for any new hypothesis during this cycle.
+3. Previously confirmed findings remain intact (including robust WD interaction effects), while this session's primary blocker to new confirmations was the paused sanitized-output pipeline.
+4. Re-entrant-threshold hypothesis testing was expanded across four new domains (ecology, power grids, chemical reactors, nonlinear lattice physics), with novelty checks documented and no direct duplicate prior-art match found for the specific fatigue-coupled control formulations.
+
+OPEN FOLLOW-UPS
+- Investigate why sanitized `_safe.json` generation paused after 2026-03-04 11:37 CET despite continuing exp result completions.
+- Investigate transitioner notices about "WU has too many total results (1)" on historical families.
+- Confirm scheduler/transitioner propagation timing where newly created WUs appear before corresponding result rows in immediate checks.
