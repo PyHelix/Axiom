@@ -1,0 +1,55 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-04 11:37 (Part 1) + 2026-03-03 13:52 (Part 2 reference)
+Compiled on: 2026-03-04 (America/Denver)
+
+PART 1 - VALIDATION, CREDIT, CLEANUP (from validate_2026-03-04_1137.txt)
+- Reviewed latest 80 completed exp_* results (id span sampled from 1683798 down through 1683309; non-contiguous global queue ordering).
+- Sample outcomes: success=79, non-success=1 (outcome=5).
+- Payload audit: 80/80 upload JSON files present and parseable; 80/80 contained experiment_result; 0 explicit error payloads; 0 missing.
+- Credit awarded this pass: 0 rows, total credit +0 (no uncredited completed rows at execution time).
+- Per-user credit deltas: none.
+- Post-run cutoff snapshot: uncredited completed success=0, uncredited completed failure=0.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host stuck-task aborts (>12h running and >6h host silence): 0.
+- Hard-cap aborts (>48h running): 0.
+- Broken experiment broad aborts: none applied this pass.
+- Oscillatory roughchannel resonance family remained outcome=5-heavy in BOINC metadata, but sampled uploads still contained valid experiment_result payloads and had no active unsent/in-progress queue requiring abort.
+
+PART 2 - DEPLOYMENT / RESEARCH SUMMARY (from run_2026-03-03_1352.log)
+CPU deployment
+- Host-targeted CPU fill executed to 3x CPU queue objective.
+- CPU_HOSTS_SEEN=81.
+- CPU_SKIPPED_LOW_RAM=2 (<6 GB RAM policy).
+- CPU_WU_CREATED=2937.
+- CPU scripts used in deployment loop:
+  - wd_batchnoise_interaction.py (newly added in this run)
+  - wd_labelsmooth_interaction.py
+
+GPU deployment checkpoint
+- GPU deployment phase was started separately (mandatory appid=2 pass) with scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- The captured run log terminates during execution of /tmp/axiom_deploy_gpu.sh before final counters printed.
+- GPU host/workunit totals are therefore not emitted in this specific log capture.
+
+Retirement/cleanup inside Part 2
+- Retirement candidate check executed.
+- Candidates reported (examples): svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdlr, wdwidthtrans, wdwindow, wdoptim, repcrystal.
+- ABORT_TOTAL=0 (no unsent retirements to cancel at that time).
+
+New experiment design and novelty check documentation
+- New experiment script authored and uploaded: wd_batchnoise_interaction.py.
+- Scientific intent: test interaction term between late WD gain and batch-noise regime (small-batch vs large-batch), not just main effects.
+- Novelty check activity documented in run log with targeted literature/web queries (arXiv + general web) around weight decay scheduling and batch-size interaction, then narrowed to a specific interaction-hypothesis formulation.
+- Script compiled server-side successfully (python3 -m py_compile OK).
+
+KEY SCIENTIFIC FINDINGS
+1. Recent completed throughput remains scientifically usable: the newest validated sample (80 rows) had fully parseable experiment_result JSON payloads in all cases.
+2. Oscillatory roughchannel resonance continues to show outcome=5 BOINC metadata in historical rows, yet sampled uploads still carry valid experiment_result payloads; this is more consistent with reporting/no-reply state artifacts than deterministic experiment-script failure.
+3. The immediate credit queue was drained at validation cutoff (no uncredited completed success/failure rows), indicating synchronization between review cadence and incoming completion rate at that time.
+4. Part 2 introduced a mechanism-focused interaction experiment (wd_batchnoise_interaction) to test whether late-WD benefits scale with stochastic gradient noise regime, extending prior WD timing findings beyond single-factor analyses.
+
+Website counters noted in Part 1 log
+- credited_count.txt: 1805
+- total_results_count.txt: 2124
