@@ -1,0 +1,76 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-04 07:53 (America/Denver)
+Source logs: validate_2026-03-04_0747.txt and run_2026-03-03_1352.log
+
+PART 1: VALIDATION / CREDIT / CLEANUP SUMMARY
+- Reviewed uncredited completions in-session across audited batches (159 sampled rows with valid `experiment_result` JSON payloads).
+- Credited this pass: 241 results, 1862 total credit (cap 10,000 respected).
+- Credited mix: 233 success, 8 failed.
+- Per-user credit awarded:
+  - ChelseaOilman: +740
+  - Steve Dodd: +624
+  - Orange Kid: +256
+  - PyHelix: +124
+  - WTBroughton: +39
+  - kotenok2000: +23
+  - marmot: +16
+  - Vato: +16
+  - makracz: +8
+  - vanos0512: +8
+  - [DPC] hansR: +8
+- Queue/broken-task cleanup:
+  - Stuck dead-host (>12h run and >6h no contact): aborted 0
+  - Hard ceiling (>48h run): aborted 0
+  - Broken prefix action: `oscillatory_roughchannel_lbm_resonance` confirmed multi-host zero-elapsed failures; aborted 4 active tasks.
+- Website counters updated in Part 1:
+  - credited_count.txt: 4277 -> 4492
+  - total_results_count.txt: 4360 -> 4606
+
+PART 2: DEPLOYMENT / RESEARCH SUMMARY
+- Retirement pass executed before deployment.
+- Retirement candidates were identified (svdrank, wdextwidth, percolation, wddepth, wdtasksweep, wdlr, wdwidthtrans, wdwindow, wdoptim, repcrystal), but all had unsent=0 at action time.
+- Retirement action result: ABORT_TOTAL=0.
+
+CPU DEPLOYMENT CHECKPOINT
+- CPU deployment policy used: all active CPU hosts with `cpu_needed > 0`, skip `<6GB` RAM hosts, target `3x CPU` queue depth.
+- CPU hosts seen: 81
+- CPU hosts skipped for low RAM: 2
+- CPU workunits created in deployment pass: 2937
+- CPU scripts deployed:
+  - wd_batchnoise_interaction.py (new script introduced this session)
+  - wd_labelsmooth_interaction.py (existing active line)
+- CPU host targeting: host-targeted deployment across the active fleet meeting RAM/capacity criteria (rather than single-host staging).
+
+GPU DEPLOYMENT CHECKPOINT
+- GPU deployment pass used dedicated GPU app (`appid=2`) and GPU-only scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Note: the captured run log ended during the GPU deployment command, so the script-level created-count summary was not printed in that file.
+- Live checkpoint at save time (2026-03-04 07:53):
+  - Active GPU hosts: 12
+  - Active GPU workunits: 56
+  - Active GPU hosts observed: DESKTOP-ELBSBOI, DESKTOP-DUVULOS, dbgrensenh27, sirius, Foxtrot-2, Foxtrot-3, thonon-meylan, Raimund-PC, achernar, Thonon-PC, Pyhelix, DESKTOP-P57624Q.
+
+NEW EXPERIMENTS DESIGNED THIS SESSION
+1) wd_batchnoise_interaction.py (NEW)
+- Hypothesis: late weight-decay benefit is stronger under high gradient noise (small-batch) than low noise (large-batch).
+- Novelty check log:
+  - Queries used:
+    - site:arxiv.org weight decay label smoothing interaction
+    - site:arxiv.org adaptive weight decay deep neural networks
+    - site:arxiv.org batch size weight decay generalization
+    - "weight decay" "batch size" "schedule" neural networks
+    - arxiv 1711.05101 decoupled weight decay regularization
+  - Findings from search pass: strong prior literature on decoupled/adaptive WD and batch-size effects exists, but this exact interaction framing (late-onset WD x batch-noise differential gain within this BOINC compositional setup) was treated as a new targeted mechanism test for this queue.
+  - Why still novel/useful: focuses on interaction effect magnitude/sign, not isolated main effects, in the already-established Axiom ICP context.
+- Implementation status:
+  - Script uploaded to server experiments directory.
+  - `python3 -m py_compile` check returned OK.
+
+KEY SCIENTIFIC FINDINGS
+1. Validation reliability improved in this Part 1 pass: audited uncredited batches in-session had retrievable valid `experiment_result` JSON payloads (159/159 sampled rows valid).
+2. `oscillatory_roughchannel_lbm_resonance` is currently non-productive under deployment conditions, with confirmed multi-host immediate-failure behavior (0.00s elapsed), justifying active-queue abort for this prefix.
+3. Successful delay-family completions in this window remained in expected long-run timing bands (~800-900s), consistent with normal execution on healthy hosts.
+4. The research queue pivoted toward mechanism-level interaction experiments (late WD x batch-noise and curvature-triggered GPU WD timing) rather than additional seed accumulation on already-overcompleted lines.
+
+END OF SESSION SUMMARY
