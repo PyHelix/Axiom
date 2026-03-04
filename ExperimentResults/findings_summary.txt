@@ -1,49 +1,46 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 18:14 UTC; 1805 new sanitized files in last 120 min, 9 schema-resolved families)
-=================================================
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1110)
+============================================================
 
-CONFIRMED FINDINGS (append-only - never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) - retired, finding established
-7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
-8. WD depth interaction: completed (1282+ results) - retired
-9. WD task sweep: completed (1077+ results) - retired
-10. WD optimizer interaction: completed (1043+ results) - retired
-11. WD learning rate interaction: completed (1037+ results) - retired
-12. WD width transition: completed (928+ results) - retired
-13. WD window: completed (841+ results) - retired
-14. Representation crystallization: completed (368+ results) - retired
-15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
-16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
-17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
-18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
-19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
+CORE SCIENTIFIC STATUS
+- No reversal observed so far for the prior inverse critical-period / WD timing signal.
+- Active focus remains WD trigger/timing families plus delay-driven ecology/control families.
+- Current validated batches continue to produce stable non-empty `experiment_result` payloads for most completed successes.
 
-NEW PRELIMINARY FINDINGS (this cycle)
-- Interdependent-flow memory shedding tradeoff: mean_medium_window_gain = -0.001340 +/- 0.000751 (n=149, 105 seeds, 9 hosts), 131/149 negative, d=-1.78. Direction is consistent but absolute effect is small.
-- SIS delay adaptive rewiring tradeoff: best_score_mean = +0.000017 +/- 0.000124 (n=137, 84 seeds, 5 hosts), mixed sign (65 positive / 72 negative), d=0.14. No meaningful effect detected.
-- Metapop Allee corridor hysteresis: reentrant_support_mean = +0.056155 +/- 0.000518 (n=48, 29 seeds, 3 hosts), 48/48 positive, d=107.37. Near confirmation threshold; needs >=30 seeds.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance now at 214 runs (97 seeds, 12 hosts): resonance_mean +0.067107 +/- 0.002791, resonance_positive_rate 0.890026 +/- 0.010371.
-- Autocatalytic dilution memory window remains positive at 101 runs (86 seeds, 3 hosts): mean_reentrant_gain +0.002438 +/- 0.000489.
-- Nonmarkov trap release window remains positive at 49 runs (24 seeds, 6 hosts): mean_reentrant_gain +0.000153 +/- 0.000023.
+VALIDATION SESSION UPDATE (March 04, 2026, 10:50, Part 1)
+- Reviewed/credited completed rows this session: 309 total (success=295, non-success=14).
+- Payload audit for credited rows: experiment_result=298; missing upload payload=11.
+- Credit posted this session: 309 rows, 6492 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=296 rows, GPU(appid=2)=13 rows.
+- Success elapsed profile (credited): min=52.36s, median=844.66s, max=961.00s.
+- Dominant reviewed families: lorenz96_delay_assimilation_regime_shift (18), seasonal_metapop_vax_trigger (18), tritrophic_delay_harvest_resilience (17), grayscott_delay_pulse_feedback (17), oscillatory_roughchannel_lbm_resonance (14).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no broad abort applied this pass; recent failures are dominated by host/outcome-no-reply patterns rather than one confirmed deterministic script crash family.
+- Website counters updated: credited_count=2037; total_results_count=2121.
+- Cutoff snapshot after this pass: uncredited completed success rows=13; uncredited completed failure rows=0.
+
+VALIDATION SESSION UPDATE (March 04, 2026, 11:10, Part 1)
+- Reviewed completed rows this session: 15 success rows (all with upload payloads present and parseable).
+- Payload audit for reviewed rows: experiment_result payloads=15; explicit error payloads=0.
+- Credit posting race observed: 14/15 rows were already credited by concurrent activity before posting step; this run incrementally credited 1 row for 18 credit total (under 10,000 cap).
+- Credited by this run: GPU(appid=2)=1 row; CPU(appid=1)=0 rows. Reviewed mix was CPU=14, GPU=1.
+- Success elapsed profile (reviewed): min=141.54s, median=838.62s, max=969.52s.
+- Failure-pattern check (CPU vs GPU): CPU `oscillatory_roughchannel_lbm_resonance` remains 0 success / 52 failed historically, but had no unsent/in-progress rows to abort this pass.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=1729; total_results_count=2124.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=0.
+
+RELIABILITY NOTES (March 04, 2026, 10:50)
+- Large recent fail-rate percentages in several delay families are inflated by outcome=5/no-reply style returns from specific hosts and retry variants.
+- No active experiment prefix met a high-confidence “single broken script” criterion strong enough for safe broad abort without risking healthy throughput.
 
 OPEN QUESTIONS
-- Climate hysteresis model remains unresolved: mean_reentrant_index is near zero (+0.000083 +/- 0.002349; d=0.035) while mean_best_gain is consistently negative (-0.048337 +/- 0.000049; 144/144 negative).
-- Interdependent-flow model: does medium-window underperformance persist after changing load-shedding penalties and forecast-bias ranges.
-- CSTR poison/purge reentrance: N=9 runs (5 seeds) with negative mean_reentrant_gain (-0.011133 +/- 0.000001); collect >=10 seeds before interpretation.
-- Kuramoto islanding fatigue reclosure: N=16 runs (5 seeds), support_fraction currently 0.0; insufficient seed count.
-
-ANALYSIS COVERAGE NOTE
-- Scientific claims were restricted to families with schema-resolved named summary metrics from sanitized numeric outputs.
-
-CURRENT CYCLE UPDATE
-- 1805 new sanitized files were detected (window: 120 min).
-- Schema-resolved quantitative analysis completed for 9 legacy families with scalar summary metrics.
-- No new preliminary/confirmed findings added this cycle: all analyzed families had <10 independent seeds (most had 1 seed).
-- 33 additional families had >=5 new files but require explicit legacy schema adapters before defensible field-level claims.
+1) Should automated broken-experiment pausing require outcome-type filtering (e.g., discount outcome=5/no-reply) plus multi-host confirmation?
+2) Are recurring GPU bursts on specific Windows hosts primarily runtime/driver instability vs experiment-specific CUDA defects?
+3) Should validation cadence increase further to keep the success tail near zero while throughput spikes?
