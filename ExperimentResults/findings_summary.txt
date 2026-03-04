@@ -1,71 +1,41 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 3, 2026 (session p1_validate_2026-03-03_2359)
-============================================================
+Last updated: March 4, 2026 (session validate_2026-03-04_1019)
+=================================================
 
-CORE SCIENTIFIC STATUS
-- No reversal of established inverse critical-period (ICP) WD timing signal.
-- Current queue emphasizes ecological-delay dynamics and WD interaction studies.
-- Newest payload sample remains science-bearing: 80/80 newest upload JSON files contained `experiment_result`.
+CONFIRMED FINDINGS (append-only — never remove or re-test these)
+1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
+2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
+3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
+4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
+5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
+6. SVD rank intervention: completed (1964+ results) — retired, finding established
+7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
+8. WD depth interaction: completed (1282+ results) — retired
+9. WD task sweep: completed (1077+ results) — retired
+10. WD optimizer interaction: completed (1043+ results) — retired
+11. WD learning rate interaction: completed (1037+ results) — retired
+12. WD width transition: completed (928+ results) — retired
+13. WD window: completed (841+ results) — retired
+14. Representation crystallization: completed (368+ results) — retired
 
-ACTIVE SCIENCE PRIORITIES
-1) wd_labelsmooth_interaction.py
-- Quantify whether label smoothing attenuates or amplifies late-WD ICP effects.
-2) wd_curvature_trigger_gpu.py
-- Test whether WD onset is curvature-gated versus fixed late onset.
+CORE STATUS
+- No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this validation run.
+- Latest validation log: /opt/axiom/experiment_session/validate_2026-03-04_1019.txt
 
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1)
-- Initial uncredited completed backlog: 0 rows (`exp_*`, `server_state=5`, all outcomes).
-- Additional completed rows appeared during session and were credited: 22 rows, 44 total credit (under 10,000 cap).
-- Session credit recipients: Time_Traveler +20, Steve Dodd +14, ChelseaOilman +6, PyHelix +4.
-- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Website counters after refresh: credited_count=54,505; total_results_count=55,054.
-- Credited experiment rows in DB (`granted_credit>0`): 148,534.
-- Remaining uncredited completed rows: 0.
+RECENT DEPLOYMENT CONTEXT
+- New scripts seeded recently: pit_delay_inhibitor_resonance.py, chemostat_delay_crossfeeding_resonance.py.
+- GPU wave deployed using: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py,
+  grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py.
 
-PAYLOAD VALIDATION NOTES
-- Reviewed newest 80 upload payloads under `/opt/axiom_boinc/upload/*/exp_*`: 80/80 had `experiment_result`; 0 parse errors; 0 explicit `error` payloads.
-- Top newest payload families in this sample were WD interaction pool tasks (imbalance/curriculum/batchnoise/anisotropy).
-- Active-prefix failure scans still show outcome-classification divergence patterns (many `outcome=5`, `elapsed_time=0`, empty stderr) for select WD prefixes.
-
-RELIABILITY / ABORT DECISIONS
-- No broad global abort applied this session; active queue is dominated by healthy ecological-delay prefixes with low recent failure rates.
-- Potentially problematic WD prefixes remain under watch due high recent failure percentage and zero-runtime signatures.
+VALIDATION STATUS (March 4, 2026 10:19)
+- Reviewed uncredited completed results: 59 (DB source of truth).
+- Trusted sanitized payloads for this cohort were unavailable at validation time (0/59 matching safe files).
+- Quality scoring and credit grants deferred this session (0 credit awarded).
+- Broken experiment triage: battery_pulse_delay_plating_resonance currently 100% failed in completed snapshot (4 failed / 0 success);
+  aborted 5 queued/running tasks to stop further waste.
+- Stuck-task cleanup rules executed: dead-host >12h cleanup aborted 0; hard >48h ceiling aborted 0.
+- Website counters refreshed: credited_count unchanged (+0); total_results_count synced to 59.
 
 OPEN QUESTIONS
-1) Should validator/outcome mapping be revised when upload payload is valid `experiment_result` but DB outcome is non-success?
-2) Are zero-elapsed, empty-stderr `outcome=5` rows primarily dispatch/host-environment issues rather than experiment-script failures?
-3) Should specific WD prefixes be auto-paused when high-failure streaks recur across multiple hosts in a short window?
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1 - 2240)
-- Initial uncredited completed backlog: 0 rows (`exp_*`, `server_state=5`, `outcome=1`, `granted_credit=0`).
-- Credit awarded this session: 0 (no eligible uncredited completed results at execution time).
-- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Active queue health check (last 20k IDs): no active prefix above 50% failure; no queue aborts applied.
-- Payload QC on newest 100 upload JSON files: 100/100 had `experiment_result`, 0 `error`, 0 parse failures.
-- Website counters refreshed: credited_count=54,438; total_results_count=55,054.
-- Credited experiment rows in DB (`granted_credit>0`): 148,534; remaining uncredited completed rows: 0.
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1 - 2330)
-- Initial uncredited completed backlog: 3 rows (`exp_*`, `server_state=5`, `outcome=1`, `granted_credit=0`).
-- Credit awarded this session: 14 total across 3 results (all to PyHelix; under 10,000 cap).
-- Reviewed payloads for result IDs 1657531, 1657535, 1657540: 3/3 contained valid `experiment_result` JSON (0 errors, 0 parse failures).
-- Active-prefix health check (recent 20k IDs): no active CPU or GPU prefix above 50% failure; no broken-prefix abort applied.
-- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Website counters refreshed: credited_count=54,441; total_results_count=55,057.
-- Credited experiment rows in DB (`granted_credit>0`): 148,537; remaining uncredited completed rows: 0.
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1 - 2335)
-- Initial uncredited completed backlog in recent 20k-ID window: 40 rows (`exp_*`, `server_state=5`, `outcome=1`, `granted_credit=0`).
-- Credit awarded this session: 147 total across 40 results (ChelseaOilman +143, PyHelix +4; under 10,000 cap).
-- Payload QC for all 40 credited rows: 40/40 had valid `experiment_result` JSON in upload files (`..._r*_0`).
-- High-failure detection: `metapop_corridor_delay_forecast` showed 0 success / 119 failed (100.0%) with active backlog; aborted 11 active tasks (`server_state IN (2,4)`).
-- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Website counters after refresh: credited_count=54,479; total_results_count=55,098.
-- Credited experiment rows in DB (`granted_credit>0`): 148,578; remaining uncredited success rows in recent 20k-ID window: 0.
-- Diagnostic note: failed `metapop_corridor_delay_forecast` rows sampled this session had empty stderr but upload payloads still contained `experiment_result`; likely validator/outcome-classification issue rather than runtime crash.
-VALIDATION SESSION UPDATE (March 3, 2026, Part 1 - 2359)
-- Completed+credited this session: 83 results across two credit passes, 371 total credit (under 10,000 cap).
-- Session credit recipients: Steve Dodd +152, ChelseaOilman +113, kotenok2000 +45, Anandbhat +40, PyHelix +17, [DPC] hansR +4.
-- Payload QC: uncredited-success sample check found 49/49 valid `experiment_result` JSON; failed-prefix spot-check found 27/30 `experiment_result`, 0 parse errors, 3 missing files.
-- Broken-prefix mitigation applied (unsent+in-progress aborted): `metapop_corridor_delay_forecast` +170, `rps_delay_jitter_adaptive_mobility` +110, `wd_mixup_interaction` +31, `gpu_matmul_stress_gpu` +27 (338 total aborted).
-- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
-- Website counters after refresh: credited_count=54,562; total_results_count=55,181.
-- Credited experiment rows in DB (`granted_credit>0`): 148,630 after pass 1, then additional 31 rows credited in pass 2 (final uncredited success backlog reached 0 at check time).
-- Reliability note: sampled high-failure rows still show `outcome=5`, `exit_status=0`, empty stderr, and frequently valid `experiment_result`; validator/outcome mapping remains likely root issue.
+- Why 59 completed/uncredited results currently lack corresponding trusted sanitized safe JSON files.
+- Re-evaluate battery_pulse_delay_plating_resonance after assimilation catches up; patch only if failures persist with tracebacks.
