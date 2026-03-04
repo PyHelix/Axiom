@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (deploy session 11:31 CET)
+Last updated: March 4, 2026 (validation session 13:03 CET)
 =================================================
 
 CONFIRMED FINDINGS (append-only — never remove or re-test these)
@@ -20,80 +20,28 @@ CONFIRMED FINDINGS (append-only — never remove or re-test these)
 
 CORE STATUS
 - No new 30+ seed cross-validated result promoted to CONFIRMED FINDINGS in this validation run.
-- Latest validation log: /opt/axiom/experiment_session/validate_2026-03-04_1105.txt
+- Trusted sanitized-result lag remains the main blocker for credit assignment.
 
 ACTIVE EXPERIMENT CONTEXT
-- Recently seeded CPU scripts include: pit_delay_inhibitor_resonance.py, chemostat_delay_crossfeeding_resonance.py,
-  tritrophic_delay_harvest_resilience.py, lorenz96_delay_assimilation_regime_shift.py,
-  grayscott_delay_pulse_feedback.py, fiberbundle_delay_healing_entropy.py,
-  schlogl_delay_adaptive_gain_resonance.py, potts_pulse_anneal_resonance.py.
-- Active GPU scripts include: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
-  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
+- CPU scripts currently generating returns include delay-control ecology/PDE/network families
+  (pit_delay_inhibitor_resonance, chemostat_delay_crossfeeding_resonance,
+  tritrophic_delay_harvest_resilience, lorenz96_delay_assimilation_regime_shift,
+  grayscott_delay_pulse_feedback, fiberbundle_delay_healing_entropy, plus newer additions).
+- GPU scripts in active rotation: wd_noise_trigger_gpu, wd_curvature_trigger_gpu,
+  wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
 
-VALIDATION STATUS (March 4, 2026 11:05 CET)
-- Reviewed uncredited completed-success results: 22 (IDs 1662259, 1662331, 1662334, 1662335, 1662336, 1662337, 1662340, 1662341, 1662342, 1662343, 1662346, 1662347, 1662348, 1662349, 1662352, 1662353, 1662354, 1662355, 1662358, 1662359, 1662360, 1662361).
-- Credit actions this session: 0 credited / 0 total credit added (all 22 missing corresponding sanitized `_safe.json`; latest sanitized timestamp trails this WU batch).
-- Failure-state review: completed outcomes now outcome=1:89, outcome=5:1095, outcome=6:94; failures remain dominated by outcome 5/6 with exit_status 0.
-- CPU/GPU failure split (completed non-success): appid=1 -> outcome5:1064, outcome6:88; appid=2 -> outcome5:31, outcome6:6.
-- Stuck-task cleanup rules executed: dead-host >12h cleanup aborted 0; hard >48h ceiling aborted 0.
-- Broken experiment watchlist: battery_pulse_delay_plating_resonance remains 6 failures, 0 successes, 1 in-progress task (no unsent); no mass abort applied pending fresh sanitized evidence.
-- Website counters refreshed: credited_count unchanged (+0) at 66; total_results_count advanced to 89 (non-decreasing rule).
+VALIDATION STATUS (March 4, 2026 13:03 CET)
+- Reviewed uncredited completed-success results: 51 (all `exp_%`, all currently missing matching `_safe.json` by result name).
+- Credit actions this session: 0 credited / 0 total credit added (cap respected).
+- Completed outcome snapshot: success=287; success credited=5489 cumulative rows; success uncredited=51.
+- Failure pattern snapshot: non-success completed rows are dominated by outcome=6 with exit_status=0
+  (consistent with abort/scheduler cleanup, not crash tracebacks).
+- CPU/GPU split for non-success completed rows: appid=1 -> outcome6=5193, outcome5=21; appid=2 -> outcome6=39.
+- Stuck-task cleanup run: dead-host >12h aborted 0; hard >48h aborted 0.
+- High fail-rate watchlist still includes battery_pulse_delay_plating_resonance and abx_cycle,
+  but no clear multi-host crash signature with active unsent/in-progress stock that justifies mass abort this pass.
+- Website counters refreshed: credited_count unchanged at 236 (+0); total_results_count set to 287 (non-decreasing rule).
 
 OPEN QUESTIONS
-- Outcome=5/6 dominates failures with exit_status=0; classify root cause path (manual aborts vs no-reply vs validator state) before disabling additional experiments.
-- Re-evaluate battery_pulse_delay_plating_resonance when new trusted sanitized completions arrive.
-
-DEPLOYMENT UPDATE (March 4, 2026 11:16 CET)
-- Queue enforcement executed: GPU host 353 was over 4x (5 running on 1 GPU); aborted 2 tasks to restore 3x target.
-- Retirement scan: no over-seeded active experiments met abort criteria this cycle.
-- CPU deployment: created 4680 new `axiom_worker` WUs (RAM>=6GB hosts only), filling major deficits on high-core hosts first.
-- GPU deployment (mandatory step): 80 GPU hosts detected with idle capacity; deployed 306 WUs in first pass + 297 in second pass using
-  wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py,
-  wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
-
-NEW EXPERIMENT DESIGN (novelty check complete)
-- New script: hypercycle_delay_dilution_rescue.py
-- Hypothesis: delayed adaptive dilution in hypercycle-parasite ecology has a non-monotonic rescue window where delayed control can reduce parasite dominance while preserving catalyst diversity better than immediate adaptive control.
-- Literature search queries run:
-  1) "Eigen Schuster hypercycle parasites origin of life model"
-  2) "hypercycle dynamics with parasites mathematical model"
-  3) "time delay replicator dynamics control"
-  4) "hypercycle delayed feedback parasite dilution"
-- Findings: prior literature exists on (a) hypercycle parasite instability and (b) delay effects in replicator/control systems, but no exact match found for adaptive delayed dilution control in hypercycle-parasite systems with this interaction metric set (dominance/diversity/collapse-effort tradeoff).
-- Novel angle retained: explicit delayed-vs-immediate adaptive control comparison under matched noise and gain grids, reporting publishable positive or negative interaction outcomes.
-
-VALIDATION STATUS (March 4, 2026 11:20 CET)
-- Newly reviewed uncredited completed-success results at close: 3 pending (IDs 1662567, 1662568, 1662569; fiberbundle delay batch on host 339).
-- Credit actions this session: 0 credited / 0 total credit added (all 3 pending IDs missing sanitized `_safe.json` files).
-- Current completed status snapshot at close: outcome=1 and granted_credit>0 -> 46; outcome=1 uncredited -> 3; outcome=1 total -> 49.
-- Failure-state review: no completed non-success rows currently present (0 rows matching `server_state=5 AND outcome!=1`).
-- Stuck-task cleanup rules executed: dead-host >12h cleanup aborted 0; hard >48h ceiling aborted 0.
-- Website counters refreshed: credited_count unchanged by this session at 227 (+0 this session); total_results_count remains 97 under non-decreasing rule.
-
-DEPLOYMENT UPDATE (March 4, 2026 11:31 CET)
-- Per-host cap enforcement (mandatory): host 287 reduced from CPU 3182->576 and GPU 18->6 running tasks; host 339 reduced from CPU 286->96 and GPU 11->6 (aborted to 3x cap).
-- Backlog gate check before deployment: unsent=0, in_progress=1644, active_hosts=94 (below 5000 cap).
-- Retirement scan: no over-seeded active experiment met abort thresholds this cycle.
-- CPU deployment: created 3056 `axiom_worker` WUs (RAM>=6GB, unassigned-first then replication fill).
-- GPU deployment (mandatory separate pass): 80 GPU hosts with idle capacity; deployed 300 `axiom_worker_gpu` WUs.
-- GPU scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
-
-NEW EXPERIMENT DESIGN (novelty check complete)
-- New script: kuramoto_delay_adaptive_efficiency.py
-- Hypothesis: delayed adaptive coupling gain in noisy Kuramoto populations has a non-monotonic delay window that improves synchronization-efficiency score versus immediate feedback.
-- Literature search queries run:
-  1) "Kuramoto model adaptive coupling delay feedback synchronization paper"
-  2) "time-delayed feedback control Kuramoto order parameter"
-  3) "adaptive Kuramoto coupling stochastic frequencies"
-  4) "nonmonotonic synchronization versus delay Kuramoto"
-- Key prior work found: delayed synchronization transitions in stochastic Kuramoto systems; adaptive interactions in oscillator ensembles; delayed-feedback control formulations in Kuramoto-type models.
-- Novel angle retained: explicit delayed-vs-immediate adaptive gain comparison under stochastic frequency drift with efficiency objective (coherence minus control effort), tested over delay/gain/noise grids with per-WU replication.
-- Initial seeding: deployed 120 CPU WUs for kuramoto_delay_adaptive_efficiency.py to active high-core hosts.
-
-VALIDATION STATUS (March 4, 2026 11:34 CET)
-- Reviewed current uncredited completed-success results: 49 IDs pending credit.
-- Credit actions this session: 0 credited / 0 total credit added (all 49 pending IDs still missing corresponding sanitized `_safe.json` files by `_wu_name`/`_result_name`).
-- Cleanup run: aborted 0 dead-host >12h tasks; aborted 0 >48h tasks.
-- Completed outcome snapshot: outcome=1 -> 303, outcome=3 -> 3, outcome=6 -> 2812.
-- Website counters refreshed: credited_count=254; total_results_count=303 (non-decreasing rule applied).
-- Open question: outcome=6 dominates completed failures; continue separating scheduler/manual-abort effects from true script defects before mass-aborting experiments.
+- Why assimilator visibility lags for recently completed result names (51 pending credit despite completion).
+- Separate server-abort policy effects from experiment-code defects before any broad experiment shutdown.
