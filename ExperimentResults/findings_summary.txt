@@ -1,45 +1,81 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (validation session 14:39-14:46 CET)
-=================================================
+Last updated: March 4, 2026 (session p1_validate_2026-03-04_0446)
+============================================================
 
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+CORE SCIENTIFIC STATUS
+- No reversal observed yet for prior inverse critical-period / WD timing signal.
+- Current queue still emphasizes WD interaction/trigger families plus ecological-delay families.
+- Reliability bottleneck persists: completed rows continue to arrive without upload JSON artifacts.
 
-CORE STATUS
-- No new 30+ seed cross-validated result reached promotion threshold in this session.
-- Scientific crediting remains blocked by sanitized-result lag for newly completed rows.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-ACTIVE EXPERIMENT CONTEXT
-- CPU delay/control families remain active (ecology, PDE, network and climate-delay lines).
-- GPU families active in rotation: wd_noise_trigger_gpu, wd_curvature_trigger_gpu,
-  wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress.
+VALIDATION SESSION UPDATE (March 4, 2026, 04:46, Part 1)
+- Completed rows credited this session: 268 rows, 2057 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: 268/268 missing JSON artifacts at audit time.
+- Broken-prefix active-task cleanup attempted: oscillatory_roughchannel_lbm_resonance=0, abx_cycle=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0 (no active rows matched).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters repaired/updated: credited_count=6731; total_results_count=1344.
+- Cutoff snapshot at session end: uncredited completed exp success rows=21 (new arrivals after credit batches).
 
-VALIDATION STATUS (March 4, 2026 14:46 CET)
-- Uncredited completed-success rows reviewed: 248 (`exp_%`, live DB snapshot).
-- Sanitized match coverage for reviewed rows: 0/248 by `_result_name`; 0/248 by workunit name.
-- Quality-based credit awarded this session: 0 results, 0 total credit (safety cap respected).
-- Completed outcome snapshot: success total=2381; success credited rows=2133; success uncredited=248.
-- Stuck-task cleanup executed: dead-host >12h aborted 0; hard >48h aborted 0.
-- High-failure families remain: oscillatory_roughchannel_lbm_resonance (0/214 success),
-  abx_cycle (0/66), potts_pulse_anneal_resonance (0/21), spatial_pgg_delay_fatigue (0/20).
-- Active backlog for those failure families is currently zero unsent and zero in-progress;
-  no targeted abort action required this pass.
-- Website counters refreshed (non-decreasing rule): credited_count=2133, total_results_count=2381.
+RELIABILITY NOTES
+- Dominant failure mode in broken prefixes remains outcome=5/6 with empty stderr and missing upload artifacts.
+- Host 287 continues to contribute large high-failure bursts across delay-family workloads.
 
 OPEN QUESTIONS
-- Why sanitizer/assimilator artifacts for newest successful results remain unavailable at validation time.
-- Whether specific 100% failure scripts now include fixes in source rotation, since no stderr tracebacks
-  are retained in DB rows for recent outcome=5 failures.
+1) Why do many completed rows still have no upload artifact despite terminal server_state=5 outcomes?
+2) Is an assimilator/file_deleter timing race removing payloads before validator review?
+3) Should BOINC-side timeout/credit policy become automatic to reduce manual backlogs?
+4) Should per-prefix auto-pause trigger on repeated empty-stderr outcome 5/6 bursts?
+
+VALIDATION SESSION UPDATE (March 4, 2026, 05:01, Part 1)
+- Completed rows credited this session: 251 rows, 1965 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: 251/251 missing JSON artifacts at audit time (no xperiment_result blobs found).
+- Broken-prefix active-task cleanup: oscillatory_roughchannel_lbm_resonance=0, abx_cycle_hgt_delay_resonance=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0 active rows (none to abort this pass).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=1575; total_results_count=1575.
+- Cutoff snapshot at session end: uncredited completed exp rows=4 (new arrivals after credit batch).
+
+RELIABILITY NOTES
+- Broken families still show deterministic failure signatures (outcome=5, exit_status=0, empty stderr_out).
+- Completed rows continue to be marked successful without corresponding upload JSON artifacts.
+
+VALIDATION SESSION UPDATE (March 4, 2026, 05:15, Part 1)
+- Completed rows credited this session: 254 rows, 1765 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: missing=254, experiment_result=0, error=0.
+- Broken-prefix active-task cleanup: oscillatory_roughchannel_lbm_resonance=0, abx_cycle=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=1829; total_results_count=1830.
+- Cutoff snapshot at session end: uncredited completed exp success rows=1.
+
+RELIABILITY NOTES
+- Completed rows continue to outnumber retrievable JSON artifacts; validator still sees a missing-payload regime.
+- Broken families still present as outcome=5/6 with exit_status=0 and empty stderr_out in recent failures.
+
+VALIDATION SESSION UPDATE (March 4, 2026, 05:29, Part 1)
+- Completed rows credited this session: 308 rows, 2122 total credit (under 10,000 cap).
+- Upload payload audit for reviewed rows: missing=308, experiment_result=0, error=0, invalid_json=0.
+- Broken-prefix active-task cleanup: oscillatory_roughchannel_lbm_resonance=0, abx_cycle=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=2137; total_results_count=2138.
+- Cutoff snapshot after credit run: uncredited completed exp success rows=9 (new arrivals post-batch).
+
+RELIABILITY NOTES
+- Missing-upload regime persists across both CPU and GPU completed rows this session.
+- Four non-success rows (outcome=6, elapsed=0) were credited minimally for donated compute attempts.
+
+VALIDATION SESSION UPDATE (March 4, 2026, 05:46, Part 1)
+- Completed rows credited this session: 253 rows, 1999 total credit (under 10,000 cap).
+- Upload payload audit for credited rows: missing=253, experiment_result=0, error=0, invalid_json=0.
+- App mix for credited rows: CPU(appid=1)=237, GPU(appid=2)=16.
+- Broken-prefix active-task cleanup: oscillatory_roughchannel_lbm_resonance=0, abx_cycle_hgt_delay_resonance=0, abx_cycle=0, potts_pulse_anneal_resonance=0, spatial_pgg_delay_fatigue=0.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters updated: credited_count=2386; total_results_count=2420.
+- Cutoff snapshot after credit run: uncredited completed exp success rows=34 (new arrivals post-batch).
+
+RELIABILITY NOTES
+- Missing-upload regime persists across all credited rows this pass (no retrievable JSON artifacts at audit time).
+- No active tasks remained for known broken prefixes during this validation window.

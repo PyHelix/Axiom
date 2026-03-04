@@ -1,0 +1,81 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: 2026-03-04 05:53 (Part 3 consolidation)
+Sources: validate_2026-03-04_0546.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1: VALIDATION / CREDIT SUMMARY
+- Reviewed and credited 253 completed experiment results (outcome=1).
+- Upload audit for reviewed rows: 253/253 missing JSON payloads at audit time.
+- Runtime profile (reviewed rows): min 22.21s, avg 823.60s, max 964.63s.
+- App mix (reviewed rows): CPU=237, GPU=16.
+- Credit awarded this session: 1,999.0 total (cap check PASS <= 10,000).
+- Per-user credit additions:
+  - Amapola +1316.0
+  - Steve Dodd +487.0
+  - ChelseaOilman +110.0
+  - kotenok2000 +20.0
+  - Vato +16.0
+  - PyHelix +15.0
+  - WTBroughton +14.0
+  - _Scandinavian_ +8.0
+  - [DPC] hansR +7.0
+  - dthonon +6.0
+- Post-run snapshot: uncredited completed success rows after batch = 34 (new arrivals).
+
+CLEANUP / STUCK OR BROKEN TASK ACTIONS
+- Dead-host stuck-task aborts (>12h running and >6h no contact): 0.
+- Hard-ceiling aborts (>48h running): 0.
+- Broken-prefix active-task aborts this pass:
+  - oscillatory_roughchannel_lbm_resonance: 0
+  - abx_cycle_hgt_delay_resonance: 0
+  - abx_cycle: 0
+  - potts_pulse_anneal_resonance: 0
+  - spatial_pgg_delay_fatigue: 0
+- Retirement pass in Part 2: ABORT_TOTAL=0 (retirement candidates had unsent=0 at execution time).
+
+PART 2: DEPLOYMENT / RESEARCH SUMMARY
+CPU deployment (from run_2026-03-03_1352.log)
+- Host-targeted queue fill policy: target 3x CPU tasks per active host; skip hosts with RAM <6 GB.
+- CPU hosts scanned: 81.
+- CPU hosts skipped for RAM threshold: 2.
+- CPU workunits created: 2937.
+- CPU scripts used:
+  - wd_batchnoise_interaction.py (newly authored this session)
+  - wd_labelsmooth_interaction.py
+- Deployment targeted active CPU host pool in this run (81 hosts scanned, 79 eligible for fill).
+
+GPU deployment
+- GPU deployment stage launched with scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- The captured run log ended during GPU execution (^C), so in-log final counters were not printed.
+- GPU checkpoint (server snapshot for these script families, since 2026-03-03 00:00 server time):
+  - GPU hosts observed: 85
+  - GPU workunits observed: 2312 total
+    - wd_curvature_trigger_gpu: 1165
+    - wd_timing_scale_gpu: 1147
+  - Host IDs observed for these GPU queues: 1,6,7,9,15,16,23,29,31,57,67,71,72,74,80,85,86,87,95,105,107,113,115,116,118,123,126,127,137,140,159,192,205,206,209,212,216,217,219,222,223,249,251,253,255,258,267,287,299,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,345,346,347,349,350,351,352,353,354,355,356.
+
+NEW EXPERIMENTS DESIGNED THIS SESSION
+1) wd_batchnoise_interaction.py (new CPU experiment)
+- Hypothesis: late weight decay benefits should be stronger in higher gradient-noise (small-batch) regimes than in low-noise (large-batch) regimes.
+- Implementation notes: host-seeded runs, enforced run_duration loop, multi-trial aggregate metrics, JSON result serialization.
+- Deployment status: script uploaded and syntax-checked (python3 -m py_compile OK); included in CPU deployment script list.
+
+NOVELTY CHECK DOCUMENTATION (PART 2)
+- Literature/web checks recorded in run log included searches for:
+  - weight decay label smoothing interaction (arXiv)
+  - adaptive weight decay deep neural networks (arXiv)
+  - batch size vs weight decay generalization (arXiv)
+  - weight decay + batch size + schedule (general)
+  - Decoupled Weight Decay (arXiv:1711.05101)
+- Outcome used for design decisions: proceed with interaction/mechanism experiments rather than repeating retired over-seeded baselines.
+
+KEY SCIENTIFIC FINDINGS
+1. No new mechanistic conclusion could be extracted from Part 1 reviewed rows because payload availability remained 0/253 for that batch (all expected JSON artifacts missing at audit time).
+2. Compute throughput remained robust across CPU and GPU contributors, with reviewed successful task runtimes clustering near ~800-900 seconds.
+3. Reliability remains the dominant blocker to interpretation: successful completion/credit events continue to outpace retrievable experiment payloads.
+4. Part 2 prioritized mechanism-focused WD interaction lines (batch-noise interaction and GPU curvature/timing families) while enforcing retirement safeguards for over-completed lines.
+
+WEBSITE COUNTERS (FROM PART 1 LOG)
+- credited_count.txt: 2386
+- total_results_count.txt: 2420
