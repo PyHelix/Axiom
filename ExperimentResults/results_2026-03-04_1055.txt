@@ -1,0 +1,57 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: p3_save_2026-03-04_1055
+Timestamp: 2026-03-04 10:55 America/Denver
+
+PART 1 VALIDATION/CREDIT SUMMARY
+- Source log: validate_2026-03-04_1050.txt
+- Reviewed/credited rows: 309 (ID span 1662263 to 1683798; IDs omitted here by design)
+- Success/non-success mix: success=295, non-success=14
+- Payload audit: experiment_result present=298, missing payload=11
+- CPU/GPU reviewed mix: CPU(appid=1)=296, GPU(appid=2)=13
+- Credit awarded this session: applied_rows=309, applied_credit=6492 (safety cap PASS, <=10000)
+- Website counters after update: credited_count=2037, total_results_count=2121
+- Post-session tail snapshot: uncredited_success=15, uncredited_failure=0
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running aborts applied: 0
+- Hard >48h running aborts applied: 0
+- Broad broken-experiment abort action: none applied
+- Reason recorded in validation: fail clusters dominated by host/no-reply effects and retry variants, not a confirmed deterministic single-script crash family.
+
+PART 2 DEPLOYMENT/RESEARCH SUMMARY
+- Source run log: run_2026-03-03_1352.log
+- Retirement pass executed; no unsent aborts in that pass (ABORT_TOTAL=0).
+
+CPU DEPLOYMENT
+- CPU scripts targeted: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- CPU host pass stats from run log: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2
+- CPU workunits created in pass: CPU_WU_CREATED=2937
+- Host assignment mode: host-targeted fill to approximately 3x CPU queue depth, with duplicate-name checks and low-RAM host exclusion (<6 GB).
+
+GPU CHECKPOINT
+- GPU scripts targeted: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+- Run log was interrupted before final GPU echo summary; checkpoint recovered from DB snapshot (workunits created since 2026-03-03 13:52):
+  - wd_curvature_trigger_gpu (GPU): 1576 WUs across 85 hosts
+  - wd_timing_scale_gpu (GPU): 1523 WUs across 84 hosts
+  - Total GPU WUs across these scripts: 3099
+  - Distinct GPU host coverage across checkpointed scripts: 85 hosts
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New experiment script added in Part 2: wd_batchnoise_interaction.py
+- Design hypothesis (from run log): late weight decay improves generalization more in high-noise/small-batch training than in low-noise/large-batch training.
+- Novelty-check evidence captured in run log web queries before deployment, including:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "Scheduled Weight Decay paper arxiv 2021"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+- Novel contribution angle documented in experiment code: explicit interaction test between late-WD gain and gradient-noise regime, not only single-factor WD timing sweeps.
+
+KEY SCIENTIFIC FINDINGS
+1. The March 04 validation batch remained data-rich: 298/309 credited rows included non-empty experiment payloads, indicating stable end-to-end ingestion in active families.
+2. Delay/ecology-control families remained strongly represented among validated outputs (notably lorenz96_delay_assimilation_regime_shift, seasonal_metapop_vax_trigger, tritrophic_delay_harvest_resilience, and grayscott_delay_pulse_feedback), supporting continued cross-family robustness checks.
+3. Non-success clustering in this pass is still more consistent with host/reliability effects than a newly confirmed global model-level reversal, so broad abort of healthy experiment families was not triggered.
+4. Research track expanded to interaction-mechanism testing: wd_batchnoise_interaction was introduced to test whether late-WD gains depend on batch-noise regime, extending beyond already-established single-axis WD timing observations.
+
+NOTES
+- This log intentionally excludes cumulative per-result ID dumps; the database remains the source of truth for credited result tracking.

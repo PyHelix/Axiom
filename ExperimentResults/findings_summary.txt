@@ -1,57 +1,35 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (analysis session 17:42 UTC; no new sanitized files in last 120 min)
-=================================================
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_1050)
+============================================================
 
-CONFIRMED FINDINGS (append-only - never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) - retired, finding established
-7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
-8. WD depth interaction: completed (1282+ results) - retired
-9. WD task sweep: completed (1077+ results) - retired
-10. WD optimizer interaction: completed (1043+ results) - retired
-11. WD learning rate interaction: completed (1037+ results) - retired
-12. WD width transition: completed (928+ results) - retired
-13. WD window: completed (841+ results) - retired
-14. Representation crystallization: completed (368+ results) - retired
-15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
-16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
-17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
+CORE SCIENTIFIC STATUS
+- No reversal observed so far for the prior inverse critical-period / WD timing signal.
+- Active focus remains WD trigger/timing families plus delay-driven ecology/control families.
+- Current validated batches continue to produce stable non-empty `experiment_result` payloads for most completed successes.
 
-NEW PRELIMINARY FINDINGS (this cycle)
-- XY delay thermostat reentrance: reentrant_mean = +0.011023 +/- 0.001811 across 163 new runs (115 seeds, 4 hosts), sign consistency 163/163 positive, d=6.07. Preliminary support for positive reentrant window (modest absolute magnitude).
-- Interdependent-flow memory shedding tradeoff: mean_medium_window_gain = -0.001340 +/- 0.000751 across 149 runs (105 seeds, 9 hosts), 87.9% negative (131/149), d=-1.78. Preliminary evidence against medium-window benefit hypothesis.
-- Chemostat delay crossfeeding resonance: adaptive_vs_fixed_coexistence = -0.002975 +/- 0.002291 (n=193, 156 seeds, 4 hosts, 91.7% negative, d=-1.30); adaptive_vs_pulse_coexistence = -0.003761 +/- 0.002122 (95.3% negative, d=-1.77). Statistically consistent but practically small (<0.5 percentage points coexistence).
-- Cahn-Hilliard delay feedback window: reentrant_mean = +0.000750 +/- 0.000086 (n=144, 114 seeds, 4 hosts, 100% positive, d=8.70). Preliminary directional support; absolute effect is small.
-- Climate delay carbon hysteresis window: mean_reentrant_index = +0.000083 +/- 0.002349 (n=144, 112 seeds, 2 hosts, d=0.035) while mean_best_gain remains negative (-0.048337 +/- 0.000049, 144/144 negative). Inconclusive for reentrant benefit.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is curvature-triggered versus fixed-onset.
 
-REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance adds 104 runs (83 seeds, 6 hosts); resonance_mean remains positive (+0.06698 +/- 0.00273), resonance_positive_rate 0.89269 +/- 0.01065.
-- Autocatalytic dilution memory window adds 101 runs (86 seeds, 3 hosts); mean_reentrant_gain remains positive (+0.002438 +/- 0.000489).
-- Nonmarkov trap release window adds 49 runs (24 seeds, 6 hosts); mean_reentrant_gain remains positive (+0.000153 +/- 0.000023).
+VALIDATION SESSION UPDATE (March 04, 2026, 10:50, Part 1)
+- Reviewed/credited completed rows this session: 309 total (success=295, non-success=14).
+- Payload audit for credited rows: experiment_result=298; missing upload payload=11.
+- Credit posted this session: 309 rows, 6492 total credit (under 10,000 cap).
+- Credited mix from reviewed batch: CPU(appid=1)=296 rows, GPU(appid=2)=13 rows.
+- Success elapsed profile (credited): min=52.36s, median=844.66s, max=961.00s.
+- Dominant reviewed families: lorenz96_delay_assimilation_regime_shift (18), seasonal_metapop_vax_trigger (18), tritrophic_delay_harvest_resilience (17), grayscott_delay_pulse_feedback (17), oscillatory_roughchannel_lbm_resonance (14).
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening (CPU/GPU split): no broad abort applied this pass; recent failures are dominated by host/outcome-no-reply patterns rather than one confirmed deterministic script crash family.
+- Website counters updated: credited_count=2037; total_results_count=2121.
+- Cutoff snapshot after this pass: uncredited completed success rows=13; uncredited completed failure rows=0.
+
+RELIABILITY NOTES (March 04, 2026, 10:50)
+- Large recent fail-rate percentages in several delay families are inflated by outcome=5/no-reply style returns from specific hosts and retry variants.
+- No active experiment prefix met a high-confidence “single broken script” criterion strong enough for safe broad abort without risking healthy throughput.
 
 OPEN QUESTIONS
-- XY thermostat: does positive reentrant index persist under broader control-variance regimes and additional host architectures.
-- Interdependent-flow model: is negative medium-window gain robust to alternative load-shedding penalties.
-- Chemostat model: are small negative coexistence deltas biologically meaningful after relative-effect rescaling.
-- Climate hysteresis model: can parameter sweeps raise reentrant index away from near-zero without the observed negative best-gain regime.
-- CSTR poison/purge reentrance currently has N=9 runs (<10); gather more seeds before interpretation.
-
-NEW EXPERIMENT DESIGNED (March 4, 2026)
-- metapop_predator_delay_refuge_reentrance.py
-  Hypothesis: in a two-patch predator-prey metapopulation with seasonal phase mismatch, adaptive refuge control with intermediate decision delay yields a reentrant coexistence advantage versus fixed and pulse refuges.
-
-NOVELTY CHECK LOG
-- Query: "delay predator prey refuge model seasonal forcing metapopulation"
-  Finding: prior work exists on delayed predator-prey and refuge effects, but not this combined regime (metapopulation + seasonal phase lag + adaptive delayed refuge policy comparison).
-- Query: "adaptive refuge predator prey delayed response coexistence"
-  Finding: literature mostly studies fixed/continuous refuge or single-delay control; direct adaptive-vs-pulse-vs-fixed comparisons under delayed sensing were not found.
-- Query: "phase lag seasonal forcing predator prey delay model coexistence"
-  Finding: phase-lag forcing studies exist, but no exact test of delay-induced reentrant gain metric against alternative refuge policies.
-- Novel angle retained: quantify reentrant index and gain-vs-best-alternative under joint delay/phase/dispersal heterogeneity.
-
-DEPLOYMENT NOTE
-- create_work for both CPU and GPU currently hangs on this server (timed out repeatedly at 20s and 120s), so this cycle could not add new WUs despite available host capacity.
+1) Should automated broken-experiment pausing require outcome-type filtering (e.g., discount outcome=5/no-reply) plus multi-host confirmation?
+2) Are recurring GPU bursts on specific Windows hosts primarily runtime/driver instability vs experiment-specific CUDA defects?
+3) Should validation cadence increase further to keep the success tail near zero while throughput spikes?
