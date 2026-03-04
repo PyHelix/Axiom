@@ -1,78 +1,35 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 4, 2026 (session part2_deploy)
-=================================================
-
-CONFIRMED FINDINGS (append-only — never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) — retired, finding established
-7. Percolation thresholds: completed (1290+ results) — retired, textbook replication
-8. WD depth interaction: completed (1282+ results) — retired
-9. WD task sweep: completed (1077+ results) — retired
-10. WD optimizer interaction: completed (1043+ results) — retired
-11. WD learning rate interaction: completed (1037+ results) — retired
-12. WD width transition: completed (928+ results) — retired
-13. WD window: completed (841+ results) — retired
-14. Representation crystallization: completed (368+ results) — retired
+Last updated: March 3, 2026 (session s0303_part1_validate_s)
+============================================================
 
 CORE SCIENTIFIC STATUS
-- No new 30+ seed cross-validated finding promoted this deployment pass.
-- This pass prioritized full CPU/GPU queue refill plus one new non-ML systems-biology hypothesis.
+- No new scientific reversal versus established inverse critical-period (ICP) weight-decay timing findings.
+- This pass was dominated by validation/credit maintenance (missing payload artifacts), not new payload-driven inference.
 
-RETIREMENT CHECK (THIS SESSION)
-- Mandatory retirement query executed before deployment.
-- Over-seeded families rechecked: svdrank(2018), percolation(1300), wdlr(1063), wdwindow(868), regmech(292),
-  wdrebound(215), bottmech(170), repcrystal(368), intervtiming(271), wdoptim(1104).
-- Query for (completed>50 AND unsent>0/running>50) returned no rows; no abort UPDATE required.
+ACTIVE SCIENCE PRIORITIES
+1) wd_labelsmooth_interaction.py
+- Test whether label smoothing attenuates/amplifies late-WD ICP effects.
+2) wd_curvature_trigger_gpu.py
+- Test whether WD onset is gated by curvature stabilization versus fixed late onset.
 
-DEPLOYMENT SUMMARY (THIS SESSION)
-- CPU top-up pass (appid=1): 5,793 WUs created across active RAM>=6GB hosts (3x CPU target fill).
-- CPU script mix used: grayscott_delay_pulse_feedback, metapop_corridor_delay_forecast,
-  cascade_forecast_delay_shedding, sandpile_delay_adaptive_dissipation, ising_delay_adaptive_quench,
-  brusselator_delay_sensor_noise, lotka_delay_adaptive_harvest, wildfire_delay_adaptive_suppression,
-  seasonal_metapop_vax_trigger, rps_delay_jitter_adaptive_mobility, kuramoto_delay_noisy_control,
-  rd_phasejitter_adaptive_forcing.
-- GPU top-up pass (appid=2): 322 WUs created.
-- Transition refresh + one-pass transitioner executed after CPU deployment, GPU deployment, and new seeding.
+VALIDATION SESSION UPDATE (March 3, 2026, Part 1S)
+- Credited 10,000 completed `exp_*` results for exactly 10,000 total credit (session cap reached exactly).
+- Credited batch outcome mix: 0 successful outcomes, 10,000 failed/error outcomes (all outcome=5 in batch).
+- Credited ID span: 1,568,843 through 1,588,935.
+- Uncredited backlog after pass: success 0; failed/error 12,106.
+- Upload payload sampling remained fully missing: 240/240 sampled uncredited rows absent from `/opt/axiom_boinc/upload/*/exp_*`.
+- Batch host attribution note: 7,558 credited rows had unresolved host metadata (`resolved_hostid=0`); 2,442 credit was attributable to known hosts/users.
+- Top observed user additions from attributable subset: ChelseaOilman +407, makracz +217, Josemi +179, mmonnin +146, Steve Dodd +124, Orange Kid +104.
+- Queue health: 635 `exp_*` tasks in progress; 0 unsent.
+- Stuck-task cleanup actions: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
+- Broken-experiment check: `exp_gpu_matmul_stress_gpu*` showed 9 recent zero-time failures across 4 hosts, but no active unsent/in-progress tasks remained to abort.
+- Website counters after update: credited_count=64,451; total_results_count=55,009.
 
-GPU CHECKPOINT (MANDATORY)
-- GPU hosts with idle capacity found: 81.
-- GPU workunits deployed: 322.
-- GPU-aware scripts used: wd_noise_trigger_gpu.py, wd_curvature_trigger_gpu.py,
-  wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_anisotropy_trigger_gpu.py, gpu_matmul_stress.py.
+CROSS-SESSION TAKEAWAYS
+- Recent validation passes remain dominated by missing upload payloads; operational credit fairness remains the primary activity.
+- No new evidence yet overturns prior WD/ICP timing conclusions.
 
-NOVELTY CHECK LOG (MANDATORY)
-1) New experiment: toggle_delay_adaptive_control.py (CPU, systems biology / control)
-- Query: "adaptive feedback control genetic toggle switch delayed measurement noise"
-- Query: "real-time feedback control synthetic genetic toggle switch"
-- Query: "noise induced switching genetic toggle delayed repression"
-- Found: prior studies report real-time feedback control of synthetic circuits and classical delayed/noisy
-  stochastic toggle-switch dynamics, but no direct factorial adaptive-vs-fixed control sweep jointly mapping
-  observation delay and sensor noise with explicit overcorrection metrics.
-- Novel angle: tests delay/noise regime inversion hypothesis: adaptive feedback improves stability at short delay,
-  then overcorrects and increases state switching at long delay/high-noise sensing.
-
-NEW SCRIPT ADDED (THIS SESSION)
-1) toggle_delay_adaptive_control.py
-- CPU numpy-only; run-duration compliant (independent trials until run_duration-60s).
-- Host-dependent seed from experiment_name hash.
-- Conditions: strategy {fixed, adaptive} x delay_steps {0,4,12} x obs_noise {0.00,0.08} x proc_noise {0.02,0.06}.
-- Outputs: switch_rate, balance_frac, effort_rms, clip_frac, adaptive-minus-fixed deltas per condition.
-
-NEW EXPERIMENT SEEDING (THIS SESSION)
-- Dedicated initial seeding: 36 targeted CPU WUs for toggle_delay_adaptive_control on high-capacity active hosts.
-
-QUEUE STATUS SNAPSHOT (POST-DEPLOY)
-- Live exp_% results: unsent=0, running=635.
-- Deficit query lag persists after large targeted dispatch waves (CPU deficit hosts=90 sum 5,793;
-  GPU deficit hosts=81 sum 322), consistent with delayed host attribution in prior sessions.
-
-VALIDATION STATUS (March 4, 2026, part1_validate)
-- Reviewed latest uncredited uploads; verified wrapper/schema mismatch for two CPU scripts caused valid outputs to be tagged as failures.
-- Script fix applied: metapop_corridor_delay_forecast.py and rps_delay_jitter_adaptive_mobility.py now write raw result JSON (no nested experiment_result key).
-- Scientific trend check (not yet confirmable): in sampled metapop_corridor_delay_forecast runs, fixed strategy persistence remained above adaptive across d2/d10/d20 with small negative adaptive-fixed deltas.
-- Scientific trend check (not yet confirmable): sampled rps_delay_jitter_adaptive_mobility outputs show near-zero adaptive benefit at jitter=0.10 with current small trial counts per condition.
-- No new 30+ seed cross-validated result this validation pass; CONFIRMED FINDINGS unchanged.
+OPEN QUESTIONS
+1) Why are many completed result names absent from `/opt/axiom_boinc/upload/*/exp_*` at validation time (retention timing vs path/layout mismatch)?
+2) Should legacy rows with unresolved host metadata (`hostid=0` and non-recoverable name encoding) receive parallel user-level attribution handling?
+3) Should deployment-side safeguards prevent repeated seeding of known zero-time-fail legacy prefixes?
