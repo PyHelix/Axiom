@@ -1,0 +1,41 @@
+AXIOM SESSION RESULTS
+Timestamp: 2026-03-04 13:41 CET
+Session scope: Part 1 validation/credit + cleanup, and Part 2 deployment/design consolidation.
+
+VALIDATION AND CREDIT (PART 1)
+- Uncredited completed-success results reviewed: 248.
+- Sanitized payload coverage for reviewed rows: 0/248 by result name; 0/248 by workunit name.
+- Credit awarded this session: 0 results; total credit added: 0 (within safety cap).
+- Point-in-time completion counters: success_total=2381, success_credited_rows=2133, success_uncredited=248.
+- Website counters refreshed: credited_count=2133, total_results_count=2381.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host cleanup (>12h): 0 rows affected.
+- Hard-timeout cleanup (>48h): 0 rows affected.
+- High-failure families checked (oscillatory_roughchannel_lbm_resonance, abx_cycle_hgt_delay_resonance, potts_pulse_anneal_resonance, spatial_pgg_delay_fatigue): active unsent/in-progress backlog remained 0, so no additional aborts were required.
+
+DEPLOYMENT AND NEW EXPERIMENT DESIGN (PART 2)
+- Backlog/cap checks passed before deployment; mandatory GPU deployment was executed separately from CPU deployment.
+- GPU deployment: 414 GPU workunits created across GPU-aware script families (wd_noise_trigger_gpu, wd_curvature_trigger_gpu, wd_timing_scale_gpu, grad_subspace_wd_gpu, wd_anisotropy_trigger_gpu, gpu_matmul_stress).
+- CPU deployment: 2800 CPU workunits created on RAM>=6GB hosts with 3x host-cap gap targeting.
+- New experiment deployed: nonmarkov_trap_release_window (100 CPU workunits for first-pass sampling).
+- Post-deploy cap enforcement: CPU_CAP_ABORTED=0, GPU_CAP_ABORTED=0.
+- Final queue snapshot after transitioner pass: unsent=0, in_progress=1382, active_hosts=92.
+
+NOVELTY CHECK DOCUMENTATION (NEW EXPERIMENT)
+- Experiment: nonmarkov_trap_release_window (non-Markovian trap-release control for re-entrant transport).
+- Search query: "re-entrant diffusion intermediate memory trapping release lattice model".
+  Result: no exact publication match found for this specific intermediate-window controller hypothesis.
+- Search query: "time-delayed trap release diffusion coefficient study".
+  Result: related delayed/non-Markovian trapping studies exist, but not this explicit controller-window comparison objective.
+- Search query: "non-Markovian trapping random walk reentrant transport".
+  Result: broad related literature exists; no direct match found for this diffusion-minus-control-cost metric test.
+- Novel angle retained: test whether intermediate memory windows (4,12) outperform short and long windows (1,24) on transport efficiency under adaptive release costs.
+
+KEY SCIENTIFIC FINDINGS
+1. No new promotable cross-validated finding was confirmed in this cycle because newly completed successful rows still had no attributable sanitized numeric payloads at validation time.
+2. Active delay/control study conclusions remained unchanged in this pass due to zero newly reviewable sanitized outputs.
+3. A new non-Markovian transport experiment line was introduced with documented novelty checks and first-pass deployment, opening a fresh hypothesis path without retesting confirmed findings.
+
+OPERATIONAL NOTES
+- Cumulative result-ID lists were intentionally omitted from this session log; database state remains the source of truth for credited rows.
