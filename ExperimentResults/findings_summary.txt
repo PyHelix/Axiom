@@ -58,3 +58,15 @@ VALIDATION SESSION UPDATE (March 04, 2026, 13:07, Part 1)
 - Broken-experiment screening this pass: no recent nonzero-elapsed multi-host crash family requiring active queue abort.
 - Website counters updated: credited_count=1875; total_results_count=1667.
 - Cutoff snapshot after this pass: uncredited completed success rows=70; uncredited completed failure rows=2578 (nonzero-elapsed failures pending credit: 0).
+
+VALIDATION SESSION UPDATE (March 04, 2026, 13:31, Part 1)
+- Reviewed/credited completed rows this session: 246 success rows (result IDs spanning 1672780-1686848).
+- Payload audit for credited rows: 246/246 were valid experiment_result JSON payloads.
+- Credit posted this session: 246 rows, 4890 total credit (under 10,000 cap).
+- Credit distribution (top contributors): ChelseaOilman 4200; PyHelix 131; _Scandinavian_ 100; Steve Dodd 80; kotenok2000 71; Vato 60; hwt 51; Henk Haneveld 40.
+- Success elapsed profile (credited batch): min=67.990128 s, median=844.167149 s, max=888.661537 s.
+- Dominant credited families: tritrophic_delay_harvest_resilience, metapop_corridor_delay_forecast, grayscott_delay_pulse_feedback, kuramoto_delay_noisy_control, multiplicative_reset_sign_stability, lorenz96_delay_assimilation_regime_shift, fisher_delay_adaptive_culling, abx_cycle_hgt_delay_resonance.
+- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment screening this pass: no active nonzero-elapsed multi-host crash signature requiring broad abort.
+- Website counters updated: credited_count=1843; total_results_count=1843.
+- Cutoff snapshot after this pass: uncredited completed success rows=0; uncredited completed failure rows=3009 (all elapsed=0).

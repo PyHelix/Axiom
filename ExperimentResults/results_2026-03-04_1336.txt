@@ -1,0 +1,48 @@
+AXIOM BOINC SESSION LOG - PART 3 SAVE SUMMARY
+Session timestamp: 2026-03-04 13:36 -07:00
+Source logs: validate_2026-03-04_1331.txt, run_2026-03-03_1352.log
+
+PART 1 VALIDATION AND CREDIT SUMMARY
+- Reviewed and credited: 246 completed success results (all payload-valid experiment_result JSON).
+- Incremental credit awarded: 4890 total credit (session cap 10000).
+- Top credited contributors this session: ChelseaOilman, PyHelix, _Scandinavian_, Steve Dodd, kotenok2000.
+- Dominant credited experiment families: tritrophic_delay_harvest_resilience, metapop_corridor_delay_forecast, grayscott_delay_pulse_feedback, kuramoto_delay_noisy_control, multiplicative_reset_sign_stability, lorenz96_delay_assimilation_regime_shift, fisher_delay_adaptive_culling, abx_cycle_hgt_delay_resonance.
+- Throughput profile remained stable: min 67.990128 s, median 844.167149 s, max 888.661537 s.
+
+CLEANUP AND STABILITY ACTIONS
+- Stuck dead-host tasks aborted (>12h run, >6h no contact): 0.
+- Hard-ceiling aborts (>48h run): 0.
+- Broken-experiment broad aborts: none in Part 1.
+- Part 2 retirement pass executed; retirement candidates were reviewed and ABORT_TOTAL=0 because unsent backlog for those candidates was already zero.
+
+PART 2 DEPLOYMENT SUMMARY
+CPU DEPLOYMENT
+- Host-targeted CPU queue-fill to ~3x CPU slots was run.
+- CPU hosts scanned: 81.
+- Hosts skipped for low RAM (<6 GB): 2.
+- CPU workunits created in this deployment pass: 2937.
+- CPU scripts used: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+
+GPU DEPLOYMENT CHECKPOINT
+- Planned GPU scripts: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Run log shows GPU deployment command was started but interrupted before completion output was emitted.
+- Verified checkpoint after run: 0 active hosts and 0 workunits currently matching these two GPU deployment name patterns.
+- Operational interpretation: no confirmed new GPU queue-fill from this interrupted pass.
+
+NEW EXPERIMENTS DESIGNED (WITH NOVELTY CHECK DOCUMENTATION)
+1. wd_batchnoise_interaction.py
+- Hypothesis: late weight-decay gain should be stronger under small-batch gradient-noise conditions than large-batch conditions.
+- Novelty check recorded in run log via web/literature searches including:
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+  - "site:arxiv.org batch size weight decay generalization"
+  - "\"weight decay\" \"batch size\" \"schedule\" neural networks"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Script upload and server syntax validation were completed (python3 -m py_compile -> OK).
+
+KEY SCIENTIFIC FINDINGS
+1. This session added 246 validated science-bearing experiment_result payloads with no credited payload corruption, strengthening confidence in current delay/resonance and WD-track data streams.
+2. Runtime behavior stayed tightly centered near an ~844 s median across mixed experiment families, indicating stable volunteer throughput and predictable batch timing.
+3. The strongest replication volume in this credited batch came from tritrophic delay harvest resilience, metapop corridor delay forecast, and grayscott delay pulse feedback, improving statistical support for those lines.
+4. No active nonzero-elapsed multi-host crash signature was detected in Part 1, so no broad experiment shutdown was required.
+5. Research direction advanced with a new interaction-focused WD experiment design (batch-noise x late-WD interaction), with explicit novelty search evidence logged before deployment attempts.
