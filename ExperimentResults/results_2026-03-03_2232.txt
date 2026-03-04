@@ -1,0 +1,49 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-03 22:32:58 (America/Denver)
+Source logs: validate_2026-03-03_2228.txt + run_2026-03-03_1352.log
+
+PART 1: VALIDATION, CREDIT, CLEANUP
+- Reviewed newest 80 upload payloads: 80/80 contained valid experiment_result JSON; 0 parse errors; 0 explicit error payloads.
+- Completed-uncredited backlog at start: 0 rows.
+- Additional completed rows during session were credited: 22 rows.
+- Session credit awarded: 44 total (within 10,000 cap).
+- Per-user credit additions: Time_Traveler +20, Steve Dodd +14, ChelseaOilman +6, PyHelix +4.
+- Remaining completed-uncredited rows after session: 0.
+- Stuck-task cleanup: 0 aborted by dead-host >12h rule; 0 by >48h hard ceiling.
+- Broken-experiment global aborts this session: none.
+- Website counters after refresh: credited_count=54,505; total_results_count=55,054.
+
+PART 2: DEPLOYMENT AND EXPERIMENT DESIGN
+Retirement / cleanup checkpoint
+- Retirement candidate scan executed; ABORT_TOTAL=0 (no unsent retirements triggered in this pass).
+
+CPU deployment
+- CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+- Auto-review deployment metrics from run log: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2, CPU_WU_CREATED=2937.
+- Current DB checkpoint for these CPU prefixes: 5,864 workunits across 19 hosts.
+- CPU hosts currently carrying these deployments:
+  1 (Pyhelix), 6 (iand-r7-5800h), 7 (iand-r7-5800h3), 29 (DESKTOP-P57624Q), 85 (DadOld-PC), 123 (Dads-PC), 287 (DESKTOP-N5RAJSE), 321 (Rosie), 324 (Charlie-1), 327 (Echo-3), 330 (Delta-1), 332 (Delta-2), 333 (Golf-2), 339 (Foxtrot-2), 340 (Foxtrot-3), 341 (DESKTOP-ELBSBOI), 342 (PC-1), 345 (Andre-WEBK), 347 (sirius).
+
+GPU deployment checkpoint
+- GPU scripts targeted in Part 2: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Current DB checkpoint for these GPU prefixes: 3,009 workunits across 17 GPU hosts.
+- GPU hosts currently carrying these deployments:
+  1 (Pyhelix), 9 (dbgrensenh27), 16 (dahyun), 23 (jisoo), 29 (DESKTOP-P57624Q), 159 (achernar), 287 (DESKTOP-N5RAJSE), 319 (Dell-XPS-15-9560), 321 (Rosie), 324 (Charlie-1), 327 (Echo-3), 330 (Delta-1), 332 (Delta-2), 339 (Foxtrot-2), 340 (Foxtrot-3), 341 (DESKTOP-ELBSBOI), 347 (sirius).
+
+New experiments designed and novelty check
+- New CPU experiment script added and compiled: wd_batchnoise_interaction.py.
+- Novelty-check evidence recorded in run log before design/finalization:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle pursued: interaction term between late weight-decay benefit and batch-noise regime (small-batch vs large-batch), framed as mechanism-testing rather than additional replication of already-confirmed ICP timing results.
+
+KEY SCIENTIFIC FINDINGS
+1. Session validation confirms continued scientific productivity of current uploads: 80/80 newest payloads had valid experiment_result objects with zero parsing failures.
+2. No reversal of established ICP/weight-decay timing conclusions was observed; this session strengthened confidence in data-flow reliability while shifting queue emphasis to mechanism-focused WD interaction tests.
+3. Deployment focus now includes explicit mechanism probes (label-smoothing interaction, batch-noise interaction, curvature-trigger GPU timing), which directly target why late weight decay effects arise rather than only whether they replicate.
+
+NOTES
+- This log intentionally omits cumulative credited result ID listings; database remains source of truth for credited rows.
