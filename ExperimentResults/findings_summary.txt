@@ -67,3 +67,14 @@ VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_e)
   - `ValueError: Seed must be between 0 and 2**32 - 1` in `representation_alignment.py`.
 - Script fixes applied in `/opt/axiom_boinc/html/user/experiments/` for both seed-path failures.
 - Open operational question: some rows have `result.outcome=1` while payload JSON reports `status=error`; credit/validation should key on payload status in addition to BOINC outcome.
+
+VALIDATION UPDATE: March 4, 2026 (session s0304_part1_validate_f)
+- Reviewed and credited 300 uncredited `exp_%` results from the live queue (ID range 1521489-1521789).
+- Payload quality in reviewed set: 89 `status=completed`, 211 `status=error`.
+- By experiment family in this batch:
+  - `memdyn`: 72/75 completed (96%).
+  - `featcomp`: 6/75 completed (8%).
+  - `repalign`: 6/76 completed (8%).
+  - `microscale`: 5/74 completed (7%).
+- No new 30+ seed cross-validated finding was established in this batch; CONFIRMED FINDINGS unchanged.
+- Cleanup sweep: 0 dead-host stuck tasks (>12h, no RPC >6h) and 0 tasks over hard 48h ceiling.
