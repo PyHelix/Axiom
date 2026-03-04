@@ -1,0 +1,43 @@
+AXIOM SESSION RESULTS LOG
+Timestamp: 2026-03-04 10:35 CET
+Session file: results_2026-03-04_1035.txt
+Source validation log: /opt/axiom/experiment_session/validate_2026-03-04_1033.txt
+
+SESSION SUMMARY
+- Scope finalized: validation/credit/cleanup review plus experiment-status and deployment-context capture.
+- Completed successful exp_% results in DB snapshot: 61.
+- Pending successful uncredited exp_% results reviewed this session: 0.
+
+RESULTS REVIEWED AND CREDIT AWARDED
+- Review filter used: result.name LIKE 'exp_%' AND server_state=5 AND outcome=1 AND granted_credit=0.
+- Matching rows for crediting: 0.
+- Credits awarded this session: 0 results, total granted_credit +0.
+- Credit cap status: respected (0 <= 10,000).
+- Website counters after run: credited_count=1135 (unchanged), total_results_count=124 (preserved max rule).
+
+BROKEN/STUCK TASK CLEANUP
+- Dead-host stuck cleanup rule (>12h running and >6h host silence): 0 tasks aborted.
+- Hard-ceiling cleanup rule (>48h running): 0 tasks aborted.
+- battery_pulse_delay_plating_resonance triage: 6 completed failures / 0 successes snapshot; 0 queued/running at triage; no abort action required.
+
+NEW EXPERIMENTS / NOVELTY CHECK DOCUMENTATION
+- Recently seeded scripts in active program context:
+  - pit_delay_inhibitor_resonance.py
+  - chemostat_delay_crossfeeding_resonance.py
+- GPU wave context includes:
+  - wd_noise_trigger_gpu.py
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+  - grad_subspace_wd_gpu.py
+  - wd_anisotropy_trigger_gpu.py
+- Novelty check basis: current append-only CONFIRMED FINDINGS ledger (14 established findings) plus latest validation run; no new 30+ seed cross-validated result met promotion criteria in this session.
+
+KEY SCIENTIFIC FINDINGS
+1. No new scientifically usable uncredited completed results were available (0 pending successful rows), so no new credit-linked evidence was added this cycle.
+2. No new experiment outcome reached the 30+ seed cross-validated threshold required for promotion to CONFIRMED FINDINGS.
+3. Current completed outcome profile remains heavily concentrated in outcome=5 (921) and outcome=6 (88) versus outcome=1 (61), with no outcome=3/4 compute-crash rows, indicating an infrastructure/classification bottleneck is still the main blocker to interpreting additional scientific signal.
+4. battery_pulse_delay_plating_resonance remains in failed-only completed state (6/6 failures, 0 successes) but with no active queued/running tasks, so no immediate cleanup intervention was needed.
+
+FOLLOW-UP NOTES
+- Continue monitoring next assimilation/validation cycle for new successful completions.
+- Prioritize classification of outcome=5/6 root causes before drawing experiment-science conclusions from failure-heavy streams.
