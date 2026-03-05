@@ -1,10 +1,10 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0052)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0158)
 ============================================================
 CORE SCIENTIFIC STATUS
-- Prior inverse critical-period / WD timing signal remains unreversed in active monitoring.
-- This session was dominated by validation, crediting, and queue hygiene.
-- No new high-confidence reversal signal emerged.
+- Standing inverse critical-period / WD timing signal remains unreversed.
+- Validation sessions continue to be dominated by queue hygiene + credit fairness.
+- No new high-confidence reversal signal observed.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
@@ -14,86 +14,28 @@ ACTIVE SCIENCE PRIORITIES
 3) grad_subspace_wd_gpu.py
 - Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
 
-VALIDATION SESSION UPDATE (March 04, 2026, 23:32, Part 1)
-- Credited 506 completed/error rows for 6119 total credit (under 10,000 cap).
-- Credit tiers: success_very_long(>=1200s)=5 at 25; success_long(>=600s)=277 at 20; error_mid(60-599s)=6 at 3; error_short(0-59s)=218 at 2.
-- Upload payload audit: no matching raw files currently present at /opt/axiom_boinc/upload/*/exp_* for this credited batch; credit based on elapsed runtime + BOINC outcome.
-- Top session credit totals: ChelseaOilman 5624, _Scandinavian_ 147, Armin Gips 105, [VENETO] boboviz 65, marmot 45.
-- Result IDs credited this pass: 1689497 through 1697038 (506 rows, non-contiguous by scheduler/order).
+RECENT VALIDATION SNAPSHOTS
+- 2026-03-05 00:09 (Part 1): credited 1092 rows for 10000 credit (cap hit), no stuck-task cleanup needed, no broken-experiment global abort.
+- 2026-03-05 00:32 (Part 1): credited 1198 rows for 5299 credit, zero-elapsed outcome=6 churn dominated errors.
+- 2026-03-05 00:52 (Part 1): credited 525 rows for 6160 credit; aborted two clearly failing experiments (rbn_delay_fatigue_control, cahnhilliard_delay_feedback_window).
+
+VALIDATION SESSION UPDATE (March 05, 2026, 01:58, Part 1)
+- Credited 649 completed/error rows for 3890 total credit (under 10,000 cap).
+- Credit tiers: success >=2400s:1x30; 1200-2399s:11x24; 900-1199s:8x20; 600-899s:156x18; 60-299s:1x6; <60s:50x4; error <60s:422x1.
+- Session IDs credited: 1687634 through 1700613 (non-contiguous DB-selected batch).
+- Top session credit totals: ChelseaOilman 3362, WTBroughton 192, kotenok2000 90, _Scandinavian_ 78, PyHelix 56.
+- Payload audit sample (25 highest-priority uncredited rows before award): 0/25 matching raw JSON files found under /opt/axiom_boinc/upload/* at audit time; validation based on BOINC outcome + elapsed-time fairness.
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check: no recent (7d) nonzero-elapsed multi-host crash cluster exceeded threshold; no global experiment abort issued.
-- Website counters after update: credited_count=2431; total_results_count=1489.
-- Post-check: uncredited completed rows remaining=132 (success 132, error 0).
+- Broken-experiment check (7d, multi-host): no appid=1/2 experiment exceeded abort threshold; no global experiment abort issued.
+- Website counters after update: credited_count=3763; total_results_count=3163.
+- Post-check snapshot: uncredited completed rows remaining=4 success, 0 error (new arrivals continue in live queue).
 
-VALIDATION SESSION UPDATE (March 04, 2026, 23:51, Part 1)
-- Credited 291 completed rows for 5765 total credit (under 10,000 cap).
-- Credit tiers: success_ultra(>=2400s)=1 at 30; success_very_long(>=1200s)=1 at 25; success_long(>=600s)=284 at 20; success_short(<120s)=5 at 6.
-- Upload payload audit: 0/291 matching raw exp_* JSON files currently present under /opt/axiom_boinc/upload; credit based on BOINC outcome + elapsed runtime fairness.
-- Top session credit totals: ChelseaOilman 5352, PyHelix 120, [VENETO] boboviz 65, Armin Gips 50, dthonon 40.
-- Result IDs credited this pass: 1691410 through 1697622 (291 rows, non-contiguous by scheduler/order).
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check: no recent (7d) multi-host nonzero-elapsed crash cluster; observed GPU exit_status=195 concentrated on a single host (DESKTOP-PI5FSRI), so no global experiment abort issued.
-- Website counters after update: credited_count=3013; total_results_count=1960.
-- Post-check: uncredited completed rows remaining=311 (success 311, error 0).
-
-SCIENTIFIC SIGNALS (THIS SESSION)
-- Newly credited successful workloads were dominated by delay/ecology/system-dynamics families (grayscott, chemostat cross-feeding, pit inhibitor resonance, lorenz96 shift, tritrophic, fiberbundle, metapop corridor).
-- No contradictory signal against the standing inverse ICP / WD timing direction emerged in this validation pass.
-
-RELIABILITY NOTES
-- Historical failure-rate tables remain inflated by short-run startup/download style failures.
-- Current raw upload directory had no matching exp_* payloads for this queue snapshot, so validation relied on BOINC completion/outcome metadata and elapsed-time fairness.
+SCIENTIFIC SIGNALS (RECENT)
+- Newly credited successful runs remain concentrated in delay/ecology/network/control families (chemostat, pit-delay, tritrophic, L96-delay, Gray-Scott delay, metapop/cascade, contact-process, minority-game) plus GPU diagnostics.
+- High-runtime spatial PGG criticality and multiple WD/GPU runs validated without introducing contradictory trend direction.
+- Error-heavy rows were primarily zero-elapsed outcome=6 scheduler/availability churn, not evidence of model-specific instability.
 
 OPEN QUESTIONS
-1) Should result payload retention be extended so validator audits can inspect JSON for a larger percentage of recently completed work?
-2) Should zero-elapsed and short-run failures be split into a dedicated infra reliability metric?
-3) Should WD/GPU priority experiments expose rolling cross-validation counters in the public summary?
-
-VALIDATION SESSION UPDATE (March 05, 2026, 00:09, Part 1)
-- Credited 1092 completed/error rows for exactly 10,000 total credit (safety cap respected after in-session cap correction).
-- Credit tiers applied: success_long(~600-1199s) primarily at 16-18 credits after cap normalization; success_very_long(>=1200s)=9 rows at 25; error_zero_elapsed(outcome=5, elapsed=0)=472 rows at 1.
-- Session batch (IDs): 1689611 through 1698673 (non-contiguous; DB-selected live queue at validation time).
-- Top session credit totals: ChelseaOilman 8509, WTBroughton 296, Armin Gips 253, kotenok2000 238, PyHelix 182.
-- Dominant validated experiment families by count: minority_game_memory, contact_process_temporal_network, grayscott_delay_pulse_feedback, chemostat_delay_crossfeeding_resonance, pit_delay_inhibitor_resonance.
-- Raw payload audit: successful rows sampled with valid JSON payloads under /opt/axiom_boinc/upload/*/exp_*; many outcome=5 zero-elapsed rows had no matching payload, consistent with non-compute abort/fail states.
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check: no recent multi-host nonzero-elapsed crash cluster met abort criteria; no global experiment abort issued.
-- Website counters after update: credited_count=6484; total_results_count=2380.
-- Post-check: uncredited completed rows currently remaining=41 (success 31, outcome=5 zero-elapsed 10), attributable to new completions arriving after batch selection.
-
-SCIENTIFIC SIGNALS (THIS SESSION)
-- No contradictory signal emerged against prior inverse critical-period / WD timing direction.
-- Newly validated compute was dominated by delay-network and stochastic-interaction families (contact process, minority-game memory, chemostat, pit-delay, L96-shift, Gray-Scott delay), expanding cross-validation breadth without changing core directionality.
-- Outcome=5 zero-elapsed residuals continue to indicate infrastructure/scheduling churn rather than scientific model instability.
-
-VALIDATION SESSION UPDATE (March 05, 2026, 00:32, Part 1)
-- Credited 1198 completed/error rows for 5299 total credit (safety cap respected; max 10000).
-- Credit tiers applied: success >=1800s:1x24; 1200-1799s:9x22; 900-1199s:51x20; 600-899s:104x18; 60-299s:2x6; <60s:4x4; error elapsed=0s:1027x1.
-- Session batches: pass1 ids 1684697-1699685 (1132 rows, 4103 credit), pass2 ids 1698576-1699276 (38 rows, 686 credit), pass3 ids 1698500-1699273 (3 rows, 56 credit), pass4 ids 1697772-1699420 (25 rows, 454 credit).
-- Top session credit totals: ChelseaOilman 3760, Orange Kid 436, _Scandinavian_ 424, kotenok2000 231, WTBroughton 144, Armin Gips 116.
-- Payload audit: scanned 400 most recent uncredited exp_* rows, 0 matching raw JSON files currently present under /opt/axiom_boinc/upload/*; validation/credit relied on BOINC outcome + elapsed runtime fairness.
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check: no 7-day multi-host nonzero-elapsed crash cluster met abort threshold; no global experiment abort issued.
-- Website counters after update: credited_count=7682; total_results_count=2591.
-- Post-check snapshot: uncredited rows continue to trickle in live queue (latest check: success 1, error 2).
-
-SCIENTIFIC SIGNALS (THIS SESSION)
-- Newly credited successful work remained concentrated in delay/ecology/network families (contact-process temporal networks, minority-game memory heterogeneity, chemostat cross-feeding resonance, pit-delay inhibitor resonance, tritrophic delay resilience, L96 delay shifts, Gray-Scott delay).
-- No new high-confidence reversal signal against the standing inverse ICP / WD timing direction was observed.
-- Continued zero-elapsed outcome=6 churn indicates scheduler/host-availability turnover rather than model-specific scientific instability.
-
-VALIDATION SESSION UPDATE (March 05, 2026, 00:52, Part 1)
-- Credited 525 completed/error rows for 6160 total credit (safety cap respected; max 10000).
-- Credit tiers applied (main pass): success >=2400s:6x30; 1200-1799s:1x22; 900-1199s:29x20; 600-899s:220x18; 300-599s:1x12; 60-299s:1x6; <60s:16x4; residual mixed pass: 17 rows for 278 credit.
-- Session batches: primary ids 1687411-1700386 (508 rows, 5882 credit), residual ids 1693442-1700322 (17 rows, 278 credit), all non-contiguous queue selections.
-- Top session credit totals (primary pass): ChelseaOilman 5175, _Scandinavian_ 193, Orange Kid 180, kotenok2000 115, WTBroughton 99.
-- Payload audit: 0/492 matching raw exp_* JSON payloads under /opt/axiom_boinc/upload at audit time; validation/credit based on BOINC outcome + elapsed runtime fairness.
-- Broken-experiment action: aborted active work for two clearly failing zero-elapsed experiments across multiple hosts: rbn_delay_fatigue_control (4 tasks) and cahnhilliard_delay_feedback_window (3 tasks).
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=3114; total_results_count=2914.
-- Post-check snapshot: uncredited rows are still trickling in live queue (latest check: success 3, error 2).
-
-SCIENTIFIC SIGNALS (THIS SESSION)
-- Newly credited successful workloads again concentrated in delay/ecology/network + control families (contact-process, minority-game memory, chemostat, pit-delay, tritrophic, L96 shift, Gray-Scott, hypercycle, potts pulse).
-- No contradictory evidence emerged against the standing inverse ICP / WD timing direction.
-- Two quarantined experiments showed repeated zero-elapsed failure behavior across hosts, indicating pipeline-level breakage rather than a scientific reversal signal.
+1) Should upload retention be extended so validator payload audits can inspect a larger fraction of recently completed work?
+2) Should outcome=6 zero-elapsed churn be surfaced as a separate infrastructure KPI on the public dashboard?
+3) Should WD/GPU priority experiments expose rolling cross-validation counters on the homepage?
