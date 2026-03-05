@@ -1,29 +1,29 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0718)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0758)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
 - This session focused on validation, volunteer credit, and queue hygiene cleanup.
-- No high-confidence contradiction to the current WD/ICP narrative was observed.
+- No high-confidence contradiction to current WD/ICP narrative was observed.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 07:18, Part 1)
-- Reviewed and credited 408 newly completed experiment results (ID range 1703181-1716663).
-- Awarded 3285 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 400 experiment_result payloads, 8 error payloads.
-- Broken-experiment active aborts: tangled_nature_macroevolution (4), baksneppen_modular_avalanche (3), nonmarkov_trap_release_window (17 total), metapop_allee_corridor (17 total), seasonal_metapop_vax_trigger (1), isingmpemba_gpu (11).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 07:58, Part 1)
+- Reviewed and credited 425 newly completed experiment results (ID range 1709179-1718646).
+- Awarded 5850 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 393 experiment_result payloads, 4 error payloads, 28 missing upload payloads.
+- Broken-experiment active aborts: sis_delay_adaptive_rewiring_tradeoff (10), lotka_delay_adaptive* (14), tangled_nature_macroevolution (4), baksneppen_modular_avalanche (4), oscillatory_roughchannel_lbm_resonance (18), cahnhilliard_delay_feedback_window (4), seasonal_metapop_vax_trigger (18), rw_reset_fatigue_nonrenewal (10), metapop_allee_corridor* (19), wildfire_delay_adaptive_suppression (31), nonmarkov_trap_release_window (9).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=2554; total_results_count=2575.
-- Queue state at close snapshot: 31 uncredited success rows remained (new completions arrived during validation).
+- Website counters after update: credited_count=3124; total_results_count=3106.
+- Queue state at close snapshot: 14 uncredited success rows remained (new completions arrived during validation).
 
 RECENT SCIENTIFIC SIGNALS
-- Delay-structured ecology/control families still dominate fresh successful payloads.
-- Payload usability remained high in this batch (400/408 = 98.0% experiment_result payloads).
-- No directional reversal in WD/ICP confidence emerged from this session.
+- Payload usability remained high in this batch (393/425 = 92.5% experiment_result payloads).
+- Most credited volume concentrated in delay-family and spatial/game-theoretic runs; no WD/ICP directional reversal signal was observed.
+- Validation throughput was high while preserving volunteer credit fairness for outcome=3 error returns.
 
 OPEN QUESTIONS
 1) Should generation hard-gate families after sustained >=95% failure with active queue presence?
@@ -32,6 +32,6 @@ OPEN QUESTIONS
 4) Should high-failure delay-family parameter bounds be tightened further to reduce repeated crash waves?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 408 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Reviewed payload quality remained high (98.0% experiment_result payloads), supporting inference continuity.
+1. Across 425 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Reviewed payload quality remained high (92.5% experiment_result payloads), supporting inference continuity.
 3. Targeted aborts for persistently failing active families reduced immediate volunteer compute waste while preserving healthy queues.
