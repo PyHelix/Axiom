@@ -1,9 +1,9 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0521)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0539)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- This validation session prioritized quality review, volunteer crediting, and failure-hygiene cleanup.
+- This validation session focused on quality review, crediting, and failure-hygiene cleanup.
 - No high-confidence contradiction to the current WD/ICP narrative was observed.
 
 ACTIVE SCIENCE PRIORITIES
@@ -11,26 +11,26 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 05:21, Part 1)
-- Reviewed and credited 199 newly completed experiment results.
-- Awarded 3220 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 197 experiment_result payloads, 2 error payloads.
-- Broken-experiment active aborts: cahnhilliard_delay_feedback_window (20 total this run), sis_delay_adaptive_rewiring_tradeoff (6 total this run).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 05:39, Part 1)
+- Reviewed and credited 232 newly completed experiment results.
+- Awarded 1866 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 224 experiment_result payloads, 8 error payloads.
+- Broken-experiment active aborts: cahnhilliard_delay_feedback_window (14), sis_delay_adaptive_rewiring_tradeoff (7), tangnat (22), rbn_delay_fatigue_control (7), lotka_delay_adaptive (2), kuramoto_delay_adaptive_efficiency (1), oscillatory_roughchannel_lbm_resonance (1), seir_delay_fatigue_control (1).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=1018; total_results_count=1039.
-- Queue state at close snapshot: 117 uncredited success rows remained (new completions arriving during run).
+- Website counters after update: credited_count=1250; total_results_count=1270.
+- Queue state at close snapshot: 2 uncredited success rows remained.
 
 RECENT SCIENTIFIC SIGNALS
-- Current completions remain dominated by delay-driven ecological/network dynamics (climate-delay carbon, interdependent flow-memory shedding, Lorenz96 delay assimilation, metapop/fiberbundle families).
-- Credited payload quality remained high in this session (197/199 with structured experiment_result output).
+- Delay-structured ecological/network families continue to dominate completions (metapop corridor, climate-delay carbon, Lorenz96 delay assimilation, tritrophic, Gray-Scott delay).
+- High payload usability persisted in this session (224/232 with structured experiment_result output).
 - No directional reversal in WD/ICP-related signal confidence emerged from this session.
 
 OPEN QUESTIONS
-1) Should generation hard-gate families after sustained 100% failure with active queue presence?
-2) Should validation export explicit reliability split by transport/runtime failures vs experiment-logic failures?
-3) Should Part 2 pin a minimum queue share for WD-priority families during mixed waves?
+1) Should generation hard-gate families after sustained >=95% failure with active queue presence?
+2) Should validation export reliability splits by runtime/transport failures vs experiment-logic failures?
+3) Should Part 2 reserve a minimum queue share for WD-priority families during mixed waves?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 199 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Most reviewed payloads were scientifically usable (197 experiment_result vs 2 error payloads).
-3. Repeated active aborts for cahnhilliard_delay_feedback_window and sis_delay_adaptive_rewiring_tradeoff prevented additional waste on persistently failing families.
+1. Across 232 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Most reviewed payloads were scientifically usable (224 experiment_result vs 8 error payloads).
+3. Targeted aborts for repeatedly failing families reduced additional volunteer compute waste while preserving healthy queues.
