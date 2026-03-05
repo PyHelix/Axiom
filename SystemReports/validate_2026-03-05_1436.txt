@@ -1,0 +1,37 @@
+Axiom BOINC Validation Report — 2026-03-05 14:36 UTC
+=====================================================
+
+## Session Summary
+- Credit awarded: 0 (all 130+ uncredited results arrived minutes ago, assimilator backlog)
+- Tasks aborted (broken experiments): 21 pending tasks across 5 experiments
+- Stuck tasks cleaned: 0 (none found)
+
+## Uncredited Results
+130+ successful results (IDs 1703182-1714885) completed in the last few minutes.
+The assimilator (PID 1221, running since 11:51) has a backlog — last sanitized file
+was written at 11:56. These results will be credited in the next validation cycle
+once sanitized files are generated.
+
+Key experiments with uncredited results:
+- h340 (32-core): chimera_lifetime, dla_drift, hk_consensus, rfim_roughness (rounds 3-10)
+- h333 (32-core): tritrophic, pit_delay, fiberbundle, autocatalytic, climate, lorenz96 (rounds 1006-1030)
+- h339 (32-core): fisher_allee, grayscott, metapop_corridor, bkfault (rounds 104-142)
+- h327 (32-core): allee, chemostat, climate, cascade, brusselator (rounds 86-118)
+- h330 (32-core): tritrophic, climate, lorenz96, metapop_corridor (rounds 17-41)
+- h332 (32-core): interdep_flow, lorenz96, chemostat, pit_delay (rounds 1083-1094)
+- GPU: schnakenberg (h29,h353), wd_curvature/noise_trigger (h23), grad_subspace_wd (h341,h355)
+
+## Broken Experiments Aborted (100% failure rate)
+Aborted all pending work for consistently crashing experiments:
+1. baksneppen_modular_avalanche — 9 fail/0 success, 10 pending aborted
+2. votermod — 5 fail/0 success, 4 pending aborted
+3. rbn_delay_fatigue_control — 56 fail/0 success, 3 pending aborted
+4. cahnhilliard_delay_feedback_window — 190 fail/1 success (99.5%), 2 pending aborted
+5. sis_delay_adaptive_rewiring_tradeoff — 165 fail/0 success, 2 pending aborted
+Total: 21 tasks aborted.
+
+## System Health
+- Assimilator running (PID 1221) with ~2.5h backlog
+- No stuck tasks (>12h silent host or >48h)
+- 2038 total successful results, 1864 credited (23,667 credit)
+- 93 active hosts, 26 with running tasks
