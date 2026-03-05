@@ -1,0 +1,67 @@
+Axiom BOINC Session Results Log
+Session: p3_save_2026-03-05_0450
+Timestamp: 2026-03-05 04:50 America/Denver
+
+PART 1: VALIDATION, REVIEW, AND CREDIT
+- Reviewed 379 uncredited successful results (ID span 1696617-1710582).
+- Payload audit: 362 experiment_result payloads, 17 error payloads.
+- Runtime profile remained dominated by medium-length jobs (~841s median-scale tasks).
+- No high-confidence WD/ICP sign reversal was observed in this review set.
+
+CREDIT AWARDED (INCREMENTAL)
+- Total session credit awarded: 6243 (safety cap PASS; <=10000).
+- Per-user increments:
+  - ChelseaOilman: +4368
+  - Orange Kid: +453
+  - PyHelix: +348
+  - _Scandinavian_: +264
+  - kotenok2000: +201
+  - WTBroughton: +200
+  - Armin Gips: +193
+  - koll: +80
+  - [DPC] hansR: +48
+  - LeaveArtemis: +48
+  - vanos0512: +24
+  - Henk Haneveld: +16
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running aborts (outcome=6): 0
+- Hard >48h running aborts (outcome=6): 0
+- Targeted active aborts for retired/broken family: cahnhilliard_delay_feedback_window = 8
+- Part 2 retirement pass unsent aborts executed: 0 (ABORT_TOTAL=0)
+- Final queue check after Part 1: uncredited successful results remaining = 0
+
+PART 2: DEPLOYMENT AND RESEARCH SUMMARY
+CPU deployment
+- CPU queue fill run completed.
+- Active CPU hosts seen: 81
+- Low-RAM hosts skipped (<6GB): 2
+- CPU workunits created: 2937
+- CPU scripts deployed:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+- Host targeting mode: per-host targeted seeding (`--target_host`) across the active CPU host set (79 eligible hosts after RAM filter), with per-host backfill to 3x core queue target.
+
+GPU checkpoint
+- GPU deployment pass started separately (mandatory appid=2 phase).
+- GPU scripts selected:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Run log shows the GPU deployment command was interrupted before completion (`^C`).
+- Confirmed currently present workunits/results for these two GPU script families: 0 hosts, 0 workunits recorded under the expected naming patterns.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK NOTES
+- New CPU experiment script created and compiled:
+  - wd_batchnoise_interaction.py (py_compile OK on server)
+- Novelty/literature checks were performed in Part 2 log (ArXiv/web searches), including:
+  - weight decay + label smoothing interaction
+  - adaptive/scheduled weight decay
+  - batch size x weight decay interaction
+  - decoupled weight decay prior art (arXiv:1711.05101)
+- Design intent documented in deployment session: test whether late WD gains are stronger under small-batch gradient noise.
+
+KEY SCIENTIFIC FINDINGS
+1. Across 379 newly audited payloads, no high-confidence contradiction to prior WD/ICP directionality was observed.
+2. Error payload share remained low (17/379, ~4.5%), supporting confidence that throughput remains scientifically usable.
+3. Delay/ecology-network families continued to dominate completed payloads in this cycle.
+4. Queue hygiene actions removed repeated active work for a broken family (cahnhilliard_delay_feedback_window) without broad disruption to healthy families.
