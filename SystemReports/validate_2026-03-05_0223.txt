@@ -1,0 +1,24 @@
+AXIOM VALIDATION & CREDIT LOG
+Session timestamp: 2026-03-05 02:23:36
+
+1) Results reviewed this session
+- Reviewed successful uncredited results: 128
+- Result IDs reviewed: 1689317, 1689469, 1689517, 1689545, 1689615, 1689963, 1690518, 1690524, 1690525, 1690527, 1690529, 1690535, 1690572, 1690577, 1690581, 1690582, 1690593, 1690594, 1690622, 1690637, 1690650, 1690656, 1690658, 1690660, 1690662, 1690664, 1690695, 1690699, 1690701, 1690706, 1690708, 1690711, 1690712, 1690715, 1690719, 1690721, 1690724, 1690725, 1690726, 1690728, 1690731, 1690733, 1690735, 1690746, 1690751, 1690912, 1690914, 1690917, 1690918, 1690920, 1690958, 1690963, 1690969, 1690979, 1690982, 1690983, 1690984, 1690985, 1690998, 1690999, 1691000, 1691001, 1691004, 1691005, 1691006, 1691007, 1691008, 1691010, 1691011, 1691012, 1691013, 1691038, 1691040, 1691041, 1691042, 1691043, 1691044, 1691046, 1691047, 1691050, 1691051, 1691054, 1691057, 1691059, 1691061, 1691272, 1691273, 1691282, 1691304, 1691373, 1691375, 1691377, 1691427, 1691466, 1691467, 1691469, 1691470, 1691472, 1691479, 1691481, 1691482, 1691483, 1691484, 1691485, 1691487, 1691489, 1691490, 1691491, 1691495, 1691515, 1691539, 1691600, 1691679, 1691687, 1691688, 1691689, 1691690, 1691691, 1691692, 1691816, 1691818, 1691851, 1691853, 1691854, 1691858, 1691861, 1691862, 1691864
+- Sanitized quality assessment outcome: all reviewed IDs currently missing corresponding sanitized *_safe.json; credit deferred this session.
+
+2) Credit awarded
+- Results credited (>0): 0
+- Results set/left at zero credit: 128
+- Total credit added this session: 0 (cap 10000)
+- Per-user totals added: none (no nonzero grants this session)
+
+3) Stuck/broken task cleanup
+- Dead-host >12h running cleanup executed: 0 tasks aborted
+- Hard ceiling >48h cleanup executed: 0 tasks aborted
+- Remaining dead-host stuck candidates after cleanup: 0
+- Remaining >48h running candidates after cleanup: 0
+- GPU compute-error cluster reviewed via result.stderr_out: host 358 shows cudaErrorInsufficientDriver / exit 195 for grayscott_delay_anisotropic_feedback_gpu_gpu and kellersegel_delay_pulse_sink_window_gpu_gpu. Classified as host-driver incompatibility, not cross-host script bug.
+
+4) Bugs found and fixed in experiment scripts
+- No experiment script source changes applied in this session.
+- No global experiment-family aborts issued (no cross-host code failure pattern met abort threshold).
