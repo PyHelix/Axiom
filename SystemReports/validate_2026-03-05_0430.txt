@@ -1,0 +1,35 @@
+Axiom BOINC Validation Log — 2026-03-05 04:30 UTC
+
+## Summary
+
+- Credit awarded this session: 0
+- Results reviewed: 408 uncredited results found, all pending assimilation
+- Stuck tasks cleaned: 0 (none found)
+- Broken experiments aborted: 0 pending tasks
+
+## Details
+
+### Uncredited Results (408 total)
+All 408 uncredited successful results have workunit assimilate_state=1 (pending).
+The assimilator process is running (PID 1205) with 301 WUs in queue.
+No sanitized files exist yet for these results — credit will be awarded once
+assimilation completes and sanitized files are generated.
+
+### Failure Analysis
+- pit_delay_inhibitor_resonance: 100% failure rate (0/7 success), all outcome=6 (timeout)
+  - Script reviewed: code is correct, failures are host timeouts, not bugs
+  - No pending tasks to abort (0 in queue)
+  - No action needed — experiment may need longer deadline if redeployed
+
+### Stuck Task Cleanup
+- No tasks found running >12h on dead hosts
+- No tasks found running >48h
+
+### Active Infrastructure
+- 88 active hosts (last 72h), 2-192 CPUs
+- 22 hosts currently running tasks
+- Assimilator running normally (PID 1205)
+
+### Website Counters
+- credited_count: 2279 (unchanged)
+- total_results_count: 1825 (unchanged)
