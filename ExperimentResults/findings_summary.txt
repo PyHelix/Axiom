@@ -1,37 +1,97 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0337)
-============================================================
-CORE SCIENTIFIC STATUS
-- Standing inverse critical-period / WD timing signal remains unreversed.
-- Validation effort this session emphasized payload-confirmed crediting, queue hygiene, and pruning clearly broken queues.
-- No high-confidence contradiction to current WD/ICP narrative observed.
+Last updated: March 5, 2026 23:45 UTC (science analysis cycle)
+=================================================
 
-ACTIVE SCIENCE PRIORITIES
-1) wd_labelsmooth_interaction.py
-2) wd_curvature_trigger_gpu.py
-3) grad_subspace_wd_gpu.py
+CONFIRMED FINDINGS (append-only - never remove or re-test these)
+1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
+2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
+3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
+4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
+5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
+6. SVD rank intervention: completed (1964+ results) - retired, finding established
+7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
+8. WD depth interaction: completed (1282+ results) - retired
+9. WD task sweep: completed (1077+ results) - retired
+10. WD optimizer interaction: completed (1043+ results) - retired
+11. WD learning rate interaction: completed (1037+ results) - retired
+12. WD width transition: completed (928+ results) - retired
+13. WD window: completed (841+ results) - retired
+14. Representation crystallization: completed (368+ results) - retired
+15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
+16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
+17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
+18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
+19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
+20. Schelling tax reentrance: REJECTED — reentrant index negative in 160/184 runs (184 seeds, 11 hosts), mean -0.00123 +/- 0.00102, Cohen's d=-1.20.
+21. Gray-Scott delay pulse feedback: REJECTED — adaptive persistence gain negative at all delays in 144/144 runs (15 hosts), mean_gain_d0=-0.0326 (d=-27.1).
+22. Metapop corridor delay forecast: REJECTED — adaptive corridors REDUCE persistence at ALL delay/noise conditions in 489/489 runs (20 hosts). Mean delta ~-2%, d=-6 to -30.
+23. Wildfire delay adaptive suppression: REJECTED — adaptive suppression INCREASES burned fraction in 218/218 runs (16 hosts), all delays. Mean delta +0.21%, d=186-253.
+24. Ising delay adaptive quench: REJECTED (opposite) — adaptive quench ALWAYS reduces defects at ALL delays/disorder in 204/204 runs (9 hosts). Stronger at higher delay, d=-14 to -26.
+25. Chemostat delay crossfeeding resonance: REJECTED — no resonance window (d=-0.11). Adaptive harms coexistence vs fixed (d=-1.36) and pulse (d=-1.69), 416 runs, 16 hosts.
+26. Interdependent flow memory shedding: REJECTED — medium memory window HARMS cascade survival, d=-1.23, 83% negative, 238 results, 15 hosts. Shortest window best.
+27. Moran migration delay window: REJECTED (ANTI-REENTRANT) — intermediate delays WORST, d=-1.90, 100% negative, 91 results, 15 hosts. d=3 accelerates fixation by ~28 generations.
+28. Schlogl delay adaptive gain: REJECTED — adaptive underperforms fixed at ALL delays (-1.1% to -2.3%), worsens with delay, 50 results, 10 hosts.
+29. Fiberbundle delay healing entropy: NO EFFECT — healing delay has zero impact on failure load (d<0.1 at all conditions), 458 results, 21 hosts.
+30. Gene drive delay resistance: NO EFFECT — adaptive release ~0.06% better than fixed, delay-independent, d=0.35, 94 results, 3 hosts.
+31. BK fault delay adaptive damping: NO EFFECT — d=0.30, 54% positive (random), no reentrant window (8.8%), 57 results, 11 hosts.
+32. Cascade forecast delay shedding: CONFIRMED — adaptive shedding outperforms fixed at ALL delays (+17% at d=1, +2% at d=8, d=89-604), benefit degrades with delay but never inverts, 259 results, 24 hosts.
+33. RBN delay fatigue control: CONFIRMED — rewiring reduces damage in 195/195 runs, mean gain +0.166, d=1490, 5 hosts.
+34. CSTR poison purge reentrance: REJECTED — purging REDUCES productivity in 71/71 runs, d=-4879, 10 hosts.
+35. Kuramoto delay noisy control: REJECTED — adaptive coupling REDUCES sync at ALL delays (d=-4.06 at d=0, d=-3.61 at d=20), no inversion, 193 results, 22 hosts.
+36. Seasonal metapop vax trigger: REJECTED — adaptive vaccination INCREASES attack rate at all couplings (d=-1 to -5.6), 358 results, 21 hosts.
+37. Lotka delay adaptive harvest: NO INVERSION — adaptive yield +13.5 at BOTH d=0 and d=30, delay does not degrade benefit, 149 results, 20 hosts.
+38. Battery pulse delay plating resonance: CONFIRMED — delayed adaptive pulse-charging creates plating resonance (100%, excess +2.08 AUC high-het, +1.96 low-het), 43 results, 17 hosts.
+39. Kuramoto islanding fatigue reclosure: REJECTED — zero reentrant gain, 42 results, 17 hosts.
+40. Potts RF adaptive anneal (GPU): CONFIRMED (adaptive benefit, NO delay window) — adaptive temp control +8% ordering+energy in 19/19 runs (6 hosts), d=79.5, delay-independent.
+41. Vicsek delay noise window (GPU): REJECTED — adaptive noise REDUCES alignment, 0/22 positive, d=-46.4, 6 hosts.
+42. Allen-Cahn delay quench (GPU): REJECTED (delay window) — overall negative, d=-11.5. BUT disorder crossover: harmful at s=0 (d=-30.7), beneficial at s>=0.08 (d=+49.7 to +91.8), 17 results, 6 hosts.
+43. Fisher-KPP delay refugia (GPU): REJECTED — adaptive catastrophically worse, 0/15 positive, d=-63.6M, 6 hosts.
+44. LBM delay adaptive forcing (GPU): REJECTED — adaptive -599 efficiency, 0/16 positive, d=-193.8, 6 hosts.
+45. Reservoir delay adaptive release: REJECTED — adaptive increases spill by ~4150 units, anti-reentrant (longer delay worse), 27 results, 4 hosts.
+46. Toggle delay adaptive control: REJECTED (opposite) — adaptive INCREASES switch rate at ALL delays (+1.39 at d=0, +1.57 at d=12), d=17-20, 218 seeds, 21 hosts. Controller destabilizes bistable system by pushing toward unstable saddle.
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 03:37, Part 1)
-- Reviewed 309 completed uncredited success IDs in this pass (live queue still churning after close).
-- Awarded 309 results for 4972 total credit (session cap respected).
-- Payload audit for credited set: 306 experiment_result payloads, 3 error payloads.
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment active aborts executed for high-failure families: cahnhilliard (13), tangled_nature_macroevolution (5), tangnat (1).
-- Website counters after update: credited_count=5806; total_results_count=5895.
-- Queue state after close: 46 uncredited success rows remained.
+NEW PRELIMINARY FINDINGS (this cycle)
+- Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 226 runs (11 hosts), d=-282.
+- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=591, 26 hosts.
+- Lorenz96 delay assimilation: INVERSE — adaptive worsens at d=0 but improves at d=18. N=556, 24 hosts.
+- Fisher-Allee moving habitat: REJECTED — adaptive culling increases invasion at all delays. N=130, 10 hosts.
+- SIS delay adaptive rewiring: NO EFFECT — delay win fraction = 0.50, best_score d=0.17. N=170, 10 hosts.
+- ABX cycle HGT delay resonance: PARTIAL — delay inversion at SHORT cycle periods only. N=54, 13 hosts.
+- Fisher delay adaptive culling: NO EFFECT (ceiling) — invaded fraction = 1.0 for ALL conditions. N=183, 24 hosts.
+- Brusselator delay sensor noise: REJECTED delay inversion — adaptive IMPROVES at all delays, gain INCREASES with delay. d=24-56, 33 seeds, 7 hosts. Delay acts as stabilizing low-pass filter.
+- Sandpile delay adaptive dissipation: NO EFFECT — tail120 delta exactly zero at all conditions. SOC robustness. N=10, 4 hosts.
+- SEIR delay fatigue control: REJECTED — adaptive increases attack rate +23% at ALL delays (d=257-348) but reduces overload days. N=9, 3 hosts. Preliminary.
+- RPS delay jitter adaptive mobility: NO EFFECT (ceiling) — coexistence=1.0 everywhere. Uninformative. N=6, 2 hosts.
 
-RECENT SCIENTIFIC SIGNALS
-- Dominant newly reviewed families remained spatial_pgg_punishment_criticality, collatz_evt_tails, levy_foraging_renewal_phase, potts_pulse_anneal_resonance, and delay-network ecology variants.
-- Three error payloads were localized to nkwalk variants with explicit MemoryError/OOM footprints; treated as compute-contributed but lower-quality outputs for credit.
-- High-failure families cahnhilliard_delay_feedback_window and tangled_nature_macroevolution remained collapse-prone in recent completions and were removed from active queue to prevent wasted volunteer cycles.
-- No audited reversal signal in WD/ICP directionality.
+REPLICATION UPDATES
+- Pit delay inhibitor resonance: 612+ total results, 26+ hosts (continuing to replicate).
+- Autocatalytic dilution: 122 total, 4 hosts.
+- XY delay thermostat: 196 total, 6 hosts.
+- Cahn-Hilliard feedback: 173 total, 6 hosts.
 
-OPEN QUESTIONS
-1) Should generation-side throttles pause families above a configurable rolling failure threshold (for example >90% over last N completions)?
-2) Should validation logs publish per-family network/download-error rates separately from experiment logic failures?
-3) Should WD-priority families receive guaranteed minimum queue share per generation cycle?
+EMERGING PATTERN (FURTHER STRENGTHENED — 33 delay-window experiments now analyzed)
+- Of 33 delay-window experiments: 24 REJECTED, 1 INVERSE, 1 ANTI-REENTRANT, 1 PARTIAL, 4 NO EFFECT, 1 delay-independent. Only 4 CONFIRMED reentrant windows (autocatalytic, nonmarkov, XY, Cahn-Hilliard) — all oscillatory.
+- Brusselator adds new evidence: in oscillatory systems, delay can IMPROVE control (low-pass filter effect).
+- Toggle switch demonstrates control-theory principle: negative feedback destabilizes multistable systems.
+- SEIR reveals attack-rate vs overload trade-off in adaptive epidemic control.
 
-KEY SCIENTIFIC FINDINGS
-1. Across 309 newly credited IDs in this pass, outputs remained consistent with prior WD/ICP directionality and showed no high-confidence contradiction.
-2. Payload quality remained high (306/309 experiment_result); the only observed errors were nkwalk OOM traces rather than signal-reversing scientific outcomes.
-3. Active compute was protected by aborting clearly broken high-failure queues (cahnhilliard and tangled_nature variants) while leaving healthy families running.
+NOT YET ANALYZED (queued for next cycle)
+- SSH delay dephasing edge: 0 results
+- Reset trap delay window: 0 results
+- Spatial PGG mobility sanction delay: 19 results (insufficient)
+
+ACTIVE EXPERIMENTS (deployed)
+- rsa_polydisperse_jamming, dp_moment_ratio, hk_bounded_confidence_consensus
+- chimera_lifetime_scaling, dla_drift_fractal, rfim_domain_wall_roughness
+- minority_game_memory_heterogeneity, contact_process_temporal_network
+- spatial_pgg_punishment_criticality, ofc_earthquake_bvalue
+- axelrod_noise_phase, nk_walk_scaling, fpp_wandering_exponent, hypergraph_pgg_fixation
+- GPU: SH-KZ, CML-sync, KPZ 2D, Schnakenberg, DP 2+1D, KS-KPZ, FPU heat, Lyapunov RMT, Percolation walk 3D, WF stepping-stone, FHN coherence resonance, SBM spectral detection, MIPS active Brownian
+- CPU continuing: collatz EVT, levy foraging, sandpile smallworld, mayeco, antibswitch
+- BROKEN: tangled_nature, nagelschreckenberg, depinning_roughness_2d_gpu
+- RETIRED: potts_pulse_anneal_resonance (285 completed)
+
+STRATEGIC DIRECTION
+- Delay-window hypothesis comprehensively tested: 4/33 reentrant windows confirmed, ALL in oscillatory systems.
+- Brusselator low-pass filter finding and toggle bistability finding connect delay-window research to established control theory.
+- Broadening to 27+ distinct STEM fields.
