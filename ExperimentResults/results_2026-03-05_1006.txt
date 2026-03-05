@@ -1,102 +1,64 @@
-AXIOM BOINC — SCIENTIFIC ANALYSIS
-Date: 2026-03-05 10:06 UTC
-Sanitized results analyzed: 237 files (54 ABX cycle, 183 Fisher culling)
+Axiom BOINC Session Results Log
+Session Timestamp: 2026-03-05 10:06:43 -07:00
+Validation Source: validate_2026-03-05_1003.txt
+Deployment Source: run_2026-03-03_1352.log
+
+SCOPE
+- Combined summary of Part 1 (validation/credit/cleanup) and Part 2 (research/deployment/design).
+
+PART 1: VALIDATION, CREDIT, AND CLEANUP
+- Results reviewed this session: 195 uncredited completed exp_* results (primarily scientific payloads).
+- Payload classification in reviewed set: 194 experiment_result payloads, 1 error payload.
+- Credit awarded: 3505 total session credit (safety cap respected).
+- Per-user credits awarded:
+  - ChelseaOilman: +3294
+  - Steve Dodd: +72
+  - Anandbhat: +48
+  - PyHelix: +18
+  - kotenok2000: +18
+  - LeaveArtemis: +18
+  - [DPC] hansR: +18
+  - zombie67 [MM]: +14
+  - marmot: +5
+- Broken-task cleanup (active aborts for clearly broken families):
+  - exp_sis_delay_adaptive_rewiring_tradeoff*: 2
+  - exp_tangled_nature_macroevolution*: 5
+  - exp_baksneppen_modular_avalanche*: 6
+  - exp_axelnoise_s0*: 3
+- Stuck-task cleanup:
+  - Dead-host >12h running and >6h silence: 0
+  - Hard ceiling >48h running: 0
+
+PART 2: RESEARCH, DEPLOYMENT, AND EXPERIMENT DESIGN
+- Retirement pass executed before deployment; unsent retirement abort total: 0 (ABORT_TOTAL=0).
+- New experiment designed and uploaded:
+  - wd_batchnoise_interaction.py
+  - Hypothesis: late weight decay gain depends on batch-noise regime (interaction test, not only main effects).
+  - Script compiled successfully on server before deployment (python3 -m py_compile).
+- Novelty-check documentation captured in run log (search terms run before/around design):
+  - weight decay batch size interaction neural networks
+  - arxiv weight decay batch size interaction deep learning
+  - Scheduled Weight Decay paper arxiv 2021
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- CPU deployment (recorded counters):
+  - CPU hosts processed: 81
+  - Low-RAM hosts skipped (<6 GB): 2
+  - CPU workunits created: 2937
+  - CPU scripts targeted: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- GPU checkpoint:
+  - Intended GPU scripts: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+  - Deployment command began but run log ended with interrupt (^C) before final GPU counters were emitted.
+  - GPU host count and GPU workunit count were not recorded in this run log snapshot.
 
 KEY SCIENTIFIC FINDINGS
-
-FINDING #1: abx_cycle_hgt_delay_resonance (PARTIAL — DELAY INVERSION AT SHORT CYCLES ONLY, 54 results, 13 hosts)
-
-  Hypothesis: Delayed surveillance in adaptive antibiotic cycling interacts with
-  HGT rate and compliance fatigue to create a resonance regime where multidrug
-  resistance (MDR) burden exceeds both fixed cycling and zero-delay adaptive control.
-
-  Method: Stochastic ODE model of bacterial population dynamics with susceptible (S),
-  single-resistant (RA, RB), and dual-resistant (RAB) compartments. Horizontal gene
-  transfer (HGT) enables resistance acquisition. Two strategies compared: fixed
-  periodic drug cycling vs adaptive cycling that switches drugs based on delayed
-  surveillance of resistance frequencies. Parameters varied: cycle period (3, 7, 14 days),
-  surveillance delay (0, 2, 6 days), HGT rate (0.0015, 0.004), fatigue rate (0.02, 0.10).
-  ~13,500 trials per workunit across 72 parameter combinations.
-
-  Results:
-  - At SHORT cycle periods (p=3 days): delay inversion OBSERVED. Zero-delay adaptive
-    reduces resistance AUC by 0.29 vs fixed, but 6-day delay INCREASES it by +0.16,
-    a swing of 0.45 AUC units. This is a genuine resonance — the adaptive controller
-    overshoots when delay exceeds the cycle period.
-  - At MEDIUM cycle periods (p=7 days): adaptive always better than fixed regardless
-    of delay (delta -0.42 to -0.44 AUC). No inversion.
-  - At LONG cycle periods (p=14 days): adaptive always better, delay-independent
-    (delta -0.44 to -0.45 AUC). No inversion.
-  - The experiment's own hypothesis signal (mean resonance excess = +0.01) is negligible
-    because it only checks at p=7. The real effect is at p=3.
-  - Time to 50% MDR is fast (~15 days) across all conditions with minimal strategy
-    differentiation; the meaningful difference is in cumulative resistance burden.
-  - Effect sizes are enormous (|d| > 60) because inter-run variance is tiny.
-  - 54 results, 13 hosts — preliminary but highly consistent.
-
-  Conclusion: PARTIALLY SUPPORTED — Surveillance delay creates a resonance regime,
-  but ONLY when the delay exceeds the cycling period. At 3-day cycles with 6-day
-  delay, the adaptive controller receives information from >1 cycle ago, causing
-  systematic drug-switching errors that amplify dual-resistant populations. This
-  reveals a fundamental constraint on adaptive antibiotic cycling: the surveillance
-  feedback loop must be faster than the switching frequency, or the controller
-  destabilizes. At longer cycle periods (7+ days), even 6-day delays are within
-  one cycle and adaptive control remains robustly beneficial. This has practical
-  implications: rapid cycling protocols (popular in some ICU settings) require
-  correspondingly rapid diagnostics, while slower cycling is more tolerant of
-  surveillance lag.
-
----
-
-FINDING #2: fisher_delay_adaptive_culling (NO EFFECT — INVASION SATURATES, 183 results, 24 hosts)
-
-  Hypothesis: Adaptive spatial culling reduces invasion at low sensing delay but
-  underperforms fixed culling at long delays when monitoring noise and control
-  fatigue are present.
-
-  Method: 1D Fisher-KPP reaction-diffusion model (n=220 sites, 420 simulated days)
-  with periodic boundary conditions. An invasive species spreads from a central
-  inoculum. Adaptive culling adjusts effort based on delayed, noisy estimates of
-  invaded fraction. Parameters varied: delay (0, 7, 14 days), observation noise
-  (0, 0.12), fatigue rate (0, 0.012), climate amplitude (0, 0.25). Fixed culling
-  at constant rate 0.048; adaptive starts at 0.03 and adjusts. ~5,600 trials per
-  workunit across 48 parameter combinations.
-
-  Results:
-  - Invaded fraction final = 1.000 for ALL conditions, both strategies, zero variance.
-  - Front span max = 219 (full domain) for all conditions.
-  - The ONLY detectable difference: adaptive reaches 20% invasion ~0.3 days faster
-    than fixed on average (negligible given 420-day simulation).
-  - Delta invaded fraction = 0.000 at all delays, noise levels, and fatigue rates.
-  - No delay inversion observed (0/9 workunits with inversion flag).
-  - 183 results from 24 hosts — sufficient data, conclusive null result.
-
-  Conclusion: NO EFFECT — Both adaptive and fixed culling are overwhelmed by the
-  invasion in this parameter regime. The culling rates (3-5% of population) are
-  far below the growth rate (r=0.19), so the species reaches carrying capacity
-  everywhere regardless of management strategy. The hypothesis cannot be tested
-  in this regime because neither strategy achieves containment. This is a
-  methodological ceiling effect: to test delay-dependent inversion, the experiment
-  would need culling rates closer to the critical threshold where containment is
-  marginal. As designed, the experiment is uninformative about the hypothesis.
-
----
-
-EXPERIMENT STATUS
-experiment family                        | total results | hosts | status
-abx_cycle_hgt_delay_resonance            | 54            | 13    | PRELIMINARY — delay inversion at short cycles
-fisher_delay_adaptive_culling            | 183           | 24    | NO EFFECT (ceiling effect)
-spatial_pgg_mobility_sanction_delay      | 19            | --    | insufficient data
-levy_foraging_renewal_phase              | 4             | --    | insufficient data
-sandpile_smallworld_avalanche_corr       | 3             | --    | insufficient data
+1. Across 195 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Data quality remained high (194/195 experiment_result payloads), preserving continuity for mechanism-level inference.
+3. Queue hygiene actions removed clearly broken 100% failure families from active execution without disrupting healthy queues.
+4. New mechanism-focused experiment design expanded the test space from main effects to interaction effects (late WD x batch-noise regime), with explicit prior-art/novelty search documented.
 
 NOTES
-- Fisher adaptive culling experiment has a methodological issue: culling rates are
-  too low relative to growth rate, causing universal saturation. A redesign with
-  stronger culling or slower growth would be needed to test the delay-inversion
-  hypothesis in a Fisher-KPP spatial context.
-- ABX cycle finding is preliminary (N=54, only 4 results with hypothesis_signal data)
-  but the delay-period interaction is highly consistent across all 54 workunits.
-  More data needed especially at p=3.0 conditions.
-- Several active experiments (HK consensus, chimera scaling, DLA drift, RFIM roughness,
-  minority game, contact process, etc.) have no sanitized results yet.
+- Cumulative credited result ID lists are intentionally omitted; database remains the source of truth.

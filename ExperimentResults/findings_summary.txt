@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0949)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_1000)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -11,19 +11,19 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 09:49, Part 1)
-- Reviewed and credited 251 newly completed experiment results (ID range 1712128-1720959).
-- Awarded 2966 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 246 experiment_result payloads, 5 error payloads, 0 missing payloads.
-- Broken-experiment active aborts: sis_delay_adaptive_rewiring_tradeoff=1, tangnat=7, tangled_nature_macroevolution=4, baksneppen_modular_avalanche=4.
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 10:00, Part 1)
+- Reviewed and credited 195 newly completed experiment results (ID range 1715998-1721313).
+- Awarded 3505 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 194 experiment_result payloads, 1 error payload, 0 missing payloads.
+- Broken-experiment active aborts: sis_delay_adaptive_rewiring_tradeoff=2, tangled_nature_macroevolution=5, baksneppen_modular_avalanche=6, axelnoise_s0=3.
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- App-level fail snapshot: CPU appid=1 fail=53.3%; GPU appid=2 fail=73.4%.
-- Website counters after update: credited_count=5169; total_results_count=5167.
+- App-level fail snapshot after cleanup: CPU appid=1 fail=53.8%; GPU appid=2 fail=72.6%.
+- Website counters after update: credited_count=5364; total_results_count=5362.
 - Queue close note: uncredited completed-success rows continue to arrive during runtime (26 at close query).
 
 RECENT SCIENTIFIC SIGNALS
-- Credited payload quality remained high (246/251 = 98.0% experiment_result payloads).
-- High-throughput credited families this session: hkbc (24), nagelschreckenberg_lookahead (21), interdep_flow_memory_shedding_tradeoff (14), autocatalytic_dilution_memory_window (12), chemostat_delay_crossfeeding_resonance (11), pit_delay_inhibitor_resonance (11).
+- Credited payload quality remained high (194/195 = 99.5% experiment_result payloads).
+- High-throughput credited families this session: hkbc (24), ofc_earthquake_bvalue (22), interdep_flow_memory_shedding_tradeoff (12), antibswitch (11), minority_game_memory_heterogeneity (10).
 - No directional reversal evidence for WD/ICP narrative was observed in reviewed outputs.
 
 OPEN QUESTIONS
@@ -33,6 +33,6 @@ OPEN QUESTIONS
 4) Should delay-family parameter bounds be tightened where repeat crash waves appear?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 251 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Reviewed payload quality remained high (98.0% experiment_result payloads), supporting inference continuity.
+1. Across 195 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Reviewed payload quality remained high (99.5% experiment_result payloads), supporting inference continuity.
 3. Targeted aborts removed clearly broken 100% failure families from active queue without impacting healthy families.
