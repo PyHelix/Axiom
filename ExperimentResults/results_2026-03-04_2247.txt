@@ -1,49 +1,50 @@
-AXIOM BOINC - SCIENTIFIC ANALYSIS
-Date: 2026-03-04 22:47 UTC
-Sanitized results analyzed: 96 files (script-resolved), 1999 files detected in window
+AXIOM BOINC SESSION RESULTS (Part 3 Aggregate)
+Timestamp: 2026-03-04 22:47
+Sources: validate_2026-03-04_2239.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+RESULTS REVIEWED AND CREDIT AWARDED (Part 1)
+- Total reviewed and credited: 1085 results
+- Total credit awarded: 3333
+- Tier mix: error_zero=939, success_no_payload_long=145, success_no_payload_mid=1
+- Leading credit totals: Steve Dodd +1286, ChelseaOilman +1066, Orange Kid +220, kotenok2000 +144, Anandbhat +124
+- Batch interpretation: successful rows in this slice were mostly long-runtime completions without exact filename payload matches; error rows were dominated by near-zero elapsed startup/path failures.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running aborts: 0 before, 0 after
+- Hard >48h running aborts: 0 before, 0 after
+- Broken-experiment global aborts issued: 0
+- Multi-host nonzero-elapsed crash cluster: not detected
+- Website counter repair performed after blank-value corruption; counters reset to monotonic-safe values: credited_count=3364, total_results_count=1825
+
+DEPLOYMENT AND RESEARCH SUMMARY (Part 2)
+- Retirement pass executed before deployment; high-completion candidates checked (svdrank, percolation, wdlr, wdwindow, wdoptim, etc.); ABORT_TOTAL=0 because unsent=0 for retired families at runtime.
+- New experiment designed and uploaded: wd_batchnoise_interaction.py (python compile check passed on server).
+- Novelty-check documentation captured in run log via literature queries, including:
+  - arxiv weight decay batch size interaction deep learning
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - arxiv 1711.05101 decoupled weight decay regularization
+- CPU deployment pass reported:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2
+  - CPU_WU_CREATED=2937
+  - CPU scripts targeted: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- GPU deployment pass started as a separate mandatory step with scripts wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py; run log ended mid-command before final summary print.
+
+GPU CHECKPOINT
+- Current GPU queue state (appid=2, all experiment families): 10 GPU hosts active, 145 GPU workunits queued.
+- Current WD-focused GPU queue state:
+  - exp_wd_curvature_trigger_gpu*: 4 unsent
+  - exp_wd_timing_scale_gpu*: 4 unsent
+  - exp_grad_subspace_wd_gpu*: 4 unsent (6 total rows)
+  - exp_wd_noise_trigger_gpu*: 5 unsent
+- WD-focused GPU scripts in active rotation: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py, grad_subspace_wd_gpu.py, wd_noise_trigger_gpu.py
 
 KEY SCIENTIFIC FINDINGS
+1. No new high-confidence evidence reversed the standing inverse critical-period / WD timing direction in this session.
+2. Failure pressure remained dominated by zero-elapsed startup/path faults rather than sustained nonzero runtime crashes across multiple hosts.
+3. Upload-store sampling still indicates valid experiment_result JSON generation; this credited slice lacked exact-name payload matches, consistent with filename/path mismatch or retention timing drift.
+4. Part 2 expanded mechanism-focused WD testing with a new interaction hypothesis experiment (wd_batchnoise_interaction) and continued GPU WD probes (curvature-trigger and timing-scale families).
 
-FINDING #1: pit_delay_inhibitor_resonance (PRELIMINARY, 23 seeds, 6 hosts)
-
-  Hypothesis: Delayed adaptive inhibitor control creates non-monotonic pit-depth resonance at intermediate flow pulse periods, amplified by heterogeneity.
-
-  Method: For each trial, simulate corrosion pit dynamics under fixed/pulse/adaptive inhibitor control across periods [24,72,216], delays [0,10,30], heterogeneity levels [0.05,0.22], and chloride scales [0.7,1.1]; summarize resonance and policy contrasts.
-
-  Results: resonance_mean = 0.070302 +/- 0.002204 (27/27 positive, Cohen's d=31.90, host-mean span=0.010576); adaptive_minus_fixed_mean = -0.001821 +/- 0.000727 (27/27 negative, Cohen's d=-2.50, host-mean span=0.004259).
-
-  Conclusion: SUPPORTED - Within this 23-seed update, delayed adaptive inhibitor control continues to produce an intermediate-period resonance signature while also reducing damage versus fixed control. This supports a mechanistic picture where control delay couples to periodic forcing and creates a distinct response regime rather than a monotonic delay penalty. Because seed count is below 30 this remains preliminary rather than confirmed.
-
----
-
-FINDING #2: chemostat_delay_crossfeeding_resonance (PRELIMINARY, 25 seeds, 10 hosts)
-
-  Hypothesis: Adaptive nutrient control with sensing delay exhibits period-dependent resonance that can reduce coexistence under intermediate forcing periods.
-
-  Method: For each trial, simulate two-species cross-feeding chemostat dynamics under fixed/pulse/adaptive inflow control across forcing periods [18,54,162], delays [0,6,18], heterogeneity [0.04,0.18], and shock amplitudes [0.10,0.25]; summarize coexistence and collapse metrics.
-
-  Results: adaptive_vs_pulse_coexistence = -0.004292 +/- 0.002816 (35/38 negative, Cohen's d=-1.52, host-mean span=0.007272); resonance_strength = -0.000730 +/- 0.004410 (18/38 positive, 20/38 negative, Cohen's d=-0.17).
-
-  Conclusion: SUPPORTED (weak effect) - Adaptive delayed control still trends toward lower coexistence than pulse control, consistent with delay-induced degradation in this cross-feeding regime. However, the absolute coexistence shift is small (~0.0043), so practical impact is limited at present and the resonance-strength channel is near noise. This should be treated as a weak preliminary signal pending larger-N replication.
-
----
-
-FINDING #3: interdep_flow_memory_shedding_tradeoff (INCONCLUSIVE, 24 seeds, 6 hosts)
-
-  Hypothesis: Intermediate memory windows improve interdependent-network survival relative to edge windows under delayed risk forecasts (medium-window gain > 0).
-
-  Method: For each trial, simulate coupled network cascades (n=384) with memory windows [1,3,8,16] and forecast biases [-0.15,0,+0.15], with adaptive shedding and recovery; summarize survival/blackout and medium-window gain.
-
-  Results: mean_medium_window_gain = -0.000554 +/- 0.001007 (11/31 positive, 20/31 negative, Cohen's d=-0.55, host-mean span=0.003126).
-
-  Conclusion: INCONCLUSIVE - The expected medium-window advantage is not stable in this batch: the mean is slightly negative and sign consistency is mixed. This does not currently support a robust optimal-memory-window mechanism under delayed risk forecasts, and additional seeds are needed to determine whether the effect is genuinely absent or condition-dependent.
-
-EXPERIMENT STATUS
-pit_delay_inhibitor_resonance | 27 | 23 | preliminary supported
-chemostat_delay_crossfeeding_resonance | 38 | 25 | preliminary weak negative effect
-interdep_flow_memory_shedding_tradeoff | 31 | 24 | inconclusive
-
-NOTES
-- 70 experiment families had >=5 new sanitized files in the 120-minute window.
-- Scientific claims were restricted to 3 families with explicit script-resolved scalar schema; other families were excluded from claims this cycle to avoid schema-misaligned inference.
-- No new confirmed finding reached the 30+ seed consistency threshold this cycle.
+END OF SESSION
