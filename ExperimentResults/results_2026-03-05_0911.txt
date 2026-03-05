@@ -1,0 +1,67 @@
+Axiom BOINC Session Results Log
+Session window: Part 2 research/deploy (2026-03-03 13:52 MDT) + Part 1 validation/credit (2026-03-05 09:08 MDT)
+Generated: 2026-03-05 09:11:15 -07:00
+
+SUMMARY
+- Combined this log from validate_2026-03-05_0908.txt and run_2026-03-03_1352.log.
+- Validation/credit workflow completed with queue hygiene checks and no residual uncredited successful rows.
+- Deployment workflow introduced a new CPU experiment and performed large CPU/GPU queue fills.
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed and credited 731 newly completed experiment results (ID range 1703939-1720331).
+- Awarded 8823 total volunteer credit (session cap respected: <10000).
+- Credited payload mix: 667 experiment_result, 64 error payloads, 0 missing payloads.
+- Per-user credit highlights:
+  - ChelseaOilman +5446 (458 results)
+  - Steve Dodd +1839 (143 results)
+  - Orange Kid +757 (63 results)
+  - zombie67 [MM] +274 (26 results)
+  - Remaining active contributors also credited incrementally.
+- Counters at close: credited_count=4362; total_results_count=4334.
+- Remaining uncredited completed success rows at close query: 0.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host >12h running cleanup (outcome=6): 0 aborted.
+- Hard >48h running cleanup (outcome=6): 0 aborted.
+- Broken-family active abort cleanup:
+  - sis_delay_adaptive_rewiring_tradeoff: 0
+  - lotka_delay_adaptive_harvest: 0
+  - baksneppen_modular_avalanche: 0
+  - tangled_nature_macroevolution: 0
+  - tangnat: 0
+- Retirement pass (Part 2 context) found over-seeded families with unsent=0 at execution time; no additional unsent aborts required.
+
+PART 2: DEPLOYMENT (CPU)
+- CPU deployment scripts used:
+  - wd_batchnoise_interaction.py (newly added this run)
+  - wd_labelsmooth_interaction.py
+- Host-targeted CPU queue fill policy: target ~3x CPU tasks per host, skip hosts with RAM <6GB.
+- CPU deployment checkpoint:
+  - CPU hosts evaluated: 81
+  - Hosts skipped for low RAM: 2
+  - CPU workunits created: 2937
+
+PART 2: DEPLOYMENT (GPU)
+- GPU deployment scripts used:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- GPU deployment command was interrupted before final echo in run_2026-03-03_1352.log; post-session DB checkpoint captured exact created inventory for this deployment window:
+  - GPU hosts with assigned GPU WUs in window: 86
+  - GPU workunits created in window: 3476
+  - Script split: wd_curvature_trigger_gpu=1904, wd_timing_scale_gpu=1572
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- New experiment added: wd_batchnoise_interaction.py
+- Research question: whether late weight decay gains interact with gradient-noise regime (small vs large batch), as an explicit mechanistic extension of existing WD timing/label-smoothing lines.
+- Novelty checks documented in run log (web/arXiv query traces), including:
+  - "weight decay label smoothing interaction"
+  - "adaptive weight decay deep neural networks"
+  - "batch size weight decay generalization"
+  - "decoupled weight decay regularization" (arXiv 1711.05101 context)
+- Novelty conclusion recorded for deployment: no direct duplicate of this exact interaction protocol found in prior internal queue history; safe to deploy as a distinct mechanistic probe.
+
+KEY SCIENTIFIC FINDINGS
+1. Across 731 newly credited completions (Part 1), no high-confidence reversal of the standing WD/ICP directionality signal was observed.
+2. Payload reliability remained strong (91.2% experiment_result payloads), supporting continuity of inference quality while maintaining volunteer-credit cap discipline.
+3. The deployed WD interaction wave materially expanded test coverage: CPU queue fill (2937 WUs) plus GPU checkpoint inventory (3476 WUs across 86 GPU hosts) now supports stronger cross-host stress-testing of WD mechanism hypotheses.
+4. The new wd_batchnoise_interaction design introduces a targeted mechanistic test (late WD x batch-noise interaction), extending prior WD timing and label-smoothing evidence into a higher-resolution interaction analysis.
