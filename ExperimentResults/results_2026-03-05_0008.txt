@@ -1,0 +1,36 @@
+AXIOM BOINC — SCIENTIFIC ANALYSIS
+Date: 2026-03-05 00:08 UTC
+Sanitized results analyzed: 10 files
+
+KEY SCIENTIFIC FINDINGS
+
+FINDING #1: grayscott_delay_pulse_feedback (INCONCLUSIVE, 5 seeds, 4 hosts)
+
+  Hypothesis: Adaptive pulsed feed improves Gray-Scott pattern persistence at low feedback delay but underperforms fixed pulses at high delay under sensor noise and heterogeneity.
+
+  Method: `run_trial()` cycles fixed vs adaptive feed policies over delay {0, 8, 20}, sensor noise {0.00, 0.02}, and heterogeneity {0.00, 0.12} in a Gray-Scott reaction-diffusion grid; pattern persistence metrics are summarized as adaptive-minus-fixed contrasts and delay-band means.
+
+  Results: mean_gain_delay0 = -0.03212 +/- 0.00023 and mean_gain_delay20 = -0.03042 +/- 0.00113 across n=5 runs; signs were 5/5 negative for both metrics; Cohen's d = -136.88 (delay0) and -27.01 (delay20). delay_inversion_observed = 0/5. Host means for mean_gain_delay20 stayed negative on all hosts (h209: -0.03001, h325: -0.02992, h332: -0.02975, h334: -0.03243).
+
+  Conclusion: INCONCLUSIVE — This batch does not show the hypothesized low-delay adaptive benefit; adaptive control was worse than fixed pulses in both low- and high-delay bands. Scientifically, the observed sign pattern is consistent with a regime where delayed adaptation suppresses pattern persistence rather than protecting it, but N=5 is below the project threshold for a claim. Additional seeds are required to determine whether this is a stable property of the modeled control loop or a transient sampling artifact.
+
+---
+
+FINDING #2: metapop_corridor_delay_forecast (INCONCLUSIVE, 4 seeds, 3 hosts)
+
+  Hypothesis: Adaptive corridor activation improves metapop persistence only when implementation delay and forecast error are low; with high delay/error, fixed corridors are more robust.
+
+  Method: `run_trial()` evaluates fixed vs adaptive corridor policies over build delay {2, 10, 20} and forecast noise {0.00, 0.02, 0.05} in a climate-shifting metapopulation with Allee effects, then computes adaptive-minus-fixed persistence deltas by delay/noise condition.
+
+  Results: averaged over noise levels, adaptive-minus-fixed persistence was negative in every delay band: d2=-0.01936 +/- 0.00020, d10=-0.02021 +/- 0.00024, d20=-0.01968 +/- 0.00021 (n=5 runs). Sign consistency was 5/5 negative in all three bands; Cohen's d = -95.02 (d2), -84.93 (d10), -95.36 (d20). adaptive_hurts_high_delay = 5/5 and adaptive_helps_low_delay = 0/5. High-delay host means were all negative (h325: -0.01955, h327: -0.01979, h334: -0.01969).
+
+  Conclusion: INCONCLUSIVE — Current evidence suggests adaptive corridor decisions reduced persistence even at low delay in this short window. If replicated at larger N, this would imply forecast-triggered corridor control can be broadly maladaptive under this model's migration/climate coupling, not only at long delays. With only 5 runs, this remains an open question rather than a supported rejection.
+
+EXPERIMENT STATUS
+grayscott_delay_pulse_feedback | 5 new results | 5 seeds | inconclusive (N<10)
+metapop_corridor_delay_forecast | 5 new results | 4 seeds | inconclusive (N<10)
+
+NOTES
+- Window scan detected 49 sanitized files across 28 experiment families in the last 120 minutes.
+- Only 2 families met the >=5-new-results analysis threshold this cycle.
+- No new confirmed findings and no new preliminary findings were added this cycle.

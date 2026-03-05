@@ -1,36 +1,44 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_1651)
-============================================================
+Last updated: March 5, 2026 (research deploy cycle)
+=================================================
 
-CORE SCIENTIFIC STATUS
-- Prior inverse critical-period / WD timing signal remains unreversed in active monitoring.
-- This validation pass was dominated by credit/cleanup throughput, not new science payload extraction.
-- No active multi-host nonzero-elapsed crash cluster (CPU appid=1 or GPU appid=2) required broad experiment abort in this pass.
+CONFIRMED FINDINGS (append-only - never remove or re-test these)
+1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
+2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
+3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
+4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
+5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
+6. SVD rank intervention: completed (1964+ results) - retired, finding established
+7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
+8. WD depth interaction: completed (1282+ results) - retired
+9. WD task sweep: completed (1077+ results) - retired
+10. WD optimizer interaction: completed (1043+ results) - retired
+11. WD learning rate interaction: completed (1037+ results) - retired
+12. WD width transition: completed (928+ results) - retired
+13. WD window: completed (841+ results) - retired
+14. Representation crystallization: completed (368+ results) - retired
+15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
+16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
+17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
+18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
+19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
 
-ACTIVE SCIENCE PRIORITIES
-1) wd_labelsmooth_interaction.py
-- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
-2) wd_curvature_trigger_gpu.py
-- Test whether WD onset is curvature-triggered versus fixed-onset.
-3) grad_subspace_wd_gpu.py
-- Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
+NEW PRELIMINARY FINDINGS (this cycle)
+- None added this cycle (no family reached N>=10 new seeds with consistent direction).
 
-VALIDATION SESSION UPDATE (March 04, 2026, 16:51, Part 1)
-- Credited in-session passes: 934 completed rows total (137 success + 797 error/outcome!=1 rows), 6208 total credit (under 10,000 cap).
-- Credit tiers used: success_long(>=600s)=28, success_mid(60-599s)=12, success_short(0-59s)=6, error_nonzero=4, error_zero=2.
-- Credit distribution (session totals): ChelseaOilman 3226, Steve Dodd 1370, WTBroughton 340, _Scandinavian_ 302, Armin Gips 212, PyHelix 148, vanos0512 140, kotenok2000 124, Orange Kid 88, koll 84, Ncard00 66, marmot 56, [VENETO] boboviz 28, hwt 12, [DPC] hansR 12.
-- Payload audit on current uncredited set at runtime: upload JSON files were not present for audited rows (all resolved as missing files), so quality attribution used outcome/elapsed signals.
-- Stuck-task cleanup actions: dead-host >12h aborts=0; hard >48h aborts=0.
-- Failure diagnostics: nonzero-elapsed failed groups in last 72h = 0; high fail-rate tables remain dominated by zero-elapsed startup/download failures.
-- Broken-experiment screening: no nonzero-elapsed multi-host crash candidate; no broad abort issued.
-- Website counters updated: credited_count=1037; total_results_count=298 (monotonic max rule applied).
-- Cutoff snapshot: queue is live; new completed rows may appear immediately after cutoff.
-
-RELIABILITY NOTES
-- Current failure bursts are infrastructure/startup-side (mostly zero-elapsed startup/download/connectivity), not runtime scientific model crashes.
-- No experiment script patch was required in this pass because there was no nonzero-elapsed crash signature to triage.
+REPLICATION UPDATES (confirmed findings, new samples)
+- None this cycle (no confirmed-family batch reached analyzable size >=5 in the 120-minute window).
 
 OPEN QUESTIONS
-1) Should zero-elapsed failure bursts be routed to a dedicated infra queue so experiment-level failure percentages reflect runtime faults only?
-2) Should WD/GPU priority experiments get explicit rolling cross-validation counters in the public summary now that completions continue?
-3) Should host-level retry/backoff rules be tightened for repeated startup/download failures before task dispatch?
+- Gray-Scott delay pulse feedback: mean_gain_delay0 = -0.03212 +/- 0.00023 and mean_gain_delay20 = -0.03042 +/- 0.00113 (n=5 runs, 5 seeds, 4 hosts), 5/5 negative for both metrics; delay_inversion_observed = 0/5. Current data contradicts the intended low-delay benefit, but N<10 so no claim update.
+- Metapop corridor delay forecast: adaptive-minus-fixed persistence remained negative at low, mid, and high delay bands: d2=-0.01936 +/- 0.00020, d10=-0.02021 +/- 0.00024, d20=-0.01968 +/- 0.00021 (n=5 runs, 4 seeds, 3 hosts), 5/5 negative in each band; adaptive_hurts_high_delay flag = 5/5, adaptive_helps_low_delay flag = 0/5. Suggests broad adaptive underperformance in this batch, but N<10.
+
+ANALYSIS COVERAGE NOTE
+- 49 sanitized files detected in the last 120 minutes.
+- 28 experiment families were present in this window.
+- 2 families met the >=5 new-results threshold and were analyzed with source-mapped schemas.
+
+CURRENT CYCLE UPDATE
+- No new confirmed findings were added.
+- No new preliminary findings were added (insufficient N).
+- Two families produced consistent directional signals that remain open pending >=10 seeds.
