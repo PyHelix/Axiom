@@ -1,0 +1,76 @@
+Axiom Validation & Credit Log
+Timestamp: 2026-03-05 02:15:08 CET
+Session file: validate_2026-03-05_0215.txt
+
+Operational scope
+- Step 2 workflow only: validation, credit, cleanup
+- Scientific findings were not modified (Step 1 owns findings_summary.txt)
+
+State discovery
+- Uncredited successful exp results at scoring time: 38
+- Sanitized files scanned: 9919
+- Matched sanitized-to-result rows: 38
+- Failure-rate by appid snapshot: appid=1 fail_pct=48.9, appid=2 fail_pct=45.2 (no global >50% abort trigger)
+
+Credit awards (quality-based, numeric sanitized payload only)
+- Total credited results this session: 38
+- Total granted credit this session: 710
+- Session cap check: PASS (<= 10000)
+- Tier counts: high=5, high-outlier=19, medium=4, medium-outlier=10
+
+Results reviewed this session (id, hostid, credit, tier, numeric richness)
+- result_id=1690364 host_id=332 credit=20 tier=high-outlier nnum=118
+- result_id=1690395 host_id=332 credit=20 tier=high-outlier nnum=212
+- result_id=1690448 host_id=332 credit=20 tier=high-outlier nnum=474
+- result_id=1690532 host_id=345 credit=20 tier=high-outlier nnum=118
+- result_id=1690894 host_id=335 credit=20 tier=high-outlier nnum=98
+- result_id=1690895 host_id=335 credit=20 tier=high-outlier nnum=215
+- result_id=1690900 host_id=335 credit=20 tier=medium nnum=26
+- result_id=1690902 host_id=335 credit=30 tier=high nnum=520
+- result_id=1690903 host_id=335 credit=20 tier=high-outlier nnum=98
+- result_id=1690905 host_id=335 credit=20 tier=high-outlier nnum=215
+- result_id=1690907 host_id=335 credit=20 tier=high-outlier nnum=215
+- result_id=1690910 host_id=335 credit=20 tier=high-outlier nnum=98
+- result_id=1690915 host_id=325 credit=20 tier=high-outlier nnum=331
+- result_id=1690975 host_id=330 credit=10 tier=medium-outlier nnum=66
+- result_id=1690978 host_id=330 credit=20 tier=high-outlier nnum=379
+- result_id=1691280 host_id=324 credit=30 tier=high nnum=520
+- result_id=1691283 host_id=324 credit=30 tier=high nnum=520
+- result_id=1691284 host_id=324 credit=30 tier=high nnum=520
+- result_id=1691382 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691384 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691385 host_id=340 credit=10 tier=medium-outlier nnum=66
+- result_id=1691386 host_id=340 credit=20 tier=high-outlier nnum=215
+- result_id=1691387 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691388 host_id=340 credit=20 tier=medium nnum=26
+- result_id=1691390 host_id=340 credit=20 tier=high-outlier nnum=215
+- result_id=1691391 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691392 host_id=340 credit=20 tier=high-outlier nnum=215
+- result_id=1691393 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691395 host_id=340 credit=20 tier=high-outlier nnum=212
+- result_id=1691396 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691400 host_id=340 credit=20 tier=high-outlier nnum=212
+- result_id=1691401 host_id=340 credit=10 tier=medium-outlier nnum=51
+- result_id=1691402 host_id=340 credit=10 tier=medium-outlier nnum=66
+- result_id=1691403 host_id=340 credit=20 tier=medium nnum=26
+- result_id=1691404 host_id=340 credit=20 tier=high-outlier nnum=212
+- result_id=1691510 host_id=339 credit=20 tier=medium nnum=78
+- result_id=1691513 host_id=339 credit=30 tier=high nnum=1688
+- result_id=1691640 host_id=219 credit=20 tier=high-outlier nnum=118
+
+Per-user credit increments and new totals
+- user_id=40 increment=670 new_total=552543.4101749985
+- user_id=127 increment=20 new_total=7620.199999999993
+- user_id=90 increment=20 new_total=64694.52100000001
+
+Cleanup actions
+- Aborted stuck tasks (>12h run and >6h no host contact): 0
+- Aborted hard-ceiling tasks (>48h run): 0
+- Broken-experiment mass aborts: none
+
+Website counters updated
+- credited_count.txt: 1858 -> 1896
+- total_results_count.txt: 1487 -> 1514 (live completed=1514)
+
+Bug fixes
+- No experiment script changes were required in this validation session.
