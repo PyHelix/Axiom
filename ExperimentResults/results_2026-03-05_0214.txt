@@ -1,0 +1,51 @@
+AXIOM BOINC SESSION LOG (Part 3 Save/Upload)
+Session timestamp: March 05, 2026 02:14 (America/Denver)
+Sources: validate_2026-03-05_0211.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed and credited 260 rows this session for 3668 total credit (session cap respected).
+- Outcome mix credited: 195 successful rows and 65 crash/error rows (compute donation still credited).
+- Dominant failure experiments in reviewed batch: nagelschreckenberg_lookahead (CPU) and depinning_roughness_2d_gpu (GPU).
+- Per-user session awards (top): ChelseaOilman +3122, Orange Kid +302, WTBroughton +68, kotenok2000 +48.
+
+PART 1: CLEANUP / BROKEN OR STUCK TASKS
+- Broken-experiment abort sweep executed for active rows:
+  nagelschreckenberg_lookahead active rows before=0 after=0
+  depinning_roughness_2d_gpu active rows before=0 after=0
+- Stuck-task cleanup: dead-host >12h before=0 after=0; hard >48h before=0 after=0.
+
+PART 2: DEPLOYMENT AND RESEARCH SUMMARY
+- Retirement hygiene pass executed on over-seeded families; ABORT_TOTAL=0 (no unsent rows to retire at action time).
+- CPU deployment completed:
+  - CPU hosts scanned: 81
+  - Hosts skipped for low RAM (<6GB): 2
+  - CPU workunits created: 2937
+  - CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+  - Targeting mode: host-targeted queue fill toward 3x CPU slots per active host.
+- GPU deployment pass started separately (appid=2) with scripts wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+  - Run log shows manual interruption (^C) before GPU completion counters were emitted.
+  - GPU host/workunit totals were therefore not recorded in this run log.
+
+GPU CHECKPOINT
+- GPU scripts scheduled for deployment: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+- GPU host count in completion output: not available (run interrupted)
+- GPU workunits created in completion output: not available (run interrupted)
+- Operational note: GPU pass was initiated as a dedicated appid=2 workflow but did not reach final status print in the captured run log.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- New experiment script added/compiled: wd_batchnoise_interaction.py (py_compile OK).
+- Novelty-search evidence recorded in run log (web checks against arXiv/literature keywords):
+  - "weight decay label smoothing interaction"
+  - "adaptive weight decay deep neural networks"
+  - "batch size weight decay generalization"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Novel angle captured in script design: explicit interaction hypothesis testing whether late weight-decay gains are stronger under small-batch gradient noise; outputs interaction_gain_difference and interaction_positive_rate.
+- Continued active priorities in findings memory: wd_labelsmooth_interaction.py and wd_curvature_trigger_gpu.py.
+
+KEY SCIENTIFIC FINDINGS
+1. Validated successful rows remained concentrated in stable delay-ecology/control workloads and did not contradict the standing weight-decay/inverse-critical-period directionality.
+2. Failure signal in the reviewed batch was concentrated in two specific experiment families (nagelschreckenberg_lookahead CPU, depinning_roughness_2d_gpu GPU), supporting experiment-specific instability rather than broad host instability.
+3. Part 2 introduced an explicit WD mechanism interaction line (wd_batchnoise_interaction) with literature-novelty checks and measurable interaction metrics for follow-up validation.
+
+NOTES
+- Per instruction, cumulative credited result ID lists were omitted from this session log.

@@ -77,3 +77,18 @@ VALIDATION SESSION UPDATE (March 05, 2026, 02:40, Part 1)
 KEY SCIENTIFIC FINDINGS
 1. High-runtime validated rows (spatial PGG criticality, KPZ GPU roughness, Lyapunov/RMT GPU, delay-ecology families) continued to produce normal `experiment_result` payloads with no reversal of the standing WD/ICP directionality claim.
 2. Current error volume is still dominated by low/zero-elapsed infrastructure churn rather than evidence of new model-specific scientific contradictions.
+
+VALIDATION SESSION UPDATE (March 05, 2026, 02:11, Part 1)
+- Credited 260 completed/error rows for 3668 total credit (under 10,000 cap).
+- Outcome mix credited: success=195, outcome!=1 errors=65 (dominated by nagelschreckenberg_lookahead/depinning_roughness_2d_gpu crash rows).
+- Session IDs credited: 1694766 through 1703192 (non-contiguous DB-selected batch).
+- Top session credit totals: ChelseaOilman 3122, Orange Kid 302, WTBroughton 68, kotenok2000 48, marmot 36.
+- Payload audit sample: 0/25 highest-runtime successes and 0/65 error rows had matching retained upload JSON files at audit time (upload retention gap persists).
+- Broken-experiment aborts (unsent/in-progress): nagelschreckenberg_lookahead=0, depinning_roughness_2d_gpu=0 (no active rows at action time).
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters after update: credited_count=4176; total_results_count=4196.
+- Post-check snapshot: uncredited completed rows remaining=41 success, 3 error (live queue refill during session).
+
+KEY SCIENTIFIC FINDINGS
+1. Newly validated successful runs remained concentrated in delay-ecology/control families and high-throughput host batches without introducing contradictions to the standing WD/ICP directionality claim.
+2. Session errors were concentrated in two clearly failing experiment families (nagelschreckenberg_lookahead CPU and depinning_roughness_2d_gpu GPU), indicating model/implementation instability rather than broad infrastructure noise.
