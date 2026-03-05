@@ -1,0 +1,124 @@
+AXIOM VALIDATION SESSION LOG
+Timestamp: 2026-03-05 02:00:19 CET
+Step: Validation/Credit/Cleanup (Step 2)
+
+1) RESULTS REVIEWED THIS SESSION
+- Uncredited successful results pending review at final pass: 93
+- Reviewed queue source: live DB query (server_state=5, outcome=1, granted_credit=0, name LIKE 'exp_%').
+- Review method: matched DB result.name against sanitized JSON _result_name in /opt/axiom/experiment_results/sanitized/*_safe.json.
+- Match outcome: 0/93 pending successful results had sanitized payloads available at review time.
+- Result quality decision: scientific payload unavailable for all pending successes this pass; awarded credit = 0.
+
+Reviewed result IDs (final pass queue):
+- result_id=1689488 host_id=29 user_id=10 appid=2 name=exp_allencahn_delay_adaptive_quench_window_gpu_gpu_h29_c1772666898_n23_1610162_1772667329_23
+- result_id=1689619 host_id=1 user_id=1 appid=2 name=exp_potts_rf_delay_adaptive_anneal_window_gpu_gpu_h1_c1772666898_n8_1615417_1772667464_31
+- result_id=1690268 host_id=324 user_id=40 appid=1 name=exp_lorenz96_delay_assimilation_regime_shift_h324_r50_1772628327_1683733_1772669103_0
+- result_id=1690269 host_id=324 user_id=40 appid=1 name=exp_sis_delay_adaptive_rewiring_tradeoff_h324_r51_1772628327_1683751_1772669115_0
+- result_id=1690271 host_id=324 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h324_r52_1772628327_1683761_1772669127_0
+- result_id=1690273 host_id=324 user_id=40 appid=1 name=exp_tritrophic_delay_harvest_resilience_h324_r53_1772628327_1683782_1772669139_0
+- result_id=1690275 host_id=324 user_id=40 appid=1 name=exp_cahnhilliard_delay_feedback_window_h324_r54_1772628327_1683787_1772669153_0
+- result_id=1690277 host_id=324 user_id=40 appid=1 name=exp_climate_delay_carbon_hysteresis_window_h324_r55_1772628327_1684798_1772669172_0
+- result_id=1690331 host_id=324 user_id=40 appid=1 name=exp_lorenz96_delay_assimilation_regime_shift_h324_r56_1772628327_1685776_1772669321_0
+- result_id=1690334 host_id=324 user_id=40 appid=1 name=exp_sis_delay_adaptive_rewiring_tradeoff_h324_r57_1772628327_1685918_1772669332_0
+- result_id=1690337 host_id=324 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h324_r58_1772628327_1686196_1772669344_0
+- result_id=1690343 host_id=324 user_id=40 appid=1 name=exp_tritrophic_delay_harvest_resilience_h324_r59_1772628327_1686751_1772669427_0
+- result_id=1690345 host_id=324 user_id=40 appid=1 name=exp_cahnhilliard_delay_feedback_window_h324_r60_1772628327_1686981_1772669465_0
+- result_id=1690351 host_id=324 user_id=40 appid=1 name=exp_climate_delay_carbon_hysteresis_window_h324_r61_1772628327_1688119_1772669558_0
+- result_id=1690362 host_id=325 user_id=40 appid=1 name=exp_fiberheal_r15_h325_s0304_cpu_090631_1689482_1772669704_0
+- result_id=1690365 host_id=324 user_id=40 appid=1 name=exp_lorenz96_delay_assimilation_regime_shift_h324_r62_1772628327_1689593_1772669730_0
+- result_id=1690397 host_id=324 user_id=40 appid=1 name=exp_sis_delay_adaptive_rewiring_tradeoff_h324_r63_1772628328_1690044_1772669794_0
+- result_id=1690399 host_id=324 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h324_r64_1772628328_1690155_1772669806_0
+- result_id=1690400 host_id=324 user_id=40 appid=1 name=exp_tritrophic_delay_harvest_resilience_h324_r65_1772628328_1691705_1772669818_0
+- result_id=1690401 host_id=324 user_id=40 appid=1 name=exp_cahnhilliard_delay_feedback_window_h324_r66_1772628328_1693603_1772669830_0
+- result_id=1690476 host_id=29 user_id=10 appid=1 name=exp_grayscott_delay_pulse_feedback_h29_r4_1706766_1772669908_14
+- result_id=1690477 host_id=29 user_id=10 appid=1 name=exp_metapop_corridor_delay_forecast_h29_r4_1706766_1772669908_15
+- result_id=1690480 host_id=29 user_id=10 appid=1 name=exp_metapop_corridor_delay_forecast_h29_r5_1706766_1772669908_18
+- result_id=1690486 host_id=29 user_id=10 appid=1 name=exp_metapop_corridor_delay_forecast_h29_r7_1706766_1772669908_24
+- result_id=1690494 host_id=29 user_id=10 appid=1 name=exp_grayscott_delay_pulse_feedback_h29_r10_1706766_1772669908_32
+- result_id=1690496 host_id=29 user_id=10 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h29_r12_1706766_1772669908_34
+- result_id=1690499 host_id=29 user_id=10 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h29_r13_1706766_1772669908_37
+- result_id=1690504 host_id=29 user_id=10 appid=1 name=exp_metapop_corridor_delay_forecast_h29_r13_1706766_1772669908_42
+- result_id=1690515 host_id=345 user_id=127 appid=1 name=exp_metapop_corridor_delay_forecast_h345_r1_1708242_1772669917_5
+- result_id=1690517 host_id=345 user_id=127 appid=1 name=exp_grayscott_delay_pulse_feedback_h345_r2_1708242_1772669917_7
+- result_id=1690607 host_id=330 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h330_r1772614241_1213_1719925_1772670051_0
+- result_id=1690609 host_id=330 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h330_r1772614241_1215_1720836_1772670064_1
+- result_id=1690702 host_id=1 user_id=1 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h1_r13_1750021_1772670224_37
+- result_id=1690704 host_id=1 user_id=1 appid=1 name=exp_metapop_corridor_delay_forecast_h1_r12_1750021_1772670224_39
+- result_id=1690705 host_id=1 user_id=1 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h1_r14_1750021_1772670224_40
+- result_id=1690709 host_id=1 user_id=1 appid=1 name=exp_grayscott_delay_pulse_feedback_h1_r15_1750021_1772670224_44
+- result_id=1690710 host_id=1 user_id=1 appid=1 name=exp_metapop_corridor_delay_forecast_h1_r14_1750021_1772670224_45
+- result_id=1690717 host_id=1 user_id=1 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h1_r18_1750021_1772670224_52
+- result_id=1690888 host_id=335 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h335_r43_1754206_1772670540_134
+- result_id=1690889 host_id=335 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h335_r46_1754206_1772670540_135
+- result_id=1690890 host_id=335 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h335_r45_1754206_1772670540_136
+- result_id=1690891 host_id=335 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h335_r44_1754206_1772670540_137
+- result_id=1690892 host_id=335 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h335_r47_1754206_1772670540_138
+- result_id=1690893 host_id=335 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h335_r46_1754206_1772670540_139
+- result_id=1690896 host_id=335 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h335_r47_1754206_1772670540_142
+- result_id=1690897 host_id=335 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h335_r46_1754206_1772670540_143
+- result_id=1690898 host_id=335 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h335_r49_1754206_1772670540_144
+- result_id=1690899 host_id=335 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h335_r48_1754206_1772670540_145
+- result_id=1690901 host_id=335 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h335_r50_1754206_1772670540_147
+- result_id=1690904 host_id=335 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h335_r51_1754206_1772670540_150
+- result_id=1690906 host_id=335 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h335_r49_1754206_1772670540_152
+- result_id=1690908 host_id=335 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h335_r51_1754206_1772670540_154
+- result_id=1690909 host_id=335 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h335_r50_1754206_1772670540_155
+- result_id=1690911 host_id=335 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h335_r52_1754206_1772670540_157
+- result_id=1690924 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_1755329_1772670590_3
+- result_id=1690925 host_id=340 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h340_r2_1755329_1772670590_4
+- result_id=1690932 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r3_1755329_1772670590_11
+- result_id=1690942 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_r6_1755329_1772670590_21
+- result_id=1690944 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r7_1755329_1772670590_23
+- result_id=1690947 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r8_1755329_1772670590_26
+- result_id=1690951 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r9_1757297_1772670601_0
+- result_id=1690952 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_r9_1757297_1772670601_1
+- result_id=1690953 host_id=340 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h340_r11_1757297_1772670601_2
+- result_id=1690954 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r10_1757297_1772670601_3
+- result_id=1690955 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_r10_1757297_1772670601_4
+- result_id=1690956 host_id=340 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h340_r12_1757297_1772670601_5
+- result_id=1690957 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r11_1757297_1772670601_6
+- result_id=1690959 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_r11_1759142_1772670613_0
+- result_id=1690960 host_id=340 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h340_r13_1759142_1772670613_1
+- result_id=1690961 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r12_1759142_1772670613_2
+- result_id=1690962 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_r12_1759142_1772670613_3
+- result_id=1690965 host_id=340 user_id=40 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h340_r14_1761121_1772670624_0
+- result_id=1690966 host_id=340 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h340_r13_1761121_1772670624_1
+- result_id=1690967 host_id=340 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h340_r13_1761121_1772670624_2
+- result_id=1690990 host_id=339 user_id=40 appid=1 name=exp_moranmig_h339_r4_1763089_1772670942_4
+- result_id=1690991 host_id=339 user_id=40 appid=1 name=exp_sshdephase_h339_r1_1763089_1772670942_5
+- result_id=1690993 host_id=339 user_id=40 appid=1 name=exp_resettrap_h339_1763089_1772670942_7
+- result_id=1690994 host_id=339 user_id=40 appid=1 name=exp_interdepflow_h339_1763089_1772670942_8
+- result_id=1690996 host_id=339 user_id=40 appid=1 name=exp_interdepflow_h339_r1_1763089_1772670942_10
+- result_id=1690997 host_id=339 user_id=40 appid=1 name=exp_fracsis_h339_1763089_1772670942_11
+- result_id=1691307 host_id=355 user_id=132 appid=2 name=exp_grad_subspace_wd_gpu_gpu_h355_r1772614340_8_1771016_1772671297_0
+- result_id=1691363 host_id=249 user_id=67 appid=2 name=exp_grad_subspace_wd_gpu_gpu_h249_r1_1771352_1772671324_0
+- result_id=1691372 host_id=249 user_id=67 appid=2 name=exp_wd_noise_trigger_gpu_gpu_h249_r3875_t1772632860_1771421_1772671382_0
+- result_id=1691798 host_id=249 user_id=67 appid=2 name=exp_wd_curvature_trigger_gpu_gpu_h249_r3876_t1772632860_1781262_1772672253_0
+
+2) CREDIT ACTIONS
+- Total credit awarded this session: 0
+- Safety cap check (<=10000/session): PASS
+- Per-user credit increments: none
+- DB credit updates executed: none
+- Current credited successful experiment results in DB: 1191
+
+3) CLEANUP ACTIONS
+- Dead-host stuck task cleanup (>12h runtime and >6h no host contact): 0 tasks updated
+- Hard-ceiling cleanup (>48h runtime): 0 tasks updated
+
+4) FAILURE/BROKEN-EXPERIMENT CHECK
+- Examined recent (48h) failure patterns by experiment family.
+- Dominant non-success mode was outcome=5 with exit_status=0; not a crash traceback signature.
+- GPU exit_status=195 events were present in small counts and did not justify family-wide abort this session.
+- Broken experiment abort actions executed: none
+
+5) SCRIPT BUGS FOUND/FIXED
+- No experiment script modifications were required this session.
+
+6) WEBSITE COUNTERS
+- credited_count.txt: unchanged (1191 -> 1191)
+- total_results_count.txt: updated to max(existing, live_db_count) = 1282
+
+7) NOTES
+- findings_summary.txt was consulted only to align operational validation context.
+- No scientific findings were authored in this operational validation log.
