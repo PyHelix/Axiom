@@ -1,0 +1,46 @@
+AXIOM BOINC SESSION RESULTS
+Session timestamp: 2026-03-05 04:32
+Parts combined: Part 1 (validation/credit/cleanup) + Part 2 (research/deploy)
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Reviewed 170 uncredited successful xp_* results with direct JSON payload audit.
+- Payload breakdown: 161 xperiment_result payloads, 9 rror payloads.
+- Credited results this session: 170.
+- Total credit awarded this session: 3284 (within 10,000 cap).
+- Per-user credit increments: ChelseaOilman +2572, Orange Kid +280, WTBroughton +142, _Scandinavian_ +120, Armin Gips +60, marmot +40, vanos0512 +26, kotenok2000 +24, LeaveArtemis +20.
+- Post-credit inflow status: 110 uncredited successful rows remained live.
+
+STUCK/BROKEN TASK CLEANUP
+- Dead-host stuck task aborts (>12h run, >6h no contact): 0.
+- Hard runtime aborts (>48h): 0.
+- Broken active queue cleanup executed: xp_cahnhilliard_delay_feedback_window -> 8 tasks aborted (server_state 2/4 -> 5, outcome 5).
+- Verification after cleanup: cahn active remaining = 0; stuck remaining = 0.
+- Separate retirement pass in Part 2 reported ABORT_TOTAL=0 (no additional unsent retirements needed at that time).
+
+DEPLOYMENT SUMMARY (PART 2)
+CPU deployment
+- Host-targeted queue fill to ~3x p_ncpus on active hosts.
+- CPU host scan: 81 active CPU hosts seen; 2 hosts skipped for RAM <6 GB; deployments targeted the 79 eligible hosts.
+- CPU workunits created in this run: 2937.
+- CPU scripts used in the run: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py.
+
+GPU deployment checkpoint
+- Mandatory separate GPU deployment pass was initiated (ppid=2) with scripts: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- The run log was interrupted during execution (^C) before completion counters were emitted.
+- GPU checkpoint for this run log: GPU hosts processed = not recorded in final output; GPU workunits created = not recorded in final output; scripts selected = as listed above.
+
+NEW/UPDATED EXPERIMENT DESIGN AND NOVELTY CHECK (PART 2)
+- New CPU experiment script authored and deployed to server: wd_batchnoise_interaction.py.
+- Compile sanity check on server passed: python3 -m py_compile .../wd_batchnoise_interaction.py -> OK.
+- Novelty research was explicitly executed before design/deploy using external literature search queries, including:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - rxiv 1711.05101 decoupled weight decay regularization
+- Design intent documented in run log: test interaction-level effects (late WD timing x batch-noise regime), not just single-factor WD effects.
+
+KEY SCIENTIFIC FINDINGS
+1. Across 170 newly audited payloads, no high-confidence contradiction to the standing WD/ICP directionality signal was observed.
+2. Data quality remained high this session (161 structured xperiment_result payloads vs 9 rror payloads), supporting continued robust signal extraction.
+3. Targeted removal of the fully failing cahnhilliard_delay_feedback_window active queue reduced avoidable volunteer compute waste without disrupting healthier experiment families.
+4. Part 2 introduced an explicit interaction-focused WD experiment (wd_batchnoise_interaction) motivated by novelty checks against known WD literature, extending the project toward mechanism-level tests.
