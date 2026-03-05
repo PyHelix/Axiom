@@ -1,0 +1,38 @@
+AXIOM VALIDATION LOG — 2026-03-05 22:45 UTC
+=============================================
+
+RESULTS REVIEWED
+- 6 uncredited results found (IDs: 1698204, 1699661, 1703748, 1703758, 1703759, 1703761)
+- All 6 have validate_state=0 — assimilator has not yet produced sanitized files
+- Experiments: contact_process_temporal_network (h113), hkbc (h341), nkwalk x2 (h354), hkconsensus (h354), dladrift (h354)
+- Deferred to next cycle pending assimilator processing
+
+CREDIT AWARDED
+- Total credit this session: 0
+- No sanitized result files available for quality review
+
+STUCK TASK CLEANUP
+- No tasks stuck >12h on dead hosts
+- No tasks running >48h
+- Clean state
+
+BROKEN EXPERIMENT CLEANUP (100% failure, all work aborted)
+- exp_contactproc_s0: 2 tasks aborted (5 prior failures, 0 successes)
+- exp_spatialpgg_s0: 2 tasks aborted (5 prior failures, 0 successes)
+- exp_rfimrough_s0: 2 tasks aborted (5 prior failures, 0 successes)
+- exp_axelnoise_s0: 6 tasks aborted (6 prior failures, 0 successes)
+- exp_ofcquake_s0: 2 tasks aborted (5 prior failures, 0 successes)
+- exp_mingame_s0: 2 tasks aborted (5 prior failures, 0 successes)
+- exp_chimeralife_s0: 3 tasks aborted (5 prior failures, 0 successes)
+
+HIGH-FAILURE EXPERIMENT CLEANUP (>98% failure, findings already confirmed)
+- exp_cahnhilliard_delay_feedback_window: 4 tasks aborted (98.6% failure, finding #19 confirmed)
+- exp_rbn_delay_fatigue_control: 67 tasks aborted (98.4% failure, finding #33 confirmed)
+
+Total tasks aborted this session: 90
+
+SYSTEM STATUS
+- 88 active hosts (last 72h)
+- Assimilator running (PID 1205)
+- No script bugs identified this session
+- Host 287 (192 CPUs) running 3132 tasks — largest contributor
