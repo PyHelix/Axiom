@@ -1,0 +1,45 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: p3_save_2026-03-05_1056
+Timestamp: 2026-03-05 10:56:38 -07:00
+
+PART 1 VALIDATION / CREDIT SUMMARY
+- Reviewed and credited 339 completed experiment results across 3 passes.
+- Total session credit awarded: 5208 (within 10,000 cap).
+- Payload mix reviewed: experiment_result=233, error=11, missing_file=82, plus 13 pass-2 dynamic-queue payloads.
+- Per-user credit highlights: ChelseaOilman 4721; _Scandinavian_ 120; PyHelix 72; marmot 66; zombie67 [MM] 56.
+- Website counters updated: credited_count=5944; total_results_count=5813.
+
+QUEUE HYGIENE / CLEANUP
+- Broken-family active aborts performed:
+  - sis_delay_adaptive_rewiring_tradeoff: 37 (unsent+in-progress)
+  - lotka_delay_adaptive_harvest: 8
+  - axelnoise family: 5
+- Stuck-task cleanup actions:
+  - Dead-host >12h running and >6h no-contact: 0
+  - Hard >48h runtime aborts: 0
+- Final active broken-family check after cleanup: ACTIVE_SIS=0, ACTIVE_LOTKA=0, ACTIVE_AXEL=0.
+
+PART 2 DEPLOYMENT / RESEARCH SUMMARY (from latest run log)
+- Retirement pass checkpoint: candidates were reviewed; unsent retirement abort total in that pass was 0.
+- CPU deployment completed with host-targeted fill logic:
+  - CPU hosts considered for fill: 81
+  - Low-RAM hosts skipped (<6GB): 2
+  - CPU workunits created: 2937
+  - CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- CPU deployment targeted each host toward ~3x core queue depth with duplicate-name checks.
+
+GPU CHECKPOINT
+- GPU deployment pass was started separately as required (appid=2).
+- GPU scripts selected in the run: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py.
+- Latest run log ended before printing final GPU summary counters, so GPU host count and GPU workunit total were not recorded in that log segment.
+
+NEW EXPERIMENT DESIGN / NOVELTY CHECK NOTES
+- New CPU experiment designed and uploaded: wd_batchnoise_interaction.py.
+- Novelty check was documented in the run via targeted literature/web searches around weight decay, batch size, and interaction behavior before script creation.
+- Designed hypothesis in deployment session: late weight-decay gains may differ by batch-noise regime (small-batch vs large-batch interaction test).
+
+KEY SCIENTIFIC FINDINGS
+1. Across 339 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Reviewed payloads remained dominated by structured experiment outputs, with error payloads still yielding usable operational signal.
+3. Repeated crash-prone families (sis_delay_adaptive_rewiring_tradeoff, lotka_delay_adaptive_harvest, axelnoise) required active-queue removal, reinforcing the need for generation-time gating.
+4. Part 2 introduced an explicit batch-noise x late-weight-decay interaction experiment to test mechanism-level explanations for observed critical-period behavior.
