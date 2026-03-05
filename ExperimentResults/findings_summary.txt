@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0245)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0300)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -11,26 +11,27 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 02:45, Part 1)
-- Credited 249 rows for 4026 total credit (cap respected).
-- Credit mix: 224x16, 16x20, 3x24, 1x30, 1x8, 4x3.
-- Session top credit totals: ChelseaOilman 2896, Amapola 504, PyHelix 232, Orange Kid 102, WTBroughton 102.
-- Upload payload audit: 0/249 retained files under /opt/axiom_boinc/upload/* for this credited batch.
-- Broken-experiment active aborts executed: cahnhilliard_delay_feedback_window (5 active rows).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 03:00, Part 1)
+- Credited 436 rows for 7181 total credit (cap respected).
+- Credit mix: 379x16, 52x20, 1x24, 1x30, 1x12, 1x8, 1x3.
+- Session top credit totals: ChelseaOilman 4068, Amapola 2620, _Scandinavian_ 188, WTBroughton 127, PyHelix 98.
+- Upload payload audit: 435/436 experiment_result payloads; 1/436 error payload.
+- Broken-experiment active aborts executed: cahnhilliard_delay_feedback_window, tangled_nature_macroevolution, baksneppen_modular_avalanche (38 active rows total).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after correction: credited_count=5073; total_results_count=4740.
-- Live queue churn persisted after session close (new uncredited rows arriving continuously).
+- Website counters after update: credited_count=5509; total_results_count=5129.
+- Queue churn persisted after session close (86 uncredited success rows still pending).
 
 RECENT SCIENTIFIC SIGNALS
-- Newly credited successful runs remained concentrated in delay/ecology/network/control families and selected GPU diagnostics.
-- No audited session evidence of reversal in the standing WD/ICP directionality claim.
-- Current elevated failure burden appears experiment-specific (several high-fail families) rather than broad infrastructure collapse.
+- Newly credited successful runs were concentrated in metapop_allee_corridor, collatz_evt_tails, levy_foraging_renewal_phase, and spatial/annealing families.
+- Priority-family visibility this session was low but nonzero: 1 credited wd_curvature_trigger_gpu payload and 1 credited grad_subspace_wd_gpu payload.
+- No audited evidence this session of reversal in the standing WD/ICP directionality claim.
 
 OPEN QUESTIONS
-1) Should upload retention be increased so validator payload audits can inspect more completed runs?
-2) Should zero/near-zero elapsed outcome=5/6 churn be tracked as a public infrastructure KPI?
-3) Should high-priority WD/GPU experiments expose rolling cross-validation counters on the homepage?
+1) Should broken high-failure families be auto-paused at generation time to prevent repeated requeue after manual aborts?
+2) Should validation publish a rolling "payload-retained vs missing" metric by experiment family?
+3) Should WD-priority families receive minimum guaranteed queue share so cross-validation grows each session?
 
 KEY SCIENTIFIC FINDINGS
-1. Newly validated success rows continue to support the existing WD/ICP directionality narrative; no contradictory high-confidence signal emerged this session.
-2. A clearly broken family (cahnhilliard_delay_feedback_window, 98.7% fail with active queue) was aborted in-flight to reduce wasted volunteer compute.
+1. Across 436 newly credited rows, successful payloads dominated (435/436) with no high-confidence contradictory signal to the current WD/ICP directionality narrative.
+2. Two priority-family payloads (wd_curvature_trigger_gpu and grad_subspace_wd_gpu) completed successfully and were consistent with continued WD-focused investigation rather than contradiction.
+3. Extremely high-failure experiments (cahnhilliard_delay_feedback_window, tangled_nature_macroevolution, baksneppen_modular_avalanche) were actively aborted to reduce wasted volunteer compute and preserve queue quality.
