@@ -1,0 +1,25 @@
+Axiom BOINC Validation Log — 2026-03-05 10:00 UTC
+
+SESSION SUMMARY
+===============
+- Results reviewed: 16 uncredited results found (IDs: 1698208, 1701678, 1701695, 1701700, 1701701, 1701702, 1702141, 1702154, 1702156, 1702157, 1702161, 1702162, 1702166, 1702167, 1702169, 1702172)
+- Credit awarded: 0 (all 16 results received within last few minutes, assimilator has not yet processed them — no sanitized files available for quality review)
+- Stuck tasks cleaned: 0 (none found — no tasks >12h on dead hosts, no tasks >48h)
+
+BROKEN EXPERIMENT CLEANUP
+=========================
+Aborted active work for 100% failure rate experiments:
+- depinning_roughness_2d_gpu: 24 tasks aborted (unsent + in-progress). All prior results were outcome=5 (admin abort). GPU experiment with no successful completions — likely requires cupy/CUDA not available on volunteer machines.
+- nagelschreckenberg_lookahead: 41 tasks aborted. All prior results were outcome=5 (admin abort). No successful completions across any host.
+
+Other 100% failure experiments (already fully completed/aborted, no active work):
+- ising_delay_adaptive_quench, tangled_nature_macroevolution, moranmig, abx_cycle, spatial_pgg_delay_fatigue, gene_drive_delay_resistance_window, rd_phasejitter_adaptive_forcing
+
+ACTIVE HOSTS
+============
+91 hosts active in last 72 hours. 25 hosts currently running tasks. Top contributors: hosts 324, 325, 327, 330, 334 (32-core Windows 11 machines running 64-88 tasks each).
+
+COUNTERS UPDATED
+================
+- total_results_count: 3963 -> 4128
+- credited_count: unchanged (3916, no new credit this session)
