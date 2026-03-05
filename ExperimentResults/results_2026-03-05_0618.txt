@@ -1,0 +1,36 @@
+AXIOM BOINC SESSION RESULTS (Part 3 Consolidated)
+Session timestamp: 2026-03-05_0618
+Date: 2026-03-05
+
+PART 1 - VALIDATION, CREDIT, AND CLEANUP SUMMARY
+- Reviewed newly completed uncredited results: 183
+- Payload audit: experiment_result=156, error=27
+- Total session credit awarded: 1306
+- Credit additions by user: ChelseaOilman +1040, PyHelix +128, WTBroughton +55, kotenok2000 +52, Armin Gips +21, vanos0512 +10
+- Broken experiment active aborts applied: cahnhilliard_delay_feedback_window=11, sis_delay_adaptive_rewiring_tradeoff=13, rbn_delay_fatigue_control=3, adaptive_voter_delay_rewiring=4, battery_pulse_delay_plating_resonance=4
+- Stuck-task cleanup: dead-host >12h/>6h no-contact=0; hard >48h=0
+- Post-session uncredited successful rows remaining at validation close: 17
+- Website counters at validation close: credited_count=1643, total_results_count=1677
+
+PART 2 - DEPLOYMENT AND RESEARCH SUMMARY
+- Retirement pass re-run on over-completed families; ABORT_TOTAL=0 (all listed retirement candidates were unsent=0 at pass time)
+- New experiment script designed and uploaded: wd_batchnoise_interaction.py
+- Novelty check documentation: arXiv/web searches were run before script creation (weight decay + label smoothing interaction; adaptive/scheduled weight decay; batch size x weight decay interaction; decoupled WD baseline)
+- CPU deployment executed with host-targeted queue fill (~3x CPU target) and low-RAM guard
+- CPU deployment metrics from run log: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2, CPU_WU_CREATED=2937
+- CPU scripts used for deployment wave: wd_batchnoise_interaction.py and wd_labelsmooth_interaction.py
+
+GPU CHECKPOINT
+- GPU deployment pass was initiated in Part 2 with target ~3x GPU queue per host
+- GPU scripts configured for that pass: wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py
+- Current server checkpoint for these GPU script families: GPU hosts with matching work=6, total matching rows=36, active/unsent/running rows=30
+
+NEW/UPDATED EXPERIMENT DESIGN NOTES
+- wd_batchnoise_interaction.py hypothesis: late weight-decay gains should be stronger under small-batch gradient-noise conditions (interaction test, not just main effect)
+- Design intent: mechanism-level interaction test aligned with current WD timing directionality, avoiding additional seed-only replication of already settled lines
+
+KEY SCIENTIFIC FINDINGS
+1. Across the newly credited Part 1 set (183 completions), no high-confidence reversal of the standing WD/ICP directionality was observed.
+2. Scientific payload usability remained high (156/183 experiment_result payloads), supporting continuity of inference despite an elevated error share.
+3. Active cleanup removed repeatedly failing families from active queues, reducing expected volunteer compute waste without disrupting healthy experiment lines.
+4. Part 2 introduced a new interaction-focused hypothesis line (wd_batchnoise_interaction) after novelty checks, prioritizing mechanism discovery over additional over-seeded replication.
