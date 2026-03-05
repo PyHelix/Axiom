@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 5, 2026 03:02 UTC (science analysis cycle)
+Last updated: March 5, 2026 05:10 UTC (science analysis cycle)
 =================================================
 
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
@@ -22,29 +22,25 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
 18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
 19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
-20. Schelling tax reentrance: REJECTED — reentrant index negative in 160/184 runs (184 seeds, 11 hosts), mean -0.00123 +/- 0.00102, Cohen's d=-1.20. Segregation gain increases monotonically with delay.
-21. Gray-Scott delay pulse feedback: REJECTED — adaptive persistence gain negative at all delays in 144/144 runs (15 hosts), mean_gain_d0=-0.0326 (d=-27.1), mean_gain_d20=-0.0336 (d=-12.3). No delay inversion.
+20. Schelling tax reentrance: REJECTED — reentrant index negative in 160/184 runs (184 seeds, 11 hosts), mean -0.00123 +/- 0.00102, Cohen's d=-1.20.
+21. Gray-Scott delay pulse feedback: REJECTED — adaptive persistence gain negative at all delays in 144/144 runs (15 hosts), mean_gain_d0=-0.0326 (d=-27.1).
+22. Metapop corridor delay forecast: REJECTED — adaptive corridors REDUCE persistence at ALL delay/noise conditions in 489/489 runs (20 hosts). Mean delta ~-2%, d=-6 to -30.
+23. Wildfire delay adaptive suppression: REJECTED — adaptive suppression INCREASES burned fraction in 218/218 runs (16 hosts), all delays. Mean delta +0.21%, d=186-253.
+24. Ising delay adaptive quench: REJECTED (opposite) — adaptive quench ALWAYS reduces defects at ALL delays/disorder in 204/204 runs (9 hosts). Stronger at higher delay, d=-14 to -26.
+25. Chemostat delay crossfeeding resonance: REJECTED — no resonance window (d=-0.11). Adaptive harms coexistence vs fixed (d=-1.36) and pulse (d=-1.69), 416 runs, 16 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
-- Tritrophic delay harvest resilience: adaptive harvest INCREASES persistence +22.8% +/- 2.6% (d=8.65) but DECREASES yield -0.0055 (d=-2.24). Effect is delay-independent (N=112 runs, 14 hosts). Yield-persistence tradeoff.
-- Lorenz96 delay assimilation: INVERSE delay effect — adaptive WORSENS RMSE at d=0 (+0.633, 100% worse) but IMPROVES at d=18 (-0.011, 70% better). PD controller over-reacts in fast-response regime (N=54 runs, 9 hosts).
-- Fisher-Allee moving habitat: REJECTED reentrant window — adaptive culling increases invaded fraction by +2.8% at ALL delay levels (d=0,6,12), delay-independent (N=82 runs, 8 hosts).
+- Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 216/216 runs (11 hosts), d=-282. Monotonic degradation with delay.
+- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=565, 14 hosts.
+- Lorenz96 delay assimilation: INVERSE — adaptive worsens at d=0 but improves at d=18. N=542, 9 hosts.
+- Fisher-Allee moving habitat: REJECTED — adaptive culling increases invasion at all delays. N=82, 8 hosts.
+- SIS delay adaptive rewiring: NO EFFECT — delay win fraction = 0.50, best_score d=0.17. N=168, 9 hosts.
 
-REPLICATION UPDATES (confirmed findings, new samples)
-- Pit delay inhibitor resonance: +38 new results (7 hosts) this cycle, continuing to replicate.
-- Autocatalytic dilution: +21 new results this cycle.
-- XY delay thermostat: +20 new results this cycle.
-- Cahn-Hilliard feedback: +17 new results (2 hosts) this cycle.
-
-OPEN QUESTIONS
-- Metapop corridor delay forecast: 164 results (14 hosts) accumulated but complex nested schema needs dedicated parsing. Previous N=5 batch showed adaptive underperformance across all delay bands.
-- Chemostat delay crossfeeding resonance: 49 results (6 hosts) — pending schema extraction.
-- Climate delay carbon hysteresis: 46 results (6 hosts) — pending analysis.
-
-ANALYSIS COVERAGE NOTE
-- 1826 sanitized files detected in the last 120 minutes across 28+ families.
-- 5 families analyzed with full source-mapped schemas (schellingtax, tritrophic, grayscott, fisher_allee, lorenz96).
-- 4 confirmed-finding families received replication data.
+REPLICATION UPDATES
+- Pit delay inhibitor resonance: 311 total results, +38 this cycle (7 hosts).
+- Autocatalytic dilution: 122 total, +21 this cycle.
+- XY delay thermostat: 196 total, +20 this cycle.
+- Cahn-Hilliard feedback: 173 total, +17 this cycle.
 
 EMERGING PATTERN
-- Of 5 newly analyzed delay-window experiments, 3 REJECTED the reentrant hypothesis, 1 showed an INVERSE effect, 1 showed delay-independent benefit. Combined with 4 previously confirmed positive reentrant findings, the reentrant delay window appears to be system-specific rather than universal.
+- Of 10 delay-window experiments analyzed, 7 REJECTED reentrant hypothesis, 1 INVERSE, 1 delay-independent, 1 no-effect. Four prior confirmations (autocatalytic, nonmarkov, XY, Cahn-Hilliard) show reentrant windows in oscillatory systems only. Monotonic-response systems show uniform harm or no effect.

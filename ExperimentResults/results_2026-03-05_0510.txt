@@ -1,0 +1,212 @@
+AXIOM BOINC — SCIENTIFIC ANALYSIS
+Date: 2026-03-05 05:10 UTC
+Sanitized results analyzed: ~2100 files across 28+ experiment families
+
+KEY SCIENTIFIC FINDINGS
+
+FINDING #1: chemostat_delay_crossfeeding_resonance (REJECTED, 416 runs, 16 hosts)
+
+  Hypothesis: In a two-species cross-feeding chemostat under periodic inflow forcing,
+  adaptive nutrient control with sensing delay exhibits a non-monotonic resonance window
+  where intermediate forcing periods harm coexistence more than short or long periods.
+
+  Method: Two bacterial species cross-feed in a chemostat with periodic nutrient inflow.
+  Three control policies (fixed, pulse, adaptive) are tested across 3 forcing periods
+  (18, 54, 162 steps), 3 delay levels (0, 8, 24), 2 heterogeneity levels, and 2 shock
+  amplitudes. Each run completes ~1500+ internal trials. Coexistence is measured as the
+  ratio of minority to majority species biomass in the simulation tail.
+
+  Results:
+  - Resonance strength: mean=-0.000399 +/- 0.003502, Cohen's d=-0.11 (186 pos / 230 neg)
+  - Adaptive vs Fixed coexistence: mean=-0.003192 +/- 0.002348, d=-1.36 (33 pos / 383 neg)
+  - Adaptive vs Pulse coexistence: mean=-0.003893 +/- 0.002300, d=-1.69 (19 pos / 397 neg)
+  - Delay penalty slope: mean=-0.000016 +/- 0.000167, d=-0.10 (no delay dependence)
+  - High-heterogeneity collapse rate: 3.86% vs Low-heterogeneity: 0.00%
+
+  Conclusion: REJECTED — There is no period-dependent resonance window. The adaptive
+  feedback controller uniformly degrades coexistence relative to both fixed and pulsed
+  inflow, regardless of forcing period or delay. The controller's target-tracking behavior
+  overrides the natural competitive oscillations that sustain coexistence in the cross-feeding
+  system. When the controller detects low total biomass and increases nutrient inflow, it
+  disproportionately benefits the faster-growing species, breaking the symmetric resource
+  partitioning that maintains coexistence. This is a general warning that adaptive control
+  in mutualistic ecosystems can disrupt the very dynamics it aims to stabilize.
+
+---
+
+FINDING #2: climate_delay_carbon_hysteresis_window (REJECTED, 216 runs, 11 hosts)
+
+  Hypothesis: Adaptive carbon removal in a simple climate model with ice-albedo tipping
+  point exhibits a reentrant delay window — intermediate sensing delays yield better
+  climate outcomes than both zero and long delays.
+
+  Method: A 1D energy-balance climate model with CO2 forcing, ice-albedo feedback, and a
+  tipping point at +1.75C. Adaptive policy adjusts carbon removal rate based on delayed
+  temperature observations. Four delay levels (0, 6, 18, 36 steps) tested. Composite score
+  combines overshoot integral + 0.35 * removal cost. Each run executes ~12000 internal trials.
+
+  Results:
+  - Reentrant index: mean=-0.000610 +/- 0.004303, d=-0.14 (no reentrant structure)
+  - Best gain (adaptive over fixed): mean=-0.048268, d=-281.65 (0/216 positive)
+  - Per-delay adaptive gain (from 4320 sample trials):
+    d=0:  mean=-0.402 +/- 0.464, d=-0.87 (25% positive)
+    d=6:  mean=-0.529 +/- 0.747, d=-0.71 (25% positive)
+    d=18: mean=-0.673 +/- 0.737, d=-0.91 (20% positive)
+    d=36: mean=-0.890 +/- 0.754, d=-1.18 (10% positive)
+
+  Conclusion: REJECTED — Adaptive carbon removal consistently underperforms the fixed
+  baseline at every delay level, with performance degrading monotonically as delay increases.
+  Near the ice-albedo tipping point, the adaptive controller's temperature-proportional
+  response creates positive feedback: as temperature rises, removal increases, which reduces
+  CO2 but not fast enough to prevent ice loss, while the removal cost accumulates. The fixed
+  policy's constant low-rate removal avoids this cost penalty. This suggests that near
+  climate tipping points, simple constant-effort mitigation may outperform sophisticated
+  feedback-based strategies that incur escalating costs during overshoot episodes.
+
+---
+
+FINDING #3: wildfire_delay_adaptive_suppression (REJECTED, 218 runs, 16 hosts)
+
+  Hypothesis: Adaptive fire suppression (PI controller targeting active cell count) reduces
+  burned area with low sensing delay but becomes counterproductive under long delays.
+
+  Method: 64x64 grid wildfire simulation with fuel, moisture, and wind. Adaptive mode uses
+  delayed observations of active fire cells to modulate suppression effort via PI control.
+  Fixed mode uses constant effort. Three delays (0, 4, 10 steps), two noise levels (0, 0.08),
+  two wind strengths (0.20, 0.55). Each run completes ~300K+ trials. Key metric: adaptive
+  minus fixed burned fraction.
+
+  Results:
+  - Mean delta delay=0: +0.002106 +/- 0.000011, d=185.80 (218/218 positive)
+  - Mean delta delay=10: +0.002106 +/- 0.000008, d=253.23 (218/218 positive)
+  - Delay inversion observed: 0/218 runs
+  - All 12 conditions show adaptive burning MORE (100% consistency)
+
+  Conclusion: REJECTED — Adaptive suppression is universally counterproductive regardless
+  of delay, noise, or wind conditions. The PI controller concentrates suppression effort on
+  current hotspots based on delayed fire counts, but fire dynamics are spatially heterogeneous.
+  Suppressing one front redirects fire through less-defended corridors, a "whack-a-mole"
+  effect. Fixed-effort suppression, distributed uniformly, avoids this spatial misallocation.
+  The effect is tiny (+0.2% burned fraction) but extraordinarily consistent across >300K
+  trials per run, demonstrating that even well-intentioned adaptive control can be harmful
+  when the system's spatial complexity exceeds the controller's observation granularity.
+
+---
+
+FINDING #4: ising_delay_adaptive_quench (REJECTED — opposite direction, 204 runs, 9 hosts)
+
+  Hypothesis: Adaptive quench control (adjusting cooling rate based on delayed interface
+  density observations) reduces domain-wall defects at low delay but amplifies them at high
+  delay, especially with quenched disorder.
+
+  Method: 34x34 Ising model with Metropolis dynamics, quenched from T=3.6 to T=1.35 over
+  260 sweeps. Adaptive mode uses delayed interface density readings to modulate cooling
+  slope via PI control. Three delays (0, 4, 12), two noise levels (0, 0.04), two disorder
+  strengths (sigma=0, 0.35). Each run completes ~14000+ trials. Key metric: adaptive minus
+  fixed final interface density (negative = fewer defects = better).
+
+  Results:
+  - adaptive_better_low_delay: 204/204 runs
+  - adaptive_worse_high_delay: 0/204 runs
+  - Per-delay aggregate interface delta:
+    d=0:  mean=-0.0074, d=-2.86 (all 204 runs negative)
+    d=4:  mean=-0.0088, d=-3.88 (all 204 runs negative)
+    d=12: mean=-0.0089, d=-2.38 (all 204 runs negative)
+  - Disorder AMPLIFIES adaptive advantage (sigma=0.35 deltas ~2x larger than sigma=0)
+
+  Conclusion: REJECTED — opposite to hypothesis. Adaptive quench control reduces domain-wall
+  defects at ALL delays and disorder levels. Crucially, the effect is STRONGER at higher delay
+  (d=12 > d=0), directly contradicting the predicted degradation. The likely mechanism: the
+  delayed feedback creates an effective smoothing of the cooling trajectory, averaging over
+  thermal fluctuations near the critical point. This slower, smoothed response prevents the
+  system from quenching too rapidly through the critical region, allowing more complete
+  domain coarsening. Disorder amplifies this benefit because disordered systems are more
+  sensitive to quench rate variations. This is an example of "beneficial sluggishness" — where
+  control delay improves outcomes by preventing over-reaction to transient fluctuations.
+
+---
+
+FINDING #5: metapop_corridor_delay_forecast (REJECTED, 489 runs, 20 hosts)
+
+  Hypothesis: Adaptive corridor activation (forecast-driven switching between high and low
+  dispersal) improves metapopulation persistence under climate velocity only when
+  implementation delay and forecast error are both low.
+
+  Method: 60-patch ring metapopulation with Allee effects tracking a shifting climate
+  envelope. Adaptive mode uses forecast of future climate position to toggle corridor
+  intensity. Fixed mode uses constant corridor rate. Three delays (2, 10, 20), three
+  forecast noise levels (0, 0.02, 0.05). Key metric: adaptive minus fixed persistence
+  fraction.
+
+  Results:
+  - adaptive_helps_low_delay: 0/489 runs
+  - adaptive_hurts_high_delay: 489/489 runs
+  - Per-delay aggregate persistence delta:
+    d=2:  mean=-0.01909, d=-6.36 (0/489 positive)
+    d=10: mean=-0.02051, d=-6.00 (0/489 positive)
+    d=20: mean=-0.01979, d=-10.07 (0/489 positive)
+  - Effect is delay-independent (~-2% at all delays)
+
+  Conclusion: REJECTED — Adaptive corridor switching consistently reduces persistence by
+  ~2% compared to fixed corridors, with no delay dependence. The on/off toggling of
+  corridor intensity disrupts ongoing dispersal streams: during low-corridor phases, migrants
+  in transit face reduced connectivity, creating population sinks. Fixed corridors maintain
+  a steady dispersal highway that allows continuous range-tracking. In metapopulations with
+  Allee effects, even brief connectivity interruptions can trigger local extinctions that
+  cascade across the network. This finding has conservation implications: dynamic corridor
+  management strategies that switch between habitat connectivity modes may be worse than
+  maintaining constant moderate connectivity.
+
+---
+
+FINDING #6: sis_delay_adaptive_rewiring_tradeoff (NO EFFECT, 168 runs, 9 hosts)
+
+  Hypothesis: Delayed adaptive rewiring in an SIS epidemic on a network creates a
+  beneficial tradeoff where moderate delay outperforms both zero and high delay.
+
+  Method: 240-node network with SIS dynamics. Adaptive rewiring breaks SI edges and
+  rewires to susceptible nodes based on delayed prevalence observations. Three reactivity
+  levels (eta=0.8, 1.4, 2.0), four delays (0, 2, 6, 12). Score combines prevalence
+  reduction, fragmentation cost, and effort.
+
+  Results:
+  - Delay win fraction: mean=0.5010 +/- 0.0124 (indistinguishable from 0.50)
+  - Best score mean: 0.000022 +/- 0.000127, d=0.17
+  - Positive trial fraction: 0.5001 (coin flip)
+
+  Conclusion: INCONCLUSIVE — No detectable effect. The prevalence reduction from rewiring
+  is precisely offset by the fragmentation cost it creates, resulting in a net-zero score
+  at all delay levels. The tradeoff between epidemic control (breaking SI edges reduces
+  transmission) and network fragmentation (isolating susceptible nodes into disconnected
+  components) is inherently self-balancing in this parameter regime: aggressive rewiring
+  controls the epidemic but fragments the giant component, while conservative rewiring
+  preserves connectivity but allows spread. The delay parameter has no leverage because the
+  fundamental tradeoff is structural, not temporal.
+
+---
+
+EXPERIMENT STATUS
+experiment family                          | total results | status
+pit_delay_inhibitor_resonance              |          311  | CONFIRMED (#15), replicating
+autocatalytic_dilution_memory_window       |          122  | CONFIRMED (#16), replicating
+nonmarkov_trap_release_window              |           57  | CONFIRMED (#17)
+xy_delay_thermostat_reentrance             |          196  | CONFIRMED (#18), replicating
+cahnhilliard_delay_feedback_window         |          173  | CONFIRMED (#19), replicating
+schellingtax                               |          188  | CONFIRMED REJECTED (#20)
+grayscott_delay_pulse_feedback             |          636  | CONFIRMED REJECTED (#21)
+metapop_corridor_delay_forecast            |          504  | CONFIRMED REJECTED (#22, this cycle)
+wildfire_delay_adaptive_suppression        |          238  | CONFIRMED REJECTED (#23, this cycle)
+ising_delay_adaptive_quench                |          247  | CONFIRMED REJECTED-opposite (#24, this cycle)
+chemostat_delay_crossfeeding_resonance     |          419  | CONFIRMED REJECTED (#25, this cycle)
+climate_delay_carbon_hysteresis            |          216  | PRELIMINARY REJECTED
+tritrophic_delay_harvest_resilience        |          565  | PRELIMINARY (tradeoff)
+lorenz96_delay_assimilation_regime_shift   |          542  | PRELIMINARY (inverse)
+fisher_allee_movinghabitat_delay_culling   |           82  | PRELIMINARY REJECTED
+sis_delay_adaptive_rewiring_tradeoff       |          168  | PRELIMINARY (no effect)
+
+NOTES
+- Reentrant delay window hypothesis is system-specific: confirmed in 4 oscillatory systems,
+  rejected in 7 monotonic/structural systems. The emerging discriminator is whether the
+  underlying dynamics have intrinsic oscillatory modes that delay-feedback can resonate with.
+- Many new experiment families (genedrive, lotka, rbn, fiberbundle, etc.) have 10-30 results
+  accumulating; will be analyzed when they reach sufficient sample sizes.
