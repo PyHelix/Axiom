@@ -1,0 +1,193 @@
+AXIOM BOINC — SCIENTIFIC ANALYSIS
+Date: 2026-03-05 11:41 UTC
+Sanitized results analyzed: 6271 files (7 new experiment families analyzed in depth)
+
+KEY SCIENTIFIC FINDINGS
+
+FINDING #1: collatz_evt_tails (CONFIRMED — Weibull not Gumbel, 190 results, 18 hosts)
+
+  Hypothesis: Block-maxima of Collatz stopping times follow a Gumbel extreme value
+  distribution, with location scaling as c1*log(B) + c2*log(start).
+
+  Method: Computes block-maxima of Collatz stopping times across 200 blocks of varying
+  size (100-10000), fits L-moment ratios (tau3 L-skewness) to classify EVT domain, and
+  regresses location parameter against log(block_size).
+
+  Results:
+  - Mean tau3 (L-skewness) = 0.1117, Gumbel theoretical = 0.1699
+  - Deviation from Gumbel: Cohen's d = 10.67, t = -147.1
+  - EVT domain: 190/190 classified as Weibull (100%)
+  - Location ~ log(block_size) R^2 = 0.9962 (confirmed 190/190)
+  - Mean log slope = 42.55 +/- 0.43
+  - Cross-host ICC(tau3) = 0.18
+
+  Conclusion: REJECTED (Gumbel) / CONFIRMED (Weibull + log scaling) — Collatz stopping
+  time block-maxima fall in the Weibull (bounded/light-tailed) extreme value domain, not
+  Gumbel as hypothesized. The L-skewness is massively below the Gumbel value with d=10.67
+  across 18 independent hosts. This indicates the tails of stopping time distributions are
+  lighter than exponential — there is an effective upper bound on how fast block-maxima grow.
+  Meanwhile, the location parameter scales precisely as log(block_size) (R^2 > 0.996),
+  confirming logarithmic growth of extremes. This constrains the tail behavior of Collatz
+  sequences: despite unbounded stopping times, their extremes grow slowly and are more
+  bounded than classical EVT would predict.
+
+---
+
+FINDING #2: minority_game_memory_heterogeneity (CONFIRMED, 127 results, 11 hosts)
+
+  Hypothesis: Heterogeneous agent memory distributions (bimodal, power-law, uniform-random)
+  alter the phase transition in the minority game compared to uniform memory.
+
+  Method: N=201 agents, 2 strategies each, 500 rounds. Four memory distributions (uniform,
+  bimodal, power-law, uniform-random) crossed with 5 dominant memory values (M=2-6).
+  10,517 total trials.
+
+  Results:
+  - Uniform: sharp phase transition (13.5x volatility ratio), min volatility = 0.78
+  - Bimodal: compressed transition (2.5x ratio), min volatility = 1.23
+  - Power-law: transition destroyed (1.01x ratio), volatility ~ 4.5 constant
+  - Uniform-random: transition destroyed (1.00x ratio), volatility ~ 1.22 constant
+  - Effect sizes d = 10-35 between distributions at matched M
+  - Cross-host CV = 1.1-1.7% across 11 hosts
+
+  Conclusion: CONFIRMED — Memory heterogeneity fundamentally reshapes the minority game
+  phase diagram. Power-law (heavy-tailed) heterogeneity completely destroys the phase
+  transition by pinning agents at short effective memory (~1.8), locking the system in the
+  inefficient crowded regime regardless of nominal memory. Uniform-random heterogeneity
+  also eliminates the transition but converges to moderate volatility (1.22), acting as a
+  natural regularizer. This reveals that the classic minority game phase transition is
+  fragile — it depends critically on agents having identical information capacity. Real
+  markets with heterogeneous trader sophistication should not exhibit the sharp
+  efficient-to-crowded transition predicted by the uniform-memory model.
+
+---
+
+FINDING #3: spatial_pgg_punishment_criticality (CONFIRMED first-order, 153 results, 16 hosts)
+
+  Hypothesis: The cooperation-to-defection transition in a spatial public goods game with
+  pool punishment is continuous and in the directed percolation (DP) universality class
+  (gamma/nu ~ 1.595 in 2D).
+
+  Method: Spatial PGG on 2D grids (L=20,30,50) with defector/cooperator/punisher strategies.
+  Fermi imitation dynamics. Sweeps 3 punishment costs x 15 fine ratios. Measures
+  susceptibility, Binder cumulants, finite-size scaling exponent gamma/nu.
+
+  Results:
+  - gamma/nu = 1.827 +/- 0.204 (n=153)
+  - vs DP prediction (1.595): d = 1.14, strongly rejected
+  - vs Ising prediction (1.75): d = 0.38, closer but still significantly different
+  - First-order signal: 100% of workunits (cooperation jump ~ 0.988)
+  - Binder crossing: 100% of workunits
+  - Cross-host SD = 0.131 (reproducible)
+
+  Conclusion: REJECTED (DP universality) / CONFIRMED (first-order transition) — The
+  cooperation phase transition under pool punishment is discontinuous, not continuous as
+  hypothesized. The cooperation fraction jumps by ~0.99 at the critical fine ratio,
+  characteristic of a first-order transition. This supports the theoretical prediction that
+  punishment creates a coordination game with multiple stable equilibria, producing
+  bistability and hysteresis rather than a smooth critical point.
+
+---
+
+FINDING #4: levy_foraging_renewal_phase (REJECTED, 168 results, 17 hosts)
+
+  Hypothesis: The optimal Levy flight exponent increases toward Brownian (mu > 2) as
+  resource renewal rate increases, with a sharp phase transition.
+
+  Method: Single forager performing Levy flights on 200x200 2D torus with 30 resource
+  patches (radius 5). Nine Levy exponents (mu=1.1-3.0) crossed with 9 renewal rates
+  (0.0-0.5). 7,024 total trials.
+
+  Results:
+  - Optimal mu = ~1.14 at ALL renewal rates (most superdiffusive tested)
+  - frac_levy_optimal = 1.0, frac_brownian_optimal = 0.0 at every condition
+  - Predicted upward shift; observed slight downward (d = -0.44, magnitude -0.010)
+  - Cross-host SD = 0.007-0.013 across 17 hosts
+
+  Conclusion: REJECTED — No phase transition from Levy-optimal to Brownian-optimal foraging
+  exists at these parameters. With 30 patches on a 200x200 grid (~0.06% coverage), patches
+  are sparse enough that long-range ballistic flights always outperform local diffusion.
+  The Levy foraging hypothesis predicts a transition only when resources are dense enough
+  that exploitation outweighs search — this regime is not reached here.
+
+---
+
+FINDING #5: oscillatory_roughchannel_lbm_resonance (REJECTED, 120 results, 20 hosts)
+
+  Hypothesis: Intermediate oscillatory forcing period creates a transport-efficiency
+  resonance stronger in long-correlation rough channels.
+
+  Method: 2D lattice Boltzmann simulation of flow through rough channels. Crosses 2
+  roughness correlations (3, 11) x 3 forcing periods (20, 50, 120) x 2 amplitudes.
+
+  Results:
+  - Resonance excess: -62.9 (corr11), -68.6 (corr3) — both strongly negative
+  - No resonance peak at intermediate period
+  - Forcing always reduces efficiency vs unforced (d = 7-40)
+  - Correlation length difference: d = 0.92 (long-corr slightly less damaged)
+  - Consistent across 20 hosts
+
+  Conclusion: REJECTED — No transport resonance at intermediate forcing periods. Oscillatory
+  forcing monotonically degrades transport efficiency. Rough channel walls dissipate
+  oscillatory momentum through boundary layer effects regardless of period. The hypothesized
+  resonance mechanism — matching forcing period to channel transit time — does not overcome
+  viscous losses.
+
+---
+
+FINDING #6: metapop_allee_corridor_hysteresis (REJECTED, 288 results, 9 hosts)
+
+  Hypothesis: Control fatigue creates a re-entrant optimum in corridor-trigger threshold
+  under Allee risk.
+
+  Method: 42-patch metapopulation with Allee dynamics, climate stress, corridor dispersal.
+  Sweeps 5 theta values x 3 fatigue levels. ~3.2M total trials.
+
+  Results:
+  - Reentrant support rate: 5.6%
+  - Theta shift with fatigue: -0.0157 (opposite predicted direction)
+  - Best theta: 0.69 (no fatigue) vs 0.67 (high fatigue) — minimal
+  - Cross-host CV = 1.05%
+
+  Conclusion: REJECTED — Control fatigue does not create a re-entrant optimum. The optimal
+  corridor threshold is ~0.67-0.69 regardless of fatigue because corridor usage is already
+  intermittent enough that fatigue rarely accumulates to consequential levels. The mid-range
+  optimum is an intrinsic Allee-corridor property, not fatigue-dependent.
+
+---
+
+FINDING #7: contact_process_temporal_network (PARTIAL, 120 results, 10 hosts)
+
+  Hypothesis: The quenched-to-annealed crossover in epidemic dynamics depends on network
+  topology, with BA networks showing a sharper crossover.
+
+  Method: SIS contact process on temporal networks (N=200, mean degree 6). Three topologies
+  (ER, BA, WS) x 7 switching rates x 8 infection rates.
+
+  Results:
+  - Topology dominates: BA prevalence ~0.24, ER ~0.10, WS ~0.005 at beta=0.02
+  - Degree variance: BA=30.0, ER=4.9, WS=0.6
+  - Switching rate effect: small, monotonic (ER d=5.9 max, no sharp crossover)
+  - Cross-host max difference = 0.0077
+
+  Conclusion: PARTIAL — Topology strongly determines epidemic thresholds (BA < ER < WS),
+  confirming heterogeneous mean-field predictions. The predicted sharp quenched-to-annealed
+  crossover is absent at N=200 — switching rate produces only small monotonic prevalence
+  increases. The crossover is likely asymptotic, requiring larger networks.
+
+---
+
+EXPERIMENT STATUS
+experiment family                      | new results | seeds/hosts | status
+collatz_evt_tails                      | 195         | 190/18      | CONFIRMED (Weibull domain)
+minority_game_memory_heterogeneity     | 147         | 127/11      | CONFIRMED (transition destruction)
+spatial_pgg_punishment_criticality     | 161         | 153/16      | CONFIRMED (first-order)
+levy_foraging_renewal_phase            | 174         | 168/17      | REJECTED (no transition)
+oscillatory_roughchannel_lbm_resonance | 91          | 120/20      | REJECTED (no resonance)
+metapop_allee_corridor_hysteresis      | 220         | 288/9       | REJECTED (no reentrant optimum)
+contact_process_temporal_network       | 141         | 120/10      | PARTIAL (topology yes, crossover no)
+
+NOTES
+- Many other families had new results but are already covered in previous analyses.
+- Contact process results may be finite-size limited (N=200).
+- Levy foraging would need denser patches to test the predicted transition.
