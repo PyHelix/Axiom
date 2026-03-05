@@ -1,0 +1,50 @@
+Axiom BOINC Validation Log — 2026-03-05 15:25 UTC
+====================================================
+
+## System State
+- Active hosts: 97 (last 72h contact)
+- Top hosts: h287 (192 CPU), h95 (192 CPU), h72 (22 CPU/256GB RAM)
+- Running tasks: 25 hosts with active work, ~700 in-flight tasks
+- Assimilator: running (PID 1221, started 11:51)
+
+## Uncredited Results
+- 171 results completed with outcome=1 and granted_credit=0
+- 0 of these have been assimilated (no matching sanitized files)
+- Results are too recent for the assimilator to have processed them
+- Credit: 0 awarded this session (no sanitized data to assess quality)
+- These results will be picked up in the next validation cycle once assimilated
+
+## Stuck Task Cleanup
+- Tasks >12h on silent hosts (>6h no contact): 0 found
+- Tasks >48h: 0 found
+- No cleanup needed
+
+## Broken Experiment Aborts (100% failure rate)
+Aborted active tasks for the following broken experiments:
+- sis_delay_adaptive_rewiring_tradeoff: 9 tasks aborted (100% fail, 71 total failures, finding: NO EFFECT)
+- cahnhilliard_delay_feedback_window: 10 tasks aborted (99% fail, 96 failures; finding already confirmed #19)
+- lotka_delay_adaptive: 11 tasks aborted (100% fail, 14 failures; finding already confirmed #37)
+- seir_delay_fatigue_control: 7 tasks aborted (100% fail, 14 failures; finding preliminary)
+- oscillatory_roughchannel_lbm_resonance: 1 task aborted (100% fail, 5 failures; finding rejected #50)
+
+These experiments have confirmed/rejected findings already. New deployments are crashing consistently.
+
+## High Failure Rate Experiments (not aborted, still producing some successes)
+- xy_delay_thermostat_reentrance: 73.8% fail (32 success, 90 fail)
+- chemostat_delay_crossfeeding_resonance: 68.0% (48 success, 102 fail)
+- metapop_corridor_delay_forecast: 61.3% (60 success, 95 fail)
+- spatial_pgg_punishment_criticality: 48.5% (17 success, 16 fail)
+- tritrophic_delay: 47.3% (58 success, 52 fail)
+
+These still produce usable results. Monitoring continues.
+
+## GPU Experiments with 100% Failure
+- dpcontact_gpu: 8 failures, dpcontact2d_gpu: 14 failures
+- kskpz_gpu: 9 failures, lyaprmt_gpu: 16 failures
+- axelnoise: 10 failures
+No active tasks found for these — already idle.
+
+## Summary
+- Credit awarded: 0 (awaiting assimilation)
+- Tasks aborted: 38 (broken experiments)
+- Bugs found: None new (known broken experiments already have findings)
