@@ -1,9 +1,9 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0612)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0630)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- This validation session focused on quality review, crediting, and failure-hygiene cleanup.
+- This session focused on validation, volunteer credit, and failure-hygiene cleanup.
 - No high-confidence contradiction to the current WD/ICP narrative was observed.
 
 ACTIVE SCIENCE PRIORITIES
@@ -11,27 +11,27 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 06:12, Part 1)
-- Reviewed and credited 183 newly completed experiment results.
-- Awarded 1306 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 156 experiment_result payloads, 27 error payloads.
-- Broken-experiment active aborts: cahnhilliard_delay_feedback_window (11), sis_delay_adaptive_rewiring_tradeoff (13), rbn_delay_fatigue_control (3), adaptive_voter_delay_rewiring (4), battery_pulse_delay_plating_resonance (4).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 06:30, Part 1)
+- Reviewed and credited 201 newly completed experiment results.
+- Awarded 1841 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 198 experiment_result payloads, 3 error payloads.
+- Broken-experiment active aborts: sis_delay_adaptive_rewiring_tradeoff (21), rbn_delay_fatigue_control (1), tangled_nature_macroevolution (9), cahnhilliard_delay_feedback_window (17), rw_reset_fatigue_nonrenewal (36), seasonal_metapop_vax_trigger (16), wildfire_delay_adaptive_suppression (14).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=1643; total_results_count=1677.
-- Queue state at close snapshot: 17 uncredited success rows remained (new completions continued to arrive during validation).
+- Website counters after update: credited_count=1844; total_results_count=1922.
+- Queue state at close snapshot: 58 uncredited success rows remained (new completions arrived during validation).
 
 RECENT SCIENTIFIC SIGNALS
-- Delay-structured ecological/network families remain dominant in completions (metapop corridor, climate-delay carbon, Lorenz96 delay assimilation, tritrophic, pit/chemostat families).
-- Payload usability stayed high overall (156/183 experiment_result; 85.2%), with a larger error share than the prior snapshot.
-- No directional reversal in WD/ICP-related signal confidence emerged from this session.
+- Delay-structured ecology/control families dominated fresh successful payloads (climate-delay carbon, Lorenz96 delay assimilation, chemostat crossfeeding, fiberbundle delay healing).
+- Payload usability remained very high (198/201 = 98.5% experiment_result payloads).
+- No directional reversal in WD/ICP confidence emerged from this session.
 
 OPEN QUESTIONS
 1) Should generation hard-gate families after sustained >=95% failure with active queue presence?
 2) Should validation export reliability splits by runtime/transport failures vs experiment-logic failures?
 3) Should Part 2 reserve a minimum queue share for WD-priority families during mixed waves?
-4) Should Kauffman and NK-walk parameter bounds be tightened to prevent broadcast-shape and extreme-memory failures seen in recent error payloads?
+4) Should high-failure delay-family parameter bounds be tightened further to reduce repeated crash waves?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 183 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Most reviewed payloads were scientifically usable (156 experiment_result vs 27 error payloads), preserving inference continuity despite elevated error share.
-3. Targeted aborts for repeatedly failing active families reduced additional volunteer compute waste while preserving healthy queues.
+1. Across 201 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Reviewed payload quality improved vs prior session (98.5% experiment_result payloads), supporting stable inference continuity.
+3. Targeted aborts for persistently failing active families reduced immediate volunteer compute waste while preserving healthy queues.
