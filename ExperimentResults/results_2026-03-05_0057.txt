@@ -1,0 +1,54 @@
+AXIOM BOINC SESSION LOG (Part 3 Combined Summary)
+Timestamp: 2026-03-05 00:57:06 -07:00
+Sources: validate_2026-03-05_0054.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1: VALIDATION, CREDIT, AND CLEANUP SUMMARY
+- Results reviewed and credited:
+  - Primary batch: 508 results, 5882 credit.
+  - Residual batch: 17 results, 278 credit.
+  - Total session credit awarded: 6160 (under 10,000 cap).
+- Credit basis: BOINC completion/outcome metadata plus elapsed runtime tiers; payload audit found 0/492 matching raw files at audit time.
+- Per-user highlights (primary pass): ChelseaOilman +5175, _Scandinavian_ +193, Orange Kid +180, kotenok2000 +115, WTBroughton +99.
+- Website counters after update: credited_count=3114; total_results_count=2914.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken experiment queues aborted:
+  - exp_rbn_delay_fatigue_control*: 4 tasks
+  - exp_cahnhilliard_delay_feedback_window*: 3 tasks
+- Dead-host >12h running aborts: 0
+- Hard >48h running aborts: 0
+
+PART 2: DEPLOYMENT AND RESEARCH SUMMARY
+- Retirement pass: ABORT_TOTAL=0 (no new unsent retirements required at that snapshot).
+- CPU deployment executed to fill host queues toward 3x core targets:
+  - CPU hosts evaluated: 81
+  - Low-RAM hosts skipped (<6 GB): 2
+  - CPU workunits created: 2937
+  - CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+
+GPU CHECKPOINT
+- GPU deployment pass was initiated separately as required (appid=2).
+- GPU scripts selected for deployment: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+- The run log for this session ended with an interrupt marker during GPU dispatch (^C), so final GPU host-count and GPU workunit-count totals were not emitted in run_2026-03-03_1352.log.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK
+- New CPU experiment script designed and uploaded: wd_batchnoise_interaction.py
+  - Hypothesis: late weight decay benefit should interact with stochastic gradient noise (stronger effect in small-batch regime vs large-batch regime).
+  - Runtime behavior: multi-trial loop inside a 900s workunit budget; outputs interaction metrics and positive-rate summary.
+  - Server validation: python3 -m py_compile passed.
+- Novelty check documentation (queries logged in run file):
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle retained for deployment: direct late-WD interaction test across batch-noise regimes in the existing Axiom ICP/WD framework, with in-project cross-validation and host-level replication.
+
+KEY SCIENTIFIC FINDINGS
+1. Newly validated successful compute remained concentrated in delay/ecology/network families (contact-process, minority-game memory, chemostat, pit-delay, tritrophic, L96-shift, Gray-Scott), expanding cross-validation without reversing the standing inverse ICP/WD timing direction.
+2. No contradictory high-confidence evidence against the prior inverse critical-period / WD timing signal emerged in this session.
+3. Repeated cross-host zero-elapsed failures in rbn_delay_fatigue_control and cahnhilliard_delay_feedback_window were operationally quarantined (queue abort), indicating pipeline/script breakage rather than a model-level scientific reversal.
+4. Part 2 added a new interaction-focused WD experiment line (wd_batchnoise_interaction) to probe whether late-WD effects are noise-regime dependent, extending mechanism testing beyond single-factor sweeps.
+
+NOTES
+- This session log intentionally summarizes bulk result activity by experiment family/type and does not include cumulative credited result-ID lists.

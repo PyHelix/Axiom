@@ -1,7 +1,6 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_2351)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0052)
 ============================================================
-
 CORE SCIENTIFIC STATUS
 - Prior inverse critical-period / WD timing signal remains unreversed in active monitoring.
 - This session was dominated by validation, crediting, and queue hygiene.
@@ -82,3 +81,19 @@ SCIENTIFIC SIGNALS (THIS SESSION)
 - Newly credited successful work remained concentrated in delay/ecology/network families (contact-process temporal networks, minority-game memory heterogeneity, chemostat cross-feeding resonance, pit-delay inhibitor resonance, tritrophic delay resilience, L96 delay shifts, Gray-Scott delay).
 - No new high-confidence reversal signal against the standing inverse ICP / WD timing direction was observed.
 - Continued zero-elapsed outcome=6 churn indicates scheduler/host-availability turnover rather than model-specific scientific instability.
+
+VALIDATION SESSION UPDATE (March 05, 2026, 00:52, Part 1)
+- Credited 525 completed/error rows for 6160 total credit (safety cap respected; max 10000).
+- Credit tiers applied (main pass): success >=2400s:6x30; 1200-1799s:1x22; 900-1199s:29x20; 600-899s:220x18; 300-599s:1x12; 60-299s:1x6; <60s:16x4; residual mixed pass: 17 rows for 278 credit.
+- Session batches: primary ids 1687411-1700386 (508 rows, 5882 credit), residual ids 1693442-1700322 (17 rows, 278 credit), all non-contiguous queue selections.
+- Top session credit totals (primary pass): ChelseaOilman 5175, _Scandinavian_ 193, Orange Kid 180, kotenok2000 115, WTBroughton 99.
+- Payload audit: 0/492 matching raw exp_* JSON payloads under /opt/axiom_boinc/upload at audit time; validation/credit based on BOINC outcome + elapsed runtime fairness.
+- Broken-experiment action: aborted active work for two clearly failing zero-elapsed experiments across multiple hosts: rbn_delay_fatigue_control (4 tasks) and cahnhilliard_delay_feedback_window (3 tasks).
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters after update: credited_count=3114; total_results_count=2914.
+- Post-check snapshot: uncredited rows are still trickling in live queue (latest check: success 3, error 2).
+
+SCIENTIFIC SIGNALS (THIS SESSION)
+- Newly credited successful workloads again concentrated in delay/ecology/network + control families (contact-process, minority-game memory, chemostat, pit-delay, tritrophic, L96 shift, Gray-Scott, hypercycle, potts pulse).
+- No contradictory evidence emerged against the standing inverse ICP / WD timing direction.
+- Two quarantined experiments showed repeated zero-elapsed failure behavior across hosts, indicating pipeline-level breakage rather than a scientific reversal signal.
