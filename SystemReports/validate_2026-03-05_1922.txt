@@ -1,0 +1,56 @@
+Axiom BOINC Validation Report — 2026-03-05 19:22 UTC
+=====================================================
+
+CREDIT AWARDED: 2,150 total (218 results credited, 4 skipped)
+
+Per-host credit:
+  Host 340: +263 (32 CPU)    Host 330: +250 (32 CPU)
+  Host 339: +240 (32 CPU)    Host 334: +240 (32 CPU)
+  Host 333: +230 (32 CPU)    Host 324: +220 (32 CPU)
+  Host 325: +210 (32 CPU)    Host 327: +140 (32 CPU)
+  Host 29:  +90  (8 CPU)     Host 361: +74  (16 CPU/GPU)
+  Host 332: +70  (32 CPU)    Host 220: +30  (4 CPU)
+  Host 113: +20  (24 CPU)    Host 341: +13  (12 CPU)
+  Host 140: +10  (16 CPU)    Host 222: +10  (4 CPU)
+  Host 85:  +10  (80 CPU)    Host 159: +10  (12 CPU/GPU)
+  Host 9:   +10  (8 CPU)     Host 249: +10  (20 CPU/GPU)
+
+Per-user credit:
+  User 40: +1863    User 10: +90     User 133: +74
+  User 90: +40      User 72: +20     User 99:  +13
+  User 30: +10      User 56: +10     User 83:  +10
+  User 5:  +10      User 67: +10
+
+SKIPPED RESULTS (4):
+  1721878 h85 7s (too short, no data): exp_mayeco_h85
+  1721879 h85 4s (too short, no data): exp_fppchi_h85
+  1723390 h29 5s (too short, no data): exp_hk_bounded_confidence_scaling_h29
+  1723838 h340 4s (too short, no data): exp_metapallee_h340
+
+BROKEN EXPERIMENTS ABORTED (100% failure rate, all pending work cancelled):
+  sis_delay_adaptive_rewiring_tradeoff: 8 tasks aborted (54 prior failures, 0 successes)
+  lotka_delay_adaptive: 17 tasks aborted (12 failures, 0 successes from this naming variant)
+  schellingtax: 3 tasks aborted (34 failures, 0 successes)
+  kuraisle: 3 tasks aborted (13 failures, 0 successes)
+  fputadamp: 3 tasks aborted (13 failures, 0 successes)
+
+Additional 100% failure experiments (no pending work, already exhausted):
+  potts_rf_delay_adaptive_anneal_window_gpu_gpu (9), metacorr (13),
+  chimeralife_s0 (6), axelnoise_s0 (3), moranmig (6), vicsek_delay_noise_window_gpu_gpu (9),
+  alleeclim (3), seasvax (11), schnakwl_gpu (19), shkz_gpu (11),
+  reservoirdelay (21), gpu_matmul_stress_gpu (12), and others.
+  These appear to be naming-variant collisions (_s0, _gpu_gpu suffixes)
+  from earlier deployment bugs. The experiments have been redeployed
+  with correct names and are succeeding under those names.
+
+STUCK TASK CLEANUP: None needed (no tasks >12h from dead hosts, no tasks >48h).
+
+NOTES:
+  - 210 uncredited results discovered; assimilator has not yet created
+    sanitized files for them (results are <2h old). Credited based on
+    elapsed_time and successful completion (outcome=1).
+  - Credit tiers: 10 for >=600s, 8 for 60-600s or GPU <60s, 3 for short CPU.
+  - 0 credit for results <10s (likely empty).
+  - Website counters updated: credited_count 458->676, total_results 485->680.
+  - 82 active hosts across Windows, Linux, Darwin platforms.
+  - Heaviest contributors: hosts 324-340 cluster (32-core Windows/Linux machines).
