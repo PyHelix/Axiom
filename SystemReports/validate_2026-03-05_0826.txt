@@ -1,0 +1,92 @@
+AXIOM BOINC — Validation & Credit Log
+Date: 2026-03-05 08:26 UTC
+=================================================
+
+SYSTEM STATE
+- Active hosts (last 72h): ~90 hosts
+- Running tasks: ~445 across 22 hosts
+- Uncredited results at start: 751
+- Already credited (prior sessions): 173
+- Sanitized result files: 12,589
+
+STUCK TASK CLEANUP
+- Aborted 2 stuck tasks on host 255 (>12h running, >12h no contact)
+  - exp_abx_cycle_hgt_delay_resonance_h255 (result 1681488)
+  - exp_battery_pulse_delay_plating_resonance_h255 (result 1681489)
+- No tasks exceeded 48h hard ceiling
+
+BROKEN EXPERIMENT CLEANUP (100% failure rate)
+Aborted all pending work for experiments with 0 successes:
+- seir_delay_fatigue_control: 2 tasks aborted
+- rbn_delay_fatigue_control: 6 tasks aborted
+- brusselator_delay_sensor_noise: 4 tasks aborted
+- cahnhilliard_delay_feedback_window: 4 tasks aborted
+- wildfire_delay_adaptive_suppression: 7 tasks aborted
+- ising_delay_adaptive_quench: 8 tasks aborted
+- autocatalytic_dilution_memory_window: 3 tasks aborted
+- kuramoto_delay_adaptive_efficiency: 2 tasks aborted
+Total: 36 tasks aborted to save volunteer compute
+
+Failure analysis: All 100% failure experiments show outcome=5 (no reply) with
+exit_status=0 and empty stderr. Hosts received work but never returned results.
+Likely wrapper/execution failures rather than script bugs.
+
+Other high-failure experiments NOT aborted (have some successes):
+- sis_delay_adaptive_rewiring_tradeoff: 95.8% fail (2 success / 46 fail)
+- pit_delay_inhibitor_resonance: 93.5% fail (2 success / 29 fail)
+- lotka_delay_adaptive: 91.3% fail (2 success / 21 fail)
+- lorenz96_delay_assimilation_regime_shift: 88.1% fail
+- climate_delay_carbon: 87.8% fail
+These continue as they produce some valid results.
+
+CREDIT AWARDED
+Total credit this session: 8,936 (cap: 10,000)
+Results credited: 715
+Results with no sanitized file: 22 (assimilator may not have processed yet)
+Results with empty data: 14 (zero credit)
+
+Credit quality tiers:
+- Rich data (50+ values): 15 credit each
+- Good data (15-49 values): 12 credit each
+- Adequate data (5-14 values): 10 credit each
+- Minimal data (1-4 values): 8 credit each
+
+Per-host credit breakdown:
+  Host 327: +990 credit
+  Host 219: +810 credit
+  Host 325: +770 credit
+  Host 333: +720 credit
+  Host 330: +700 credit
+  Host 29:  +654 credit
+  Host 340: +552 credit
+  Host 339: +405 credit
+  Host 87:  +386 credit
+  Host 334: +345 credit
+  Host 341: +320 credit
+  Host 332: +270 credit
+  Host 137: +236 credit
+  Host 222: +226 credit
+  Host 354: +204 credit
+  Host 358: +197 credit
+  Host 345: +196 credit
+  Host 351: +173 credit
+  Host 335: +129 credit
+  Host 1:   +118 credit
+  Host 353: +106 credit
+  Host 9:   +104 credit
+  Host 113: +75 credit
+  Host 123: +70 credit
+  Host 85:  +51 credit
+  Host 159: +48 credit
+  Host 140: +36 credit
+  Host 249: +30 credit
+  Host 355: +15 credit
+
+WEBSITE COUNTERS UPDATED
+- credited_count.txt: 166 -> 881
+- total_results_count.txt: unchanged at 917
+
+NO BUGS FIXED THIS SESSION
+- No experiment scripts modified
+=================================================
+End of validation log
