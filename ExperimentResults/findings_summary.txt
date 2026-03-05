@@ -49,3 +49,20 @@ OPEN QUESTIONS
 1) Should result payload retention be extended so validator audits can inspect JSON for a larger percentage of recently completed work?
 2) Should zero-elapsed and short-run failures be split into a dedicated infra reliability metric?
 3) Should WD/GPU priority experiments expose rolling cross-validation counters in the public summary?
+
+VALIDATION SESSION UPDATE (March 05, 2026, 00:09, Part 1)
+- Credited 1092 completed/error rows for exactly 10,000 total credit (safety cap respected after in-session cap correction).
+- Credit tiers applied: success_long(~600-1199s) primarily at 16-18 credits after cap normalization; success_very_long(>=1200s)=9 rows at 25; error_zero_elapsed(outcome=5, elapsed=0)=472 rows at 1.
+- Session batch (IDs): 1689611 through 1698673 (non-contiguous; DB-selected live queue at validation time).
+- Top session credit totals: ChelseaOilman 8509, WTBroughton 296, Armin Gips 253, kotenok2000 238, PyHelix 182.
+- Dominant validated experiment families by count: minority_game_memory, contact_process_temporal_network, grayscott_delay_pulse_feedback, chemostat_delay_crossfeeding_resonance, pit_delay_inhibitor_resonance.
+- Raw payload audit: successful rows sampled with valid JSON payloads under /opt/axiom_boinc/upload/*/exp_*; many outcome=5 zero-elapsed rows had no matching payload, consistent with non-compute abort/fail states.
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment check: no recent multi-host nonzero-elapsed crash cluster met abort criteria; no global experiment abort issued.
+- Website counters after update: credited_count=6484; total_results_count=2380.
+- Post-check: uncredited completed rows currently remaining=41 (success 31, outcome=5 zero-elapsed 10), attributable to new completions arriving after batch selection.
+
+SCIENTIFIC SIGNALS (THIS SESSION)
+- No contradictory signal emerged against prior inverse critical-period / WD timing direction.
+- Newly validated compute was dominated by delay-network and stochastic-interaction families (contact process, minority-game memory, chemostat, pit-delay, L96-shift, Gray-Scott delay), expanding cross-validation breadth without changing core directionality.
+- Outcome=5 zero-elapsed residuals continue to indicate infrastructure/scheduling churn rather than scientific model instability.
