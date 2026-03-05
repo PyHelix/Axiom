@@ -73,3 +73,17 @@ VALIDATION SESSION UPDATE (March 04, 2026, 18:32, Part 1)
 - Website counters after update: credited_count=2132; total_results_count=1671 (monotonic max rule preserved).
 - Post-check: uncredited completed rows=0 at session close.
 
+VALIDATION SESSION UPDATE (March 04, 2026, 18:52, Part 1)
+- Credited 147 completed rows for 2950 total credit (under 10,000 cap).
+- Credit tiers applied: success_long(>=600s)=145 at 20 credit; success_very_long(>=1200s)=2 at 25 credit.
+- Top session credit totals: Steve Dodd 1020, ChelseaOilman 420, Orange Kid 400, Anandbhat 300, _Scandinavian_ 190, Ncard00 180, kotenok2000 180.
+- Payload audit: all 147 credited rows matched upload JSON with xperiment_result payload present.
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Failure diagnostics (CPU/GPU split): nonzero GPU failures (exit_status=195) remained confined to single host DESKTOP-PI5FSRI; no multi-host broken-experiment signature.
+- Broken-experiment action: none issued this session.
+- Website counters after update: credited_count=2279; total_results_count=1825 (monotonic max rule preserved).
+- Post-check: 15 newly-arrived success rows remained uncredited at cutoff.
+
+SCIENTIFIC SIGNALS (THIS SESSION)
+- Fresh experiment_result payloads expanded replication for delay-coupled ecology/complex-systems families (grayscott, metapop corridor, fisher-allee, lorenz96, chemostat, tritrophic).
+- No new evidence in this pass contradicted the standing inverse critical-period / WD timing direction; session was primarily validation and credit throughput.
