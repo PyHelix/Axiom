@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_2305)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_2332)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -15,26 +15,26 @@ ACTIVE SCIENCE PRIORITIES
 3) grad_subspace_wd_gpu.py
 - Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
 
-VALIDATION SESSION UPDATE (March 04, 2026, 23:05, Part 1)
-- Credited 1192 completed/error rows for 9984 total credit (under 10,000 cap).
-- Credit tiers: success_very_long(>=1200s)=6 at 25; success_long(>=600s)=411 at 20; success_mid(60-599s)=2 at 10; success_short(0-59s)=2 at 5; error_zero=771 at 2.
-- Payload audit of credited rows: experiment_result=442; missing upload match=750.
-- Top session credit totals: ChelseaOilman 6872, Orange Kid 724, _Scandinavian_ 571, kotenok2000 420, WTBroughton 360, Armin Gips 306.
-- Result IDs credited this pass: 1683295 through 1695585 (1192 rows, non-contiguous by scheduler/order).
+VALIDATION SESSION UPDATE (March 04, 2026, 23:32, Part 1)
+- Credited 506 completed/error rows for 6119 total credit (under 10,000 cap).
+- Credit tiers: success_very_long(>=1200s)=5 at 25; success_long(>=600s)=277 at 20; error_mid(60-599s)=6 at 3; error_short(0-59s)=218 at 2.
+- Upload payload audit: no matching raw files currently present at /opt/axiom_boinc/upload/*/exp_* for this credited batch; credit based on elapsed runtime + BOINC outcome.
+- Top session credit totals: ChelseaOilman 5624, _Scandinavian_ 147, Armin Gips 105, [VENETO] boboviz 65, marmot 45.
+- Result IDs credited this pass: 1689497 through 1697038 (506 rows, non-contiguous by scheduler/order).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check: no multi-host nonzero-elapsed crash cluster (CPU/GPU) met abort threshold; no global experiment abort issued.
-- Website counters after update: credited_count=1338; total_results_count=923 (monotonic max rule preserved).
-- Post-check: uncredited completed rows remaining=564 (success 433, error 131).
+- Broken-experiment check: no recent (7d) nonzero-elapsed multi-host crash cluster exceeded threshold; no global experiment abort issued.
+- Website counters after update: credited_count=2431; total_results_count=1489.
+- Post-check: uncredited completed rows remaining=132 (success 132, error 0).
 
 SCIENTIFIC SIGNALS (THIS SESSION)
-- Fresh experiment_result payloads were validated across delay/ecology/complex-systems families, including gene-drive delay resistance, chemostat cross-feeding delay resonance, xy thermostat delay reentrance, grayscott delay pulse feedback, and fisher delay adaptive culling.
-- No new evidence in this pass contradicted the standing inverse critical-period / WD timing direction.
+- Newly credited successful workloads were dominated by delay/ecology/system-dynamics families (grayscott, chemostat cross-feeding, pit inhibitor resonance, lorenz96 shift, tritrophic, fiberbundle, metapop corridor).
+- No contradictory signal against the standing inverse ICP / WD timing direction emerged in this validation pass.
 
 RELIABILITY NOTES
-- Failure-rate tables remain inflated by zero-elapsed startup/download-style faults; avoid interpreting these as pure model-runtime instability.
-- Host-agnostic startup faults continue to produce missing-upload error rows that still require minimal credit for donated compute cycles.
+- Historical failure-rate tables remain inflated by short-run startup/download style failures.
+- Current raw upload directory had no matching exp_* payloads for this queue snapshot, so validation relied on BOINC completion/outcome metadata and elapsed-time fairness.
 
 OPEN QUESTIONS
-1) Should zero-elapsed startup failures be separated into an infra-only metric so experiment fail-rate dashboards emphasize true runtime faults?
-2) Should WD/GPU priority experiments have explicit rolling cross-validation counters in the public summary?
-3) Should hostid=0 orphan rows be auto-tagged/quarantined before standard validation queues?
+1) Should result payload retention be extended so validator audits can inspect JSON for a larger percentage of recently completed work?
+2) Should zero-elapsed and short-run failures be split into a dedicated infra reliability metric?
+3) Should WD/GPU priority experiments expose rolling cross-validation counters in the public summary?
