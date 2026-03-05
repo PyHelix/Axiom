@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 5, 2026 05:10 UTC (science analysis cycle)
+Last updated: March 5, 2026 04:18 UTC (science analysis cycle)
 =================================================
 
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
@@ -28,19 +28,40 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 23. Wildfire delay adaptive suppression: REJECTED — adaptive suppression INCREASES burned fraction in 218/218 runs (16 hosts), all delays. Mean delta +0.21%, d=186-253.
 24. Ising delay adaptive quench: REJECTED (opposite) — adaptive quench ALWAYS reduces defects at ALL delays/disorder in 204/204 runs (9 hosts). Stronger at higher delay, d=-14 to -26.
 25. Chemostat delay crossfeeding resonance: REJECTED — no resonance window (d=-0.11). Adaptive harms coexistence vs fixed (d=-1.36) and pulse (d=-1.69), 416 runs, 16 hosts.
+26. Interdependent flow memory shedding: REJECTED — medium memory window HARMS cascade survival, d=-1.23, 83% negative, 238 results, 15 hosts. Shortest window best.
+27. Moran migration delay window: REJECTED (ANTI-REENTRANT) — intermediate delays WORST, d=-1.90, 100% negative, 91 results, 15 hosts. d=3 accelerates fixation by ~28 generations.
+28. Schlogl delay adaptive gain: REJECTED — adaptive underperforms fixed at ALL delays (-1.1% to -2.3%), worsens with delay, 50 results, 10 hosts.
+29. Fiberbundle delay healing entropy: NO EFFECT — healing delay has zero impact on failure load (d<0.1 at all conditions), 458 results, 21 hosts.
+30. Gene drive delay resistance: NO EFFECT — adaptive release ~0.06% better than fixed, delay-independent, d=0.35, 94 results, 3 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
-- Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 216/216 runs (11 hosts), d=-282. Monotonic degradation with delay.
-- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=565, 14 hosts.
-- Lorenz96 delay assimilation: INVERSE — adaptive worsens at d=0 but improves at d=18. N=542, 9 hosts.
-- Fisher-Allee moving habitat: REJECTED — adaptive culling increases invasion at all delays. N=82, 8 hosts.
-- SIS delay adaptive rewiring: NO EFFECT — delay win fraction = 0.50, best_score d=0.17. N=168, 9 hosts.
+- Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 226 runs (11 hosts), d=-282.
+- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=591, 26 hosts.
+- Lorenz96 delay assimilation: INVERSE — adaptive worsens at d=0 but improves at d=18. N=556, 24 hosts.
+- Fisher-Allee moving habitat: REJECTED — adaptive culling increases invasion at all delays. N=130, 10 hosts.
+- SIS delay adaptive rewiring: NO EFFECT — delay win fraction = 0.50, best_score d=0.17. N=170, 10 hosts.
 
 REPLICATION UPDATES
-- Pit delay inhibitor resonance: 311 total results, +38 this cycle (7 hosts).
-- Autocatalytic dilution: 122 total, +21 this cycle.
-- XY delay thermostat: 196 total, +20 this cycle.
-- Cahn-Hilliard feedback: 173 total, +17 this cycle.
+- Pit delay inhibitor resonance: 612+ total results, 26+ hosts (continuing to replicate).
+- Autocatalytic dilution: 122 total, 4 hosts.
+- XY delay thermostat: 196 total, 6 hosts.
+- Cahn-Hilliard feedback: 173 total, 6 hosts.
 
-EMERGING PATTERN
-- Of 10 delay-window experiments analyzed, 7 REJECTED reentrant hypothesis, 1 INVERSE, 1 delay-independent, 1 no-effect. Four prior confirmations (autocatalytic, nonmarkov, XY, Cahn-Hilliard) show reentrant windows in oscillatory systems only. Monotonic-response systems show uniform harm or no effect.
+EMERGING PATTERN (STRENGTHENED)
+- Of 16 delay-window experiments analyzed, 9 REJECTED, 1 INVERSE, 1 ANTI-REENTRANT, 2 NO EFFECT, 1 INCONCLUSIVE, 1 delay-independent. Only 4 CONFIRMED reentrant windows (autocatalytic, nonmarkov, XY, Cahn-Hilliard) — all oscillatory systems. Non-oscillatory systems uniformly show no reentrant benefit. BK fault is only remaining inconclusive case.
+
+NOT YET ANALYZED (queued for next cycle)
+- RBN delay fatigue control: 197 results, 5 hosts
+- CSTR poison purge reentrance: 72 results, 10 hosts
+- Fisher delay adaptive culling: 183 results, 24 hosts
+- ABX cycle HGT delay resonance: 54 results, 13 hosts
+- Reservoir delay adaptive release: 27 results, 4 hosts
+- SSH delay dephasing edge: 43 results, 12 hosts
+- Reset trap delay window: 29 results, 13 hosts
+
+STRATEGIC DIRECTION
+- Delay-window/reentrance hypothesis now well-characterized: reentrant windows confirmed ONLY in oscillatory systems (4/16). Pivoting to new research directions.
+- Collatz EVT tails: 0 results yet (awaiting).
+- Spatial PGG punishment criticality: 39 early results from 15 hosts (awaiting more).
+- Lyapunov RMT universality (GPU): 0 results yet (awaiting).
+- Assimilator appears recovered — 2670 results processed in last 2 hours.
