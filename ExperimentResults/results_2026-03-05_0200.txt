@@ -1,0 +1,59 @@
+Axiom BOINC Session Results - 2026-03-05 02:00 (Part 3 Consolidation)
+=======================================================================
+
+SESSION SOURCES
+- Validation log: validate_2026-03-05_0157.txt
+- Auto-review log: run_2026-03-03_1352.log
+- Context memory: findings_summary.txt
+
+RESULTS REVIEWED AND CREDIT AWARDED (PART 1)
+- Reviewed and credited 758 completed results (non-contiguous DB-selected batch; IDs intentionally omitted here).
+- Total credit awarded this session: 5214 (under the 10,000 session cap).
+- Outcome mix credited: 270 successful results and 488 error outcomes (mostly low/zero-elapsed infrastructure churn).
+- Credit concentration: majority of credit assigned to sustained successful runtime tiers (600-899s and above), with low but nonzero fairness credit for failed/short tasks.
+- Highest credited users this session: ChelseaOilman, WTBroughton, Orange Kid, kotenok2000, Raimund Barbeln.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken experiment cleanup (unsent/in-progress only):
+  - exp_abx_cycle_hgt_delay_resonance%: 15 aborted
+  - exp_rd_phasejitter_adaptive_forcing%: 3 aborted
+- Stuck-task cleanup:
+  - >12h running on dead hosts (>6h no contact): 0 aborted
+  - >48h hard-ceiling aborts: 0
+
+DEPLOYMENT SUMMARY (PART 2)
+CPU deployment
+- CPU queue fill completed.
+- Hosts processed for CPU placement: 81
+- Low-RAM hosts skipped (<6 GB): 2
+- CPU workunits created: 2937
+- CPU scripts deployed:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+
+GPU checkpoint
+- GPU deployment pass was started as a dedicated appid=2 run.
+- GPU scripts targeted:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- The captured run log ends during execution (^C shown) before final GPU host/workunit counters were printed, so exact GPU created-count is not present in this log snapshot.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK NOTES
+- New CPU experiment script created and compiled:
+  - wd_batchnoise_interaction.py
+- Hypothesis focus:
+  - Tests whether late weight-decay gain is stronger under small-batch gradient noise (interaction term, not only main effects).
+- Novelty check evidence documented in run log:
+  - Multiple targeted literature/web searches were run (weight decay x batch size x interaction/schedule terms, including arXiv-targeted queries) before deployment decisions.
+- Retirement check pass executed to avoid over-seeded settled lines:
+  - ABORT_TOTAL=0 in that pass.
+
+WEBSITE COUNTER STATE (POST VALIDATION)
+- credited_count.txt: 5842
+- total_results_count.txt: 3961
+
+KEY SCIENTIFIC FINDINGS
+1. High-runtime validated rows (including spatial PGG criticality, KPZ GPU roughness, Lyapunov/RMT GPU, and delay-ecology families) retained valid xperiment_result structure in payload audits, supporting data integrity in the reviewed batch.
+2. No newly reviewed batch evidence reverses the standing inverse critical-period / WD timing directionality signal tracked across sessions.
+3. Newly credited failures were dominated by low/zero-elapsed infrastructure churn rather than high-runtime scientific-result instability.
+4. Part 2 introduced an explicit WD x batch-noise interaction line (wd_batchnoise_interaction) to test mechanism-level interactions beyond prior main-effect WD timing analyses.

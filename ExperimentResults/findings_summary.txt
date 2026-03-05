@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0138)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0240)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -62,3 +62,18 @@ VALIDATION SESSION UPDATE (March 05, 2026, 01:26, Part 1)
 - Broken-experiment check: `tangled_nature_macroevolution` remained 100% failed in recent window but had no active unsent/in-progress rows at action time, so no additional abort was executed.
 - Website counters after correction: credited_count=4286; total_results_count=3607.
 - Post-check snapshot: uncredited completed rows remaining=164 success, 0 error (live queue continues to refill).
+
+VALIDATION SESSION UPDATE (March 05, 2026, 02:40, Part 1)
+- Credited 758 completed/error rows for 5214 total credit (under 10,000 cap).
+- Outcome mix credited: success=270, outcome=5 errors=488 (mostly zero-elapsed crash/abort rows).
+- Session IDs credited: 1693646 through 1703168 (non-contiguous DB-selected batch).
+- Top session credit totals: ChelseaOilman 4213, WTBroughton 304, Orange Kid 180, kotenok2000 156, Raimund Barbeln 139.
+- Payload audit: top 25 highest-runtime uncredited successes all had upload JSON containing `experiment_result`.
+- Broken-experiment aborts executed (unsent/in-progress only): `abx_cycle_hgt_delay_resonance`=15, `rd_phasejitter_adaptive_forcing`=3.
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters after update: credited_count=5842; total_results_count=3961.
+- Post-check snapshot: uncredited completed rows remaining=3 success, 0 error (new arrivals during live queue churn).
+
+KEY SCIENTIFIC FINDINGS
+1. High-runtime validated rows (spatial PGG criticality, KPZ GPU roughness, Lyapunov/RMT GPU, delay-ecology families) continued to produce normal `experiment_result` payloads with no reversal of the standing WD/ICP directionality claim.
+2. Current error volume is still dominated by low/zero-elapsed infrastructure churn rather than evidence of new model-specific scientific contradictions.
