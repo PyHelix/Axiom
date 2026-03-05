@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0229)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0245)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -11,14 +11,14 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 02:29, Part 1)
-- Credited 648 rows for 5497 total credit (cap respected).
-- Credit mix: 26x11, 22x18, 18x246, 6x1, 4x3, 1x369.
-- Session top credit totals: ChelseaOilman 4769, PyHelix 216, Orange Kid 181, WTBroughton 90, Amapola 68.
-- Upload payload audit: top-25 highest-runtime uncredited successes had 0/25 retained files under /opt/axiom_boinc/upload/* at audit time.
-- Broken-experiment active aborts executed: nagelschreckenberg_lookahead, abx_cycle_hgt_delay_resonance, cahnhilliard_delay_feedback_window, climate_delay_carbon_hysteresis_window, cascade_forecast_delay_shedding.
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 02:45, Part 1)
+- Credited 249 rows for 4026 total credit (cap respected).
+- Credit mix: 224x16, 16x20, 3x24, 1x30, 1x8, 4x3.
+- Session top credit totals: ChelseaOilman 2896, Amapola 504, PyHelix 232, Orange Kid 102, WTBroughton 102.
+- Upload payload audit: 0/249 retained files under /opt/axiom_boinc/upload/* for this credited batch.
+- Broken-experiment active aborts executed: cahnhilliard_delay_feedback_window (5 active rows).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after correction: credited_count=4824; total_results_count=4568.
+- Website counters after correction: credited_count=5073; total_results_count=4740.
 - Live queue churn persisted after session close (new uncredited rows arriving continuously).
 
 RECENT SCIENTIFIC SIGNALS
@@ -33,4 +33,4 @@ OPEN QUESTIONS
 
 KEY SCIENTIFIC FINDINGS
 1. Newly validated success rows continue to support the existing WD/ICP directionality narrative; no contradictory high-confidence signal emerged this session.
-2. Several experiment families showed sustained high multi-host failure rates and were actively aborted to prevent wasted volunteer compute.
+2. A clearly broken family (cahnhilliard_delay_feedback_window, 98.7% fail with active queue) was aborted in-flight to reduce wasted volunteer compute.
