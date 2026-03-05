@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0126)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0138)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -19,6 +19,18 @@ RECENT VALIDATION SNAPSHOTS
 - 2026-03-05 00:32 (Part 1): credited 1198 rows for 5299 credit, zero-elapsed outcome=6 churn dominated errors.
 - 2026-03-05 00:52 (Part 1): credited 525 rows for 6160 credit; aborted two clearly failing experiments (rbn_delay_fatigue_control, cahnhilliard_delay_feedback_window).
 - 2026-03-05 01:26 (Part 1): credited 523 rows for 5526 credit; 234 error rows still credited; no stuck-task aborts; no additional global experiment abort executed.
+- 2026-03-05 01:38 (Part 1): credited 798 rows for 4928 credit; aborted 65 active rows across six clearly broken experiments; no stuck-task aborts.
+
+VALIDATION SESSION UPDATE (March 05, 2026, 01:38, Part 1)
+- Credited 798 completed/error rows for 4928 total credit (under 10,000 cap).
+- Outcome mix credited: success=240, outcome=5 errors=75, outcome=6 errors=483.
+- Session IDs credited: 1693530 through 1702856 (non-contiguous DB-selected batch).
+- Top session credit totals: ChelseaOilman 4222, Orange Kid 239, kotenok2000 168, _Scandinavian_ 104, WTBroughton 79.
+- Payload audit (prefix match): successful high-priority rows had valid `experiment_result` JSON payloads; newest zero-elapsed errors had no upload payloads, consistent with startup/scheduler churn.
+- Broken-experiment aborts executed (unsent/in-progress only): tangled_nature_macroevolution=29, ising_delay_adaptive_quench=3, rbn_delay_fatigue_control=2, adaptive_voter_delay_rewiring=1, baksneppen_modular_avalanche=29, cahnhilliard_delay_feedback_window=1.
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Website counters after update: credited_count=5084; total_results_count=3690.
+- Post-check snapshot: uncredited completed rows remaining=0 success, 0 error at check time.
 
 VALIDATION SESSION UPDATE (March 05, 2026, 01:58, Part 1)
 - Credited 649 completed/error rows for 3890 total credit (under 10,000 cap).
