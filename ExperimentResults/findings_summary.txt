@@ -62,3 +62,14 @@ SCIENTIFIC SIGNALS (THIS SESSION)
 - No new high-confidence reversal of the prior inverse critical-period / WD timing signal.
 - WD-targeted GPU runs (`wd_curvature_trigger_gpu`, `wd_timing_scale_gpu`, `grad_subspace_wd_gpu`) produced fresh experiment_result payloads with nontrivial runtime, extending cross-validation coverage without contradiction of prior directionality.
 
+VALIDATION SESSION UPDATE (March 04, 2026, 18:32, Part 1)
+- Credited 236 completed/error rows for 3710 total credit (under 10,000 cap).
+- Credit tiers applied: success_long(>=600s)=179 at 20 credit; success_mid(60-599s)=2 at 10 credit; error_zero=55 at 2 credit.
+- Top session credit totals: ChelseaOilman 2270, PyHelix 360, Orange Kid 320, kotenok2000 200, Armin Gips 160, _Scandinavian_ 120.
+- Payload audit: 181 successful rows carried `experiment_result` JSON payloads; 55 zero-elapsed failures had missing uploads and received minimal credit.
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Failure diagnostics (CPU/GPU split): repeated nonzero GPU failures (exit_status=195) remained localized to host DESKTOP-PI5FSRI across several GPU experiment families; no multi-host broken-experiment pattern triggered global abort.
+- Broken-experiment action: none issued this session.
+- Website counters after update: credited_count=2132; total_results_count=1671 (monotonic max rule preserved).
+- Post-check: uncredited completed rows=0 at session close.
+
