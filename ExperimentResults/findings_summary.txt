@@ -1,39 +1,38 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0908)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0931)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- This session focused on validation, volunteer credit, and queue hygiene cleanup.
-- No high-confidence contradiction to current WD/ICP narrative was observed.
+- This session focused on validation, volunteer credit, and queue hygiene.
+- No high-confidence contradiction to the current WD/ICP narrative was observed.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 09:08, Part 1)
-- Reviewed and credited 731 newly completed experiment results (ID range 1703939-1720331).
-- Awarded 8823 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 667 experiment_result payloads, 64 error payloads, 0 missing payloads among credited rows.
-- Broken-experiment active aborts: 0 total tasks aborted (specific high-failure families only).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 09:31, Part 1)
+- Reviewed and credited 556 newly completed experiment results (ID range 1712116-1720839).
+- Awarded 5322 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 512 experiment_result payloads, 44 error payloads, 0 missing payloads.
+- Broken-experiment active aborts: 0 rows changed this session (targeted checks run on sis_delay_adaptive_rewiring_tradeoff, lotka_delay_adaptive_harvest, tangnat).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- App-level fail snapshot: CPU appid=1 fail=56.7%; GPU appid=2 fail=74.6%.
-- Website counters after update: credited_count=4362; total_results_count=4334.
-- Queue state at close query: 0 uncredited completed success rows remained.
+- App-level fail snapshot: CPU appid=1 fail=53.5%; GPU appid=2 fail=73.0%.
+- Website counters after update: credited_count=4918; total_results_count=4892.
+- Queue close note: uncredited completed-success rows continue to arrive during runtime (83 at final close query).
 
 RECENT SCIENTIFIC SIGNALS
-- Credited payload quality remained high (667/731 = 91.2% experiment_result payloads).
-- High-throughput credited families this session: contact_process_temporal_network (45); minority_game_memory_heterogeneity (42); interdep_flow_memory_shedding_tradeoff (38); chemostat_delay_crossfeeding_resonance (36); pit_delay_inhibitor_resonance (34).
+- Credited payload quality remained high (512/556 = 92.1% experiment_result payloads).
+- High-throughput credited families this session: potts_pulse_anneal_resonance (21), tritrophic_delay_harvest_resilience (19), collatz_evt_tails (18), seir_delay_fatigue_control (17), interdep_flow_memory_shedding_tradeoff (17), spatial_pgg_punishment_criticality (17), levy_foraging_renewal_phase (17).
 - No directional reversal evidence for WD/ICP narrative was observed in reviewed outputs.
 
 OPEN QUESTIONS
 1) Should generation hard-gate families after sustained >=95% failure with active queue presence?
 2) Should validation export reliability splits by runtime/transport failures vs experiment-logic failures?
 3) Should Part 2 reserve a minimum queue share for WD-priority families during mixed waves?
-4) Should delay-family parameter bounds be tightened further where repeated crash waves appear?
+4) Should delay-family parameter bounds be tightened where repeat crash waves appear?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 731 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Reviewed payload quality remained high (91.2% experiment_result payloads), supporting inference continuity.
-3. Validation-plus-cleanup preserved healthy throughput while keeping the volunteer credit cap and queue hygiene constraints.
-
+1. Across 556 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Reviewed payload quality remained high (92.1% experiment_result payloads), supporting inference continuity.
+3. Validation-plus-cleanup preserved throughput while keeping the volunteer credit cap and queue hygiene constraints.

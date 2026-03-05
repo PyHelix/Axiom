@@ -1,0 +1,58 @@
+AXIOM BOINC SESSION RESULTS LOG (Part 3 Consolidation)
+Session: 2026-03-05 09:35 America/Denver
+Sources: validate_2026-03-05_0931.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1: VALIDATION, CREDIT, AND CLEANUP
+- Reviewed and credited: 556 completed experiment results (ID span 1712116-1720839).
+- Total credit awarded: 5322 (session cap 10000 respected).
+- Payload mix in credited set: 512 experiment_result, 44 error, 0 missing.
+- Top validated families by count: potts_pulse_anneal_resonance (21), tritrophic_delay_harvest_resilience (19), collatz_evt_tails (18), seir_delay_fatigue_control (17), interdep_flow_memory_shedding_tradeoff (17), spatial_pgg_punishment_criticality (17), levy_foraging_renewal_phase (17).
+
+CREDIT AWARDED (TOP SESSION TOTALS)
+- ChelseaOilman +3302, Coleslaw +550, Steve Dodd +450, Orange Kid +274, _Scandinavian_ +226, zombie67 [MM] +174.
+- Additional recipients credited in-session: Anandbhat, amazing, [VENETO] boboviz, marmot, kotenok2000, PyHelix, vanos0512, hwt, [DPC] hansR, WTBroughton.
+
+QUEUE HYGIENE / BROKEN-TASK ACTIONS
+- Dead-host stuck-task cleanup (>12h run and >6h no contact): 0 rows.
+- Hard-ceiling cleanup (>48h run): 0 rows.
+- Broken-experiment active abort checks run for:
+  - exp_sis_delay_adaptive_rewiring_tradeoff%
+  - exp_lotka_delay_adaptive_harvest%
+  - exp_tangnat%
+- Targeted abort updates at execution time: 0 rows (active tasks had already drained/changed state).
+
+PART 2: RESEARCH + DEPLOYMENT SUMMARY (from run_2026-03-03_1352.log)
+- Retirement pass executed; retirement candidates listed; ABORT_TOTAL=0 (no newly unsent over-seeded tasks to abort).
+- CPU deployment completed:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2
+  - CPU_WU_CREATED=2937
+  - CPU scripts used: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+- GPU checkpoint:
+  - GPU deployment script started with scripts wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py.
+  - Run log ended with operator interrupt (^C) before final GPU counters were printed.
+  - GPU host/workunit final totals were not emitted in this run log due to interruption.
+
+NEW / UPDATED EXPERIMENT DESIGN NOTES
+- New CPU experiment script authored and uploaded in Part 2:
+  - wd_batchnoise_interaction.py
+- Existing priority lines explicitly referenced for active deployment/research:
+  - wd_labelsmooth_interaction.py
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Novelty-check documentation recorded in run log:
+  - Literature/web checks were run against arXiv/topic queries on weight decay interactions (label smoothing, batch-size/noise, scheduling), with intent to avoid duplicating established prior art before seeding new interaction tests.
+
+WEBSITE COUNTERS (post-validation)
+- credited_count.txt: 4918
+- total_results_count.txt: 4892
+
+KEY SCIENTIFIC FINDINGS
+1. Across 556 newly credited completions, no high-confidence reversal of the standing WD/ICP directionality signal was detected.
+2. Credited payload quality remained high (92.1% experiment_result payloads), supporting continuity of inference despite a smaller error-payload fraction.
+3. High-throughput validated families (potts-pulse, tritrophic-delay, collatz-EVT, interdep-flow) remained directionally consistent with the current narrative.
+4. Part 2 introduced/expanded interaction-focused deployment (including wd_batchnoise_interaction) to probe mechanism-level WD timing effects rather than only re-testing single-factor main effects.
+
+CLOSE NOTES
+- Uncredited completed-success rows at Part 1 close query: 83 (continuous arrivals during validation runtime).
+- Database remains source of truth for credited IDs; cumulative ID lists intentionally omitted from this session log.
