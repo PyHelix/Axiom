@@ -1,0 +1,60 @@
+AXIOM BOINC SESSION LOG
+Session timestamp: 2026-03-05 07:03 (America/Denver)
+Compiled from: validate_2026-03-05_0701.txt + run_2026-03-03_1352.log + findings_summary.txt
+
+SESSION SCOPE
+- Part 1 (2026-03-05): validation, credit, cleanup
+- Part 2 (2026-03-03): deployment and experiment design
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Reviewed and credited 282 completed results.
+- Total credit awarded: 2244 (session cap respected, <10000).
+- Payload quality: 278 experiment_result payloads, 4 error payloads.
+- Website counters updated: credited_count=2146, total_results_count=2149.
+- New uncredited successes after session close snapshot: 164.
+
+PART 1: STUCK/BROKEN TASK CLEANUP
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken active queues aborted:
+  rw_reset_fatigue_nonrenewal=10
+  wildfire_delay_adaptive_suppression=10
+  sis_delay_adaptive_rewiring_tradeoff=19
+  metapop_allee_corridor=18
+  seasonal_metapop_vax_trigger=9
+  nonmarkov_trap_release_window=12
+  baksneppen_modular_avalanche=5
+  lotka_delay_adaptive=10
+  tangled_nature_macroevolution=4
+  follow-up active abort pass=8
+
+PART 2: DEPLOYMENT SUMMARY (FROM RUN LOG)
+CPU deployment
+- CPU hosts scanned for queue fill: 81
+- Hosts skipped for low RAM (<6GB): 2
+- CPU workunits created: 2937
+- CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+
+GPU deployment checkpoint
+- GPU pass was started as mandatory separate appid=2 deployment.
+- GPU scripts selected for deployment: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+- The run log ended during GPU pass before final counters were printed; final GPU host count and GPU WU created count were not emitted in this log.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- Newly added script in Part 2: wd_batchnoise_interaction.py
+- Novelty check evidence captured in run log via targeted literature searches:
+  1. arxiv weight decay batch size interaction deep learning
+  2. Scheduled Weight Decay paper arxiv 2021
+  3. site:arxiv.org weight decay label smoothing interaction
+  4. site:arxiv.org adaptive weight decay deep neural networks
+  5. site:arxiv.org batch size weight decay generalization
+  6. arxiv 1711.05101 decoupled weight decay regularization
+- Script was uploaded and syntax-checked on server (`python3 -m py_compile` returned OK).
+
+KEY SCIENTIFIC FINDINGS
+1. Across 282 newly credited completions, no high-confidence reversal of the standing WD/ICP signal was observed.
+2. Payload usability remained high in this validation batch (278/282 experiment_result payloads; 98.6%), supporting continued cross-session synthesis.
+3. Delay-structured ecology/control families remained major contributors to usable payloads in the credited set.
+4. Targeted aborts removed persistently failing active queues, reducing immediate volunteer compute waste while preserving healthy queue capacity.
+
+NOTES
+- This session log intentionally omits cumulative result ID lists; database remains the source of truth for credited IDs.

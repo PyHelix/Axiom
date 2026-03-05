@@ -1,9 +1,9 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0630)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0700)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- This session focused on validation, volunteer credit, and failure-hygiene cleanup.
+- This session focused on validation, volunteer credit, and queue hygiene cleanup.
 - No high-confidence contradiction to the current WD/ICP narrative was observed.
 
 ACTIVE SCIENCE PRIORITIES
@@ -11,18 +11,18 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 06:30, Part 1)
-- Reviewed and credited 201 newly completed experiment results.
-- Awarded 1841 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 198 experiment_result payloads, 3 error payloads.
-- Broken-experiment active aborts: sis_delay_adaptive_rewiring_tradeoff (21), rbn_delay_fatigue_control (1), tangled_nature_macroevolution (9), cahnhilliard_delay_feedback_window (17), rw_reset_fatigue_nonrenewal (36), seasonal_metapop_vax_trigger (16), wildfire_delay_adaptive_suppression (14).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 07:00, Part 1)
+- Reviewed and credited 282 newly completed experiment results (ID range 1698699-1716184).
+- Awarded 2244 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 278 experiment_result payloads, 4 error payloads.
+- Broken-experiment active aborts: rw_reset_fatigue_nonrenewal (10), wildfire_delay_adaptive_suppression (10), sis_delay_adaptive_rewiring_tradeoff (19), metapop_allee_corridor (18), seasonal_metapop_vax_trigger (9), nonmarkov_trap_release_window (12), baksneppen_modular_avalanche (5), lotka_delay_adaptive (10), tangled_nature_macroevolution (4), plus follow-up active aborts (8).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=1844; total_results_count=1922.
-- Queue state at close snapshot: 58 uncredited success rows remained (new completions arrived during validation).
+- Website counters after update: credited_count=2146; total_results_count=2149.
+- Queue state at close snapshot: 164 uncredited success rows remained (new completions arrived during validation).
 
 RECENT SCIENTIFIC SIGNALS
-- Delay-structured ecology/control families dominated fresh successful payloads (climate-delay carbon, Lorenz96 delay assimilation, chemostat crossfeeding, fiberbundle delay healing).
-- Payload usability remained very high (198/201 = 98.5% experiment_result payloads).
+- Delay-structured ecology/control families dominated fresh successful payloads (metapop corridor delay forecast, Gray-Scott delay pulse feedback, climate-delay carbon, chemostat crossfeeding).
+- Payload usability remained high (278/282 = 98.6% experiment_result payloads).
 - No directional reversal in WD/ICP confidence emerged from this session.
 
 OPEN QUESTIONS
@@ -32,6 +32,6 @@ OPEN QUESTIONS
 4) Should high-failure delay-family parameter bounds be tightened further to reduce repeated crash waves?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 201 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Reviewed payload quality improved vs prior session (98.5% experiment_result payloads), supporting stable inference continuity.
+1. Across 282 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Reviewed payload quality remained very high (98.6% experiment_result payloads), supporting inference continuity.
 3. Targeted aborts for persistently failing active families reduced immediate volunteer compute waste while preserving healthy queues.
