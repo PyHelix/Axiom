@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0539)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0557)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -11,18 +11,18 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 05:39, Part 1)
-- Reviewed and credited 232 newly completed experiment results.
-- Awarded 1866 total credit this session (cap respected; <10000).
-- Payload audit for credited set: 224 experiment_result payloads, 8 error payloads.
-- Broken-experiment active aborts: cahnhilliard_delay_feedback_window (14), sis_delay_adaptive_rewiring_tradeoff (7), tangnat (22), rbn_delay_fatigue_control (7), lotka_delay_adaptive (2), kuramoto_delay_adaptive_efficiency (1), oscillatory_roughchannel_lbm_resonance (1), seir_delay_fatigue_control (1).
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 05:57, Part 1)
+- Reviewed and credited 210 newly completed experiment results.
+- Awarded 1648 total credit this session (cap respected; <10000).
+- Payload audit for credited set: 205 experiment_result payloads, 5 error payloads.
+- Broken-experiment active aborts: cahnhilliard_delay_feedback_window (13), sis_delay_adaptive_rewiring_tradeoff (6), tangnat (8), rbn_delay_fatigue_control (18), lotka_delay_adaptive_harvest (8), kuramoto_delay_adaptive_efficiency (2), oscillatory_roughchannel_lbm_resonance (6), seir_delay_fatigue_control (6).
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=1250; total_results_count=1270.
-- Queue state at close snapshot: 2 uncredited success rows remained.
+- Website counters after update: credited_count=1460; total_results_count=1493.
+- Queue state at close snapshot: 23 uncredited success rows remained (new completions continued to arrive during validation).
 
 RECENT SCIENTIFIC SIGNALS
-- Delay-structured ecological/network families continue to dominate completions (metapop corridor, climate-delay carbon, Lorenz96 delay assimilation, tritrophic, Gray-Scott delay).
-- High payload usability persisted in this session (224/232 with structured experiment_result output).
+- Delay-structured ecological/network families continue to dominate completions (metapop corridor, climate-delay carbon, Lorenz96 delay assimilation, tritrophic, pit/chemostat families).
+- High payload usability persisted in this session (205/210 with structured experiment_result output).
 - No directional reversal in WD/ICP-related signal confidence emerged from this session.
 
 OPEN QUESTIONS
@@ -31,6 +31,6 @@ OPEN QUESTIONS
 3) Should Part 2 reserve a minimum queue share for WD-priority families during mixed waves?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 232 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
-2. Most reviewed payloads were scientifically usable (224 experiment_result vs 8 error payloads).
+1. Across 210 newly credited completions, no high-confidence reversal of prior WD/ICP directionality was detected.
+2. Most reviewed payloads were scientifically usable (205 experiment_result vs 5 error payloads).
 3. Targeted aborts for repeatedly failing families reduced additional volunteer compute waste while preserving healthy queues.
