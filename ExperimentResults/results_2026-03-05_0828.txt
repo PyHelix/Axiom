@@ -1,0 +1,63 @@
+Axiom BOINC Session Results Log - 2026-03-05_0828
+
+SESSION OVERVIEW
+- Consolidated Part 1 (validation/credit/cleanup) + Part 2 (research/deployment) outputs.
+- Sources used: validate_2026-03-05_0825.txt, run_2026-03-03_1352.log, findings_summary.txt.
+
+PART 1 - VALIDATION, CREDIT, CLEANUP
+- Results reviewed and credited: 192 completed results (ID range 1709245-1719001).
+- Total credit awarded: 2368 (session cap respected).
+- Payload quality: 188 experiment_result payloads, 4 error payloads.
+- Credited_count/total_results_count after update: 3316 / 3383.
+- Remaining uncredited completed rows at close: 138.
+
+CREDIT DISTRIBUTION (SUMMARY)
+- Largest credited contributor this session: ChelseaOilman (+2136 across 172 results).
+- Additional contributors credited: PyHelix, [DPC] hansR, zombie67 [MM], kotenok2000, Henk Haneveld, vanos0512, marmot, WTBroughton, Anandbhat, Orange Kid, _Scandinavian_, hwt.
+
+STUCK/BROKEN TASK CLEANUP
+- Broken-family aborts in validation session: 162 total (initial pass 113, second pass 49).
+- Stuck cleanup from dead hosts (>12h running, >6h no contact): 0 aborted.
+- Hard-ceiling cleanup (>48h running): 0 aborted.
+- Additional retirement/deploy pass check (Part 2) reported ABORT_TOTAL=0 for over-seeded unsent retirement candidates.
+
+PART 2 - DEPLOYMENT STATUS
+CPU DEPLOYMENT
+- CPU host targeting pass completed.
+- CPU hosts seen: 81.
+- Hosts skipped for RAM<6GB: 2.
+- CPU workunits created: 2937.
+- CPU scripts used:
+  - wd_batchnoise_interaction.py
+  - wd_labelsmooth_interaction.py
+
+GPU DEPLOYMENT CHECKPOINT
+- Part 2 run log ended during GPU deployment command (no final GPU summary printed in run_2026-03-03_1352.log).
+- GPU scripts targeted in deployment script:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Live DB checkpoint after run:
+  - GPU hosts active in last 72h: 75
+  - GPU hosts with idle capacity in last 72h: 66
+  - GPU hosts with results for targeted scripts: 13
+  - GPU queued result rows for targeted scripts (server_state in 1,2,4): 47
+  - Total workunits for targeted GPU scripts: 3978
+    - wd_curvature_trigger_gpu: 2151
+    - wd_timing_scale_gpu: 1827
+
+NEW EXPERIMENTS / NOVELTY CHECK NOTES
+- New script added and compiled in Part 2:
+  - wd_batchnoise_interaction.py
+- Logged novelty/literature search queries in run log:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Novel angle deployed: interaction test for late-start weight decay effect under small-batch vs large-batch noise regimes, with explicit interaction metric.
+
+KEY SCIENTIFIC FINDINGS
+1. Across 192 newly credited completions, no high-confidence reversal of the standing WD/ICP directionality signal was observed.
+2. Data quality remained high (188/192 experiment_result payloads, 97.9%), supporting continuity of inference.
+3. Targeted broken-family pruning materially reduced immediate volunteer compute waste while preserving healthy queues.
+4. Part 2 introduced and deployed interaction-focused workload (wd_batchnoise_interaction) to probe whether late WD gains are amplified under higher gradient-noise regimes.
