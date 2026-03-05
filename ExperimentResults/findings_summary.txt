@@ -1,94 +1,36 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0240)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0229)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- Validation sessions continue to be dominated by queue hygiene + credit fairness.
-- No new high-confidence reversal signal observed.
+- Validation workload is still dominated by queue hygiene and fair volunteer crediting.
+- No new high-confidence contradiction to current WD/ICP narrative.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
-- Test whether label smoothing attenuates or amplifies late-WD ICP behavior.
 2) wd_curvature_trigger_gpu.py
-- Test whether WD onset is curvature-triggered versus fixed-onset.
 3) grad_subspace_wd_gpu.py
-- Cross-check WD timing behavior in gradient-subspace geometry under GPU execution.
 
-RECENT VALIDATION SNAPSHOTS
-- 2026-03-05 00:09 (Part 1): credited 1092 rows for 10000 credit (cap hit), no stuck-task cleanup needed, no broken-experiment global abort.
-- 2026-03-05 00:32 (Part 1): credited 1198 rows for 5299 credit, zero-elapsed outcome=6 churn dominated errors.
-- 2026-03-05 00:52 (Part 1): credited 525 rows for 6160 credit; aborted two clearly failing experiments (rbn_delay_fatigue_control, cahnhilliard_delay_feedback_window).
-- 2026-03-05 01:26 (Part 1): credited 523 rows for 5526 credit; 234 error rows still credited; no stuck-task aborts; no additional global experiment abort executed.
-- 2026-03-05 01:38 (Part 1): credited 798 rows for 4928 credit; aborted 65 active rows across six clearly broken experiments; no stuck-task aborts.
-
-VALIDATION SESSION UPDATE (March 05, 2026, 01:38, Part 1)
-- Credited 798 completed/error rows for 4928 total credit (under 10,000 cap).
-- Outcome mix credited: success=240, outcome=5 errors=75, outcome=6 errors=483.
-- Session IDs credited: 1693530 through 1702856 (non-contiguous DB-selected batch).
-- Top session credit totals: ChelseaOilman 4222, Orange Kid 239, kotenok2000 168, _Scandinavian_ 104, WTBroughton 79.
-- Payload audit (prefix match): successful high-priority rows had valid `experiment_result` JSON payloads; newest zero-elapsed errors had no upload payloads, consistent with startup/scheduler churn.
-- Broken-experiment aborts executed (unsent/in-progress only): tangled_nature_macroevolution=29, ising_delay_adaptive_quench=3, rbn_delay_fatigue_control=2, adaptive_voter_delay_rewiring=1, baksneppen_modular_avalanche=29, cahnhilliard_delay_feedback_window=1.
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 02:29, Part 1)
+- Credited 648 rows for 5497 total credit (cap respected).
+- Credit mix: 26x11, 22x18, 18x246, 6x1, 4x3, 1x369.
+- Session top credit totals: ChelseaOilman 4769, PyHelix 216, Orange Kid 181, WTBroughton 90, Amapola 68.
+- Upload payload audit: top-25 highest-runtime uncredited successes had 0/25 retained files under /opt/axiom_boinc/upload/* at audit time.
+- Broken-experiment active aborts executed: nagelschreckenberg_lookahead, abx_cycle_hgt_delay_resonance, cahnhilliard_delay_feedback_window, climate_delay_carbon_hysteresis_window, cascade_forecast_delay_shedding.
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=5084; total_results_count=3690.
-- Post-check snapshot: uncredited completed rows remaining=0 success, 0 error at check time.
+- Website counters after correction: credited_count=4824; total_results_count=4568.
+- Live queue churn persisted after session close (new uncredited rows arriving continuously).
 
-VALIDATION SESSION UPDATE (March 05, 2026, 01:58, Part 1)
-- Credited 649 completed/error rows for 3890 total credit (under 10,000 cap).
-- Credit tiers: success >=2400s:1x30; 1200-2399s:11x24; 900-1199s:8x20; 600-899s:156x18; 60-299s:1x6; <60s:50x4; error <60s:422x1.
-- Session IDs credited: 1687634 through 1700613 (non-contiguous DB-selected batch).
-- Top session credit totals: ChelseaOilman 3362, WTBroughton 192, kotenok2000 90, _Scandinavian_ 78, PyHelix 56.
-- Payload audit sample (25 highest-priority uncredited rows before award): 0/25 matching raw JSON files found under /opt/axiom_boinc/upload/* at audit time; validation based on BOINC outcome + elapsed-time fairness.
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check (7d, multi-host): no appid=1/2 experiment exceeded abort threshold; no global experiment abort issued.
-- Website counters after update: credited_count=3763; total_results_count=3163.
-- Post-check snapshot: uncredited completed rows remaining=4 success, 0 error (new arrivals continue in live queue).
-
-SCIENTIFIC SIGNALS (RECENT)
-- Newly credited successful runs remain concentrated in delay/ecology/network/control families (chemostat, pit-delay, tritrophic, L96-delay, Gray-Scott delay, metapop/cascade, contact-process, minority-game) plus GPU diagnostics.
-- High-runtime spatial PGG criticality and multiple WD/GPU runs validated without introducing contradictory trend direction.
-- Error-heavy rows were primarily zero-elapsed outcome=6 scheduler/availability churn, not evidence of model-specific instability.
+RECENT SCIENTIFIC SIGNALS
+- Newly credited successful runs remained concentrated in delay/ecology/network/control families and selected GPU diagnostics.
+- No audited session evidence of reversal in the standing WD/ICP directionality claim.
+- Current elevated failure burden appears experiment-specific (several high-fail families) rather than broad infrastructure collapse.
 
 OPEN QUESTIONS
-1) Should upload retention be extended so validator payload audits can inspect a larger fraction of recently completed work?
-2) Should outcome=6 zero-elapsed churn be surfaced as a separate infrastructure KPI on the public dashboard?
-3) Should WD/GPU priority experiments expose rolling cross-validation counters on the homepage?
-
-VALIDATION SESSION UPDATE (March 05, 2026, 01:26, Part 1)
-- Credited 523 completed/error rows for 5526 total credit (under 10,000 cap).
-- Session IDs credited: 1693439 through 1701486 (non-contiguous DB-selected batch).
-- Top session credit totals: ChelseaOilman 4706, Orange Kid 246, kotenok2000 173, WTBroughton 124, _Scandinavian_ 110.
-- Payload audit on credited batch: 0/523 matching raw JSON files found under /opt/axiom_boinc/upload/*; validation/credit based on BOINC outcome + elapsed-time fairness.
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment check: `tangled_nature_macroevolution` remained 100% failed in recent window but had no active unsent/in-progress rows at action time, so no additional abort was executed.
-- Website counters after correction: credited_count=4286; total_results_count=3607.
-- Post-check snapshot: uncredited completed rows remaining=164 success, 0 error (live queue continues to refill).
-
-VALIDATION SESSION UPDATE (March 05, 2026, 02:40, Part 1)
-- Credited 758 completed/error rows for 5214 total credit (under 10,000 cap).
-- Outcome mix credited: success=270, outcome=5 errors=488 (mostly zero-elapsed crash/abort rows).
-- Session IDs credited: 1693646 through 1703168 (non-contiguous DB-selected batch).
-- Top session credit totals: ChelseaOilman 4213, WTBroughton 304, Orange Kid 180, kotenok2000 156, Raimund Barbeln 139.
-- Payload audit: top 25 highest-runtime uncredited successes all had upload JSON containing `experiment_result`.
-- Broken-experiment aborts executed (unsent/in-progress only): `abx_cycle_hgt_delay_resonance`=15, `rd_phasejitter_adaptive_forcing`=3.
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=5842; total_results_count=3961.
-- Post-check snapshot: uncredited completed rows remaining=3 success, 0 error (new arrivals during live queue churn).
+1) Should upload retention be increased so validator payload audits can inspect more completed runs?
+2) Should zero/near-zero elapsed outcome=5/6 churn be tracked as a public infrastructure KPI?
+3) Should high-priority WD/GPU experiments expose rolling cross-validation counters on the homepage?
 
 KEY SCIENTIFIC FINDINGS
-1. High-runtime validated rows (spatial PGG criticality, KPZ GPU roughness, Lyapunov/RMT GPU, delay-ecology families) continued to produce normal `experiment_result` payloads with no reversal of the standing WD/ICP directionality claim.
-2. Current error volume is still dominated by low/zero-elapsed infrastructure churn rather than evidence of new model-specific scientific contradictions.
-
-VALIDATION SESSION UPDATE (March 05, 2026, 02:11, Part 1)
-- Credited 260 completed/error rows for 3668 total credit (under 10,000 cap).
-- Outcome mix credited: success=195, outcome!=1 errors=65 (dominated by nagelschreckenberg_lookahead/depinning_roughness_2d_gpu crash rows).
-- Session IDs credited: 1694766 through 1703192 (non-contiguous DB-selected batch).
-- Top session credit totals: ChelseaOilman 3122, Orange Kid 302, WTBroughton 68, kotenok2000 48, marmot 36.
-- Payload audit sample: 0/25 highest-runtime successes and 0/65 error rows had matching retained upload JSON files at audit time (upload retention gap persists).
-- Broken-experiment aborts (unsent/in-progress): nagelschreckenberg_lookahead=0, depinning_roughness_2d_gpu=0 (no active rows at action time).
-- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Website counters after update: credited_count=4176; total_results_count=4196.
-- Post-check snapshot: uncredited completed rows remaining=41 success, 3 error (live queue refill during session).
-
-KEY SCIENTIFIC FINDINGS
-1. Newly validated successful runs remained concentrated in delay-ecology/control families and high-throughput host batches without introducing contradictions to the standing WD/ICP directionality claim.
-2. Session errors were concentrated in two clearly failing experiment families (nagelschreckenberg_lookahead CPU and depinning_roughness_2d_gpu GPU), indicating model/implementation instability rather than broad infrastructure noise.
+1. Newly validated success rows continue to support the existing WD/ICP directionality narrative; no contradictory high-confidence signal emerged this session.
+2. Several experiment families showed sustained high multi-host failure rates and were actively aborted to prevent wasted volunteer compute.
