@@ -1,0 +1,57 @@
+Axiom BOINC Session Results (Part 3 Save)
+Timestamp: 2026-03-05 00:39 America/Denver
+Source logs: validate_2026-03-05_0032.txt; run_2026-03-03_1352.log
+
+SESSION SUMMARY
+- Combined Part 1 validation/credit outcomes with Part 2 research/deployment outcomes into a single log.
+- No direct DB credit operations were performed in this Part 3 step; this log records completed earlier parts.
+
+PART 1: VALIDATION / CREDIT / CLEANUP (from validate_2026-03-05_0032.txt)
+- Results reviewed and credited this session: 1198 rows, 5299 total credit (within 10,000 cap).
+- Credit passes: 1132 rows/4103 credit; 38 rows/686 credit; 3 rows/56 credit; 25 rows/454 credit.
+- Top session credit recipients: ChelseaOilman 3760; Orange Kid 436; _Scandinavian_ 424; kotenok2000 231; WTBroughton 144; Armin Gips 116.
+- Runtime fairness tiers applied to success and error outcomes; dominant error mode was elapsed=0s churn.
+- Queue hygiene cleanup:
+  - Dead-host >12h running aborts: 0
+  - Hard >48h running aborts: 0
+  - Broken experiment global aborts: none (no threshold breach)
+- Counters updated in Part 1: credited_count=7682; total_results_count=2591.
+
+PART 2: RESEARCH / DEPLOYMENT (from run_2026-03-03_1352.log)
+- New experiment designed and deployed to server scripts directory:
+  - wd_batchnoise_interaction.py (new mechanism test for late-WD gain vs batch-noise regime)
+  - Script compiled successfully on server (python3 -m py_compile OK).
+- Retirement safety pass executed:
+  - Retirement candidates were re-checked.
+  - ABORT_TOTAL=0 (no unsent retirement abort required at execution time).
+- CPU deployment completed:
+  - CPU hosts considered: 81
+  - Low-RAM hosts skipped (<6GB): 2
+  - CPU workunits created: 2937
+  - CPU scripts deployed: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+  - Host targeting policy: fill toward ~3x CPU queue depth per host with duplicate checks.
+- GPU deployment checkpoint:
+  - Run log shows GPU deployment script launch for wd_curvature_trigger_gpu.py and wd_timing_scale_gpu.py; transcript was interrupted before final echo counters.
+  - Post-run DB snapshot (2026-03-05) for those GPU prefixes indicates:
+    - GPU hosts targeted (from workunit host tags): 81
+    - GPU workunits total: 3463
+    - By script: wd_curvature_trigger_gpu.py = 1899 WU; wd_timing_scale_gpu.py = 1564 WU
+
+NOVELTY CHECK DOCUMENTATION (Part 2)
+- Literature/novelty web checks were executed before/around deployment, including:
+  - site:arxiv.org weight decay label smoothing interaction
+  - site:arxiv.org adaptive weight decay deep neural networks
+  - site:arxiv.org batch size weight decay generalization
+  - "weight decay" "batch size" "schedule" neural networks
+  - arxiv 1711.05101 decoupled weight decay regularization
+- Outcome: proceeding hypothesis focused on interaction/mechanism testing rather than repeating settled main-effect WD claims.
+
+KEY SCIENTIFIC FINDINGS
+1. Newly validated successful compute remained concentrated in delay/ecology/network families (contact-process temporal networks, minority-game memory heterogeneity, chemostat cross-feeding resonance, pit-delay inhibitor resonance, tritrophic delay resilience, L96 delay shifts, Gray-Scott delay), expanding coverage without reversing prior directionality.
+2. No new high-confidence contradiction to the standing inverse critical-period / WD timing direction was observed in this session window.
+3. Dominant zero-elapsed error churn remained consistent with scheduler/host-availability turnover, not model-specific scientific instability.
+4. New mechanism experiment design advanced to interaction testing: whether late WD benefit strengthens under smaller-batch gradient-noise conditions.
+
+NOTES
+- Cumulative result ID tracking is intentionally omitted here; credited-row truth remains in the database.
+- This file is formatted with a SCIENTIFIC FINDINGS section and numbered items for website parsing.

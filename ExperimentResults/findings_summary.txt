@@ -66,3 +66,19 @@ SCIENTIFIC SIGNALS (THIS SESSION)
 - No contradictory signal emerged against prior inverse critical-period / WD timing direction.
 - Newly validated compute was dominated by delay-network and stochastic-interaction families (contact process, minority-game memory, chemostat, pit-delay, L96-shift, Gray-Scott delay), expanding cross-validation breadth without changing core directionality.
 - Outcome=5 zero-elapsed residuals continue to indicate infrastructure/scheduling churn rather than scientific model instability.
+
+VALIDATION SESSION UPDATE (March 05, 2026, 00:32, Part 1)
+- Credited 1198 completed/error rows for 5299 total credit (safety cap respected; max 10000).
+- Credit tiers applied: success >=1800s:1x24; 1200-1799s:9x22; 900-1199s:51x20; 600-899s:104x18; 60-299s:2x6; <60s:4x4; error elapsed=0s:1027x1.
+- Session batches: pass1 ids 1684697-1699685 (1132 rows, 4103 credit), pass2 ids 1698576-1699276 (38 rows, 686 credit), pass3 ids 1698500-1699273 (3 rows, 56 credit), pass4 ids 1697772-1699420 (25 rows, 454 credit).
+- Top session credit totals: ChelseaOilman 3760, Orange Kid 436, _Scandinavian_ 424, kotenok2000 231, WTBroughton 144, Armin Gips 116.
+- Payload audit: scanned 400 most recent uncredited exp_* rows, 0 matching raw JSON files currently present under /opt/axiom_boinc/upload/*; validation/credit relied on BOINC outcome + elapsed runtime fairness.
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment check: no 7-day multi-host nonzero-elapsed crash cluster met abort threshold; no global experiment abort issued.
+- Website counters after update: credited_count=7682; total_results_count=2591.
+- Post-check snapshot: uncredited rows continue to trickle in live queue (latest check: success 1, error 2).
+
+SCIENTIFIC SIGNALS (THIS SESSION)
+- Newly credited successful work remained concentrated in delay/ecology/network families (contact-process temporal networks, minority-game memory heterogeneity, chemostat cross-feeding resonance, pit-delay inhibitor resonance, tritrophic delay resilience, L96 delay shifts, Gray-Scott delay).
+- No new high-confidence reversal signal against the standing inverse ICP / WD timing direction was observed.
+- Continued zero-elapsed outcome=6 churn indicates scheduler/host-availability turnover rather than model-specific scientific instability.
