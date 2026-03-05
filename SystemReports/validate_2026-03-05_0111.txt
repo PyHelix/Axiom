@@ -1,0 +1,131 @@
+AXIOM VALIDATION / CREDIT LOG
+Session timestamp: 2026-03-05 01:11 (Europe/Berlin)
+Step: Validation & Credit (Step 2 of 8)
+
+1) Results reviewed this session
+- Reviewed uncredited completed results (server_state=5, outcome=1, granted_credit=0, name LIKE exp_%).
+- Count reviewed: 91
+- Sanitized file matches found: 0 / 91
+- Analysis status: deferred credit for all 91 results because no matching /opt/axiom/experiment_results/sanitized/*_safe.json exists yet for these result names.
+- Quality basis enforced: no positive credit awarded without sanitized numeric payload.
+
+Reviewed result IDs (id\thost_id\tuser_id):
+1688803	1	1
+1688877	345	127
+1688884	345	127
+1688908	29	10
+1688909	29	10
+1689250	330	40
+1689267	332	40
+1689272	332	40
+1689597	1	1
+1689603	1	1
+1689693	325	40
+1689697	325	40
+1689706	325	40
+1689707	325	40
+1689708	325	40
+1689709	325	40
+1689710	325	40
+1689711	325	40
+1689712	325	40
+1689713	325	40
+1689714	325	40
+1689728	330	40
+1689729	330	40
+1689730	330	40
+1689731	330	40
+1689732	330	40
+1689733	330	40
+1689734	325	40
+1689735	325	40
+1689736	325	40
+1689737	325	40
+1689738	325	40
+1689741	325	40
+1689742	325	40
+1689743	325	40
+1689744	325	40
+1689746	330	40
+1689747	330	40
+1689748	330	40
+1689749	330	40
+1689750	330	40
+1689751	330	40
+1689752	330	40
+1689753	330	40
+1689754	325	40
+1689755	325	40
+1689757	330	40
+1689758	330	40
+1689759	330	40
+1689760	330	40
+1689761	330	40
+1689762	330	40
+1689767	330	40
+1689768	330	40
+1690102	335	40
+1690104	335	40
+1690107	335	40
+1690108	335	40
+1690110	335	40
+1690112	335	40
+1690113	335	40
+1690116	335	40
+1690117	335	40
+1690118	335	40
+1690120	335	40
+1690151	339	40
+1690152	339	40
+1690153	339	40
+1690154	339	40
+1690156	339	40
+1690157	339	40
+1690158	339	40
+1690159	339	40
+1690160	339	40
+1690161	339	40
+1690162	339	40
+1690163	339	40
+1690164	339	40
+1690165	339	40
+1690168	339	40
+1690169	339	40
+1690170	339	40
+1690171	339	40
+1690172	339	40
+1690173	339	40
+1690174	339	40
+1690175	339	40
+1690179	339	40
+1690189	339	40
+1690199	249	67
+1690215	355	132
+
+2) Credit awarded
+- Total credit awarded this session: 0
+- Session safety cap: 10000 (not approached)
+- Per-user credit additions:
+  userid 40: +0 (82 pending awaiting sanitized payload)
+  userid 1: +0 (3 pending awaiting sanitized payload)
+  userid 10: +0 (2 pending awaiting sanitized payload)
+  userid 127: +0 (2 pending awaiting sanitized payload)
+  userid 67: +0 (1 pending awaiting sanitized payload)
+  userid 132: +0 (1 pending awaiting sanitized payload)
+
+3) Cleanup actions
+- Stuck dead-host candidates (>12h running and >6h host silence): 0
+- Hard ceiling candidates (>48h running): 0
+- Updated rows (outcome=6 abort): 0
+
+4) Failure-pattern review
+- Failed exp_ results by appid: appid=1 failed=954, appid=2 failed=8
+- All non-success rows observed in this sample were outcome=5 with exit_status=0 and empty stderr_out, indicating non-returned/aborted work rather than reproducible runtime crash tracebacks.
+- No broad experiment abort executed this session due lack of crash-evidence in stderr and to avoid aborting potentially healthy active families.
+
+5) Counter updates
+- credited_count.txt: 740 -> 740
+- total_results_count.txt: set to max(existing, db_completed)=618
+
+6) Experiment script bugs fixed
+- None in this validation session (no actionable traceback data available in result.stderr_out for failed sample).
