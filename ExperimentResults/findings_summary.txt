@@ -1,9 +1,9 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_0317)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_0337)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- Validation effort this session focused on rapidly moving queue crediting and hygiene.
+- Validation effort this session emphasized payload-confirmed crediting, queue hygiene, and pruning clearly broken queues.
 - No high-confidence contradiction to current WD/ICP narrative observed.
 
 ACTIVE SCIENCE PRIORITIES
@@ -11,19 +11,19 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (March 05, 2026, 03:17, Part 1)
-- Reviewed 430 result IDs across three live passes (high queue churn during processing).
-- Awarded 236 results for 4126 total credit (session cap respected).
-- Credit passes: 32 rows / 498 credit, then 129 rows / 2276 credit, then 75 rows / 1352 credit.
-- Audited payloads in refresh passes: 199 experiment_result payloads, 5 error payloads.
+LATEST VALIDATION SNAPSHOT (March 05, 2026, 03:37, Part 1)
+- Reviewed 309 completed uncredited success IDs in this pass (live queue still churning after close).
+- Awarded 309 results for 4972 total credit (session cap respected).
+- Payload audit for credited set: 306 experiment_result payloads, 3 error payloads.
 - Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
-- Broken-experiment active abort update executed; rows changed=0 at execution time.
-- Website counters after update: credited_count=5497; total_results_count=5550.
-- Queue churn persisted after close: 14 uncredited success rows remained.
+- Broken-experiment active aborts executed for high-failure families: cahnhilliard (13), tangled_nature_macroevolution (5), tangnat (1).
+- Website counters after update: credited_count=5806; total_results_count=5895.
+- Queue state after close: 46 uncredited success rows remained.
 
 RECENT SCIENTIFIC SIGNALS
 - Dominant newly reviewed families remained spatial_pgg_punishment_criticality, collatz_evt_tails, levy_foraging_renewal_phase, potts_pulse_anneal_resonance, and delay-network ecology variants.
-- Error payloads were predominantly transient script-download/network timeouts, not coherent model-level contradictions.
+- Three error payloads were localized to nkwalk variants with explicit MemoryError/OOM footprints; treated as compute-contributed but lower-quality outputs for credit.
+- High-failure families cahnhilliard_delay_feedback_window and tangled_nature_macroevolution remained collapse-prone in recent completions and were removed from active queue to prevent wasted volunteer cycles.
 - No audited reversal signal in WD/ICP directionality.
 
 OPEN QUESTIONS
@@ -32,6 +32,6 @@ OPEN QUESTIONS
 3) Should WD-priority families receive guaranteed minimum queue share per generation cycle?
 
 KEY SCIENTIFIC FINDINGS
-1. Across 430 reviewed IDs this session, observed outputs remained consistent with prior WD/ICP directionality and provided no high-confidence contradiction.
-2. Most audited outputs were valid experiment_result payloads; error payloads were sparse and mainly connectivity-related script fetch failures.
-3. Queue hygiene remained stable (no stuck-task aborts required), and live crediting was applied in multiple passes to keep pace with rapid result turnover.
+1. Across 309 newly credited IDs in this pass, outputs remained consistent with prior WD/ICP directionality and showed no high-confidence contradiction.
+2. Payload quality remained high (306/309 experiment_result); the only observed errors were nkwalk OOM traces rather than signal-reversing scientific outcomes.
+3. Active compute was protected by aborting clearly broken high-failure queues (cahnhilliard and tangled_nature variants) while leaving healthy families running.

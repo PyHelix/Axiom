@@ -1,0 +1,59 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session: p3_save_2026-03-05_0343
+Timestamp: 2026-03-05 03:43 (America/Denver)
+Inputs: validate_2026-03-05_0337.txt + run_2026-03-03_1352.log + findings_summary.txt
+
+PART 1 SUMMARY (VALIDATION, CREDIT, CLEANUP)
+- Reviewed and audited 309 uncredited successful experiment results.
+- Awarded 4972 total credit across 309 results (safety cap PASS).
+- Payload quality in credited set: 306 experiment_result payloads, 3 error payloads.
+- Error payloads were localized nkwalk MemoryError/OOM traces; compute was credited at lower tier.
+- Per-user credit highlights: ChelseaOilman 3188, Amapola 752, _Scandinavian_ 376, Orange Kid 240.
+
+STUCK/BROKEN TASK CLEANUP
+- Aborted broken queues:
+  - exp_cahnhilliard_delay_feedback_window*: 13 rows
+  - exp_tangled_nature_macroevolution*: 5 rows
+  - exp_tangnat*: 1 row
+- Dead-host stuck aborts (>12h run and >6h host silence): 0
+- Hard 48h runtime aborts: 0
+- Pending broken queues after cleanup: all 0.
+
+PART 2 SUMMARY (DEPLOYMENT + RESEARCH)
+- CPU deployment pass executed with host-targeted queue fill.
+- CPU host scan: 81 hosts seen; 2 hosts skipped for RAM < 6 GB.
+- CPU workunits created: 2937.
+- CPU experiment scripts used:
+  - wd_batchnoise_interaction.py (new this run)
+  - wd_labelsmooth_interaction.py
+- Retirement pass checkpoint: candidate families had unsent=0 at run time; abort_total=0.
+
+GPU CHECKPOINT
+- GPU deployment pass was started with GPU-only scripts:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- The logged Part 2 run ended with an interrupted command (`^C`) before final GPU summary lines.
+- Post-check for these run-family name patterns currently shows 0 active queued results; this indicates no retained queued GPU workunits from this interrupted pass.
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK LOG
+1. wd_batchnoise_interaction.py
+- Novel hypothesis: late weight decay benefit is stronger under small-batch gradient-noise conditions (interaction effect, not only main effects).
+- Design includes four conditions (small/large batch x no-WD/late-WD), per-trial interaction metric, and aggregate interaction-positive rate.
+- Runtime pattern follows BOINC run_duration budget and host-derived seed handling.
+- Literature search queries recorded in run log:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "site:arxiv.org batch size weight decay generalization"
+  - "weight decay batch size schedule neural networks"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Novelty status: no direct prior matched the exact late-WD x batch-noise interaction protocol in the deployed script.
+
+KEY SCIENTIFIC FINDINGS
+1. Across 309 newly credited results in Part 1, output direction remained consistent with the established WD/ICP narrative and showed no high-confidence reversal.
+2. Payload quality remained high (306/309 valid experiment_result payloads); observed failures were localized nkwalk OOM cases rather than broad scientific contradictions.
+3. Active volunteer compute efficiency improved through targeted removal of clearly broken high-failure queues (cahnhilliard and tangled_nature variants).
+4. Part 2 prioritized interaction-focused experiment design (late WD x batch-noise) to test mechanism-level conditions, extending beyond prior main-effect-only WD checks.
+
+NOTES
+- Cumulative result ID lists were intentionally omitted from this session log.
+- Database remains source of truth for credited result IDs.
