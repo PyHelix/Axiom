@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 04, 2026 (session p1_validate_2026-03-04_2332)
+Last updated: March 04, 2026 (session p1_validate_2026-03-04_2351)
 ============================================================
 
 CORE SCIENTIFIC STATUS
@@ -25,6 +25,17 @@ VALIDATION SESSION UPDATE (March 04, 2026, 23:32, Part 1)
 - Broken-experiment check: no recent (7d) nonzero-elapsed multi-host crash cluster exceeded threshold; no global experiment abort issued.
 - Website counters after update: credited_count=2431; total_results_count=1489.
 - Post-check: uncredited completed rows remaining=132 (success 132, error 0).
+
+VALIDATION SESSION UPDATE (March 04, 2026, 23:51, Part 1)
+- Credited 291 completed rows for 5765 total credit (under 10,000 cap).
+- Credit tiers: success_ultra(>=2400s)=1 at 30; success_very_long(>=1200s)=1 at 25; success_long(>=600s)=284 at 20; success_short(<120s)=5 at 6.
+- Upload payload audit: 0/291 matching raw exp_* JSON files currently present under /opt/axiom_boinc/upload; credit based on BOINC outcome + elapsed runtime fairness.
+- Top session credit totals: ChelseaOilman 5352, PyHelix 120, [VENETO] boboviz 65, Armin Gips 50, dthonon 40.
+- Result IDs credited this pass: 1691410 through 1697622 (291 rows, non-contiguous by scheduler/order).
+- Stuck-task cleanup: dead-host >12h aborts=0; hard >48h aborts=0.
+- Broken-experiment check: no recent (7d) multi-host nonzero-elapsed crash cluster; observed GPU exit_status=195 concentrated on a single host (DESKTOP-PI5FSRI), so no global experiment abort issued.
+- Website counters after update: credited_count=3013; total_results_count=1960.
+- Post-check: uncredited completed rows remaining=311 (success 311, error 0).
 
 SCIENTIFIC SIGNALS (THIS SESSION)
 - Newly credited successful workloads were dominated by delay/ecology/system-dynamics families (grayscott, chemostat cross-feeding, pit inhibitor resonance, lorenz96 shift, tritrophic, fiberbundle, metapop corridor).
