@@ -1,0 +1,16 @@
+AXIOM VALIDATION LOG — 2026-03-05 18:23 UTC
+=============================================
+
+RESULTS REVIEWED
+- 169 uncredited results found (validate_state=0, awaiting BOINC validator)
+- No sanitized files available yet — assimilator waiting on validator pass
+- Oldest uncredited: result 1693530 (lyapunov_rmt_gpu, received 09:23 UTC)
+- Credit awarded this session: 0 (no results ready for crediting)
+
+CLEANUP ACTIONS
+- Aborted 10 baksneppen_modular_avalanche tasks (94.7% failure rate)
+- No stuck tasks found (>12h dead host or >48h total)
+- 100% failure experiments (gene_drive, rd_phasejitter, tangled_nature, ising_delay, moranmig, abx_cycle) all have 0 active work
+
+ACTIVE HOSTS: 94 hosts in last 72h, 24 currently running tasks
+CREDIT SUMMARY: 0 credit awarded (no results ready)
