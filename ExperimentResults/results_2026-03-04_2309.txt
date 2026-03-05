@@ -1,0 +1,82 @@
+Axiom BOINC Session Results Log
+Session: 2026-03-04 23:09 (Part 3 consolidated)
+Sources: validate_2026-03-04_2305.txt + run_2026-03-03_1352.log + findings_summary.txt
+
+OVERVIEW
+- Consolidated Part 1 validation/credit outputs with latest Part 2 research/deployment run outputs.
+- Part 1 scope: validation, crediting, queue hygiene.
+- Part 2 scope: retirement check, experiment design/novelty check, CPU deployment, GPU deployment start.
+
+PART 1: VALIDATION, CREDIT, CLEANUP
+- Reviewed and credited 1192 rows (non-contiguous IDs spanning 1683295 through 1695585).
+- Total session credit awarded: 9984 (under 10,000 cap).
+- Credit tiering used:
+  - success_very_long (>=1200s): 6 rows @ 25
+  - success_long (>=600s): 411 rows @ 20
+  - success_mid (60-599s): 2 rows @ 10
+  - success_short (0-59s): 2 rows @ 5
+  - error_zero: 771 rows @ 2
+- Payload audit on credited rows:
+  - JSON with experiment_result: 442
+  - Missing upload match (mostly zero-elapsed startup/path failures): 750
+- Queue hygiene / stuck tasks:
+  - Dead-host stuck aborts (>12h running and >6h no contact): 0
+  - Hard-ceiling aborts (>48h running): 0
+- Broken experiment diagnostic:
+  - No multi-host nonzero-elapsed crash cluster met abort criteria.
+- Website counters after update:
+  - credited_count.txt: 1338
+  - total_results_count.txt: 923
+
+PART 2: DEPLOYMENT / RESEARCH ACTIONS (LATEST RUN LOG)
+- Retirement pass executed before deployment:
+  - Candidates listed (including svdrank, wdoptim, wddepth, percolation, etc.)
+  - No unsent retirements were pending in that pass.
+  - ABORT_TOTAL=0
+
+CPU DEPLOYMENT
+- CPU scripts used:
+  - wd_batchnoise_interaction.py (newly authored and py_compile-checked)
+  - wd_labelsmooth_interaction.py
+- Host targeting mode:
+  - Active hosts reviewed for CPU fill target of ~3x p_ncpus queue depth.
+  - Hosts with RAM <6GB were skipped.
+- Deployment output:
+  - CPU_HOSTS_SEEN=81
+  - CPU_SKIPPED_LOW_RAM=2
+  - CPU_WU_CREATED=2937
+- Host coverage summary:
+  - CPU work distributed across eligible active CPU hosts (79 hosts targeted after low-RAM filter).
+
+GPU DEPLOYMENT CHECKPOINT
+- GPU deployment phase was started as a separate pass (appid=2).
+- GPU scripts selected:
+  - wd_curvature_trigger_gpu.py
+  - wd_timing_scale_gpu.py
+- Run log ended with operator interrupt (^C) during the SSH execution of the GPU deploy script.
+- Result: final GPU host count and GPU workunit count were not emitted in the captured run log.
+
+NEW EXPERIMENT DESIGN + NOVELTY CHECK DOCUMENTATION
+- New experiment script designed and uploaded:
+  - wd_batchnoise_interaction.py
+- Novelty/prior-art search evidence recorded in run log included queries such as:
+  - "weight decay batch size interaction neural networks"
+  - "arxiv weight decay batch size interaction deep learning"
+  - "Scheduled Weight Decay paper arxiv 2021"
+  - "site:arxiv.org weight decay label smoothing interaction"
+  - "site:arxiv.org adaptive weight decay deep neural networks"
+  - "site:arxiv.org batch size weight decay generalization"
+  - "\"weight decay\" \"batch size\" \"schedule\" neural networks"
+  - "arxiv 1711.05101 decoupled weight decay regularization"
+- Design intent documented in Part 2 artifacts:
+  - Probe interaction between late weight decay benefit and small-batch gradient-noise regime.
+
+KEY SCIENTIFIC FINDINGS
+1. Fresh experiment_result payloads were validated across active delay/ecology/complex-systems families, with strongest throughput in genedrive_delayres, chemostat_delay_crossfeeding_resonance, xy_delay_thermostat_reentrance, grayscott_delay_pulse_feedback, and fisher_delay_adaptive_culling.
+2. This validation pass produced no new high-confidence contradiction to the standing inverse critical-period / WD timing direction.
+3. Reliability signal remains dominated by zero-elapsed startup/download-style failures, indicating infrastructure/startup noise dominates a large share of error rows rather than a confirmed single-script multi-host runtime bug.
+4. Part 2 introduced a new CPU experiment line (wd_batchnoise_interaction) specifically targeting WD-timing x batch-noise interaction, extending the WD program toward mechanism-level interaction testing.
+
+NOTES
+- Cumulative credited ID lists were not persisted here beyond session-level summary.
+- Database remains source of truth for credited rows.
