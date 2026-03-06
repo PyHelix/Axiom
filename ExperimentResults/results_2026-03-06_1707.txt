@@ -1,0 +1,28 @@
+AXIOM SCIENCE ANALYSIS REPORT
+Timestamp (UTC): 2026-03-06 17:07
+
+Cycle scope
+- Recent sanitized result families scanned from the last 180 minutes.
+- Families with 10+ new results must be analyzed unless already CONFIRMED or REJECTED in findings_summary.txt.
+
+Recent family counts
+- 101  exp_critical_branching_skew_crossover
+- 2    exp_cml_sync_transition_gpu_gpu
+- 2    exp_cahnhilliard_mobility_disorder_gpu_gpu
+- 1    exp_winding_number_spitzer
+- 1    exp_rsa_polydisperse_jamming
+- 1    exp_random_poly_roots_gpu_gpu
+- 1    exp_quorum_sensing_spatial_hysteresis
+- 1    exp_goldecay_h321_r1_2592191
+- 1    exp_band_rmt_localization_gpu_gpu
+
+Active-family review
+- exp_critical_branching_skew_crossover has 101 new sanitized files but is already listed in findings_summary.txt as REJECTED.
+- No other family reached the 10-result threshold this cycle.
+
+Results
+- No active experiment families required new statistical analysis in this cycle after excluding already CONFIRMED/REJECTED families.
+
+Conclusion
+- No new findings were added.
+- findings_summary.txt was preserved unchanged.
