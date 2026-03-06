@@ -68,6 +68,7 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 63. RW reset fatigue nonrenewal: REJECTED — reentrant score negative in 0/123 runs, d=-10.81. No reentrant optimal reset rate; fatigue degrades monotonically. 123 results, 7 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
+- Critical branching skew crossover: late-time skewness effect remains, survival_corr_late=0.976, cond_corr_late=-0.966, q90_corr_late=-0.677, N=20 results, 3 hosts.
 - NK basin size distribution: Gini peaks at K=3-4 for N=14 (K/N~0.21-0.29), peak Gini=0.614+/-0.026. 15 results, 14 hosts.
 - CML sync transition: eps_c increases with r (3.7->4.0: 0.046->0.073), d=-7.82. 22 results, 19 hosts.
 - Langton ant highway: sharp critical transition rho_c~0.03-0.05, 100%->0% highway finding. 16 results, 1 host.
@@ -105,6 +106,8 @@ DEPLOYED EXPERIMENTS (awaiting sufficient data)
 - Levy matrix spacing (GPU): 6 completed. Collecting.
 - Ginibre NNS spacing universality (GPU): deployed.
 - Random polynomial real roots (GPU): deployed.
+- Structured smallest singular value crossover (GPU): deployed March 6, 2026. Novelty check query: structured random matrix smallest singular value sparse banded Bernoulli universality. Found dense/sparse asymptotic universality papers, but no direct finite-size crossover map across dense Gaussian, Bernoulli, sparse, and banded ensembles. Collecting.
+- Critical branching skew crossover: deployed March 6, 2026. Novelty check query: critical Galton-Watson higher moments finite-generation survival matched variance. Found asymptotic survival-universality and finite-size-scaling work, but no direct matched-mean/variance study of surviving-population or overshoot crossover versus third moment. Collecting.
 
 EMERGING PATTERN (37 delay-window experiments analyzed)
 - Of 37 delay-window experiments: 27 REJECTED, 1 INVERSE, 1 ANTI-REENTRANT, 2 PARTIAL, 4 NO EFFECT, 1 delay-independent, 1 WEAK. Only 4 CONFIRMED reentrant windows (autocatalytic, nonmarkov, XY, Cahn-Hilliard) — all oscillatory.

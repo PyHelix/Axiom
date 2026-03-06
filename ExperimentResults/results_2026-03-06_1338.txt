@@ -1,0 +1,16 @@
+Axiom BOINC Science Step 2 Report
+Timestamp UTC: 2026-03-06_1338
+
+Recent file counts (mmin -180):
+  exp_critical_branching_skew_crossover: 20
+
+EXPERIMENT: exp_critical_branching_skew_crossover (N results: 20, N seeds: 20, N hosts: 3)
+  Results:
+    survival_corr_late = 0.976126 +/- 0.029968, Cohen d=32.57, sign-consistency 100.0%
+    conditional_corr_late = -0.966040 +/- 0.028110, Cohen d=-34.37, sign-consistency 0.0%
+    q90_corr_late = -0.677008 +/- 0.272766, Cohen d=-2.48, sign-consistency 5.0%
+  Conclusion: PRELIMINARY
+  Strong skewness dependence persists at late generations for survival and conditional observables with sign-consistent effects across all seeds, indicating no evidence yet for expected late-time collapse.
+  N<30 and effect sizes exceed thresholds, so this is retained as preliminary.
+
+No other family reached 10+ new validated results in the current 180-minute window (exp_kauffman_autocatalytic_threshold=9, mostly payloads incomplete).
