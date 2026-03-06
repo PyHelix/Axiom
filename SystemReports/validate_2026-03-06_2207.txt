@@ -1,0 +1,58 @@
+Axiom BOINC Validation Report — 2026-03-06 22:07 UTC
+
+=== CREDIT AWARDED ===
+
+Total results credited: 120
+Total credit awarded: 1,342
+Results skipped (zero credit): 25
+  - kauffman_autocatalytic_threshold: 8 results — empty data (0 credit)
+  - activation_function_landscape: 17 results — not yet sanitized (deferred)
+
+Per-experiment breakdown:
+  critical_branching_skew_crossover: 66 results, 660 credit (10/ea)
+  abx_cycle_hgt_delay_resonance: 5 results, 75 credit (15/ea)
+  allencahn_delay_adaptive_quench_gpu: 3 results, 45 credit (15/ea)
+  band_rmt_localization_gpu: 2 results, 30 credit (15/ea)
+  benford_logistic_transition: 6 results, 60 credit (10/ea)
+  cahnhilliard_mobility_disorder_gpu: 1 result, 15 credit
+  fhn_coherence_resonance_gpu: 4 results, 60 credit (15/ea)
+  fhn_spiral_tip_fractal_gpu: 6 results, 90 credit (15/ea)
+  fput_heat_conductivity: 1 result, 10 credit
+  galtonwatson_extinction_universality: 1 result, 10 credit
+  quorum_sensing_spatial_hysteresis: 6 results, 60 credit (10/ea)
+  rsa_polydisperse_jamming: 6 results, 72 credit (12/ea)
+  structured_smin_crossover_gpu: 5 results, 75 credit (15/ea)
+  winding_number_spitzer: 8 results, 80 credit (10/ea)
+
+Per-host credit breakdown:
+  Host 195: +320   Host 1: +280    Host 29: +142
+  Host 339: +120   Host 253: +110  Host 271: +100
+  Host 323: +60    Host 325: +60   Host 2: +40
+  Host 16: +30     Host 140: +20   Host 23: +15
+  Host 57: +15     Host 272: +15   Host 353: +15
+
+=== CLEANUP ===
+
+Stuck tasks (>12h running, host gone >6h): NONE found
+Broken experiments aborted: NONE needed — old-format failures already cleaned up
+
+Failure rate check:
+  quorum_sensing_spatial_hysteresis: 96.8% fail rate (94 timeouts outcome=6, 88 prior aborts)
+    — Not a script bug; timeouts on slower hosts. 6 successful results exist with good data.
+  fput_heat_conductivity: 75% fail (3 aborted prior, 1 success) — no active issue
+  Old-format experiments (benford, windang, bootperc, nkwalk): all failures previously aborted, no pending work
+
+=== NOTES ===
+
+- kauffman_autocatalytic_threshold runs in ~3-5 seconds but produces empty result dicts.
+  The sanitizer saves them but they contain no data. Needs investigation if the experiment
+  is supposed to produce numeric output.
+- activation_function_landscape has 17 successful results (validate_state=1) but no
+  sanitized files yet. Assimilator may not have processed them. Will credit next session.
+- 90+ active hosts across diverse hardware. No host-specific issues detected.
+- Website counters updated: credited_count=136, total_results=763
+
+=== ACTIVE FLEET ===
+
+10 hosts with running/pending tasks
+Top contributors this session: Host 195 (36-core Linuxmint), Host 1 (16-core Win11)
