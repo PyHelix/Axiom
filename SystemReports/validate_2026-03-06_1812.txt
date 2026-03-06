@@ -1,0 +1,65 @@
+Axiom validation log
+Timestamp: 2026-03-06_1812
+
+Operational summary
+- Reviewed pending successful experiment results: 531
+- Trusted sanitized payloads found for reviewed pending results: 0/531
+- Credit awarded this session: 0
+- Website credited_count.txt left unchanged at 0
+- Website total_results_count.txt updated to 531 from 376
+- Stuck tasks cleaned up: 0
+- Broken experiments aborted: 0
+
+Results reviewed this session
+- All 531 pending successful exp_% results were checked against /opt/axiom/experiment_results/sanitized/*_safe.json by exact _result_name match.
+- No matching trusted sanitized JSON payloads were present for any pending result, so quality validation and crediting were deferred for all reviewed IDs.
+- Per prompt guardrails, no raw upload files were read and no credit was inferred from elapsed_time alone.
+- Science findings summary was consulted only to inform risk/context; no scientific findings were rewritten here.
+
+Pending result IDs by experiment (credit deferred: missing trusted sanitized payload)
+- critical_branching_skew_crossover: 111 results; IDs 1742368, 1742499, 1742580, 1742583, 1742584, 1742585, 1742590, 1742591, 1742592, 1742596, 1742599, 1742601, ...
+- fput_heat_conductivity: 43 results; IDs 1742953, 1742965, 1742977, 1742989, 1743001, 1743013, 1743025, 1743037, 1743049, 1743061, 1743073, 1743085, ...
+- sparse_wigner_tw_edge: 38 results; IDs 1742952, 1742964, 1742976, 1742988, 1743000, 1743012, 1743024, 1743036, 1743048, 1743060, 1743072, 1743084, ...
+- galtonwatson_extinction_universality: 37 results; IDs 1742955, 1742967, 1742979, 1742991, 1743003, 1743015, 1743027, 1743039, 1743051, 1743063, 1743075, 1743099, ...
+- bootperc: 27 results; IDs 1783156, 1783185, 1783193, 1783201, 1783217, 1783508, 1783516, 1783549, 1783557, 1783565, 1785682, 1788374, ...
+- windang: 25 results; IDs 1783163, 1783171, 1783184, 1783208, 1783224, 1783507, 1783540, 1783548, 1785681, 1788373, 1788381, 1788389, ...
+- benford: 24 results; IDs 1783124, 1783183, 1783199, 1783514, 1783539, 1783547, 1785680, 1785699, 1788372, 1788380, 1788388, 1788396, ...
+- goldecay: 24 results; IDs 1783186, 1783194, 1783210, 1783534, 1783542, 1783558, 1785702, 1785718, 1788375, 1788383, 1788391, 1788399, ...
+- hyperpgg: 24 results; IDs 1783122, 1783160, 1783189, 1783205, 1783213, 1783221, 1783537, 1783553, 1785686, 1788378, 1788386, 1788394, ...
+- votermod: 22 results; IDs 1783166, 1783187, 1783195, 1783510, 1785684, 1785711, 1785719, 1788376, 1788384, 1788392, 1788400, 1788408, ...
+- cahnhilliard_mobility_disorder_gpu: 20 results; IDs 1786685, 1787309, 1787517, 1787605, 1787613, 1787621, 1787669, 1787677, 1787685, 1787693, 1787725, 1787749, ...
+- collatz: 20 results; IDs 1783169, 1783190, 1783198, 1783538, 1783570, 1788379, 1788387, 1788395, 1788403, 1788411, 1788419, 1788427, ...
+- nkwalk: 17 results; IDs 1783129, 1783159, 1783511, 1785677, 1785685, 1785704, 1788377, 1788385, 1788393, 1788433, 1788441, 1788449, ...
+- fhn_coherence_resonance_gpu: 15 results; IDs 1786808, 1787216, 1787608, 1787664, 1787688, 1787704, 1787712, 1787720, 1787728, 1787736, 1787752, 1787760, ...
+- fhn_spiral_tip_fractal_gpu: 13 results; IDs 1787087, 1787519, 1787583, 1787679, 1787687, 1787695, 1787703, 1787711, 1787719, 1787727, 1787751, 1787759, ...
+- structured_smin_crossover_gpu: 13 results; IDs 1786865, 1787177, 1787497, 1787513, 1787521, 1787665, 1787681, 1787689, 1787697, 1787753, 1787777, 1787785, ...
+- cml_sync_transition_gpu: 12 results; IDs 1780757, 1780761, 1780847, 1780859, 1780862, 1780869, 1780880, 1780922, 1780932, 1787686, 1787710, 1787758
+- band_rmt_localization_gpu: 11 results; IDs 1787612, 1787620, 1787668, 1787676, 1787684, 1787708, 1787724, 1787748, 1787756, 1787788, 1787812
+- ginibre_spacing_universality_gpu: 8 results; IDs 1782125, 1782126, 1782127, 1782132, 1782135, 1787698, 1787722, 1787754
+- random_poly_roots_gpu: 7 results; IDs 1782413, 1782422, 1782424, 1782427, 1787683, 1787715, 1787755
+- rsa_polydisperse_jamming: 7 results; IDs 1745746, 1777918, 1777930, 1777942, 1777990, 1778050, 1778134
+- quorum_sensing_spatial_hysteresis: 5 results; IDs 1745721, 1777989, 1778001, 1778013, 1778049
+- winding_number_spitzer: 3 results; IDs 1745726, 1777958, 1778126
+- benford_logistic_transition: 2 results; IDs 1777924, 1777996
+- kauffman_autocatalytic_threshold: 2 results; IDs 1777940, 1777952
+- fputheat: 1 results; IDs 1740095
+
+Credit actions
+- No result/user/host credit rows were updated because no reviewed pending result had a trusted sanitized payload available for scientific-value assessment.
+- Total credit added to result table: 0
+- Total credit added to user table: 0
+- Total credit added to host table: 0
+
+Cleanup actions
+- Ran stuck-task cleanup query for exp_% tasks older than 12h on hosts silent for >6h; rows affected: 0.
+- Failure-rate scan identified quorum_sensing_spatial_hysteresis at 94.9% failed among completed tasks, but there were 0 active tasks (server_state in 2,4) at validation time, so no abort update was needed.
+- No exp_% family required active-task abort cleanup during this session snapshot.
+
+Bugs found and fixed in experiment scripts
+- Read /opt/axiom_boinc/html/user/experiments/quorum_sensing_spatial_hysteresis.py while investigating the high-failure family.
+- No experiment script changes were made this session because the active queue for the broken family was already empty and there was insufficient trusted evidence in the sanitized backlog to justify a code patch in validation.
+
+Artifacts used
+- /tmp/axiom_pending_by_experiment.txt
+- /tmp/axiom_score_results.py
+- /tmp/axiom_credit_plan.json
