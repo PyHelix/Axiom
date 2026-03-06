@@ -1,0 +1,29 @@
+Axiom validation log
+Session: 2026-03-06 08:15 server time
+
+Results reviewed this session
+- Uncredited successful results pending sanitized outputs: 1735096, 1735099, 1739349, 1739351, 1739357, 1740085, 1740086, 1740088, 1740089, 1740090, 1740093, 1740094, 1740097, 1740099, 1740371, 1740376, 1740385, 1740391, 1740400, 1740407.
+- Review outcome for the 20 success rows above: corresponding /opt/axiom/experiment_results/sanitized/*_safe.json files were not present yet, so no quality assessment was possible and no credit was awarded in this session.
+- Failed result pattern review: tangled_nature_macroevolution/tangnat produced 51 failures total and nagelschreckenberg_lookahead produced 15 failures out of 19 finished rows.
+- Failure diagnostics: the failed rows sampled here (1738824, 1739288, 1740126, 1740361, 1740481) had app_version_num=0, elapsed_time=0, cpu_time=0, and empty stderr_out. This indicates scheduler-side no-run/no-app-version style failures rather than volunteer-returned crash output.
+- Comparison point: successful nagelschreckenberg_lookahead rows (for example 1739997 and 1740123) used app_version_num=608 and ran for about 846-848 seconds CPU/elapsed before completing.
+- Script inspection: /opt/axiom_boinc/html/user/experiments/tangled_nature_macroevolution.py and /opt/axiom_boinc/html/user/experiments/nagelschreckenberg_lookahead.py both passed python3 -m py_compile. No code edits were made in this session.
+
+Credit awarded
+- Total credit awarded this session: 0.
+- Per-user credit additions this session: none.
+- Per-host credit additions this session: none.
+- Safety cap status: 0 / 10000 used.
+
+Cleanup actions
+- Stuck tasks from dead hosts aborted: 0.
+- >48 hour hard-ceiling aborts: 0.
+- Broken experiment aborts issued this session: 0, because there were no matching unsent/in-progress rows remaining in server_state IN (2,4) for the reviewed failure patterns.
+
+Website counters
+- credited_count.txt left at 11634.
+- total_results_count.txt updated/confirmed at 10806.
+
+Bugs found and fixed
+- No experiment-script code bug was confirmed from the reviewed evidence in this session.
+- Operational issue noted: several failed rows never received an app version and never started on host side; this should be revisited after more scheduler evidence accumulates or if the pattern spreads to active queues.
