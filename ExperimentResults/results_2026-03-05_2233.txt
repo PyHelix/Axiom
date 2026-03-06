@@ -1,0 +1,60 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-05 22:33 (America/Denver)
+Scope: Combined Part 1 (validation/credit/cleanup) + Part 2 (deployment/research)
+
+PART 1: RESULTS REVIEWED AND CREDIT AWARDED
+- Newly credited results: 591 (credited-exp DB diff: 350 -> 941).
+- Session credit awarded: 6,339 (within 10,000 cap).
+- Credit quality basis: DB metadata tiering (elapsed_time + outcome) because upload artifacts were missing in audited cohort.
+- Per-user additions: ChelseaOilman +4,711; Armin Gips +348; Steve Dodd +274; Aurum +265; Anandbhat +187; amazing +129; zombie67 [MM] +124; kotenok2000 +102; PyHelix +52; Orange Kid +48; Manuel Stenschke +38; Ncard00 +36; Josemi +12; Michael E. +12; LeaveArtemis +1.
+
+PART 1: STUCK/BROKEN TASK CLEANUP
+- Broken-prefix sweep (unsent/in-progress):
+  exp_tangled_nature_macroevolution%: 0 aborted
+  exp_tangnat%: 0 aborted
+  exp_nagelschreckenberg_lookahead%: 0 aborted
+- Stuck-task cleanup:
+  >12h sent and host offline >6h: 1 aborted (outcome=6)
+  >48h hard ceiling: 0 aborted
+- Failure-pattern snapshot (completed failures): tangled_nature_macroevolution=40, tangnat=11, nagelschreckenberg_lookahead=15.
+
+PART 2: EXPERIMENTS DEPLOYED (CPU)
+- CPU scripts deployed:
+  1) wd_batchnoise_interaction.py (newly authored this run)
+  2) wd_labelsmooth_interaction.py (existing)
+- CPU deployment method: host-targeted fill to ~3x CPU queue per host, skipping hosts with RAM <6 GB.
+- CPU host coverage from deployment run: CPU_HOSTS_SEEN=81, CPU_SKIPPED_LOW_RAM=2.
+- CPU workunits created this deployment run: CPU_WU_CREATED=2937.
+- Target hosts: active CPU hosts with cpu_needed > 0 at deployment time (per-host naming pattern exp_<script>_h<hostid>[_rN]).
+
+PART 2: GPU CHECKPOINT
+- GPU deployment pass initiated with scripts:
+  1) wd_curvature_trigger_gpu.py
+  2) wd_timing_scale_gpu.py
+- GPU deployment command stream was interrupted before completion telemetry was logged (^C in run log), so final GPU host count and GPU WU count were not emitted in the captured run log.
+- Script intent was explicit GPU-only host-targeted fill to ~3x GPU queue per host (appid=2).
+
+PART 2: NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- New experiment authored/uploaded/compiled: wd_batchnoise_interaction.py (python3 -m py_compile OK).
+- Core hypothesis: late weight-decay benefit should be stronger under higher gradient noise (small batch) than low-noise large-batch training.
+- Logged novelty/literature queries from run:
+  1) site:arxiv.org weight decay label smoothing interaction
+  2) site:arxiv.org adaptive weight decay deep neural networks
+  3) site:arxiv.org batch size weight decay generalization
+  4) "weight decay" "batch size" "schedule" neural networks
+  5) arxiv 1711.05101 decoupled weight decay regularization
+  6) weight decay batch size interaction neural networks
+  7) arxiv weight decay batch size interaction deep learning
+  8) Scheduled Weight Decay paper arxiv 2021
+- Novel angle rationale recorded in script design: interaction-level test (late WD gain_small_batch minus gain_large_batch), with repeated time-budgeted trials and per-condition OOD/ID metrics.
+
+WEBSITE COUNTERS (FROM PART 1)
+- credited_count.txt: 11497
+- total_results_count.txt: 10806
+
+KEY SCIENTIFIC FINDINGS
+1. No high-confidence reversal of the established inverse WD/ICP directionality was observed in this session's validated cohort.
+2. The dominant immediate data-quality bottleneck was retained-upload loss (missing JSON payload artifacts), which forced metadata-based scoring in the audited cohort.
+3. Failure pressure remained prefix-localized (tangled_nature_macroevolution / tangnat / nagelschreckenberg_lookahead), not system-wide.
+4. Part 2 expanded mechanism-focused testing with wd_batchnoise_interaction, explicitly probing whether gradient-noise regime modulates late-WD benefit.
+5. CPU queue expansion was substantial (2,937 WUs created across active eligible hosts), increasing near-term power for interaction-mechanism comparisons.
