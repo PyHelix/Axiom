@@ -1,0 +1,46 @@
+Axiom science analysis 2026-03-06_2205 UTC
+
+EXPERIMENT: activation_function_landscape (125 results, 125 seeds, 10 hosts)
+  Results: sigmoid top final test acc 0.9580 +/- 0.0000; ReLU 0.9300 +/- 0.0000; best-minus-ReLU delta +0.0280 +/- 0.0000, d=inf, positive 100.0%.
+  Conclusion: PRELIMINARY
+    sigmoid consistently outruns ReLU on this fixed MLP benchmark. The ranking is stable across submitted runs, but this is still a single benchmark family rather than a broad universality claim.
+
+EXPERIMENT: fput_heat_conductivity (222 results, 222 seeds, 18 hosts)
+  Results: alpha 0.2505 +/- 0.0782; alpha-(1/3) -0.0829 +/- 0.0782, d=-1.06, below-1/3 87.4%; R^2 0.518 +/- 0.205.
+  Conclusion: REJECTED
+    The measured conductivity exponent stays below the KPZ 1/3 target in the large majority of valid runs. The weak regression quality means the finite-size fit is noisy, but the direction is now stably opposite to the hypothesis.
+
+EXPERIMENT: fhn_coherence_resonance_gpu_gpu (42 results, 42 seeds, 11 hosts)
+  Results: cv_min L64=10.00 +/- 0.00, L128=10.00 +/- 0.00, L256=10.00 +/- 0.00; all-sizes default-ceiling rate 100.0%.
+  Conclusion: PRELIMINARY
+    Most runs still sit on the fallback CV=10 ceiling rather than a resolved coherence-resonance minimum. The experiment has accumulated enough submissions for a quality diagnosis, but not enough informative measurements for a settled physical claim.
+
+EXPERIMENT: allee_delay_climate_harvest (390 results, 390 seeds, 26 hosts)
+  Results: occupied_final adaptive-minus-fixed: short delay +0.0278 +/- 0.0146, long delay +0.0265 +/- 0.0128; all-condition mean +0.0271 +/- 0.0138, d=1.97, positive 100.0%.
+  Conclusion: REJECTED
+    Adaptive harvesting improves occupancy across the full condition grid instead of producing the predicted delay-driven reversal. Delay and noise change the magnitude, but the sign never flips, so the reentrant failure hypothesis is ruled out in this model.
+
+EXPERIMENT: antibiotic_delay_fatigue_switch (30 results, 30 seeds, 10 hosts)
+  Results: reentrant_gain -0.26538 +/- 0.00001, d=-35235.89, positive 0.0%; mean_score +0.06411 +/- 0.00000; hypothesis_support 0.0%.
+  Conclusion: REJECTED
+    The predicted intermediate-threshold reentrant advantage is absent: the aggregate reentrant gain is negative in every valid run. Delayed switching under adherence fatigue does not open a beneficial window in this model.
+
+EXPERIMENT: aah_delay_dephasing_window (35 results, 35 seeds, 12 hosts)
+  Results: final_spread gain -4.1140 +/- 0.0509, d=-80.85, positive 0.0%; peak_spread gain -4.2209 +/- 0.0576; final_ipr gain +0.1086 +/- 0.0016.
+  Conclusion: REJECTED
+    Adaptive delayed dephasing suppresses transport rather than improving it: both final and peak spread gains are negative on average. The positive IPR shift is consistent with extra localization, not delocalization.
+
+EXPERIMENT: kauffman_autocatalytic_threshold (0 results, 197 seeds, 26 hosts)
+  Results: 0 valid numeric payloads out of 197 sanitized files; 197 seeds across 26 hosts.
+  Conclusion: PRELIMINARY
+    This family is currently unanalyzable because the sanitized result files contain metadata only and no experiment_result payload. There is submission volume, but no usable numeric output yet.
+
+EXPERIMENT: spacing_ratio_crossover (13 results, 13 seeds, 4 hosts)
+  Results: lambda_c*sqrt(N) mean 0.6544 +/- 0.0031; collapse CV 0.0380 +/- 0.0028, d=39.82, below-0.15 100.0%.
+  Conclusion: PRELIMINARY
+    The crossover scale already looks close to a 1/sqrt(N) collapse, with low cross-size variation in lambda_c*sqrt(N). The sample is still small, so this is evidence for scaling collapse rather than a settled universality claim.
+
+EXPERIMENT: adaptive_voter_delay_rewiring (46 results, 46 seeds, 10 hosts)
+  Results: trial_mean_gain -0.000296 +/- 0.000053, d=-5.54, positive 0.0%; reentrant_index -0.000074 +/- 0.000062; hypothesis_support 23.3%.
+  Conclusion: NO EFFECT
+    Adaptive rewiring changes late discordance only at the 1e-4 to 1e-3 level, with mixed signs across seeds. There is no credible delayed-control window here; the effect is effectively zero at current sample size.
