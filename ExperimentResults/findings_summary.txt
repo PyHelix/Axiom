@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 6, 2026 21:01 UTC
+Last updated: March 6, 2026 21:57 UTC
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
 1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
 2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
@@ -76,12 +76,13 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 73. Band RMT localization (GPU): CONFIRMED — crossover scale collapses at W/sqrt(N)=0.5387 +/- 0.0040 with cross-size CV 0.0427 +/- 0.0063, 100% of recent runs below CV 0.15, d=17.13, 33 seeds, 13 hosts.
 74. Galton-Watson extinction universality: CONFIRMED (partial) — rescaled extinction CV=0.2733+/-0.0083 across 3 offspring families, 99.1% below 0.3, d=32.79. Collapse stable but imperfect (~27% residual CV). 234 valid results, 28 hosts.
 75. Sparse Wigner TW edge: CONFIRMED (non-TW) — L-skewness positive (+0.0445+/-0.0335) at ALL (N,c) for N<=256, 87.5% positive overall. Deviation GROWS with N. Edge stats never reach TW (-0.293). 238 results, 20 hosts.
+76. FHN spiral tip fractal (GPU): CONFIRMED (NO EFFECT) — D_f=0.500 at ALL excitability values (a=0.5-1.0), zero variation, 99% exactly 0.500. No meandering transition. 43 seeds, 15 hosts.
+77. Structured smin crossover (GPU): CONFIRMED (no convergence) — s_min*sqrt(N) deviations from 0.78 are 100% negative at ALL sizes/ensembles, d=57-475. Structured ensembles deviate 1.9% more than dense (d=-1.23). Deviations GROW with N. 34 seeds, 10 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
 - May ecology deployment notes: mayreact_gap_gpu, may_heterogeneity_reactivity_localization, may_ecosystem_stability_structure, and mayreact_gap remain novel after March 6, 2026 literature re-checks; keep deployed.
 - FPUT heat conductivity: alpha=0.2513+/-0.0774, below KPZ 1/3 in 87.3% of 221 valid runs, d=-1.06 vs 1/3. R^2=0.52 (poor fit). 245 results, 19 hosts.
 - LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). Exponent stable; shape statistics still mixed. 174 results, 24 hosts.
-- Structured smin crossover (GPU): s_min deviations from 0.78 remain strongly negative, finite-size crossover persists. 34 results, 10 hosts.
 - Standard map FTLE transition: peak kurtosis at K=0.5 not K_c; var-T exponent=-0.07 (anomalous). 44 seeds, 13 hosts.
 - March 6, 2026 deployment note: added trophic_coherence_reactivity_localization after literature checks on trophic coherence, ecological reactivity, and eigenvector localization. Novel angle is the joint test of coherence on the stable-but-reactive wedge plus amplifying-mode localization; keep deployed pending first summaries.
 - Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 226 runs (11 hosts), d=-282.
@@ -98,5 +99,18 @@ NEW PRELIMINARY FINDINGS (this cycle)
 - RFIM domain wall roughness: zeta(h) peaks at h=1.5 (zeta=1.45), non-monotonic. 157 results, 16 hosts.
 - DLA drift fractal: D_f~1.24 at drift=0, below theoretical 1.71. Crossover present but baseline too low. 166 results, 14 hosts.
 - Chimera lifetime scaling: REJECTED — transient at all r. Tiny positive alpha at r=0.25 (d~1.1). 168 seeds, 15 hosts.
-- FHN spiral tip fractal (GPU): NO EFFECT — D_f=0.500 at ALL excitability values, no meandering transition peak. 43 seeds, 15 hosts.
 - FHN coherence resonance (GPU): PRELIMINARY — insufficient quality data, CV_min stuck at default for most runs. 38 results, 11 hosts.
+- March 6 late deployment: 5 new CPU experiments across diverse STEM fields:
+  (a) goldbach_partition_growth — number theory, Hardy-Littlewood convergence rate for r(2n)
+  (b) directed_polymer_kpz_exponent — stat physics, KPZ chi=1/3 universality across disorder types
+  (c) invasion_percolation_trapping — percolation, fractal dimension universality class separation
+  (d) persistent_voter_coarsening — social dynamics, zealot-induced consensus slowdown scaling
+  (e) spacing_ratio_crossover — quantum chaos, Poisson-to-GOE crossover scaling function
+  All passed novelty checks (web search 2024-2025 literature). 5000 WUs each.
+- March 6 GPU deployment: Retired 28 GPU experiment families (settled findings + broken scripts).
+  Deployed 4 new GPU experiments (350 WUs each, 1400 total):
+  (a) bbp_spiked_covariance_gpu — RMT/statistics, BBP phase transition universality across non-Gaussian populations
+  (b) percolation_diffusion_spectral_gpu — fractal physics, anomalous diffusion d_s on 2D percolation clusters (Alexander-Orbach)
+  (c) stochastic_resonance_universality_gpu — nonlinear dynamics, SR peak shape universality across potential landscapes
+  (d) sir_bimodal_scaling_gpu — epidemiology, SIR bimodal final size scaling near R0=1
+  All passed novelty checks (web search 2024-2025 literature). GPU pool rebalanced to ~2000.
