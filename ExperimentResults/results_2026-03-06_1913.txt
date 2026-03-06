@@ -1,0 +1,21 @@
+AXIOM SCIENCE RESULTS
+Timestamp (UTC): 2026-03-06 19:13
+
+Cycle summary
+- Recent sanitized results found in last 180 minutes:
+  - 43 files: exp_critical_branching_skew_crossover
+  - 1 file: exp_fputheat_h350_r2_2029835
+- Active families with 10+ new results requiring analysis this cycle: 0
+
+Analysis disposition
+- exp_critical_branching_skew_crossover already has a persistent finding in findings_summary.txt:
+  REJECTED (opposite) — late-time survival remains strongly skewness-dependent instead of collapsing, across 303 seeds/results on 13 hosts.
+- Because this family is already closed out as REJECTED, it was skipped per workflow instructions.
+- exp_fputheat_h350_r2_2029835 has only 1 recent result and does not meet the 10-result analysis threshold.
+
+Findings update
+- No changes appended to findings_summary.txt this cycle.
+
+Conclusion
+- Recent data arrived, but no active experiment family crossed the threshold for fresh analysis after excluding already confirmed/rejected families.
+- No new confirmed, rejected, preliminary, or no-effect findings were generated in this cycle.

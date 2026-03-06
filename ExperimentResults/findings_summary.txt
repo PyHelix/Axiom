@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 6, 2026 14:58 UTC (science analysis cycle)
+Last updated: March 6, 2026 18:48 UTC (GPU research & deploy cycle)
 =================================================
 
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
@@ -76,7 +76,9 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 71. CML sync transition (GPU): CONFIRMED — critical coupling increases with local chaos in 50/50 runs; eps_c(3.7)=0.0448 +/- 0.0050 vs eps_c(4.0)=0.0733 +/- 0.0002, shift +0.0286, d=5.62, 8 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
+- New CPU deployment target: may_heterogeneity_reactivity_localization tests a transient-fragility paradox in May ecosystems: species-level interaction heterogeneity may widen the stable-but-reactive window while localizing the dominant reactive mode onto fewer species.
 - New GPU deployment target: mayreact_gap_gpu tests whether modular/nested ecosystems widen a stable-but-reactive window relative to random and predator-prey ensembles by jointly mapping reactivity and asymptotic stability thresholds in the same May-style matrices.
+- Novelty check for mayreact_gap_gpu: literature covers May stability, transient amplification/reactivity, and food-web structure mostly separately; no prior joint modular-vs-nested-vs-predator-prey reactive-window map found, so this remains a worthwhile GPU ecology target.
 - FPUT heat conductivity: alpha=0.2514+/-0.0628, below KPZ 1/3 in 117/128 runs. Finite-size anomalous transport present but asymptotic exponent unresolved. 152 results, 16 hosts.
 - LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). Exponent stable; shape statistics still mixed. 174 results, 24 hosts.
 - Sparse Wigner TW edge: L-skew remains positive even at c=64 (0.0308+/-0.0062 vs TW -0.293), non-TW edge regime clear but crossover unresolved. 145 results, 17 hosts.
