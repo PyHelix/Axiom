@@ -1,0 +1,46 @@
+AXIOM SCIENCE RESULTS
+Timestamp (UTC): 2026-03-06 20:12
+
+Cycle summary
+- Recent sanitized result families scanned from the last 180 minutes.
+- Active families with >=10 new results analyzed this cycle: 8.
+
+EXPERIMENT: Galton-Watson extinction universality (94 results, 94 seeds, 5 hosts)
+  Results: universality_cv = 0.2728 +/- 0.0084, Cohen's d = 3.25 vs 0.30 threshold, sign consistency = 100.0% below 0.30.
+  Conclusion: PRELIMINARY
+    Rescaled extinction collapse is stable across the new batch and remains moderately universal. The effect is consistent enough to stay active, but the collapse error is still too large for promotion to a closed finding.
+
+EXPERIMENT: Sparse Wigner TW edge (93 results, 93 seeds, 6 hosts)
+  Results: high-c L-skew = 0.0414 +/- 0.0070, Cohen's d = 47.61 vs Tracy-Widom target -0.293, sign consistency = 0.0% with TW-sign skew.
+  Conclusion: PRELIMINARY
+    Even at the highest recent connectivity, the edge skew stays positive instead of approaching Tracy-Widom asymmetry. The crossover is still unresolved, but the non-TW sparse-edge regime remains numerically clear.
+
+EXPERIMENT: FPUT heat conductivity (93 results, 93 seeds, 6 hosts)
+  Results: alpha = 0.2512 +/- 0.0938, Cohen's d = 0.88 vs KPZ 1/3, sign consistency = 81.7% below 1/3.
+  Conclusion: PRELIMINARY
+    The new runs still favor sub-KPZ anomalous transport, but the scatter is too large to lock the asymptotic exponent. Finite-size anomalous conductivity is real; the limiting universality class remains open.
+
+EXPERIMENT: Cahn-Hilliard mobility disorder (GPU) (42 results, 42 seeds, 13 hosts)
+  Results: mid-vs-white domain delta = +0.2078 +/- 0.0047, Cohen's d = 43.96, sign consistency = 0.0% negative; support_fraction_mid_corr = 0.00017.
+  Conclusion: REJECTED
+    Intermediate mobility correlation does not improve coarsening arrest relative to white disorder in the new batch. The direction is consistently opposite to the hypothesis and is now strong enough to close out.
+
+EXPERIMENT: FHN spiral tip fractal (GPU) (38 results, 38 seeds, 12 hosts)
+  Results: D_f peak excess = 0.0006 +/- 0.0017, Cohen's d = -11.28 vs 0.02 meaningful-effect threshold, sign consistency = 0.0% above threshold.
+  Conclusion: NO EFFECT
+    The spiral-tip fractal dimension stays essentially flat across the scanned parameter range. The present implementation shows no measurable fractal peak worth promoting as an active effect.
+
+EXPERIMENT: FHN coherence resonance (GPU) (38 results, 38 seeds, 11 hosts)
+  Results: sigma_opt = 0.0100 +/- 0.0000, cv_min = 10.000 +/- 0.000, Cohen's d = 0.00 vs lower-bound sigma, sign consistency = 0.0% above interior-noise threshold.
+  Conclusion: REJECTED
+    The optimum collapses to the minimum tested noise and the coherence score stays pinned at the failure ceiling. This batch provides no evidence for a genuine coherence-resonance window.
+
+EXPERIMENT: Structured smin crossover (GPU) (34 results, 34 seeds, 10 hosts)
+  Results: s_min deviation from 0.78 target = -0.7504 +/- 0.0136, Cohen's d = 55.17, sign consistency = 0.0% within 0.05 of target.
+  Conclusion: PRELIMINARY
+    Smallest-singular-value statistics remain far below the hard-edge target across the recent structured ensemble summaries. The finite-size crossover is real, but these runs still do not show convergence to universality.
+
+EXPERIMENT: Band RMT localization (GPU) (33 results, 33 seeds, 13 hosts)
+  Results: cross-ratio CV = 0.0427 +/- 0.0063, mean W/sqrt(N) = 0.5387 +/- 0.0040, Cohen's d = 17.13 vs CV 0.15 threshold, sign consistency = 100.0% below threshold.
+  Conclusion: CONFIRMED
+    The crossover scale collapses tightly when expressed as W/sqrt(N), with very small residual size-to-size spread. This is now strong enough to treat the sqrt(N) localization crossover as established in the current setup.

@@ -1,7 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 6, 2026 18:48 UTC (GPU research & deploy cycle)
-=================================================
-
+Last updated: March 6, 2026 21:20 UTC
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
 1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
 2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
@@ -74,15 +72,16 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 69. NK basin size distribution: CONFIRMED — basin inequality peaks at intermediate epistasis, with peak K in {3,4} for 84/127 runs and peak Gini 0.6032 +/- 0.0284, d=3.62, 23 hosts.
 70. Langton ant highway time: CONFIRMED — highway success collapses between rho=0.02 and rho=0.05 in 128/128 runs; mean success 0.714 -> 0.009, delta +0.704 +/- 0.031, d=22.55, 26 hosts.
 71. CML sync transition (GPU): CONFIRMED — critical coupling increases with local chaos in 50/50 runs; eps_c(3.7)=0.0448 +/- 0.0050 vs eps_c(4.0)=0.0733 +/- 0.0002, shift +0.0286, d=5.62, 8 hosts.
+72. Cahn-Hilliard mobility disorder (GPU): REJECTED — intermediate mobility correlation never beats white disorder; mid-vs-white domain delta +0.2078 +/- 0.0047, support_fraction_mid_corr=0.00017, d=43.96, 42 seeds, 13 hosts.
+73. Band RMT localization (GPU): CONFIRMED — crossover scale collapses at W/sqrt(N)=0.5387 +/- 0.0040 with cross-size CV 0.0427 +/- 0.0063, 100% of recent runs below CV 0.15, d=17.13, 33 seeds, 13 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
-- New CPU deployment target: may_heterogeneity_reactivity_localization tests a transient-fragility paradox in May ecosystems: species-level interaction heterogeneity may widen the stable-but-reactive window while localizing the dominant reactive mode onto fewer species.
-- New GPU deployment target: mayreact_gap_gpu tests whether modular/nested ecosystems widen a stable-but-reactive window relative to random and predator-prey ensembles by jointly mapping reactivity and asymptotic stability thresholds in the same May-style matrices.
-- Novelty check for mayreact_gap_gpu: literature covers May stability, transient amplification/reactivity, and food-web structure mostly separately; no prior joint modular-vs-nested-vs-predator-prey reactive-window map found, so this remains a worthwhile GPU ecology target.
-- FPUT heat conductivity: alpha=0.2514+/-0.0628, below KPZ 1/3 in 117/128 runs. Finite-size anomalous transport present but asymptotic exponent unresolved. 152 results, 16 hosts.
+- May ecology deployment notes: mayreact_gap_gpu, may_heterogeneity_reactivity_localization, may_ecosystem_stability_structure, and mayreact_gap remain novel after March 6, 2026 literature re-checks; keep deployed.
+- FPUT heat conductivity: alpha=0.2512+/-0.0938, below KPZ 1/3 in 76/93 recent runs. Finite-size anomalous transport remains present; asymptotic exponent unresolved. 93 results, 6 hosts.
 - LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). Exponent stable; shape statistics still mixed. 174 results, 24 hosts.
-- Sparse Wigner TW edge: L-skew remains positive even at c=64 (0.0308+/-0.0062 vs TW -0.293), non-TW edge regime clear but crossover unresolved. 145 results, 17 hosts.
-- Galton-Watson extinction universality: rescaled extinction collapse is moderate, universality CV=0.2737+/-0.0083 with 138/140 runs below 0.3. 164 results, 27 hosts.
+- Sparse Wigner TW edge: L-skew remains positive even at c=64 (0.0414+/-0.0070 vs TW -0.293); 0/93 recent runs show TW-sign skew, so the non-TW edge regime remains clear. 93 results, 6 hosts.
+- Galton-Watson extinction universality: universality CV=0.2728+/-0.0084 with 94/94 recent runs below 0.3. Collapse is stable but still not clean enough for promotion. 94 results, 5 hosts.
+- Structured smin crossover (GPU): s_min deviations from the hard-edge 0.78 target remain strongly negative (-0.7504+/-0.0136) across recent summaries, so finite-size crossover persists. 34 results, 10 hosts.
 - Standard map FTLE transition: peak kurtosis at K=0.5 not K_c; var-T exponent=-0.07 (anomalous). 44 seeds, 13 hosts.
 - Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 226 runs (11 hosts), d=-282.
 - Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=591, 26 hosts.
@@ -98,5 +97,3 @@ NEW PRELIMINARY FINDINGS (this cycle)
 - RFIM domain wall roughness: zeta(h) peaks at h=1.5 (zeta=1.45), non-monotonic. 157 results, 16 hosts.
 - DLA drift fractal: D_f~1.24 at drift=0, below theoretical 1.71. Crossover present but baseline too low. 166 results, 14 hosts.
 - Chimera lifetime scaling: REJECTED — transient at all r. Tiny positive alpha at r=0.25 (d~1.1). 168 seeds, 15 hosts.
-- DP moment ratio: INCONCLUSIVE — R=0.157 far from DP reference 1.3257. Needs p_c calibration. 47 results, 12 hosts.
-- GPU/output methodology issues: random polynomial roots (14 results, 2 hosts) and Ginibre spacing universality (11 results, 2 hosts) retain only trial-count/zero-filled summaries; Kauffman autocatalytic threshold has 0 valid numeric payloads across 181 files on 26 hosts.
