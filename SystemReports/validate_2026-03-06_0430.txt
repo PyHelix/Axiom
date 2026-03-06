@@ -1,0 +1,83 @@
+AXIOM BOINC — Validation & Credit Report
+Date: 2026-03-06 04:30 UTC
+=========================================
+
+SYSTEM STATE
+- Active hosts (72h): 89 hosts across Windows, Linux, Darwin
+- Uncredited results at start: 5891
+- Experiments in-progress: ~4500 tasks across 28 hosts
+- Assimilator status: Running, processing wu_spike WUs (position 33360)
+  Note: Experiment WU assimilation is queued (assimilate_state=1)
+
+BROKEN EXPERIMENTS ABORTED (>70% failure rate)
+- schnakwl_gpu: 100% failure (0/19 success), 6 tasks aborted
+- fisherkpp_delay_adaptive_refugia_gpu_gpu: 90.9% failure, 21 tasks aborted (REJECTED finding)
+- allencahn_delay_adaptive_quench_window_gpu_gpu: 90.5% failure, 18 tasks aborted
+- lbm_delay_adaptive_forcing_window_gpu_gpu: 88% failure, 16 tasks aborted (REJECTED finding)
+- vicsek_delay_noise_window_gpu_gpu: 87.5% failure, 19 tasks aborted (REJECTED finding)
+- shkz_gpu: 78.6% failure, 19 tasks aborted
+- _s0 variants (old buggy versions): chimeralife_s0, dladrift_s0, rfimrough_s0,
+  ofcquake_s0, spatialpgg_s0, contactproc_s0, axelnoise_s0, mingame_s0, nkwalk_s0
+  -- 59 total tasks aborted
+- reservoirdelay: 67.1% failure, 41 tasks aborted (REJECTED finding)
+Total broken experiment tasks aborted: 203
+
+STUCK TASK CLEANUP
+- 8 tasks aborted: running >12h on hosts with >6h no contact (host 299)
+- 0 tasks >48h (none found)
+Total stuck tasks cleaned: 8
+
+CREDIT AWARDED
+Total credit this session: 9521.0 (cap: 10000)
+Results credited: 5891
+Unique hosts credited: 32
+
+Credit methodology: Results completed successfully (outcome=1) with validated
+experiment scripts. Credit scaled by experiment significance:
+- Confirmed scientific findings: 2.0 per result
+- GPU experiments (higher resource usage): 2.0 per result
+- Standard experiments: 1.5 per result
+- Very short runs (<30s): 0.5 per result
+
+Per-user credit breakdown:
+  User 40: 5787.0  (primary contributor, multiple hosts)
+  User 44: 1199.5
+  User 56: 890.5
+  User 122: 713.5
+  User 88: 333.5
+  User 15: 110.5
+  User 22: 87.0
+  User 90: 87.0
+  User 52: 74.5
+  User 6: 46.0
+  User 132: 34.0
+  User 99: 31.0
+  User 94: 31.0
+  User 10: 27.0
+  User 98: 26.0
+  User 5: 12.5
+  User 111: 12.0
+  User 30: 9.5
+  User 24: 7.5
+  User 1: 1.5
+
+Top experiments by credit volume:
+  collatz_evt_tails: 224 results, 448.0 credit
+  spatial_pgg_punishment_criticality: 219 results, 438.0 credit
+  potts_pulse_anneal_resonance: 205 results, 410.0 credit
+  minority_game_memory: 199 results, 398.0 credit
+  contact_process_temporal_network: 199 results, 398.0 credit
+  levy_foraging_renewal_phase: 216 results, 324.0 credit
+  grayscott_delay_pulse_feedback: 198 results, 297.0 credit
+  metapop_corridor_delay_forecast: 195 results, 292.5 credit
+
+WEBSITE COUNTERS UPDATED
+- credited_count.txt: 12562
+- total_results_count.txt: 10454
+
+NOTES
+- Nagelschreckenberg_lookahead has 72.9% failure with 59 in-progress tasks.
+  Not aborting yet -- needs script investigation in next deployment cycle.
+- Assimilator is behind on experiment WU processing (stuck on wu_spike batch).
+  Sanitized files for current experiment results not yet generated.
+  Credit awarded based on successful completion status and experiment type quality.
