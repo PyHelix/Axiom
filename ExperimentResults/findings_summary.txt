@@ -1,37 +1,37 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_2228)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_2243)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
-- This session focused on validation, credit, and queue hygiene only (no deployment).
-- No high-confidence contradiction to the WD/ICP narrative was observed.
+- This session performed validation, credit assignment, and queue hygiene only (no deployment).
+- No high-confidence contradictory signal to the WD/ICP narrative was observed.
 
 ACTIVE SCIENCE PRIORITIES
 1) wd_labelsmooth_interaction.py
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (2026-03-05 22:28, Part 1)
-- Newly credited this session: 591 results (DB credited diff method: before=350, after=941).
-- Total credit awarded this session: 6339 (cap respected; <=10000).
-- Upload audit on initial uncredited cohort: 573/573 missing retained upload artifact JSON; science/credit assessment used DB runtime/outcome metadata.
-- Crash-pattern scan still flags: tangled_nature_macroevolution (40 failures), tangnat (11), nagelschreckenberg_lookahead (15).
-- Broken-prefix active queue at action time: 0 unsent/in-progress for all three prefixes.
-- Stuck-task cleanup: dead-host >12h rule aborted 1 task; >48h hard ceiling aborted 0.
-- Website counters after update: credited_count=11497; total_results_count=10806.
+LATEST VALIDATION SNAPSHOT (2026-03-05 22:43, Part 1)
+- Newly credited this session: 40 results (credited count: 941 -> 981).
+- Total credit awarded this session: 404 (cap respected; <=10000).
+- Upload artifact audit for credited cohort: 40/40 missing retained JSON files; science synthesis based on DB runtime/outcome metadata.
+- Crash-pattern scan still flags: tangled_nature_macroevolution (40 failures), tangnat (11), nagelschreckenberg_lookahead (15; 78.9% failure).
+- Broken-prefix active queue at action time: 0 unsent/in-progress; no additional aborts needed.
+- Stuck-task cleanup this session: dead-host >12h aborted 0; >48h hard ceiling aborted 0.
+- Website counters after update: credited_count=11537; total_results_count=10806.
 - Closing snapshot: remaining uncredited completed exp rows = 0.
 
 RECENT SCIENTIFIC SIGNALS
-- This session's completed-result cohort had effectively no retained JSON payload artifacts, limiting direct extraction of new experiment-level observables.
-- Runtime/outcome distributions remained broadly consistent with previously observed volunteer host behavior.
-- Persistent high-failure families remain isolated to specific experiment prefixes; no evidence of broad systemic validator regression.
+- Current scientific extraction remains bottlenecked by missing retained upload JSON artifacts.
+- Runtime distributions in this batch remained consistent with healthy volunteer throughput for successful tasks.
+- High failure remains concentrated in known broken families rather than broad platform instability.
 
 OPEN QUESTIONS
-1) Should uploader retention be extended so successful payload JSON survives long enough for richer post-hoc scientific synthesis?
-2) Should generation remain hard-gated for known broken prefixes until explicit script fixes are verified?
-3) Should Part 2 include automatic smoke tests to catch high-failure experiment families before large queue insertion?
+1) Should upload retention be extended so successful payload JSON remains available for post-hoc analysis?
+2) Should generation stay hard-gated for known broken prefixes until explicit reproducer-based fixes are validated?
+3) Should Part 2 add automated pre-queue smoke tests for historically unstable experiment prefixes?
 
 KEY SCIENTIFIC FINDINGS
-1. No reversal signal for the established WD/ICP narrative was observed in this validation pass.
-2. The dominant immediate bottleneck was data retention (missing upload artifacts), not volunteer throughput.
-3. A targeted hygiene sweep removed stale compute waste while preserving healthy experiment flow.
+1. This validation pass produced no reversal of the existing WD/ICP directional evidence.
+2. The immediate limiting factor for deeper interpretation is artifact retention, not compute throughput.
+3. Queue hygiene remained stable, with no newly stuck or active broken-prefix tasks at cleanup time.
