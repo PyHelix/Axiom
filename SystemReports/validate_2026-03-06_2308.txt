@@ -1,0 +1,44 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-06 23:08 Europe/Berlin
+Step: Validation, credit, and cleanup
+
+Summary
+- Reviewed the live uncredited completion queue from the database.
+- Read `/opt/axiom/experiment_session/findings_summary.txt` to align credit decisions with current experiment status.
+- Checked sanitized result availability in `/opt/axiom/experiment_results/sanitized/`.
+- Checked for broken-experiment cleanup opportunities and stuck tasks.
+
+Results reviewed this session
+- `exp_aah_delay_dephasing_window`: result ID 1791026 on host 334. Historical sanitized outputs for this family contain valid numeric payloads, but the exact sanitized file for this completed result is not present yet. Credit held pending payload availability.
+- `exp_activation_function_landscape`: result IDs 1791367, 1791369, 1791371, 1791373, 1791374, 1791375, 1791376, 1791378, 1791379, 1791381, 1791382, 1791383, 1791384, 1791386, 1791387, 1791392, 1791394, 1791395, 1791424, 1791425, 1791468, 1791482 on hosts 140, 195, 219. Historical sanitized outputs for this family contain complete numeric payloads. None of these exact completed result names has a corresponding sanitized file yet. Credit held pending payload availability.
+- `exp_allee_delay_climate_harvest`: result IDs 1791724, 1791725, 1791732, 1791741, 1791742, 1791743, 1791745, 1791830, 1791874, 1791876, 1791882, 1791912, 1791913, 1791914, 1791917, 1791918, 1791919, 1791920 on hosts 29, 123, 345. Historical sanitized outputs for this family contain complete numeric payloads. None of these exact completed result names has a corresponding sanitized file yet. Credit held pending payload availability.
+- `exp_allencahn_delay_adaptive_quench_window_gpu`: result IDs 1791748, 1791825 on host 29. Historical sanitized outputs for this family are mixed; some files contain only minimal numeric shells without `experiment_result`. The exact sanitized files for these completed results are not present yet. Credit held pending payload availability.
+- `exp_band_rmt_localization_gpu`: result ID 1791814 on host 29. Historical sanitized outputs for this family include both complete numeric payloads and minimal shells. The exact sanitized file for this completed result is not present yet. Credit held pending payload availability.
+- `exp_antibiotic_delay_fatigue_switch`: result IDs 1791901, 1791903, 1791909, 1791927, 1791929, 1791933, 1791939, 1791946, 1791951, 1791969, 1791970, 1791987, 1791989, 1791990, 1791991, 1791992, 1792006, 1792013, 1792022, 1792035, 1792049, 1792053 on hosts 2, 29, 123, 195, 219, 222, 345. Historical sanitized outputs for this family contain complete numeric payloads. None of these exact completed result names has a corresponding sanitized file yet. Credit held pending payload availability.
+- `exp_adaptive_voter_delay_rewiring`: result IDs 1792061, 1792064, 1792065, 1792088, 1792090, 1792097, 1792107, 1792127 on hosts 2, 29, 123, 219. Historical sanitized outputs for this family contain complete numeric payloads. None of these exact completed result names has a corresponding sanitized file yet. Credit held pending payload availability.
+- `exp_spacing_ratio_crossover`: result IDs 1792217, 1792218, 1792222, 1792279, 1792285 on host 123. Historical sanitized outputs for this family contain complete numeric payloads. None of these exact completed result names has a corresponding sanitized file yet. Credit held pending payload availability.
+- `exp_band_rmt_localization_gpu_gpu`: result ID 1792675 on host 1. No exact sanitized file present yet. Credit held pending payload availability.
+- `exp_random_poly_roots_gpu_gpu`: result ID 1793376 on host 272. Historical sanitized outputs for this family contain complete numeric payloads. The exact sanitized file for this completed result is not present yet. Credit held pending payload availability.
+
+Credit awarded
+- No credit awarded this session.
+- Reason: 81 completed `exp_%` results were reviewed, and 0 of 81 had their exact sanitized payload file available at review time. Under the credit policy, result quality must be assessed from sanitized numeric payloads before awarding credit.
+- Session credit total: 0
+- Per-user credit additions: none
+
+Cleanup actions
+- Stuck task cleanup query executed for `server_state=4` tasks older than 12 hours on hosts absent for more than 6 hours.
+- Rows updated by stuck-task cleanup: 0
+- Checked historically failing families for active unsent or in-progress work:
+  - `exp_abx_cycle_hgt_delay_resonance`: 0 active tasks
+  - `exp_critical_branching_skew_crossover`: 0 active tasks
+  - `exp_quorum_sensing_spatial_hysteresis`: 0 active tasks
+- No broken-experiment abort action was required this session.
+
+Bugs found and fixed
+- No experiment-script changes made this session.
+- No bug fix was applied because there was no currently active broken experiment family requiring abort-and-fix action during this pass.
+
+Operational notes
+- The completed-results queue is ahead of sanitized-file availability for the exact result names reviewed above.
+- A follow-up validation pass should re-check these same result IDs once their `{result_name}_safe.json` payloads exist in `/opt/axiom/experiment_results/sanitized/`.
