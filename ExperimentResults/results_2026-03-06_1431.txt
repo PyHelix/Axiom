@@ -1,0 +1,70 @@
+EXPERIMENT: FPUT heat conductivity (128 results, 128 seeds, 15 hosts)
+  Results: alpha=0.2514 +/- 0.0628, Cohen's d=-1.30, sign consistency=8.6%
+  Conclusion: PRELIMINARY
+    The conductivity exponent stays below the KPZ 1/3 reference in 11/128 runs. Current finite-size runs cluster around alpha~0.251, so the anomalous transport signal is present but not yet at the asymptotic benchmark.
+
+EXPERIMENT: Quorum sensing spatial hysteresis (117 results, 117 seeds, 15 hosts)
+  Results: slope=0.004342 +/- 0.000191; narrowing_ratio=-2.251 +/- 16.347, Cohen's d=22.63, sign consistency=100.0%
+  Conclusion: REJECTED
+    Hysteresis area increases with colony aspect ratio, not decreases: the log-aspect slope is positive in 117/117 runs. The proposed geometry-driven narrowing mechanism is not supported in this model.
+
+EXPERIMENT: Winding number Spitzer (122 results, 122 seeds, 15 hosts)
+  Results: IQR@50000=0.7802 +/- 0.1811, Cohen's d=-6.73, sign consistency=0.0%
+  Conclusion: REJECTED
+    The normalized winding distribution remains far narrower than the Cauchy target IQR=2.0 at the longest walk length. The Spitzer-style asymptotic regime is not reached under these lattice and step-distribution settings.
+
+EXPERIMENT: RSA polydisperse jamming (147 results, 147 seeds, 21 hosts)
+  Results: max_gain=0.0540 +/- 0.0308, Cohen's d=1.74, sign consistency=90.5%
+  Conclusion: CONFIRMED
+    Allowing radius heterogeneity raises jamming coverage in 133/147 valid runs. Small particles reliably fill residual gaps, producing a moderate but repeatable coverage lift over the monodisperse baseline.
+
+EXPERIMENT: Sparse Wigner TW edge (122 results, 122 seeds, 16 hosts)
+  Results: L-skew(c=2)=0.0628 +/- 0.0391; L-skew(c=64)=0.0308 +/- 0.0216, Cohen's d=14.97, sign consistency=0.0%
+  Conclusion: PRELIMINARY
+    Edge statistics remain far from the Tracy-Widom skew benchmark even at c=64, with positive L-skewness instead of the expected negative value. The low-connectivity regime is clearly non-TW here, but the crossover point still needs tighter mapping.
+
+EXPERIMENT: LCS fluctuation universality (151 results, 151 seeds, 23 hosts)
+  Results: chi(k=2)=0.3324 +/- 0.0158, Cohen's d=-0.06, sign consistency=84.1%
+  Conclusion: PRELIMINARY
+    The fluctuation exponent stays near the KPZ value 1/3 in most runs, with chi(k=2) centered at 0.332. That stabilizes the exponent estimate, but the shape statistics remain less clean than the exponent itself.
+
+EXPERIMENT: Galton-Watson extinction universality (140 results, 140 seeds, 26 hosts)
+  Results: universality_cv=0.2737 +/- 0.0083, Cohen's d=32.87, sign consistency=98.6%
+  Conclusion: PRELIMINARY
+    Rescaled extinction curves collapse moderately well across offspring families, with a cross-family CV near 0.274. The universality signal is present, but not yet sharp enough to call a full distribution-level collapse established.
+
+EXPERIMENT: Benford logistic transition (127 results, 127 seeds, 26 hosts)
+  Results: corr=-1.0000 +/- 0.0000; ratio23=1.0000 +/- 0.0000, Cohen's d=-1.00, sign consistency=0.0%
+  Conclusion: REJECTED
+    The logistic and sine compliance derivatives lock into a perfect negative correlation, not a shared universal positive pattern, and the period-doubling ratios stay far below the Feigenbaum scale. The proposed universal Benford-transition signature is not supported.
+
+EXPERIMENT: NK basin size distribution (127 results, 127 seeds, 23 hosts)
+  Results: peak_K=3.86 +/- 1.49; peak_gini=0.6032 +/- 0.0284, Cohen's d=3.62, sign consistency=66.1%
+  Conclusion: CONFIRMED
+    The strongest basin inequality clusters at intermediate epistasis, with peak K landing in {3,4} for 84/127 runs. Landscape roughness is not monotone in K; it peaks in the intermediate regime where basin dominance is strongest.
+
+EXPERIMENT: Kauffman autocatalytic threshold (0 results, 181 seeds, 26 hosts)
+  Results: 0 valid numeric payloads, Cohen's d=0.00, sign consistency=0.0%
+  Conclusion: insufficient data
+    The recent result files contain no sanitized experiment payloads, so there is nothing numeric to aggregate. This family needs a pipeline fix before any scientific conclusion is possible.
+
+EXPERIMENT: Langton ant highway time (128 results, 128 seeds, 26 hosts)
+  Results: frac(0.02)-frac(0.05)=0.7044 +/- 0.0311, Cohen's d=22.55, sign consistency=100.0%
+  Conclusion: CONFIRMED
+    Highway formation collapses between rho=0.02 and rho=0.05: the mean success fraction drops from 0.714 to 0.009, and every valid run shows the same direction. This is a sharp density-driven transition, not a gradual decline.
+
+EXPERIMENT: CML sync transition GPU (50 results, 50 seeds, 8 hosts)
+  Results: eps_c(r=3.7)=0.0448 +/- 0.0050; eps_c(r=4.0)=0.0733 +/- 0.0002, Cohen's d=-5.62, sign consistency=100.0%
+  Conclusion: CONFIRMED
+    The critical coupling rises from r=3.7 to r=4.0 in 50/50 runs, with a mean shift of 0.0286. Stronger local chaos therefore demands stronger coupling to synchronize.
+
+EXPERIMENT: Random polynomial roots GPU (14 results, 14 seeds, 2 hosts)
+  Results: summary_trials=1569.3 +/- 252.8, Cohen's d=0.00, sign consistency=0.0%
+  Conclusion: PRELIMINARY
+    The sanitized summaries only preserve trial counts and degenerate sample rows, so the intended variance and kurtosis observables are not recoverable from the current outputs. This family has enough runs for a workflow check, but not enough retained statistics for a scientific claim.
+
+EXPERIMENT: Ginibre spacing universality GPU (11 results, 11 seeds, 2 hosts)
+  Results: summary_trials=1023.0 +/- 117.0, Cohen's d=0.00, sign consistency=0.0%
+  Conclusion: PRELIMINARY
+    The recent sanitized payloads retain only trial-count metadata and zero-filled sample vectors, not the nearest-neighbor spacing summaries. There is enough throughput to know the jobs ran, but not enough preserved signal to evaluate universality.
+

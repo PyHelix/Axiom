@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 6, 2026 13:54 UTC (science analysis cycle)
+Last updated: March 6, 2026 14:31 UTC (science analysis cycle)
 =================================================
 
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
@@ -67,12 +67,19 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 62. OFC earthquake b-value: REJECTED — b monotonically decreasing with alpha, no minimum. Approaches ~0.4 at SOC (alpha=0.25). 105 seeds, 13 hosts.
 63. RW reset fatigue nonrenewal: REJECTED — reentrant score negative in 0/123 runs, d=-10.81. No reentrant optimal reset rate; fatigue degrades monotonically. 123 results, 7 hosts.
 64. Critical branching skew crossover: REJECTED (opposite) — late-time survival remains strongly skewness-dependent instead of collapsing, survival_corr_late=+0.978+/-0.024 with 100% positive sign consistency (d=40.7). Conditional observables also retain skew dependence: cond_corr_late=-0.974+/-0.032 and q90_corr_late=-0.749+/-0.273 across 303 seeds/results on 13 hosts.
+65. Quorum sensing spatial hysteresis: REJECTED — elongated colonies widen hysteresis instead of narrowing it. area-vs-log-aspect slope +0.004342 +/- 0.000191, positive in 117/117 runs, d=22.63, 15 hosts.
+66. Winding number Spitzer: REJECTED — normalized winding IQR stays far below Cauchy (0.780 +/- 0.181 vs 2.0), 0/488 longest-walk condition summaries above target, d=-6.73, 15 hosts.
+67. RSA polydisperse jamming: CONFIRMED — polydispersity raises jamming coverage in 133/147 runs, mean max gain +0.05395 +/- 0.03083, d=1.74, 21 hosts.
+68. Benford logistic transition: REJECTED — logistic/sine compliance derivatives are perfectly anticorrelated (corr=-1.0), and period-doubling derivative ratios stay far below Feigenbaum scaling, 127 results, 26 hosts.
+69. NK basin size distribution: CONFIRMED — basin inequality peaks at intermediate epistasis, with peak K in {3,4} for 84/127 runs and peak Gini 0.6032 +/- 0.0284, d=3.62, 23 hosts.
+70. Langton ant highway time: CONFIRMED — highway success collapses between rho=0.02 and rho=0.05 in 128/128 runs; mean success 0.714 -> 0.009, delta +0.704 +/- 0.031, d=22.55, 26 hosts.
+71. CML sync transition (GPU): CONFIRMED — critical coupling increases with local chaos in 50/50 runs; eps_c(3.7)=0.0448 +/- 0.0050 vs eps_c(4.0)=0.0733 +/- 0.0002, shift +0.0286, d=5.62, 8 hosts.
 
 NEW PRELIMINARY FINDINGS (this cycle)
-- NK basin size distribution: Gini peaks at K=3-4 for N=14 (K/N~0.21-0.29), peak Gini=0.614+/-0.026. 15 results, 14 hosts.
-- CML sync transition: eps_c increases with r (3.7->4.0: 0.046->0.073), d=-7.82. 22 results, 19 hosts.
-- Langton ant highway: sharp critical transition rho_c~0.03-0.05, 100%->0% highway finding. 16 results, 1 host.
-- LCS fluctuation universality: chi=0.331 at k=2 (d=-0.10 vs 1/3), KPZ exponent confirmed. 47 results, 13 hosts.
+- FPUT heat conductivity: alpha=0.2514+/-0.0628, below KPZ 1/3 in 117/128 runs. Finite-size anomalous transport present but asymptotic exponent unresolved. 128 results, 15 hosts.
+- LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). Exponent stable; shape statistics still mixed. 151 results, 23 hosts.
+- Sparse Wigner TW edge: L-skew remains positive even at c=64 (0.0308+/-0.0216 vs TW -0.293), non-TW edge regime clear but crossover unresolved. 122 results, 16 hosts.
+- Galton-Watson extinction universality: rescaled extinction collapse is moderate, universality CV=0.2737+/-0.0083 with 138/140 runs below 0.3. 140 results, 26 hosts.
 - Standard map FTLE transition: peak kurtosis at K=0.5 not K_c; var-T exponent=-0.07 (anomalous). 44 seeds, 13 hosts.
 - Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 226 runs (11 hosts), d=-282.
 - Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=591, 26 hosts.
@@ -83,13 +90,10 @@ NEW PRELIMINARY FINDINGS (this cycle)
 - Fisher delay adaptive culling: NO EFFECT (ceiling) — invaded fraction = 1.0 for ALL conditions. N=183, 24 hosts.
 - Brusselator delay sensor noise: REJECTED delay inversion — adaptive IMPROVES at all delays. d=24-56, 33 seeds, 7 hosts.
 - Sandpile delay adaptive dissipation: NO EFFECT. SOC robustness. N=10, 4 hosts.
-- SEIR delay fatigue control: REJECTED — adaptive increases attack rate +23% at ALL delays. N=9, 3 hosts.
 - Contact process temporal network: PARTIAL — topology determines thresholds (BA<ER<WS). 120 results, 10 hosts.
 - Hypercycle delay dilution rescue: WEAK. 169 results, 9 hosts.
 - RFIM domain wall roughness: zeta(h) peaks at h=1.5 (zeta=1.45), non-monotonic. 157 results, 16 hosts.
 - DLA drift fractal: D_f~1.24 at drift=0, below theoretical 1.71. Crossover present but baseline too low. 166 results, 14 hosts.
 - Chimera lifetime scaling: REJECTED — transient at all r. Tiny positive alpha at r=0.25 (d~1.1). 168 seeds, 15 hosts.
 - DP moment ratio: INCONCLUSIVE — R=0.157 far from DP reference 1.3257. Needs p_c calibration. 47 results, 12 hosts.
-- Parrondo history boundary: boundary at eps<0.032, p_ww>0.80 (narrow paradox region). 19 results, 1 host.
-- Voter modular consensus: INCONCLUSIVE — timeout at all strong-modularity conditions. 17 results, 16 hosts.
-- Depinning elastic line: METHODOLOGY ISSUE — zeta=0.032 (theory=1.266), fc~0. 17 results, 16 hosts.
+- GPU/output methodology issues: random polynomial roots (14 results, 2 hosts) and Ginibre spacing universality (11 results, 2 hosts) retain only trial-count/zero-filled summaries; Kauffman autocatalytic threshold has 0 valid numeric payloads across 181 files on 26 hosts.
