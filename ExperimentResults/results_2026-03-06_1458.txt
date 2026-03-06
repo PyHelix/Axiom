@@ -1,0 +1,41 @@
+EXPERIMENT: FPUT heat conductivity (152 results, 128 seeds, 16 hosts)
+  Results: alpha=0.2514 +/- 0.0628, delta_vs_KPZ=-0.0819, Cohen's d=-1.30, sign consistency=117/128 (91.4%) below 1/3
+  Conclusion: PRELIMINARY
+    Finite-size anomalous transport is robust, but the fitted exponent still sits below the KPZ 1/3 reference in most seeds.
+    The direction is fairly consistent yet not decisive enough to lock in the asymptotic universality class.
+
+EXPERIMENT: Sparse Wigner TW edge (145 results, 122 seeds, 17 hosts)
+  Results: L-skew(c=64)=0.0308 +/- 0.0062, delta_vs_TW=+0.3238, Cohen's d=51.94, sign consistency=122/122 (100.0%) positive
+  Conclusion: PRELIMINARY
+    The edge statistic stays on the wrong side of Tracy-Widom even at the largest sampled connectivity.
+    That is strong evidence for a persistent non-TW edge regime over the tested range, but it still does not locate the eventual crossover.
+
+EXPERIMENT: LCS fluctuation universality (174 results, 151 seeds, 24 hosts)
+  Results: chi(k=2)=0.3324 +/- 0.0158, delta_vs_KPZ=-0.0009, Cohen's d=-0.06, sign consistency=127/151 (84.1%) within 0.02 of 1/3
+  Conclusion: PRELIMINARY
+    The k=2 fluctuation exponent is effectively on top of the KPZ 1/3 target, so the exponent itself looks stable.
+    The open question is the fluctuation shape, because the higher-moment diagnostics remain mixed across configurations.
+
+EXPERIMENT: Galton-Watson extinction universality (164 results, 140 seeds, 27 hosts)
+  Results: universality_cv=0.2737 +/- 0.0083, margin_vs_0.30=-0.0263, Cohen's d=-3.18, sign consistency=138/140 (98.6%) below 0.30
+  Conclusion: PRELIMINARY
+    The rescaled extinction statistics collapse moderately well across offspring distributions, with almost every valid seed below the 0.30 spread threshold.
+    That supports universality in the bulk summary, but the collapse is not yet tight enough to treat as closed.
+
+EXPERIMENT: Kauffman autocatalytic threshold (181 results, 0 seeds, 26 hosts)
+  Results: valid numeric payloads=0/181, Cohen's d=NA, sign consistency=NA
+  Conclusion: PRELIMINARY
+    This family still has no usable sanitized experiment_result payloads, so there is nothing scientific to aggregate yet.
+    The only update is methodological: the run count increased, but the numeric output remains absent.
+
+EXPERIMENT: Random polynomial roots GPU (14 results, 14 seeds, 2 hosts)
+  Results: trials_completed=1569.3 +/- 252.8, condition metrics missing, sample rows repeated=1/1, sign consistency=NA
+  Conclusion: PRELIMINARY
+    The sanitized payload exposes only header counts plus a repeated [4, 4] sample stub instead of root-count variance summaries.
+    That makes the family methodologically active but scientifically unreadable in its current output format.
+
+EXPERIMENT: Ginibre spacing universality GPU (11 results, 11 seeds, 2 hosts)
+  Results: trials_completed=1023.0 +/- 117.0, nonzero summary entries per sample row=2.0 +/- 0.0, Cohen's d=NA, sign consistency=NA
+  Conclusion: PRELIMINARY
+    The sample rows are almost entirely zero-filled, with only the trailing size counters surviving sanitization.
+    As a result, no nearest-neighbor spacing conclusions can be updated from these files yet.
