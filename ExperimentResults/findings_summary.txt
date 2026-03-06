@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 05, 2026 (session p1_validate_2026-03-05_2317)
+Last updated: March 05, 2026 (session p1_validate_2026-03-05_2359)
 ============================================================
 CORE SCIENTIFIC STATUS
 - Standing inverse critical-period / WD timing signal remains unreversed.
@@ -11,23 +11,23 @@ ACTIVE SCIENCE PRIORITIES
 2) wd_curvature_trigger_gpu.py
 3) grad_subspace_wd_gpu.py
 
-LATEST VALIDATION SNAPSHOT (2026-03-05 23:17, Part 1)
-- Newly credited this session: 41 results.
-- Total credit awarded this session: 333 (cap respected; <=10000).
-- Upload artifact audit for credited cohort: 41/41 missing retained JSON files; synthesis based on runtime/outcome metadata.
+LATEST VALIDATION SNAPSHOT (2026-03-05 23:59, Part 1)
+- Newly credited this session: 10 results.
+- Total credit awarded this session: 100 (cap respected; <=10000).
+- Upload artifact audit for credited cohort: 10/10 missing retained JSON files; synthesis based on runtime/outcome metadata.
 - Crash-pattern scan remains concentrated in known broken families:
   tangled_nature_macroevolution (40 failed, 100%), tangnat (11 failed, 100%),
   nagelschreckenberg_lookahead (15 failed, 78.9%).
-- Additional failure mode observed: exit_status=195 "OS cannot run" cluster on host 355 (26 fast failures).
+- Additional failure mode remains visible: exit_status=195 "OS cannot run" cluster on host 355.
 - Broken-prefix active queue at action time: 0 unsent/in-progress for each broken family.
 - Stuck-task cleanup this session: dead-host >12h aborted 0; >48h hard-ceiling aborted 0.
-- Website counters after update: credited_count=11624; total_results_count=10806.
+- Website counters after update: credited_count=11634; total_results_count=10806.
 - Closing snapshot: remaining uncredited completed exp rows = 0.
 
 RECENT SCIENTIFIC SIGNALS
 - Immediate interpretation remains bottlenecked by upload artifact retention, not volunteer throughput.
-- Successful runtime bands were stable (~852-927 s for most tasks, one long run at 1656 s, one short 5 s outlier).
-- Failure concentration remains prefix-specific plus a host-specific executable launch failure (exit 195).
+- Successful runtime bands were stable (~842-901 s for this credited cohort).
+- Failure concentration remains prefix-specific, with a distinct host-specific executable launch failure mode (exit 195).
 
 OPEN QUESTIONS
 1) Should upload retention be extended so successful JSON payloads remain available for post-hoc synthesis?
@@ -37,5 +37,5 @@ OPEN QUESTIONS
 KEY SCIENTIFIC FINDINGS
 1. This validation pass produced no reversal of the current WD/ICP directional signal.
 2. Missing retained JSON artifacts continue to be the dominant blocker for deeper cross-experiment inference.
-3. Queue hygiene was stable with zero newly stuck tasks and zero active tasks in known broken prefixes.
-4. A host-specific launch failure mode (exit 195) is now a measurable reliability factor distinct from experiment-logic failures.
+3. Queue hygiene remained stable with zero newly stuck tasks and zero active tasks in known broken prefixes.
+4. Host-specific launch failures (exit 195) remain a measurable reliability factor distinct from experiment-logic failures.

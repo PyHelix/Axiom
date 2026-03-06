@@ -1,0 +1,44 @@
+AXIOM BOINC SESSION RESULTS LOG
+Session timestamp: 2026-03-05 23:51:59 -07:00
+Sources: validate_2026-03-05_2340.txt, run_2026-03-03_1352.log, findings_summary.txt
+
+PART 1 - VALIDATION, CREDIT, AND CLEANUP
+- Reviewed newly completed experiment results and awarded credit for this pass.
+- Newly credited: 10 results.
+- Credit awarded this session: 100 total (session cap respected).
+- Upload artifact audit: credited cohort had missing retained JSON uploads; synthesis used runtime/outcome metadata.
+- Stuck/broken cleanup actions:
+  - Broken-family abort checks run for exp_tangled_nature_macroevolution%, exp_tangnat%, exp_nagelschreckenberg_lookahead% (aborted 0 unsent/in-progress).
+  - Dead-host >12h stuck aborts: 0.
+  - Hard ceiling >48h aborts: 0.
+  - Final verification: uncredited_success=0, running_gt48h=0.
+
+PART 2 - DEPLOYMENT AND RESEARCH
+- Retirement checkpoint executed for over-seeded families; unsent backlog remained zero at action time (ABORT_TOTAL=0).
+- CPU deployment (from run log):
+  - Scripts: wd_batchnoise_interaction.py, wd_labelsmooth_interaction.py
+  - CPU hosts processed: 81 active hosts (2 skipped for <6 GB RAM).
+  - CPU workunits created in this run: 2937.
+  - Targeting policy: per-host queue fill toward 3x CPU slots with duplicate prevention.
+- GPU deployment checkpoint:
+  - Intended GPU scripts: wd_curvature_trigger_gpu.py, wd_timing_scale_gpu.py
+  - Run log was interrupted before final GPU summary, so checkpoint confirmed directly from database state.
+  - Observed GPU hosts with these scripts: 2 (host 105 JosemiPC; host 346 ManU2).
+  - Observed GPU workunits/results for these scripts: 3 total (2 curvature-trigger, 1 timing-scale).
+
+NEW EXPERIMENTS DESIGNED + NOVELTY CHECK DOCUMENTATION
+- New script authored and deployed in this session: wd_batchnoise_interaction.py
+  - Hypothesis: late weight-decay benefit interacts with batch-noise regime (small batch vs large batch).
+  - Novelty search evidence logged in run_2026-03-03_1352.log with explicit literature/web queries, including:
+    - "weight decay batch size interaction neural networks"
+    - "Scheduled Weight Decay paper arxiv 2021"
+    - "site:arxiv.org weight decay label smoothing interaction"
+    - "arxiv 1711.05101 decoupled weight decay regularization"
+- Existing high-priority lines retained for ongoing testing: wd_labelsmooth_interaction.py, wd_curvature_trigger_gpu.py, grad_subspace_wd_gpu.py.
+
+KEY SCIENTIFIC FINDINGS
+1. The validation pass showed no reversal of the standing inverse WD/critical-period directional interpretation.
+2. Missing retained JSON artifacts remain the main bottleneck for deeper cross-experiment synthesis despite successful task completion.
+3. Failure concentration remains clustered in known broken families (tangled_nature_macroevolution, tangnat, nagelschreckenberg_lookahead), plus a distinct host-specific launch failure mode (exit_status=195).
+4. Queue hygiene was stable in this pass: no new stuck-task aborts and no active unsent/in-progress tasks in known broken prefixes at action time.
+5. Part 2 established/continued targeted interaction testing lines (batch-noise x WD and label-smoothing/curvature x WD), with GPU checkpoint evidence on 2 hosts and 3 GPU workunits across the two GPU scripts.
