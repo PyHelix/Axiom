@@ -1,0 +1,29 @@
+AXIOM BOINC SCIENCE REPORT — 2026-03-07_0143 UTC
+==================================================
+
+EXPERIMENT: adaptive_voter_delay_rewiring (93 results, 1 seed, 14 hosts)
+  Results: mean_trial_gain = -0.000380 +/- 0.000109, d = -3.49, 0/93 positive (0%).
+           mean_reentrant_index = -0.000091 +/- 0.000104, d = -0.88, 22.6% positive.
+           mean_support_fraction = 0.488 (near random chance of 0.5).
+           hypothesis_support = 0.230.
+  Conclusion: REJECTED (NO EFFECT) — Adaptive rewiring produces a tiny negative effect on
+    discordance (d=-3.49 but absolute gain is -0.04%), with no reentrant delay window.
+    The support fraction is indistinguishable from coin-flip. The intervention has no
+    meaningful influence on voter model consensus dynamics.
+
+EXPERIMENT: mayreact_gap_gpu (17 results, data-quality block)
+  Results: All 17 sanitized files contain only elapsed time, no experiment_result payload.
+           Zero valid numeric results across any host.
+  Conclusion: DATA QUALITY BLOCK — GPU experiment continues to produce empty payloads.
+    No analysis possible. Likely a GPU initialization or result-writing failure on
+    volunteer machines.
+
+EXPERIMENT: trophic_coherence_reactivity_localization (11 results, 11 seeds, 3 hosts)
+  Results: window_noise_slope = -0.4187 +/- 0.0018, d = -230.1, 0/11 positive.
+           midlayer_mass_noise_slope = -0.0234 +/- 0.0024, d = -9.79, 0/11 positive.
+           reactive_fraction = 1.0000 (all matrices reactive before unstable).
+  Conclusion: PRELIMINARY — Trophic incoherence (higher noise) SHRINKS the reactive window
+    (negative slope, 100% consistent), confirming the hypothesis that coherent predator-prey
+    structure widens the stable-but-reactive wedge. The reactive mode also delocalizes away
+    from middle trophic layers as incoherence grows. Only 11 seeds so far; needs 30+ for
+    confirmation.
