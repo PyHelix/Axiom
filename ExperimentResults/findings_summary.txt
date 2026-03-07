@@ -1,100 +1,17 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 7, 2026 UTC (0147)
-CONFIRMED FINDINGS (append-only - never remove or re-test these)
-1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
-2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
-3. WD + batch noise interaction: positive interaction gain 99.9% of runs, mean gain +0.33 (23+ host-runs)
-4. WD + imbalance interaction: mean interaction excess +0.095, minority-recall lift +0.21 (64+ host-runs)
-5. WD anisotropy trigger (GPU): adaptive trigger stabilizes at epoch ~24, effect vs fixed is small/mixed (6+ GPU runs)
-6. SVD rank intervention: completed (1964+ results) - retired, finding established
-7. Percolation thresholds: completed (1290+ results) - retired, textbook replication
-8. WD depth interaction: completed (1282+ results) - retired
-9. WD task sweep: completed (1077+ results) - retired
-10. WD optimizer interaction: completed (1043+ results) - retired
-11. WD learning rate interaction: completed (1037+ results) - retired
-12. WD width transition: completed (928+ results) - retired
-13. WD window: completed (841+ results) - retired
-14. Representation crystallization: completed (368+ results) - retired
-15. Pit delay inhibitor resonance: adaptive control improves pit-depth outcome vs pulse in 182/182 runs (90 seeds, 17 hosts), mean effect +0.889 +/- 0.011, Cohen's d=80.6.
-16. Autocatalytic dilution memory window: reentrant gain is positive in 101/101 runs (92 seeds, 3 hosts), mean +0.72965 +/- 0.00021, Cohen's d=3535.9.
-17. Nonmarkov trap release window: reentrant gain is positive in 49/49 runs (47 seeds, 6 hosts), mean +0.16282 +/- 0.00003, Cohen's d=4835.3.
-18. XY delay thermostat reentrance: reentrant_mean remains positive in 188/188 runs (123 seeds, 4 hosts), mean +0.011137 +/- 0.001721, Cohen's d=6.45.
-19. Cahn-Hilliard delay feedback window: d4_gain_mean is positive in 144/144 runs (114 seeds, 4 hosts), mean +0.012234 +/- 0.000086, Cohen's d=142.35.
-20. Schelling tax reentrance: REJECTED — reentrant index negative in 160/184 runs (184 seeds, 11 hosts), mean -0.00123 +/- 0.00102, Cohen's d=-1.20.
-21. Gray-Scott delay pulse feedback: REJECTED — adaptive persistence gain negative at all delays in 144/144 runs (15 hosts), mean_gain_d0=-0.0326 (d=-27.1).
-22. Metapop corridor delay forecast: REJECTED — adaptive corridors REDUCE persistence at ALL delay/noise conditions in 489/489 runs (20 hosts). Mean delta ~-2%, d=-6 to -30.
-23. Wildfire delay adaptive suppression: REJECTED — adaptive suppression INCREASES burned fraction in 218/218 runs (16 hosts), all delays. Mean delta +0.21%, d=186-253.
-24. Ising delay adaptive quench: REJECTED (opposite) — adaptive quench ALWAYS reduces defects at ALL delays/disorder in 204/204 runs (9 hosts). Stronger at higher delay, d=-14 to -26.
-25. Chemostat delay crossfeeding resonance: REJECTED — no resonance window (d=-0.11). Adaptive harms coexistence vs fixed (d=-1.36) and pulse (d=-1.69), 416 runs, 16 hosts.
-26. Interdependent flow memory shedding: REJECTED — medium memory window HARMS cascade survival, d=-1.23, 83% negative, 238 results, 15 hosts. Shortest window best.
-27. Moran migration delay window: REJECTED (ANTI-REENTRANT) — intermediate delays WORST, d=-1.90, 100% negative, 91 results, 15 hosts. d=3 accelerates fixation by ~28 generations.
-28. Schlogl delay adaptive gain: REJECTED — adaptive underperforms fixed at ALL delays (-1.1% to -2.3%), worsens with delay, 50 results, 10 hosts.
-29. Fiberbundle delay healing entropy: NO EFFECT — healing delay has zero impact on failure load (d<0.1 at all conditions), 458 results, 21 hosts.
-30. Gene drive delay resistance: NO EFFECT — adaptive release ~0.06% better than fixed, delay-independent, d=0.35, 94 results, 3 hosts.
-31. BK fault delay adaptive damping: NO EFFECT — d=0.30, 54% positive (random), no reentrant window (8.8%), 57 results, 11 hosts.
-32. Cascade forecast delay shedding: CONFIRMED — adaptive shedding outperforms fixed at ALL delays (+17% at d=1, +2% at d=8, d=89-604), benefit degrades with delay but never inverts, 259 results, 24 hosts.
-33. RBN delay fatigue control: CONFIRMED — rewiring reduces damage in 195/195 runs, mean gain +0.166, d=1490, 5 hosts.
-34. CSTR poison purge reentrance: REJECTED — purging REDUCES productivity in 71/71 runs, d=-4879, 10 hosts.
-35. Kuramoto delay noisy control: REJECTED — adaptive coupling REDUCES sync at ALL delays (d=-4.06 at d=0, d=-3.61 at d=20), no inversion, 193 results, 22 hosts.
-36. Seasonal metapop vax trigger: REJECTED — adaptive vaccination INCREASES attack rate at all couplings (d=-1 to -5.6), 358 results, 21 hosts.
-37. Lotka delay adaptive harvest: NO INVERSION — adaptive yield +13.5 at BOTH d=0 and d=30, delay does not degrade benefit, 149 results, 20 hosts.
-38. Battery pulse delay plating resonance: CONFIRMED — delayed adaptive pulse-charging creates plating resonance (100%, excess +2.08 AUC high-het, +1.96 low-het), 43 results, 17 hosts.
-39. Kuramoto islanding fatigue reclosure: REJECTED — zero reentrant gain, 42 results, 17 hosts.
-40. Potts RF adaptive anneal (GPU): CONFIRMED (adaptive benefit, NO delay window) — adaptive temp control +8% ordering+energy in 19/19 runs (6 hosts), d=79.5, delay-independent.
-41. Vicsek delay noise window (GPU): REJECTED — adaptive noise REDUCES alignment, 0/22 positive, d=-46.4, 6 hosts.
-42. Allen-Cahn delay quench (GPU): REJECTED (delay window) — overall negative, d=-11.5. BUT disorder crossover: harmful at s=0 (d=-30.7), beneficial at s>=0.08 (d=+49.7 to +91.8), 17 results, 6 hosts.
-43. Fisher-KPP delay refugia (GPU): REJECTED — adaptive catastrophically worse, 0/15 positive, d=-63.6M, 6 hosts.
-44. LBM delay adaptive forcing (GPU): REJECTED — adaptive -599 efficiency, 0/16 positive, d=-193.8, 6 hosts.
-45. Reservoir delay adaptive release: REJECTED — adaptive increases spill by ~4150 units, anti-reentrant (longer delay worse), 27 results, 4 hosts.
-46. Toggle delay adaptive control: REJECTED (opposite) — adaptive INCREASES switch rate at ALL delays (+1.39 at d=0, +1.57 at d=12), d=17-20, 218 seeds, 21 hosts.
-47. Collatz EVT tails: CONFIRMED (Weibull domain) — block-maxima L-skewness=0.1117 vs Gumbel 0.1699, d=10.67, 190/190 Weibull, log scaling R^2=0.996, 18 hosts.
-48. Minority game memory heterogeneity: CONFIRMED — power-law memory destroys phase transition (1.01x ratio vs 13.5x uniform), d=10-35, 127 results, 11 hosts.
-49. Spatial PGG punishment criticality: CONFIRMED (first-order) — cooperation jump ~0.99, gamma/nu=1.83 (not DP 1.595, d=1.14), 100% first-order signal, 153 results, 16 hosts.
-50. Oscillatory roughchannel LBM resonance: REJECTED — resonance excess negative (-63 to -69), forcing always hurts, 120 results, 20 hosts.
-51. Metapop Allee corridor hysteresis: REJECTED — no reentrant optimum, theta shift -0.016 (wrong direction), 288 results, 9 hosts.
-52. Levy foraging renewal phase: REJECTED — mu=1.1 optimal at ALL renewal rates, no transition, 168 results, 17 hosts.
-53. Potts pulse anneal resonance: CONFIRMED — periodic pulsing creates stochastic resonance in domain ordering, 310/310 positive, d=8.10, peak at period=12, 22 hosts.
-54. Lyapunov RMT spacing (GPU): CONFIRMED (Poisson universality) — spacing ratios ~0.390 (Poisson=0.386, GOE=0.531) for ALL ensembles (Gauss/Uniform/Bernoulli/Student-t), 59 results, 6 hosts.
-55. Metapop Allee climate dispersal: REJECTED — long-range dispersal catastrophic (f=0.35 persistence=0.038), no intermediate optimum, 251 results, 12 hosts.
-56. Sandpile small-world avalanche correlations: NO EFFECT — ACF~0 at all rewiring probs, SOC memoryless, 47 results, 13 hosts.
-57. Random Fibonacci CLT: REJECTED — Var(log|f_n|/n) scales as n^{-2}, not n^{-1}. CLT violated. Distribution non-Gaussian (skew=+0.48, kurtosis=-1.76). d=-2282, 44 seeds, 12 hosts.
-58. FPP wandering exponent universality: CONFIRMED — chi=0.275+/-0.022, identical across 4 distributions (spread 0.007). Finite-size corrections also universal. 148 measurements, 16 hosts.
-59. GoL density decay crossover: CONFIRMED — alpha peaks at rho=0.35 (0.52), sign change at rho~0.62 (negative alpha = transient overshoot), asymmetric birth-death. 31 seeds, 12 hosts.
-60. HK bounded confidence consensus: CONFIRMED — eps_c converges to ~0.21, dynamic exponent z=0.975 (near-linear). 285 seeds, 17 hosts.
-61. FBM record scaling: CONFIRMED — theta INCREASES with H (0.49 to 0.88), opposite to hypothesis. theta(0.5)=0.50 (exact BM result). 54 seeds, 14 hosts.
-62. OFC earthquake b-value: REJECTED — b monotonically decreasing with alpha, no minimum. Approaches ~0.4 at SOC (alpha=0.25). 105 seeds, 13 hosts.
-63. RW reset fatigue nonrenewal: REJECTED — reentrant score negative in 0/123 runs, d=-10.81. No reentrant optimal reset rate; fatigue degrades monotonically. 123 results, 7 hosts.
-64. Critical branching skew crossover: REJECTED (opposite) — late-time survival remains strongly skewness-dependent instead of collapsing, survival_corr_late=+0.978+/-0.024 with 100% positive sign consistency (d=40.7). Conditional observables also retain skew dependence: cond_corr_late=-0.974+/-0.032 and q90_corr_late=-0.749+/-0.273 across 303 seeds/results on 13 hosts.
-65. Quorum sensing spatial hysteresis: REJECTED — elongated colonies widen hysteresis instead of narrowing it. area-vs-log-aspect slope +0.004342 +/- 0.000191, positive in 117/117 runs, d=22.63, 15 hosts.
-66. Winding number Spitzer: REJECTED — normalized winding IQR stays far below Cauchy (0.780 +/- 0.181 vs 2.0), 0/488 longest-walk condition summaries above target, d=-6.73, 15 hosts.
-67. RSA polydisperse jamming: CONFIRMED — polydispersity raises jamming coverage in 133/147 runs, mean max gain +0.05395 +/- 0.03083, d=1.74, 21 hosts.
-68. Benford logistic transition: REJECTED — logistic/sine compliance derivatives are perfectly anticorrelated (corr=-1.0), and period-doubling derivative ratios stay far below Feigenbaum scaling, 127 results, 26 hosts.
-69. NK basin size distribution: CONFIRMED — basin inequality peaks at intermediate epistasis, with peak K in {3,4} for 84/127 runs and peak Gini 0.6032 +/- 0.0284, d=3.62, 23 hosts.
-70. Langton ant highway time: CONFIRMED — highway success collapses between rho=0.02 and rho=0.05 in 128/128 runs; mean success 0.714 -> 0.009, delta +0.704 +/- 0.031, d=22.55, 26 hosts.
-71. CML sync transition (GPU): CONFIRMED — critical coupling increases with local chaos in 50/50 runs; eps_c(3.7)=0.0448 +/- 0.0050 vs eps_c(4.0)=0.0733 +/- 0.0002, shift +0.0286, d=5.62, 8 hosts.
-72. Cahn-Hilliard mobility disorder (GPU): REJECTED — intermediate mobility correlation never beats white disorder; mid-vs-white domain delta +0.2078 +/- 0.0047, support_fraction_mid_corr=0.00017, d=43.96, 42 seeds, 13 hosts.
-73. Band RMT localization (GPU): CONFIRMED — crossover scale collapses at W/sqrt(N)=0.5387 +/- 0.0040 with cross-size CV 0.0427 +/- 0.0063, 100% of recent runs below CV 0.15, d=17.13, 33 seeds, 13 hosts.
-74. Galton-Watson extinction universality: CONFIRMED (partial) — rescaled extinction CV=0.2733+/-0.0083 across 3 offspring families, 99.1% below 0.3, d=32.79. Collapse stable but imperfect (~27% residual CV). 234 valid results, 28 hosts.
-75. Sparse Wigner TW edge: CONFIRMED (non-TW) — L-skewness positive (+0.0445+/-0.0335) at ALL (N,c) for N<=256, 87.5% positive overall. Deviation GROWS with N. Edge stats never reach TW (-0.293). 238 results, 20 hosts.
-76. FHN spiral tip fractal (GPU): CONFIRMED (NO EFFECT) — D_f=0.500 at ALL excitability values (a=0.5-1.0), zero variation, 99% exactly 0.500. No meandering transition. 43 seeds, 15 hosts.
-77. Structured smin crossover (GPU): CONFIRMED (no convergence) — s_min*sqrt(N) deviations from 0.78 are 100% negative at ALL sizes/ensembles, d=57-475. Structured ensembles deviate 1.9% more than dense (d=-1.23). Deviations GROW with N. 34 seeds, 10 hosts.
-78. FPUT heat conductivity: REJECTED — alpha=0.2505+/-0.0782 vs KPZ 1/3, below target in 87.4% of 222 valid runs, d=-1.06, R^2=0.52. Finite-size fit remains noisy but direction is stably opposite.
-79. Allee delay climate harvest: REJECTED (no delay inversion) — adaptive occupancy gain stays positive at short and long delay (+0.0278 vs +0.0265), all-condition mean +0.0271+/-0.0138, d=1.97, 390 results, 26 hosts.
-80. Antibiotic delay fatigue switch: REJECTED — reentrant gain negative in 30/30 runs, mean -0.26538+/-0.00001, d=-35235.9, 10 hosts.
-81. AAH delay dephasing window: REJECTED — adaptive dephasing reduces transport in 35/35 runs, final spread gain -4.1140+/-0.0509, d=-80.85, final IPR gain +0.1086, 12 hosts.
-82. Spacing ratio crossover: CONFIRMED — lambda_c*sqrt(N)=0.6530+/-0.0035 with collapse CV=0.0385, and log lambda_c vs log N slope is negative in 356/356 runs (mean -0.4556+/-0.0074, d=61.5). 356 seeds, 16 hosts.
-83. Activation function landscape: CONFIRMED — sigmoid beats ReLU by +0.0280 test-accuracy in 166/166 runs on the fixed benchmark; both accuracies are deterministic across hosts. 166 seeds, 10 hosts.
-84. May ecosystem stability structure: CONFIRMED — modular structure raises sigma_c/sigma_May by +0.0536+/-0.0062 in 71/71 runs (d=8.64), nested lowers it by -0.0244+/-0.0064 in 71/71 (d=3.83), and predator-prey lowers it by -0.3947+/-0.0131 in 71/71 (d=30.2). 70 seeds, 15 hosts.
-NEW PRELIMINARY FINDINGS (active)
-- LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). 174 results, 24 hosts.
-- Standard map FTLE transition: peak kurtosis at K=0.5 not K_c; var-T exponent=-0.07. 44 seeds, 13 hosts.
-- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. 591 results, 26 hosts.
-- Lorenz96 delay assimilation: inverse delay effect, harmful at d=0 and helpful at d=18. 556 results, 24 hosts.
-- ABX cycle HGT delay resonance: partial inversion at short cycle periods only; contact process temporal network keeps threshold order BA<ER<WS. 54 and 120 results, 13 and 10 hosts.
-- Hypercycle delay dilution rescue: weak signal only. 169 results, 9 hosts.
-- RFIM domain wall roughness: zeta(h) peaks at h=1.5 with zeta=1.45, non-monotonic. 157 results, 16 hosts.
-- DLA drift fractal: D_f~1.24 at drift=0, below 1.71 baseline; crossover present. 166 results, 14 hosts.
-- FHN coherence resonance (GPU): insufficient-quality data; CV_min stuck at default in 42/42 valid runs. 42 results, 11 hosts.
-- Kauffman autocatalytic threshold and mayreact_gap_gpu: data-quality block persists. Kauffman has 197 sanitized files with 0 valid numeric payloads, and mayreact_gap_gpu has 17 sanitized files with 0 valid numeric payloads. 26 and 3 hosts. Last updated: 2026-03-07
-- Adaptive voter delay rewiring: NO EFFECT — trial_mean_gain -0.000380+/-0.000109 (d=-3.49, 0/93 positive), reentrant index -0.000091+/-0.000104; absolute effect <0.04%, no delay window. 93 results, 1 seed, 14 hosts. Awaiting seed diversity for promotion. Last updated: 2026-03-07
-- Trophic coherence reactivity localization: window_noise_slope=-0.4187+/-0.0018 (d=-230, 0/11 positive); incoherence SHRINKS reactive window (opposite to hypothesis). midlayer_mass_slope=-0.023 (d=-9.8), coherence localizes reactive mode on mid-layers. 11 seeds, 3 hosts. Last updated: 2026-03-07
+14-day sliding window
+
+EXPERIMENT: exp_may_heterogeneity_reactivity_localization
+Status: CONFIRMED
+Results: high-low window width +3.96477 +/- 0.04442 (d=89.25, 735/735 positive); high-low reactive IPR +0.28195 +/- 0.00084 (d=335.59, 735/735 positive); high-low effective fraction -0.22077 +/- 0.00066 (d=-332.85, 735/735 negative). Heterogeneity-window corr +0.60704 +/- 0.00525 and heterogeneity-reactive-IPR corr +0.81776 +/- 0.00137 are both positive in 100% of seeds. 735 seeds, 17 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_trophic_coherence_reactivity_localization
+Status: REJECTED
+Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive), so added incoherence shrinks the reactive wedge instead of widening it. Midlayer-mass noise slope -0.02371 +/- 0.00462 (d=-5.13, 257/257 negative) shows coherence still localizes the reactive mode on middle layers. 257 seeds, 13 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_muller_ratchet_fluctuating_metapop
+Status: PRELIMINARY
+Results: best persistent migration 0.07943 +/- 0.04256 (29/35 intermediate), but best async migration is also 0.07886 +/- 0.05339 (0/35 at zero). Async-persistent click-min gap is only +0.00047 +/- 0.00167 (d=0.28, 21/35 positive), so the persistence-specific rescue window is not yet separated from noise. 35 seeds, 4 hosts.
+Last updated: 2026-03-07

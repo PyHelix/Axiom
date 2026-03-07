@@ -1,0 +1,14 @@
+EXPERIMENT: exp_may_heterogeneity_reactivity_localization (735 results, 735 seeds, 17 hosts)
+  Results: high-low window width +3.96477 +/- 0.04442 (d=89.25, 735/735 positive); high-low reactive IPR +0.28195 +/- 0.00084 (d=335.59, 735/735 positive); high-low effective fraction -0.22077 +/- 0.00066 (d=-332.85, 735/735 negative); heterogeneity-window corr +0.60704 +/- 0.00525 and heterogeneity-reactive-IPR corr +0.81776 +/- 0.00137, both 735/735 positive.
+  Conclusion: CONFIRMED
+    Species-level interaction heterogeneity strongly widens the stable-but-reactive window while concentrating the dominant reactive mode onto fewer species. The localization signal is not subtle: every recent seed shows larger reactive IPR and smaller effective support at high heterogeneity, so transient ecological fragility is mechanistically tied to mode concentration rather than random noise.
+
+EXPERIMENT: exp_trophic_coherence_reactivity_localization (257 results, 257 seeds, 13 hosts)
+  Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive); midlayer-mass noise slope -0.02371 +/- 0.00462 (d=-5.13, 257/257 negative); reactive_fraction 1.00000 +/- 0.00000; mean window width 3.24533e+07 +/- 5.98806e+05.
+  Conclusion: REJECTED
+    The core wedge hypothesis fails cleanly: increasing incoherence shrinks the reactive window instead of widening it, so stronger trophic coherence does not suppress reactivity by the proposed mechanism. Coherence does localize the amplifying mode toward middle layers, but that secondary effect does not rescue the main prediction about the size of the reactive wedge.
+
+EXPERIMENT: exp_muller_ratchet_fluctuating_metapop (35 results, 35 seeds, 4 hosts)
+  Results: best persistent migration 0.07943 +/- 0.04256 (d=1.87, 29/35 intermediate); best async migration 0.07886 +/- 0.05339 (d=1.48, 0/35 at zero); async-minus-persistent click minimum +0.00047 +/- 0.00167 (d=0.28, 21/35 positive); sync rescue gap +0.00016 +/- 0.00065 (d=0.24, 24/35 positive).
+  Conclusion: PRELIMINARY
+    The expected persistence-specific intermediate-migration optimum is not isolated yet: the async baseline prefers nearly the same migration range, and the click-rate advantage of the persistent case is small relative to variance. Current data therefore support at most a weak signal, not a confirmed rescue window.
