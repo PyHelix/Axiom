@@ -1,0 +1,45 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-07 $(date +%H:%M:%S%z)
+Step: Validation, credit, and cleanup
+
+Summary
+- Reviewed sanitized experiment results with granted_credit=0 and available sanitized files: 6145
+- Results credited this session: 8
+- Total credit awarded this session: 10000
+- Results denied this session: 6137
+- Uncredited results skipped because sanitized file not present yet: 1109
+- Stuck task cleanup (>12h running, >6h no contact): 0 rows updated
+- Broken experiment queues aborted: none this session
+- Experiment script bugs fixed: none this session
+
+Credited Results
+- result 1808164 (host 345): exp_muller_ratchet_fluctuating_metapop_ecc313_0 -> 1250 credit. Legacy sanitized payload present with 41 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808409 (host 345): exp_muller_ratchet_fluctuating_metapop_beb9cd_0 -> 1250 credit. Legacy sanitized payload present with 41 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808461 (host 345): exp_muller_ratchet_fluctuating_metapop_14a39f_0 -> 1250 credit. Legacy sanitized payload present with 40 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808532 (host 345): exp_muller_ratchet_fluctuating_metapop_bc63a8_0 -> 1250 credit. Legacy sanitized payload present with 41 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808541 (host 345): exp_muller_ratchet_fluctuating_metapop_c61782_0 -> 1250 credit. Legacy sanitized payload present with 40 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808553 (host 345): exp_muller_ratchet_fluctuating_metapop_954a30_0 -> 1250 credit. Legacy sanitized payload present with 40 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808556 (host 345): exp_muller_ratchet_fluctuating_metapop_cf41d5_0 -> 1250 credit. Legacy sanitized payload present with 40 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+- result 1808557 (host 345): exp_muller_ratchet_fluctuating_metapop_246a32_0 -> 1250 credit. Legacy sanitized payload present with 40 trials, 12 sample rows, 10 summary fields, nontrivial numeric values, elapsed_time 0s in DB but sanitized payload reported elapsed ~845s.
+
+Denied Results
+- results 1818789-1826617 (3905 total, host 364 family): exp_may_nested_mutualism_localization_* -> 0 credit. Sanitized files contained metadata only; no experiment_result payload survived sanitization, so no scientific data available to validate.
+- results 1826149-1831312 (2230 total, multiple hosts): exp_metapop_commuting_reactivity_localization_* -> 0 credit. Sanitized files contained metadata only; no experiment_result payload survived sanitization, so no scientific data available to validate.
+- result 1838439 (host 339): exp_isr_trapmemory_delay_interaction_6a23a0_0 -> 0 credit. Byte-identical sanitized payload matched a result from another host.
+- result 1838506 (host 330): exp_isr_trapmemory_delay_interaction_acf9c2_0 -> 0 credit. Byte-identical sanitized payload matched a result from another host.
+
+Pending Results Without Sanitized Files Yet
+- exp_isr_trapmemory_delay_interaction_*: 1061 results pending sanitized output (IDs 1838418-1854606)
+- exp_bbp_spiked_covariance_gpu_*: 17 results pending sanitized output (IDs 1839040-1841165)
+- exp_sir_bimodal_scaling_gpu_*: 9 results pending sanitized output (IDs 1841300-1842856)
+- 22 additional legacy exp_* results near IDs 1840013-1840035 remain pending sanitized output
+
+Credit Totals Applied
+- host 345 total_credit incremented by 10000
+- user 127 total_credit incremented by 10000 -> projected total 23591.143786
+
+Operational Actions
+- Applied SQL credit updates to result, host, and user tables using incremental total_credit additions.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 9291
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 16578
+- No experiment source changes were required.
