@@ -1,0 +1,11 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-07_2224 UTC
+
+Recent-family scan (last 180 min): 1189 exp_isr_trapmemory_delay_interaction, 933 exp_oregonator_delay_adaptive_illumination_window, 707 exp_kac_edge_correlation_crossover, 170 gpu_wu, 47 exp_bbp_spiked_covariance_gpu_gpu, 28 exp_sir_bimodal_scaling_gpu_gpu.
+Settled-family filter: exp_isr_trapmemory_delay_interaction, exp_oregonator_delay_adaptive_illumination_window, exp_bbp_spiked_covariance_gpu, and exp_sir_bimodal_scaling_gpu were already settled in findings_summary.txt and were not re-analyzed.
+gpu_wu note: generic gpu wrapper bucket with no standalone experiment script; not treated as a scientific family for this cycle.
+
+EXPERIMENT: exp_kac_edge_correlation_crossover (707 results, 707 seeds, 10 hosts)
+  Results: edge-window gain -0.01199 +/- 0.00038 (d=-31.19, 0/707 positive); real-root window gain -0.01057 +/- 0.00002 (d=-514.16, 0/707 positive); inner suppression +0.00090 +/- 0.00015 (d=5.91, 707/707 positive)
+  Conclusion: REJECTED
+    Intermediate AR(1) coefficient correlation does not create the predicted edge-root or normalized-real-root crossover in this ensemble. Both window-gain metrics are negative in every sanitized result, so stronger correlation shifts mass away from the hypothesized intermediate optimum even though it consistently suppresses inner roots.
