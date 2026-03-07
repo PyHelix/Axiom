@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 7, 2026 UTC
+Last updated: March 7, 2026 UTC (0147)
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
 1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
 2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
@@ -95,7 +95,7 @@ NEW PRELIMINARY FINDINGS (active)
 - RFIM domain wall roughness: zeta(h) peaks at h=1.5 with zeta=1.45, non-monotonic. 157 results, 16 hosts.
 - DLA drift fractal: D_f~1.24 at drift=0, below 1.71 baseline; crossover present. 166 results, 14 hosts.
 - FHN coherence resonance (GPU): insufficient-quality data; CV_min stuck at default in 42/42 valid runs. 42 results, 11 hosts.
-- Kauffman autocatalytic threshold and mayreact_gap_gpu: data-quality block with 197 and 17 sanitized files but 0 valid numeric payloads. 26 and 3 hosts. Last updated: 2026-03-07
-- Adaptive voter delay rewiring: NO EFFECT — trial_mean_gain -0.000380+/-0.000109 (d=-3.49, 0/93 positive), reentrant index -0.000091+/-0.000104; absolute effect <0.04%, no delay window. 93 results, 1 seed, 14 hosts. Last updated: 2026-03-07
-- Trophic coherence reactivity localization: window_noise_slope=-0.4187+/-0.0018 (d=-230, 0/11 positive); incoherence SHRINKS reactive window. midlayer_mass_slope=-0.023 (d=-9.8). 11 seeds, 3 hosts. Last updated: 2026-03-07
+- Kauffman autocatalytic threshold and mayreact_gap_gpu: data-quality block with 197 and 17 sanitized files but 0 valid numeric payloads. 26 and 3 hosts. GPU payloads still empty. Last updated: 2026-03-07
+- Adaptive voter delay rewiring: NO EFFECT — trial_mean_gain -0.000380+/-0.000109 (d=-3.49, 0/93 positive), reentrant index -0.000091+/-0.000104; absolute effect <0.04%, no delay window. 93 results, 1 seed, 14 hosts. Awaiting seed diversity for promotion. Last updated: 2026-03-07
+- Trophic coherence reactivity localization: window_noise_slope=-0.4187+/-0.0018 (d=-230, 0/11 positive); incoherence SHRINKS reactive window (opposite to hypothesis). midlayer_mass_slope=-0.023 (d=-9.8), coherence localizes reactive mode on mid-layers. 11 seeds, 3 hosts. Last updated: 2026-03-07
 - Newly staged on March 7, 2026: May heterogeneity/reactivity-localization, trophic coherence/reactivity-localization, and Muller's-ratchet fluctuating metapopulation for fresh CPU data; GPU ports added for the May-heterogeneity and trophic-coherence localization mechanisms after literature checks found adjacent stability/reactivity/localization work but not this joint reactive-mode localization test.

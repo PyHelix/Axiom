@@ -1,0 +1,45 @@
+Axiom BOINC Scientific Analysis — 2026-03-07_0147 UTC
+
+============================================================
+EXPERIMENT: adaptive_voter_delay_rewiring (93 results, 1 seed, 14 hosts)
+  Results:
+    Trial mean gain (base - ctrl discordance): -0.000380 +/- 0.000109, d=-3.49
+    Positive gain: 0/93 (0%)
+    Support fraction: 0.488 (near-random)
+    Reentrant index: -0.000091 +/- 0.000104, d=-0.88, 22.6% positive
+    Hypothesis support: 0.23
+  Conclusion: REJECTED (NO EFFECT)
+    Adaptive rewiring does not reduce discordance — control is marginally
+    WORSE than baseline across all delay/fatigue conditions. Effect size
+    is <0.04% absolute, practically zero. No reentrant delay window exists.
+    Only 1 unique seed limits diversity, but 14 independent hosts all agree.
+
+============================================================
+EXPERIMENT: mayreact_gap_gpu (17 results, 0 valid, 0 seeds)
+  Results: All 17 sanitized files contain empty payloads (experiment_result=[])
+  Conclusion: DATA QUALITY BLOCK
+    GPU workunits are completing but returning empty numeric results.
+    No analysis possible until the assimilator captures valid output.
+
+============================================================
+EXPERIMENT: trophic_coherence_reactivity_localization (11 results, 11 seeds, 3 hosts)
+  Results:
+    Window-noise slope: -0.4187 +/- 0.0018, d=-230, 11/11 negative (100%)
+    Reactive fraction: 1.000 (always reactive before unstable)
+    Midlayer mass noise slope: -0.0234 +/- 0.0024, d=-9.8, 11/11 negative (100%)
+    Mean window width: 32.5M (large absolute reactive window)
+  Conclusion: PRELIMINARY (strengthened)
+    Incoherence (noise) SHRINKS the stable-but-reactive window — coherent
+    trophic structure preserves a wider reactive wedge, opposite to the
+    hypothesis that coherence would suppress it. The leading reactive mode
+    becomes slightly MORE localized on mid-trophic layers as coherence
+    increases (negative midlayer mass slope). Effect is extremely consistent
+    (100% sign agreement) with enormous d-values, but only 11 seeds/3 hosts.
+
+============================================================
+FAMILIES SKIPPED (already CONFIRMED/REJECTED in findings):
+  - spacing_ratio_crossover (393 new) — CONFIRMED #82
+  - may_ecosystem_stability_structure (233 new) — CONFIRMED #84
+  - activation_function_landscape (41 new) — CONFIRMED #83
+  - antibiotic_delay_fatigue_switch (26 new) — REJECTED #80
+  - allee_delay_climate_harvest (22 new) — REJECTED #79
