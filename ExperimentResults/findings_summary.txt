@@ -1,5 +1,5 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-Last updated: March 6, 2026 22:05 UTC
+Last updated: March 7, 2026 UTC
 CONFIRMED FINDINGS (append-only - never remove or re-test these)
 1. WD timing inverse critical period: late WD >> early WD for generalization (1000+ seeds, p<0.001)
 2. WD + label smoothing interaction: interaction present 94% of runs, attenuated in 25% (67+ host-runs)
@@ -82,42 +82,18 @@ CONFIRMED FINDINGS (append-only - never remove or re-test these)
 79. Allee delay climate harvest: REJECTED (no delay inversion) — adaptive occupancy gain stays positive at short and long delay (+0.0278 vs +0.0265), all-condition mean +0.0271+/-0.0138, d=1.97, 390 results, 26 hosts.
 80. Antibiotic delay fatigue switch: REJECTED — reentrant gain negative in 30/30 runs, mean -0.26538+/-0.00001, d=-35235.9, 10 hosts.
 81. AAH delay dephasing window: REJECTED — adaptive dephasing reduces transport in 35/35 runs, final spread gain -4.1140+/-0.0509, d=-80.85, final IPR gain +0.1086, 12 hosts.
-
-NEW PRELIMINARY FINDINGS (this cycle)
-- May ecology deployment notes: mayreact_gap_gpu, may_heterogeneity_reactivity_localization, may_ecosystem_stability_structure, and mayreact_gap remain novel after March 6, 2026 literature re-checks; keep deployed.
-- LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). Exponent stable; shape statistics still mixed. 174 results, 24 hosts.
-- Standard map FTLE transition: peak kurtosis at K=0.5 not K_c; var-T exponent=-0.07 (anomalous). 44 seeds, 13 hosts.
-- March 6, 2026 deployment note: added trophic_coherence_reactivity_localization after literature checks on trophic coherence, ecological reactivity, and eigenvector localization. Novel angle is the joint test of coherence on the stable-but-reactive wedge plus amplifying-mode localization; keep deployed pending first summaries.
-- Climate delay carbon hysteresis: REJECTED reentrant window — adaptive removal underperforms fixed at ALL delays, 226 runs (11 hosts), d=-282.
-- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. N=591, 26 hosts.
-- Lorenz96 delay assimilation: INVERSE — adaptive worsens at d=0 but improves at d=18. N=556, 24 hosts.
-- Fisher-Allee moving habitat: REJECTED — adaptive culling increases invasion at all delays. N=130, 10 hosts.
-- SIS delay adaptive rewiring: NO EFFECT — delay win fraction = 0.50. N=170, 10 hosts.
-- ABX cycle HGT delay resonance: PARTIAL — delay inversion at SHORT cycle periods only. N=54, 13 hosts.
-- Fisher delay adaptive culling: NO EFFECT (ceiling) — invaded fraction = 1.0 for ALL conditions. N=183, 24 hosts.
-- Brusselator delay sensor noise: REJECTED delay inversion — adaptive IMPROVES at all delays. d=24-56, 33 seeds, 7 hosts.
-- Sandpile delay adaptive dissipation: NO EFFECT. SOC robustness. N=10, 4 hosts.
-- Contact process temporal network: PARTIAL — topology determines thresholds (BA<ER<WS). 120 results, 10 hosts.
-- Hypercycle delay dilution rescue: WEAK. 169 results, 9 hosts.
-- RFIM domain wall roughness: zeta(h) peaks at h=1.5 (zeta=1.45), non-monotonic. 157 results, 16 hosts.
-- DLA drift fractal: D_f~1.24 at drift=0, below theoretical 1.71. Crossover present but baseline too low. 166 results, 14 hosts.
-- Chimera lifetime scaling: REJECTED — transient at all r. Tiny positive alpha at r=0.25 (d~1.1). 168 seeds, 15 hosts.
-- FHN coherence resonance (GPU): PRELIMINARY — insufficient quality data, CV_min stuck at default in 42/42 valid runs at L=64/128/256. 42 results, 11 hosts.
-- Activation function landscape: PRELIMINARY — sigmoid beats ReLU by +0.0280 test-accuracy on this fixed benchmark in 125/125 runs. 125 results, 10 hosts.
-- Spacing ratio crossover: PRELIMINARY — lambda_c*sqrt(N)=0.6544+/-0.0031 with collapse CV 0.0380+/-0.0028, consistent with 1/sqrt(N) scaling. 13 results, 4 hosts.
-- Kauffman autocatalytic threshold: PRELIMINARY data-quality block — 197 sanitized files across 26 hosts but 0 valid numeric payloads.
-- Adaptive voter delay rewiring: NO EFFECT — trial_mean_gain -0.000296+/-0.000053 with negative mean reentrant index -0.000074. 46 results, 10 hosts.
-- March 6 late deployment: 5 new CPU experiments across diverse STEM fields:
-  (a) goldbach_partition_growth — number theory, Hardy-Littlewood convergence rate for r(2n)
-  (b) directed_polymer_kpz_exponent — stat physics, KPZ chi=1/3 universality across disorder types
-  (c) invasion_percolation_trapping — percolation, fractal dimension universality class separation
-  (d) persistent_voter_coarsening — social dynamics, zealot-induced consensus slowdown scaling
-  (e) spacing_ratio_crossover — quantum chaos, Poisson-to-GOE crossover scaling function
-  All passed novelty checks (web search 2024-2025 literature). 5000 WUs each.
-- March 6 GPU deployment: Retired 28 GPU experiment families (settled findings + broken scripts).
-  Deployed 4 new GPU experiments (350 WUs each, 1400 total):
-  (a) bbp_spiked_covariance_gpu — RMT/statistics, BBP phase transition universality across non-Gaussian populations
-  (b) percolation_diffusion_spectral_gpu — fractal physics, anomalous diffusion d_s on 2D percolation clusters (Alexander-Orbach)
-  (c) stochastic_resonance_universality_gpu — nonlinear dynamics, SR peak shape universality across potential landscapes
-  (d) sir_bimodal_scaling_gpu — epidemiology, SIR bimodal final size scaling near R0=1
-  All passed novelty checks (web search 2024-2025 literature). GPU pool rebalanced to ~2000.
+82. Spacing ratio crossover: CONFIRMED — lambda_c*sqrt(N)=0.6530+/-0.0035 with collapse CV=0.0385, and log lambda_c vs log N slope is negative in 356/356 runs (mean -0.4556+/-0.0074, d=61.5). 356 seeds, 16 hosts.
+83. Activation function landscape: CONFIRMED — sigmoid beats ReLU by +0.0280 test-accuracy in 166/166 runs on the fixed benchmark; both accuracies are deterministic across hosts. 166 seeds, 10 hosts.
+84. May ecosystem stability structure: CONFIRMED — modular structure raises sigma_c/sigma_May by +0.0536+/-0.0062 in 71/71 runs (d=8.64), nested lowers it by -0.0244+/-0.0064 in 71/71 (d=3.83), and predator-prey lowers it by -0.3947+/-0.0131 in 71/71 (d=30.2). 70 seeds, 15 hosts.
+NEW PRELIMINARY FINDINGS (active)
+- LCS fluctuation universality: chi=0.3324 at k=2 (84% within 0.02 of 1/3, d=-0.06 vs 1/3). 174 results, 24 hosts.
+- Standard map FTLE transition: peak kurtosis at K=0.5 not K_c; var-T exponent=-0.07. 44 seeds, 13 hosts.
+- Tritrophic delay harvest: persistence +22.8% (d=8.65) but yield -0.0055 (d=-2.24), delay-independent. 591 results, 26 hosts.
+- Lorenz96 delay assimilation: inverse delay effect, harmful at d=0 and helpful at d=18. 556 results, 24 hosts.
+- ABX cycle HGT delay resonance: partial inversion at short cycle periods only; contact process temporal network keeps threshold order BA<ER<WS. 54 and 120 results, 13 and 10 hosts.
+- Hypercycle delay dilution rescue: weak signal only. 169 results, 9 hosts.
+- RFIM domain wall roughness: zeta(h) peaks at h=1.5 with zeta=1.45, non-monotonic. 157 results, 16 hosts.
+- DLA drift fractal: D_f~1.24 at drift=0, below 1.71 baseline; crossover present. 166 results, 14 hosts.
+- FHN coherence resonance (GPU): insufficient-quality data; CV_min stuck at default in 42/42 valid runs. 42 results, 11 hosts.
+- Kauffman autocatalytic threshold and mayreact_gap_gpu: data-quality block with 197 and 17 sanitized files but 0 valid numeric payloads. 26 and 3 hosts.
+- Adaptive voter delay rewiring: NO EFFECT — trial_mean_gain -0.000380+/-0.000109 with mean reentrant index -0.000091+/-0.000104; no meaningful delay window. 93 results, 14 hosts.

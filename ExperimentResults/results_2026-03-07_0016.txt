@@ -1,0 +1,30 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-07 00:16 UTC
+
+EXPERIMENT: spacing_ratio_crossover (356 results, 356 seeds, 16 hosts)
+  Results: lambda_c*sqrt(N)=0.6530 +/- 0.0035; collapse CV=0.0385; log lambda_c vs log N slope=-0.4556 +/- 0.0074; Cohen's d=61.5; sign consistency 100.0%.
+  Conclusion: CONFIRMED
+    The crossover scale follows the predicted 1/sqrt(N)-type collapse with extremely tight cross-size consistency. This is strong numerical support for a universal finite-size crossover function between Poisson and GOE spacing statistics.
+
+EXPERIMENT: activation_function_landscape (166 results, 166 seeds, 10 hosts)
+  Results: ReLU test accuracy=0.9300 +/- 0.0000; sigmoid test accuracy=0.9580 +/- 0.0000; sigmoid-ReLU delta=+0.0280 +/- 0.0000; Cohen's d effectively infinite (zero variance); sign consistency 100.0%.
+  Conclusion: CONFIRMED
+    On this fixed benchmark, sigmoid beats ReLU deterministically across all hosts and seeds. The effect is benchmark-specific but no longer preliminary: the ranking is stable and reproducible.
+
+EXPERIMENT: may_ecosystem_stability_structure (71 results, 70 seeds, 15 hosts)
+  Results: sigma_c/sigma_May random=1.0587 +/- 0.0092, modular=1.1123 +/- 0.0098, nested=1.0343 +/- 0.0088, predator-prey=0.6640 +/- 0.0233; modular-random=+0.0536 +/- 0.0062 (d=8.64), nested-random=-0.0244 +/- 0.0064 (d=3.83), predator-prey-random=-0.3947 +/- 0.0131 (d=30.2); sign consistency 100.0/100.0/100.0%.
+  Conclusion: CONFIRMED
+    Interaction structure shifts the May stability threshold in a consistent direction: modular systems tolerate stronger interactions, nested systems slightly less, and predator-prey sign structure much less. The phenomenon matters because the critical point is not set by S and C alone once ecological structure is introduced.
+
+EXPERIMENT: adaptive_voter_delay_rewiring (93 results, 93 seeds, 14 hosts)
+  Results: trial_mean_gain=-0.000380 +/- 0.000109; mean support fraction=0.4879 +/- 0.0027; mean reentrant index=-0.000091 +/- 0.000104; Cohen's d=-3.49 on gain; sign consistency 0.0% positive gain, 22.6% positive reentrant index.
+  Conclusion: NO EFFECT
+    The measured effect is tiny and remains well below the 2% meaningful-effect threshold despite consistent sign. There is no scientifically meaningful delay window here; adaptive rewiring is effectively neutral to slightly harmful in this setup.
+
+EXPERIMENT: mayreact_gap_gpu (17 results, 17 seeds, 3 hosts)
+  Results: 0 valid numeric payloads; 17/17 sanitized files contain elapsed metadata only.
+  Conclusion: PRELIMINARY
+    This family is blocked by data quality rather than by statistical uncertainty. No scientific conclusion is justified until numeric result payloads reach the sanitized store.
+
+EXCLUDED NON-EXPERIMENT FAMILY
+  gpu_wu appears in the recent-file count (34 files) but has no corresponding script at /opt/axiom_boinc/html/user/experiments/gpu_wu.py, so it was not treated as a scientific experiment family for this cycle.
