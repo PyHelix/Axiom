@@ -13,7 +13,7 @@ Last updated: 2026-03-07
 
 EXPERIMENT: exp_muller_ratchet_fluctuating_metapop
 Status: NO EFFECT
-Results: async-persistent click-min advantage +0.00007 +/- 0.00142 (d=0.05, 350/667 positive); persistent-async optimum shift -0.00117 +/- 0.06814 (d=-0.02, 207/667 positive); sync rescue gap -0.00001 +/- 0.00069 (d=-0.02, 336/667 positive). The persistence-specific rescue window does not separate from noise at this sample size. 667 seeds, 16 hosts.
+Results: async-persistent click-min advantage +0.00009 +/- 0.00143 (d=0.06, 378/713 positive); persistent-async optimum shift -0.00135 +/- 0.06835 (d=-0.02, 249/713 negative); sync rescue gap +0.00000 +/- 0.00069 (d=0.01, 369/713 positive). The persistence-specific rescue window still does not separate from noise after 713 seeds. 713 seeds, 16 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_may_nested_mutualism_localization
@@ -23,12 +23,17 @@ Last updated: 2026-03-07
 
 EXPERIMENT: exp_metapop_commuting_reactivity_localization
 Status: NO EFFECT
-Results: mid-asymmetry window gain +0.00022 +/- 0.00143 (d=0.15, 1342/2353 positive); high-asymmetry window gain +0.00026 +/- 0.00139 (d=0.19, 1388/2353 positive); high-mid hub-mass shift -0.00011 +/- 0.00225 (d=-0.05, 1243/2353 negative). Directional commuting changes sign across seeds, but the window and localization shifts stay well inside noise. 2353 seeds, 24 hosts.
+Results: mid-asymmetry window gain +0.00020 +/- 0.00144 (d=0.14, 1458/2573 positive); high-asymmetry window gain +0.00026 +/- 0.00140 (d=0.18, 1519/2573 positive); high-mid hub-mass shift -0.00010 +/- 0.00227 (d=-0.05, 1349/2573 negative). Directional commuting still changes sign across seeds, and both window and localization shifts remain inside noise. 2573 seeds, 24 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_may_lowrank_mutualism_localization
 Status: NO EFFECT
-Results: mid-window shift -7.36798 +/- 159.75772 (d=-0.05, 98/211 positive); high-window shift -2.76998 +/- 190.39679 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00531 (d=33.84, 211/211 positive). The low-rank mutualistic core clearly re-localizes the mode, but it does not produce a reproducible U-shaped reactive-window crossover. 211 seeds, 11 hosts.
+Results: mid-window shift -7.36798 +/- 159.37912 (d=-0.05, 113/211 negative); high-window shift -2.76998 +/- 189.94482 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00530 (d=33.92, 211/211 positive). The low-rank mutualistic core clearly re-localizes the mode, but it still does not produce a reproducible U-shaped reactive-window crossover. 211 seeds, 11 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_isr_trapmemory_delay_interaction
+Status: REJECTED
+Results: strong-minus-weak-memory delay-window interaction -0.01146 +/- 0.01384 (d=-0.83, 384/487 negative); global reentrant gain +0.00244 +/- 0.00830 (d=0.29, 288/487 positive); alpha0-alpha2 window delta -0.01146 +/- 0.01384 (d=-0.83, 384/487 negative). Adaptive resetting does not strengthen the medium-delay window under stronger trap memory; the interaction runs in the opposite direction across most seeds. 487 seeds, 19 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_percolation_diffusion_spectral_gpu
@@ -56,5 +61,17 @@ Status: DEPLOYED
 Hypothesis: GPU May ensembles now target the same nestedness-by-heterogeneity transient-reactivity crossover as the CPU experiment, replacing retired heterogeneity-only GPU work with a direct test of whether intermediate nestedness delocalizes the reactive mode before strong nested hubs re-localize it. Literature check found nestedness and localization studies, but not this transient reactive-window crossover.
 Last updated: 2026-03-07
 
+EXPERIMENT: exp_kac_edge_correlation_crossover
+Status: DEPLOYED
+Hypothesis: intermediate short-range coefficient correlation in Kac polynomials creates a nonmonotonic increase in near-|x|=1 real-zero density and normalized real-root count relative to both iid and near-deterministic coefficient limits. Literature check searched "Kac polynomials dependent coefficients real zeros edge accumulation", "random polynomial dependent coefficients real roots Kac", and "real roots near 1 random polynomials dependent coefficients"; found dependent-coefficient real-zero papers, but not this finite-size AR(1) edge-clustering crossover test for algebraic Kac ensembles.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_kac_edge_correlation_crossover_gpu
+Status: DEPLOYED
+Hypothesis: intermediate AR(1) correlation in high-degree Kac polynomials produces a finite-size peak in near-|x|=1 real-root density and normalized real-root count relative to both iid and near-deterministic limits when measured with large batched GPU ensembles. Literature check searched "Kac polynomials dependent coefficients real zeros edge accumulation", "random polynomial dependent coefficients real roots Kac", and "real roots near 1 random polynomials dependent coefficients AR(1)"; found asymptotic dependent-coefficient real-zero theory and recent near-1 universality results, but not this finite-size nonmonotonic AR(1) crossover experiment.
+Last updated: 2026-03-07
+
 NOTE 2026-03-07: retired active queues for exp_may_heterogeneity_reactivity_localization and exp_trophic_coherence_reactivity_localization after their findings were already settled; CPU pool refilled to ~40k total with may_lowrank_mutualism_localization, may_nested_mutualism_localization, metapop_commuting_reactivity_localization, isr_trapmemory_delay_interaction, and oregonator_delay_adaptive_illumination_window.
 NOTE 2026-03-07: removed staged GPU work for confirmed exp_may_heterogeneity_reactivity_localization and refilled the GPU stage to 1960 files with may_nested_mutualism_localization_gpu plus additional bbp_spiked_covariance_gpu and percolation_diffusion_spectral_gpu work.
+NOTE 2026-03-07: removed staged CPU work for retired exp_may_lowrank_mutualism_localization, exp_may_nested_mutualism_localization, and exp_metapop_commuting_reactivity_localization; aborted the remaining active metapop commuting results and refilled the CPU pool back to 40,000 total with isr_trapmemory_delay_interaction, oregonator_delay_adaptive_illumination_window, and kac_edge_correlation_crossover.
+NOTE 2026-03-07: removed staged GPU work for settled exp_percolation_diffusion_spectral_gpu, exp_stochastic_resonance_universality_gpu, and exp_may_lowrank_mutualism_localization_gpu; added exp_kac_edge_correlation_crossover_gpu and refilled the GPU stage with active bbp_spiked_covariance_gpu, sir_bimodal_scaling_gpu, may_nested_mutualism_localization_gpu, and kac_edge_correlation_crossover_gpu work.
