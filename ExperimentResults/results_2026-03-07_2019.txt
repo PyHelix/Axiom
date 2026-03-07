@@ -1,0 +1,19 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-07_2019 UTC
+
+EXPERIMENT: exp_oregonator_delay_adaptive_illumination_window (814 results, 814 seeds, 23 hosts)
+  Results: medium-delay window gain -0.00014 +/- 0.00000 (d=-43.56, 0/814 positive); adaptive-minus-pulse score +0.01172 +/- 0.00000 (d=7260.91, 814/814 positive); adaptive-minus-pulse usage -0.06075 +/- 0.00000 (d=-801830708.81, 814/814 negative)
+  Conclusion: REJECTED
+    Adaptive illumination improves the aggregate score mainly by using less control, not by opening a medium-delay response window. The hypothesized delay-specific window effect stays negative in every seed, so the window claim is not supported.
+
+EXPERIMENT: exp_sir_bimodal_scaling_gpu (120 results, 120 seeds, 7 hosts)
+  Results: R0=1 gap growth from N200 to N2000 +0.01703 +/- 0.01063 (d=1.60, 113/120 positive); R0=1 bimodality-coefficient growth -0.00797 +/- 0.01826 (d=-0.44, 86/120 negative)
+  Conclusion: NO EFFECT
+    The larger system size produces only a sub-2% increase in the final-size gap while the bimodality coefficient remains flat to negative. That combination leaves the scaling claim inside the noise floor despite the larger seed count.
+
+EXPERIMENT: exp_bbp_spiked_covariance_gpu (228 results, 228 seeds, 13 hosts)
+  Results: Gaussian p=800 threshold jump (theta 0.75-0.65) +0.07613 +/- 0.02469 (d=3.08, 228/228 positive); supercritical shift (theta 1.0-0.707) +0.35377 +/- 0.05283 (d=6.70, 228/228 positive); Student-t minus Gaussian fluct23 delta at theta 0.75 +0.05858 +/- 0.02811 (d=2.08, 228/228 positive)
+  Conclusion: REJECTED
+    The BBP detachment transition itself is robust, but the heavy-tailed ensemble remains systematically offset from the Gaussian curve. With 228 seeds and the universality-breaking delta staying positive in every seed, the universality claim is rejected.
+
+NOTE: recent generic gpu_wu files were mapped through scheduler metadata. The 67-value percolation and 121-value stochastic-resonance schemas were already settled as REJECTED and were not re-analyzed.
