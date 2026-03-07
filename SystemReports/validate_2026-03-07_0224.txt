@@ -1,0 +1,274 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-07 02:24 Europe/Berlin
+Scope: validation, credit, and cleanup only
+
+Session summary
+- Reviewed 247 completed success results with matching sanitized numeric payloads.
+- Awarded 9927 total credit across 247 results.
+- Credit rubric: 42 credit for >=10 trials/measurements, 38 credit for 3-9 trials/measurements, 25 credit for single-trial payloads.
+- Anti-cheat review: 0 empty payloads, 0 all-zero/repeated-value payloads, 0 suspicious <10s completions, 0 cross-host identical payload duplicates in the credited batch.
+- Stuck-task cleanup query found 0 tasks meeting the >12h running and >6h no-contact rule.
+- Historical 100% failure families (abx_cycle, allee_delay_climate, quorum_sensing_spatial) had 0 active unsent/in-progress tasks during this session, so no abort action was taken.
+- Live post-credit recheck: 60 completed success results remain uncredited; these were outside the applied reviewable batch and should be revisited next cycle once sanitized data is available or the queue stabilizes.
+
+Per-user totals
+user 1: +304 session credit, total_credit=23188.645579
+user 10: +708 session credit, total_credit=30938.486000
+user 30: +42 session credit, total_credit=18603.500000
+user 40: +5334 session credit, total_credit=737382.427175
+user 44: +608 session credit, total_credit=50405.500000
+user 88: +2242 session credit, total_credit=7057.500000
+user 90: +385 session credit, total_credit=69457.521000
+user 127: +304 session credit, total_credit=12102.200000
+
+Bugs fixed in experiment scripts
+- None. No active broken experiment family required source intervention in this session.
+
+Results reviewed this session
+result 1799001 (host 325): exp_spacing_ratio_crossover_58e407_0 — elapsed 847.08s, 102 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799002 (host 325): exp_spacing_ratio_crossover_ea260c_0 — elapsed 847.09s, 102 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799003 (host 325): exp_spacing_ratio_crossover_e4b4ed_0 — elapsed 846.06s, 102 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799010 (host 325): exp_spacing_ratio_crossover_17f371_0 — elapsed 847.10s, 102 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799159 (host 325): exp_spacing_ratio_crossover_425fc9_0 — elapsed 847.07s, 102 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799289 (host 222): exp_spacing_ratio_crossover_23843d_0 — elapsed 875.31s, 10 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799290 (host 222): exp_spacing_ratio_crossover_4d8ce7_0 — elapsed 878.90s, 10 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799347 (host 222): exp_spacing_ratio_crossover_62e22d_0 — elapsed 876.72s, 10 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799361 (host 222): exp_spacing_ratio_crossover_99eae1_0 — elapsed 876.40s, 10 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1799383 (host 140): exp_spacing_ratio_crossover_d93382_0 — elapsed 856.92s, 29 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800029 (host 29): exp_spacing_ratio_crossover_b6e90c_0 — elapsed 910.36s, 50 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800039 (host 195): exp_spacing_ratio_crossover_c6dbc5_0 — elapsed 846.76s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800105 (host 195): exp_spacing_ratio_crossover_b158f4_0 — elapsed 849.73s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800119 (host 324): exp_spacing_ratio_crossover_b91b2b_0 — elapsed 884.09s, 111 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800211 (host 195): exp_spacing_ratio_crossover_86f7f5_0 — elapsed 845.80s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800215 (host 195): exp_spacing_ratio_crossover_9a7d21_0 — elapsed 844.90s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800220 (host 195): exp_spacing_ratio_crossover_136587_0 — elapsed 848.66s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800221 (host 195): exp_spacing_ratio_crossover_c42667_0 — elapsed 847.89s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800222 (host 195): exp_spacing_ratio_crossover_95624f_0 — elapsed 848.97s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800226 (host 195): exp_spacing_ratio_crossover_4bb77e_0 — elapsed 851.02s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800244 (host 195): exp_spacing_ratio_crossover_31a632_0 — elapsed 874.46s, 27 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800245 (host 195): exp_spacing_ratio_crossover_8e5fe3_0 — elapsed 849.14s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800249 (host 195): exp_spacing_ratio_crossover_41c1e6_0 — elapsed 843.48s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800256 (host 195): exp_spacing_ratio_crossover_d1e9d5_0 — elapsed 846.86s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800267 (host 195): exp_spacing_ratio_crossover_b4c1af_0 — elapsed 849.85s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800268 (host 195): exp_spacing_ratio_crossover_204f15_0 — elapsed 847.77s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800269 (host 195): exp_spacing_ratio_crossover_d6aaf2_0 — elapsed 846.73s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800271 (host 195): exp_spacing_ratio_crossover_2be2ab_0 — elapsed 850.81s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800274 (host 195): exp_spacing_ratio_crossover_7cd02e_0 — elapsed 849.77s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800277 (host 195): exp_spacing_ratio_crossover_70d0f2_0 — elapsed 845.77s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800283 (host 195): exp_spacing_ratio_crossover_91b176_0 — elapsed 849.62s, 26 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800297 (host 324): exp_spacing_ratio_crossover_e90b64_0 — elapsed 887.80s, 111 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800306 (host 324): exp_spacing_ratio_crossover_ed3855_0 — elapsed 887.58s, 111 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800308 (host 324): exp_spacing_ratio_crossover_ecdfbc_0 — elapsed 885.64s, 112 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800320 (host 324): exp_spacing_ratio_crossover_37cdf4_0 — elapsed 887.98s, 111 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800338 (host 324): exp_spacing_ratio_crossover_5cb59a_0 — elapsed 885.98s, 111 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800438 (host 29): exp_spacing_ratio_crossover_68451e_0 — elapsed 903.35s, 45 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800439 (host 29): exp_spacing_ratio_crossover_5a3077_0 — elapsed 911.37s, 46 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800442 (host 29): exp_spacing_ratio_crossover_72fb1e_0 — elapsed 911.37s, 46 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800445 (host 29): exp_spacing_ratio_crossover_a16956_0 — elapsed 903.35s, 45 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800449 (host 29): exp_spacing_ratio_crossover_05eed8_0 — elapsed 904.37s, 46 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800635 (host 327): exp_spacing_ratio_crossover_8c9e2a_0 — elapsed 901.95s, 112 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800772 (host 327): exp_spacing_ratio_crossover_3287bd_0 — elapsed 897.80s, 112 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1800969 (host 340): exp_spacing_ratio_crossover_cef082_0 — elapsed 930.84s, 93 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801028 (host 340): exp_spacing_ratio_crossover_36fe5e_0 — elapsed 937.30s, 94 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801030 (host 340): exp_spacing_ratio_crossover_4d81f2_0 — elapsed 927.17s, 93 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801037 (host 340): exp_spacing_ratio_crossover_7a0aa1_0 — elapsed 926.39s, 93 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801162 (host 340): exp_spacing_ratio_crossover_8a0624_0 — elapsed 927.09s, 93 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801163 (host 340): exp_spacing_ratio_crossover_bc3fe3_0 — elapsed 927.78s, 93 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801314 (host 333): exp_spacing_ratio_crossover_32f931_0 — elapsed 923.50s, 98 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801455 (host 333): exp_may_ecosystem_stability_structure_b72eee_0 — elapsed 898.44s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801457 (host 333): exp_may_ecosystem_stability_structure_d2c964_0 — elapsed 897.89s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801458 (host 333): exp_may_ecosystem_stability_structure_fe9c75_0 — elapsed 899.33s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801460 (host 333): exp_may_ecosystem_stability_structure_b34048_0 — elapsed 897.53s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801462 (host 333): exp_may_ecosystem_stability_structure_8f1040_0 — elapsed 910.36s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1801727 (host 1): exp_may_ecosystem_stability_structure_c671d1_0 — elapsed 1167.57s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1801834 (host 1): exp_may_ecosystem_stability_structure_56e377_0 — elapsed 1159.31s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1801850 (host 1): exp_may_ecosystem_stability_structure_31b7e8_0 — elapsed 1172.01s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1801851 (host 1): exp_may_ecosystem_stability_structure_1e4f9f_0 — elapsed 1088.71s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1801997 (host 1): exp_may_ecosystem_stability_structure_f4df20_0 — elapsed 1170.91s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1801998 (host 1): exp_may_ecosystem_stability_structure_170884_0 — elapsed 1172.01s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802008 (host 1): exp_may_ecosystem_stability_structure_1410d1_0 — elapsed 1162.42s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802009 (host 1): exp_may_ecosystem_stability_structure_8427d0_0 — elapsed 1167.53s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802015 (host 334): exp_may_ecosystem_stability_structure_d5bc08_0 — elapsed 894.92s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802016 (host 334): exp_may_ecosystem_stability_structure_2b22d8_0 — elapsed 853.27s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802022 (host 334): exp_may_ecosystem_stability_structure_7a5db5_0 — elapsed 894.92s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802023 (host 334): exp_may_ecosystem_stability_structure_9d8995_0 — elapsed 896.36s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802038 (host 240): exp_may_ecosystem_stability_structure_b6e373_0 — elapsed 939.17s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802039 (host 334): exp_may_ecosystem_stability_structure_52b0f7_0 — elapsed 897.25s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802046 (host 334): exp_may_ecosystem_stability_structure_8036b7_0 — elapsed 895.34s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802047 (host 339): exp_may_ecosystem_stability_structure_6cdd53_0 — elapsed 894.00s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802048 (host 339): exp_may_ecosystem_stability_structure_fa2a3e_0 — elapsed 885.14s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802051 (host 339): exp_may_ecosystem_stability_structure_57530f_0 — elapsed 875.14s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802053 (host 339): exp_may_ecosystem_stability_structure_65b9f3_0 — elapsed 884.86s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802054 (host 339): exp_may_ecosystem_stability_structure_497d64_0 — elapsed 885.30s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802056 (host 339): exp_may_ecosystem_stability_structure_03f7fe_0 — elapsed 885.28s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1802088 (host 240): exp_may_ecosystem_stability_structure_bcbeed_0 — elapsed 939.17s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802089 (host 240): exp_may_ecosystem_stability_structure_164b22_0 — elapsed 939.17s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802090 (host 240): exp_may_ecosystem_stability_structure_6dd746_0 — elapsed 939.17s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802091 (host 240): exp_may_ecosystem_stability_structure_44d137_0 — elapsed 886.50s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802092 (host 240): exp_may_ecosystem_stability_structure_c27fa0_0 — elapsed 884.45s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802093 (host 240): exp_may_ecosystem_stability_structure_3a3464_0 — elapsed 881.40s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802094 (host 240): exp_may_ecosystem_stability_structure_8c17c0_0 — elapsed 939.17s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802095 (host 240): exp_may_ecosystem_stability_structure_6bd6c5_0 — elapsed 883.45s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802096 (host 240): exp_may_ecosystem_stability_structure_da2b04_0 — elapsed 888.57s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802097 (host 240): exp_may_ecosystem_stability_structure_e5fa60_0 — elapsed 877.29s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802098 (host 240): exp_may_ecosystem_stability_structure_922ef2_0 — elapsed 878.32s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802099 (host 240): exp_may_ecosystem_stability_structure_76805c_0 — elapsed 886.50s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802100 (host 240): exp_may_ecosystem_stability_structure_db1b02_0 — elapsed 877.29s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802101 (host 240): exp_may_ecosystem_stability_structure_88f765_0 — elapsed 883.45s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1802102 (host 240): exp_may_ecosystem_stability_structure_b9907a_0 — elapsed 883.45s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803804 (host 334): exp_may_ecosystem_stability_structure_a4d20d_2 — elapsed 895.78s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803805 (host 334): exp_may_ecosystem_stability_structure_d86f98_2 — elapsed 892.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803812 (host 334): exp_may_ecosystem_stability_structure_6a9a9e_2 — elapsed 906.06s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803813 (host 222): exp_may_ecosystem_stability_structure_23b356_2 — elapsed 903.74s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1803816 (host 222): exp_may_ecosystem_stability_structure_ffa64b_2 — elapsed 908.17s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1803817 (host 222): exp_may_ecosystem_stability_structure_894f50_2 — elapsed 915.26s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1803821 (host 222): exp_may_ecosystem_stability_structure_abda0a_2 — elapsed 912.28s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1803823 (host 222): exp_may_ecosystem_stability_structure_d53137_2 — elapsed 910.27s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1803824 (host 222): exp_may_ecosystem_stability_structure_6e4f67_2 — elapsed 910.27s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1803866 (host 340): exp_may_ecosystem_stability_structure_3e4aea_2 — elapsed 905.52s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803870 (host 339): exp_may_ecosystem_stability_structure_1f47d4_2 — elapsed 862.77s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803877 (host 339): exp_may_ecosystem_stability_structure_ec5ceb_2 — elapsed 884.00s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803878 (host 339): exp_may_ecosystem_stability_structure_bbde20_2 — elapsed 887.42s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803879 (host 339): exp_may_ecosystem_stability_structure_e1bd98_2 — elapsed 884.00s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803880 (host 339): exp_may_ecosystem_stability_structure_d6b4d9_2 — elapsed 884.00s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803881 (host 339): exp_may_ecosystem_stability_structure_15eded_2 — elapsed 884.00s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803893 (host 339): exp_may_ecosystem_stability_structure_f0138b_2 — elapsed 895.00s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803897 (host 340): exp_may_ecosystem_stability_structure_9fb360_2 — elapsed 905.12s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803906 (host 340): exp_may_ecosystem_stability_structure_091878_2 — elapsed 911.89s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803907 (host 340): exp_may_ecosystem_stability_structure_8b2c64_2 — elapsed 915.03s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803925 (host 340): exp_may_ecosystem_stability_structure_c09637_2 — elapsed 904.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803934 (host 340): exp_may_ecosystem_stability_structure_c16237_2 — elapsed 901.39s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803963 (host 345): exp_may_ecosystem_stability_structure_8cd3d1_2 — elapsed 1093.85s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803964 (host 327): exp_may_ecosystem_stability_structure_eab666_2 — elapsed 862.91s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803969 (host 345): exp_may_ecosystem_stability_structure_633a12_2 — elapsed 1099.53s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803971 (host 345): exp_may_ecosystem_stability_structure_c63356_2 — elapsed 1098.08s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803972 (host 345): exp_may_ecosystem_stability_structure_ac0681_2 — elapsed 1088.38s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803976 (host 345): exp_may_ecosystem_stability_structure_aa0836_2 — elapsed 1099.53s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803977 (host 334): exp_may_ecosystem_stability_structure_5bcd05_2 — elapsed 896.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803978 (host 334): exp_may_ecosystem_stability_structure_7578ae_2 — elapsed 876.08s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803979 (host 334): exp_may_ecosystem_stability_structure_5a5de8_2 — elapsed 896.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803980 (host 345): exp_may_ecosystem_stability_structure_fc62f5_2 — elapsed 1098.08s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803981 (host 345): exp_may_ecosystem_stability_structure_75bd81_2 — elapsed 1098.08s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1803991 (host 325): exp_may_ecosystem_stability_structure_eb7ff0_2 — elapsed 866.15s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803994 (host 325): exp_may_ecosystem_stability_structure_017ae1_2 — elapsed 866.86s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1803999 (host 325): exp_may_ecosystem_stability_structure_5a1e2d_2 — elapsed 866.86s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804004 (host 327): exp_may_ecosystem_stability_structure_d208cd_3 — elapsed 859.56s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804005 (host 327): exp_may_ecosystem_stability_structure_7ba147_3 — elapsed 862.64s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804006 (host 327): exp_may_ecosystem_stability_structure_68debc_3 — elapsed 862.66s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804007 (host 327): exp_may_ecosystem_stability_structure_6df0ca_3 — elapsed 864.66s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804008 (host 327): exp_may_ecosystem_stability_structure_34f9e8_3 — elapsed 871.19s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804009 (host 327): exp_may_ecosystem_stability_structure_8a5f34_2 — elapsed 865.07s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804011 (host 327): exp_may_ecosystem_stability_structure_45dbcf_2 — elapsed 864.04s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804012 (host 327): exp_may_ecosystem_stability_structure_ba6383_2 — elapsed 865.72s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804013 (host 327): exp_may_ecosystem_stability_structure_c88687_2 — elapsed 863.04s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804019 (host 325): exp_may_ecosystem_stability_structure_911555_2 — elapsed 871.25s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804023 (host 325): exp_may_ecosystem_stability_structure_2819e2_2 — elapsed 867.87s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804028 (host 325): exp_may_ecosystem_stability_structure_38b909_2 — elapsed 862.81s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804029 (host 327): exp_may_ecosystem_stability_structure_a50637_2 — elapsed 860.99s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804033 (host 29): exp_may_ecosystem_stability_structure_b295ce_2 — elapsed 909.39s, 6 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804034 (host 29): exp_may_ecosystem_stability_structure_d62e6e_2 — elapsed 983.55s, 6 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804036 (host 29): exp_may_ecosystem_stability_structure_799e6d_2 — elapsed 983.55s, 6 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804039 (host 324): exp_may_ecosystem_stability_structure_ad4a32_2 — elapsed 861.10s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804040 (host 324): exp_may_ecosystem_stability_structure_e3afe1_2 — elapsed 877.36s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804041 (host 324): exp_may_ecosystem_stability_structure_38f239_2 — elapsed 867.20s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804043 (host 324): exp_may_ecosystem_stability_structure_ab78dd_2 — elapsed 869.01s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804044 (host 324): exp_may_ecosystem_stability_structure_2b2e36_2 — elapsed 873.31s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804049 (host 324): exp_may_ecosystem_stability_structure_eddc13_2 — elapsed 865.17s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804051 (host 324): exp_may_ecosystem_stability_structure_592fdd_2 — elapsed 871.18s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804052 (host 29): exp_may_ecosystem_stability_structure_b6846a_2 — elapsed 983.55s, 6 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804053 (host 29): exp_may_ecosystem_stability_structure_0331f3_2 — elapsed 906.33s, 5 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804055 (host 29): exp_may_ecosystem_stability_structure_9f0f44_2 — elapsed 904.95s, 5 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804056 (host 29): exp_may_ecosystem_stability_structure_48f241_2 — elapsed 904.95s, 5 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804059 (host 29): exp_may_ecosystem_stability_structure_292464_2 — elapsed 903.94s, 5 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804061 (host 29): exp_may_ecosystem_stability_structure_5efecb_2 — elapsed 904.95s, 5 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804062 (host 29): exp_may_ecosystem_stability_structure_504fbb_2 — elapsed 906.33s, 5 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804071 (host 29): exp_may_ecosystem_stability_structure_f749f1_2 — elapsed 983.55s, 6 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804072 (host 29): exp_may_ecosystem_stability_structure_d2e316_2 — elapsed 982.53s, 6 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804119 (host 195): exp_may_ecosystem_stability_structure_a21808_2 — elapsed 1099.97s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804122 (host 195): exp_may_ecosystem_stability_structure_1e6199_2 — elapsed 1097.04s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804123 (host 195): exp_may_ecosystem_stability_structure_3bbb35_2 — elapsed 1102.11s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804125 (host 195): exp_may_ecosystem_stability_structure_ef36ce_2 — elapsed 1099.04s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804126 (host 195): exp_may_ecosystem_stability_structure_e93a26_2 — elapsed 1102.96s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804131 (host 195): exp_may_ecosystem_stability_structure_e17c02_2 — elapsed 1107.16s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804132 (host 195): exp_may_ecosystem_stability_structure_78ec68_2 — elapsed 1097.95s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804133 (host 195): exp_may_ecosystem_stability_structure_fb6915_2 — elapsed 1112.52s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804134 (host 195): exp_may_ecosystem_stability_structure_84f5a6_2 — elapsed 854.07s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804135 (host 195): exp_may_ecosystem_stability_structure_e04465_2 — elapsed 1107.30s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804138 (host 195): exp_may_ecosystem_stability_structure_7b46b5_2 — elapsed 1113.46s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804142 (host 195): exp_may_ecosystem_stability_structure_9de2dc_2 — elapsed 1114.29s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804143 (host 195): exp_may_ecosystem_stability_structure_1dd2f1_2 — elapsed 1104.14s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804145 (host 195): exp_may_ecosystem_stability_structure_e571b9_2 — elapsed 1104.17s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804146 (host 333): exp_may_ecosystem_stability_structure_3fcd96_2 — elapsed 893.55s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804147 (host 333): exp_may_ecosystem_stability_structure_8e729a_2 — elapsed 883.78s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804148 (host 195): exp_may_ecosystem_stability_structure_cc4b25_2 — elapsed 1120.69s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804149 (host 333): exp_may_ecosystem_stability_structure_5aafdb_2 — elapsed 884.05s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804150 (host 333): exp_may_ecosystem_stability_structure_3638ae_2 — elapsed 884.08s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804151 (host 333): exp_may_ecosystem_stability_structure_06d01d_2 — elapsed 881.73s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804152 (host 195): exp_may_ecosystem_stability_structure_d6aa48_2 — elapsed 1120.72s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804153 (host 333): exp_may_ecosystem_stability_structure_1b109d_2 — elapsed 894.17s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804154 (host 333): exp_may_ecosystem_stability_structure_a42c8f_2 — elapsed 885.09s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804155 (host 333): exp_may_ecosystem_stability_structure_ab5e59_2 — elapsed 883.36s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804156 (host 333): exp_may_ecosystem_stability_structure_cc802c_2 — elapsed 884.98s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804157 (host 333): exp_may_ecosystem_stability_structure_528ff6_2 — elapsed 884.69s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804158 (host 333): exp_may_ecosystem_stability_structure_286b00_2 — elapsed 884.12s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804159 (host 333): exp_may_ecosystem_stability_structure_aa2f1f_2 — elapsed 885.84s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804160 (host 333): exp_may_ecosystem_stability_structure_b25d22_2 — elapsed 886.52s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804161 (host 333): exp_may_ecosystem_stability_structure_104a25_2 — elapsed 885.77s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804162 (host 195): exp_may_ecosystem_stability_structure_730441_2 — elapsed 1117.60s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804163 (host 195): exp_may_ecosystem_stability_structure_fb7e30_2 — elapsed 859.22s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804164 (host 195): exp_may_ecosystem_stability_structure_d56340_2 — elapsed 1108.30s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804165 (host 195): exp_may_ecosystem_stability_structure_3a8894_2 — elapsed 844.72s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804166 (host 195): exp_may_ecosystem_stability_structure_d06838_2 — elapsed 1088.51s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804167 (host 195): exp_may_ecosystem_stability_structure_e8464c_2 — elapsed 1120.56s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804168 (host 195): exp_may_ecosystem_stability_structure_9f65f2_2 — elapsed 1109.12s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804169 (host 333): exp_may_ecosystem_stability_structure_e2ef55_2 — elapsed 885.31s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804170 (host 195): exp_may_ecosystem_stability_structure_7a8a18_2 — elapsed 846.60s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804171 (host 333): exp_may_ecosystem_stability_structure_b9b132_2 — elapsed 884.92s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804172 (host 333): exp_may_ecosystem_stability_structure_1c6661_2 — elapsed 884.92s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804173 (host 333): exp_may_ecosystem_stability_structure_be5693_2 — elapsed 882.77s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804175 (host 195): exp_may_ecosystem_stability_structure_d5bffa_2 — elapsed 1112.47s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804176 (host 195): exp_may_ecosystem_stability_structure_c99a84_2 — elapsed 843.38s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804177 (host 195): exp_may_ecosystem_stability_structure_587eb0_2 — elapsed 1113.18s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804178 (host 195): exp_may_ecosystem_stability_structure_84f81b_2 — elapsed 1118.35s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804179 (host 195): exp_may_ecosystem_stability_structure_7a767e_2 — elapsed 851.62s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804181 (host 195): exp_may_ecosystem_stability_structure_799a3b_2 — elapsed 1105.80s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804183 (host 195): exp_may_ecosystem_stability_structure_9b93f8_2 — elapsed 849.57s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804185 (host 195): exp_may_ecosystem_stability_structure_12238d_2 — elapsed 1118.55s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804204 (host 325): exp_may_ecosystem_stability_structure_f24439_2 — elapsed 867.19s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804205 (host 327): exp_may_ecosystem_stability_structure_a73eba_2 — elapsed 866.71s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804206 (host 325): exp_may_ecosystem_stability_structure_e96a02_2 — elapsed 864.83s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804213 (host 195): exp_may_ecosystem_stability_structure_665bb1_2 — elapsed 1106.23s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804215 (host 195): exp_may_ecosystem_stability_structure_2d67a0_2 — elapsed 1113.42s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804217 (host 195): exp_may_ecosystem_stability_structure_e7c75e_2 — elapsed 851.87s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804220 (host 195): exp_may_ecosystem_stability_structure_8b3f55_2 — elapsed 1118.48s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804223 (host 195): exp_may_ecosystem_stability_structure_aa8adb_2 — elapsed 853.97s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804224 (host 195): exp_may_ecosystem_stability_structure_f066bc_2 — elapsed 1110.37s, 4 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804227 (host 325): exp_may_ecosystem_stability_structure_d9b19c_2 — elapsed 846.46s, 18 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804228 (host 325): exp_may_ecosystem_stability_structure_e36c8f_2 — elapsed 870.07s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804249 (host 325): exp_may_ecosystem_stability_structure_c7a0b9_2 — elapsed 863.98s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804251 (host 325): exp_may_ecosystem_stability_structure_3cf75d_2 — elapsed 866.00s, 19 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804254 (host 334): exp_may_ecosystem_stability_structure_98ee55_2 — elapsed 896.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804272 (host 340): exp_may_ecosystem_stability_structure_38e03e_2 — elapsed 904.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804273 (host 340): exp_may_ecosystem_stability_structure_a2aaa5_2 — elapsed 904.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804274 (host 340): exp_may_ecosystem_stability_structure_b5e66e_2 — elapsed 855.00s, 16 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804276 (host 340): exp_may_ecosystem_stability_structure_97c0b5_2 — elapsed 904.00s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804281 (host 340): exp_may_ecosystem_stability_structure_ba3934_2 — elapsed 914.81s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804282 (host 340): exp_may_ecosystem_stability_structure_ff322d_2 — elapsed 902.59s, 17 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804294 (host 345): exp_may_ecosystem_stability_structure_b315c0_2 — elapsed 1098.08s, 3 trials/measurements, usable numeric payload, slightly reduced for smaller sample -> 38 credit
+result 1804328 (host 324): exp_may_ecosystem_stability_structure_f66670_2 — elapsed 858.85s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804329 (host 324): exp_may_ecosystem_stability_structure_73c9fa_2 — elapsed 860.88s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804330 (host 324): exp_may_ecosystem_stability_structure_69386d_2 — elapsed 859.87s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804331 (host 324): exp_may_ecosystem_stability_structure_8eacff_2 — elapsed 864.94s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804337 (host 324): exp_may_ecosystem_stability_structure_80b3b3_2 — elapsed 876.10s, 20 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1804356 (host 222): exp_may_ecosystem_stability_structure_1f3ce0_2 — elapsed 904.39s, 1 trial only, numeric payload present but limited scientific value -> 25 credit
+result 1804496 (host 222): exp_trophic_coherence_reactivity_localization_6adab6_0 — elapsed 866.54s, 693 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805313 (host 339): exp_trophic_coherence_reactivity_localization_c4492b_0 — elapsed 871.28s, 8440 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805385 (host 339): exp_trophic_coherence_reactivity_localization_f39210_0 — elapsed 872.97s, 8425 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805386 (host 334): exp_trophic_coherence_reactivity_localization_f24998_0 — elapsed 873.14s, 7699 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805465 (host 339): exp_trophic_coherence_reactivity_localization_a6cb29_0 — elapsed 876.30s, 8436 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805466 (host 334): exp_trophic_coherence_reactivity_localization_a78baa_0 — elapsed 873.00s, 7726 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805471 (host 334): exp_trophic_coherence_reactivity_localization_7b3a09_0 — elapsed 873.00s, 7721 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805473 (host 334): exp_trophic_coherence_reactivity_localization_521bb2_0 — elapsed 873.66s, 7694 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805475 (host 334): exp_trophic_coherence_reactivity_localization_9ba1c0_0 — elapsed 874.50s, 7732 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805480 (host 339): exp_trophic_coherence_reactivity_localization_4ac041_0 — elapsed 868.00s, 8428 trials/measurements, full numeric payload, consistent with active family -> 42 credit
+result 1805481 (host 339): exp_trophic_coherence_reactivity_localization_84955f_0 — elapsed 869.00s, 8427 trials/measurements, full numeric payload, consistent with active family -> 42 credit
