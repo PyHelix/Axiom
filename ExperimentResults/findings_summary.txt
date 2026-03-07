@@ -1,100 +1,65 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-
 EXPERIMENT: exp_may_heterogeneity_reactivity_localization
 Status: CONFIRMED
-Results: high-low window width +3.96477 +/- 0.04442 (d=89.25, 735/735 positive); high-low reactive IPR +0.28195 +/- 0.00084 (d=335.59, 735/735 positive); high-low effective fraction -0.22077 +/- 0.00066 (d=-332.85, 735/735 negative). Heterogeneity-window corr +0.60704 +/- 0.00525 and heterogeneity-reactive-IPR corr +0.81776 +/- 0.00137 are both positive in 100% of seeds. 735 seeds, 17 hosts.
+Results: high-low window width +3.96477 +/- 0.04442 (d=89.25, 735/735 positive); high-low reactive IPR +0.28195 +/- 0.00084 (d=335.59, 735/735 positive); high-low effective fraction -0.22077 +/- 0.00066 (d=-332.85, 735/735 negative). 735 seeds, 17 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_trophic_coherence_reactivity_localization
 Status: REJECTED
-Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive), so added incoherence shrinks the reactive wedge instead of widening it. Midlayer-mass noise slope -0.02371 +/- 0.00462 (d=-5.13, 257/257 negative) shows coherence still localizes the reactive mode on middle layers. 257 seeds, 13 hosts.
+Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive); midlayer-mass noise slope -0.02371 +/- 0.00462 (d=-5.13, 257/257 negative). 257 seeds, 13 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_muller_ratchet_fluctuating_metapop
 Status: NO EFFECT
-Results: async-persistent click-min advantage +0.00009 +/- 0.00143 (d=0.06, 378/713 positive); persistent-async optimum shift -0.00135 +/- 0.06835 (d=-0.02, 249/713 negative); sync rescue gap +0.00000 +/- 0.00069 (d=0.01, 369/713 positive). The persistence-specific rescue window still does not separate from noise after 713 seeds. 713 seeds, 16 hosts.
+Results: async-persistent click-min advantage +0.00009 +/- 0.00143 (d=0.06, 378/713 positive); persistent-async optimum shift -0.00135 +/- 0.06835 (d=-0.02, 249/713 negative); sync rescue gap +0.00000 +/- 0.00069 (d=0.01, 369/713 positive). 713 seeds, 16 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_may_nested_mutualism_localization
 Status: REJECTED
-Results: high-mid window gain -0.03234 +/- 0.00039 (d=-83.14, 0/3075 positive); high-mid core reactive-mass shift +0.02119 +/- 0.00097 (d=21.87, 3075/3075 positive). Strong nestedness re-localizes reactive mass onto the core but does not re-widen the reactive window; the window keeps shrinking instead. 3075 seeds, 21 hosts.
+Results: high-mid window gain -0.03234 +/- 0.00039 (d=-83.14, 0/3075 positive); high-mid core reactive-mass shift +0.02119 +/- 0.00097 (d=21.87, 3075/3075 positive). 3075 seeds, 21 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_metapop_commuting_reactivity_localization
 Status: NO EFFECT
-Results: mid-asymmetry window gain +0.00020 +/- 0.00144 (d=0.14, 1458/2573 positive); high-asymmetry window gain +0.00026 +/- 0.00140 (d=0.18, 1519/2573 positive); high-mid hub-mass shift -0.00010 +/- 0.00227 (d=-0.05, 1349/2573 negative). Directional commuting still changes sign across seeds, and both window and localization shifts remain inside noise. 2573 seeds, 24 hosts.
+Results: mid-asymmetry window gain +0.00020 +/- 0.00144 (d=0.14, 1458/2573 positive); high-asymmetry window gain +0.00026 +/- 0.00140 (d=0.18, 1519/2573 positive); high-mid hub-mass shift -0.00010 +/- 0.00227 (d=-0.05, 1349/2573 negative). 2573 seeds, 24 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_may_lowrank_mutualism_localization
 Status: NO EFFECT
-Results: mid-window shift -7.36798 +/- 159.37912 (d=-0.05, 113/211 negative); high-window shift -2.76998 +/- 189.94482 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00530 (d=33.92, 211/211 positive). The low-rank mutualistic core clearly re-localizes the mode, but it still does not produce a reproducible U-shaped reactive-window crossover. 211 seeds, 11 hosts.
+Results: mid-window shift -7.36798 +/- 159.37912 (d=-0.05, 113/211 negative); high-window shift -2.76998 +/- 189.94482 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00530 (d=33.92, 211/211 positive). 211 seeds, 11 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_isr_trapmemory_delay_interaction
 Status: REJECTED
-Results: strong-minus-weak-memory delay-window interaction -0.01146 +/- 0.01384 (d=-0.83, 384/487 negative); global reentrant gain +0.00244 +/- 0.00830 (d=0.29, 288/487 positive); alpha0-alpha2 window delta -0.01146 +/- 0.01384 (d=-0.83, 384/487 negative). Adaptive resetting does not strengthen the medium-delay window under stronger trap memory; the interaction runs in the opposite direction across most seeds. 487 seeds, 19 hosts.
+Results: strong-minus-weak-memory delay-window interaction -0.01146 +/- 0.01384 (d=-0.83, 103/487 positive); global reentrant gain +0.00244 +/- 0.00830 (d=0.29, 288/487 positive); alpha0-alpha2 window delta -0.01146 +/- 0.01384 (d=-0.83, 103/487 positive). 487 seeds, 19 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_percolation_diffusion_spectral_gpu
 Status: REJECTED
-Results: L512 spectral dimension 1.46980 +/- 0.01967; AO gap +0.13647 +/- 0.01967 (d=6.94, 166/166 positive); L512-L128 ds lift +0.42515 +/- 0.02867 (d=14.83, 166/166 positive). Over this size range the walks move away from 4/3 rather than converging toward it, so the Alexander-Orbach target is not supported by the current ensemble. 166 seeds, 10 hosts.
+Results: L512 spectral dimension 1.46980 +/- 0.01967; AO gap +0.13647 +/- 0.01967 (d=6.94, 166/166 positive); L512-L128 ds lift +0.42515 +/- 0.02867 (d=14.83, 166/166 positive). 166 seeds, 10 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_stochastic_resonance_universality_gpu
 Status: REJECTED
-Results: cosine-quartic peak-noise delta from unity -0.67931 +/- 0.12908 (d=-5.26, 55/56 negative); piecewise-quartic FWHM delta from unity -0.85484 +/- 0.07219 (d=-11.84, 56/56 negative); mean absolute universality deviation 0.74420 +/- 0.08537. Peak locations and widths do not collapse across the three potentials in this regime. 56 seeds, 7 hosts.
+Results: cosine-quartic peak-noise delta from unity -0.67931 +/- 0.12908 (d=-5.26, 1/56 positive); piecewise-quartic FWHM delta from unity -0.85484 +/- 0.07219 (d=-11.84, 0/56 positive); mean absolute universality deviation 0.74420 +/- 0.08537. 56 seeds, 7 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_oregonator_delay_adaptive_illumination_window
 Status: REJECTED
-Results: medium-delay window gain -0.00014 +/- 0.00000 (d=-43.56, 0/814 positive); adaptive-minus-pulse score +0.01172 +/- 0.00000 (d=7260.91, 814/814 positive); adaptive-minus-pulse usage -0.06075 +/- 0.00000 (d=-801830708.81, 814/814 negative). Adaptive illumination scores better mainly by using less control, but it never opens the hypothesized medium-delay window. 814 seeds, 23 hosts.
+Results: medium-delay window gain -0.00014 +/- 0.00000 (d=-43.56, 0/814 positive); adaptive-minus-pulse score +0.01172 +/- 0.00000 (d=7260.91, 814/814 positive); adaptive-minus-pulse usage -0.06075 +/- 0.00000 (d=-801830708.81, 814/814 negative). 814 seeds, 23 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_sir_bimodal_scaling_gpu
 Status: NO EFFECT
-Results: R0=1 gap growth from N200 to N2000 +0.01703 +/- 0.01063 (d=1.60, 113/120 positive); R0=1 bimodality-coefficient growth -0.00797 +/- 0.01826 (d=-0.44, 86/120 negative). The larger system only adds a sub-2% gap lift while the bimodality coefficient stays flat-to-negative, so the scaling claim still does not separate from noise. 120 seeds, 7 hosts.
+Results: R0=1 gap growth from N200 to N2000 +0.01703 +/- 0.01063 (d=1.60, 113/120 positive); R0=1 bimodality-coefficient growth -0.00797 +/- 0.01826 (d=-0.44, 34/120 positive). 120 seeds, 7 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_bbp_spiked_covariance_gpu
 Status: REJECTED
-Results: Gaussian p=800 threshold jump (theta 0.75-0.65) +0.07613 +/- 0.02469 (d=3.08, 228/228 positive); supercritical shift (theta 1.0-0.707) +0.35377 +/- 0.05283 (d=6.70, 228/228 positive); Student-t minus Gaussian fluct23 delta at theta 0.75 +0.05858 +/- 0.02811 (d=2.08, 228/228 positive). The BBP detachment itself is robust, but the heavy-tailed ensemble stays offset from the Gaussian curve, so the universality claim fails at scale. 228 seeds, 13 hosts.
-Last updated: 2026-03-07
-
-EXPERIMENT: exp_may_nested_mutualism_localization_gpu
-Status: DEPLOYED
-Hypothesis: GPU May ensembles now target the same nestedness-by-heterogeneity transient-reactivity crossover as the CPU experiment, replacing retired heterogeneity-only GPU work with a direct test of whether intermediate nestedness delocalizes the reactive mode before strong nested hubs re-localize it. Literature check found nestedness and localization studies, but not this transient reactive-window crossover.
+Results: Gaussian p=800 threshold jump +0.07613 +/- 0.02469 (d=3.08, 228/228 positive); supercritical shift +0.35377 +/- 0.05283 (d=6.70, 228/228 positive); Student-t minus Gaussian fluct23 delta +0.05858 +/- 0.02811 (d=2.08, 228/228 positive). 228 seeds, 13 hosts.
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_kac_edge_correlation_crossover
-Status: DEPLOYED
-Hypothesis: intermediate short-range coefficient correlation in Kac polynomials creates a nonmonotonic increase in near-|x|=1 real-zero density and normalized real-root count relative to both iid and near-deterministic coefficient limits. Literature check searched "Kac polynomials dependent coefficients real zeros edge accumulation", "random polynomial dependent coefficients real roots Kac", and "real roots near 1 random polynomials dependent coefficients"; found dependent-coefficient real-zero papers, but not this finite-size AR(1) edge-clustering crossover test for algebraic Kac ensembles.
+Status: REJECTED
+Results: edge-window gain -0.01199 +/- 0.00038 (d=-31.19, 0/707 positive); real-root window gain -0.01057 +/- 0.00002 (d=-514.16, 0/707 positive); inner suppression +0.00090 +/- 0.00015 (d=5.91, 707/707 positive). 707 seeds, 10 hosts.
 Last updated: 2026-03-07
-
-EXPERIMENT: exp_kac_edge_correlation_crossover_gpu
-Status: DEPLOYED
-Hypothesis: intermediate AR(1) correlation in high-degree Kac polynomials produces a finite-size peak in near-|x|=1 real-root density and normalized real-root count relative to both iid and near-deterministic limits when measured with large batched GPU ensembles. Literature check searched "Kac polynomials dependent coefficients real zeros edge accumulation", "random polynomial dependent coefficients real roots Kac", and "real roots near 1 random polynomials dependent coefficients AR(1)"; found asymptotic dependent-coefficient real-zero theory and recent near-1 universality results, but not this finite-size nonmonotonic AR(1) crossover experiment.
-Last updated: 2026-03-07
-
-NOTE 2026-03-07: retired active queues for exp_may_heterogeneity_reactivity_localization and exp_trophic_coherence_reactivity_localization after their findings were already settled; CPU pool refilled to ~40k total with may_lowrank_mutualism_localization, may_nested_mutualism_localization, metapop_commuting_reactivity_localization, isr_trapmemory_delay_interaction, and oregonator_delay_adaptive_illumination_window.
-NOTE 2026-03-07: removed staged CPU work for retired exp_may_lowrank_mutualism_localization, exp_may_nested_mutualism_localization, and exp_metapop_commuting_reactivity_localization; aborted the remaining active metapop commuting results and refilled the CPU pool back to 40,000 total with isr_trapmemory_delay_interaction, oregonator_delay_adaptive_illumination_window, and kac_edge_correlation_crossover.
-NOTE 2026-03-07: removed staged GPU work for settled exp_percolation_diffusion_spectral_gpu, exp_stochastic_resonance_universality_gpu, and exp_may_lowrank_mutualism_localization_gpu; added exp_kac_edge_correlation_crossover_gpu and refilled the GPU stage with active bbp_spiked_covariance_gpu, sir_bimodal_scaling_gpu, may_nested_mutualism_localization_gpu, and kac_edge_correlation_crossover_gpu work.
-EXPERIMENT: exp_langton_ant_anisotropic_stripes
-Status: DEPLOYED
-Hypothesis: near the classical random-initial-condition collapse band, moderate stripe anisotropy in the initial black-cell landscape increases highway success and advances highway onset relative to both iid disorder and over-striped limits by opening long transport corridors without fully pinning the ant to domain walls. Literature check searched "Langton's ant anisotropic initial conditions", "Langton ant random initial condition correlation highway paper", and "Langton ant striped initial conditions highway"; found highway dynamics and generalized-ant papers plus work on random perturbations and finite seeds, but no direct test of anisotropic stripe disorder for the classical ant.
-Last updated: 2026-03-07
-NOTE 2026-03-07: retired the remaining active exp_isr_trapmemory_delay_interaction queue after findings_summary and retired_experiments both marked it settled; cleared the stale exp_may_heterogeneity_reactivity_localization stragglers; refilled the CPU pool back toward 40,000 with oregonator_delay_adaptive_illumination_window, kac_edge_correlation_crossover, and new langton_ant_anisotropic_stripes work.
-EXPERIMENT: exp_rps_striped_mobility_coexistence_gpu
-Status: DEPLOYED
-Hypothesis: intermediate stripe-correlated mobility disorder in a spatial rock-paper-scissors lattice increases coexistence time and entropy relative to both IID site disorder and near-deterministic stripe channels by opening transport corridors without globally pinning invasion fronts. Literature check searched "rock-paper-scissors mobility heterogeneity coexistence lattice", "rock-paper-scissors environmental heterogeneity coexistence spatial", "rock-paper-scissors anisotropic habitat lattice coexistence", and "rock-paper-scissors stripe disorder coexistence"; found prior mobility and heterogeneity studies, but no direct stripe-anisotropy corridor test for this nonmonotonic coexistence hypothesis.
-Last updated: 2026-03-07
-NOTE 2026-03-07: GPU pool was already near target at 1985 total (1823 staged, 115 unsent, 47 in progress), so no broad top-up was needed. No active GPU family met the Step 4 retirement threshold. Replaced 300 staged exp_bbp_spiked_covariance_gpu_gpu files with exp_rps_striped_mobility_coexistence_gpu_gpu to diversify the queue while staying near the 2000-WU cap.
-EXPERIMENT: exp_random_fibonacci_markov_persistence
-Status: DEPLOYED
-Hypothesis: intermediate sign persistence in a Markov-modulated random Fibonacci recurrence creates a finite-size intermittency window, raising local log-growth variance above both the IID-sign and near-deterministic limits even if the mean growth exponent stays between them. Literature check searched "random Fibonacci correlated signs", "random Fibonacci Markov", and "random Fibonacci sequence dependent signs"; found classic IID-sign growth papers, biased-sign extensions, and related periodic or finite-state recurrences, but no direct Markov-persistence crossover test for cancellation bursts and local-growth variance.
-Last updated: 2026-03-07
-NOTE 2026-03-07: aborted 2932 active exp_isr_trapmemory_delay_interaction results plus the last stale exp_may_heterogeneity_reactivity_localization row, then brought the CPU pool back to ~40,000 total with a staged mix of 10k oregonator_delay_adaptive_illumination_window, 10k kac_edge_correlation_crossover, 10k langton_ant_anisotropic_stripes, and 9.9k random_fibonacci_markov_persistence workunits.
-EXPERIMENT: exp_bootstrap_striped_threshold_gpu
-Status: DEPLOYED
-Hypothesis: intermediate stripe anisotropy in heterogeneous 2D bootstrap-percolation thresholds increases spanning probability and growth gain relative to both IID disorder and near-deterministic stripe bands by opening low-threshold corridors before high-threshold walls dominate. Literature check searched "bootstrap percolation correlated disorder anisotropy stripes lattice paper", "bootstrap percolation correlated thresholds spatial correlation paper", and "anisotropic bootstrap percolation random thresholds stripe disorder"; found anisotropic-bootstrap and heterogeneous-threshold work, but no direct finite-size stripe-threshold crossover test matching this GPU batched design.
-Last updated: 2026-03-07
-NOTE 2026-03-07: GPU pool sat near target at 1969 total (1814 staged, 91 unsent, 64 in progress), so no broad top-up or retirement action was warranted. Rotated 200 staged exp_may_nested_mutualism_localization_gpu files into exp_bootstrap_striped_threshold_gpu to diversify the GPU queue without exceeding the ~2000-WU cap.
