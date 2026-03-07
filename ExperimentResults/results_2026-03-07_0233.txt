@@ -1,0 +1,22 @@
+Axiom BOINC Scientific Analysis
+Timestamp: 2026-03-07_0233 UTC
+
+Recent-family scan (last 180 min): 393 spacing_ratio_crossover, 233 may_ecosystem_stability_structure, 69 gpu_wu, 47 adaptive_voter_delay_rewiring, 41 activation_function_landscape, 26 antibiotic_delay_fatigue_switch, 22 allee_delay_climate_harvest, 17 mayreact_gap_gpu, 11 trophic_coherence_reactivity_localization.
+Previously confirmed or rejected families were skipped per findings_summary.txt.
+
+gpu_wu note: `gpu_wu` is a generic GPU wrapper bucket, not a standalone experiment family. There is no matching script at /opt/axiom_boinc/html/user/experiments/gpu_wu.py, so it was not analyzed as a scientific family in this cycle.
+
+EXPERIMENT: adaptive_voter_delay_rewiring (93 results, 1 seed, 14 hosts)
+  Results: trial_mean_gain = -0.000380 +/- 0.000109, Cohen's d = -3.49, 0/93 positive; reentrant_index = -0.000091 +/- 0.000104, Cohen's d = -0.88, 21/93 positive; support_fraction = 0.4879 +/- 0.0027.
+  Conclusion: NO EFFECT
+    The measured gain is negative but extremely small in absolute size (<0.04%), and the claimed delay-window signal is not sign-consistent. This benchmark still has only one seed, so the result remains a fixed-instance no-effect observation rather than a promotable population-level finding.
+
+EXPERIMENT: trophic_coherence_reactivity_localization (11 results, 11 seeds, 3 hosts)
+  Results: window_noise_slope = -0.4187 +/- 0.0018, Cohen's d = -230.06, 0/11 positive; midlayer_mass_noise_slope = -0.02337 +/- 0.00239, Cohen's d = -9.79, 0/11 positive; reactive_fraction = 1.000 +/- 0.000.
+  Conclusion: PRELIMINARY
+    Across all 11 seeds, increasing incoherence shrinks the stable-but-reactive window instead of widening it, so the direction is opposite the original hypothesis. The localization signal is also consistent: higher incoherence moves reactive-mode mass away from middle trophic layers rather than concentrating it there.
+
+EXPERIMENT: mayreact_gap_gpu (17 results, 0 valid payloads, 3 hosts)
+  Results: valid numeric payloads = 0/17; mean elapsed = 0.606 s; no effect-size calculation possible.
+  Conclusion: PRELIMINARY
+    This family remains blocked by data quality rather than by mixed scientific evidence. With zero valid numeric payloads in the sanitized outputs, no scientific conclusion can be advanced until payload generation is fixed.
