@@ -12,6 +12,49 @@ Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive), so
 Last updated: 2026-03-07
 
 EXPERIMENT: exp_muller_ratchet_fluctuating_metapop
-Status: PRELIMINARY
-Results: best persistent migration 0.07943 +/- 0.04256 (29/35 intermediate), but best async migration is also 0.07886 +/- 0.05339 (0/35 at zero). Async-persistent click-min gap is only +0.00047 +/- 0.00167 (d=0.28, 21/35 positive), so the persistence-specific rescue window is not yet separated from noise. 35 seeds, 4 hosts.
+Status: NO EFFECT
+Results: async-persistent click-min advantage +0.00007 +/- 0.00142 (d=0.05, 350/667 positive); persistent-async optimum shift -0.00117 +/- 0.06814 (d=-0.02, 207/667 positive); sync rescue gap -0.00001 +/- 0.00069 (d=-0.02, 336/667 positive). The persistence-specific rescue window does not separate from noise at this sample size. 667 seeds, 16 hosts.
 Last updated: 2026-03-07
+
+EXPERIMENT: exp_may_nested_mutualism_localization
+Status: REJECTED
+Results: high-mid window gain -0.03234 +/- 0.00039 (d=-83.14, 0/3075 positive); high-mid core reactive-mass shift +0.02119 +/- 0.00097 (d=21.87, 3075/3075 positive). Strong nestedness re-localizes reactive mass onto the core but does not re-widen the reactive window; the window keeps shrinking instead. 3075 seeds, 21 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_metapop_commuting_reactivity_localization
+Status: NO EFFECT
+Results: mid-asymmetry window gain +0.00022 +/- 0.00143 (d=0.15, 1342/2353 positive); high-asymmetry window gain +0.00026 +/- 0.00139 (d=0.19, 1388/2353 positive); high-mid hub-mass shift -0.00011 +/- 0.00225 (d=-0.05, 1243/2353 negative). Directional commuting changes sign across seeds, but the window and localization shifts stay well inside noise. 2353 seeds, 24 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_may_lowrank_mutualism_localization
+Status: NO EFFECT
+Results: mid-window shift -7.36798 +/- 159.75772 (d=-0.05, 98/211 positive); high-window shift -2.76998 +/- 190.39679 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00531 (d=33.84, 211/211 positive). The low-rank mutualistic core clearly re-localizes the mode, but it does not produce a reproducible U-shaped reactive-window crossover. 211 seeds, 11 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_percolation_diffusion_spectral_gpu
+Status: REJECTED
+Results: L512 spectral dimension 1.46980 +/- 0.01967; AO gap +0.13647 +/- 0.01967 (d=6.94, 166/166 positive); L512-L128 ds lift +0.42515 +/- 0.02867 (d=14.83, 166/166 positive). Over this size range the walks move away from 4/3 rather than converging toward it, so the Alexander-Orbach target is not supported by the current ensemble. 166 seeds, 10 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_stochastic_resonance_universality_gpu
+Status: REJECTED
+Results: cosine-quartic peak-noise delta from unity -0.67931 +/- 0.12908 (d=-5.26, 55/56 negative); piecewise-quartic FWHM delta from unity -0.85484 +/- 0.07219 (d=-11.84, 56/56 negative); mean absolute universality deviation 0.74420 +/- 0.08537. Peak locations and widths do not collapse across the three potentials in this regime. 56 seeds, 7 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_sir_bimodal_scaling_gpu
+Status: PRELIMINARY
+Results: R0=1 gap growth from N200 to N2000 -0.04262 +/- 0.00577 (d=-7.39, 0/24 positive); R0=1 bimodality-coefficient growth -0.01050 +/- 0.02154 (d=-0.49, 6/24 positive). With 24 seeds the bimodality gap shrinks rather than sharpens at larger N, so current evidence points against the scaling claim but has not yet crossed the 30-seed rejection threshold. 24 seeds, 3 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_bbp_spiked_covariance_gpu
+Status: PRELIMINARY
+Results: Gaussian p=800 threshold jump (theta 0.75-0.65) +0.01257 +/- 0.00064 (d=19.76, 44/44 positive); supercritical shift (theta 1.0-0.707) +0.08940 +/- 0.00210 (d=42.51, 44/44 positive); Student-t minus Gaussian delta at theta 0.75 is +0.05571 +/- 0.01622 (d=3.43, 44/44 positive). The BBP detachment transition is robust, but heavy-tailed populations do not collapse onto the Gaussian curve, so universality is only partially supported. 44 seeds, 6 hosts.
+Last updated: 2026-03-07
+
+EXPERIMENT: exp_may_nested_mutualism_localization_gpu
+Status: DEPLOYED
+Hypothesis: GPU May ensembles now target the same nestedness-by-heterogeneity transient-reactivity crossover as the CPU experiment, replacing retired heterogeneity-only GPU work with a direct test of whether intermediate nestedness delocalizes the reactive mode before strong nested hubs re-localize it. Literature check found nestedness and localization studies, but not this transient reactive-window crossover.
+Last updated: 2026-03-07
+
+NOTE 2026-03-07: retired active queues for exp_may_heterogeneity_reactivity_localization and exp_trophic_coherence_reactivity_localization after their findings were already settled; CPU pool refilled to ~40k total with may_lowrank_mutualism_localization, may_nested_mutualism_localization, metapop_commuting_reactivity_localization, isr_trapmemory_delay_interaction, and oregonator_delay_adaptive_illumination_window.
+NOTE 2026-03-07: removed staged GPU work for confirmed exp_may_heterogeneity_reactivity_localization and refilled the GPU stage to 1960 files with may_nested_mutualism_localization_gpu plus additional bbp_spiked_covariance_gpu and percolation_diffusion_spectral_gpu work.

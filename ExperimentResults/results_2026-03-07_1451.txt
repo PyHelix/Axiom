@@ -1,0 +1,43 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-07 14:51 UTC
+Window: recent sanitized numeric results only; metadata-only stubs without numeric payload were excluded from the analyzed result counts below.
+
+EXPERIMENT: exp_may_nested_mutualism_localization (3075 results, 3075 seeds, 21 hosts)
+  Results: high-mid window gain -0.03234 +/- 0.00039 (d=-83.14, 0/3075 positive); high-mid core reactive-mass shift +0.02119 +/- 0.00097 (d=21.87, 3075/3075 positive).
+  Conclusion: REJECTED
+    Strong nestedness re-localizes reactive mass onto the core, but it does not re-widen the reactive window. Across the current ensemble the window keeps shrinking instead of showing the predicted U-shaped crossover.
+
+EXPERIMENT: exp_may_lowrank_mutualism_localization (211 results, 211 seeds, 11 hosts)
+  Results: mid-window shift -7.36798 +/- 159.75772 (d=-0.05, 98/211 positive); high-window shift -2.76998 +/- 190.39679 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00531 (d=33.84, 211/211 positive).
+  Conclusion: NO EFFECT
+    The low-rank mutualistic core clearly re-localizes the mode onto the core. The reactive-window crossover itself is not reproducible, with both mid and high shifts remaining noise-dominated and sign-mixed.
+
+EXPERIMENT: exp_metapop_commuting_reactivity_localization (2353 results, 2353 seeds, 24 hosts)
+  Results: mid-asymmetry window gain +0.00022 +/- 0.00143 (d=0.15, 1342/2353 positive); high-asymmetry window gain +0.00026 +/- 0.00139 (d=0.19, 1388/2353 positive); high-mid hub-mass shift -0.00011 +/- 0.00225 (d=-0.05, 1243/2353 negative).
+  Conclusion: NO EFFECT
+    Directional commuting changes sign across seeds, but the window and localization shifts stay well inside noise. The current transport ensemble does not show a meaningful transient-growth wedge or hub relocalization effect.
+
+EXPERIMENT: exp_muller_ratchet_fluctuating_metapop (667 results, 667 seeds, 16 hosts)
+  Results: async-persistent click-min advantage +0.00007 +/- 0.00142 (d=0.05, 350/667 positive); persistent-async optimum shift -0.00117 +/- 0.06814 (d=-0.02, 207/667 positive); sync rescue gap -0.00001 +/- 0.00069 (d=-0.02, 336/667 positive).
+  Conclusion: NO EFFECT
+    Persistence does not create a separated migration-rescue window in the current data. The best migration rates and click-rate minima are effectively the same between persistent and async environments.
+
+EXPERIMENT: exp_percolation_diffusion_spectral_gpu (166 results, 166 seeds, 10 hosts)
+  Results: L512 spectral dimension 1.46980 +/- 0.01967; AO gap +0.13647 +/- 0.01967 (d=6.94, 166/166 positive); L512-L128 ds lift +0.42515 +/- 0.02867 (d=14.83, 166/166 positive).
+  Conclusion: REJECTED
+    Over this size range the measured spectral dimension moves away from 4/3 rather than converging toward it. The present ensemble therefore rejects the Alexander-Orbach target in this implementation regime.
+
+EXPERIMENT: exp_stochastic_resonance_universality_gpu (56 results, 56 seeds, 7 hosts)
+  Results: cosine-quartic peak-noise delta from unity -0.67931 +/- 0.12908 (d=-5.26, 55/56 negative); piecewise-quartic FWHM delta from unity -0.85484 +/- 0.07219 (d=-11.84, 56/56 negative); mean absolute universality deviation 0.74420 +/- 0.08537.
+  Conclusion: REJECTED
+    Peak locations and widths do not collapse across the three potentials in this regime. The deviations are large, consistent, and directional, so the peak-shape universality claim is not supported.
+
+EXPERIMENT: exp_sir_bimodal_scaling_gpu (24 results, 24 seeds, 3 hosts)
+  Results: R0=1 gap growth from N200 to N2000 -0.04262 +/- 0.00577 (d=-7.39, 0/24 positive); R0=1 bimodality-coefficient growth -0.01050 +/- 0.02154 (d=-0.49, 6/24 positive).
+  Conclusion: PRELIMINARY
+    With 24 seeds the bimodality gap shrinks rather than sharpens at larger N. The current direction points against the scaling claim, but it has not yet crossed the 30-seed rejection threshold.
+
+EXPERIMENT: exp_bbp_spiked_covariance_gpu (44 results, 44 seeds, 6 hosts)
+  Results: Gaussian p=800 threshold jump (theta 0.75-0.65) +0.01257 +/- 0.00064 (d=19.76, 44/44 positive); supercritical shift (theta 1.0-0.707) +0.08940 +/- 0.00210 (d=42.51, 44/44 positive); Student-t minus Gaussian delta at theta 0.75 is +0.05571 +/- 0.01622 (d=3.43, 44/44 positive).
+  Conclusion: PRELIMINARY
+    The BBP detachment transition is robust in the Gaussian ensemble and sharpens cleanly above threshold. Heavy-tailed populations do not collapse onto the Gaussian curve, so the universality half of the hypothesis is only partially supported so far.
