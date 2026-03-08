@@ -1,0 +1,31 @@
+Validation session: 2026-03-08_1940
+Follow-up live queue drain after recovery batch
+Results reviewed this session: 6
+Sanitized payloads reviewed: 0 present / 6 missing
+Eligible results: 0
+Denied sentinel results: 6
+Reason: missing sanitized payload for each result
+
+Results reviewed this session:
+result 1927885 (host 349): exp_minority_game_delay_memory_interaction | elapsed=870.87s | nbytes=34612 | missing sanitized payload -> 0.01 credit
+result 1937668 (host 190): exp_hypergraph_pgg_inertia_crossover | elapsed=547.54s | nbytes=12401 | missing sanitized payload -> 0.01 credit
+result 1937670 (host 190): exp_hypergraph_pgg_inertia_crossover | elapsed=546.31s | nbytes=12257 | missing sanitized payload -> 0.01 credit
+result 1937671 (host 190): exp_minority_game_delay_memory_interaction | elapsed=880.69s | nbytes=34640 | missing sanitized payload -> 0.01 credit
+result 1937673 (host 190): exp_hypergraph_pgg_inertia_crossover | elapsed=547.54s | nbytes=12361 | missing sanitized payload -> 0.01 credit
+result 1938188 (host 374): exp_nasch_anticipation_heterogeneity | elapsed=866.21s | nbytes=7953 | missing sanitized payload -> 0.01 credit
+
+Per-user totals:
+user 43: +0.04 credit, total_credit=280.32
+user 50: +0.01 credit, total_credit=15.81
+user 83: +0.01 credit, total_credit=2214.52
+
+Per-host totals:
+host 190: +0.04 credit, total_credit=280.28
+host 349: +0.01 credit, total_credit=69.45
+host 374: +0.01 credit, total_credit=0.02
+
+Stuck/broken tasks cleaned up:
+none
+
+Any bugs found and fixed in experiment scripts:
+none
