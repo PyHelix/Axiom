@@ -54,7 +54,7 @@ EXPERIMENT: exp_random_fibonacci_markov_persistence
 Status: REJECTED | Results: cancellation window gain -0.05260 +/- 0.00001 (d=-10204.91, 100.0% sign-consistent); burst window gain 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); variance window gain 0.01186 +/- 0.00000 (d=10851.64, 100.0% sign-consistent). 95 seeds, 6 hosts.
 Last updated: 2026-03-08
 EXPERIMENT: exp_grayscott_striped_kill_disorder_gpu_gpu
-Status: NO EFFECT | Results: mid mixedness advantage 0.01982 +/- 0.00392 (d=5.05557, 100.0% sign-consistent); mid entropy advantage 0.02227 +/- 0.00138 (d=16.14379, 100.0% sign-consistent); high alignment penalty 0.22731 +/- 0.00480 (d=47.40198, 100.0% sign-consistent). 30 seeds, 5 hosts.
+Status: NO EFFECT | Results: mid mixedness advantage 0.01985 +/- 0.00386 (d=5.14234, 100.0% sign-consistent); mid entropy advantage 0.02217 +/- 0.00146 (d=15.18903, 100.0% sign-consistent); high alignment penalty 0.22748 +/- 0.00482 (d=47.23522, 100.0% sign-consistent). 31 seeds, 5 hosts.
 Last updated: 2026-03-08
 EXPERIMENT: exp_dp_moment_ratio
 Status: NO EFFECT | Results: critical moment ratio R 0.27270 +/- 0.46414 (d=0.58753, 25.7% sign-consistent); model-to-model spread 0.04429 +/- 0.07652 (d=0.57878, 25.7% sign-consistent); relative spread 0.04163 +/- 0.07181 (d=0.57968, 25.7% sign-consistent). 113 seeds, 17 hosts.
@@ -69,5 +69,5 @@ EXPERIMENT: exp_bootstrap_striped_threshold_gpu
 Status: NO EFFECT | Results: mid-span advantage 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); mid fill gain vs IID 0.03878 +/- 0.00008 (d=512.91, 100.0% sign-consistent); high corridor penalty 0.18527 +/- 0.00031 (d=603.27, 100.0% sign-consistent). 50 seeds, 8 hosts.
 Last updated: 2026-03-08
 EXPERIMENT: exp_parrondo_history_block_resonance
-Status: NO EFFECT | Results: mid-block gain -0.00455 +/- 0.00001 (d=-538.03, 100.0% sign-consistent); optimal mid-block fraction 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); memory sensitivity 0.00017 +/- 0.00002 (d=10.32123, 100.0% sign-consistent). 23 seeds, 5 hosts.
+Status: NO EFFECT | Results: mid-block gain -0.00455 +/- 0.00001 (d=-538.03, 0.0% sign-consistent); optimal mid-block fraction 0.00129 +/- 0.00001 (d=129.64, 100.0% sign-consistent); memory sensitivity 0.00000 +/- 0.00000 (d=0.00000, 0.0% sign-consistent). 23 seeds, 5 hosts.
 Last updated: 2026-03-08
