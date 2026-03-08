@@ -1,0 +1,30 @@
+Axiom validation log 2026-03-08_1441
+Processed results: 9
+Safe JSON exact matches available: 0
+Sampled sanitized files: 0
+Queue summary by family:
+- exp_abx_cycle_hgt_delay_resonance: 3
+- exp_ageing_voter_modular_polarization: 2
+- exp_contact_process_crossed_stripe_interaction_gpu_gpu: 1
+- exp_markov_branching_rescue_correlation: 1
+- exp_sparse_wigner_tw_edge: 2
+Denial summary:
+- none
+Validation notes:
+- No current sanitized payloads matched exact result names; payload-level duplicate/empty review could not be performed this cycle.
+- Credit budget applied only to non-denied results using DB nbytes.
+- No stuck/broken tasks cleaned up in this step.
+- No experiment scripts modified in this step.
+Per-user totals:
+- user 55: +400.00, total 27282.73
+- user 83: +50.00, total 59578.84
+Results reviewed this session:
+- result 1919274 (host 159): exp_contact_process_crossed_stripe_interaction_gpu_gpu_5801c3_0 | family exp_contact_process_crossed_stripe_interaction_gpu_gpu | elapsed 22.437s | nbytes 3003 | median 3003 | byte_weighted median=3003 -> 50.00 credit
+- result 1920926 (host 364): exp_ageing_voter_modular_polarization_5a722b_0 | family exp_ageing_voter_modular_polarization | elapsed 2.021s | nbytes 249 | median 249.0 | byte_weighted median=249.0 -> 50.00 credit
+- result 1920934 (host 364): exp_sparse_wigner_tw_edge_b476ee_0 | family exp_sparse_wigner_tw_edge | elapsed 3.028s | nbytes 237 | median 237.0 | byte_weighted median=237.0 -> 50.00 credit
+- result 1920978 (host 364): exp_markov_branching_rescue_correlation_6617e7_0 | family exp_markov_branching_rescue_correlation | elapsed 5.058s | nbytes 251 | median 251 | byte_weighted median=251 -> 50.00 credit
+- result 1920979 (host 364): exp_abx_cycle_hgt_delay_resonance_3c5652_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 5.058s | nbytes 245 | median 245 | byte_weighted median=245 -> 50.00 credit
+- result 1920981 (host 364): exp_sparse_wigner_tw_edge_0921e5_0 | family exp_sparse_wigner_tw_edge | elapsed 4.050s | nbytes 237 | median 237.0 | byte_weighted median=237.0 -> 50.00 credit
+- result 1920982 (host 364): exp_abx_cycle_hgt_delay_resonance_0663f9_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 4.038s | nbytes 245 | median 245 | byte_weighted median=245 -> 50.00 credit
+- result 1920986 (host 364): exp_ageing_voter_modular_polarization_2bc00c_0 | family exp_ageing_voter_modular_polarization | elapsed 5.048s | nbytes 249 | median 249.0 | byte_weighted median=249.0 -> 50.00 credit
+- result 1921011 (host 364): exp_abx_cycle_hgt_delay_resonance_f149ed_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 3.031s | nbytes 245 | median 245 | byte_weighted median=245 -> 50.00 credit
