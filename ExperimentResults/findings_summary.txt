@@ -71,3 +71,21 @@ Last updated: 2026-03-08
 EXPERIMENT: exp_parrondo_history_block_resonance
 Status: NO EFFECT | Results: mid-block gain -0.00455 +/- 0.00001 (d=-538.03, 0.0% sign-consistent); optimal mid-block fraction 0.00129 +/- 0.00001 (d=129.64, 100.0% sign-consistent); memory sensitivity 0.00000 +/- 0.00000 (d=0.00000, 0.0% sign-consistent). 23 seeds, 5 hosts.
 Last updated: 2026-03-08
+EXPERIMENT: exp_ageing_voter_modular_polarization
+Status: ACTIVE | New CPU experiment staged 2026-03-08. Hypothesis: intermediate ageing in asynchronous voter dynamics maximizes late opposite-majority persistence on strongly modular stochastic block networks, extending confirmed findings from exp_voter_modular_consensus and exp_persistent_voter_coarsening to their interaction regime.
+Novelty check: searched "ageing voter model paper", "voter model community structure stochastic block model paper", and "ageing voter multilayer". Found ageing-voter and modular-voter literatures separately, plus ageing on multilayers, but no exact two-block SBM sweep of ageing-memory x modularity for polarization retention; this interaction remains worth testing.
+Deployment note: no CPU retirements triggered on 2026-03-08. Pool refill staged across exp_ageing_voter_modular_polarization (11817), exp_abx_cycle_hgt_delay_resonance (9953), exp_kauffman_autocatalytic_threshold (8966), and exp_sparse_wigner_tw_edge (8972); feeder ingestion brought the live CPU pool to 40005 total tasks.
+Last updated: 2026-03-08
+EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu
+Status: ACTIVE | GPU experiment staged 2026-03-08. Hypothesis: near the 2D contact-process threshold, orthogonal quenched stripe anisotropy in infection and recovery fields creates more persistent mixed endemic activity than IID or parallel stripes.
+Novelty check: searched "contact process quenched disorder anisotropy stripes paper" and "contact process quenched disorder epidemic lattice". Found quenched-disorder and Griffiths-phase work for the contact process, but no exact crossed infection x recovery stripe interaction map; the geometry interaction remains worth testing.
+Last updated: 2026-03-08
+EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu
+Status: ACTIVE | GPU experiment staged 2026-03-08. Hypothesis: near Keller-Segel aggregation onset, orthogonal stripe anisotropy in nutrient supply and chemotactic sensitivity broadens fragmented aggregation relative to IID or parallel alignment.
+Novelty check: searched "Keller-Segel heterogeneity anisotropy stripe chemotaxis paper" and "Keller-Segel heterogeneous chemotaxis anisotropy nutrient heterogeneity". Found heterogeneous and anisotropic chemotaxis studies, but no direct crossed supply x sensitivity stripe sweep; this interaction regime remains worth testing.
+Last updated: 2026-03-08
+EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu
+Status: ACTIVE | GPU experiment staged 2026-03-08. Hypothesis: near the Gray-Scott labyrinth/spot boundary, orthogonal stripe anisotropy in feed and kill fields yields more mixed defect-rich steady states than IID or parallel stripes.
+Novelty check: searched "Gray-Scott spatial heterogeneity stripe anisotropy reaction diffusion paper" and "Gray-Scott quenched disorder stripe pattern paper". Found heterogeneous reaction-diffusion pattern papers, but no exact crossed feed x kill stripe interaction map in Gray-Scott; this finite-size crossover remains worth testing.
+Deployment note: retired settled GPU tails for exp_bootstrap_striped_threshold_gpu and exp_grayscott_striped_kill_disorder_gpu_gpu, then staged 1300 new GPU WUs across exp_contact_process_crossed_stripe_interaction_gpu (450), exp_kellersegel_crossed_resource_sensitivity_gpu (400), and exp_grayscott_crossed_stripe_interaction_gpu (450).
+Last updated: 2026-03-08
