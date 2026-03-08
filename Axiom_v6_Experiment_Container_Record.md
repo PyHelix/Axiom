@@ -3,7 +3,7 @@
 **Author:** PyHelix (Foxes.owo@gmail.com)
 **Date:** February 26-28, 2026
 **Project:** Axiom BOINC — https://axiom.heliex.net
-**Status:** Live in production — 10 experiments deployed across volunteer machines
+**Status:** Live in production — 295+ experiments across 11+ STEM categories, 268 total hosts
 
 ---
 
@@ -43,11 +43,12 @@ Rather than continue fighting this fundamental constraint, I pivoted the entire 
 LLM (Claude)                    Server (Hetzner)                Volunteers (BOINC)
 ┌─────────────────┐           ┌──────────────────────┐        ┌──────────────────┐
 │ Design experiment│           │                      │        │                  │
-│ matched to host  │──────────►│ Stage script at       │        │ Download wu.json │
+│ for volunteer    │──────────►│ Stage script at       │        │ Download wu.json │
 │ hardware         │           │ /experiments/name.py  │        │ (mode=experiment)│
 │                  │           │                      │◄───────│                  │
-│                  │           │ Create workunit with  │        │ Download script  │
-│                  │           │ --target_host         │───────►│ from script_url  │
+│                  │           │ Create workunits      │        │ Download script  │
+│                  │           │ (pool-based, untargeted│───────►│ from script_url  │
+│                  │           │  caps: 40K CPU/2K GPU)│        │                  │
 │                  │           │                      │        │                  │
 │                  │           │                      │        │ exec() script    │
 │                  │           │                      │        │ with numpy       │
@@ -67,6 +68,7 @@ LLM (Claude)                    Server (Hetzner)                Volunteers (BOIN
 - Write results to `experiment_result.json` in working directory
 - Client executes via `exec()` in bundled PyInstaller Python environment
 - CuPy available on GPU builds for CUDA acceleration
+- **295+ experiment scripts** deployed as of March 2026, spanning **11+ STEM categories** far beyond the original ML focus
 
 ### Workunit Structure
 ```json
@@ -92,6 +94,31 @@ LLM (Claude)                    Server (Hetzner)                Volunteers (BOIN
 | 321 (Rosie) | 20 CPUs, 112GB, Windows | Reservoir Computing | Random RNN on Lorenz attractor |
 | 60 (dell) | 8 CPUs, 16GB, Linux | Edge of Chaos | Lyapunov exponents vs spectral radius |
 | 267 (philip) | 4 CPUs, 8GB, Linux | Cellular Automata | Evolve CA rules with genetic algorithm |
+
+### Current Scale — March 8, 2026
+
+The platform has scaled far beyond the initial 10-experiment deployment:
+
+- **295+ experiment scripts** across **11+ STEM categories:**
+  - Ecology (May stability, trophic coherence, mutualism, Allee effects)
+  - Population Genetics (Muller's ratchet, HGT, fixation dynamics)
+  - Epidemiology (SIR models, metapopulation contagion)
+  - Physics (Ising models, percolation, diffusion, FPUT, Allen-Cahn, Oregonator)
+  - Nonlinear Dynamics (FitzHugh-Nagumo, bifurcations, chaos, synchronization)
+  - Network Science (voter models, bootstrap percolation, Axelrod, Bak-Sneppen)
+  - Statistics (Benford's law, random matrix theory, RSA packing)
+  - Machine Learning (double descent, lottery ticket, information bottleneck)
+  - Number Theory (Collatz, Goldbach, prime gaps)
+  - Neuroscience (spiking networks, neural coding, ISR)
+  - And more emerging categories
+
+- **268 total hosts** contributed (83 active in any 72-hour window)
+- **Pool-based deployment** replaced per-host targeting (March 7, 2026):
+  - CPU pool cap: 40,000 workunits
+  - GPU pool cap: 2,000 workunits
+  - BOINC scheduler distributes untargeted workunits to appropriate hosts
+- **GPU experiments** using CuPy for CUDA acceleration (separate BOINC app: axiom_worker_gpu)
+- **First research paper** published from platform results (March 7, 2026)
 
 ### Anti-Cheat Credit System
 Traditional BOINC credit is based on FLOPS (floating point operations reported by the client), which is trivially gameable — a malicious client can report inflated FLOPS without doing real work. Axiom v6 bypasses this entirely:
@@ -168,6 +195,11 @@ Documented separately: **[Axiom_PoUC_Consensus_Mechanism.md](Axiom_PoUC_Consensu
 - **Feb 28, 2026:** Fixed Windows encoding bug (v6.04), deployed 10 experiments to volunteer hosts
 - **Feb 28, 2026:** First experiment results collected (Edge of Chaos completed successfully)
 - **Feb 28, 2026:** Conceived Proof of Useful Contribution (PoUC) consensus mechanism — block production weighted by AI-judged scientific credit instead of stake or hash rate
+- **Mar 1, 2026:** First fully autonomous AI PI run — zero human involvement
+- **Mar 2, 2026:** Patreon launched for project sustainability
+- **Mar 6, 2026:** AI PI expanded to 10-step self-healing loop
+- **Mar 7, 2026:** Pool-based workunit management. First research paper published.
+- **Mar 8, 2026:** 295+ experiment scripts across 11+ STEM categories. 268 total hosts.
 
 ---
 

@@ -4,7 +4,7 @@
 **Date:** March 1, 2026
 **Project:** Axiom BOINC — https://axiom.heliex.net
 **GitHub:** https://github.com/PyHelix/Axiom
-**Status:** Live in production — autonomous hourly execution, no human in the loop
+**Status:** Live in production — 10-step autonomous loop, 13 cycles/day, GPT-5.4 engine on server
 
 ---
 
@@ -20,9 +20,9 @@ A system where an LLM (Claude, via Claude Code CLI) operates as the **autonomous
 4. **Identifies idle compute capacity** across the volunteer fleet and fills every available CPU core and GPU with experiments
 5. **Designs entirely new experiments** based on evidence from prior results, writes the Python scripts, uploads them to the server, and deploys them as BOINC workunits
 6. **Maintains cumulative scientific records** across sessions, building a growing body of findings
-7. **Iterates the research program** — retiring answered questions, cross-validating promising findings on additional hosts, fixing broken scripts, and pursuing new hypotheses
+7. **Iterates the research program** — retiring answered questions, cross-validating promising findings on additional hosts, fixing broken scripts, and pursuing new hypotheses. The system now runs 13 cycles per day as an infinite server-side loop.
 
-The system runs on a scheduled task (hourly + on login) with **zero human oversight required**. Each run reads all previous session files for continuity, making the AI's scientific knowledge cumulative across sessions.
+The system runs as a server-side infinite loop with **zero human oversight required**. Each cycle maintains cumulative scientific knowledge via a 14-day sliding window of findings, making the AI's research program continuous and self-sustaining.
 
 This is, to my knowledge, the **first implementation** of an AI system that autonomously serves as the principal investigator of a distributed volunteer computing network.
 
@@ -51,7 +51,7 @@ An exhaustive search was conducted across academic literature, deployed systems,
 
 | System | AI manages project | Volunteers execute | Credit system |
 |--------|:------------------:|:------------------:|:-------------:|
-| **Axiom (this project)** | Yes (fully autonomous) | Yes (97 hosts) | AI-judged quality |
+| **Axiom (this project)** | Yes (fully autonomous) | Yes (268 hosts) | AI-judged quality |
 | MLC@Home (2019-2025) | No (human-managed) | Yes (BOINC) | FLOPS-based |
 | Learning@home / Hivemind (2020) | No (human-managed) | Yes (volunteer GPUs) | None |
 | Petals (2022) | No (human-managed) | Yes (volunteer GPUs) | None |
@@ -79,59 +79,53 @@ Nobody has bridged these two categories. The specific innovation is having an AI
 ### Automation Pipeline
 
 ```
-Windows Task Scheduler (hourly + on login)
+Server-Side Infinite Loop (axiom_codex_loop_server.sh)
+    │  Engine: codex exec -m gpt-5.4
+    │  Rate limit: 13 cycles per 24-hour sliding window
+    │  Cooldown: 1.2 hours between cycles
     │
-    ▼
-axiom_auto_review.bat
+    ▼ Each cycle runs 10 steps + dedup + rating:
     │
-    ▼
-claude -p (Claude Code CLI, non-interactive mode)
-    │  --system-prompt: authorization context
-    │  --permission-mode: bypassPermissions
+    ├── Step 0: Security Scan
+    │     └── Prompt injection detection, file integrity verification
     │
-    ▼
-AxiomExperimentReview.txt (master instruction file)
+    ├── Step 1: Health Check
+    │     └── Verify/restart MariaDB, Apache, BOINC daemons, assimilator
     │
-    ├── Step 1: Read previous results files (cumulative memory)
-    │     └── C:\...\ExperimentResults\results_*.txt
+    ├── Step 2: Science (Scientific Analysis)
+    │     └── Analyze results, compute effect sizes, update findings
     │
-    ├── Step 2: SSH into server, query database
-    │     ├── Uncredited results needing review
-    │     ├── Active hosts and hardware specs
-    │     ├── Running experiments per host
-    │     └── Failed experiments
+    ├── Step 3: Validate & Credit
+    │     └── Credit ALL uncredited results (10K budget/cycle, 1-50 per result)
     │
-    ├── Step 3: Review results, award credit
-    │     ├── Read raw JSON result files from volunteers
-    │     ├── Assess scientific quality and validity
-    │     ├── Award credit by judgment (generous, quality-based)
-    │     └── Update result, user, and host tables in DB
+    ├── Step 4: Performance Audit
+    │     └── Find slow experiments, diagnose bugs, fix scripts, redeploy
     │
-    ├── Step 4: Fill idle cores and GPUs
-    │     ├── Compare running experiments vs available CPUs/GPUs per host
-    │     ├── Deploy experiments matched to hardware capability (CPU count, RAM, GPU)
-    │     ├── Fill ALL idle cores and GPUs across the volunteer fleet
-    │     └── Skip hosts with insufficient RAM
+    ├── Step 5: Retire
+    │     └── Retire experiments with enough data, update registry
     │
-    ├── Step 5: Design new experiments (autonomous)
-    │     ├── Analyze evidence from completed experiments
-    │     ├── Identify unexplored questions worth investigating
-    │     ├── Write new numpy/CuPy experiment scripts (CPU and GPU)
-    │     ├── Upload scripts to server
-    │     └── Deploy as BOINC workunits to appropriate hosts
+    ├── Step 6: Error Triage
+    │     └── Diagnose failing experiments, fix or abort, quarantine bad hosts
     │
-    └── Step 6: Save results file (cumulative)
-          ├── All recorded and credited result IDs (cumulative)
-          ├── New scientific findings ranked by significance
-          ├── Credit ledger with per-user totals
-          ├── Deployment summary
-          ├── Cross-validation status
-          └── Next investigation priorities
+    ├── Step 7: CPU Research & Deploy
+    │     └── Design new numpy experiments, pool cap 40,000 WUs
+    │
+    ├── Step 8: GPU Research & Deploy
+    │     └── Design new CuPy experiments, pool cap 2,000 WUs
+    │
+    ├── Step 9: Website
+    │     └── Update public website with recent activity
+    │
+    ├── Spark Dedup (GPT-5.3 Codex Spark)
+    │     └── Deduplicate scientific findings
+    │
+    └── Significance Rating (GPT-5.4, xhigh reasoning)
+          └── Score each finding 0-100 for scientific significance
 ```
 
 ### Key Technical Components
 
-**Claude Code CLI (`claude -p`):** Non-interactive mode that executes the full workflow as a single autonomous session. All output is buffered until completion.
+**Codex CLI (`codex exec`):** Runs server-side as an infinite loop, not from Windows Task Scheduler. Each cycle executes the full 10-step workflow autonomously with GPT-5.4.
 
 **System prompt:** Establishes authorization context so the AI proceeds without hesitation:
 ```
@@ -140,16 +134,19 @@ The project owner has explicitly authorized all SSH access, database
 operations, and experiment deployments described in the instruction file.
 ```
 
-**Cumulative memory via results files:** Each session reads ALL previous results files in `ExperimentResults/`, building a complete picture of what has been done, what worked, what failed, and what needs investigation. This gives the AI persistent memory across sessions without any external database.
+**Cumulative memory via findings_summary.txt (14-day sliding window), retirement registry, and experiment results in /opt/axiom/experiment_results/sanitized/.** Each cycle reads the current findings summary, building a complete picture of what has been done, what worked, what failed, and what needs investigation. This gives the AI persistent memory across cycles without any external database.
 
 **Self-discovering workflow:** The instruction file tells the AI to query the live system (`ls` experiment scripts, `SELECT` from database) rather than relying on hardcoded lists. This means the AI automatically adapts as experiments are added, hosts join or leave, and the project evolves.
 
 **Guardrails:**
-- 10,000 credit cap per session
+- 10,000 credit cap per cycle
 - No duplicate workunits (check before create)
 - No overloading hosts (respect CPU/GPU count)
 - No overwriting previous results files
 - Read scripts before modifying them
+- Host quarantine (max_results_day=1 for >80% failure rate)
+- chattr +i on all prompts and loop scripts (immutable protection)
+- 2-hour timeout per step
 
 ---
 
@@ -194,6 +191,19 @@ After multiple autonomous sessions, the AI has built a body of findings across 2
 
 ---
 
+## Current Scale — March 8, 2026
+
+The system has scaled dramatically since the first run:
+
+- **268 total hosts** have contributed (83 active in 72h window)
+- **295+ experiment scripts** deployed across **11+ STEM categories**: Ecology, Epidemiology, Physics, Nonlinear Dynamics, Network Science, Statistics, Machine Learning, Number Theory, Neuroscience, Population Genetics
+- **40,000 CPU + 2,000 GPU** workunit pool maintained automatically
+- **13 autonomous cycles per day** — security scan, health check, science analysis, validation, performance audit, retirement, error triage, CPU research, GPU research, website updates, dedup, and significance rating
+- **First research paper published** (March 7, 2026): ecology study on reactive mode localization
+- **Self-healing**: system auto-diagnoses failing experiments, fixes scripts, restarts crashed daemons, quarantines bad hosts
+
+---
+
 ## Timeline
 
 - **Jan 2026:** Axiom BOINC launched — distributed transformer training (v3.x)
@@ -202,10 +212,15 @@ After multiple autonomous sessions, the AI has built a body of findings across 2
 - **Feb 25-26, 2026:** Spiking neural network approach (v5.x)
 - **Feb 26, 2026:** Pivoted to experiment container platform (v6.00)
 - **Feb 27-28, 2026:** Built experiment executor, deployed 10 experiments, first results collected
-- **Feb 28, 2026:** LLM-directed deployment of 1,773 workunits across 97 hosts
+- **Feb 28, 2026:** LLM-directed deployment of 1,773 workunits across 268 hosts
 - **Feb 28, 2026:** First AI-judged credit awards (2,785 credits across 163 results)
 - **Mar 1, 2026:** **First fully autonomous AI principal investigator run** — scheduled task with zero human involvement. AI reviewed results, awarded 655 credits, deployed 644 workunits, designed new experiment, saved comprehensive scientific report.
 - **Mar 1, 2026:** Autonomous system operational — runs hourly via Windows Task Scheduler
+- **Mar 2, 2026:** Conceived autonomous paper pipeline. Launched Patreon.
+- **Mar 6, 2026:** AI PI expanded from 6 steps to 10 steps with error triage, performance audit, health check, and security scan
+- **Mar 7, 2026:** Pool-based workunit management replaced per-host targeting. First research paper published.
+- **Mar 7, 2026:** Multi-model significance scoring pipeline deployed (dedup + rating)
+- **Mar 8, 2026:** 295+ experiments across 11+ STEM categories. 268 total hosts. 13 autonomous cycles/day.
 
 ---
 

@@ -1,9 +1,9 @@
 # Axiom: Volunteer-Distributed Neural Network Training — Invention Record
 
 **Author:** PyHelix (Foxes.owo@gmail.com)
-**Date:** February 14-15, 2026 (updated February 28, 2026)
+**Date:** February 14-15, 2026 (updated March 8, 2026)
 **Project:** Axiom BOINC — https://axiom.heliex.net
-**Status:** Live in production — LLM-directed experiment container platform (v6.00+)
+**Status:** Live in production — Self-healing autonomous research infrastructure (v6.09+), 295+ experiments, 10-step AI PI
 
 ---
 
@@ -88,6 +88,55 @@ To my knowledge, the **first implementation** of:
 - **AI designing experiments and deploying them as BOINC workunits** (no prior art found)
 - **Scheduled LLM automation as principal investigator of a volunteer computing network** (no prior art found)
 
+### 10. Self-Healing Autonomous Research Infrastructure (v6.09+, March 2026)
+**Date: March 6-8, 2026**
+
+The autonomous AI PI system evolved from a 6-step pipeline into a **10-step self-healing research infrastructure** with two additional post-step phases (dedup + significance rating), running 13 cycles per day. The system now autonomously diagnoses and fixes its own failing experiments, restarts crashed daemons, detects security threats, and quarantines misbehaving hosts — without any human intervention.
+
+New capabilities with no prior art in volunteer computing:
+- **Error Triage**: AI reads stderr from failing experiment tasks, reads the experiment script source code, diagnoses the root cause, and either fixes the script and redeploys, or aborts the experiment if unfixable. Host quarantine system sets `max_results_day=1` for hosts failing >80% of tasks.
+- **Performance Audit**: AI identifies experiments exceeding runtime targets (>20 min vs 15 min target), reads the script, identifies the bottleneck, patches the code, aborts slow tasks, and redeploys the fixed version.
+- **Health Check**: Verifies all vital processes (MariaDB, Apache, BOINC daemons, assimilator) are running and auto-restarts any that have crashed.
+- **Security Scan**: Detects prompt injection attempts in volunteer-submitted database fields and verifies file integrity of locked system files.
+
+To my knowledge, **no volunteer computing project has ever had self-diagnosing, self-repairing experiment infrastructure** managed by an AI.
+
+### 11. Multi-Model AI Significance Scoring Pipeline (March 2026)
+**Date: March 7-8, 2026**
+
+A multi-model pipeline for autonomous quality assessment of scientific findings:
+1. A lightweight model (GPT-5.3 Codex Spark) **deduplicates** findings from the rolling 14-day window
+2. A high-reasoning model (GPT-5.4 with xhigh reasoning effort) **scores** each deduplicated finding 0-100 for scientific significance, considering: effect size (30 points), sample size (25), sign consistency (25), and verdict clarity (20)
+
+Scores are published to the public website at https://axiom.heliex.net/scientific_findings.php with color-coded significance badges. This enables autonomous prioritization — high-scoring findings are candidates for paper generation, while low-scoring ones may trigger additional experimentation.
+
+To my knowledge, **no system autonomously scores the scientific significance of its own distributed computing results** using multi-model AI evaluation.
+
+### 12. Pool-Based Autonomous Workunit Management (March 2026)
+**Date: March 7, 2026**
+
+Replaced per-host targeted workunit creation (`--target_host`) with an autonomous **pool-based system** with caps:
+- CPU pool cap: 40,000 workunits (unsent + in-progress)
+- GPU pool cap: 2,000 workunits
+- Each cycle: AI counts current pool, computes deficit, creates untargeted workunits to fill the gap
+- If over cap: trims oldest unsent workunits
+- BOINC's built-in scheduler distributes untargeted workunits to appropriate hosts
+
+This eliminated the fragile per-host querying (which required tracking each host's throughput and backlog), reduced token costs by ~40%, and made the system resilient to hosts going offline — their queued work automatically redistributes to other volunteers.
+
+### 13. First AI-Generated Research Paper from Distributed Volunteer Computing (March 2026)
+**Date: March 7, 2026**
+
+Published the first research paper generated end-to-end from Axiom's autonomous pipeline:
+
+**Title:** *"Species-Level Interaction Heterogeneity Localizes Reactive Modes and Widens the Stable-but-Reactive Window in Random Ecological Communities"*
+
+The paper was based on 1,463 independent simulations run across 17 volunteer hosts, with Cohen's d > 80 (extremely large effect size). The complete pipeline: AI designed the ecology experiment → volunteers ran simulations on their home computers → AI analyzed results and identified statistical significance → paper was drafted from the findings.
+
+Available at: https://axiom.heliex.net/reactivity_localization_paper.pdf
+
+This demonstrates the complete autonomous discovery-to-publication loop first conceived on March 2, 2026 (see [Axiom_Autonomous_Paper_Pipeline_Record.md](Axiom_Autonomous_Paper_Pipeline_Record.md)).
+
 ---
 
 ## Architecture Summary
@@ -142,10 +191,12 @@ Volunteers (BOINC)              Server (Hetzner)
 ## Model Specifications
 
 ### Current (v6.00+): Experiment Container Platform
-- **Mode:** LLM designs experiments, dispatches to matched hardware, AI judges results
-- **Experiment format:** Self-contained numpy-only Python scripts, exec()'d by client
-- **First batch:** 10 experiments across 10 volunteer machines (Feb 28, 2026)
-- **Credit:** AI-reviewed, quality-based (not FLOPS)
+- **Mode:** AI autonomously designs experiments across 11+ STEM disciplines, dispatches to matched hardware, AI judges results
+- **Experiment format:** Self-contained Python scripts (numpy for CPU, CuPy for GPU), exec()'d by client
+- **Scale:** 295+ experiment scripts, 40+ experiment families, 268 total hosts
+- **STEM categories:** Ecology, Epidemiology, Physics, Nonlinear Dynamics, Network Science, Statistics, Machine Learning, Number Theory, Neuroscience, Population Genetics, and more
+- **Credit:** AI-reviewed, quality-based (10,000 budget per validation cycle, 1-50 credit per result)
+- **AI PI:** 10-step autonomous loop + dedup + significance rating, 13 cycles/day, GPT-5.4 engine
 - **See:** [Axiom_v6_Experiment_Container_Record.md](Axiom_v6_Experiment_Container_Record.md)
 
 ### Previous (v5.00): Modular Spiking Network
@@ -176,6 +227,11 @@ Volunteers (BOINC)              Server (Hetzner)
 - **Feb 27, 2026:** Built experiment executor client, 10 numpy-only experiment scripts
 - **Feb 28, 2026:** v6.04 deployed — 10 experiments across 10 volunteer machines, AI-judged credit system. First results collected (Edge of Chaos completed)
 - **Mar 1, 2026:** First fully autonomous AI principal investigator run — scheduled task with zero human involvement. AI reviewed results, awarded credit, deployed 644 workunits, designed new experiment, saved scientific report. System operational on hourly schedule.
+- **Mar 2, 2026:** Patreon launched for project sustainability. Conceived autonomous paper pipeline.
+- **Mar 6, 2026:** v6.09 deployed — BOINC compliance update, PyInstaller extraction in slot directory
+- **Mar 7, 2026:** Pool-based workunit management deployed, replacing per-host targeting. AI PI expanded to 10-step loop with error triage, performance audit, health check, security scan, dedup, and significance rating
+- **Mar 7, 2026:** First AI-generated research paper published — ecology study on reactive mode localization (1,463 simulations, 17 hosts, Cohen's d > 80)
+- **Mar 8, 2026:** 295+ experiment scripts deployed across 11+ STEM categories. 268 total hosts contributed. 13 autonomous cycles per day operational.
 
 ---
 

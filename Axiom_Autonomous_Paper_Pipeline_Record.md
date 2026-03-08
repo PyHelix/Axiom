@@ -14,7 +14,7 @@ This document records the conception and initial design of a fully autonomous sc
 
 As of March 2026, the Axiom project has demonstrated the first two stages of this pipeline:
 
-1. **Autonomous Discovery** — An AI principal investigator (Claude, Anthropic) designs ML experiments, deploys them to a BOINC volunteer computing network of 90+ hosts with 2,500+ CPUs and 107 GPUs, reviews results, awards credit, and iterates. The system runs every 5-15 minutes with zero human intervention and has produced 45+ scientific findings in under 5 days, including genuinely novel results (e.g., the width-compositionality mechanistic chain: rank collapse → critical period → intervention).
+1. **Autonomous Discovery** — An AI principal investigator (Claude, Anthropic) designs experiments across 11+ STEM categories, deploys them to a BOINC volunteer computing network of 268 hosts, reviews results, awards credit, and iterates. The system runs 13 cycles per day (~every 1.2 hours) with zero human intervention and has produced 295+ experiment scripts across 11+ STEM categories, including genuinely novel results (e.g., the width-compositionality mechanistic chain: rank collapse → critical period → intervention).
 
 2. **Prior Art Recording** — Findings are automatically committed to GitHub with timestamps (https://github.com/PyHelix/Axiom) and published to a public results page (https://axiom.heliex.net/experiment_results/).
 
@@ -64,7 +64,7 @@ Discovery Agent (exists)          Paper Agent (proposed)
 │ Git push prior art  │          │ Generate figures     │
 │ Design next expt    │          │ Self-review          │
 └─────────────────────┘          │ Submit to arXiv      │
-     Runs every 5 min            └─────────────────────┘
+     Runs 13 cycles/day            └─────────────────────┘
                                       Runs on trigger
 ```
 
@@ -95,13 +95,31 @@ The Axiom pipeline would be the first to combine:
 
 ## Current Status
 
-- **Stage 1 (Discovery)**: Operational. 45+ findings in 5 days.
-- **Stage 2 (Prior Art)**: Operational. GitHub timestamps + public results page.
-- **Stage 3 (Paper Writing)**: Conceived, not yet implemented. Blocked on compute budget (token costs for paper drafting estimated at 500K-1M tokens/day).
+- **Stage 1 (Discovery)**: Operational. 295+ experiment scripts, 40+ experiment families, 11+ STEM categories. 13 autonomous cycles per day.
+- **Stage 2 (Prior Art)**: Operational. GitHub timestamps + public results page + public findings page with significance scores.
+- **Stage 3 (Paper Writing)**: **First paper published March 7, 2026.** Ecology study on reactive mode localization in random community matrices. Based on 1,463 simulations across 17 volunteer hosts.
+
+## Implementation — March 7, 2026
+
+The pipeline produced its first publication on March 7, 2026:
+
+**Title:** *"Species-Level Interaction Heterogeneity Localizes Reactive Modes and Widens the Stable-but-Reactive Window in Random Ecological Communities"*
+
+**Data source:** 1,463 independent simulations run across 17 volunteer hosts via the Axiom BOINC network. Cohen's d > 80 (extremely large effect size).
+
+**Pipeline stages demonstrated:**
+1. AI designed the ecology experiment (random community matrix with species-level heterogeneity)
+2. Experiments deployed to volunteer machines as BOINC workunits
+3. Results collected and analyzed autonomously by the AI PI
+4. Statistical significance confirmed (effect size, sample size, sign consistency)
+5. Paper drafted from the experimental findings
+6. Published at https://axiom.heliex.net/reactivity_localization_paper.pdf
+
+Available at: https://axiom.heliex.net/reactivity_localization_paper.pdf
 
 ## Estimated Impact
 
-At the current discovery rate of 1-2 novel findings per day, the system could produce material for 8-15 papers per year. With an autonomous paper pipeline, actual submission rate could reach 4-6 papers per year — comparable to a productive research lab, but with zero human researchers.
+With the first paper published on March 7, 2026, the pipeline is now operational rather than speculative. At the current discovery rate of 1-2 novel findings per day across 11+ STEM categories, the system has demonstrated end-to-end autonomous scientific publication — from hypothesis generation through distributed experimentation to a finished paper — with zero human researchers. Production rate is expected to scale as the paper agent matures and additional findings cross the confirmation threshold.
 
 ---
 
