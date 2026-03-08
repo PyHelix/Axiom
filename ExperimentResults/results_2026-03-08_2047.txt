@@ -1,0 +1,124 @@
+EXPERIMENT: exp_ageing_voter_modular_polarization (2615 results, 2615 numeric seeds, 34 hosts)
+  Results: intermediate-ageing peak excess -0.00611 +/- 0.02724 (d=-0.22, 18.5% sign-consistent); alpha=1.0 opposite-majority fraction +0.00795 +/- 0.01788 (d=0.44, 30.7% sign-consistent); alpha=2.4 opposite-majority fraction +0.01158 +/- 0.02202 (d=0.53, 40.1% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_abx_cycle_hgt_delay_resonance (2026 results, 2026 numeric seeds, 31 hosts)
+  Results: delay-fatigue resonance AUC excess +0.01157 +/- 0.07031 (d=0.16, 97.3% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_sparse_wigner_tw_edge (1815 results, 1815 numeric seeds, 33 hosts)
+  Results: L512 c=64 Tracy-Widom skew deviation +0.29321 +/- 0.02408 (d=12.18, 100.0% sign-consistent); L512 c=64 rescaled-edge mean -128.03295 +/- 3.00659 (d=-42.58, 100.0% sign-consistent); L512 c=64 L-skewness +0.00021 +/- 0.02408 (d=0.01, 49.9% sign-consistent)
+  Conclusion: CONFIRMED
+    The Tracy-Widom edge-skew deviation remains large and fully sign-consistent across the fresh numeric window. In the current 14-day dataset this supports a robust sparse-edge crossover signal.
+
+EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu_gpu (625 results, 44 numeric seeds, 9 hosts)
+  Results: mid orthogonal entropy advantage +0.00053 +/- 0.00283 (d=0.19, 51.7% sign-consistent); mid orthogonal interface advantage +0.00007 +/- 0.00083 (d=0.08, 48.3% sign-consistent); mid orthogonal mixedness gain vs IID -0.00422 +/- 0.00775 (d=-0.54, 15.5% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_kauffman_autocatalytic_threshold (450 results, 9 numeric seeds, 17 hosts)
+  Results: Only 9 numeric payloads were available in 450 sanitized files.
+  Conclusion: insufficient data
+    Only 9 fresh numeric payloads were available in this window, which is below the 10-seed threshold for a windowed finding.
+
+EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu_gpu (435 results, 59 numeric seeds, 14 hosts)
+  Results: mid orthogonal survival advantage +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid orthogonal mixedness gain vs IID +0.00064 +/- 0.00029 (d=2.17, 100.0% sign-consistent); high orthogonal active-fraction gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu (1021 results, 103 numeric seeds, 10 hosts)
+  Results: mid orthogonal entropy advantage +0.00053 +/- 0.00283 (d=0.19, 51.7% sign-consistent); mid orthogonal interface advantage +0.00007 +/- 0.00083 (d=0.08, 48.3% sign-consistent); mid orthogonal mixedness gain vs IID -0.00422 +/- 0.00775 (d=-0.54, 15.5% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu (525 results, 132 numeric seeds, 14 hosts)
+  Results: mid orthogonal aggregation advantage +0.00003 +/- 0.00001 (d=2.78, 100.0% sign-consistent); mid orthogonal interface gain vs IID -0.00055 +/- 0.00001 (d=-62.06, 0.0% sign-consistent); high orthogonal directional-balance gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_grayscott_striped_kill_disorder_gpu_gpu (238 results, 3 numeric seeds, 4 hosts)
+  Results: Only 3 numeric payloads were available in 238 sanitized files.
+  Conclusion: insufficient data
+    Fresh sanitized files were mostly metadata-only in this window, so the current batch does not contain enough numeric payloads to refresh the effect estimate.
+
+EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu (230 results, 53 numeric seeds, 13 hosts)
+  Results: mid crossed interface advantage -0.00029 +/- 0.00033 (d=-0.89, 15.1% sign-consistent); mid crossed mixedness advantage -0.00909 +/- 0.00283 (d=-3.22, 1.9% sign-consistent); high crossed isotropy advantage -0.00266 +/- 0.00074 (d=-3.58, 1.9% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_nasch_anticipation_heterogeneity (227 results, 227 numeric seeds, 20 hosts)
+  Results: bimodal mid-density flow gain vs homogeneous -0.00040 +/- 0.00124 (d=-0.32, 35.6% sign-consistent); bimodal mid-density jam drop vs homogeneous -0.00403 +/- 0.00124 (d=-3.26, 0.0% sign-consistent); bimodal mid-density wave drop vs homogeneous -0.01525 +/- 0.00232 (d=-6.57, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_dla_drift_reversal_window (225 results, 225 numeric seeds, 14 hosts)
+  Results: intermediate-reversal branch gain -0.01926 +/- 0.04728 (d=-0.41, 24.3% sign-consistent); intermediate-reversal entropy gain -0.03381 +/- 0.08953 (d=-0.38, 36.0% sign-consistent); constant-drift anisotropy excess -0.00448 +/- 0.22768 (d=-0.02, 49.3% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_bootstrap_striped_threshold_gpu_gpu (183 results, 4 numeric seeds, 3 hosts)
+  Results: Only 4 numeric payloads were available in 183 sanitized files.
+  Conclusion: insufficient data
+    Fresh sanitized files were mostly metadata-only in this window, so the current batch does not contain enough numeric payloads to refresh the striped-threshold estimate.
+
+EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu_gpu (163 results, 45 numeric seeds, 13 hosts)
+  Results: mid orthogonal aggregation advantage +0.00002 +/- 0.00001 (d=2.88, 100.0% sign-consistent); mid orthogonal interface gain vs IID -0.00055 +/- 0.00001 (d=-73.63, 0.0% sign-consistent); high orthogonal directional-balance gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu (558 results, 65 numeric seeds, 15 hosts)
+  Results: mid orthogonal survival advantage +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid orthogonal mixedness gain vs IID +0.00064 +/- 0.00029 (d=2.17, 100.0% sign-consistent); high orthogonal active-fraction gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_random_fibonacci_markov_persistence (72 results, 72 numeric seeds, 7 hosts)
+  Results: cancellation window gain -0.05260 +/- 0.00001 (d=-10204.91, 100.0% sign-consistent); burst window gain 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); variance window gain 0.01186 +/- 0.00000 (d=10851.64, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window metrics are strongly directional but internally mixed, with cancellation and variance windows moving in opposite ways. In this window that does not isolate a single clean crossover signature.
+
+EXPERIMENT: exp_dp_moment_ratio (68 results, 68 numeric seeds, 8 hosts)
+  Results: critical grand-mean R +0.37989 +/- 0.50932 (d=0.75, 0.0% sign-consistent); model-to-model spread +0.06309 +/- 0.08650 (d=0.73, 35.2% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window estimate stays either too small in absolute size or too close to run-to-run noise to support a meaningful effect.
+
+EXPERIMENT: exp_langton_ant_anisotropic_stripes (66 results, 66 numeric seeds, 8 hosts)
+  Results: mid-stripe success gain -0.06543 +/- 0.00369 (d=-17.71700, 100.0% sign-consistent); mid-stripe onset advance 0.28569 +/- 0.00361 (d=79.17044, 100.0% sign-consistent); family lock gain 0.86563 +/- 0.00427 (d=202.85, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh-window metrics remain mixed across success, onset, and family-lock observables. The window shows structured behavior, but not a single clean effect suitable for confirmation.
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu (60 results, 15 numeric seeds, 8 hosts)
+  Results: critical mid-block alignment penalty +0.00172 +/- 0.00044 (d=3.88, 100.0% sign-consistent); critical large-block rebound +0.00580 +/- 0.00053 (d=10.90, 100.0% sign-consistent); critical mid-block gap penalty +0.00659 +/- 0.00042 (d=15.59, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The alignment and gap penalties stay positive, but their absolute size remains very small in the fresh window. This does not yet support a practically meaningful effect.
+
+EXPERIMENT: exp_persistent_voter_coarsening (57 results, 57 numeric seeds, 6 hosts)
+  Results: k=20 slowdown ratio 1.07045 +/- 0.03839 (d=27.88570, 100.0% sign-consistent); max slowdown ratio 1.22718 +/- 0.13562 (d=9.04892, 100.0% sign-consistent); k=20 consensus fraction shift -0.16826 +/- 0.05740 (d=-2.93118, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Consensus-time slowdown remains large and consistently positive across the fresh numeric window. The present data support zealot-induced coarsening slowdown as a robust effect.
+
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu_gpu (29 results, 1 numeric seeds, 3 hosts)
+  Results: Only 1 numeric payloads were available in 29 sanitized files.
+  Conclusion: insufficient data
+    Only 1 fresh numeric payload was available in this window, so the crossed excitability/recovery signal cannot be assessed reliably yet.
+
+EXPERIMENT: exp_langton_ant_frozen_stripe_disorder (28 results, 28 numeric seeds, 7 hosts)
+  Results: corridor success gain 0.36261 +/- 0.00578 (d=62.68852, 100.0% sign-consistent); corridor onset advance 0.43214 +/- 0.00516 (d=83.71579, 100.0% sign-consistent); overstripe success penalty -0.00980 +/- 0.00195 (d=-5.03400, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The corridor-oriented observables remain strongly directional, but only 28 fresh numeric seeds are available in the current window. The corridor-channeling signal is promising but not yet confirmed.
+
+EXPERIMENT: exp_parrondo_history_block_resonance (27 results, 27 numeric seeds, 5 hosts)
+  Results: mid-block gain -0.00455 +/- 0.00001 (d=-546.16, 0.0% sign-consistent); optimal mid-block fraction +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); memory sensitivity +0.00017 +/- 0.00001 (d=12.22, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The fresh window continues to show a very small mid-block signal despite strong sign consistency. The absolute effect remains too small to count as meaningful.
+
+EXPERIMENT: exp_critical_branching_skew_crossover (20 results, 20 numeric seeds, 7 hosts)
+  Results: late conditional-population skew correlation -0.07964 +/- 0.07735 (d=-1.03, 90.0% sign-consistent); late survival skew correlation +0.09228 +/- 0.09915 (d=0.93, 95.0% sign-consistent); late q90 skew correlation -0.02424 +/- 0.10927 (d=-0.22, 80.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The fresh 20-seed window shows a weak late-survival collapse signal alongside a stronger late conditional-population skew dependence. That pattern is consistent with the proposed crossover, but the current window is still preliminary.
+
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu (16 results, 0 numeric seeds, 3 hosts)
+  Results: No numeric payloads were available in 16 sanitized files.
+  Conclusion: insufficient data
+    No numeric payloads were available in the fresh sanitized files for this family, so there is nothing quantitative to aggregate yet.
