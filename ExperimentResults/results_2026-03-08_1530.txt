@@ -1,0 +1,14 @@
+AXIOM SCIENCE RESULTS
+Timestamp (UTC): 2026-03-08_1530
+
+Window scanned:
+- Sanitized results in /opt/axiom/experiment_results/sanitized/
+- Recency threshold: files modified within the last 180 minutes
+
+Summary:
+- Recent experiment families found: 0
+- Active experiment families with >=10 new sanitized results: 0
+
+Conclusion:
+No active experiment family met the mandatory 10-result analysis threshold in this 180-minute window, so no new statistical analysis was performed in this cycle.
+findings_summary.txt was archived and pruned on the required 14-day sliding-window rule; no entries were old enough to remove in this run.
