@@ -1,0 +1,17 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-08_0451 UTC
+
+Recent-family scan (last 180 min): 925 exp_galtonwatson_markov_environment_crossover, 336 exp_voter_modular_consensus, 210 exp_hypergraph_pgg_fixation, 66 gpu_wu, 34 exp_rps_striped_mobility_coexistence_gpu_gpu, 6 exp_bootstrap_striped_threshold_gpu, 1 exp_may_nested_mutualism_localization_gpu_gpu.
+Skipped as already settled in findings_summary.txt: exp_galtonwatson_markov_environment_crossover (CONFIRMED), exp_hypergraph_pgg_fixation (CONFIRMED).
+
+EXPERIMENT: exp_voter_modular_consensus (353 results, 353 seeds, 21 hosts)
+  Results: strong-modularity consensus-time lift +2.53854 +/- 0.33246 (d=7.64, 353/353 positive); unity-minus-strong-modularity consensus fraction +0.15204 +/- 0.01765 (d=8.61, 353/353 positive); K8-minus-K2 consensus-time shift at ratio=1.0 -2.38521 +/- 0.79396 (d=-3.00, 352/353 negative).
+  Conclusion: CONFIRMED
+    Strong modularity reproducibly slows consensus and lowers the within-budget consensus completion rate relative to the well-mixed limit, so the bottleneck-driven crossover is real rather than a seed artifact. The sign is uniform across all 353 seeds for the two primary metrics, which makes the phenomenon robust enough to treat as established.
+
+EXPERIMENT: exp_rps_striped_mobility_coexistence_gpu_gpu (41 results, 41 seeds, 6 hosts)
+  Results: mid-vs-IID survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-high survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-IID coexistence gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); high-minus-mid stripe-order +0.00395 +/- 0.00063 (d=6.29, 41/41 positive).
+  Conclusion: NO EFFECT
+    Intermediate stripe anisotropy changes geometric order but does not improve coexistence or survival against either IID disorder or high anisotropy in any reported performance metric. The proposed corridor advantage is therefore not supported by the current 41-seed batch.
+
+gpu_wu note: generic GPU wrapper bucket with mixed payload schemas (67: 253 files, 121: 170 files, 455: 211 files, 727: 208 files, metadata-only: 24 files) and no standalone experiment script at /opt/axiom_boinc/html/user/experiments/gpu_wu.py, so it was audited as a wrapper bucket rather than treated as a scientific family.
