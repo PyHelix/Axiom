@@ -1,0 +1,65 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-08 07:56 Europe/Berlin
+Step: Validation, credit, and cleanup
+
+Session scope
+- Consulted /opt/axiom/experiment_session/findings_summary.txt before review. Current confirmed/no-effect findings included exp_voter_modular_consensus and exp_bootstrap_striped_threshold_gpu, which matched the active result families under review.
+- Live pending snapshot at review start: 850 uncredited completed experiment/GPU results.
+- Reviewable this cycle (sanitized file present): 685 results.
+- Skipped this cycle (no sanitized file yet): 165 results at snapshot, per prompt Step 3a.
+
+Anti-cheat and quality review
+- Spot-checked sanitized payloads across active families. Reviewed files contained numeric-only payloads with stable structure and no byte-identical cross-host duplicates in the 685-result review set.
+- Sample checks:
+  - result 1888098 (host 222): exp_voter_modular_consensus_6f0df0_2 -> elapsed 869.8s, 958 numeric values, range 0.0 to 473071388.0, structurally consistent with population.
+  - result 1889013 (host 269): exp_voter_modular_consensus_6f1183_2 -> elapsed 792.3s, 958 numeric values, range 0.0 to 396581643.0, structurally consistent with population.
+  - result 1879246 (host 272): exp_bootstrap_striped_threshold_gpu_704c5b_0 -> elapsed 856.6s, 174 numeric values, range -0.000346 to 1371831265.0, structurally consistent with population.
+  - result 1877437 (host 353): exp_bootstrap_striped_threshold_gpu_393f6d_0 -> elapsed 866.3s, 174 numeric values, range -0.001609 to 1598750970.0, structurally consistent with population.
+  - result 1880645 (host 272): exp_grayscott_striped_kill_disorder_gpu_gpu_21bbfe_0 -> elapsed 880.4s, 114 numeric values, range -0.288622 to 1922250146.0, structurally consistent with population.
+  - result 1880156 (host 272): exp_grayscott_striped_kill_disorder_gpu_gpu_b39087_0 -> elapsed 887.4s, 114 numeric values, range -0.283356 to 1730793349.0, structurally consistent with population.
+  - result 1818831 (host 1): gpu_wu_d55722_0 -> elapsed 1002.8s, 216 numeric values, range 0.00125 to 1636955890.0, structurally consistent with population.
+  - result 1879002 (host 271): gpu_wu_f71ba5_2 -> elapsed 936.0s, 2526 numeric values, range 0.000972 to 2087077571.0, structurally consistent with population.
+  - result 1868680 (host 353): exp_may_nested_mutualism_localization_gpu_gpu_c914e9_3 -> elapsed 19.1s, sanitized payload empty/None, zero-credit denial.
+- No exact duplicate payloads were found across different hosts in the current 685-result review set.
+- No cross-host numeric outliers were found in the reviewable exp_voter_modular_consensus, exp_bootstrap_striped_threshold_gpu, or gpu_wu batches.
+
+Results reviewed this session
+- exp_voter_modular_consensus: 634 results reviewed (IDs 1876034-1889551). Elapsed range 756.9s-995.9s. Sanitized payloads uniformly contained 958 numeric values and were consistent across hosts -> credited.
+- exp_bootstrap_striped_threshold_gpu: 27 results reviewed (IDs 1875867-1889590). Elapsed range 852.8s-871.5s. Sanitized payloads uniformly contained 174 numeric values and were consistent across hosts -> credited.
+- exp_grayscott_striped_kill_disorder_gpu_gpu: 3 results reviewed (IDs 1880156-1880787). Elapsed range 875.5s-887.4s. Sanitized payloads contained 114 numeric values and were consistent across hosts -> credited.
+- gpu_wu: 20 results reviewed (IDs 1817971-1889589). Elapsed range 884.9s-1335.6s. Sanitized payloads were nontrivial and structurally consistent -> credited.
+- result 1868680 (host 353): exp_may_nested_mutualism_localization_gpu_gpu_c914e9_3 -> 19.1s runtime with empty sanitized payload -> 0 credit (empty payload / suspiciously fast compared with minute-scale batches).
+
+Credit awarded
+- Cycle bin 328323: 269 reviewed results @ 37.17 credit each.
+- Cycle bin 328324: 415 reviewed results @ 24.09 credit each.
+- Cycle bin 328320: 1 reviewed result denied at 0.00 credit.
+- Positive-credit results: 684.
+- Zero-credit denials: 1.
+- Total credit granted this session: 19996.08.
+- User credit deltas and current totals:
+  - user 44: +10991.70, total 104331.63
+  - user 56: +1394.49, total 188999.42
+  - user 6: +1309.14, total 44504.24
+  - user 1: +1238.94, total 31014.46
+  - user 31: +1172.88, total 7227.60
+  - user 10: +1059.30, total 38136.72
+  - user 99: +706.89, total 10127.83
+  - user 90: +671.79, total 77321.24
+  - user 67: +599.52, total 9047.78
+  - user 72: +341.40, total 13435.86
+  - user 22: +218.88, total 2767.16
+  - user 30: +170.70, total 19646.14
+  - user 94: +120.45, total 39293.52
+
+Counters and queue state
+- credited_count.txt incremented by 684 -> 21930.
+- total_results_count.txt updated -> 22954.
+- Remaining pending after this pass: 202 results.
+- Remaining with sanitized file: 1 result (the denied result 1868680).
+- Remaining without sanitized file: 201 results awaiting assimilator output for a future validation cycle.
+
+Cleanup / fixes
+- No stuck or broken tasks were cleaned in this step.
+- No experiment scripts were modified.
+- Temporary credit script removed from /tmp after execution.
