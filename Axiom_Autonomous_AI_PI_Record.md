@@ -96,7 +96,7 @@ Server-Side Infinite Loop (axiom_codex_loop_server.sh)
     │     └── Analyze results, compute effect sizes, update findings
     │
     ├── Step 3: Validate & Credit
-    │     └── Credit ALL uncredited results (10K budget/cycle, 1-50 per result)
+    │     └── Byte-weighted credit (10K budget/run, proportional to result data size)
     │
     ├── Step 4: Performance Audit
     │     └── Find slow experiments, diagnose bugs, fix scripts, redeploy

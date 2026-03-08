@@ -195,7 +195,7 @@ Volunteers (BOINC)              Server (Hetzner)
 - **Experiment format:** Self-contained Python scripts (numpy for CPU, CuPy for GPU), exec()'d by client
 - **Scale:** 295+ experiment scripts, 40+ experiment families, 268 total hosts
 - **STEM categories:** Ecology, Epidemiology, Physics, Nonlinear Dynamics, Network Science, Statistics, Machine Learning, Number Theory, Neuroscience, Population Genetics, and more
-- **Credit:** AI-reviewed, quality-based (10,000 budget per validation cycle, 1-50 credit per result)
+- **Credit:** AI-reviewed, byte-weighted (10,000 budget per validation run, credit proportional to result data size — GPU tasks earning ~3x more per task)
 - **AI PI:** 10-step autonomous loop + dedup + significance rating, 13 cycles/day, GPT-5.4 engine
 - **See:** [Axiom_v6_Experiment_Container_Record.md](Axiom_v6_Experiment_Container_Record.md)
 
@@ -231,7 +231,7 @@ Volunteers (BOINC)              Server (Hetzner)
 - **Mar 6, 2026:** v6.09 deployed — BOINC compliance update, PyInstaller extraction in slot directory
 - **Mar 7, 2026:** Pool-based workunit management deployed, replacing per-host targeting. AI PI expanded to 10-step loop with error triage, performance audit, health check, security scan, dedup, and significance rating
 - **Mar 7, 2026:** First AI-generated research paper published — ecology study on reactive mode localization (1,463 simulations, 17 hosts, Cohen's d > 80)
-- **Mar 8, 2026:** 295+ experiment scripts deployed across 11+ STEM categories. 268 total hosts contributed. 13 autonomous cycles per day operational.
+- **Mar 8, 2026:** 295+ experiment scripts deployed across 11+ STEM categories. 268 total hosts contributed. 13 autonomous cycles per day operational. Byte-weighted credit system deployed — credit proportional to result data size (`result_bytes / total_bytes × 10K`), naturally rewarding GPU volunteers ~3x more per task. Anti-cheat expanded with abnormal file size detection to prevent padding attacks.
 
 ---
 

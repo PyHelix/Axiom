@@ -53,7 +53,7 @@ Volunteer                     BOINC Server                  Blockchain
 1. Volunteer runs scientific experiments on the Axiom BOINC network
 2. AI (currently Claude, under human oversight) reviews result quality and awards credit
 3. User links BOINC account to wallet address (one-time verification)
-4. Wallet weight = accumulated AI-judged credit (NOT coin balance)
+4. Wallet weight = accumulated AI-judged credit, byte-weighted by result data size (NOT coin balance, NOT FLOPS)
 5. Block producer selected by weighted random selection based on credit
 6. Block reward goes to producer
 7. Credit is consumed over time, requiring continued useful contribution

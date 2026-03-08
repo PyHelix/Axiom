@@ -123,12 +123,13 @@ The platform has scaled far beyond the initial 10-experiment deployment:
 ### Anti-Cheat Credit System
 Traditional BOINC credit is based on FLOPS (floating point operations reported by the client), which is trivially gameable — a malicious client can report inflated FLOPS without doing real work. Axiom v6 bypasses this entirely:
 
-1. Assimilator saves full experiment results but grants **zero credit** automatically
-2. An AI (Claude), under human oversight, reviews the actual result data
-3. Credit is awarded based on result quality and scientific validity
-4. Invalid, trivial, or suspicious results receive no credit
+1. Assimilator strips all strings from volunteer results, saving only numeric data as sanitized JSON files
+2. An AI (Claude), under human oversight, spot-checks ~200 random results per validation cycle for anti-cheat
+3. **Credit is byte-weighted** — proportional to the size of each result's sanitized data file: `result_credit = (result_bytes / total_bytes) × 10,000 budget`. Larger results (more computation, more data points) earn proportionally more credit. This naturally rewards GPU tasks (~3x more data per task) fairly without hardcoded multipliers
+4. Anti-cheat checks: suspiciously fast completion (<60s for ~15 min experiments), empty/trivial payloads, duplicate results across hosts, and **abnormal result sizes** (>3x or <0.2x the median file size for that experiment type — catches padding attacks against the byte-weighted credit system)
+5. Invalid, trivial, or suspicious results receive zero credit
 
-This makes credit gaming impossible without actually producing valid scientific results.
+This makes credit gaming impossible without actually producing valid scientific results. The byte-weighted formula (deployed March 8, 2026) replaced flat per-result credit, ensuring volunteers who contribute more computational output per task are rewarded proportionally.
 
 ---
 
