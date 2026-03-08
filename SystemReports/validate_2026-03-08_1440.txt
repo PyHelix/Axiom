@@ -1,36 +1,27 @@
 Axiom validation log 2026-03-08_1440
-Processed results: 15
+Processed results: 8
 Safe JSON exact matches available: 0
 Sampled sanitized files: 0
 Queue summary by family:
-- exp_abx_cycle_hgt_delay_resonance: 3
-- exp_ageing_voter_modular_polarization: 4
-- exp_contact_process_crossed_stripe_interaction_gpu_gpu: 1
-- exp_markov_branching_rescue_correlation: 5
-- exp_sparse_wigner_tw_edge: 2
+- exp_abx_cycle_hgt_delay_resonance: 4
+- exp_ageing_voter_modular_polarization: 2
+- exp_markov_branching_rescue_correlation: 2
 Denial summary:
-- none
+- abnormal_nbytes_low median=28544.0: 1
 Validation notes:
 - No current sanitized payloads matched exact result names; payload-level duplicate/empty review could not be performed this cycle.
 - Credit budget applied only to non-denied results using DB nbytes.
 - No stuck/broken tasks cleaned up in this step.
 - No experiment scripts modified in this step.
 Per-user totals:
-- user 55: +700.00, total 26628.61
-- user 83: +50.00, total 59528.84
+- user 31: +50.00, total 9111.32
+- user 55: +254.12, total 26882.73
 Results reviewed this session:
-- result 1919256 (host 159): exp_contact_process_crossed_stripe_interaction_gpu_gpu_66ea67_0 | family exp_contact_process_crossed_stripe_interaction_gpu_gpu | elapsed 22.568s | nbytes 3003 | median 3003 | byte_weighted median=3003 -> 50.00 credit
-- result 1920880 (host 364): exp_ageing_voter_modular_polarization_10051d_0 | family exp_ageing_voter_modular_polarization | elapsed 5.042s | nbytes 249 | median 249.0 | byte_weighted median=249.0 -> 50.00 credit
-- result 1920881 (host 364): exp_abx_cycle_hgt_delay_resonance_af6a84_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 5.044s | nbytes 245 | median 245 | byte_weighted median=245 -> 50.00 credit
-- result 1920929 (host 364): exp_ageing_voter_modular_polarization_a25b1f_0 | family exp_ageing_voter_modular_polarization | elapsed 4.035s | nbytes 249 | median 249.0 | byte_weighted median=249.0 -> 50.00 credit
-- result 1920931 (host 364): exp_markov_branching_rescue_correlation_6b8e33_0 | family exp_markov_branching_rescue_correlation | elapsed 3.025s | nbytes 251 | median 251 | byte_weighted median=251 -> 50.00 credit
-- result 1920932 (host 364): exp_markov_branching_rescue_correlation_27b186_0 | family exp_markov_branching_rescue_correlation | elapsed 4.031s | nbytes 251 | median 251 | byte_weighted median=251 -> 50.00 credit
-- result 1920937 (host 364): exp_markov_branching_rescue_correlation_464b09_0 | family exp_markov_branching_rescue_correlation | elapsed 2.018s | nbytes 251 | median 251 | byte_weighted median=251 -> 50.00 credit
-- result 1920977 (host 364): exp_markov_branching_rescue_correlation_ddea8d_0 | family exp_markov_branching_rescue_correlation | elapsed 3.028s | nbytes 251 | median 251 | byte_weighted median=251 -> 50.00 credit
-- result 1920995 (host 364): exp_ageing_voter_modular_polarization_039cbf_0 | family exp_ageing_voter_modular_polarization | elapsed 5.052s | nbytes 249 | median 249.0 | byte_weighted median=249.0 -> 50.00 credit
-- result 1920996 (host 364): exp_markov_branching_rescue_correlation_447621_0 | family exp_markov_branching_rescue_correlation | elapsed 5.042s | nbytes 251 | median 251 | byte_weighted median=251 -> 50.00 credit
-- result 1920997 (host 364): exp_ageing_voter_modular_polarization_458412_0 | family exp_ageing_voter_modular_polarization | elapsed 4.034s | nbytes 249 | median 249.0 | byte_weighted median=249.0 -> 50.00 credit
-- result 1920998 (host 364): exp_abx_cycle_hgt_delay_resonance_c09a03_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 4.034s | nbytes 245 | median 245 | byte_weighted median=245 -> 50.00 credit
-- result 1920999 (host 364): exp_sparse_wigner_tw_edge_3ebe79_0 | family exp_sparse_wigner_tw_edge | elapsed 3.027s | nbytes 237 | median 237.0 | byte_weighted median=237.0 -> 50.00 credit
-- result 1921000 (host 364): exp_sparse_wigner_tw_edge_803ba0_0 | family exp_sparse_wigner_tw_edge | elapsed 3.027s | nbytes 237 | median 237.0 | byte_weighted median=237.0 -> 50.00 credit
-- result 1921004 (host 364): exp_abx_cycle_hgt_delay_resonance_51765d_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 2.020s | nbytes 245 | median 245 | byte_weighted median=245 -> 50.00 credit
+- result 1903002 (host 230): exp_ageing_voter_modular_polarization_f9cb5c_0 | family exp_ageing_voter_modular_polarization | elapsed 860.533s | nbytes 56839 | median 28544.0 | byte_weighted median=28544.0 -> 50.00 credit
+- result 1920877 (host 364): exp_abx_cycle_hgt_delay_resonance_29a31c_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 3.029s | nbytes 245 | median 245.0 | byte_weighted median=245.0 -> 42.01 credit
+- result 1920986 (host 364): exp_ageing_voter_modular_polarization_2bc00c_0 | family exp_ageing_voter_modular_polarization | elapsed 5.048s | nbytes 249 | median 28544.0 | abnormal_nbytes_low median=28544.0 -> 0.00 credit
+- result 1920987 (host 364): exp_markov_branching_rescue_correlation_63cb8e_0 | family exp_markov_branching_rescue_correlation | elapsed 4.035s | nbytes 251 | median 251.0 | byte_weighted median=251.0 -> 43.04 credit
+- result 1920988 (host 364): exp_abx_cycle_hgt_delay_resonance_0b8702_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 5.047s | nbytes 245 | median 245.0 | byte_weighted median=245.0 -> 42.01 credit
+- result 1920990 (host 364): exp_abx_cycle_hgt_delay_resonance_299ef4_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 4.034s | nbytes 245 | median 245.0 | byte_weighted median=245.0 -> 42.01 credit
+- result 1921003 (host 364): exp_markov_branching_rescue_correlation_fa94ba_0 | family exp_markov_branching_rescue_correlation | elapsed 3.026s | nbytes 251 | median 251.0 | byte_weighted median=251.0 -> 43.04 credit
+- result 1921008 (host 364): exp_abx_cycle_hgt_delay_resonance_4c718c_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 2.020s | nbytes 245 | median 245.0 | byte_weighted median=245.0 -> 42.01 credit
