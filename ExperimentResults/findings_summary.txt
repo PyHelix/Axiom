@@ -74,3 +74,25 @@ Status: DEPLOYED
 Hypothesis: orthogonal quenched stripe anisotropy in Gray-Scott feed and kill fields creates a more mixed, defect-rich steady state than either IID heterogeneity or parallel stripe alignment near the labyrinth/spot boundary.
 Novelty check: searched "Gray-Scott model spatial heterogeneity parameter disorder", "Gray-Scott anisotropic patterns", "reaction-diffusion quenched disorder stripes pattern formation", and "Gray-Scott feed kill heterogeneity"; found general Gray-Scott and heterogeneous reaction-diffusion pattern papers, but no direct crossed feed-vs-kill stripe orientation study in this regime. Worth running because the interaction is specific, GPU-suited, and not covered by the existing single-parameter stripe experiments.
 Last updated: 2026-03-07
+
+EXPERIMENT: exp_sis_burst_modularity_temporal_threshold
+Status: DEPLOYED
+Hypothesis: with mean contact activity held fixed, heavy-tailed inter-contact times raise the SIS persistence threshold on weakly modular temporal networks but can partially restore persistence inside strongly modular networks by creating repeated within-community exposure bursts.
+Novelty check: searched "SIS contact process temporal network burstiness clustering epidemic threshold", "SIS temporal network burstiness community structure epidemic threshold", and "activity driven network burstiness community structure SIS"; found burstiness-only epidemic papers and modular temporal-network SIS papers, including a modular activity-driven threshold study that still assumes Poisson activation, but no direct burstiness x modularity threshold map for SIS/contact-process dynamics. Worth running because it tests a clear missing interaction between two separately studied mechanisms and should be publishable whether the interaction is positive, negative, or null.
+Last updated: 2026-03-08
+
+EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu
+Status: DEPLOYED
+Hypothesis: near the active-absorbing threshold of a 2D contact process, orthogonal quenched stripe anisotropy in infection and recovery fields creates more persistent, spatially mixed endemic activity than either IID heterogeneity or parallel stripe alignment by intersecting infection highways with low-recovery refuge bands.
+Novelty check: searched "contact process spatial heterogeneity striped recovery infection rate anisotropy lattice epidemic", "SIS lattice quenched disorder stripes infection recovery rate anisotropy", "contact process crossed spatial heterogeneity infection recovery stripes", "epidemic lattice model orthogonal stripe disorder infection recovery", "quenched disorder contact process infection recovery rates square lattice stripes", "anisotropic contact process heterogeneous recovery rate lattice disorder", "contact process quenched spatial disorder recovery rate epidemic lattice study", and "spatial SIS lattice heterogeneity infection and recovery disorder study"; found work on quenched disorder, anisotropic spread, and heterogeneous epidemic thresholds separately, but no direct crossed infection-stripe x recovery-stripe interaction map on a 2D near-critical contact process. Worth running because the mechanism is specific, GPU-suited, and publishable whether the orthogonal geometry enhances persistence or collapses it.
+Last updated: 2026-03-08
+
+EXPERIMENT: exp_hypergraph_pgg_fixation
+Status: CONFIRMED
+Results: peak fixation-ratio excess over neutrality +1.93102 +/- 0.53063 (d=3.64, 151/151 positive); amplifier-condition fraction +0.44194 +/- 0.09955 (d=4.44, 151/151 positive); k12-k2 critical-r shift +0.03137 +/- 2.04877 (d=0.02, 73/151 positive). 151 seeds, 16 hosts.
+Last updated: 2026-03-08
+
+EXPERIMENT: exp_rps_striped_mobility_coexistence_gpu_gpu
+Status: NO EFFECT
+Results: mid-vs-IID survival gain +0.00000 +/- 0.00000 (d=0.00, 0/37 positive); mid-vs-high survival gain +0.00000 +/- 0.00000 (d=0.00, 0/37 positive); mid-vs-IID coexistence gain +0.00000 +/- 0.00000 (d=0.00, 0/37 positive). 37 seeds, 6 hosts.
+Last updated: 2026-03-08

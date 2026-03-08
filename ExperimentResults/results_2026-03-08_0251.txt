@@ -1,0 +1,22 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-08_0251 UTC
+
+Recent-family scan (last 180 min): 1363 exp_galtonwatson_markov_environment_crossover, 311 exp_kac_edge_correlation_crossover, 123 exp_hypergraph_pgg_fixation, 112 gpu_wu, 53 exp_may_nested_mutualism_localization_gpu_gpu, 37 exp_rps_striped_mobility_coexistence_gpu_gpu.
+Skipped as already settled in findings_summary.txt: exp_galtonwatson_markov_environment_crossover (CONFIRMED), exp_kac_edge_correlation_crossover (REJECTED).
+
+EXPERIMENT: exp_hypergraph_pgg_fixation (151 results, 151 seeds, 16 hosts)
+  Results: peak fixation-ratio excess over neutrality +1.93102 +/- 0.53063 (d=3.64, 151/151 positive); amplifier-condition fraction +0.44194 +/- 0.09955 (d=4.44, 151/151 positive); k12-k2 critical-r shift +0.03137 +/- 2.04877 (d=0.02, 73/151 positive).
+  Conclusion: CONFIRMED
+    Cooperative fixation can exceed the neutral 1/N baseline strongly and reproducibly somewhere in the (k,r) phase grid, so frequency-dependent public-goods selection survives the hypergraph setting rather than collapsing to neutrality. The effect does not come from a stable monotone increase of critical r with hyperedge size, but the existence of a large, repeatable super-neutral regime is now well supported.
+
+EXPERIMENT: exp_may_nested_mutualism_localization_gpu_gpu (62 results, 0 seeds, 0 hosts)
+  Results: 62/62 sanitized files were metadata-only and contained no numeric experiment payload to analyze.
+  Conclusion: INSUFFICIENT DATA
+    This family produced wrapper metadata but no experiment_result vectors, so there is no seed-level scientific evidence yet. It should not enter findings until valid numeric payloads arrive.
+
+EXPERIMENT: exp_rps_striped_mobility_coexistence_gpu_gpu (37 results, 37 seeds, 6 hosts)
+  Results: mid-vs-IID survival gain +0.00000 +/- 0.00000 (d=0.00, 0/37 positive); mid-vs-high survival gain +0.00000 +/- 0.00000 (d=0.00, 0/37 positive); mid-vs-IID coexistence gain +0.00000 +/- 0.00000 (d=0.00, 0/37 positive); high-minus-mid stripe-order +0.00395 +/- 0.00059 (d=6.73, 37/37 positive).
+  Conclusion: NO EFFECT
+    Intermediate stripe anisotropy changes geometric order but does not improve survival or coexistence relative to either IID disorder or high anisotropy in the reported summary metrics. The corridor-geometry mechanism is therefore not supported by the current GPU batch, even though stripe alignment itself is measurable.
+
+gpu_wu note: generic GPU wrapper bucket with mixed payload schemas (67: 239 files, 121: 170 files, 455: 209 files, 727: 190 files, metadata-only: 24 files) and no standalone experiment script at /opt/axiom_boinc/html/user/experiments/gpu_wu.py, so it was audited as a wrapper bucket rather than treated as a scientific family.
