@@ -444,3 +444,10 @@ Follow-up results reviewed
 - result 1932165 (host 202): exp_hypergraph_pgg_inertia_crossover -> stub filter -> 0.01 sentinel (elapsed 3.047s, nbytes 248)
 - result 1932166 (host 202): exp_ageing_voter_modular_polarization -> stub filter -> 0.01 sentinel (elapsed 3.053s, nbytes 249)
 - result 1932167 (host 202): exp_sparse_wigner_tw_edge -> stub filter -> 0.01 sentinel (elapsed 3.037s, nbytes 237)
+
+Final drain loop
+- Additional late-arriving completed results processed in one inline loop after publication races: 38 results
+- Denied sentinel (0.01): 30 late arrivals via stub filter
+- Additional credit added in final drain loop: 3548.96
+- Queue state after final drain loop: 0 uncredited completed experiment results remaining
+- Result IDs for this micro-batch were not separately snapshotted before the inline drain loop; it was executed immediately to eliminate the live-queue race
