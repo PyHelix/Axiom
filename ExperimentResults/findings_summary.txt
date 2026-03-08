@@ -1,90 +1,73 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-EXPERIMENT: exp_may_heterogeneity_reactivity_localization
-Status: CONFIRMED
-Results: high-low window width +3.96477 +/- 0.04442 (d=89.25, 735/735 positive); high-low reactive IPR +0.28195 +/- 0.00084 (d=335.59, 735/735 positive); high-low effective fraction -0.22077 +/- 0.00066 (d=-332.85, 735/735 negative). 735 seeds, 17 hosts.
-Last updated: 2026-03-07
-
 EXPERIMENT: exp_trophic_coherence_reactivity_localization
-Status: REJECTED
-Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive); midlayer-mass noise slope -0.02371 +/- 0.00462 (d=-5.13, 257/257 negative). 257 seeds, 13 hosts.
+Status: REJECTED | Results: window-noise slope -0.41847 +/- 0.00256 (d=-163.61, 0/257 positive); midlayer-mass noise slope -0.02371 +/- 0.00462 (d=-5.13, 257/257 negative). 257 seeds, 13 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_muller_ratchet_fluctuating_metapop
-Status: NO EFFECT
-Results: async-persistent click-min advantage +0.00009 +/- 0.00143 (d=0.06, 378/713 positive); persistent-async optimum shift -0.00135 +/- 0.06835 (d=-0.02, 249/713 negative); sync rescue gap +0.00000 +/- 0.00069 (d=0.01, 369/713 positive). 713 seeds, 16 hosts.
+Status: NO EFFECT | Results: async-persistent click-min advantage +0.00009 +/- 0.00143 (d=0.06, 378/713 positive); persistent-async optimum shift -0.00135 +/- 0.06835 (d=-0.02, 249/713 negative); sync rescue gap +0.00000 +/- 0.00069 (d=0.01, 369/713 positive). 713 seeds, 16 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_may_nested_mutualism_localization
-Status: REJECTED
-Results: high-mid window gain -0.03234 +/- 0.00039 (d=-83.14, 0/3075 positive); high-mid core reactive-mass shift +0.02119 +/- 0.00097 (d=21.87, 3075/3075 positive). 3075 seeds, 21 hosts.
+Status: REJECTED | Results: high-mid window gain -0.03234 +/- 0.00039 (d=-83.14, 0/3075 positive); high-mid core reactive-mass shift +0.02119 +/- 0.00097 (d=21.87, 3075/3075 positive). 3075 seeds, 21 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_metapop_commuting_reactivity_localization
-Status: NO EFFECT
-Results: mid-asymmetry window gain +0.00020 +/- 0.00144 (d=0.14, 1458/2573 positive); high-asymmetry window gain +0.00026 +/- 0.00140 (d=0.18, 1519/2573 positive); high-mid hub-mass shift -0.00010 +/- 0.00227 (d=-0.05, 1349/2573 negative). 2573 seeds, 24 hosts.
+Status: NO EFFECT | Results: mid-asymmetry window gain +0.00020 +/- 0.00144 (d=0.14, 1458/2573 positive); high-asymmetry window gain +0.00026 +/- 0.00140 (d=0.18, 1519/2573 positive); high-mid hub-mass shift -0.00010 +/- 0.00227 (d=-0.05, 1349/2573 negative). 2573 seeds, 24 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_may_lowrank_mutualism_localization
-Status: NO EFFECT
-Results: mid-window shift -7.36798 +/- 159.37912 (d=-0.05, 113/211 negative); high-window shift -2.76998 +/- 189.94482 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00530 (d=33.92, 211/211 positive). 211 seeds, 11 hosts.
+Status: NO EFFECT | Results: mid-window shift -7.36798 +/- 159.37912 (d=-0.05, 113/211 negative); high-window shift -2.76998 +/- 189.94482 (d=-0.01, 107/211 positive); core-mass shift +0.17984 +/- 0.00530 (d=33.92, 211/211 positive). 211 seeds, 11 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_isr_trapmemory_delay_interaction
-Status: REJECTED
-Results: strong-minus-weak-memory delay-window interaction -0.01146 +/- 0.01384 (d=-0.83, 103/487 positive); global reentrant gain +0.00244 +/- 0.00830 (d=0.29, 288/487 positive); alpha0-alpha2 window delta -0.01146 +/- 0.01384 (d=-0.83, 103/487 positive). 487 seeds, 19 hosts.
+Status: REJECTED | Results: strong-minus-weak-memory delay-window interaction -0.01146 +/- 0.01384 (d=-0.83, 103/487 positive); global reentrant gain +0.00244 +/- 0.00830 (d=0.29, 288/487 positive); alpha0-alpha2 window delta -0.01146 +/- 0.01384 (d=-0.83, 103/487 positive). 487 seeds, 19 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_percolation_diffusion_spectral_gpu
-Status: REJECTED
-Results: L512 spectral dimension 1.46980 +/- 0.01967; AO gap +0.13647 +/- 0.01967 (d=6.94, 166/166 positive); L512-L128 ds lift +0.42515 +/- 0.02867 (d=14.83, 166/166 positive). 166 seeds, 10 hosts.
+Status: REJECTED | Results: L512 spectral dimension 1.46980 +/- 0.01967; AO gap +0.13647 +/- 0.01967 (d=6.94, 166/166 positive); L512-L128 ds lift +0.42515 +/- 0.02867 (d=14.83, 166/166 positive). 166 seeds, 10 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_stochastic_resonance_universality_gpu
-Status: REJECTED
-Results: cosine-quartic peak-noise delta from unity -0.67931 +/- 0.12908 (d=-5.26, 1/56 positive); piecewise-quartic FWHM delta from unity -0.85484 +/- 0.07219 (d=-11.84, 0/56 positive); mean absolute universality deviation 0.74420 +/- 0.08537. 56 seeds, 7 hosts.
+Status: REJECTED | Results: cosine-quartic peak-noise delta from unity -0.67931 +/- 0.12908 (d=-5.26, 1/56 positive); piecewise-quartic FWHM delta from unity -0.85484 +/- 0.07219 (d=-11.84, 0/56 positive); mean absolute universality deviation 0.74420 +/- 0.08537. 56 seeds, 7 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_oregonator_delay_adaptive_illumination_window
-Status: REJECTED
-Results: medium-delay window gain -0.00014 +/- 0.00000 (d=-43.56, 0/814 positive); adaptive-minus-pulse score +0.01172 +/- 0.00000 (d=7260.91, 814/814 positive); adaptive-minus-pulse usage -0.06075 +/- 0.00000 (d=-801830708.81, 814/814 negative). 814 seeds, 23 hosts.
+Status: REJECTED | Results: medium-delay window gain -0.00014 +/- 0.00000 (d=-43.56, 0/814 positive); adaptive-minus-pulse score +0.01172 +/- 0.00000 (d=7260.91, 814/814 positive); adaptive-minus-pulse usage -0.06075 +/- 0.00000 (d=-801830708.81, 814/814 negative). 814 seeds, 23 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_sir_bimodal_scaling_gpu
-Status: NO EFFECT
-Results: R0=1 gap growth from N200 to N2000 +0.01703 +/- 0.01063 (d=1.60, 113/120 positive); R0=1 bimodality-coefficient growth -0.00797 +/- 0.01826 (d=-0.44, 34/120 positive). 120 seeds, 7 hosts.
+Status: NO EFFECT | Results: R0=1 gap growth from N200 to N2000 +0.01703 +/- 0.01063 (d=1.60, 113/120 positive); R0=1 bimodality-coefficient growth -0.00797 +/- 0.01826 (d=-0.44, 34/120 positive). 120 seeds, 7 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_bbp_spiked_covariance_gpu
-Status: REJECTED
-Results: Gaussian p=800 threshold jump +0.07613 +/- 0.02469 (d=3.08, 228/228 positive); supercritical shift +0.35377 +/- 0.05283 (d=6.70, 228/228 positive); Student-t minus Gaussian fluct23 delta +0.05858 +/- 0.02811 (d=2.08, 228/228 positive). 228 seeds, 13 hosts.
+Status: REJECTED | Results: Gaussian p=800 threshold jump +0.07613 +/- 0.02469 (d=3.08, 228/228 positive); supercritical shift +0.35377 +/- 0.05283 (d=6.70, 228/228 positive); Student-t minus Gaussian fluct23 delta +0.05858 +/- 0.02811 (d=2.08, 228/228 positive). 228 seeds, 13 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_kac_edge_correlation_crossover
-Status: REJECTED
-Results: edge-window gain -0.01199 +/- 0.00038 (d=-31.19, 0/707 positive); real-root window gain -0.01057 +/- 0.00002 (d=-514.16, 0/707 positive); inner suppression +0.00090 +/- 0.00015 (d=5.91, 707/707 positive). 707 seeds, 10 hosts.
+Status: REJECTED | Results: edge-window gain -0.01199 +/- 0.00038 (d=-31.19, 0/707 positive); real-root window gain -0.01057 +/- 0.00002 (d=-514.16, 0/707 positive); inner suppression +0.00090 +/- 0.00015 (d=5.91, 707/707 positive). 707 seeds, 10 hosts.
 Last updated: 2026-03-07
-
 EXPERIMENT: exp_galtonwatson_markov_environment_crossover
-Status: CONFIRMED
-Results: intermediate-persistence peak advantage +0.30700 +/- 0.00284 (d=108.17, 572/572 positive); interior-peak rate +0.51366 +/- 0.01187 (d=43.29, 572/572 positive); NegBin-minus-Poisson peak advantage +0.04653 +/- 0.00767 (d=6.07, 572/572 positive). 572 seeds, 12 hosts.
+Status: CONFIRMED | Results: intermediate-persistence peak advantage +0.30700 +/- 0.00284 (d=108.17, 572/572 positive); interior-peak rate +0.51366 +/- 0.01187 (d=43.29, 572/572 positive); NegBin-minus-Poisson peak advantage +0.04653 +/- 0.00767 (d=6.07, 572/572 positive). 572 seeds, 12 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_hypergraph_pgg_fixation
-Status: CONFIRMED
-Results: peak fixation-ratio excess over neutrality +1.93102 +/- 0.53063 (d=3.64, 151/151 positive); amplifier-condition fraction +0.44194 +/- 0.09955 (d=4.44, 151/151 positive); k12-k2 critical-r shift +0.03137 +/- 2.04877 (d=0.02, 73/151 positive). 151 seeds, 16 hosts.
+Status: CONFIRMED | Results: peak fixation-ratio excess over neutrality +1.93102 +/- 0.53063 (d=3.64, 151/151 positive); amplifier-condition fraction +0.44194 +/- 0.09955 (d=4.44, 151/151 positive); k12-k2 critical-r shift +0.03137 +/- 2.04877 (d=0.02, 73/151 positive). 151 seeds, 16 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_voter_modular_consensus
-Status: CONFIRMED
-Results: strong-modularity consensus-time lift +2.53854 +/- 0.33246 (d=7.64, 353/353 positive); unity-minus-strong-modularity consensus fraction +0.15204 +/- 0.01765 (d=8.61, 353/353 positive); K8-minus-K2 consensus-time shift at ratio=1.0 -2.38521 +/- 0.79396 (d=-3.00, 352/353 negative). 353 seeds, 21 hosts.
+Status: CONFIRMED | Results: strong-modularity consensus-time lift +2.53854 +/- 0.33246 (d=7.64, 353/353 positive); unity-minus-strong-modularity consensus fraction +0.15204 +/- 0.01765 (d=8.61, 353/353 positive); K8-minus-K2 consensus-time shift at ratio=1.0 -2.38521 +/- 0.79396 (d=-3.00, 352/353 negative). 353 seeds, 21 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_rps_striped_mobility_coexistence_gpu_gpu
-Status: NO EFFECT
-Results: mid-vs-IID survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-high survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-IID coexistence gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); high-minus-mid stripe-order +0.00395 +/- 0.00063 (d=6.29, 41/41 positive). 41 seeds, 6 hosts.
+Status: NO EFFECT | Results: mid-vs-IID survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-high survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-IID coexistence gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); high-minus-mid stripe-order +0.00395 +/- 0.00063 (d=6.29, 41/41 positive). 41 seeds, 6 hosts.
 Last updated: 2026-03-08
-
+EXPERIMENT: exp_langton_ant_frozen_stripe_disorder
+Status: CONFIRMED | Results: corridor success gain 0.36261 +/- 0.00578 (d=62.68852, 100.0% sign-consistent); corridor onset advance 0.43214 +/- 0.00516 (d=83.71579, 100.0% sign-consistent); overstripe success penalty -0.00980 +/- 0.00195 (d=-5.03400, 100.0% sign-consistent). 680 seeds, 16 hosts.
+Last updated: 2026-03-08
+EXPERIMENT: exp_random_fibonacci_markov_persistence
+Status: REJECTED | Results: cancellation window gain -0.05260 +/- 0.00001 (d=-10204.91, 100.0% sign-consistent); burst window gain 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); variance window gain 0.01186 +/- 0.00000 (d=10851.64, 100.0% sign-consistent). 95 seeds, 6 hosts.
+Last updated: 2026-03-08
+EXPERIMENT: exp_grayscott_striped_kill_disorder_gpu_gpu
+Status: NO EFFECT | Results: mid mixedness advantage 0.01982 +/- 0.00392 (d=5.05557, 100.0% sign-consistent); mid entropy advantage 0.02227 +/- 0.00138 (d=16.14379, 100.0% sign-consistent); high alignment penalty 0.22731 +/- 0.00480 (d=47.40198, 100.0% sign-consistent). 30 seeds, 5 hosts.
+Last updated: 2026-03-08
+EXPERIMENT: exp_dp_moment_ratio
+Status: NO EFFECT | Results: critical moment ratio R 0.27270 +/- 0.46414 (d=0.58753, 25.7% sign-consistent); model-to-model spread 0.04429 +/- 0.07652 (d=0.57878, 25.7% sign-consistent); relative spread 0.04163 +/- 0.07181 (d=0.57968, 25.7% sign-consistent). 113 seeds, 17 hosts.
+Last updated: 2026-03-08
+EXPERIMENT: exp_persistent_voter_coarsening
+Status: CONFIRMED | Results: k=20 slowdown ratio 1.07045 +/- 0.03839 (d=27.88570, 100.0% sign-consistent); max slowdown ratio 1.22718 +/- 0.13562 (d=9.04892, 100.0% sign-consistent); k=20 consensus fraction shift -0.16826 +/- 0.05740 (d=-2.93118, 100.0% sign-consistent). 83 seeds, 6 hosts.
+Last updated: 2026-03-08
+EXPERIMENT: exp_langton_ant_anisotropic_stripes
+Status: REJECTED | Results: mid-stripe success gain -0.06543 +/- 0.00369 (d=-17.71700, 100.0% sign-consistent); mid-stripe onset advance 0.28569 +/- 0.00361 (d=79.17044, 100.0% sign-consistent); family lock gain 0.86563 +/- 0.00427 (d=202.85, 100.0% sign-consistent). 76 seeds, 6 hosts.
+Last updated: 2026-03-08
 EXPERIMENT: exp_bootstrap_striped_threshold_gpu
-Status: NO EFFECT
-Results: mid-span advantage +0.00000 +/- 0.00000 (d=0.00, 0/46 positive); mid fill gain vs IID +0.03878 +/- 0.00008 (d=494.46, 46/46 positive); high corridor penalty +0.18528 +/- 0.00031 (d=593.74, 46/46 positive). 46 seeds, 7 hosts.
+Status: NO EFFECT | Results: mid-span advantage 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); mid fill gain vs IID 0.03878 +/- 0.00008 (d=512.91, 100.0% sign-consistent); high corridor penalty 0.18527 +/- 0.00031 (d=603.27, 100.0% sign-consistent). 50 seeds, 8 hosts.
+Last updated: 2026-03-08
+EXPERIMENT: exp_parrondo_history_block_resonance
+Status: NO EFFECT | Results: mid-block gain -0.00455 +/- 0.00001 (d=-538.03, 100.0% sign-consistent); optimal mid-block fraction 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); memory sensitivity 0.00017 +/- 0.00002 (d=10.32123, 100.0% sign-consistent). 23 seeds, 5 hosts.
 Last updated: 2026-03-08
