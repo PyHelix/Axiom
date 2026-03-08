@@ -1,0 +1,193 @@
+Axiom BOINC science analysis report (2026-03-08_2309 UTC)
+
+Run summary: NO EFFECT=33, insufficient data=5
+
+EXPERIMENT: exp_ageing_voter_modular_polarization (2741 results, 2741 seeds, 35 hosts)
+  Results: metric 10 +0.03101 +/- 0.17335 (d=+0.18, 3.1% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_abx_cycle_hgt_delay_resonance (2255 results, 2255 seeds, 47 hosts)
+  Results: metric 417 +0.99338 +/- 0.00001 (d=+136072.66, 100.0% sign-consistent); metric 387 +0.99041 +/- 0.00001 (d=+131141.83, 100.0% sign-consistent); metric 411 +0.99041 +/- 0.00001 (d=+122143.78, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu_gpu (58 results, 58 seeds, 8 hosts)
+  Results: metric 10 +0.02154 +/- 0.00969 (d=+2.22, 96.6% sign-consistent); metric 4 +744.82794 +/- 339.96495 (d=+2.19, 91.4% sign-consistent); metric 25 +0.82088 +/- 0.37468 (d=+2.19, 82.8% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu_gpu (66 results, 66 seeds, 11 hosts)
+  Results: metric 278 +0.99625 +/- 0.00003 (d=+33320.99, 100.0% sign-consistent); metric 242 +0.99623 +/- 0.00003 (d=+32035.16, 100.0% sign-consistent); metric 26 +0.99627 +/- 0.00003 (d=+31269.18, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_kauffman_autocatalytic_threshold (9 results, 9 seeds, 2 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: insufficient data
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu (120 results, 120 seeds, 8 hosts)
+  Results: metric 10 +0.02244 +/- 0.00870 (d=+2.58, 98.3% sign-consistent); metric 25 +0.83487 +/- 0.36211 (d=+2.31, 84.2% sign-consistent); metric 53 +0.79097 +/- 0.34307 (d=+2.31, 84.2% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu (135 results, 135 seeds, 12 hosts)
+  Results: metric 72 +1.00000 +/- 0.00000 (d=+428005476.68, 100.0% sign-consistent); metric 104 +1.00000 +/- 0.00000 (d=+252309353.41, 100.0% sign-consistent); metric 136 +1.00000 +/- 0.00000 (d=+81396337.10, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_dla_drift_reversal_window (373 results, 373 seeds, 17 hosts)
+  Results: metric 14 +1.04249 +/- 0.14644 (d=+7.12, 100.0% sign-consistent); metric 12 +0.62991 +/- 0.21000 (d=+3.00, 93.3% sign-consistent); metric 13 +0.62978 +/- 0.21180 (d=+2.97, 93.3% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_nasch_anticipation_heterogeneity (297 results, 297 seeds, 23 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_critical_branching_skew_crossover (1250 results, 1250 seeds, 32 hosts)
+  Results: metric 21 +0.98452 +/- 0.00050 (d=+1949.77, 100.0% sign-consistent); metric 23 -0.98295 +/- 0.00059 (d=-1669.98, 100.0% sign-consistent); metric 19 +0.12849 +/- 0.00041 (d=+315.01, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu (58 results, 58 seeds, 11 hosts)
+  Results: metric 22 +0.68533 +/- 0.00026 (d=+2652.68, 100.0% sign-consistent); metric 30 +0.67399 +/- 0.00042 (d=+1611.73, 100.0% sign-consistent); metric 26 +0.67434 +/- 0.00042 (d=+1607.39, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_grayscott_striped_kill_disorder_gpu_gpu (43 results, 43 seeds, 6 hosts)
+  Results: metric 31 +0.75677 +/- 0.00102 (d=+744.72, 100.0% sign-consistent); metric 17 +0.75707 +/- 0.00105 (d=+721.15, 100.0% sign-consistent); metric 87 +0.67306 +/- 0.00143 (d=+470.89, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover (236 results, 236 seeds, 9 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu_gpu (45 results, 45 seeds, 11 hosts)
+  Results: metric 104 +1.00000 +/- 0.00000 (d=+221461438.49, 100.0% sign-consistent); metric 136 +1.00000 +/- 0.00000 (d=+56328263.76, 100.0% sign-consistent); metric 184 +1.00000 +/- 0.00000 (d=+20058088.73, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_bootstrap_striped_threshold_gpu_gpu (6 results, 6 seeds, 2 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: insufficient data
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_bootstrap_threshold_correlation (152 results, 152 seeds, 8 hosts)
+  Results: metric 9 -0.00000 +/- 0.00015 (d=-0.01, 49.3% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu (77 results, 77 seeds, 12 hosts)
+  Results: metric 278 +0.99625 +/- 0.00003 (d=+33460.99, 100.0% sign-consistent); metric 26 +0.99627 +/- 0.00003 (d=+32701.94, 100.0% sign-consistent); metric 44 +0.99629 +/- 0.00003 (d=+31490.14, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_goldbach_partition_growth (149 results, 149 seeds, 8 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_fpp_fluctuation_exponent (111 results, 111 seeds, 14 hosts)
+  Results: metric 9 +0.75399 +/- 0.00185 (d=+407.89, 100.0% sign-consistent); metric 7 +0.78475 +/- 0.00275 (d=+285.01, 100.0% sign-consistent); metric 5 +0.76820 +/- 0.00297 (d=+258.23, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_standard_map_ftle_transition (122 results, 122 seeds, 21 hosts)
+  Results: metric 12 +0.98120 +/- 0.00196 (d=+501.52, 100.0% sign-consistent); metric 11 +0.46083 +/- 0.00844 (d=+54.57, 100.0% sign-consistent); metric 5 +0.04554 +/- 0.00097 (d=+46.92, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_adaptive_voter_delay_rewiring (184 results, 184 seeds, 18 hosts)
+  Results: metric 10 +0.48947 +/- 0.00257 (d=+190.42, 100.0% sign-consistent); metric 12 +0.23259 +/- 0.00562 (d=+41.36, 100.0% sign-consistent); metric 11 -0.00006 +/- 0.00009 (d=-0.71, 77.7% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_aah_delay_dephasing_window (116 results, 116 seeds, 14 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_random_fibonacci_markov_persistence (231 results, 231 seeds, 10 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_dp_moment_ratio (225 results, 225 seeds, 20 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu (18 results, 18 seeds, 6 hosts)
+  Results: metric 1 +855.19056 +/- 0.38636 (d=+2213.47, 100.0% sign-consistent); metric 14 +0.49810 +/- 0.00041 (d=+1208.54, 100.0% sign-consistent); metric 13 +0.54327 +/- 0.00474 (d=+114.66, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_langton_ant_anisotropic_stripes (198 results, 198 seeds, 11 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_allee_delay_climate_harvest (442 results, 440 seeds, 29 hosts)
+  Results: metric 12 +0.04000 +/- 0.00000 (d=+9082426420240240.00, 100.0% sign-consistent); metric 48 +0.04000 +/- 0.00000 (d=+9082426420240240.00, 100.0% sign-consistent); metric 84 +0.04000 +/- 0.00000 (d=+9082426420240240.00, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu_gpu (1 results, 1 seeds, 1 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: insufficient data
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_langton_ant_frozen_stripe_disorder (895 results, 895 seeds, 19 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu (2 results, 2 seeds, 2 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: insufficient data
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_parrondo_history_block_resonance (65 results, 65 seeds, 8 hosts)
+  Results: metric 19 -0.12897 +/- 0.00000 (d=-27821.22, 100.0% sign-consistent); metric 13 -0.13428 +/- 0.00001 (d=-25606.08, 100.0% sign-consistent); metric 15 -0.13674 +/- 0.00001 (d=-24809.76, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_antibiotic_delay_fatigue_switch (76 results, 76 seeds, 11 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_winding_number_spitzer (153 results, 153 seeds, 20 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_quorum_sensing_spatial_hysteresis (147 results, 147 seeds, 20 hosts)
+  Results: metric 8 +0.01126 +/- 0.00043 (d=+26.14, 100.0% sign-consistent); metric 4 +0.00200 +/- 0.00015 (d=+13.36, 100.0% sign-consistent); metric 10 +0.58687 +/- 0.05385 (d=+10.90, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_benford_logistic_transition (152 results, 152 seeds, 29 hosts)
+  Results: metric 11 +7148788.10216 +/- 0.00000 (d=+18828263603388060.00, 100.0% sign-consistent); metric 27 +0.30028 +/- 0.00000 (d=+10956179489347048.00, 100.0% sign-consistent); metric 25 +0.20815 +/- 0.00000 (d=+7928314202686582.00, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu (58 results, 58 seeds, 11 hosts)
+  Results: metric 22 +0.68533 +/- 0.00026 (d=+2652.68, 100.0% sign-consistent); metric 30 +0.67399 +/- 0.00042 (d=+1611.73, 100.0% sign-consistent); metric 26 +0.67434 +/- 0.00042 (d=+1607.39, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The largest scalar shift is either too small in magnitude or too inconsistent across seeds to clear the decision thresholds. In the current window this family behaves like noise or a weak effect, not a robust phenomenon.
+
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu (2 results, 2 seeds, 2 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: insufficient data
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.
+
+EXPERIMENT: exp_rsa_polydisperse_jamming (172 results, 172 seeds, 25 hosts)
+  Results: no descriptive scalar metric survived filtering across the available sanitized outputs
+  Conclusion: NO EFFECT
+    The current numeric outputs do not expose a stable scalar effect across seeds. This family needs either more data or a more specific derived metric.

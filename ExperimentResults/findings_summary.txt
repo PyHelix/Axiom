@@ -51,14 +51,14 @@ Last updated: 2026-03-08
 EXPERIMENT: exp_persistent_voter_coarsening | Status: CONFIRMED | Results: k=20 slowdown ratio 1.07045 +/- 0.03839 (d=27.88570, 100.0% sign-consistent); max slowdown ratio 1.22718 +/- 0.13562 (d=9.04892, 100.0% sign-consistent); k=20 consensus fraction shift -0.16826 +/- 0.05740 (d=-2.93118, 100.0% sign-consistent). 57 seeds, 6 hosts.
 Last updated: 2026-03-08
 
-EXPERIMENT: exp_langton_ant_frozen_stripe_disorder | Status: PRELIMINARY | Results: corridor success gain 0.36261 +/- 0.00578 (d=62.68852, 100.0% sign-consistent); corridor onset advance 0.43214 +/- 0.00516 (d=83.71579, 100.0% sign-consistent); overstripe success penalty -0.00980 +/- 0.00195 (d=-5.03400, 100.0% sign-consistent). 28 seeds, 7 hosts.
-Last updated: 2026-03-08
+EXPERIMENT: exp_langton_ant_frozen_stripe_disorder | Status: NO EFFECT | Results: no descriptive scalar metric cleared the current 14-day thresholds after filtering out configuration-only outputs. 895 seeds, 19 hosts.
+Last updated: 2026-03-09
 
 EXPERIMENT: exp_parrondo_history_block_resonance | Status: NO EFFECT | Results: mid-block gain -0.00455 +/- 0.00001 (d=-546.16, 0.0% sign-consistent); optimal mid-block fraction +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); memory sensitivity +0.00017 +/- 0.00001 (d=12.22, 100.0% sign-consistent). 27 seeds, 5 hosts.
 Last updated: 2026-03-08
 
-EXPERIMENT: exp_critical_branching_skew_crossover | Status: PRELIMINARY | Results: late conditional-population skew correlation -0.07964 +/- 0.07735 (d=-1.03, 90.0% sign-consistent); late survival skew correlation +0.09228 +/- 0.09915 (d=0.93, 95.0% sign-consistent); late q90 skew correlation -0.02424 +/- 0.10927 (d=-0.22, 80.0% sign-consistent). 20 seeds, 7 hosts.
-Last updated: 2026-03-08
+EXPERIMENT: exp_critical_branching_skew_crossover | Status: NO EFFECT | Results: only generic scalar slots remained above threshold after schema filtering, so no descriptive scalar metric currently supports a stable family-level effect. 1250 seeds, 32 hosts.
+Last updated: 2026-03-09
 
 EXPERIMENT: exp_minority_game_delay_memory_interaction | Status: REJECTED | Results: bimodal mid-delay volatility gain -0.47825 +/- 0.14654 (d=-3.26, 0.5% sign-consistent). 1665 seeds, 29 hosts.
 Last updated: 2026-03-08
@@ -67,4 +67,10 @@ EXPERIMENT: exp_markov_branching_rescue_correlation | Status: CONFIRMED | Result
 Last updated: 2026-03-08
 
 EXPERIMENT: exp_hypergraph_pgg_inertia_crossover | Status: REJECTED | Results: mid-inertia mixed-state peak advantage -0.03001 +/- 0.03309 (d=-0.91, 2.5% sign-consistent). 318 seeds, 25 hosts.
+Last updated: 2026-03-08
+
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover | Status: DESIGNED | Hypothesis: in a two-layer activity-driven SIS/contact process, negative interlayer activity correlation among shared nodes raises the persistence threshold most strongly at intermediate overlap, counteracting the overlap-driven threshold drop seen for positive correlation. Novelty check (2026-03-08): searched `time-varying multiplex networks and epidemic spreading overlap correlated activity`, `epidemic spreading time-varying multiplex networks overlap correlated activity patterns`, and `time-varying multiplex negative interlayer activity correlation epidemic`; found prior temporal-multiplex epidemic work on overlap and positive correlation, but no comparable sweep of negative interlayer activity correlation with partial overlap. Deploying for first data.
+Last updated: 2026-03-08
+
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover_gpu | Status: DESIGNED | Hypothesis: the same overlap/correlation crossover should sharpen on GPU when scaled to 4,096-node activity-driven multiplexes and evaluated in parallel across all beta values, revealing whether the strongest suppression from negative interlayer correlation is an intermediate-overlap extremum rather than a monotone trend. Novelty check (2026-03-08): searched `time-varying multiplex networks epidemic spreading overlap correlated activity`, `epidemic spreading time-varying multiplex networks overlap correlated activity`, and `time-varying multiplex negative interlayer activity correlation epidemic`; found prior activity-driven multiplex epidemic theory on overlap and correlation, but no comparable large batched Monte Carlo sweep centered on the intermediate-overlap negative-correlation extremum. GPU script added and first batch staged.
 Last updated: 2026-03-08
