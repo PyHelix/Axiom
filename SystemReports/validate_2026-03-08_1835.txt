@@ -451,3 +451,10 @@ Final drain loop
 - Additional credit added in final drain loop: 3548.96
 - Queue state after final drain loop: 0 uncredited completed experiment results remaining
 - Result IDs for this micro-batch were not separately snapshotted before the inline drain loop; it was executed immediately to eliminate the live-queue race
+
+Live-boundary final pass
+- Final visible uncredited snapshot processed at session boundary: 71 results
+- Denied sentinel (0.01): 40 results via stub filter
+- Additional credit added in final visible pass: 7352.27
+- Remaining uncredited completed experiment results immediately after this pass: 0
+- Because the queue is live, any rows appearing after this point are post-pass arrivals for the next validation cycle
