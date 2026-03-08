@@ -1,0 +1,4 @@
+EXPERIMENT: exp_bootstrap_striped_threshold_gpu (46 results, 46 seeds, 7 hosts)
+  Results: mid-span advantage +0.00000 +/- 0.00000 (d=0.00, 0/46 positive); mid fill gain vs IID +0.03878 +/- 0.00008 (d=494.46, 46/46 positive); high corridor penalty +0.18528 +/- 0.00031 (d=593.74, 46/46 positive).
+  Conclusion: NO EFFECT
+    Intermediate stripe anisotropy did not raise spanning probability relative to IID disorder or strong stripes in any of the 46 seeds, so the headline threshold-lowering crossover is not supported in this window. The runs do show a consistent +3.88% growth-gain lift and a large +18.53% corridor penalty at high anisotropy, which suggests stripe geometry changes propagation dynamics without producing the predicted spanning advantage.

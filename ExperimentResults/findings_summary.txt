@@ -83,3 +83,8 @@ EXPERIMENT: exp_rps_striped_mobility_coexistence_gpu_gpu
 Status: NO EFFECT
 Results: mid-vs-IID survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-high survival gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); mid-vs-IID coexistence gain +0.00000 +/- 0.00000 (d=0.00, 0/41 positive); high-minus-mid stripe-order +0.00395 +/- 0.00063 (d=6.29, 41/41 positive). 41 seeds, 6 hosts.
 Last updated: 2026-03-08
+
+EXPERIMENT: exp_bootstrap_striped_threshold_gpu
+Status: NO EFFECT
+Results: mid-span advantage +0.00000 +/- 0.00000 (d=0.00, 0/46 positive); mid fill gain vs IID +0.03878 +/- 0.00008 (d=494.46, 46/46 positive); high corridor penalty +0.18528 +/- 0.00031 (d=593.74, 46/46 positive). 46 seeds, 7 hosts.
+Last updated: 2026-03-08
