@@ -1,0 +1,16 @@
+AXIOM SCIENCE RESULTS
+Timestamp (UTC): 2026-03-08_0117
+
+Recent-family scan (last 180 min): 1018 exp_kac_edge_correlation_crossover, 572 exp_galtonwatson_markov_environment_crossover, 170 gpu_wu, 143 exp_oregonator_delay_adaptive_illumination_window, 61 exp_may_nested_mutualism_localization_gpu_gpu.
+
+EXPERIMENT: exp_galtonwatson_markov_environment_crossover (572 results, 572 seeds, 12 hosts)
+  Results: intermediate-persistence peak advantage +0.30700 +/- 0.00284 (d=108.17, 572/572 positive); interior-peak rate +0.51366 +/- 0.01187 (d=43.29, 572/572 positive); NegBin-minus-Poisson peak advantage +0.04653 +/- 0.00767 (d=6.07, 572/572 positive).
+  Conclusion: CONFIRMED
+    Finite-time extinction heterogeneity peaks reliably at intermediate environment persistence rather than at the persistence extremes. The peak is also stronger for the more overdispersed offspring family, so temporal memory and offspring-family dispersion jointly shape the crossover instead of collapsing to a family-independent critical curve.
+
+EXPERIMENT: exp_may_nested_mutualism_localization_gpu_gpu (61 results, 0 payload-bearing seeds, 4 hosts)
+  Results: 61/61 new family-named sanitized files are metadata-only stubs with no numeric experiment payload; analyzable seed count = 0.
+  Conclusion: PRELIMINARY
+    The current named result files do not contain the ordered numeric output needed to estimate window-width or core-mass effects, so this family remains below the minimum analyzable seed threshold. This cycle therefore does not support either confirmation or rejection of the proposed nestedness relocalization crossover.
+
+gpu_wu note: generic GPU wrapper bucket with mixed payload schemas (67: 228 files, 121: 170 files, 455: 190 files, 727: 189 files, metadata-only: 24 files) and no standalone experiment script, so it was not treated as a scientific family.

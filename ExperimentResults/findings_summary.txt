@@ -63,3 +63,14 @@ EXPERIMENT: exp_kac_edge_correlation_crossover
 Status: REJECTED
 Results: edge-window gain -0.01199 +/- 0.00038 (d=-31.19, 0/707 positive); real-root window gain -0.01057 +/- 0.00002 (d=-514.16, 0/707 positive); inner suppression +0.00090 +/- 0.00015 (d=5.91, 707/707 positive). 707 seeds, 10 hosts.
 Last updated: 2026-03-07
+
+EXPERIMENT: exp_galtonwatson_markov_environment_crossover
+Status: CONFIRMED
+Results: intermediate-persistence peak advantage +0.30700 +/- 0.00284 (d=108.17, 572/572 positive); interior-peak rate +0.51366 +/- 0.01187 (d=43.29, 572/572 positive); NegBin-minus-Poisson peak advantage +0.04653 +/- 0.00767 (d=6.07, 572/572 positive). 572 seeds, 12 hosts.
+Last updated: 2026-03-08
+
+EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu
+Status: DEPLOYED
+Hypothesis: orthogonal quenched stripe anisotropy in Gray-Scott feed and kill fields creates a more mixed, defect-rich steady state than either IID heterogeneity or parallel stripe alignment near the labyrinth/spot boundary.
+Novelty check: searched "Gray-Scott model spatial heterogeneity parameter disorder", "Gray-Scott anisotropic patterns", "reaction-diffusion quenched disorder stripes pattern formation", and "Gray-Scott feed kill heterogeneity"; found general Gray-Scott and heterogeneous reaction-diffusion pattern papers, but no direct crossed feed-vs-kill stripe orientation study in this regime. Worth running because the interaction is specific, GPU-suited, and not covered by the existing single-parameter stripe experiments.
+Last updated: 2026-03-07
