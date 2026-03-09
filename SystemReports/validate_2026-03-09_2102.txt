@@ -1,0 +1,76 @@
+Validation session log
+Timestamp: 2026-03-09 21:02 CET
+Scope: validation, FLOPS-based credit, counter update
+
+Results credited this session
+- Credit script runs: 3
+- Results credited by script runs: 2463
+- Total awarded: 41866.01 cobblestones
+- Final uncredited queue after catch-up loop: 0
+
+Discovery snapshot before credit
+- Initial uncredited results: 2376
+- Initial credited/uncredited quick stats: credited=50360, uncredited=2376
+- Additional completions arrived during the session and were included in later credit passes
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from 2374 sanitized uncredited results available at review time
+- Denied credit sentinel applied to 11 results after numeric-only review of sanitized payloads
+- Denial reasons focused on empty sanitized payloads and duplicate empty payloads across hosts
+
+Denied results
+- 2075434 host 10 gpu_wu_8a5fde_1: empty payload; byte-identical sanitized payload on multiple hosts
+- 2075445 host 10 gpu_wu_37c1cd_1: empty payload; byte-identical sanitized payload on multiple hosts
+- 2075449 host 10 gpu_wu_bee9a9_1: empty payload; byte-identical sanitized payload on multiple hosts
+- 2077542 host 184 exp_spiked_covariance_toeplitz_localization_gpu_d1230f_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2077762 host 184 exp_swift_hohenberg_quench_disorder_gpu_4dc885_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2078209 host 184 exp_swifthohenberg_quench_disorder_gpu_f68008_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2081548 host 272 exp_schnakenberg_crossed_feed_diffusion_gpu_gpu_8f7c4a_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2084827 host 374 exp_henon_chaos_boundary_fractal_gpu_b2c3a8_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2084845 host 374 exp_schnakenberg_crossed_feed_diffusion_gpu_gpu_1c031b_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2085108 host 182 exp_schnakenberg_crossed_feed_diffusion_gpu_gpu_41743f_0: empty payload; byte-identical sanitized payload on multiple hosts
+- 2085278 host 11 exp_schnakenberg_crossed_feed_diffusion_gpu_gpu_698977_0: empty payload; byte-identical sanitized payload on multiple hosts
+
+Per-host credit summary
+- host 355: 188 results, 5021.37 credit
+- host 85: 236 results, 4496.48 credit
+- host 364: 213 results, 3695.70 credit
+- host 29: 141 results, 3361.09 credit
+- host 159: 129 results, 3097.59 credit
+- host 347: 114 results, 2765.19 credit
+- host 1: 221 results, 2342.21 credit
+- host 87: 187 results, 2315.07 credit
+- host 123: 228 results, 2122.79 credit
+- host 102: 109 results, 1653.13 credit
+- host 345: 157 results, 1623.44 credit
+- host 2: 83 results, 1532.70 credit
+- host 222: 97 results, 1317.21 credit
+- host 240: 14 results, 1016.36 credit
+- host 23: 20 results, 904.34 credit
+- host 16: 16 results, 875.87 credit
+- host 366: 25 results, 496.24 credit
+- host 140: 24 results, 401.07 credit
+- host 57: 24 results, 398.79 credit
+- host 10: 62 results, 387.51 credit
+- host 216: 23 results, 373.32 credit
+- host 219: 3 results, 347.28 credit
+- host 80: 3 results, 245.40 credit
+- host 134: 26 results, 215.38 credit
+- host 184: 63 results, 182.42 credit
+- host 182: 11 results, 166.47 credit
+- host 202: 2 results, 134.83 credit
+- host 9: 3 results, 124.17 credit
+- host 107: 10 results, 91.78 credit
+- host 358: 4 results, 55.31 credit
+- host 11: 9 results, 44.67 credit
+- host 350: 2 results, 28.50 credit
+- host 377: 2 results, 20.51 credit
+- host 272: 20 results, 10.64 credit
+- host 374: 3 results, 1.38 credit
+- host 61: 1 result, 0.00 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 52127, then 52129, then 52195 as later credit passes completed
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 52758
+- Preserved all result files; no scientific reports written to html/user/experiment_results
+- No services, daemons, indexes, lock files, crontab, systemd units, or assimilator files were modified
