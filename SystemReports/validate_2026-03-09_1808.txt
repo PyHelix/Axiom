@@ -1,7 +1,7 @@
 Results credited this session:
-- Count: 1185
-- Total cobblestones: 35898.53
-- Credit passes: 3 (1177 + 6 + 2) to drain live arrivals
+- Count: 1206
+- Total cobblestones: 37165.88
+- Credit passes: 5 (1177 + 6 + 2 + 9 + 12) to drain live arrivals
 
 Anti-cheat flags (denied at 0.01 credit):
 - Result 2069445: empty payload
@@ -23,19 +23,21 @@ Anti-cheat flags (denied at 0.01 credit):
 - Result 2075458: empty payload
 - Result 2075459: empty payload
 - Result 2075461: empty payload
+- Result 2075465: empty/trivial payload
+- Result 2075466: empty/trivial payload
 - Result 2075468: empty payload
 - Result 2075471: empty payload
 - Result 2075472: empty payload
 
 Per-host credit summary:
 - Host 1: 3517.63
-- Host 2: 1671.88
+- Host 2: 1719.55
 - Host 9: 340.03
 - Host 10: 276.27
 - Host 11: 47.88
 - Host 16: 1557.42
 - Host 23: 949.37
-- Host 29: 3581.77
+- Host 29: 4057.62
 - Host 57: 179.21
 - Host 60: 261.47
 - Host 85: 949.43
@@ -50,8 +52,8 @@ Per-host credit summary:
 - Host 184: 20.79
 - Host 202: 942.08
 - Host 219: 194.33
-- Host 222: 1341.91
-- Host 240: 5299.06
+- Host 222: 1377.80
+- Host 240: 6007.00
 - Host 255: 811.73
 - Host 267: 247.78
 - Host 272: 132.74
@@ -63,7 +65,8 @@ Per-host credit summary:
 - Host 364: 3138.18
 
 Cleanup actions taken:
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 51924
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 52611
-- Cleared the live uncredited queue with three credit passes
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 51945
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 52620
+- Drain loop reached zero pending results after five credit passes
+- Six new valid results arrived during report synchronization after the zero-pending check
 - Temporary credit and anti-cheat files removed from /tmp after publication
