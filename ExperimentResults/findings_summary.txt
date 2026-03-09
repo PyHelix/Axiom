@@ -70,7 +70,7 @@ EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | Status: NO EFFECT |
 
 EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu | Status: PRELIMINARY | Results: critical mid-block alignment penalty +0.00174 +/- 0.00038 (d=4.56, 100.0% sign-consistent); critical large-block rebound +0.00579 +/- 0.00054 (d=10.76, 100.0% sign-consistent); critical mid-block gap penalty +0.00665 +/- 0.00045 (d=14.82, 100.0% sign-consistent). 22 seeds, 7 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu | Status: PRELIMINARY | Results: critical mid-rho smooth advantage +0.06439 +/- 0.01409 (d=4.57, 100.0% sign-consistent); critical mid-rho gap advantage +0.04529 +/- 0.01468 (d=3.08, 100.0% sign-consistent); critical high-rho rebound +0.13376 +/- 0.02352 (d=5.69, 100.0% sign-consistent). 20 seeds, 5 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu | Status: CONFIRMED | Results: critical mid-rho smooth advantage +0.06377 +/- 0.01296 (d=4.92, 100.0% sign-consistent); critical mid-rho gap advantage +0.04633 +/- 0.01443 (d=3.21, 100.0% sign-consistent); critical high-rho rebound +0.13415 +/- 0.02407 (d=5.57, 100.0% sign-consistent). 34 seeds, 7 hosts. Last updated: 2026-03-09
 
 EXPERIMENT: exp_metapop_seedbank_corridor_correlation | Status: CONFIRMED | Results: best survival gain +0.99802 +/- 0.00315 (d=316.52, 100.0% sign-consistent). 272 seeds, 18 hosts. Last updated: 2026-03-09
 
@@ -86,6 +86,13 @@ EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu | Status: NO EFFECT | Res
 
 EXPERIMENT: exp_trophic_pulse_layer_filtering | Status: CONFIRMED | Results: best mid-layer score +0.05252 +/- 0.00083 (d=63.05, 100.0% sign-consistent). 51 seeds, 11 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: PRELIMINARY | Results: mid crossed isotropy gain +0.05637 +/- 0.02224 (d=2.53, 100.0% sign-consistent); high crossed isotropy gain +0.47553 +/- 0.03529 (d=13.48, 100.0% sign-consistent); mid crossed transport gain -1.53106 +/- 0.32424 (d=-4.72, 100.0% sign-consistent). 14 seeds, 4 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: PRELIMINARY | Results: mid crossed isotropy gain +0.05569 +/- 0.03290 (d=1.69, 93.1% sign-consistent); high crossed isotropy gain +0.47432 +/- 0.03210 (d=14.78, 100.0% sign-consistent); mid crossed transport gain -1.59244 +/- 0.35145 (d=-4.53, 0.0% sign-consistent). 29 seeds, 7 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: PRELIMINARY | Results: crossed peak area advantage +0.06088 +/- 0.00879 (d=6.93, 100.0% sign-consistent); crossed peak fractal advantage -0.02908 +/- 0.00901 (d=-3.23, 100.0% sign-consistent); mid crossed vs parallel area gain +0.05942 +/- 0.00377 (d=15.77, 100.0% sign-consistent). 13 seeds, 5 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: PRELIMINARY | Results: crossed peak area advantage +0.05948 +/- 0.00844 (d=7.05, 100.0% sign-consistent); crossed peak fractal advantage -0.02727 +/- 0.01086 (d=-2.51, 3.7% sign-consistent); mid crossed vs parallel area gain +0.06140 +/- 0.00421 (d=14.59, 100.0% sign-consistent). 27 seeds, 7 hosts. Last updated: 2026-03-09
+
+DEPLOYED HYPOTHESES | 2026-03-09
+exp_ising_persistence_glauber_kawasaki: direct Glauber-vs-Kawasaki persistence exponent comparison in 2D Ising coarsening with finite-size scaling.
+exp_sis_burst_modularity_temporal_threshold: burstiness x modularity interaction may shift SIS persistence thresholds non-monotonically on temporal SBM networks.
+exp_depinning_elastic_line: full disorder-to-disorder critical-force distribution shape may show cleaner finite-size universality than mean depinning force alone.
+exp_contact_process_striped_recovery_corridor: intermediate stripe-correlated recovery disorder may create directional near-critical survival corridors absent in iid or fully banded limits.
+exp_ising_crossed_temp_field_memory_gpu: orthogonal quenched local-temperature and field stripes may retain more persistent spins while reducing domain anisotropy relative to aligned stripes during 2D Ising coarsening.
