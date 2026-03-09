@@ -3,19 +3,19 @@ Timestamp: 2026-03-09 12:43 CET
 Step: Validation & Credit
 
 Session summary
-- Results credited this session: 13521
-- Paid results: 12962
+- Results credited this session: 13584
+- Paid results: 13025
 - Denied results (0.01 sentinel): 559
-- Total cobblestones awarded: 262895.51
+- Total cobblestones awarded: 264440.47
 - Credit formula applied: elapsed_time * p_fpops * 1e-11
 - Backlog status after drain loop: 0 uncredited results remaining at verification time
 
 Live state observed
 - Initial uncredited count observed at session start: 13477
 - First full credit pass processed: 13514 results
-- Additional live arrivals drained in follow-up passes: 7 results
-- Post-session total completed valid results counter: 51439
-- Website credited results counter after update: 63908
+- Additional live arrivals drained in follow-up passes: 70 results
+- Post-session total completed valid results counter: 51499
+- Website credited results counter after update: 63971
 
 Anti-cheat review
 - Spot-check sample size: 200 sanitized numeric result files
@@ -54,43 +54,44 @@ Per-host credit summary
 - Host 367: 142974.79 credits, 4131 results, 178 denied
 - Host 269: 23098.43 credits, 650 results, 0 denied
 - Host 87: 13411.90 credits, 812 results, 68 denied
-- Host 219: 11722.83 credits, 1000 results, 2 denied
+- Host 219: 11792.68 credits, 1002 results, 2 denied
+- Host 1: 7116.14 credits, 665 results, 0 denied
 - Host 85: 6734.81 credits, 603 results, 42 denied
-- Host 1: 6591.14 credits, 639 results, 0 denied
-- Host 29: 5945.66 credits, 350 results, 4 denied
-- Host 2: 4428.05 credits, 246 results, 0 denied
+- Host 29: 6252.09 credits, 358 results, 4 denied
+- Host 2: 4479.15 credits, 248 results, 0 denied
 - Host 230: 4328.00 credits, 96 results, 0 denied
 - Host 123: 4267.88 credits, 876 results, 146 denied
 - Host 345: 4247.18 credits, 683 results, 0 denied
 - Host 372: 3733.53 credits, 96 results, 0 denied
-- Host 102: 3729.20 credits, 353 results, 33 denied
+- Host 102: 3778.06 credits, 355 results, 33 denied
 - Host 15: 3672.08 credits, 97 results, 0 denied
-- Host 222: 3410.62 credits, 179 results, 0 denied
-- Host 113: 2034.51 credits, 260 results, 6 denied
-- Host 253: 2008.52 credits, 115 results, 0 denied
+- Host 222: 3456.13 credits, 181 results, 0 denied
+- Host 113: 2049.59 credits, 261 results, 6 denied
+- Host 253: 2022.40 credits, 116 results, 0 denied
 - Host 364: 1965.43 credits, 67 results, 0 denied
 - Host 140: 1519.76 credits, 183 results, 1 denied
 - Host 137: 1503.41 credits, 28 results, 0 denied
 - Host 105: 1279.64 credits, 609 results, 58 denied
 - Host 359: 1241.33 credits, 116 results, 5 denied
-- Host 353: 1123.19 credits, 788 results, 10 denied
+- Host 353: 1137.47 credits, 798 results, 10 denied
 - Host 74: 915.57 credits, 16 results, 0 denied
+- Host 159: 859.14 credits, 26 results, 0 denied
 - Host 96: 844.29 credits, 23 results, 0 denied
 - Host 347: 814.26 credits, 17 results, 0 denied
 - Host 190: 779.46 credits, 16 results, 0 denied
 - Host 360: 700.92 credits, 85 results, 1 denied
-- Host 159: 609.34 credits, 21 results, 0 denied
 - Host 57: 531.72 credits, 13 results, 0 denied
 - Host 350: 506.10 credits, 71 results, 0 denied
 - Host 366: 463.60 credits, 8 results, 0 denied
 - Host 107: 449.94 credits, 18 results, 0 denied
 - Host 376: 371.80 credits, 58 results, 0 denied
 - Host 271: 329.39 credits, 21 results, 0 denied
-- Host 16: 212.04 credits, 4 results, 0 denied
+- Host 16: 374.66 credits, 7 results, 0 denied
 - Host 349: 164.04 credits, 4 results, 0 denied
 - Host 195: 123.63 credits, 137 results, 2 denied
 - Host 374: 43.67 credits, 2 results, 0 denied
 - Host 323: 43.01 credits, 1 results, 0 denied
+- Host 9: 42.55 credits, 1 results, 0 denied
 - Host 272: 10.93 credits, 21 results, 3 denied
 - Host 373: 5.74 credits, 1 results, 0 denied
 - Host 267: 4.17 credits, 7 results, 0 denied
@@ -98,5 +99,5 @@ Per-host credit summary
 Cleanup actions
 - Updated /opt/axiom_boinc/html/user/credited_count.txt
 - Updated /opt/axiom_boinc/html/user/total_results_count.txt
-- Removed temporary credit script and summary files from /tmp after logging
+- Removed temporary credit script from /tmp after publishing
 - No result files were deleted
