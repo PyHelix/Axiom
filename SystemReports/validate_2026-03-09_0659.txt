@@ -7595,3 +7595,12 @@ result 2011167 (host 353): exp_spiked_covariance_mask_correlation_gpu_gpu_29e85e
 result 2016759 (host 219): exp_kuramoto_partial_overlap_anticorrelation_9f25bb_0 | exp=exp_kuramoto_partial_overlap_anticorrelation | elapsed=15.206s | nbytes=5104 | credit=0.01 | retired_experiment
 result 2016816 (host 219): exp_sandpile_smallworld_threshold_disorder_5b8e19_0 | exp=exp_sandpile_smallworld_threshold_disorder | elapsed=6.080s | nbytes=1990 | credit=0.01 | retired_experiment
 result 2020603 (host 2): exp_ballistic_annihilation_domain_correlations_e9b4a0_0 | exp=exp_ballistic_annihilation_domain_correlations | elapsed=695.575s | nbytes=5693 | credit=500.00 | sanitized present, non-retired, byte-weighted pool of 4 hit cap
+
+Late-arrival addendum 2:
+result 2011145 (host 353): exp_cahnhilliard_crossed_mobility_bias_gpu_gpu_19bf66_2 | exp=exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | elapsed=19.140s | nbytes=2814 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
+result 2011156 (host 353): exp_cahnhilliard_crossed_mobility_bias_gpu_gpu_0d2564_2 | exp=exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | elapsed=19.117s | nbytes=2814 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
+result 2011275 (host 353): exp_spiked_covariance_mask_correlation_gpu_4e4340_2 | exp=exp_spiked_covariance_mask_correlation_gpu | elapsed=19.106s | nbytes=2514 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
+result 2020592 (host 376): exp_forestfire_burnscar_wind_memory_3c926d_0 | exp=exp_forestfire_burnscar_wind_memory | elapsed=772.103s | nbytes=7362 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
+result 2020633 (host 105): exp_forestfire_burnscar_wind_memory_2ca006_0 | exp=exp_forestfire_burnscar_wind_memory | elapsed=677.875s | nbytes=8086 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
+result 2020670 (host 105): exp_ballistic_annihilation_domain_correlations_c09ff0_0 | exp=exp_ballistic_annihilation_domain_correlations | elapsed=660.484s | nbytes=5691 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
+result 2020728 (host 105): exp_ballistic_annihilation_domain_correlations_4dae9f_0 | exp=exp_ballistic_annihilation_domain_correlations | elapsed=670.578s | nbytes=5692 | credit=500.00 | sanitized present, non-retired, 7-result byte pool hit cap
