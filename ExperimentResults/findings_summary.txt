@@ -30,8 +30,8 @@ EXPERIMENT: exp_dp_moment_ratio | Status: NO EFFECT | Results: critical grand-me
 Last updated: 2026-03-08
 EXPERIMENT: exp_langton_ant_anisotropic_stripes | Status: NO EFFECT | Results: mid-stripe success gain -0.06543 +/- 0.00369 (d=-17.71700, 100.0% sign-consistent); mid-stripe onset advance 0.28569 +/- 0.00361 (d=79.17044, 100.0% sign-consistent); family lock gain 0.86563 +/- 0.00427 (d=202.85, 100.0% sign-consistent). 66 seeds, 8 hosts.
 Last updated: 2026-03-08
-EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu | Status: NO EFFECT | Results: critical mid-block alignment penalty +0.00172 +/- 0.00044 (d=3.88, 100.0% sign-consistent); critical large-block rebound +0.00580 +/- 0.00053 (d=10.90, 100.0% sign-consistent); critical mid-block gap penalty +0.00659 +/- 0.00042 (d=15.59, 100.0% sign-consistent). 15 seeds, 8 hosts.
-Last updated: 2026-03-08
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu | Status: PRELIMINARY | Results: critical mid-block alignment penalty +0.00027 +/- 0.00017 (d=1.59, 95.0% sign-consistent); critical large-block rebound +0.00172 +/- 0.00039 (d=4.36, 100.0% sign-consistent); critical mid-block gap penalty +0.00735 +/- 0.00163 (d=4.52, 100.0% sign-consistent). 20 seeds, 7 hosts.
+Last updated: 2026-03-09
 EXPERIMENT: exp_persistent_voter_coarsening | Status: CONFIRMED | Results: k=20 slowdown ratio 1.07045 +/- 0.03839 (d=27.88570, 100.0% sign-consistent); max slowdown ratio 1.22718 +/- 0.13562 (d=9.04892, 100.0% sign-consistent); k=20 consensus fraction shift -0.16826 +/- 0.05740 (d=-2.93118, 100.0% sign-consistent). 57 seeds, 6 hosts.
 Last updated: 2026-03-08
 EXPERIMENT: exp_langton_ant_frozen_stripe_disorder | Status: NO EFFECT | Results: no descriptive scalar metric cleared the current 14-day thresholds after filtering out configuration-only outputs. 895 seeds, 19 hosts.
@@ -69,4 +69,14 @@ Last updated: 2026-03-09
 EXPERIMENT: exp_spacing_ratio_crossover | Status: CONFIRMED | Results: scaling-collapse mean lambda_c*sqrt(N) +0.65285 +/- 0.00315 (d=207.37, 100.0% sign-consistent); scaling-collapse CV +0.03858 +/- 0.00448 (d=8.61, 100.0% sign-consistent). 937 seeds, 13 hosts.
 Last updated: 2026-03-09
 EXPERIMENT: exp_adaptive_voter_delay_rewiring | Status: CONFIRMED | Results: hypothesis-support score +0.22979 +/- 0.00558 (d=41.21, 100.0% sign-consistent); support fraction +0.48765 +/- 0.00228 (d=213.61, 100.0% sign-consistent). 30 seeds, 1 host.
+Last updated: 2026-03-09
+EXPERIMENT: exp_ballistic_annihilation_domain_correlations | Status: CONFIRMED | Results: best survivor gain vs IID +0.10349 +/- 0.00090 (d=114.51, 100.0% sign-consistent). 382 seeds, 15 hosts.
+Last updated: 2026-03-09
+EXPERIMENT: exp_forestfire_burnscar_wind_memory | Status: CONFIRMED | Results: best spanning suppression gain +0.05266 +/- 0.00273 (d=19.30, 100.0% sign-consistent). 360 seeds, 15 hosts.
+Last updated: 2026-03-09
+EXPERIMENT: exp_forestfire_burnscar_wind_memory_gpu | Status: DESIGNED | Hypothesis: finite burn-scar recovery should suppress spanning fires most strongly at intermediate lightning rates under anisotropic spread on larger GPU-batched lattices, producing a non-monotone memory window relative to the zero-cooldown baseline. Novelty check (2026-03-09): searched `forest fire model regrowth time wind anisotropy burn scar cellular automaton`, `Drossel Schwabl forest fire wind anisotropy regrowth refractory period`, and `burn scar refractory forest fire cellular automaton wind anisotropy`; found forest-fire cellular automata with regrowth and separate work on wind anisotropy, but no direct large batched sweep focused on burn-scar recovery time as the control axis for intermediate-lightning suppression under directional spread. GPU script added and a new batch was staged after retiring settled cahnhilliard/spiked-mask GPU backlogs.
+Last updated: 2026-03-09
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu | Status: PRELIMINARY | Results: critical mid-block alignment penalty +0.00027 +/- 0.00017 (d=1.63, 95.7% sign-consistent); critical large-block rebound +0.00172 +/- 0.00038 (d=4.48, 100.0% sign-consistent); critical mid-block gap penalty +0.00754 +/- 0.00163 (d=4.62, 100.0% sign-consistent). 23 seeds, 7 hosts.
+Last updated: 2026-03-09
+EXPERIMENT: exp_may_nested_mutualism_localization | Status: REJECTED | Results: u-shape window gain -0.03234 +/- 0.00039 (d=-83.19, 0.0% sign-consistent); support fraction for the claimed u-shape 0.00000 +/- 0.00000 (d=0.04, 0.3% sign-consistent). 3093 seeds, 24 hosts.
 Last updated: 2026-03-09
