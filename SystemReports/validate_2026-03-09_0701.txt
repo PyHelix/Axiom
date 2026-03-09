@@ -7603,3 +7603,11 @@ Late-arrival addendum:
 result 2013089 (host 353): exp_fhn_crossed_excitability_recovery_gpu_d2e323_0 | exp=exp_fhn_crossed_excitability_recovery_gpu | elapsed=19.118s | nbytes=2731 | credit=500.00 | sanitized present, non-retired, 3-result byte pool hit cap
 result 2020010 (host 222): exp_contact_process_multiplex_activity_crossover_c49d6b_0 | exp=exp_contact_process_multiplex_activity_crossover | elapsed=296.554s | nbytes=2731 | credit=500.00 | sanitized present, non-retired, 3-result byte pool hit cap
 result 2020299 (host 105): exp_ballistic_annihilation_domain_correlations_c91709_0 | exp=exp_ballistic_annihilation_domain_correlations | elapsed=655.516s | nbytes=5692 | credit=500.00 | sanitized present, non-retired, 3-result byte pool hit cap
+
+Late-arrival addendum 2:
+result 2009937 (host 113): exp_kuramoto_partial_overlap_anticorrelation_199e78_0 | exp=exp_kuramoto_partial_overlap_anticorrelation | elapsed=13.626s | nbytes=5104 | credit=0.01 | retired_experiment
+result 2009938 (host 113): exp_contact_process_multiplex_activity_crossover_54509a_0 | exp=exp_contact_process_multiplex_activity_crossover | elapsed=49.410s | nbytes=2733 | credit=500.00 | sanitized present, non-retired, 6-result byte pool hit cap
+result 2013065 (host 353): exp_forestfire_burnscar_wind_memory_gpu_622bf0_0 | exp=exp_forestfire_burnscar_wind_memory_gpu | elapsed=19.129s | nbytes=2634 | credit=500.00 | sanitized present, non-retired, 6-result byte pool hit cap
+result 2013175 (host 353): exp_percolation_crossed_site_bond_transport_gpu_178079_0 | exp=exp_percolation_crossed_site_bond_transport_gpu | elapsed=19.118s | nbytes=2754 | credit=500.00 | sanitized present, non-retired, 6-result byte pool hit cap
+result 2013197 (host 353): exp_forestfire_burnscar_wind_memory_gpu_c313ae_0 | exp=exp_forestfire_burnscar_wind_memory_gpu | elapsed=19.135s | nbytes=2634 | credit=500.00 | sanitized present, non-retired, 6-result byte pool hit cap
+result 2020093 (host 222): exp_kuramoto_partial_overlap_anticorrelation_58da2b_0 | exp=exp_kuramoto_partial_overlap_anticorrelation | elapsed=67.219s | nbytes=5106 | credit=0.01 | retired_experiment
