@@ -3,15 +3,15 @@ Timestamp: 2026-03-09 21:02 CET
 Scope: validation, FLOPS-based credit, counter update
 
 Results credited this session
-- Credit script runs: 3
-- Results credited by script runs: 2463
-- Total awarded: 41866.01 cobblestones
+- Credit script runs: 4
+- Results credited by script runs: 2572
+- Total awarded: 43345.15 cobblestones
 - Final uncredited queue after catch-up loop: 0
 
 Discovery snapshot before credit
 - Initial uncredited results: 2376
 - Initial credited/uncredited quick stats: credited=50360, uncredited=2376
-- Additional completions arrived during the session and were included in later credit passes
+- Additional completions arrived during the session and were included in later credit passes, including a final 109-result catch-up after the first publication step
 
 Anti-cheat review
 - Sampled 200 sanitized JSON files from 2374 sanitized uncredited results available at review time
@@ -70,7 +70,7 @@ Per-host credit summary
 - host 61: 1 result, 0.00 credit
 
 Cleanup actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 52127, then 52129, then 52195 as later credit passes completed
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 52758
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 52127, then 52129, then 52195, then 52304 as later credit passes completed
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 52932
 - Preserved all result files; no scientific reports written to html/user/experiment_results
 - No services, daemons, indexes, lock files, crontab, systemd units, or assimilator files were modified
