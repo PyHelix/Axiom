@@ -1,0 +1,79 @@
+EXPERIMENT: exp_spacing_ratio_crossover (937 results, 937 seeds, 13 hosts)
+  Results: scaling collapse mean lam c sqrtN +0.65285 +/- 0.00315 (d=207.37, 100.0% sign-consistent); scaling collapse cv +0.03858 +/- 0.00448 (d=8.61, 100.0% sign-consistent); r poisson +0.38629 +/- 0.00000 (d=inf, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    scaling_collapse_mean_lam_c_sqrtN stayed positive across seeds with 100.0% sign consistency, so the targeted crossover survives the current 14-day window.
+
+EXPERIMENT: exp_kuramoto_partial_overlap_anticorrelation (266 results, 266 seeds, 11 hosts)
+  Results: positive vs anticorr locking gap mean +0.46449 +/- 0.00422 (d=110.07, 100.0% sign-consistent); anticorrelation reduces locking +0.46449 +/- 0.00422 (d=110.07, 100.0% sign-consistent); mid overlap anticorr phase gap excess mean +0.14625 +/- 0.00553 (d=26.45, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    positive_vs_anticorr_locking_gap_mean stayed positive across seeds with 100.0% sign consistency, so the targeted crossover survives the current 14-day window.
+
+EXPERIMENT: exp_sandpile_smallworld_threshold_disorder (232 results, 232 seeds, 11 hosts)
+  Results: medium shortcut disorder suppresses delocalization -0.00136 +/- 0.00022 (d=-6.15, 100.0% sign-consistent); medium shortcut span suppression mean -0.00136 +/- 0.00022 (d=-6.15, 100.0% sign-consistent); medium shortcut tail suppression mean -0.00217 +/- 0.00048 (d=-4.48, 100.0% sign-consistent)
+  Conclusion: REJECTED
+    medium_shortcut_disorder_suppresses_delocalization stayed negative with 100.0% sign consistency, so the observed direction opposes the intended effect in this window.
+
+EXPERIMENT: exp_critical_branching_skew_crossover (176 results, 176 seeds, 6 hosts)
+  Results: survival corr early mean +0.98455 +/- 0.00025 (d=3950.46, 100.0% sign-consistent); cond corr early mean -0.98297 +/- 0.00028 (d=-3567.17, 100.0% sign-consistent); early survival cv mean +0.12804 +/- 0.00027 (d=475.74, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    survival_corr_early_mean stayed positive across seeds with 100.0% sign consistency, so the targeted crossover survives the current 14-day window.
+
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover (173 results, 173 seeds, 11 hosts)
+  Results: positive corr overlap drop +0.02609 +/- 0.00216 (d=12.10, 100.0% sign-consistent); intermediate overlap negative vs positive gap +0.00567 +/- 0.00420 (d=1.35, 91.3% sign-consistent); negative corr mid overlap nonmonotonicity +0.00023 +/- 0.00309 (d=0.07, 48.6% sign-consistent)
+  Conclusion: CONFIRMED
+    positive_corr_overlap_drop stayed positive across seeds with 100.0% sign consistency, so the targeted crossover survives the current 14-day window.
+
+EXPERIMENT: exp_standard_map_anticorrelated_kicks (115 results, 115 seeds, 10 hosts)
+  Results: narrow pair intermittency excess mean -0.00151 +/- 0.00004 (d=-37.60, 100.0% sign-consistent); antipersistence increases intermittency -0.00151 +/- 0.00004 (d=-37.60, 100.0% sign-consistent); narrow pair quiet window gain mean +0.00820 +/- 0.00043 (d=18.93, 100.0% sign-consistent)
+  Conclusion: REJECTED
+    narrow_pair_intermittency_excess_mean stayed negative with 100.0% sign consistency, so the observed direction opposes the intended effect in this window.
+
+EXPERIMENT: exp_mayreact_gap_gpu (34 results, 34 seeds, 1 hosts)
+  Results: 0/34 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_adaptive_voter_delay_rewiring (30 results, 30 seeds, 1 hosts)
+  Results: std trial gain +0.00370 +/- 0.00001 (d=393.48, 100.0% sign-consistent); mean support fraction +0.48765 +/- 0.00228 (d=213.61, 100.0% sign-consistent); hypothesis support +0.22979 +/- 0.00558 (d=41.21, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    std_trial_gain stayed positive across seeds with 100.0% sign consistency, so the targeted crossover survives the current 14-day window.
+
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover_gpu (29 results, 29 seeds, 4 hosts)
+  Results: 0/29 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_kuramoto_partial_overlap_anticorrelation_gpu (26 results, 26 seeds, 3 hosts)
+  Results: 0/26 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu (20 results, 20 seeds, 3 hosts)
+  Results: 0/20 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu (17 results, 17 seeds, 3 hosts)
+  Results: 0/17 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu (16 results, 16 seeds, 4 hosts)
+  Results: 1/16 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu (16 results, 16 seeds, 3 hosts)
+  Results: 0/16 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu (11 results, 11 seeds, 2 hosts)
+  Results: 0/11 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu (10 results, 10 seeds, 3 hosts)
+  Results: 1/10 sanitized files contained usable numeric experiment_result payloads; no descriptive scalar metric cleared schema reconstruction.
+  Conclusion: NO EFFECT
+    No descriptive scalar summary metric survived schema reconstruction for this family.

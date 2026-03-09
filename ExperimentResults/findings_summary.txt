@@ -2,93 +2,71 @@ AXIOM EXPERIMENT FINDINGS SUMMARY
 
 EXPERIMENT: exp_ageing_voter_modular_polarization | Status: NO EFFECT | Results: intermediate-ageing peak excess -0.00611 +/- 0.02724 (d=-0.22, 18.5% sign-consistent); alpha=1.0 opposite-majority fraction +0.00795 +/- 0.01788 (d=0.44, 30.7% sign-consistent); alpha=2.4 opposite-majority fraction +0.01158 +/- 0.02202 (d=0.53, 40.1% sign-consistent). 2615 seeds, 34 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_abx_cycle_hgt_delay_resonance | Status: NO EFFECT | Results: delay-fatigue resonance AUC excess +0.01157 +/- 0.07031 (d=0.16, 97.3% sign-consistent). 2026 seeds, 31 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_sparse_wigner_tw_edge | Status: CONFIRMED | Results: L512 c=64 Tracy-Widom skew deviation +0.29321 +/- 0.02408 (d=12.18, 100.0% sign-consistent); L512 c=64 rescaled-edge mean -128.03295 +/- 3.00659 (d=-42.58, 100.0% sign-consistent); L512 c=64 L-skewness +0.00021 +/- 0.02408 (d=0.01, 49.9% sign-consistent). 1815 seeds, 33 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal entropy advantage +0.00053 +/- 0.00283 (d=0.19, 51.7% sign-consistent); mid orthogonal interface advantage +0.00007 +/- 0.00083 (d=0.08, 48.3% sign-consistent); mid orthogonal mixedness gain vs IID -0.00422 +/- 0.00775 (d=-0.54, 15.5% sign-consistent). 44 seeds, 9 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal survival advantage +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid orthogonal mixedness gain vs IID +0.00064 +/- 0.00029 (d=2.17, 100.0% sign-consistent); high orthogonal active-fraction gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 59 seeds, 14 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu | Status: NO EFFECT | Results: mid orthogonal entropy advantage +0.00053 +/- 0.00283 (d=0.19, 51.7% sign-consistent); mid orthogonal interface advantage +0.00007 +/- 0.00083 (d=0.08, 48.3% sign-consistent); mid orthogonal mixedness gain vs IID -0.00422 +/- 0.00775 (d=-0.54, 15.5% sign-consistent). 103 seeds, 10 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu | Status: NO EFFECT | Results: mid orthogonal aggregation advantage +0.00003 +/- 0.00001 (d=2.78, 100.0% sign-consistent); mid orthogonal interface gain vs IID -0.00055 +/- 0.00001 (d=-62.06, 0.0% sign-consistent); high orthogonal directional-balance gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 132 seeds, 14 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | Status: NO EFFECT | Results: mid crossed interface advantage -0.00029 +/- 0.00033 (d=-0.89, 15.1% sign-consistent); mid crossed mixedness advantage -0.00909 +/- 0.00283 (d=-3.22, 1.9% sign-consistent); high crossed isotropy advantage -0.00266 +/- 0.00074 (d=-3.58, 1.9% sign-consistent). 53 seeds, 13 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_nasch_anticipation_heterogeneity | Status: NO EFFECT | Results: bimodal mid-density flow gain vs homogeneous -0.00040 +/- 0.00124 (d=-0.32, 35.6% sign-consistent); bimodal mid-density jam drop vs homogeneous -0.00403 +/- 0.00124 (d=-3.26, 0.0% sign-consistent); bimodal mid-density wave drop vs homogeneous -0.01525 +/- 0.00232 (d=-6.57, 0.0% sign-consistent). 227 seeds, 20 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_dla_drift_reversal_window | Status: NO EFFECT | Results: intermediate-reversal branch gain -0.01926 +/- 0.04728 (d=-0.41, 24.3% sign-consistent); intermediate-reversal entropy gain -0.03381 +/- 0.08953 (d=-0.38, 36.0% sign-consistent); constant-drift anisotropy excess -0.00448 +/- 0.22768 (d=-0.02, 49.3% sign-consistent). 225 seeds, 14 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal aggregation advantage +0.00002 +/- 0.00001 (d=2.88, 100.0% sign-consistent); mid orthogonal interface gain vs IID -0.00055 +/- 0.00001 (d=-73.63, 0.0% sign-consistent); high orthogonal directional-balance gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 45 seeds, 13 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu | Status: NO EFFECT | Results: mid orthogonal survival advantage +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid orthogonal mixedness gain vs IID +0.00064 +/- 0.00029 (d=2.17, 100.0% sign-consistent); high orthogonal active-fraction gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 65 seeds, 15 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_random_fibonacci_markov_persistence | Status: NO EFFECT | Results: cancellation window gain -0.05260 +/- 0.00001 (d=-10204.91, 100.0% sign-consistent); burst window gain 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); variance window gain 0.01186 +/- 0.00000 (d=10851.64, 100.0% sign-consistent). 72 seeds, 7 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_dp_moment_ratio | Status: NO EFFECT | Results: critical grand-mean R +0.37989 +/- 0.50932 (d=0.75, 0.0% sign-consistent); model-to-model spread +0.06309 +/- 0.08650 (d=0.73, 35.2% sign-consistent). 68 seeds, 8 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_langton_ant_anisotropic_stripes | Status: NO EFFECT | Results: mid-stripe success gain -0.06543 +/- 0.00369 (d=-17.71700, 100.0% sign-consistent); mid-stripe onset advance 0.28569 +/- 0.00361 (d=79.17044, 100.0% sign-consistent); family lock gain 0.86563 +/- 0.00427 (d=202.85, 100.0% sign-consistent). 66 seeds, 8 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu | Status: NO EFFECT | Results: critical mid-block alignment penalty +0.00172 +/- 0.00044 (d=3.88, 100.0% sign-consistent); critical large-block rebound +0.00580 +/- 0.00053 (d=10.90, 100.0% sign-consistent); critical mid-block gap penalty +0.00659 +/- 0.00042 (d=15.59, 100.0% sign-consistent). 15 seeds, 8 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_persistent_voter_coarsening | Status: CONFIRMED | Results: k=20 slowdown ratio 1.07045 +/- 0.03839 (d=27.88570, 100.0% sign-consistent); max slowdown ratio 1.22718 +/- 0.13562 (d=9.04892, 100.0% sign-consistent); k=20 consensus fraction shift -0.16826 +/- 0.05740 (d=-2.93118, 100.0% sign-consistent). 57 seeds, 6 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_langton_ant_frozen_stripe_disorder | Status: NO EFFECT | Results: no descriptive scalar metric cleared the current 14-day thresholds after filtering out configuration-only outputs. 895 seeds, 19 hosts.
 Last updated: 2026-03-09
-
 EXPERIMENT: exp_parrondo_history_block_resonance | Status: NO EFFECT | Results: mid-block gain -0.00455 +/- 0.00001 (d=-546.16, 0.0% sign-consistent); optimal mid-block fraction +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); memory sensitivity +0.00017 +/- 0.00001 (d=12.22, 100.0% sign-consistent). 27 seeds, 5 hosts.
 Last updated: 2026-03-08
-
-EXPERIMENT: exp_critical_branching_skew_crossover | Status: NO EFFECT | Results: only generic scalar slots remained above threshold after schema filtering, so no descriptive scalar metric currently supports a stable family-level effect. 1250 seeds, 32 hosts.
+EXPERIMENT: exp_critical_branching_skew_crossover | Status: CONFIRMED | Results: early survival-to-skew correlation +0.98455 +/- 0.00025 (d=3950.46, 100.0% sign-consistent); early survival CV +0.12804 +/- 0.00027 (d=475.74, 100.0% sign-consistent). 176 seeds, 6 hosts.
 Last updated: 2026-03-09
-
 EXPERIMENT: exp_minority_game_delay_memory_interaction | Status: REJECTED | Results: bimodal mid-delay volatility gain -0.47825 +/- 0.14654 (d=-3.26, 0.5% sign-consistent). 1665 seeds, 29 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_markov_branching_rescue_correlation | Status: CONFIRMED | Results: rescue-correlation peak gap +0.03134 +/- 0.00083 (d=37.85, 100.0% sign-consistent). 1039 seeds, 30 hosts.
 Last updated: 2026-03-08
-
 EXPERIMENT: exp_hypergraph_pgg_inertia_crossover | Status: REJECTED | Results: mid-inertia mixed-state peak advantage -0.03001 +/- 0.03309 (d=-0.91, 2.5% sign-consistent). 318 seeds, 25 hosts.
 Last updated: 2026-03-08
-
-EXPERIMENT: exp_contact_process_multiplex_activity_crossover | Status: DESIGNED | Hypothesis: in a two-layer activity-driven SIS/contact process, negative interlayer activity correlation among shared nodes raises the persistence threshold most strongly at intermediate overlap, counteracting the overlap-driven threshold drop seen for positive correlation. Novelty check (2026-03-08): searched `time-varying multiplex networks and epidemic spreading overlap correlated activity`, `epidemic spreading time-varying multiplex networks overlap correlated activity patterns`, and `time-varying multiplex negative interlayer activity correlation epidemic`; found prior temporal-multiplex epidemic work on overlap and positive correlation, but no comparable sweep of negative interlayer activity correlation with partial overlap. Deploying for first data.
-Last updated: 2026-03-08
-
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover | Status: CONFIRMED | Results: positive-correlation overlap drop +0.02609 +/- 0.00216 (d=12.10, 100.0% sign-consistent); intermediate-overlap negative-vs-positive threshold gap +0.00567 +/- 0.00420 (d=1.35, 91.3% sign-consistent). 173 seeds, 11 hosts.
+Last updated: 2026-03-09
 EXPERIMENT: exp_contact_process_multiplex_activity_crossover_gpu | Status: DESIGNED | Hypothesis: the same overlap/correlation crossover should sharpen on GPU when scaled to 4,096-node activity-driven multiplexes and evaluated in parallel across all beta values, revealing whether the strongest suppression from negative interlayer correlation is an intermediate-overlap extremum rather than a monotone trend. Novelty check (2026-03-08): searched `time-varying multiplex networks epidemic spreading overlap correlated activity`, `epidemic spreading time-varying multiplex networks overlap correlated activity`, and `time-varying multiplex negative interlayer activity correlation epidemic`; found prior activity-driven multiplex epidemic theory on overlap and correlation, but no comparable large batched Monte Carlo sweep centered on the intermediate-overlap negative-correlation extremum. GPU script added and first batch staged.
 Last updated: 2026-03-08
-
-EXPERIMENT: exp_sandpile_smallworld_threshold_disorder | Status: DESIGNED | Hypothesis: quenched threshold disorder suppresses the shortcut-driven delocalization crossover in a small-world sandpile most strongly at intermediate shortcut density, reducing spanning-avalanche frequency there more than in the zero-shortcut or dense-shortcut regimes. Novelty check (2026-03-09): searched `sandpile small-world quenched disorder avalanche crossover`, `small-world sandpile threshold disorder`, and `quenched threshold disorder sandpile model`; found prior work on small-world sandpiles and separate disorder-driven sandpile criticality, but no comparable sweep of quenched threshold disorder against shortcut density focused on the intermediate-crossover window. CPU script added and 11,000 WUs staged.
+EXPERIMENT: exp_sandpile_smallworld_threshold_disorder | Status: REJECTED | Results: medium-shortcut disorder suppression signal -0.00136 +/- 0.00022 (d=-6.15, 100.0% sign-consistent); medium-shortcut tail suppression -0.00217 +/- 0.00048 (d=-4.48, 100.0% sign-consistent). 232 seeds, 11 hosts.
 Last updated: 2026-03-09
-
-EXPERIMENT: exp_kuramoto_partial_overlap_anticorrelation | Status: DESIGNED | Hypothesis: in a two-layer Kuramoto multiplex, anti-correlated natural frequencies on the shared nodes create the largest synchronization frustration at intermediate overlap, where interlayer coupling is strong enough to transmit mismatch but not large enough to average it away. Novelty check (2026-03-09): searched `multiplex Kuramoto partial overlap anti-correlated frequencies`, `partial overlap multiplex Kuramoto synchronization`, and `correlated oscillator populations negative correlations synchronization`; found multiplex-Kuramoto literature on overlap and synchronization plus broader correlated-oscillator studies, but no direct partial-overlap sweep centered on shared-node frequency anticorrelation. CPU script added and 11,000 WUs staged.
+EXPERIMENT: exp_kuramoto_partial_overlap_anticorrelation | Status: CONFIRMED | Results: positive-vs-anticorrelated locking gap +0.46449 +/- 0.00422 (d=110.07, 100.0% sign-consistent); mid-overlap anticorrelated phase-gap excess +0.14625 +/- 0.00553 (d=26.45, 100.0% sign-consistent). 266 seeds, 11 hosts.
 Last updated: 2026-03-09
-
 EXPERIMENT: exp_kuramoto_partial_overlap_anticorrelation_gpu | Status: DESIGNED | Hypothesis: the same partial-overlap anticorrelation effect should sharpen on GPU when scaled to 256-node multiplexes simulated in parallel across all overlap, correlation, and coupling conditions, revealing whether the intermediate-overlap frustration peak survives larger-network averaging. Novelty check (2026-03-09): searched `partial overlap multiplex Kuramoto synchronization`, `multiplex Kuramoto overlap shared nodes synchronization`, and `negative correlation natural frequencies Kuramoto multiplex`; found prior overlap and correlation studies, but no direct batched partial-overlap sweep centered on shared-node frequency anticorrelation as the control axis. GPU script added and first batch staged.
 Last updated: 2026-03-09
-
 EXPERIMENT: exp_standard_map_ftle_transition | Status: CONFIRMED | Results: peak kurtosis value +138.17275 +/- 26.12970 (d=5.29, 100.0% sign-consistent); frac chaotic at K=5 +0.98104 +/- 0.00209 (d=469.64, 100.0% sign-consistent); FTLE at Kc +0.04557 +/- 0.00099 (d=45.80, 100.0% sign-consistent). 178 seeds, 23 hosts.
 Last updated: 2026-03-09
-
 EXPERIMENT: exp_aah_delay_dephasing_window | Status: REJECTED | Results: mean spread gain -4.12295 +/- 0.03731 (d=-110.52, 100.0% sign-consistent); positive spread gain rate +0.27856 +/- 0.00215 (d=129.47, 100.0% sign-consistent). 189 seeds, 14 hosts.
 Last updated: 2026-03-09
-
 EXPERIMENT: exp_antibiotic_delay_fatigue_switch | Status: REJECTED | Results: mean reentrant gain -0.26538 +/- 0.00001 (d=-39900.35, 100.0% sign-consistent); mean switch rate +0.04508 +/- 0.00000 (d=95365.71, 100.0% sign-consistent). 125 seeds, 12 hosts.
+Last updated: 2026-03-09
+EXPERIMENT: exp_standard_map_anticorrelated_kicks | Status: REJECTED | Results: narrow-pair intermittency excess -0.00151 +/- 0.00004 (d=-37.60, 100.0% sign-consistent); narrow-pair quiet-window gain +0.00820 +/- 0.00043 (d=18.93, 100.0% sign-consistent). 115 seeds, 10 hosts.
+Last updated: 2026-03-09
+EXPERIMENT: exp_sandpile_smallworld_threshold_disorder_gpu | Status: DESIGNED | Hypothesis: in a dissipative small-world sandpile, quenched threshold heterogeneity should suppress shortcut-driven delocalization most strongly at intermediate shortcut density, lowering spanning-avalanche rate and toppling-footprint entropy there more than in either the lattice-like or dense-shortcut regime. Novelty check (2026-03-09): searched `small-world sandpile threshold disorder avalanche crossover`, `quenched disorder sandpile small-world network avalanche`, and `Bak Tang Wiesenfeld small-world network threshold disorder`; found prior work on small-world sandpiles and separate studies of heterogeneous toppling thresholds, but no direct GPU-scale sweep of threshold heterogeneity versus shortcut density centered on the intermediate-crossover suppression window. GPU script added; the GPU pool was already within the 1,700-2,300 target band, so no additional staging was needed this session.
+Last updated: 2026-03-09
+EXPERIMENT: exp_spacing_ratio_crossover | Status: CONFIRMED | Results: scaling-collapse mean lambda_c*sqrt(N) +0.65285 +/- 0.00315 (d=207.37, 100.0% sign-consistent); scaling-collapse CV +0.03858 +/- 0.00448 (d=8.61, 100.0% sign-consistent). 937 seeds, 13 hosts.
+Last updated: 2026-03-09
+EXPERIMENT: exp_adaptive_voter_delay_rewiring | Status: CONFIRMED | Results: hypothesis-support score +0.22979 +/- 0.00558 (d=41.21, 100.0% sign-consistent); support fraction +0.48765 +/- 0.00228 (d=213.61, 100.0% sign-consistent). 30 seeds, 1 host.
 Last updated: 2026-03-09
