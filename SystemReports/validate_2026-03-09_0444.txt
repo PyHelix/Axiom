@@ -1,0 +1,72 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-09 04:44 Europe/Berlin
+Step: Validation & Credit (Step 3)
+
+Session summary
+- Pass 1 reviewed 1782 uncredited results from the live pool. Anti-cheat sample: 200 sanitized JSON files (seed 20260309). Decisions: 1762 byte-weighted credits, 20 denials for invalid numeric payloads lacking experiment_result. Byte-credit pool bytes: 13030247. Awarded credit: 10005.81.
+- Pass 2 reviewed 129 remaining uncredited results after new completions arrived during the run. Anti-cheat sample: 20 sanitized JSON files. Decisions: 109 byte-weighted credits for new arrivals, 20 denied rows finalized with 0.01 sentinel so the pending queue cleared. Byte-credit pool bytes: 436417. Awarded credit: 10000.20.
+- Unique results cleared this session: 1891. Total session credit awarded: 20005.99.
+- Queue state after validation: 0 uncredited completed experiment results remaining.
+
+Review method
+- Database source of truth used for all uncredited-result discovery and for nbytes extraction from result.xml_doc_out.
+- Sanitized numeric JSONs reviewed only from /opt/axiom/experiment_results/sanitized/.
+- Stub rule checked with nbytes < 500 and elapsed_time < 60. No stub-filter denials this session.
+- Retired experiment registry checked against /opt/axiom/experiment_session/retired_experiments.txt. No retired-experiment denials this session.
+- Duplicate/outlier checks run on the anti-cheat samples. No duplicate cross-host payloads or population outliers were confirmed in the reviewed samples.
+- 20 sampled GPU-family payloads were denied because their sanitized JSON contained only server metadata plus elapsed and no experiment_result, so they were scientifically unusable.
+
+Denied / sentinel results
+- result 1988020 host 353 exp_mayreact_gap_gpu_efc6d4e2_2 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1991204 host 353 exp_contact_process_multiplex_activity_crossover_gpu_6ba1ce_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1991335 host 353 exp_kuramoto_partial_overlap_anticorrelation_gpu_d55acd_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1991677 host 367 exp_fhn_crossed_excitability_recovery_gpu_b964cf_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1991895 host 353 exp_spiked_covariance_toeplitz_localization_gpu_477d51_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1992062 host 353 exp_cahnhilliard_crossed_mobility_bias_gpu_gpu_27376a_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1992697 host 353 exp_percolation_crossed_site_bond_transport_gpu_3002f3_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1992853 host 353 exp_fhn_crossed_excitability_recovery_gpu_5454b2_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1993173 host 353 exp_kellersegel_delay_pulse_sink_window_gpu_3819bb_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1993579 host 353 exp_contact_process_multiplex_activity_crossover_gpu_705cbc_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1994205 host 353 exp_contact_process_multiplex_activity_crossover_gpu_c9062e_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1994372 host 353 exp_spiked_covariance_mask_correlation_gpu_e4dabf_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1994870 host 353 exp_spiked_covariance_toeplitz_localization_gpu_be04b1_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1994969 host 353 exp_contact_process_multiplex_activity_crossover_gpu_d295e4_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1995178 host 353 exp_kuramoto_partial_overlap_anticorrelation_gpu_61af0d_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1995188 host 353 exp_henon_chaos_boundary_fractal_gpu_c8e6d3_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1995243 host 353 exp_percolation_diffusion_spectral_gpu_11b9f9_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1995276 host 353 exp_spiked_covariance_mask_correlation_gpu_gpu_058ff9_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1995590 host 272 exp_cahnhilliard_crossed_mobility_bias_gpu_gpu_b9968f_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+- result 1995620 host 272 exp_cahnhilliard_crossed_mobility_bias_gpu_gpu_694f08_0 -> denied (sanitized JSON missing experiment_result); finalized with 0.01 sentinel to clear pending queue
+
+Credit awarded by affected user ID
+- user 1: +681.30 this session -> total_credit 32962.75
+- user 10: +300.19 this session -> total_credit 40231.06
+- user 30: +45.72 this session -> total_credit 21541.35
+- user 34: +314.43 this session -> total_credit 1247.04
+- user 56: +1707.52 this session -> total_credit 183717.42
+- user 67: +32.51 this session -> total_credit 12408.06
+- user 72: +62.66 this session -> total_credit 693.56
+- user 90: +625.84 this session -> total_credit 77456.83
+- user 94: +224.98 this session -> total_credit 46572.17
+- user 127: +691.32 this session -> total_credit 15767.11
+- user 129: +53.72 this session -> total_credit 56.02
+- user 130: +81.42 this session -> total_credit 816.63
+- user 136: +15184.38 this session -> total_credit 56453.49
+
+Representative credited families reviewed
+- exp_spacing_ratio_crossover: large cross-host population already consistent with confirmed science summary; byte-weighted credits assigned normally
+- exp_contact_process_multiplex_activity_crossover: reviewed sample consistent with confirmed family; no duplicate payloads in sample
+- exp_kuramoto_partial_overlap_anticorrelation: reviewed sample consistent with confirmed family; no cross-host duplicate payloads in sample
+- exp_standard_map_anticorrelated_kicks: reviewed sample numerically consistent with current family range; byte-weighted credits assigned normally
+- exp_sandpile_smallworld_threshold_disorder: reviewed sample numerically consistent with current family range; byte-weighted credits assigned normally
+
+Operational actions
+- Updated result.granted_credit in batch SQL chunks.
+- Updated host.total_credit and user.total_credit incrementally with additive CASE updates; no absolute resets used.
+- Updated website counters: credited_count.txt -> 37808, total_results_count.txt -> 38776.
+- No stuck or broken tasks were cleaned in this validation step.
+- No experiment scripts were modified. No bugs were fixed in experiment code during this step.
+
+Notes
+- 307 first-pass results had no sanitized file at review time; they were credited from database nbytes per the byte-weighted rule and later completions were handled in pass 2.
+- Because granted_credit=0 also marks pending work, unusable payload denials were finalized with a 0.01 sentinel in pass 2 to prevent endless re-review.
