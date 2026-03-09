@@ -1,0 +1,35 @@
+Axiom validation log
+Timestamp: 2026-03-09 12:35 Europe/Berlin
+
+Results credited this session
+- Live rows processed: 213
+- FLOPS-credit awarded: 20 results
+- Denied sentinel (0.01): 193 results
+- Total awarded credit: 865.66 cobblestones
+- Final uncredited queue after sweep: 0
+- Note: anti-cheat review snapshot covered 201 pending sanitized results; 12 additional completed results arrived during execution and were credited by the same FLOPS formula in the live update pass.
+
+Anti-cheat / denial summary
+- Review snapshot: 201 sanitized payloads reviewed, 0 missing payloads
+- Retired experiment denials: 138
+- Duplicate trivial short-stub denials: 55
+- Retired experiments denied:
+  exp_nasch_incident_memory_heterogeneity: 63
+  exp_trophic_pulse_layer_filtering: 33
+  exp_forestfire_patchy_moisture_memory: 42
+- Duplicate/stub pattern: 55 results had byte-identical cross-host payloads with trivial numeric content and short runtime, so they were set to 0.01 credit.
+
+Per-host credit summary
+- Host 1: 31.25
+- Host 9: 46.42
+- Host 29: 626.42
+- Host 219: 34.81
+- Host 347: 56.29
+- Host 353: 70.48
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 50387
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 51265
+- Removed temporary scripts /tmp/axiom_credit.py and /tmp/axiom_review.py
+- Validation report copied to website system_reports directory
+- Git sync attempted after report generation
