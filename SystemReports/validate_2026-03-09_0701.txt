@@ -7598,3 +7598,8 @@ none
 
 Bugs found and fixed in experiment scripts:
 none
+
+Late-arrival addendum:
+result 2013089 (host 353): exp_fhn_crossed_excitability_recovery_gpu_d2e323_0 | exp=exp_fhn_crossed_excitability_recovery_gpu | elapsed=19.118s | nbytes=2731 | credit=500.00 | sanitized present, non-retired, 3-result byte pool hit cap
+result 2020010 (host 222): exp_contact_process_multiplex_activity_crossover_c49d6b_0 | exp=exp_contact_process_multiplex_activity_crossover | elapsed=296.554s | nbytes=2731 | credit=500.00 | sanitized present, non-retired, 3-result byte pool hit cap
+result 2020299 (host 105): exp_ballistic_annihilation_domain_correlations_c91709_0 | exp=exp_ballistic_annihilation_domain_correlations | elapsed=655.516s | nbytes=5692 | credit=500.00 | sanitized present, non-retired, 3-result byte pool hit cap
