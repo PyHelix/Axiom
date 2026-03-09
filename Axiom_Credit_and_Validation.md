@@ -2,36 +2,33 @@
 
 ## How Credit Works
 
-Every Axiom workunit runs for **15 minutes** on every machine, regardless of hardware. A Raspberry Pi and a Ryzen 9950X both run the same 15-minute task. The difference is in the *results* — faster hardware computes more data points, more trials, and returns a larger result file within that fixed window.
+Every Axiom workunit runs for **15 minutes** on every machine, regardless of hardware. Credit is based on the compute resources the volunteer donated — time and hardware capability — using BOINC's standard FLOPS-based approach.
 
-**Credit is proportional to the bytes of data returned.**
-
-The formula:
+**Credit formula:**
 
 ```
-result_credit = (your_result_bytes / total_bytes_this_cycle) * 10,000
+granted_credit = elapsed_time * host_p_fpops * 1e-9
 ```
 
-- Minimum: 1.0 credit per valid result
-- Maximum: 500.0 credit per result
-- Budget: 10,000 credit distributed per validation cycle
+This gives credit in **cobblestones** (BOINC's standard unit). A faster machine earns more credit per task because it has higher FLOPS. Two identical machines running the same duration earn identical credit, every time, regardless of which experiment they ran.
 
-### Why bytes, not FLOPS?
+### Why FLOPS?
 
-Traditional BOINC projects run uniform workunits — the same computation on every machine. FLOPS-based credit works well there because every task does the same work.
+- **Deterministic**: Same hardware, same time = same credit. Always.
+- **Hardware-proportional**: A Ryzen 9 7950X earns more than a Raspberry Pi for the same 15-minute task, reflecting the actual compute donated.
+- **Standard BOINC**: Volunteers who run multiple projects expect consistent, FLOPS-based credit. This matches the convention that 25+ years of BOINC projects have established.
+- **No dependencies on other volunteers**: Your credit is based on what *you* donated, not what anyone else did in the same cycle.
+- **Ungameable**: `elapsed_time` and `p_fpops` are measured by the BOINC infrastructure, not by the experiment script.
 
-Axiom is different. An AI principal investigator designs **new experiments every cycle** — Kuramoto oscillator models, sandpile dynamics, ecological stability simulations, Markov branching processes. Each experiment is a unique Python script with different computational characteristics. There is no single FLOPS benchmark that applies to all of them.
+### Examples
 
-Bytes returned is the natural metric because:
+| Hardware | FLOPS | 15-min credit |
+|----------|-------|---------------|
+| Raspberry Pi 4 | ~1.5 GFLOPS | ~1,350 |
+| Intel i5-6200U | ~4.0 GFLOPS | ~3,600 |
+| AMD Ryzen 9 7950X | ~9.8 GFLOPS | ~8,820 |
 
-- **Hardware-neutral**: The same experiment produces the same output size regardless of CPU speed
-- **Proportional to work**: Experiments that compute more trials and data points produce larger result files
-- **Ungameable**: The assimilator strips all strings and only keeps numeric data — you can't inflate results with padding
-- **Fair to GPU volunteers**: GPU tasks naturally return more data (30-75x more per task) and receive proportionally more credit without hardcoded multipliers
-
-### Why not time-based?
-
-All tasks already run for 15 minutes, so time is constant. Time-based credit would give every task identical credit regardless of how much useful computation was performed. Bytes-based credit rewards machines that produce more science within the same time window.
+Three identical PCs running for the same period get exactly 3x the credit of one PC. Always.
 
 ## How Validation Works
 
@@ -46,26 +43,26 @@ When a volunteer returns a result, the **assimilator** processes it immediately:
 
 This makes prompt injection and data manipulation impossible. The validator never sees volunteer-controlled text.
 
-### Step 2: AI Anti-Cheat Review (Regularly)
+### Step 2: AI Anti-Cheat Review
 
-An AI validator reviews all uncredited results and checks for:
+An AI reviewer spot-checks sanitized results for:
 
 - **Empty payloads**: Results with all zeros, single repeated values, or trivial data -> zero credit
-- **Stub results**: Files under 500 bytes that completed in under 60 seconds (failed downloads or instant errors) -> zero credit
+- **Stub results**: Tasks that completed in under 60 seconds (failed downloads or instant errors) -> zero credit
 - **Outlier detection**: If most hosts return consistent values for an experiment and one host is wildly different -> flagged, zero credit
-- **Retired experiments**: Results for experiments that have been retired -> zero credit
+- **Duplicate/identical results**: If two different hosts return byte-identical data -> flagged
 
-Everything else receives credit proportional to bytes returned.
+Flagged results receive 0.01 credit (denied sentinel). Everything else receives standard FLOPS credit.
 
 ### Step 3: Credit Distribution
 
-The validator runs a single batch SQL update:
+A single batch operation:
 
-1. Snapshots all uncredited result IDs
-2. Extracts nbytes (uploaded file size) from each result
-3. Calculates byte-weighted credit: (nbytes / total_nbytes) * 10,000
-4. Applies floor (1.0) and cap (500.0)
-5. Updates host and user credit totals incrementally
+1. Query all uncredited results with their `elapsed_time` and host `p_fpops`
+2. Calculate `elapsed_time * p_fpops * 1e-9` for each
+3. Set flagged results to 0.01
+4. Batch UPDATE all results
+5. Incrementally add credit to host and user totals
 
 **Credit is never set to an absolute value** — it is always added to existing totals, preserving legacy credit.
 
@@ -84,18 +81,17 @@ Credit denial only happens for confirmed cheating patterns. The system rewards p
 ## Key Numbers
 
 - **Task duration**: 15 minutes (all platforms)
-- **Credit budget**: 10,000 per validation cycle
-- **Credit range**: 1.0 - 500.0 per result
-- **Validation frequency**: Regularly
+- **Credit basis**: FLOPS (elapsed_time * host_p_fpops * 1e-9)
+- **Validation frequency**: Every codex loop cycle (~1.2 hours)
 - **Active hosts**: 113 (as of March 2026)
 - **Results collected**: 46,000+
 
 ## Summary
 
-| Aspect | Axiom | Traditional BOINC |
-|--------|-------|-------------------|
-| Task duration | Fixed 15 min | Variable |
-| Credit basis | Bytes returned | FLOPS estimated |
-| Workunit type | Different experiment each cycle | Same computation |
-| Validation | AI anti-cheat + statistical | Quorum / replication |
-| Who designs work | AI (autonomous) | Human researchers |
+| Aspect | Axiom | Notes |
+|--------|-------|-------|
+| Task duration | Fixed 15 min | Same across all platforms |
+| Credit basis | FLOPS (standard BOINC) | elapsed_time * host_flops |
+| Workunit type | Different experiment each cycle | AI-designed |
+| Validation | AI anti-cheat + statistical | Spot-check + cross-seed replication |
+| Who designs work | AI (autonomous) | New experiments every cycle |
