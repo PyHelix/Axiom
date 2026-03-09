@@ -1,0 +1,35 @@
+name: Build Mac ARM64 Binary
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-mac:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller numpy psutil websockets
+
+      - name: Build binary
+        run: |
+          cd build_src
+          pyinstaller --onefile \
+            --name axiom_experiment_617_macos \
+            --hidden-import=simple_ml \
+            --add-data "simple_ml.py:." \
+            --runtime-tmpdir . \
+            axiom_streaming_client.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: axiom_experiment_617_macos
+          path: build_src/dist/axiom_experiment_617_macos
