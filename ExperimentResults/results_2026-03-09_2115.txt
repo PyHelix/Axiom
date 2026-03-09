@@ -1,0 +1,49 @@
+EXPERIMENT: exp_metapop_source_sink_reactivity_traps (782 results, 782 seeds, 22 hosts)
+  Results: best window gain +0.08954 +/- 1.01711 (d=0.09, 100.0% sign-consistent); mean interaction gain +0.00531 +/- 0.03184 (d=0.17, 100.0% sign-consistent); interaction support fraction +0.99748 +/- 0.01036 (d=96.29, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Dormancy still fails to produce a meaningful source-sink reactivity-window gain. The interaction term remains positive but stays far below the 2% effect cutoff, so the proposed trap widening is not supported.
+
+EXPERIMENT: exp_forestfire_ridge_burnscar_channels (773 results, 773 seeds, 21 hosts)
+  Results: best spanning suppression gain +0.01684 +/- 0.00422 (d=3.99, 100.0% sign-consistent); mean mid-alignment gain +0.00368 +/- 0.00179 (d=2.06, 98.1% sign-consistent); mid-alignment support fraction +0.77458 +/- 0.15096 (d=5.13, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The best spanning-fire suppression remains below the 2% meaningful-effect threshold even after the larger aggregate batch. Ridge-channel memory changes alignment statistics, but it does not deliver a robust macroscopic suppression effect.
+
+EXPERIMENT: exp_tailspike_covariance_localization_gpu (0 results, 0 seeds, 5 hosts)
+  Results: no metric-bearing sanitized payloads are available yet
+  Conclusion: insufficient data
+    55 recent sanitized files exist, but none contain an `experiment_result` payload yet. There are no metric-bearing seeds to analyze, so this family cannot support a numerical conclusion yet.
+
+EXPERIMENT: exp_kac_markov_sign_edge_clustering (48 results, 48 seeds, 11 hosts)
+  Results: positive-persistence edge shift -0.00200 +/- 0.00043 (d=-4.67, 0.0% sign-consistent); antipersistent edge shift -0.00201 +/- 0.00045 (d=-4.50, 100.0% sign-consistent); positive-persistence pm1-gap shift +0.00006 +/- 0.00024 (d=0.25, 43.8% sign-consistent)
+  Conclusion: NO EFFECT
+    Persistent Markov signs do not generate a measurable endpoint-crowding boost near +/-1 in the current finite-size window. The edge-shift signal is small and slightly negative, so the claimed edge-clustering enhancement is not supported at meaningful scale.
+
+EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu (1 results, 1 seeds, 1 hosts)
+  Results: mid crossed vs parallel isotropy gain +0.19776 +/- 0.00000 (d=1000000000.00, 100.0% sign-consistent); mid crossed vs IID peak-score gain +2.33805 +/- 0.00000 (d=1000000000.00, 100.0% sign-consistent); high crossed vs parallel peak-score gain -0.08272 +/- 0.00000 (d=1000000000.00, 0.0% sign-consistent)
+  Conclusion: insufficient data
+    28 recent files landed, but only 1 carry metric-bearing payloads. The directional signal is positive in the usable seed, yet one completed seed is far below the minimum needed for an inference.
+
+EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu_gpu (2 results, 2 seeds, 1 hosts)
+  Results: mid crossed vs parallel isotropy gain +0.21210 +/- 0.01946 (d=10.90, 100.0% sign-consistent); mid crossed vs IID peak-score gain +2.32845 +/- 0.01574 (d=147.89, 100.0% sign-consistent); high crossed vs parallel peak-score gain -0.01971 +/- 0.05086 (d=-0.39, 50.0% sign-consistent)
+  Conclusion: insufficient data
+    18 recent files arrived under the duplicated family prefix, but only 2 include payload metrics. The usable seeds favor crossed-pattern isotropy and peak score, but two seeds are still only a directional hint.
+
+EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu (9 results, 9 seeds, 4 hosts)
+  Results: mid-tau medium-amp stripe defect suppression +0.07861 +/- 0.00317 (d=24.82, 100.0% sign-consistent); mid-tau medium-amp stripe orientation gain +0.53122 +/- 0.01775 (d=29.93, 100.0% sign-consistent); mid-tau stripe nonmonotone defect gain +0.00675 +/- 0.00295 (d=2.29, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    35 recent files produced only 9 metric-bearing seeds. All completed seeds support stripe-mediated defect suppression, but the batch is still below the 10-seed minimum.
+
+EXPERIMENT: exp_swifthohenberg_quench_disorder_gpu (13 results, 13 seeds, 5 hosts)
+  Results: mid-tau medium-amp stripe defect suppression +0.08090 +/- 0.00277 (d=29.17, 100.0% sign-consistent); mid-tau medium-amp stripe orientation gain +0.52634 +/- 0.01444 (d=36.44, 100.0% sign-consistent); mid-tau stripe nonmonotone defect gain +0.00472 +/- 0.00244 (d=1.93, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The completed seeds consistently show defect suppression and stronger stripe orientation at the medium-amplitude mid-quench setting. With 13 metric-bearing seeds, this is a preliminary positive signal rather than a settled result.
+
+EXPERIMENT: exp_grayscott_crossed_feed_kill_alignment_gpu (0 results, 0 seeds, 4 hosts)
+  Results: no metric-bearing sanitized payloads are available yet
+  Conclusion: insufficient data
+    15 recent sanitized files exist, but none contain an `experiment_result` payload yet. Without any metric-bearing seeds, there is nothing numerical to test against the crossed-alignment hypothesis.
+
+EXPERIMENT: exp_parrondo_history_boundary (13 results, 13 seeds, 6 hosts)
+  Results: winning-region fraction +0.04000 +/- 0.00000 (d=1000000000.00, 100.0% sign-consistent); boundary crossings +7.00000 +/- 0.00000 (d=1000000000.00, 100.0% sign-consistent); max drift on map +0.04155 +/- 0.00024 (d=171.18, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The mapped boundary is stable across the current seeds, with a repeatable small winning region and the same seven zero-crossing segments in the scanned slice. This supports the existence of a history-dependent Parrondo boundary, but 13 seeds still leave it in the preliminary regime.
