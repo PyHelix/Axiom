@@ -1,5 +1,4 @@
 AXIOM EXPERIMENT FINDINGS SUMMARY
-
 EXPERIMENT: exp_ageing_voter_modular_polarization | Status: NO EFFECT | Results: intermediate-ageing peak excess -0.00611 +/- 0.02724 (d=-0.22, 18.5% sign-consistent); alpha=1.0 opposite-majority fraction +0.00795 +/- 0.01788 (d=0.44, 30.7% sign-consistent); alpha=2.4 opposite-majority fraction +0.01158 +/- 0.02202 (d=0.53, 40.1% sign-consistent). 2615 seeds, 34 hosts. Last updated: 2026-03-08
 
 EXPERIMENT: exp_abx_cycle_hgt_delay_resonance | Status: NO EFFECT | Results: delay-fatigue resonance AUC excess +0.01157 +/- 0.07031 (d=0.16, 97.3% sign-consistent). 2026 seeds, 31 hosts. Last updated: 2026-03-08
@@ -86,13 +85,16 @@ EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu | Status: NO EFFECT | Res
 
 EXPERIMENT: exp_trophic_pulse_layer_filtering | Status: CONFIRMED | Results: best mid-layer score +0.05252 +/- 0.00083 (d=63.05, 100.0% sign-consistent). 51 seeds, 11 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: PRELIMINARY | Results: mid crossed isotropy gain +0.05569 +/- 0.03290 (d=1.69, 93.1% sign-consistent); high crossed isotropy gain +0.47432 +/- 0.03210 (d=14.78, 100.0% sign-consistent); mid crossed transport gain -1.59244 +/- 0.35145 (d=-4.53, 0.0% sign-consistent). 29 seeds, 7 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: CONFIRMED | Results: mid crossed isotropy gain +0.06151 +/- 0.03325 (d=1.85, 94.1% sign-consistent); high crossed isotropy gain +0.46929 +/- 0.03356 (d=13.98, 100.0% sign-consistent); mid crossed transport gain -1.59800 +/- 0.33376 (d=-4.79, 100.0% sign-consistent). 51 seeds, 8 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: PRELIMINARY | Results: crossed peak area advantage +0.05948 +/- 0.00844 (d=7.05, 100.0% sign-consistent); crossed peak fractal advantage -0.02727 +/- 0.01086 (d=-2.51, 3.7% sign-consistent); mid crossed vs parallel area gain +0.06140 +/- 0.00421 (d=14.59, 100.0% sign-consistent). 27 seeds, 7 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: CONFIRMED | Results: crossed peak area advantage +0.06026 +/- 0.00744 (d=8.10, 100.0% sign-consistent); crossed peak fractal advantage -0.02839 +/- 0.00992 (d=-2.86, 97.6% sign-consistent); mid crossed vs parallel area gain +0.06276 +/- 0.00442 (d=14.18, 100.0% sign-consistent). 41 seeds, 6 hosts. Last updated: 2026-03-09
 
-DEPLOYED HYPOTHESES | 2026-03-09
-exp_ising_persistence_glauber_kawasaki: direct Glauber-vs-Kawasaki persistence exponent comparison in 2D Ising coarsening with finite-size scaling.
-exp_sis_burst_modularity_temporal_threshold: burstiness x modularity interaction may shift SIS persistence thresholds non-monotonically on temporal SBM networks.
-exp_depinning_elastic_line: full disorder-to-disorder critical-force distribution shape may show cleaner finite-size universality than mean depinning force alone.
-exp_contact_process_striped_recovery_corridor: intermediate stripe-correlated recovery disorder may create directional near-critical survival corridors absent in iid or fully banded limits.
-exp_ising_crossed_temp_field_memory_gpu: orthogonal quenched local-temperature and field stripes may retain more persistent spins while reducing domain anisotropy relative to aligned stripes during 2D Ising coarsening.
+EXPERIMENT: exp_contact_process_striped_recovery_corridor | Status: NO EFFECT | Results: survival corridor window gain +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); density corridor window gain -0.00265 +/- 0.00008 (d=-32.31, 100.0% sign-consistent); alignment corridor window gain -0.02195 +/- 0.00181 (d=-12.10, 100.0% sign-consistent). 108 seeds, 18 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_depinning_elastic_line | Status: CONFIRMED | Results: roughness exponent zeta estimate +0.03234 +/- 0.00549 (d=5.89, 100.0% sign-consistent); largest-size mean critical force +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); largest-size force skewness +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 95 seeds, 18 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_invasion_percolation_trapping | Status: NO EFFECT | Results: Df gap no-trap minus trap -0.00171 +/- 0.00792 (d=-0.22, 61.9% sign-consistent); largest-L no-trap Df +1.95163 +/- 0.00573 (d=340.39, 100.0% sign-consistent); largest-L trap Df +1.95334 +/- 0.00436 (d=448.43, 100.0% sign-consistent). 21 seeds, 7 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_ising_persistence_glauber_kawasaki | Status: REJECTED | Results: overall theta gap (Kawasaki - Glauber) -0.16588 +/- 0.02113 (d=-7.85, 100.0% sign-consistent); overall Glauber theta +0.19738 +/- 0.02103 (d=9.39, 100.0% sign-consistent); overall Kawasaki theta +0.03149 +/- 0.00164 (d=19.24, 100.0% sign-consistent). 100 seeds, 16 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_sis_burst_modularity_temporal_threshold | Status: NO EFFECT | Results: interaction score +0.00001 +/- 0.00007 (d=0.17, 51.5% sign-consistent); high-modularity mid-burst threshold shift +0.00005 +/- 0.00005 (d=0.87, 79.4% sign-consistent); low-modularity strong-burst threshold shift -0.00003 +/- 0.00004 (d=-0.71, 67.0% sign-consistent). 97 seeds, 16 hosts. Last updated: 2026-03-09
