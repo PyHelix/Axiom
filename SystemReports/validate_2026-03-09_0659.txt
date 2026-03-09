@@ -7589,3 +7589,9 @@ none
 
 Bugs found and fixed in experiment scripts:
 none
+
+Late-arrival addendum:
+result 2011167 (host 353): exp_spiked_covariance_mask_correlation_gpu_gpu_29e85e_2 | exp=exp_spiked_covariance_mask_correlation_gpu_gpu | elapsed=19.133s | nbytes=2518 | credit=500.00 | sanitized present, non-retired, byte-weighted pool of 4 hit cap
+result 2016759 (host 219): exp_kuramoto_partial_overlap_anticorrelation_9f25bb_0 | exp=exp_kuramoto_partial_overlap_anticorrelation | elapsed=15.206s | nbytes=5104 | credit=0.01 | retired_experiment
+result 2016816 (host 219): exp_sandpile_smallworld_threshold_disorder_5b8e19_0 | exp=exp_sandpile_smallworld_threshold_disorder | elapsed=6.080s | nbytes=1990 | credit=0.01 | retired_experiment
+result 2020603 (host 2): exp_ballistic_annihilation_domain_correlations_e9b4a0_0 | exp=exp_ballistic_annihilation_domain_correlations | elapsed=695.575s | nbytes=5693 | credit=500.00 | sanitized present, non-retired, byte-weighted pool of 4 hit cap
