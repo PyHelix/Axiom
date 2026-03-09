@@ -1,0 +1,71 @@
+Axiom Science Analysis - 2026-03-09 08:06 UTC
+
+EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu (63 results, 63 seeds, 11 hosts; 85 new files)
+  Results: mid orthogonal entropy advantage -0.00033 +/- 0.00062 (d=-0.54, 25.4% sign-consistent); mid orthogonal interface advantage -0.00032 +/- 0.00041 (d=-0.78, 14.3% sign-consistent); mid orthogonal entropy gain vs IID -0.01134 +/- 0.00050 (d=-22.84, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The direct crossed-vs-baseline advantages remain small, while the strongest consistent signal is a negative entropy-gain term. The hypothesized crossed-field advantage is not present here.
+
+EXPERIMENT: exp_forestfire_burnscar_wind_memory_gpu (0 results, 0 seeds, 0 hosts; 56 new files)
+  Results: no complete numeric experiment_result payloads were available in the sanitized files yet.
+  Conclusion: insufficient data
+    Recent sanitized files exist, but none contain complete numeric experiment summaries yet.
+
+EXPERIMENT: exp_contact_process_multiplex_activity_crossover_gpu (0 results, 0 seeds, 0 hosts; 54 new files)
+  Results: no complete numeric experiment_result payloads were available in the sanitized files yet.
+  Conclusion: insufficient data
+    Recent sanitized files exist, but none contain complete numeric experiment summaries yet.
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu (22 results, 22 seeds, 7 hosts; 40 new files)
+  Results: critical mid-block alignment penalty +0.00174 +/- 0.00038 (d=4.56, 100.0% sign-consistent); critical large-block rebound +0.00579 +/- 0.00054 (d=10.76, 100.0% sign-consistent); critical mid-block gap penalty +0.00665 +/- 0.00045 (d=14.82, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The GPU-only batch reproduces the same positive mid-block penalty and rebound pattern. Direction is coherent, but the window still contains only a preliminary number of usable seeds.
+
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu (7 results, 7 seeds, 3 hosts; 38 new files)
+  Results: crossed peak area advantage +0.06140 +/- 0.00451 (d=13.61, 100.0% sign-consistent); crossed peak fractal advantage -0.03111 +/- 0.00798 (d=-3.90, 0.0% sign-consistent); high crossed vs parallel fractal gain -0.01501 +/- 0.00958 (d=-1.57, 0.0% sign-consistent)
+  Conclusion: insufficient data
+    Every usable seed shows large positive crossed-stripe gains in area and fractal-complexity surrogates, but only a few complete numeric payloads are available so far.
+
+EXPERIMENT: exp_kuramoto_partial_overlap_anticorrelation_gpu (6 results, 6 seeds, 2 hosts; 37 new files)
+  Results: mid-overlap anticorr phase-gap excess +0.12208 +/- 0.03548 (d=3.44, 100.0% sign-consistent); mid-overlap extremum strength -0.01369 +/- 0.05439 (d=-0.25, 16.7% sign-consistent); positive-vs-anticorr locking gap +0.43281 +/- 0.03334 (d=12.98, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    The completed seeds already show a larger mid-overlap phase gap and a strong locking gap under anticorrelation, but the usable seed count is still below ten.
+
+EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu (10 results, 10 seeds, 2 hosts; 30 new files)
+  Results: critical mid-rho smooth advantage +0.06868 +/- 0.01302 (d=5.28, 100.0% sign-consistent); critical mid-rho gap advantage +0.05058 +/- 0.01158 (d=4.37, 100.0% sign-consistent); critical high-rho rebound +0.12735 +/- 0.02154 (d=5.91, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    All usable seeds favor the smooth spike at intermediate Toeplitz correlation and show a positive high-rho rebound. The direction is coherent, but the 10-seed batch is still preliminary rather than confirmed.
+
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu (9 results, 9 seeds, 3 hosts; 24 new files)
+  Results: high crossed isotropy gain +0.46092 +/- 0.03015 (d=15.29, 100.0% sign-consistent); high crossed transport gain -8.61637 +/- 1.22488 (d=-7.03, 0.0% sign-consistent); mid crossed isotropy gain +0.05567 +/- 0.02209 (d=2.52, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    The usable seeds consistently favor crossed disorder on transport and isotropy metrics, especially at higher amplitude, but there are still fewer than ten numeric seeds.
+
+EXPERIMENT: exp_metapop_seedbank_corridor_correlation (19 results, 19 seeds, 6 hosts; 19 new files)
+  Results: best survival gain +0.99745 +/- 0.00338 (d=295.14, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Finite seed-bank persistence produces a near-universal positive best-window survival gain in the completed seeds. The effect is extremely consistent, but the usable seed count is still in the preliminary range.
+
+EXPERIMENT: exp_nasch_incident_memory_heterogeneity (18 results, 18 seeds, 7 hosts; 18 new files)
+  Results: best combined flow+jam gain +1.12014 +/- 0.00107 (d=1051.12, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The best memory-window score is positive in every usable seed, indicating a stable finite-memory traffic benefit under incidents. The direction is strong, but the current window still has fewer than 30 usable seeds.
+
+EXPERIMENT: exp_forestfire_patchy_moisture_memory (17 results, 17 seeds, 6 hosts; 17 new files)
+  Results: best spanning gain +0.02476 +/- 0.00242 (d=10.24, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Burn-scar recovery produces a consistent positive best-window spanning suppression when patch correlation length is finite. The effect is already stable across usable seeds, but the current batch is still preliminary.
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu (25 results, 25 seeds, 7 hosts; 16 new files)
+  Results: critical mid-block alignment penalty +0.00174 +/- 0.00037 (d=4.66, 100.0% sign-consistent); critical large-block rebound +0.00577 +/- 0.00054 (d=10.71, 100.0% sign-consistent); critical mid-block gap penalty +0.00674 +/- 0.00053 (d=12.73, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The critical mid-block penalty, rebound, and eigengap penalty stay positive with strong sign consistency, but the usable seed count is still below the 30-seed confirmation threshold.
+
+EXPERIMENT: exp_may_lowrank_mutualism_localization (224 results, 224 seeds, 13 hosts; 13 new files)
+  Results: mid-window shift -6.73109 +/- 154.72559 (d=-0.04, 46.9% sign-consistent); high-window shift -2.67564 +/- 184.35833 (d=-0.01, 50.0% sign-consistent); u-shape support fraction +0.02602 +/- 0.00445 (d=5.85, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The key window-shift terms remain centered near zero while the u-shape support fraction stays very low. The reactive-mass relocalization signal is real, but the predicted U-shaped window widening is not present.
+
+EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu (67 results, 67 seeds, 11 hosts; 11 new files)
+  Results: mid orthogonal entropy advantage -0.00031 +/- 0.00065 (d=-0.47, 26.9% sign-consistent); mid orthogonal interface advantage -0.00034 +/- 0.00041 (d=-0.82, 13.4% sign-consistent); mid orthogonal entropy gain vs IID -0.01130 +/- 0.00054 (d=-20.87, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The crossed-stripe advantages remain near zero or negative, and the entropy-gain term stays consistently below zero. This window does not support the proposed crossed-field benefit.
