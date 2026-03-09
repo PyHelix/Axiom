@@ -70,7 +70,7 @@ EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | Status: NO EFFECT |
 
 EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu | Status: PRELIMINARY | Results: critical mid-block alignment penalty +0.00174 +/- 0.00038 (d=4.56, 100.0% sign-consistent); critical large-block rebound +0.00579 +/- 0.00054 (d=10.76, 100.0% sign-consistent); critical mid-block gap penalty +0.00665 +/- 0.00045 (d=14.82, 100.0% sign-consistent). 22 seeds, 7 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu | Status: PRELIMINARY | Results: critical mid-rho smooth advantage +0.06391 +/- 0.01631 (d=3.92, 100.0% sign-consistent); critical mid-rho gap advantage +0.04816 +/- 0.01630 (d=2.96, 100.0% sign-consistent); critical high-rho rebound +0.05405 +/- 0.01432 (d=3.78, 100.0% sign-consistent). 13 seeds, 2 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu | Status: PRELIMINARY | Results: critical mid-rho smooth advantage +0.06439 +/- 0.01409 (d=4.57, 100.0% sign-consistent); critical mid-rho gap advantage +0.04529 +/- 0.01468 (d=3.08, 100.0% sign-consistent); critical high-rho rebound +0.13376 +/- 0.02352 (d=5.69, 100.0% sign-consistent). 20 seeds, 5 hosts. Last updated: 2026-03-09
 
 EXPERIMENT: exp_metapop_seedbank_corridor_correlation | Status: CONFIRMED | Results: best survival gain +0.99802 +/- 0.00315 (d=316.52, 100.0% sign-consistent). 272 seeds, 18 hosts. Last updated: 2026-03-09
 
@@ -78,7 +78,7 @@ EXPERIMENT: exp_nasch_incident_memory_heterogeneity | Status: CONFIRMED | Result
 
 EXPERIMENT: exp_forestfire_patchy_moisture_memory | Status: CONFIRMED | Results: best spanning gain +0.02461 +/- 0.00225 (d=10.92, 100.0% sign-consistent). 280 seeds, 19 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu | Status: PRELIMINARY | Results: critical mid-block alignment penalty +0.00169 +/- 0.00039 (d=4.36, 100.0% sign-consistent); critical large-block rebound +0.00580 +/- 0.00053 (d=10.99, 100.0% sign-consistent); critical mid-block gap penalty +0.00670 +/- 0.00054 (d=12.44, 100.0% sign-consistent). 28 seeds, 7 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu | Status: CONFIRMED | Results: critical mid-block alignment penalty +0.00171 +/- 0.00038 (d=4.51, 100.0% sign-consistent); critical large-block rebound +0.00580 +/- 0.00051 (d=11.39, 100.0% sign-consistent); critical mid-block gap penalty +0.00669 +/- 0.00056 (d=11.89, 100.0% sign-consistent). 31 seeds, 8 hosts. Last updated: 2026-03-09
 
 EXPERIMENT: exp_may_lowrank_mutualism_localization | Status: NO EFFECT | Results: mid-window shift -6.73109 +/- 154.72559 (d=-0.04, 46.9% sign-consistent); high-window shift -2.67564 +/- 184.35833 (d=-0.01, 50.0% sign-consistent); u-shape support fraction +0.02602 +/- 0.00445 (d=5.85, 100.0% sign-consistent). 224 seeds, 13 hosts. Last updated: 2026-03-09
 
@@ -86,6 +86,6 @@ EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu | Status: NO EFFECT | Res
 
 EXPERIMENT: exp_trophic_pulse_layer_filtering | Status: CONFIRMED | Results: best mid-layer score +0.05252 +/- 0.00083 (d=63.05, 100.0% sign-consistent). 51 seeds, 11 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: PRELIMINARY | Results: mid crossed isotropy gain +0.05521 +/- 0.02064 (d=2.67, 100.0% sign-consistent); high crossed isotropy gain -8.62352 +/- 1.12737 (d=-7.65, 100.0% sign-consistent); mid crossed transport gain -1.43379 +/- 0.28126 (d=-5.10, 100.0% sign-consistent). 11 seeds, 3 hosts. Last updated: 2026-03-09
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: PRELIMINARY | Results: mid crossed isotropy gain +0.05637 +/- 0.02224 (d=2.53, 100.0% sign-consistent); high crossed isotropy gain +0.47553 +/- 0.03529 (d=13.48, 100.0% sign-consistent); mid crossed transport gain -1.53106 +/- 0.32424 (d=-4.72, 100.0% sign-consistent). 14 seeds, 4 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: DEPLOYED | Hypothesis: near the spiral-wave meander transition, orthogonal quenched stripe fields in excitability and recovery timescale increase tip-trajectory complexity and meander-area retention relative to IID or parallel stripe heterogeneity by frustrating alignment to a single preferred propagation axis. Novelty check 2026-03-09: spiral meander and heterogeneous excitable media are established separately, but this crossed excitability x recovery stripe interaction map was not found in the script review notes. 99 completed seeds, 417 staged WUs, 7 running. Last updated: 2026-03-09
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: PRELIMINARY | Results: crossed peak area advantage +0.06088 +/- 0.00879 (d=6.93, 100.0% sign-consistent); crossed peak fractal advantage -0.02908 +/- 0.00901 (d=-3.23, 100.0% sign-consistent); mid crossed vs parallel area gain +0.05942 +/- 0.00377 (d=15.77, 100.0% sign-consistent). 13 seeds, 5 hosts. Last updated: 2026-03-09

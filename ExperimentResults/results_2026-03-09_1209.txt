@@ -1,0 +1,28 @@
+Axiom Scientific Analysis Report
+Generated: 2026-03-09 12:09 UTC
+Window: sanitized results modified in the last 180 minutes
+
+EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu (31 results, 31 seeds, 8 hosts; 41 new files)
+  Results: critical mid-block alignment penalty +0.00171 +/- 0.00038 (d=4.51, 100.0% sign-consistent); critical large-block rebound +0.00580 +/- 0.00051 (d=11.39, 100.0% sign-consistent); critical mid-block gap penalty +0.00669 +/- 0.00056 (d=11.89, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Intermediate block-correlated missingness reproducibly suppresses spike recovery and eigengap more than IID masking, and very long blocks partially rebound from that penalty. The effect direction is uniform across 31 valid seeds, so this crossover is now confirmed.
+
+EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu (20 results, 20 seeds, 5 hosts; 38 new files)
+  Results: critical mid-rho smooth advantage +0.06439 +/- 0.01409 (d=4.57, 100.0% sign-consistent); critical mid-rho gap advantage +0.04529 +/- 0.01468 (d=3.08, 100.0% sign-consistent); critical high-rho rebound +0.13376 +/- 0.02352 (d=5.69, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Smooth spikes already show a stable alignment and eigengap advantage over localized block spikes near the BBP crossover, with a further rebound at high Toeplitz correlation. The direction is coherent, but 20 seeds is still below the confirmation threshold.
+
+EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu (14 results, 14 seeds, 4 hosts; 36 new files)
+  Results: mid crossed isotropy gain +0.05637 +/- 0.02224 (d=2.53, 100.0% sign-consistent); high crossed isotropy gain +0.47553 +/- 0.03529 (d=13.48, 100.0% sign-consistent); mid crossed transport gain -1.53106 +/- 0.32424 (d=-4.72, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Crossed site-bond stripes clearly improve isotropy relative to parallel disorder, but the transport metric moves in the opposite direction at the same time. This is a real structured effect, yet the current evidence is mixed and still preliminary rather than a clean confirmation of transport preservation.
+
+EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu (13 results, 13 seeds, 5 hosts; 33 new files)
+  Results: crossed peak area advantage +0.06088 +/- 0.00879 (d=6.93, 100.0% sign-consistent); crossed peak fractal advantage -0.02908 +/- 0.00901 (d=-3.23, 100.0% sign-consistent); mid crossed vs parallel area gain +0.05942 +/- 0.00377 (d=15.77, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Crossed excitability-recovery stripes reliably increase meander-area retention, but the peak fractal-complexity term is consistently negative rather than positive. The family now has enough valid seeds for a preliminary call, and the current signal is mixed rather than fully supportive of the original hypothesis.
+
+EXPERIMENT: exp_swifthohenberg_quench_disorder_gpu (3 results, 3 seeds, 2 hosts; 21 new files)
+  Results: mid-tau medium-amp stripe defect suppression +0.08242 +/- 0.00229 (d=36.01, 100.0% sign-consistent); mid-tau medium-amp stripe orientation gain +0.52097 +/- 0.01288 (d=40.44, 100.0% sign-consistent); mid-tau stripe nonmonotone defect gain +0.00606 +/- 0.00240 (d=2.52, 100.0% sign-consistent)
+  Conclusion: INSUFFICIENT DATA
+    The first valid seeds are directionally favorable for the predicted intermediate-amplitude stripe effect, but only three sanitized payloads currently contain usable numeric summaries. That is not enough to support a formal finding yet.
