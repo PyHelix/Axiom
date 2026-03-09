@@ -46,7 +46,7 @@ When a volunteer returns a result, the **assimilator** processes it immediately:
 
 This makes prompt injection and data manipulation impossible. The validator never sees volunteer-controlled text.
 
-### Step 2: AI Anti-Cheat Review (Every ~1.5 hours)
+### Step 2: AI Anti-Cheat Review (Regularly)
 
 An AI validator reviews all uncredited results and checks for:
 
@@ -86,7 +86,7 @@ Credit denial only happens for confirmed cheating patterns. The system rewards p
 - **Task duration**: 15 minutes (all platforms)
 - **Credit budget**: 10,000 per validation cycle
 - **Credit range**: 1.0 - 500.0 per result
-- **Validation frequency**: Every ~1.5 hours
+- **Validation frequency**: Regularly
 - **Active hosts**: 113 (as of March 2026)
 - **Results collected**: 46,000+
 
