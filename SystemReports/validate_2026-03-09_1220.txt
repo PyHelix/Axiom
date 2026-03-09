@@ -1,0 +1,29 @@
+Validation session log
+Timestamp: 2026-03-09 12:20:21
+
+Results credited this session:
+- Results processed: 359
+- Positive-credit results: 5
+- Denied results (0.01 sentinel): 354
+- Total positive credit awarded: 47886580.85 cobblestones
+
+Anti-cheat / denial summary:
+- 115: retired experiment match exp_nasch_incident_memory_heterogeneity
+- 101: retired experiment match exp_forestfire_patchy_moisture_memory
+- 67: stub runtime <60s
+- 66: empty numeric payload
+- 56: retired experiment match exp_trophic_pulse_layer_filtering
+- 15: retired experiment match exp_metapop_seedbank_corridor_correlation
+- Missing sanitized file at review time (credited per FLOPS rules): [2038168, 2039476]
+
+Per-host positive credit summary:
+- Host 1: 21430112.62 cobblestones
+- Host 29: 8058492.96 cobblestones
+- Host 353: 18397975.27 cobblestones
+
+Cleanup actions taken:
+- Updated result.granted_credit and validate_state for all live uncredited results in scope
+- Incremented host.total_credit and user.total_credit using additive updates only
+- Updated website counters after verification
+- Copied this log to html/user/system_reports/
+- Removed temporary scripts from /tmp after completion
