@@ -1,13 +1,8 @@
-AXIOM EXPERIMENT FINDINGS SUMMARY
 EXPERIMENT: exp_ageing_voter_modular_polarization | Status: NO EFFECT | Results: intermediate-ageing peak excess -0.00611 +/- 0.02724 (d=-0.22, 18.5% sign-consistent); alpha=1.0 opposite-majority fraction +0.00795 +/- 0.01788 (d=0.44, 30.7% sign-consistent); alpha=2.4 opposite-majority fraction +0.01158 +/- 0.02202 (d=0.53, 40.1% sign-consistent). 2615 seeds, 34 hosts. Last updated: 2026-03-08
 
 EXPERIMENT: exp_abx_cycle_hgt_delay_resonance | Status: NO EFFECT | Results: delay-fatigue resonance AUC excess +0.01157 +/- 0.07031 (d=0.16, 97.3% sign-consistent). 2026 seeds, 31 hosts. Last updated: 2026-03-08
 
 EXPERIMENT: exp_sparse_wigner_tw_edge | Status: CONFIRMED | Results: L512 c=64 Tracy-Widom skew deviation +0.29321 +/- 0.02408 (d=12.18, 100.0% sign-consistent); L512 c=64 rescaled-edge mean -128.03295 +/- 3.00659 (d=-42.58, 100.0% sign-consistent); L512 c=64 L-skewness +0.00021 +/- 0.02408 (d=0.01, 49.9% sign-consistent). 1815 seeds, 33 hosts. Last updated: 2026-03-08
-
-EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal entropy advantage +0.00053 +/- 0.00283 (d=0.19, 51.7% sign-consistent); mid orthogonal interface advantage +0.00007 +/- 0.00083 (d=0.08, 48.3% sign-consistent); mid orthogonal mixedness gain vs IID -0.00422 +/- 0.00775 (d=-0.54, 15.5% sign-consistent). 44 seeds, 9 hosts. Last updated: 2026-03-08
-
-EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal survival advantage +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid orthogonal mixedness gain vs IID +0.00064 +/- 0.00029 (d=2.17, 100.0% sign-consistent); high orthogonal active-fraction gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 59 seeds, 14 hosts. Last updated: 2026-03-08
 
 EXPERIMENT: exp_grayscott_crossed_stripe_interaction_gpu | Status: NO EFFECT | Results: mid orthogonal entropy advantage +0.00053 +/- 0.00283 (d=0.19, 51.7% sign-consistent); mid orthogonal interface advantage +0.00007 +/- 0.00083 (d=0.08, 48.3% sign-consistent); mid orthogonal mixedness gain vs IID -0.00422 +/- 0.00775 (d=-0.54, 15.5% sign-consistent). 103 seeds, 10 hosts. Last updated: 2026-03-08
 
@@ -16,8 +11,6 @@ EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu | Status: NO EFFECT
 EXPERIMENT: exp_nasch_anticipation_heterogeneity | Status: NO EFFECT | Results: bimodal mid-density flow gain vs homogeneous -0.00040 +/- 0.00124 (d=-0.32, 35.6% sign-consistent); bimodal mid-density jam drop vs homogeneous -0.00403 +/- 0.00124 (d=-3.26, 0.0% sign-consistent); bimodal mid-density wave drop vs homogeneous -0.01525 +/- 0.00232 (d=-6.57, 0.0% sign-consistent). 227 seeds, 20 hosts. Last updated: 2026-03-08
 
 EXPERIMENT: exp_dla_drift_reversal_window | Status: NO EFFECT | Results: intermediate-reversal branch gain -0.01926 +/- 0.04728 (d=-0.41, 24.3% sign-consistent); intermediate-reversal entropy gain -0.03381 +/- 0.08953 (d=-0.38, 36.0% sign-consistent); constant-drift anisotropy excess -0.00448 +/- 0.22768 (d=-0.02, 49.3% sign-consistent). 225 seeds, 14 hosts. Last updated: 2026-03-08
-
-EXPERIMENT: exp_kellersegel_crossed_resource_sensitivity_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal aggregation advantage +0.00002 +/- 0.00001 (d=2.88, 100.0% sign-consistent); mid orthogonal interface gain vs IID -0.00055 +/- 0.00001 (d=-73.63, 0.0% sign-consistent); high orthogonal directional-balance gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 45 seeds, 13 hosts. Last updated: 2026-03-08
 
 EXPERIMENT: exp_contact_process_crossed_stripe_interaction_gpu | Status: NO EFFECT | Results: mid orthogonal survival advantage +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid orthogonal mixedness gain vs IID +0.00064 +/- 0.00029 (d=2.17, 100.0% sign-consistent); high orthogonal active-fraction gain vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 65 seeds, 15 hosts. Last updated: 2026-03-08
 
@@ -65,8 +58,6 @@ EXPERIMENT: exp_forestfire_burnscar_wind_memory | Status: CONFIRMED | Results: b
 
 EXPERIMENT: exp_may_nested_mutualism_localization | Status: REJECTED | Results: u-shape window gain -0.03234 +/- 0.00039 (d=-83.19, 0.0% sign-consistent); support fraction for the claimed u-shape 0.00000 +/- 0.00000 (d=0.04, 0.3% sign-consistent). 3093 seeds, 24 hosts. Last updated: 2026-03-09
 
-EXPERIMENT: exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | Status: NO EFFECT | Results: mid orthogonal entropy advantage -0.00033 +/- 0.00062 (d=-0.54, 25.4% sign-consistent); mid orthogonal interface advantage -0.00032 +/- 0.00041 (d=-0.78, 14.3% sign-consistent); mid orthogonal entropy gain vs IID -0.01134 +/- 0.00050 (d=-22.84, 0.0% sign-consistent). 63 seeds, 11 hosts. Last updated: 2026-03-09
-
 EXPERIMENT: exp_spiked_covariance_mask_correlation_gpu_gpu | Status: PRELIMINARY | Results: critical mid-block alignment penalty +0.00174 +/- 0.00038 (d=4.56, 100.0% sign-consistent); critical large-block rebound +0.00579 +/- 0.00054 (d=10.76, 100.0% sign-consistent); critical mid-block gap penalty +0.00665 +/- 0.00045 (d=14.82, 100.0% sign-consistent). 22 seeds, 7 hosts. Last updated: 2026-03-09
 
 EXPERIMENT: exp_spiked_covariance_toeplitz_localization_gpu | Status: CONFIRMED | Results: critical mid-rho smooth advantage +0.06377 +/- 0.01296 (d=4.92, 100.0% sign-consistent); critical mid-rho gap advantage +0.04633 +/- 0.01443 (d=3.21, 100.0% sign-consistent); critical high-rho rebound +0.13415 +/- 0.02407 (d=5.57, 100.0% sign-consistent). 34 seeds, 7 hosts. Last updated: 2026-03-09
@@ -88,6 +79,12 @@ EXPERIMENT: exp_trophic_pulse_layer_filtering | Status: CONFIRMED | Results: bes
 EXPERIMENT: exp_percolation_crossed_site_bond_transport_gpu | Status: CONFIRMED | Results: mid crossed isotropy gain +0.06151 +/- 0.03325 (d=1.85, 94.1% sign-consistent); high crossed isotropy gain +0.46929 +/- 0.03356 (d=13.98, 100.0% sign-consistent); mid crossed transport gain -1.59800 +/- 0.33376 (d=-4.79, 100.0% sign-consistent). 51 seeds, 8 hosts. Last updated: 2026-03-09
 
 EXPERIMENT: exp_fhn_crossed_excitability_recovery_gpu | Status: CONFIRMED | Results: crossed peak area advantage +0.06026 +/- 0.00744 (d=8.10, 100.0% sign-consistent); crossed peak fractal advantage -0.02839 +/- 0.00992 (d=-2.86, 97.6% sign-consistent); mid crossed vs parallel area gain +0.06276 +/- 0.00442 (d=14.18, 100.0% sign-consistent). 41 seeds, 6 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_forestfire_ridge_burnscar_channels | Status: NO EFFECT | Results: best spanning suppression gain +0.01697 +/- 0.00429 (d=3.96, 100.0% sign-consistent); mean mid-alignment gain +0.00369 +/- 0.00184 (d=2.00, 97.9% sign-consistent); mid-alignment support fraction +0.77164 +/- 0.15202 (d=5.08, 100.0% sign-consistent). 701 seeds, 20 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_metapop_source_sink_reactivity_traps | Status: NO EFFECT | Results: best window gain +0.06857 +/- 0.74413 (d=0.09, 100.0% sign-consistent); mean interaction gain +0.00465 +/- 0.02330 (d=0.20, 100.0% sign-consistent); interaction support fraction +0.99725 +/- 0.01085 (d=91.92, 100.0% sign-consistent). 696 seeds, 20 hosts. Last updated: 2026-03-09
+
+EXPERIMENT: exp_nasch_incident_cluster_anticipation | Status: CONFIRMED | Results: best flow gain +0.50942 +/- 0.00638 (d=79.89, 100.0% sign-consistent); mean mid-cluster gain +0.24317 +/- 0.00275 (d=88.32, 100.0% sign-consistent); mid-cluster support fraction +1.00000 +/- 0.00000 (d=1000000000.00, 100.0% sign-consistent). 625 seeds, 20 hosts. Last updated: 2026-03-09
 
 EXPERIMENT: exp_contact_process_striped_recovery_corridor | Status: NO EFFECT | Results: survival corridor window gain +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); density corridor window gain -0.00265 +/- 0.00008 (d=-32.31, 100.0% sign-consistent); alignment corridor window gain -0.02195 +/- 0.00181 (d=-12.10, 100.0% sign-consistent). 108 seeds, 18 hosts. Last updated: 2026-03-09
 
