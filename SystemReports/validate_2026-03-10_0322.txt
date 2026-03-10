@@ -1,0 +1,66 @@
+Axiom validation log 2026-03-10_0322
+
+Results credited this session: 5145
+Total cobblestones awarded this session: 269725.35
+Denied results (0.01 sentinel): 15
+Final uncredited queue after drain loop: 0
+Sanitized anti-cheat review sample size: 200
+Sampled from sanitized payloads available: 5117
+Pending results missing sanitized payloads during review: 13
+
+Anti-cheat flags:
+- result_id 2114936: duplicate_payload_across_hosts_or_results
+- result_id 2121315: duplicate_payload_across_hosts_or_results
+- result_id 2122967: duplicate_payload_across_hosts_or_results
+- result_id 2122988: duplicate_payload_across_hosts_or_results
+- result_id 2123011: duplicate_payload_across_hosts_or_results
+- result_id 2123027: duplicate_payload_across_hosts_or_results
+- result_id 2123367: duplicate_payload_across_hosts_or_results
+- result_id 2123416: duplicate_payload_across_hosts_or_results
+- result_id 2123447: duplicate_payload_across_hosts_or_results
+- result_id 2123612: duplicate_payload_across_hosts_or_results
+- result_id 2123710: duplicate_payload_across_hosts_or_results
+- result_id 2123880: duplicate_payload_across_hosts_or_results
+- result_id 2123909: duplicate_payload_across_hosts_or_results
+- result_id 2123981: duplicate_payload_across_hosts_or_results
+- result_id 2125521: outlier_mean_abs_vs_family_exp_parrondo_history_boundary
+
+Per-host credit summary (session window aggregate from result.mod_time >= 2026-03-10 03:18:55):
+- host_id 367: 2851 results, 175358.18 credit
+- host_id 219: 165 results, 10382.92 credit
+- host_id 355: 175 results, 9855.51 credit
+- host_id 85: 215 results, 7736.54 credit
+- host_id 29: 139 results, 7581.32 credit
+- host_id 159: 137 results, 6983.88 credit
+- host_id 105: 98 results, 5837.39 credit
+- host_id 240: 73 results, 5391.39 credit
+- host_id 1: 171 results, 5303.56 credit
+- host_id 347: 157 results, 4769.64 credit
+- host_id 123: 218 results, 4455.02 credit
+- host_id 2: 87 results, 4153.50 credit
+- host_id 102: 120 results, 3837.86 credit
+- host_id 87: 93 results, 3358.59 credit
+- host_id 341: 40 results, 3144.06 credit
+- host_id 222: 69 results, 2683.41 credit
+- host_id 61: 34 results, 2069.05 credit
+- host_id 23: 28 results, 1128.18 credit
+- host_id 358: 30 results, 1061.99 credit
+- host_id 140: 20 results, 888.95 credit
+- host_id 350: 21 results, 767.79 credit
+- host_id 16: 25 results, 753.70 credit
+- host_id 271: 22 results, 622.85 credit
+- host_id 10: 19 results, 426.05 credit
+- host_id 134: 20 results, 415.79 credit
+- host_id 9: 5 results, 214.22 credit
+- host_id 272: 6 results, 159.08 credit
+- host_id 376: 7 results, 143.18 credit
+- host_id 107: 4 results, 101.96 credit
+- host_id 184: 39 results, 71.46 credit
+- host_id 195: 59 results, 48.19 credit
+- host_id 11: 10 results, 12.55 credit
+- host_id 182: 2 results, 7.60 credit
+
+Cleanup actions taken:
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 56475
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 54660
+- No service restarts, daemon stops, index changes, or lockfile changes performed
