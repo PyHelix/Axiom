@@ -4,11 +4,11 @@ Timestamp: 2026-03-10 07:34 Europe/Berlin
 Session summary
 - Anti-cheat review sampled 200 sanitized JSON files from the initial uncredited queue.
 - Anti-cheat flags: none.
-- Credit passes completed: 4.
-- Results credited this session: 437.
-- Total credit written to result rows this session: 17533.71.
+- Credit passes completed: 5.
+- Results credited this session: 438.
+- Total credit written to result rows this session: 17914.00.
 - CPU results: 418.
-- GPU results: 19.
+- GPU results: 20.
 - Denied sentinel results (0.01 credit): 0.
 - Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6738556477334984e-14.
 - Price table timestamp: 2026-03-10T06:15:16Z.
@@ -22,7 +22,7 @@ Anti-cheat review
 
 Per-host credit summary
 - Host 367: 234 results, 7042.97 credit
-- Host 16: 6 results, 2359.57 credit
+- Host 16: 7 results, 2739.86 credit
 - Host 23: 8 results, 2112.63 credit
 - Host 341: 7 results, 1536.05 credit
 - Host 105: 31 results, 790.22 credit
@@ -46,8 +46,8 @@ Per-host credit summary
 - Host 134: 1 result, 8.50 credit
 
 Cleanup and operational actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 58372.
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 58733.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 58373.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 58734.
 - Removed temporary credit script /tmp/axiom_credit.py.
 - No result files were deleted.
 - No services, daemons, lock files, crontabs, or systemd units were modified.
