@@ -1,0 +1,67 @@
+Validation Report
+Timestamp: 2026-03-10 09:18 Europe/Berlin
+
+Session summary
+- Uncredited completed results at discovery: 1476
+- Anti-cheat sample reviewed: 200 sanitized JSON files
+- Credit pass 1 at 2026-03-10 09:16:16: 1509 results credited, 68952.00 total granted credit
+- Credit pass 2 at 2026-03-10 09:17:02: 22 newly arrived results credited, 1063.34 total granted credit
+- Total results credited this session: 1531
+- Total granted credit this session: 70015.34
+- Denied sentinel results this session: 13
+- Queue status after crediting: 0 uncredited completed results remaining
+
+Price-per-FLOP scales used
+- CPU_SCALE=5.0196363564419115e-12
+- GPU_SCALE=2.8542496934032027e-14
+
+Anti-cheat flags applied
+- Result 2204135: outlier_forestfire_windshift_burnscar_resonance
+- Result 2205532: outlier_langton_ant_frozen_stripe_disorder
+- Result 2205979: outlier_langton_ant_anisotropic_stripes
+- Result 2205986: outlier_langton_ant_anisotropic_stripes
+- Result 2206084: outlier_langton_ant_anisotropic_stripes
+- Result 2206823: outlier_langton_ant_frozen_stripe_disorder
+- Result 2206857: outlier_langton_ant_anisotropic_stripes
+- Result 2206858: outlier_langton_ant_frozen_stripe_disorder
+- Result 2207267: outlier_langton_ant_anisotropic_stripes
+- Result 2218631: empty_payload
+- Result 2218900: empty_payload
+- Result 2219001: outlier_langton_ant_frozen_stripe_disorder
+- Result 2219199: outlier_langton_ant_frozen_stripe_disorder
+
+Per-host credit summary
+- Host 367: 920 results, 31938.23 credit
+- Host 16: 28 results, 10589.59 credit
+- Host 23: 37 results, 8570.62 credit
+- Host 341: 61 results, 6121.69 credit
+- Host 10: 6 results, 5140.68 credit
+- Host 29: 74 results, 1164.51 credit
+- Host 219: 29 results, 924.41 credit
+- Host 1: 54 results, 873.37 credit
+- Host 102: 42 results, 596.72 credit
+- Host 61: 24 results, 583.74 credit
+- Host 358: 31 results, 521.77 credit
+- Host 2: 26 results, 502.27 credit
+- Host 377: 105 results, 495.18 credit
+- Host 222: 25 results, 440.14 credit
+- Host 9: 6 results, 417.43 credit
+- Host 85: 18 results, 318.19 credit
+- Host 350: 16 results, 289.86 credit
+- Host 159: 7 results, 152.38 credit
+- Host 140: 7 results, 148.70 credit
+- Host 271: 5 results, 78.28 credit
+- Host 57: 3 results, 73.88 credit
+- Host 134: 7 results, 73.70 credit
+
+Operational notes
+- Credit was applied incrementally to host.total_credit and user.total_credit. No absolute total_credit writes were used.
+- Results arriving during the first credit pass created a residual queue of 19 completed results; a second pass credited the remaining queue plus 3 additional results that completed during that interval.
+- Website counters updated:
+- credited_count.txt incremented by 1531
+- total_results_count.txt set to the max of existing value and live completed total
+
+Cleanup actions
+- Removed /tmp/axiom_credit.py after execution
+- Removed /tmp/axiom_anticheat.py after execution
+- Removed /tmp/axiom_anticheat_report.json after execution
