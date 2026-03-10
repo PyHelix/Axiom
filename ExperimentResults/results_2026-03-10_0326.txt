@@ -1,0 +1,19 @@
+EXPERIMENT: exp_kac_markov_sign_edge_clustering (1306 results, 1306 seeds, 26 hosts)
+  Results: positive-persistence edge shift -0.00195 +/- 0.00037 (d=-5.33, 0.0% sign-consistent); positive-persistence pm1-gap shift +0.00002 +/- 0.00026 (d=0.07, 46.6% sign-consistent); support fraction for positive-persistence edge gain vs antipersistence +0.14172 +/- 0.00920 (d=15.41, 0.0% sign-consistent)
+  Conclusion: REJECTED
+    The edge-crowding signal runs opposite to the hypothesis at large sample size: positive persistence reduces, rather than enhances, the edge-minus-side excess, and only 14.2% of seeds favor the claimed positive-persistence edge gain over antipersistence. The pm1-gap shift stays centered near zero, so the predicted edge-localization crossover is not present in this 14-day window.
+
+EXPERIMENT: exp_sandpile_smallworld_avalanche_correlations (1588 results, 1588 seeds, 39 hosts)
+  Results: sign-transition found +0.55353 +/- 0.49713 (d=1.11, 55.4% sign-consistent); high-rewire lag-1 ACF gain vs p=0 +0.00040 +/- 0.01319 (d=0.03, 30.2% sign-consistent); best high-rewire lag-1 ACF -0.00109 +/- 0.01321 (d=-0.08, 11.5% sign-consistent)
+  Conclusion: NO EFFECT
+    Small-world rewiring does not produce a stable shift to positive avalanche autocorrelation in the current data. The transition flag appears in only a slim majority of seeds, while the actual lag-1 autocorrelation gain is effectively zero and the best high-rewire lag-1 mean remains slightly negative.
+
+EXPERIMENT: exp_kac_edge_correlation_crossover (1921 results, 1921 seeds, 20 hosts)
+  Results: edge-window gain -0.01204 +/- 0.00043 (d=-28.08, 0.0% sign-consistent); real-window gain -0.01056 +/- 0.00003 (d=-404.90, 0.0% sign-consistent); real-window positive fraction +0.14252 +/- 0.00175 (d=81.40, 0.0% sign-consistent)
+  Conclusion: REJECTED
+    The hypothesized mid-correlation enhancement is decisively absent: both the edge-window and real-root window gains are strongly negative, with no seed-level support for the claimed direction. Correlation suppresses the target windowed edge concentration rather than creating a crossover peak.
+
+EXPERIMENT: exp_hypergraph_pgg_fixation (263 results, 263 seeds, 20 hosts)
+  Results: best fixation-ratio excess over neutral +2.00236 +/- 0.62076 (d=3.23, 100.0% sign-consistent); amplifier-condition fraction +0.45531 +/- 0.10706 (d=4.25, 100.0% sign-consistent); mean critical-r across k +3.05416 +/- 0.69969 (d=4.37, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Frequency-dependent public-goods selection on random hypergraphs reliably produces super-neutral cooperator fixation windows, with every analyzed seed showing a best fixation ratio above the neutral baseline. The response is k-dependent and yields a reproducible critical-r boundary, so hypergraph structure does not erase amplification under this game-driven selection rule.
