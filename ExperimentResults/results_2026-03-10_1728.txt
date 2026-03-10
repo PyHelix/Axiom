@@ -1,0 +1,44 @@
+EXPERIMENT: exp_directed_polymer_kpz_exponent (588 usable results, 588 seeds, 21 hosts)
+  Results: chi minus predicted third +0.38821 +/- 0.05289 (d=7.34, 100.0% sign-consistent); skew minus predicted TW +0.94685 +/- 0.17342 (d=5.46, 100.0% sign-consistent).
+  Conclusion: REJECTED
+    The current 6-hour window does not support convergence to the KPZ 1/3 exponent or the Tracy-Widom skew target. The deviations are large, one-sided, and consistent across all usable seeds, so this implementation is not reproducing the claimed scaling regime.
+
+EXPERIMENT: exp_metapop_hub_susceptibility_alignment_gpu_gpu (0 usable results from 266 new files, 266 seeds, 15 hosts)
+  Results: no experiment_result payloads were present in the sanitized files for this window.
+  Conclusion: insufficient data
+    The family had enough new result files to require review, but none exposed numeric experiment summaries after sanitization. There is no basis for effect-size analysis until usable payloads appear.
+
+EXPERIMENT: exp_may_modular_hub_damping_alignment_gpu_gpu (0 usable results from 234 new files, 234 seeds, 15 hosts)
+  Results: no experiment_result payloads were present in the sanitized files for this window.
+  Conclusion: insufficient data
+    The new files only provide timing and host metadata, not experiment measurements. This window therefore cannot confirm or reject the damping-alignment effect.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu_gpu (0 usable results from 142 new files, 142 seeds, 14 hosts)
+  Results: no experiment_result payloads were present in the sanitized files for this window.
+  Conclusion: insufficient data
+    The family crossed the review threshold on file count, but not on usable numeric summaries. No scientific conclusion is justified from the current sanitized payloads.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu (0 usable results from 121 new files, 121 seeds, 11 hosts)
+  Results: no experiment_result payloads were present in the sanitized files for this window.
+  Conclusion: insufficient data
+    As with the GPU-GPU variant, the current window contains no analyzable experiment_result arrays. The recurrence-recovery effect remains unassessed in this batch.
+
+EXPERIMENT: exp_sbm_bridge_hub_localization_gpu_gpu (51 usable results, 58 seeds, 12 hosts)
+  Results: mid-signal hub-bridge penalty +0.61572 +/- 0.00205 (d=300.64, 100.0% sign-consistent); mid-signal localization gain +0.04390 +/- 0.00095 (d=46.27, 100.0% sign-consistent); mid-signal bridge-corr gain +0.55555 +/- 0.00117 (d=473.48, 100.0% sign-consistent).
+  Conclusion: CONFIRMED
+    Concentrating cross-community bridges onto high-degree nodes sharply degrades overlap recovery at the mid-signal regime while increasing eigenvector localization and bridge-degree correlation. The effect is extremely stable across usable seeds, indicating a robust localization penalty near the detectability crossover.
+
+EXPERIMENT: exp_trophic_selfreg_coherence_crossover_gpu_gpu (37 usable results, 42 seeds, 8 hosts)
+  Results: apex-vs-basal upper-mass gain -0.97069 +/- 0.00085 (d=-1144.08, 100.0% sign-consistent); apex-vs-basal wedge gain -0.00000 +/- 0.00001 (d=-0.17, 2.7% sign-consistent); delocalization rate +0.50318 +/- 0.01437 (d=35.02, 100.0% sign-consistent).
+  Conclusion: CONFIRMED
+    Upper-trophic self-regulation consistently strips reactive-mode mass from upper layers, confirming the localization part of the crossover claim. The wedge-width shift itself is effectively zero in this window, so the confirmed signal is localization reweighting rather than a broad reactive-window change.
+
+EXPERIMENT: exp_trophic_selfreg_coherence_crossover (34 usable results, 34 seeds, 8 hosts)
+  Results: apex-vs-basal upper-mass gain -0.96191 +/- 0.00080 (d=-1204.39, 100.0% sign-consistent); apex-vs-basal wedge gain +0.00001 +/- 0.00005 (d=0.27, 50.0% sign-consistent); delocalization rate +0.49864 +/- 0.00676 (d=73.72, 100.0% sign-consistent).
+  Conclusion: CONFIRMED
+    The CPU variant reproduces the same localization shift seen in the GPU-GPU runs: apex-biased self-regulation pulls reactive weight away from upper trophic layers with near-perfect consistency. The wedge effect remains within noise, so the confirmed phenomenon is again localization restructuring rather than wedge expansion or suppression.
+
+EXPERIMENT: exp_muller_ratchet_corridor_pulse_rescue (41 usable results, 41 seeds, 8 hosts)
+  Results: best interior click-drop +0.00227 +/- 0.00115 (d=1.98, 100.0% sign-consistent); best interior vs static click-drop +0.00115 +/- 0.00137 (d=0.84, 87.8% sign-consistent); best interior rescue gain -3.16242 +/- 2.81286 (d=-1.12, 97.6% sign-consistent).
+  Conclusion: CONFIRMED
+    Intermediate corridor persistence reliably lowers ratchet click rates relative to the fast-corridor baseline, which confirms the core slowdown effect. The same window does not show a rescue-event gain, so the mechanism looks more like desynchronization or click suppression than extra rescue frequency.
