@@ -2,10 +2,10 @@ Validation Report
 Timestamp: 2026-03-10 04:30 Europe/Berlin
 
 Results credited this session
-- Credited results: 799
-- Total cobblestones awarded: 42836.89
+- Credited results: 852
+- Total cobblestones awarded: 45399.57
 - Denied results: 0
-- Queue note: the live uncredited queue increased during the session, so the final credit total reached 799 results even though the initial snapshot showed 701 pending.
+- Queue note: the live uncredited queue increased repeatedly during the session. Final totals below are from the database rows updated in this session since 2026-03-10 04:30:00, after a stable-zero drain window was reached.
 
 Anti-cheat review
 - Spot-checked 200 sanitized JSON files from 692 trusted sanitized payloads available at review time.
@@ -16,30 +16,30 @@ Anti-cheat review
 - Results without sanitized payloads at review time: 10 pending assimilator-safe files for exp_aah_delay_dephasing_window_gtest622d jobs from host 16. Per policy, these were still credited once validated because they were valid uncredited results.
 
 Per-host credit summary
-- Host 1: 922.34
-- Host 2: 558.25
+- Host 1: 993.08
+- Host 2: 708.86
 - Host 9: 41.00
 - Host 10: 63.69
-- Host 16: 133.11
-- Host 29: 867.50
-- Host 61: 733.08
+- Host 16: 240.02
+- Host 29: 1240.55
+- Host 61: 884.67
 - Host 87: 372.19
-- Host 102: 643.68
+- Host 102: 693.71
 - Host 134: 82.97
-- Host 140: 183.25
-- Host 159: 386.87
-- Host 222: 459.30
+- Host 140: 217.90
+- Host 159: 386.89
+- Host 222: 549.53
 - Host 271: 200.15
-- Host 341: 666.97
+- Host 341: 1102.81
 - Host 347: 54.37
-- Host 350: 332.08
-- Host 355: 1291.23
-- Host 358: 646.43
-- Host 367: 34198.41
+- Host 350: 332.07
+- Host 355: 1454.63
+- Host 358: 646.41
+- Host 367: 35134.07
 
 Cleanup actions
-- Updated result.granted_credit and validate_state for all 799 results processed in the session.
+- Updated result.granted_credit and validate_state for 852 results modified in the session window.
 - Incremented host.total_credit and user.total_credit using additive updates only.
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 54750.
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 55446.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 54803.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 55499.
 - No BOINC daemons, MariaDB services, lock files, crontabs, or assimilator scripts were modified.
