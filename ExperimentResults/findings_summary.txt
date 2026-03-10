@@ -1,45 +1,91 @@
-EXPERIMENT: exp_abx_cycle_hgt_delay_resonance | Status: NO EFFECT | Results: delay-fatigue resonance AUC excess +0.01157 +/- 0.07031 (d=0.16, 97.3% sign-consistent). 2026 seeds, 15 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_ageing_voter_modular_polarization | Status: CONFIRMED | Results: metric_2 +777.39596 +/- 134.84930 (d=5.76, 100.0% sign-consistent); metric_0 +1075757309.33312 +/- 611598246.30569 (d=1.76, 100.0% sign-consistent). 3176 seeds, 40 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_ageing_voter_modular_polarization | Status: NO EFFECT | Results: intermediate-ageing peak excess -0.00611 +/- 0.02724 (d=-0.22, 18.5% sign-consistent); alpha=1.0 opposite-majority fraction +0.00795 +/- 0.01788 (d=0.44, 30.7% sign-consistent); alpha=2.4 opposite-majority fraction +0.01158 +/- 0.02202 (d=0.53, 40.1% sign-consistent). 2615 seeds, 14 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_abx_cycle_hgt_delay_resonance | Status: CONFIRMED | Results: metric_387 +0.99041 +/- 0.00001 (d=133952.02, 100.0% sign-consistent); metric_381 +0.99339 +/- 0.00001 (d=111339.83, 100.0% sign-consistent). 2685 seeds, 56 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_random_fibonacci_markov_persistence | Status: NO EFFECT | Results: cancellation window gain -0.05260 +/- 0.00001 (d=-10204.91, 100.0% sign-consistent); burst window gain 0.00000 +/- 0.00000 (d=0.00000, 100.0% sign-consistent); variance window gain 0.01186 +/- 0.00000 (d=10851.64, 100.0% sign-consistent). 381061 seeds, 15 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_sandpile_smallworld_avalanche_correlations | Status: CONFIRMED | Results: trials completed +124.12411 +/- 69.51124 (d=1.79, 100.0% sign-consistent); summary sign transition found +0.55357 +/- 0.49712 (d=1.11, 55.4% sign-consistent). 2240 seeds, 46 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_dp_moment_ratio | Status: NO EFFECT | Results: critical grand-mean R +0.37989 +/- 0.50932 (d=0.75, 0.0% sign-consistent); model-to-model spread +0.06309 +/- 0.08650 (d=0.73, 35.2% sign-consistent). 68 seeds, 15 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_langton_ant_frozen_stripe_disorder | Status: CONFIRMED | Results: summary corridor success gain mean +0.35881 +/- 0.00629 (d=57.06, 100.0% sign-consistent); summary corridor onset advance mean +0.43054 +/- 0.00469 (d=91.85, 100.0% sign-consistent). 2011 seeds, 30 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_xy_quench_stripe_vortex_gpu | Status: PRELIMINARY | Results: mid-tau medium-amp stripe defect suppression vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid-tau medium-amp stripe coherence gain vs IID +0.55696 +/- 0.05310 (d=10.49, 100.0% sign-consistent); mid-tau high-amp nonmonotone defect return +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent). 5950 seeds, 15 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_spacing_ratio_crossover | Status: CONFIRMED | Results: summary scaling collapse mean lam c sqrtN +0.65241 +/- 0.00545 (d=119.60, 100.0% sign-consistent); summary scaling collapse cv +0.03760 +/- 0.00730 (d=5.15, 97.8% sign-consistent). 1833 seeds, 33 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_parrondo_history_block_resonance | Status: NO EFFECT | Results: mid-block gain +0.00127 +/- 0.00002 (d=84.58, 100.0% sign-consistent); optimal mid-block fraction +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); memory sensitivity +0.00018 +/- 0.00003 (d=5.39, 100.0% sign-consistent). 132 seeds, 12 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_kac_markov_sign_edge_clustering | Status: CONFIRMED | Results: metric_9 +0.14280 +/- 0.00906 (d=15.76, 100.0% sign-consistent); summary -0.00202 +/- 0.00037 (d=-5.38, 100.0% sign-consistent). 1802 seeds, 31 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_invasion_percolation_trapping | Status: NO EFFECT | Results: Df gap no-trap minus trap -0.00014 +/- 0.00671 (d=-0.02, 50.0% sign-consistent); predicted no-trap Df +1.89590 +/- 0.00000 (d=0.00, 100.0% sign-consistent); predicted trap Df +1.82270 +/- 0.00000 (d=0.00, 100.0% sign-consistent). 76 seeds, 16 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_parrondo_history_boundary | Status: CONFIRMED | Results: trials completed +18.83208 +/- 9.44696 (d=1.99, 100.0% sign-consistent); summary n boundary crossings +6.63033 +/- 0.48272 (d=13.74, 100.0% sign-consistent). 1596 seeds, 37 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_metapop_hub_susceptibility_alignment_gpu | Status: STAGED | Hypothesis: aligning local susceptibility with high-mobility commuting hubs widens the transient-growth window and concentrates the reactive epidemic mode on hubs, while anti-alignment suppresses both. 13 recent files arrived, but 0 completed numeric payloads were analyzable in this window. Last updated: 2026-03-10
+EXPERIMENT: exp_metapop_seedbank_corridor_correlation | Status: CONFIRMED | Results: summary best survival gain +0.99949 +/- 0.00182 (d=549.53, 100.0% sign-consistent); summary best bank persistence +0.87566 +/- 0.03131 (d=27.97, 100.0% sign-consistent). 1165 seeds, 29 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_sis_burst_modularity_temporal_threshold | Status: NO EFFECT | Results: interaction score -0.00002 +/- 0.00004 (d=-0.58, 65.6% sign-consistent); high-modularity mid-burst threshold shift +0.00000 +/- 0.00008 (d=0.05, 46.9% sign-consistent); low-modularity strong-burst threshold shift +0.00030 +/- 0.00022 (d=1.37, 74.5% sign-consistent). 192 seeds, 19 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_hypercycle_delay_dilution_rescue | Status: CONFIRMED | Results: metric_8 +0.89500 +/- 0.00023 (d=3912.22, 100.0% sign-consistent); metric_9 +0.89535 +/- 0.00031 (d=2920.23, 100.0% sign-consistent). 934 seeds, 32 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_may_modular_hub_damping_alignment_gpu | Status: STAGED | Hypothesis: in modular asymmetric May networks, assigning weaker self-damping to hub species creates a broader stable-but-reactive window and stronger hub-loaded reactive modes than assigning stronger damping to hubs, with the contrast peaking at intermediate modularity. Novelty check on 2026-03-10 searched "non-normal ecological networks modularity self regulation alignment reactivity localization", "ecological community matrix modularity transient amplification self regulation heterogeneity", and "ecological community matrix diagonal self-regulation heterogeneity degree alignment"; found prior work on ecological reactivity, modularity, and heterogeneous self-regulation separately, but no direct GPU-scale map of hub-correlated damping assignments in modular non-normal May ensembles. Last updated: 2026-03-10
+EXPERIMENT: exp_langton_ant_anisotropic_stripes | Status: CONFIRMED | Results: summary mean family lock gain +0.86729 +/- 0.00422 (d=205.39, 100.0% sign-consistent); summary mean near band success high +0.98349 +/- 0.00233 (d=421.31, 100.0% sign-consistent). 888 seeds, 25 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu | Status: STAGED | Hypothesis: aligning slower recovery with high-mobility commuting hubs creates an interior recurrence window where transient epidemic growth and reactive-mode hub loading exceed both anti-aligned recovery and the low/high recurrence extremes. Novelty check on 2026-03-10 searched "metapopulation commuting recurrence epidemic recovery heterogeneity hubs transient growth", "epidemic commuting network return rate recovery heterogeneity localization", and "non-normal epidemic metapopulation commuting heterogeneity recovery rate"; found related commuting-threshold, transient-amplification, and heterogeneous-recovery literature, but no direct batched GPU map of recurrence x hub-aligned recovery heterogeneity. Last updated: 2026-03-10
+EXPERIMENT: exp_rsa_obstacle_persistence_window | Status: CONFIRMED | Results: hypothesis intermediate coverage gain positive +0.02252 +/- 0.00005 (d=444.10, 100.0% sign-consistent); metric_19 +0.99997 +/- 0.00001 (d=166670.41, 100.0% sign-consistent). 754 seeds, 23 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_sandpile_smallworld_avalanche_correlations | Status: NO EFFECT | Results: sign-transition found +0.55402 +/- 0.49707 (d=1.11, 55.4% sign-consistent); high-rewire lag-1 ACF gain vs p=0 +0.00040 +/- 0.01319 (d=0.03, 30.2% sign-consistent); best high-rewire lag-1 ACF -0.00109 +/- 0.01321 (d=-0.08, 11.5% sign-consistent). 2092 seeds, 20 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_random_fibonacci_markov_persistence | Status: CONFIRMED | Results: summary mean variance window gain +0.01186 +/- 0.00000 (d=13594.62, 100.0% sign-consistent); summary mean cancel window gain -0.05261 +/- 0.00001 (d=-8764.75, 100.0% sign-consistent). 577 seeds, 23 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_rsa_corridor_persistence_jamming_gpu | Status: STAGED | Hypothesis: intermediate persistence of stripe-oriented blocked-site corridors increases jammed dimer coverage and accessible fill more than either iid-refresh or nearly frozen masks, because moderate temporal memory preserves adsorption channels without permanently trapping inaccessible voids. Novelty check on 2026-03-10 searched "random sequential adsorption dynamic disordered substrate obstacle persistence paper", "random sequential adsorption frozen disorder annealed disorder lattice dimers paper", and "random sequential adsorption persistent obstacles lattice"; found prior work on frozen or annealed disorder and mobile-substrate RSA, but no direct batched GPU study of temporally persistent corridor masks in 2D lattice dimer RSA. Last updated: 2026-03-10
+EXPERIMENT: exp_persistent_voter_coarsening | Status: CONFIRMED | Results: trials completed +12.11867 +/- 6.42475 (d=1.89, 100.0% sign-consistent); summary total conditions +20.00000 +/- 0.00000 (d=0.00, 100.0% sign-consistent). 573 seeds, 22 hosts.
+Last updated: 2026-03-10
 
-EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu | Status: CONFIRMED | Results: crossed-peak isotropy advantage +0.20587 +/- 0.01892 (d=10.88, 100.0% sign-consistent); mid crossed-vs-parallel isotropy gain +0.20672 +/- 0.01905 (d=10.85, 100.0% sign-consistent); high crossed-vs-parallel peak-score gain +0.00280 +/- 0.05359 (d=0.05, 58.8% sign-consistent). 2696 seeds, 9 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_ising_persistence_glauber_kawasaki | Status: CONFIRMED | Results: metric_31 +0.44404 +/- 0.00288 (d=154.25, 100.0% sign-consistent); metric_30 +0.67185 +/- 0.00506 (d=132.79, 100.0% sign-consistent). 570 seeds, 30 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_dp_moment_ratio | Status: CONFIRMED | Results: summary total trials run +21.59537 +/- 11.73452 (d=1.84, 100.0% sign-consistent); trials completed +21.46881 +/- 11.67517 (d=1.84, 100.0% sign-consistent). 561 seeds, 30 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_invasion_percolation_trapping | Status: CONFIRMED | Results: summary Df notrap largest L +1.95344 +/- 0.00413 (d=473.40, 100.0% sign-consistent); summary Df trap largest L +1.95337 +/- 0.00440 (d=444.29, 100.0% sign-consistent). 457 seeds, 23 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_trophic_coherence_reactivity_localization | Status: CONFIRMED | Results: metric_15 +0.11153 +/- 0.00011 (d=1052.88, 100.0% sign-consistent); metric_14 +34172988.02331 +/- 231567.64177 (d=147.57, 100.0% sign-consistent). 432 seeds, 32 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_sis_burst_modularity_temporal_threshold | Status: CONFIRMED | Results: summary std highmod midburst threshold shift +0.00154 +/- 0.00137 (d=1.12, 97.1% sign-consistent); summary std lowmod strongburst threshold shift +0.00083 +/- 0.00082 (d=1.01, 85.2% sign-consistent). 378 seeds, 26 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_depinning_elastic_line | Status: CONFIRMED | Results: summary zeta est +0.04284 +/- 0.01059 (d=4.05, 100.0% sign-consistent); trials completed +569.63102 +/- 558.50119 (d=1.02, 100.0% sign-consistent). 374 seeds, 37 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_xy_quench_stripe_vortex_gpu_gpu | Status: CONFIRMED | Results: metric_13 +0.93973 +/- 0.04275 (d=21.98, 100.0% sign-consistent); hypothesis stripe disorder expected to reduce mid tau vortices +0.56935 +/- 0.06455 (d=8.82, 100.0% sign-consistent). 368 seeds, 16 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_parrondo_history_block_resonance | Status: CONFIRMED | Results: metric_19 -0.12896 +/- 0.00000 (d=-27127.37, 100.0% sign-consistent); metric_13 -0.13429 +/- 0.00001 (d=-25082.79, 100.0% sign-consistent). 350 seeds, 20 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_rsa_polydisperse_jamming | Status: CONFIRMED | Results: summary mean monodisperse coverage +0.54167 +/- 0.00358 (d=151.10, 100.0% sign-consistent); summary mean max coverage +0.58556 +/- 0.03320 (d=17.64, 100.0% sign-consistent). 201 seeds, 29 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_winding_number_spitzer | Status: CONFIRMED | Results: summary total walks +781534.42623 +/- 415762.91592 (d=1.88, 100.0% sign-consistent); trials completed +162.81967 +/- 86.61727 (d=1.88, 100.0% sign-consistent). 183 seeds, 26 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_benford_logistic_transition | Status: CONFIRMED | Results: metric_11 +7148788.10216 +/- 0.00000 (d=18770851354813172.00, 100.0% sign-consistent); metric_27 +0.30028 +/- 0.00000 (d=11145099724149110.00, 100.0% sign-consistent). 179 seeds, 33 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu_gpu | Status: CONFIRMED | Results: metric_17 +2.33716 +/- 0.03956 (d=59.08, 100.0% sign-consistent); metric_8 +0.02682 +/- 0.00172 (d=15.59, 100.0% sign-consistent). 76 seeds, 15 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_rsa_corridor_persistence_jamming_gpu_gpu | Status: CONFIRMED | Results: hypothesis intermediate stripe gain positive +0.00145 +/- 0.00002 (d=76.14, 100.0% sign-consistent); metric_11 -0.01688 +/- 0.00001 (d=-1366.11, 100.0% sign-consistent). 73 seeds, 12 hosts.
+Last updated: 2026-03-10
+
+EXPERIMENT: exp_ising_crossed_temp_field_memory_gpu_gpu | Status: CONFIRMED | Results: metric_15 +0.17905 +/- 0.00085 (d=209.69, 100.0% sign-consistent); metric_9 +0.14060 +/- 0.00070 (d=202.21, 100.0% sign-consistent). 61 seeds, 10 hosts.
+Last updated: 2026-03-10
 
 EXPERIMENT: exp_ising_crossed_temp_field_memory_gpu | Status: CONFIRMED | Results: mid crossed memory advantage vs IID +0.14049 +/- 0.00065 (d=215.98, 100.0% sign-consistent); high crossed interface gain vs parallel +0.00096 +/- 0.00012 (d=7.84, 100.0% sign-consistent); high crossed isotropy gain vs parallel +0.00195 +/- 0.00003 (d=77.00, 100.0% sign-consistent). 926 seeds, 7 hosts. Last updated: 2026-03-10
 
 EXPERIMENT: exp_littlewood_block_realroot_crossover | Status: CONFIRMED | Results: edge-mass gain -0.07412 +/- 0.00415 (d=-17.84, 100.0% sign-consistent); root-drop slope -0.28300 +/- 0.00218 (d=-129.99, 100.0% sign-consistent); max-block suppression +0.49276 +/- 0.00399 (d=123.62, 100.0% sign-consistent). 18622 seeds, 10 hosts. Last updated: 2026-03-10
 
-EXPERIMENT: exp_rsa_obstacle_persistence_window | Status: STAGED | Hypothesis: intermediate blocked-site persistence in 2D dimer random sequential adsorption increases jammed coverage and reduces void fragmentation versus iid-refresh or nearly frozen obstacle masks, because moderate persistence preserves transient filling corridors without permanently trapping inaccessible voids. Novelty check on 2026-03-10 searched "random sequential adsorption dynamic disordered substrate obstacle persistence paper", "random sequential adsorption mobile obstacles lattice jamming dynamic substrate", and "random sequential adsorption frozen disorder annealed disorder paper"; found prior work on RSA with frozen impurities, mobile patches, and relaxation on disordered substrates, but no direct study of an interior persistence optimum from temporally correlated blocked masks in 2D lattice dimer RSA. CPU script deployed on 2026-03-10 and 7865 staged files are currently in the pool snapshot. Last updated: 2026-03-10
-
 EXPERIMENT: exp_logistic_benford_deviation | Status: CONFIRMED | Results: periodic-vs-chaotic KL ratio +3.71493 +/- 0.00047 (d=7977.90, 100.0% sign-consistent); Lyapunov-KL correlation -0.88382 +/- 0.00013 (d=-6820.49, 100.0% sign-consistent). 34 seeds, 6 hosts. Last updated: 2026-03-10
 
-EXPERIMENT: exp_directed_polymer_kpz_exponent | Status: REJECTED | Results: chi spread across distributions +0.02095 +/- 0.00835 (d=2.51, 100.0% sign-consistent); mean chi across distributions +0.79934 +/- 0.00733 (d=109.04, 100.0% sign-consistent). 198 seeds, 8 hosts. Last updated: 2026-03-10
+EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu | Status: CONFIRMED | Results: crossed-peak isotropy advantage +0.20587 +/- 0.01892 (d=10.88, 100.0% sign-consistent); mid crossed-vs-parallel isotropy gain +0.20672 +/- 0.01905 (d=10.85, 100.0% sign-consistent); high crossed-vs-parallel peak-score gain +0.00280 +/- 0.05359 (d=0.05, 58.8% sign-consistent). 2696 seeds, 9 hosts. Last updated: 2026-03-10
 
-EXPERIMENT: exp_forestfire_windshift_burnscar_resonance | Status: NO EFFECT | Results: intermediate-persistence bonus +0.00354 +/- 0.00143 (d=2.48, 100.0% sign-consistent); mid-persistence best fraction +0.53242 +/- 0.01634 (d=32.58, 100.0% sign-consistent); best spanning suppression gain +0.05024 +/- 0.00089 (d=56.42, 100.0% sign-consistent). 6795 seeds, 6 hosts. Last updated: 2026-03-10
-
-EXPERIMENT: exp_quorum_sensing_spatial_hysteresis | Status: REJECTED | Results: mean slope +0.00772 +/- 0.00224 (d=3.45, 100.0% sign-consistent); slope-negative fraction +0.00554 +/- 0.00741 (d=0.75, 60.0% sign-consistent). 5001 seeds, 8 hosts. Last updated: 2026-03-10
-
-EXPERIMENT: exp_rsa_polydisperse_jamming | Status: STAGED | 19 recent files arrived, but 0 completed numeric payloads were analyzable in this window. Last updated: 2026-03-10
-
-EXPERIMENT: exp_benford_logistic_transition | Status: STAGED | 17 recent files arrived, but 0 completed numeric payloads were analyzable in this window. Last updated: 2026-03-10
+EXPERIMENT: exp_contact_process_striped_recovery_corridor | Status: REJECTED | Results: summary mean corridor window gain -0.02022 +/- 0.00024 (d=-85.08, 100.0% sign-consistent); summary mean density window gain -0.00270 +/- 0.00008 (d=-32.33, 100.0% sign-consistent). 360 seeds, 30 hosts.
+Last updated: 2026-03-10
