@@ -1,0 +1,92 @@
+Axiom Science Results Report
+Timestamp (UTC): 2026-03-10_2120
+
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu (72 results, 72 seeds, 15 hosts)
+  Results: bounded chaos boundary d_f +1.30809 +/- 0.00094 (d=1390.59, 100.0% sign-consistent); bounded-fit R2 +0.99962 +/- 0.00025 (d=3956.83, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The bounded chaos-order boundary in Henon parameter space is reproducibly fractal with dimension about 1.308 across 72 seeds. The fit quality stays near 1.0, so this is a stable geometric signal rather than a fitting artifact.
+
+EXPERIMENT: exp_percolation_walk_dimension_3d_gpu (55 results, 55 seeds, 11 hosts)
+  Results: mean d_w +6.97903 +/- 0.09757 (d=71.53, 100.0% sign-consistent); d_w minus literature 3.88 +3.09903 +/- 0.09757 (d=31.76, 100.0% sign-consistent)
+  Conclusion: REJECTED
+    The measured walk dimension is consistently far above the literature target of 3.88, and the deviation grows well beyond noise. This implementation is not reproducing the expected 3D critical percolation exponent.
+
+EXPERIMENT: exp_nasch_anticipation_heterogeneity (370 results, 370 seeds, 26 hosts)
+  Results: broad jam drop vs homogeneous mid-density +0.00416 +/- 0.00138 (d=3.02, 99.2% sign-consistent); broad wave drop vs homogeneous mid-density +0.00473 +/- 0.00249 (d=1.90, 97.6% sign-consistent)
+  Conclusion: CONFIRMED
+    Broad anticipation heterogeneity reliably suppresses jam occupancy and stop-go wave persistence at the crossover density. The effect is not a flow-speed gain, but it does robustly reduce collective jamming signatures.
+
+EXPERIMENT: exp_sparse_wigner_tw_edge (2235 results, 2235 seeds, 52 hosts)
+  Results: N=64,c=16 rescaled-edge shift -0.07570 +/- 0.23460 (d=-0.32, 84.3% sign-consistent); N=512,c=64 rescaled-edge shift -121.37257 +/- 10.61640 (d=-11.43, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The sparse-edge crossover is real: moderate connectivity stays near the Tracy-Widom-scaled edge, while larger sparse systems collapse far away from that scaling. The breakdown is strong and systematic at N=512 even when c=64.
+
+EXPERIMENT: exp_markov_branching_rescue_correlation (1117 results, 1117 seeds, 35 hosts)
+  Results: rescue-correlation peak gap +0.03136 +/- 0.00125 (d=25.05, 100.0% sign-consistent); coupling interaction present +1.00000 +/- 0.00000 (d=0.00, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Rescue that correlates with favorable environmental phases preserves a strong intermediate-persistence survival peak over anticorrelated rescue. The peak-gap signal is large, stable, and present on every analyzed seed.
+
+EXPERIMENT: exp_hypergraph_pgg_inertia_crossover (413 results, 413 seeds, 29 hosts)
+  Results: mid peak advantage -0.03045 +/- 0.03371 (d=-0.90, 83.3% sign-consistent); high-k mid cooperation gain -0.00515 +/- 0.01869 (d=-0.28, 69.5% sign-consistent)
+  Conclusion: NO EFFECT
+    Intermediate strategy-age inertia does not open a reliable interior cooperation window in this parameter sweep. The measured mid-inertia advantage stays within noise and often points in the wrong direction.
+
+EXPERIMENT: exp_dla_drift_reversal_window (512 results, 512 seeds, 25 hosts)
+  Results: intermediate reversal branch gain -0.01554 +/- 0.04558 (d=-0.34, 72.1% sign-consistent); intermediate reversal entropy gain -0.03278 +/- 0.07914 (d=-0.41, 65.6% sign-consistent)
+  Conclusion: NO EFFECT
+    Intermediate drift reversal does not improve branch-tip density or angular entropy relative to the control regimes. Across 512 seeds the proposed peak is absent and the mean shifts are slightly negative.
+
+EXPERIMENT: exp_tailspike_covariance_localization_gpu (79 results, 79 seeds, 8 hosts)
+  Results: critical heavy-tail block advantage -0.00010 +/- 0.00058 (d=-0.18, 54.4% sign-consistent); critical tail reversal +0.00005 +/- 0.00508 (d=0.01, 44.3% sign-consistent)
+  Conclusion: NO EFFECT
+    Heavy-tailed noise does not generate the predicted block-favoring alignment window near the finite-sample BBP crossover. The core localization metrics stay centered at zero despite a separate kurtosis jump in the heavy-tail regime.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu (53 results, 53 seeds, 6 hosts)
+  Results: mid-memory zero-class gain +0.00000 +/- 0.00002 (d=0.24, 62.3% sign-consistent); seedbank-memory superadditivity +0.00151 +/- 0.00008 (d=18.53, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The target persistence gain remains effectively zero even after 53 seeds, so the main hypothesis is not supported. There is a small positive superadditivity term, but it does not translate into meaningful zero-class preservation.
+
+EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu_gpu (12 results, 12 seeds, 3 hosts)
+  Results: crossed mid-memory megafire drop +0.00000 +/- 0.00000 (d=0.00, 100.0% sign-consistent); crossed mid-memory axis-balance gain +0.00002 +/- 0.00006 (d=0.24, 66.7% sign-consistent)
+  Conclusion: NO EFFECT
+    The first 12 valid GPU seeds show no measurable reduction in megafire rate and no stable symmetry gain from crossed firebreaks at intermediate wind memory. This family has cleared the 10-seed threshold, but the observed effect is still null.
+
+EXPERIMENT: exp_may_modular_hub_damping_alignment_gpu_gpu (479 results files, 8 valid seeds, 2 hosts)
+  Results: mean IPR-window correlation -0.66219 +/- 0.00841 (d=-78.76, 100.0% sign-consistent); mean mid-modularity IPR delta +0.32092 +/- 0.01257 (d=25.53, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    Only 8 files contained numeric experiment payloads; the remaining fresh files were metadata-only. The valid seeds do show a coherent localization signal, but there are not yet 10 analyzable seeds.
+
+EXPERIMENT: exp_metapop_hub_susceptibility_alignment_gpu_gpu (520 result files, 1 valid seed, 1 host)
+  Results: only 1 numeric payload recovered from 520 fresh files
+  Conclusion: insufficient data
+    This family is still dominated by metadata-only outputs, so no stable effect estimate is available. The current numeric sample is too small to evaluate the hypothesis.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu_gpu (248 result files, 2 valid seeds, 2 hosts)
+  Results: only 2 numeric payloads recovered from 248 fresh files
+  Conclusion: insufficient data
+    The analyzable sample remains below the 10-seed threshold. Current outputs are mostly metadata-only, so the recovery-alignment signal cannot be scored yet.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu (490 result files, 3 valid seeds, 3 hosts)
+  Results: only 3 numeric payloads recovered from 490 fresh files
+  Conclusion: insufficient data
+    This CPU/GPU family variant also remains payload-limited. More valid numeric results are needed before any effect direction can be trusted.
+
+EXPERIMENT: exp_signed_sbm_core_bridge_balance_gpu_gpu (19 result files, 3 valid seeds, 3 hosts)
+  Results: only 3 numeric payloads recovered from 19 fresh files
+  Conclusion: insufficient data
+    The planted-core signed-SBM run has started producing valid outputs, but the numeric sample is still too small for inference. No finding is promoted yet.
+
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu_gpu (18 result files, 8 valid seeds, 6 hosts)
+  Results: bounded-fit R2 +0.99947 +/- 0.00026 (d=3854.99, 100.0% sign-consistent); bounded chaos boundary d_f +1.21726 +/- 0.00058 (d=2092.71, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    The GPU-GPU variant is numerically coherent on the seeds that completed, but it has only 8 valid payloads so far. It stays below the promotion threshold despite the strong internal consistency.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu_gpu (12 result files, 0 valid seeds, 0 hosts)
+  Results: 0 numeric payloads recovered from 12 fresh files
+  Conclusion: insufficient data
+    No analyzable experiment payloads have landed yet for this variant. The family remains unscored.
+
+EXPERIMENT: exp_percolation_walk_dimension_3d_gpu_gpu (12 result files, 0 valid seeds, 0 hosts)
+  Results: 0 numeric payloads recovered from 12 fresh files
+  Conclusion: insufficient data
+    No numeric payloads were available for the GPU-GPU percolation variant in the fresh window. There is nothing to evaluate yet.

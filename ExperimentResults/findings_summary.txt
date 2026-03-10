@@ -62,7 +62,7 @@ EXPERIMENT: exp_muller_ratchet_seedbank_corridor_synergy | Status: CONFIRMED | R
 Last updated: 2026-03-10
 EXPERIMENT: exp_muller_ratchet_seedbank_refuge_tradeoff | Status: CONFIRMED | Results: best score +0.84297 +/- 0.07563 (d=11.15, 100.0% sign-consistent); max refuge-bank synergy +0.18821 +/- 0.12472 (d=1.51, 99.7% sign-consistent). 578 seeds, 22 hosts.
 Last updated: 2026-03-10
-EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu | Status: NO EFFECT | Results: mid-memory zero-class gain +0.00000 +/- 0.00002 (d=0.19, 61.7% sign-consistent); seedbank-memory superadditivity +0.00151 +/- 0.00008 (d=18.35, 100.0% sign-consistent). 47 seeds, 6 hosts.
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu | Status: NO EFFECT | Results: mid-memory zero-class gain +0.00000 +/- 0.00002 (d=0.24, 62.3% sign-consistent); seedbank-memory superadditivity +0.00151 +/- 0.00008 (d=18.53, 100.0% sign-consistent). 53 seeds, 6 hosts.
 Last updated: 2026-03-10
 EXPERIMENT: exp_hypercycle_compartment_pulse_inheritance | Status: CONFIRMED | Results: best synergy gain +0.02651 +/- 0.00927 (d=2.86, 100.0% sign-consistent); best occupancy gain -0.00334 +/- 0.00337 (d=-0.99, 15.7% sign-consistent). 127 seeds, 17 hosts.
 Last updated: 2026-03-10
@@ -78,11 +78,21 @@ EXPERIMENT: exp_trophic_selfreg_coherence_crossover | Status: CONFIRMED | Result
 Last updated: 2026-03-10
 EXPERIMENT: exp_muller_ratchet_corridor_pulse_rescue | Status: CONFIRMED | Results: best interior click-drop +0.00227 +/- 0.00115 (d=1.98, 100.0% sign-consistent); best interior rescue gain -3.16242 +/- 2.81286 (d=-1.12, 97.6% sign-consistent). 41 seeds, 8 hosts.
 Last updated: 2026-03-10
-EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu | Status: PRELIMINARY | Results: bounded chaos boundary d_f +1.30829 +/- 0.00072 (d=1822.67, 100.0% sign-consistent); bounded-fit R2 +0.99960 +/- 0.00026 (d=3874.41, 100.0% sign-consistent). 21 seeds, 12 hosts.
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu | Status: CONFIRMED | Results: bounded chaos boundary d_f +1.30809 +/- 0.00094 (d=1390.59, 100.0% sign-consistent); bounded-fit R2 +0.99962 +/- 0.00025 (d=3956.83, 100.0% sign-consistent). 72 seeds, 15 hosts.
 Last updated: 2026-03-10
-EXPERIMENT: exp_percolation_walk_dimension_3d_gpu | Status: PRELIMINARY | Results: mean d_w +6.97589 +/- 0.07093 (d=98.34, 100.0% sign-consistent); d_w minus literature 3.88 +3.09589 +/- 0.07093 (d=43.64, 0.0% sign-consistent). 12 seeds, 5 hosts.
+EXPERIMENT: exp_percolation_walk_dimension_3d_gpu | Status: REJECTED | Results: mean d_w +6.97903 +/- 0.09757 (d=71.53, 100.0% sign-consistent); d_w minus literature 3.88 +3.09903 +/- 0.09757 (d=31.76, 100.0% sign-consistent). 55 seeds, 11 hosts.
 Last updated: 2026-03-10
-EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu | Status: DEPLOYED | Novelty check 2026-03-10: searched "wildfire model firebreak stripe wind rotation spatial anisotropy simulation paper" and "forest fire cellular automaton anisotropic firebreak stripes rotating wind simulation". Found firebreak-placement and anisotropic wind-spread studies, but no direct crossed-firebreak x rotating-wind interaction map. Staged 350 GPU WUs; hypothesis is that crossed firebreaks suppress megafires best at intermediate wind memory.
+EXPERIMENT: exp_nasch_anticipation_heterogeneity | Status: CONFIRMED | Results: broad jam drop vs homogeneous mid-density +0.00416 +/- 0.00138 (d=3.02, 99.2% sign-consistent); broad wave drop vs homogeneous mid-density +0.00473 +/- 0.00249 (d=1.90, 97.6% sign-consistent). 370 seeds, 26 hosts.
 Last updated: 2026-03-10
-EXPERIMENT: exp_signed_sbm_core_bridge_balance_gpu | Status: DEPLOYED | Novelty check 2026-03-10: searched "signed stochastic block model eigenvector localization core periphery bridge study" and "eigenvector localization signed networks bridge hubs paper". Found signed-SBM and localization literature, but no exact antagonistic-bridge x bridge-concentration x planted-core interaction map. Staged 350 GPU WUs; hypothesis is that intermediate antagonistic distributed bridges reduce localization while preserving community alignment.
+EXPERIMENT: exp_sparse_wigner_tw_edge | Status: CONFIRMED | Results: N=64,c=16 rescaled-edge shift -0.07570 +/- 0.23460 (d=-0.32, 84.3% sign-consistent); N=512,c=64 rescaled-edge shift -121.37257 +/- 10.61640 (d=-11.43, 100.0% sign-consistent). 2235 seeds, 52 hosts.
+Last updated: 2026-03-10
+EXPERIMENT: exp_markov_branching_rescue_correlation | Status: CONFIRMED | Results: rescue-correlation peak gap +0.03136 +/- 0.00125 (d=25.05, 100.0% sign-consistent); coupling interaction present +1.00000 +/- 0.00000 (d=0.00, 100.0% sign-consistent). 1117 seeds, 35 hosts.
+Last updated: 2026-03-10
+EXPERIMENT: exp_hypergraph_pgg_inertia_crossover | Status: NO EFFECT | Results: mid peak advantage -0.03045 +/- 0.03371 (d=-0.90, 83.3% sign-consistent); high-k mid cooperation gain -0.00515 +/- 0.01869 (d=-0.28, 69.5% sign-consistent). 413 seeds, 29 hosts.
+Last updated: 2026-03-10
+EXPERIMENT: exp_dla_drift_reversal_window | Status: NO EFFECT | Results: intermediate reversal branch gain -0.01554 +/- 0.04558 (d=-0.34, 72.1% sign-consistent); intermediate reversal entropy gain -0.03278 +/- 0.07914 (d=-0.41, 65.6% sign-consistent). 512 seeds, 25 hosts.
+Last updated: 2026-03-10
+EXPERIMENT: exp_tailspike_covariance_localization_gpu | Status: NO EFFECT | Results: critical heavy-tail block advantage -0.00010 +/- 0.00058 (d=-0.18, 54.4% sign-consistent); critical tail reversal +0.00005 +/- 0.00508 (d=0.01, 44.3% sign-consistent). 79 seeds, 8 hosts.
+Last updated: 2026-03-10
+EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu_gpu | Status: NO EFFECT | Results: crossed mid-memory megafire drop +0.00000 +/- 0.00000 (d=0.00, 100.0% sign-consistent); crossed mid-memory axis-balance gain +0.00002 +/- 0.00006 (d=0.24, 66.7% sign-consistent). 12 seeds, 3 hosts.
 Last updated: 2026-03-10
