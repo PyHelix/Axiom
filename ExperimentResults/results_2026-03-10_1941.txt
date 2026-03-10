@@ -1,0 +1,58 @@
+Scientific analysis run: 2026-03-10 19:41 UTC
+
+EXPERIMENT: exp_muller_ratchet_seedbank_refuge_tradeoff (578 results, 578 seeds, 22 hosts)
+  Results: best score +0.84297 +/- 0.07563 (d=11.15, 100.0% sign-consistent); max refuge-bank synergy +0.18821 +/- 0.12472 (d=1.51, 99.7% sign-consistent)
+  Conclusion: CONFIRMED
+    Sparse refugia only help when export pulses release preserved low-load classes; the refuge-bank interaction stayed positive in essentially every seed. The effect is large and stable enough that the refuge-export tradeoff is now resolved as a real mechanism rather than noise.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_corridor_synergy (586 results, 586 seeds, 24 hosts)
+  Results: best score +2.59899 +/- 0.15538 (d=16.73, 100.0% sign-consistent); max superadditivity +0.59004 +/- 0.27107 (d=2.18, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Seed-bank persistence and intermediate corridor persistence interact superadditively under correlated shocks across the full seed set. This is a strong positive rescue effect, not a marginal shift, so the corridor-by-dormancy mechanism is now established within this model family.
+
+EXPERIMENT: exp_metapop_hub_susceptibility_alignment_gpu_gpu (518 results, 0 analyzable seeds, 17 hosts)
+  Results: no numeric experiment payloads were present in the sanitized outputs
+  Conclusion: insufficient data
+    Recent files exist, but none contain analyzable `experiment_result` vectors, so there is no scientific signal to aggregate yet. This family needs successful payload generation before any conclusion about the hub-susceptibility alignment hypothesis is defensible.
+
+EXPERIMENT: exp_may_modular_hub_damping_alignment_gpu_gpu (471 results, 2 analyzable seeds, 16 hosts)
+  Results: mid-modularity window delta -0.04535 +/- 0.00035 (d=-129.77, 0.0% sign-consistent); mid-modularity reactivity delta -0.00122 +/- 0.00776 (d=-0.16, 50.0% sign-consistent)
+  Conclusion: insufficient data
+    The two successful payloads point opposite to the stated hypothesis, but N=2 is too small to classify this family scientifically. The dominant issue is payload scarcity, not ambiguous statistics.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu_gpu (244 results, 1 analyzable seed, 15 hosts)
+  Results: mid-recurrence window gain +6.68573 +/- 0.00000 (d=inf, 100.0% sign-consistent); aligned interior recurrence gain +7.88407 +/- 0.00000 (d=inf, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    The lone successful payload supports the hypothesis, but one seed cannot separate a stable effect from a one-off draw. This family is not ready for a findings update until the success rate improves.
+
+EXPERIMENT: exp_hypercycle_compartment_pulse_inheritance (127 results, 127 seeds, 17 hosts)
+  Results: best synergy gain +0.02651 +/- 0.00927 (d=2.86, 100.0% sign-consistent); best occupancy gain -0.00334 +/- 0.00337 (d=-0.99, 15.7% sign-consistent)
+  Conclusion: CONFIRMED
+    Intermediate inheritance and migration pulses reliably generate positive parasite-suppression synergy, even though the occupancy gain by itself is not uniformly positive. The confirmed result is therefore a superadditive suppression effect rather than a broad occupancy increase.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu (241 results, 0 analyzable seeds, 15 hosts)
+  Results: no numeric experiment payloads were present in the sanitized outputs
+  Conclusion: insufficient data
+    This CPU/GPU family produced recent files but no analyzable result vectors in the current window. There is no basis yet to assess whether recurrence aligned with slow recovery widens the transient-growth window.
+
+EXPERIMENT: exp_depinning_mixed_columnar_crossover (118 results, 118 seeds, 16 hosts)
+  Results: best localization gain +0.02053 +/- 0.00430 (d=4.77, 100.0% sign-consistent); intermediate positive fraction +0.59576 +/- 0.01818 (d=32.77, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Intermediate mixtures of point and columnar disorder consistently maximize localization gain, with a repeatable optimum away from the pure endpoints. The effect clears both the size and consistency thresholds, so the mixed-disorder crossover is real in this dataset.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu (47 results, 47 seeds, 6 hosts)
+  Results: mid-memory zero-class gain +0.00000 +/- 0.00002 (d=0.19, 61.7% sign-consistent); seedbank-memory superadditivity +0.00151 +/- 0.00008 (d=18.35, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Intermediate shock memory does not produce a meaningful least-loaded-class preservation gain at this sample size and noise level. There is a small positive interaction term, but it does not translate into the primary claimed outcome, so the current evidence is operationally null.
+
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu (30 results, 21 seeds, 12 hosts)
+  Results: bounded chaos boundary d_f +1.30829 +/- 0.00072 (d=1822.67, 100.0% sign-consistent); bounded-fit R2 +0.99960 +/- 0.00026 (d=3874.41, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The bounded chaotic-order boundary is extremely stable at fractal dimension about 1.308 with near-perfect box-counting fits across the analyzable seeds. The estimate is already tight, but with 21 successful seeds it remains preliminary under the current threshold policy.
+
+EXPERIMENT: exp_percolation_walk_dimension_3d_gpu (15 results, 12 seeds, 5 hosts)
+  Results: mean d_w +6.97589 +/- 0.07093 (d=98.34, 100.0% sign-consistent); d_w minus literature 3.88 +3.09589 +/- 0.07093 (d=43.64, 0.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Every analyzable seed lands far above the cited 3D literature value, so the current implementation is not reproducing the expected walk dimension. With only 12 successful seeds this is preliminary, but the direction is consistently opposite and points to a systematic methodological bias rather than random scatter.
+
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu and exp_percolation_walk_dimension_3d_gpu are new preliminary entries; metadata-only or low-success families were analyzed but not added to findings_summary.txt because they did not meet the 10 analyzable-seed threshold.
