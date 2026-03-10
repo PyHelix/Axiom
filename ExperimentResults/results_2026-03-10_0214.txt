@@ -1,0 +1,39 @@
+EXPERIMENT: exp_sandpile_smallworld_avalanche_correlations (1460 results, 1460 seeds, 39 hosts)
+  Results: sign-transition flag +0.55959 +/- 0.49644 (d=1.13, 56.0% sign-consistent); high-rewiring acf_lag1 -0.00815 +/- 0.00561 (d=-1.45, 1.0% sign-consistent); best acf_lag1 +0.00388 +/- 0.01346 (d=0.29, 56.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Small-world rewiring does not produce a stable positive lag-1 avalanche autocorrelation at the high-rewiring end. Sign transitions appear in some seeds, but the terminal-rewiring signal stays negative and below the 2% practical-effect threshold.
+
+EXPERIMENT: exp_kac_markov_sign_edge_clustering (1091 results, 1091 seeds, 26 hosts)
+  Results: positive-persistence edge shift -0.00191 +/- 0.00035 (d=-5.50, 0.0% sign-consistent); positive-persistence pm1-gap shift +0.00002 +/- 0.00026 (d=0.09, 45.6% sign-consistent); support fraction for positive-persistence edge gain vs antipersistence -0.35898 +/- 0.00912 (d=-39.38, 0.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Positive sign persistence does not create a practically meaningful edge-crowding increase. The measured edge shift remains negative but only at a sub-2e-2 scale, so the finite-size effect is numerically small despite the large sample.
+
+EXPERIMENT: exp_kac_edge_correlation_crossover (1911 results, 1911 seeds, 19 hosts)
+  Results: mean edge-window gain -0.01204 +/- 0.00043 (d=-28.11, 0.0% sign-consistent); mean real-window gain -0.01056 +/- 0.00003 (d=-412.26, 0.0% sign-consistent); mean inner-suppression-mid +0.00084 +/- 0.00016 (d=5.12, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Correlated coefficients do not deliver a meaningful positive edge-crowding crossover. The edge and real-window signals are consistently opposite in sign, but both stay below the 2% practical-effect cutoff.
+
+EXPERIMENT: exp_galtonwatson_markov_environment_crossover (1905 results, 1905 seeds, 24 hosts)
+  Results: peak CV-tau gain over condition mean +0.24982 +/- 0.00830 (d=30.09, 100.0% sign-consistent); mean peak p_stay excess +0.13274 +/- 0.00580 (d=22.90, 100.0% sign-consistent); interior-peak rate excess +0.01949 +/- 0.01563 (d=1.25, 90.2% sign-consistent)
+  Conclusion: CONFIRMED
+    Intermediate environment persistence reliably raises extinction-time heterogeneity above edge-persistence conditions. The peak sits inside the sweep rather than at the boundaries across nearly all seeds, confirming a genuine finite-time crossover in Markov environments.
+
+EXPERIMENT: exp_tailspike_covariance_localization_gpu (17 results, 17 seeds, 7 hosts)
+  Results: critical heavy-tail block advantage +0.00003 +/- 0.00014 (d=0.20, 64.7% sign-consistent); critical tail reversal +0.00051 +/- 0.00220 (d=0.23, 47.1% sign-consistent); supercritical heavy-tail block advantage -0.00005 +/- 0.00010 (d=-0.44, 41.2% sign-consistent)
+  Conclusion: NO EFFECT
+    The localized-block advantage near the BBP window remains within noise in the complete sanitized runs currently available. Only 17 of 213 sanitized files contained full numeric experiment payloads, so the present estimate is based strictly on those completed outputs.
+
+EXPERIMENT: exp_grayscott_crossed_feed_kill_alignment_gpu (25 results, 25 seeds, 7 hosts)
+  Results: crossed-mid interface advantage +0.00027 +/- 0.00096 (d=0.28, 52.0% sign-consistent); crossed-mid entropy advantage +0.00287 +/- 0.00282 (d=1.02, 92.0% sign-consistent); crossed-mid mixedness advantage +0.00066 +/- 0.00405 (d=0.16, 52.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Crossed feed/kill stripes raise entropy slightly, but the shift is still below the 2% practical-effect threshold and the companion interface and mixedness metrics stay near noise. The crossed alignment mechanism is therefore not yet supported at the current complete-seed count.
+
+EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu (11 results, 11 seeds, 5 hosts)
+  Results: crossed-peak isotropy advantage +0.20626 +/- 0.01769 (d=11.66, 100.0% sign-consistent); mid crossed-vs-parallel isotropy gain +0.20685 +/- 0.01797 (d=11.51, 100.0% sign-consistent); high crossed-vs-parallel peak-score gain +0.01846 +/- 0.04907 (d=0.38, 81.8% sign-consistent)
+  Conclusion: PRELIMINARY
+    Orthogonal feed and diffusion stripes produce a large, repeatable isotropy gain at the pattern peak in every complete seed analyzed so far. The effect is strong but still rests on 11 complete seeds, so it remains preliminary pending a larger completed batch.
+
+EXPERIMENT: exp_xy_quench_stripe_vortex_gpu (1 results, 1 seeds, 1 hosts)
+  Results: mid-tau medium-amp stripe defect suppression vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid-tau medium-amp stripe coherence gain vs IID +0.54098 +/- 0.00000 (d=1000000000.00, 100.0% sign-consistent); mid-tau high-amp nonmonotone defect return +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent)
+  Conclusion: INSUFFICIENT DATA
+    Only one sanitized file contained a complete numeric experiment payload, so the current batch cannot support a family-level inference. The remaining 34 recent sanitized files for this family were incomplete and were excluded from analysis.
