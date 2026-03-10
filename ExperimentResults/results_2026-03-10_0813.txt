@@ -1,0 +1,62 @@
+AXIOM SCIENCE RESULTS
+Timestamp: 2026-03-10_0813 UTC
+
+EXPERIMENT: exp_sandpile_smallworld_avalanche_correlations (2092 results, 2092 seeds, 42 hosts)
+  Results: sign-transition found +0.55402 +/- 0.49707 (d=1.11, 55.4% sign-consistent); high-rewire lag-1 ACF gain vs p=0 +0.00040 +/- 0.01319 (d=0.03, 30.2% sign-consistent); best high-rewire lag-1 ACF -0.00109 +/- 0.01321 (d=-0.08, 11.5% sign-consistent)
+  Conclusion: NO EFFECT
+    The sign-switch indicator stays near a coin flip across the completed seeds, and the lag-1 autocorrelation shifts remain buried in noise. This window does not resolve a stable rewiring-driven temporal-memory crossover.
+
+EXPERIMENT: exp_langton_ant_frozen_stripe_disorder (1489 results, 1489 seeds, 23 hosts)
+  Results: corridor success gain +0.35984 +/- 0.00618 (d=58.25, 100.0% sign-consistent); corridor onset advance +0.43128 +/- 0.00458 (d=94.18, 100.0% sign-consistent); overstripe success penalty -0.01108 +/- 0.00243 (d=-4.57, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Moderate frozen stripe correlation robustly opens a high-success, earlier-onset highway corridor relative to IID disorder. The strong-stripe penalty keeps the effect nonmonotone, matching the proposed corridor mechanism rather than a generic stripe benefit.
+
+EXPERIMENT: exp_langton_ant_anisotropic_stripes (395 results, 395 seeds, 14 hosts)
+  Results: mid-stripe success gain -0.06303 +/- 0.00436 (d=-14.47, 100.0% sign-consistent); mid-stripe onset advance +0.28387 +/- 0.00546 (d=52.00, 100.0% sign-consistent); family lock gain +0.86676 +/- 0.00421 (d=205.75, 100.0% sign-consistent)
+  Conclusion: REJECTED
+    The central success metric moves strongly against the claimed mid-anisotropy highway advantage, even though onset timing and family locking shift systematically. The anisotropy changes trajectory structure, but not in the success-enhancing direction required by the hypothesis.
+
+EXPERIMENT: exp_sis_burst_modularity_temporal_threshold (192 results, 192 seeds, 22 hosts)
+  Results: interaction score -0.00002 +/- 0.00004 (d=-0.58, 65.6% sign-consistent); high-modularity mid-burst threshold shift +0.00000 +/- 0.00008 (d=0.05, 46.9% sign-consistent); low-modularity strong-burst threshold shift +0.00030 +/- 0.00022 (d=1.37, 74.5% sign-consistent)
+  Conclusion: NO EFFECT
+    The burstiness-by-modularity interaction remains far below a practical threshold shift. Current seeds do not support a meaningful persistence crossover driven by temporal burst structure.
+
+EXPERIMENT: exp_parrondo_history_block_resonance (132 results, 132 seeds, 12 hosts)
+  Results: mid-block gain +0.00127 +/- 0.00002 (d=84.58, 100.0% sign-consistent); optimal mid-block fraction +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); memory sensitivity +0.00018 +/- 0.00003 (d=5.39, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The direction is stable, but the gain stays well under the 2% practical-effect cutoff. This family does not show a meaningful block-length resonance in the present window.
+
+EXPERIMENT: exp_xy_quench_stripe_vortex_gpu (64 results, 64 seeds, 9 hosts)
+  Results: mid-tau medium-amp stripe defect suppression vs IID +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent); mid-tau medium-amp stripe coherence gain vs IID +0.55696 +/- 0.05310 (d=10.49, 100.0% sign-consistent); mid-tau high-amp nonmonotone defect return +0.00000 +/- 0.00000 (d=0.00, 0.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    Stripe-correlated pinning produces a large, repeatable coherence gain at intermediate quench time. The claimed vortex-density suppression and strong-pinning return are still flat, so the structural ordering signal is ahead of the proposed defect mechanism.
+
+EXPERIMENT: exp_schnakenberg_crossed_feed_diffusion_gpu (51 results, 51 seeds, 9 hosts)
+  Results: crossed-peak isotropy advantage +0.20587 +/- 0.01892 (d=10.88, 100.0% sign-consistent); mid crossed-vs-parallel isotropy gain +0.20672 +/- 0.01905 (d=10.85, 100.0% sign-consistent); high crossed-vs-parallel peak-score gain +0.00280 +/- 0.05359 (d=0.05, 58.8% sign-consistent)
+  Conclusion: CONFIRMED
+    Crossed feed and diffusion stripes reliably preserve more isotropic patterning than parallel stripes near onset. The isotropy effect is now mature at 30+ seeds even though the high-amplitude peak-score term remains noise-like.
+
+EXPERIMENT: exp_invasion_percolation_trapping (76 results, 76 seeds, 16 hosts)
+  Results: Df gap no-trap minus trap -0.00014 +/- 0.00671 (d=-0.02, 50.0% sign-consistent); predicted no-trap Df +1.89590 +/- 0.00000 (d=0.00, 100.0% sign-consistent); predicted trap Df +1.82270 +/- 0.00000 (d=0.00, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The trapped and untrapped dimension estimates remain effectively indistinguishable at the family-comparison level. No finite-size trapping gap is resolved beyond ordinary run noise.
+
+EXPERIMENT: exp_ising_crossed_temp_field_memory_gpu (36 results, 36 seeds, 8 hosts)
+  Results: mid crossed memory advantage vs IID +0.14049 +/- 0.00065 (d=215.98, 100.0% sign-consistent); high crossed interface gain vs parallel +0.00096 +/- 0.00012 (d=7.84, 100.0% sign-consistent); high crossed isotropy gain vs parallel +0.00195 +/- 0.00003 (d=77.00, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    Orthogonal temperature and field stripes now show a stable memory and morphology advantage at confirmed sample size. The effect is not marginal: both interface and isotropy metrics reinforce the same crossed-disorder benefit.
+
+EXPERIMENT: exp_forestfire_windshift_burnscar_resonance (38 results, 38 seeds, 9 hosts)
+  Results: intermediate-persistence bonus +0.00354 +/- 0.00143 (d=2.48, 100.0% sign-consistent); mid-persistence best fraction +0.53242 +/- 0.01634 (d=32.58, 100.0% sign-consistent); best spanning suppression gain +0.05024 +/- 0.00089 (d=56.42, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    Fire suppression is strong somewhere in parameter space, but the specific intermediate-persistence resonance stays below the 2% practical-effect threshold. These seeds do not isolate the claimed wind-shift optimum from broader suppression background.
+
+EXPERIMENT: exp_metapop_predator_delay_refuge_reentrance (56 results, 56 seeds, 22 hosts)
+  Results: mean gain vs best alternative -0.01737 +/- 0.00024 (d=-72.81, 100.0% sign-consistent); positive gain rate +0.00305 +/- 0.00015 (d=20.19, 100.0% sign-consistent); reentrant coexistence index +0.00018 +/- 0.00109 (d=0.17, 44.6% sign-consistent)
+  Conclusion: REJECTED
+    The adaptive refuge schedule almost never beats the fixed or pulse alternatives, and the family-mean gain is directionally negative across the completed seeds. The proposed reentrant coexistence advantage is not supported in this window.
+
+EXPERIMENT: exp_metapop_hub_susceptibility_alignment_gpu (0 completed results, 0 seeds, 0 hosts; 13 recent files)
+  Results: no completed numeric payloads were analyzable in the current intake
+  Conclusion: INSUFFICIENT DATA
+    Recent files arrived for this family, but none contained a completed numeric result payload. There is no basis for a seed-level inference yet.
