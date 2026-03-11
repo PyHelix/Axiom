@@ -1,0 +1,93 @@
+Validation Log - 2026-03-11 09:26 Europe/Berlin
+
+Session scope
+- Step 3 validation, anti-cheat spot-check, credit, and counters update only.
+- Immediate post-pass verification reached 0 uncredited results at query time.
+
+Results credited this session
+- Database-touched result rows this session: 4646
+- Total credit granted to hosts/users this session: 195722.39
+- Denied sentinel results (0.01 credit): 25
+- CPU credited results: 4257
+- GPU credited results: 364
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.7245085077146812e-14
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from 4563 uncredited results with sanitized payloads present.
+- Flagged 22 sampled results for empty/trivial payloads duplicated across hosts.
+- Additional denied results: 3 sub-5-second stub results denied by runtime rule.
+- Denied result IDs and reasons:
+  2391611 host 367: trivial_payload, duplicate_payload_cross_host
+  2392789 host 1: trivial_payload, duplicate_payload_cross_host
+  2392834 host 105: trivial_payload, duplicate_payload_cross_host
+  2392840 host 85: elapsed_under_5s
+  2393603 host 1: trivial_payload, duplicate_payload_cross_host
+  2394824 host 268: trivial_payload, duplicate_payload_cross_host
+  2395647 host 29: trivial_payload, duplicate_payload_cross_host
+  2396036 host 87: elapsed_under_5s
+  2396600 host 268: trivial_payload, duplicate_payload_cross_host
+  2396882 host 190: trivial_payload, duplicate_payload_cross_host
+  2396998 host 240: trivial_payload, duplicate_payload_cross_host
+  2402296 host 105: trivial_payload, duplicate_payload_cross_host
+  2402840 host 367: elapsed_under_5s
+  2402909 host 367: trivial_payload, duplicate_payload_cross_host
+  2403484 host 367: trivial_payload, duplicate_payload_cross_host
+  2403572 host 367: trivial_payload, duplicate_payload_cross_host
+  2403594 host 367: trivial_payload, duplicate_payload_cross_host
+  2404059 host 367: trivial_payload, duplicate_payload_cross_host
+  2404102 host 367: trivial_payload, duplicate_payload_cross_host
+  2404522 host 367: trivial_payload, duplicate_payload_cross_host
+  2404630 host 268: trivial_payload, duplicate_payload_cross_host
+  2404999 host 105: trivial_payload, duplicate_payload_cross_host
+  2405067 host 190: trivial_payload, duplicate_payload_cross_host
+  2406714 host 392: trivial_payload, duplicate_payload_cross_host
+  2407966 host 390: trivial_payload, duplicate_payload_cross_host
+
+Per-host credit summary
+- Host 1: 109 results, 4720.52 credit
+- Host 2: 68 results, 1249.28 credit
+- Host 9: 7 results, 578.51 credit
+- Host 10: 12 results, 9532.06 credit
+- Host 11: 13 results, 2918.44 credit
+- Host 29: 122 results, 3164.04 credit
+- Host 57: 2 results, 42.97 credit
+- Host 61: 66 results, 1315.57 credit
+- Host 85: 131 results, 647.27 credit
+- Host 87: 184 results, 2090.17 credit
+- Host 102: 98 results, 1069.19 credit
+- Host 105: 598 results, 12094.05 credit
+- Host 107: 12 results, 113.03 credit
+- Host 123: 218 results, 871.69 credit
+- Host 134: 13 results, 132.57 credit
+- Host 140: 14 results, 296.86 credit
+- Host 147: 13 results, 6651.23 credit
+- Host 159: 84 results, 8444.91 credit
+- Host 182: 8 results, 7271.12 credit
+- Host 184: 16 results, 9617.54 credit
+- Host 190: 117 results, 5287.89 credit
+- Host 219: 155 results, 2149.33 credit
+- Host 222: 51 results, 625.88 credit
+- Host 240: 475 results, 11073.48 credit
+- Host 249: 14 results, 8882.78 credit
+- Host 268: 475 results, 9328.77 credit
+- Host 299: 2 results, 734.77 credit
+- Host 317: 7 results, 113.03 credit
+- Host 341: 126 results, 36745.74 credit
+- Host 345: 44 results, 484.25 credit
+- Host 350: 25 results, 328.39 credit
+- Host 367: 213 results, 2250.91 credit
+- Host 374: 10 results, 5268.54 credit
+- Host 378: 10 results, 5394.40 credit
+- Host 379: 9 results, 5167.03 credit
+- Host 380: 8 results, 4854.68 credit
+- Host 381: 8 results, 4912.36 credit
+- Host 387: 152 results, 1569.24 credit
+- Host 388: 242 results, 5669.31 credit
+- Host 389: 295 results, 4019.37 credit
+- Host 390: 192 results, 4524.83 credit
+- Host 392: 203 results, 3516.14 credit
+
+Cleanup actions taken
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 77956.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 78668.
+- Temporary files to remove after report publication: /tmp/axiom_anticheat.py, /tmp/axiom_credit.py, /tmp/axiom_anticheat_summary.json, /tmp/axiom_credit_summary.json, /tmp/axiom_credit_pass_1.log, /tmp/axiom_credit_finalpass_1.log, /tmp/axiom_uncredited_results.tsv.
