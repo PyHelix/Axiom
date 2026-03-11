@@ -1,0 +1,14 @@
+EXPERIMENT: exp_cahnhilliard_quasiperiodic_wetting_gpu_gpu (559 results, 559 seeds, 28 hosts)
+  Results: mid_quasi_reduces_domain_size_vs_stripe 5.66822e-07 +/- 3.02970e-05 (d=0.01871, sign-consistent=54.2%); mid_quasi_reduces_domain_size_vs_crossed -7.91560e-07 +/- 3.10850e-05 (d=-0.02546, sign-consistent=49.2%); mid_quasi_preserves_isotropy_vs_stripe 2.57715e-06 +/- 2.64451e-04 (d=0.00975, sign-consistent=50.3%)
+  Conclusion: NO EFFECT
+    Quasiperiodic wetting does not produce a reproducible domain-size or isotropy advantage over stripe or crossed controls in the accumulated GPU runs. The measured differences stay near zero with coin-flip sign consistency, so the proposed coarsening-arrest advantage is not supported by the current dataset.
+
+EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu_gpu (22 results, 22 seeds, 13 hosts)
+  Results: mid_tau_medium_amp_stripe_defect_suppression 8.04143e-02 +/- 2.23383e-03 (d=35.99846, sign-consistent=100.0%); mid_tau_medium_amp_stripe_orientation_gain 5.30686e-01 +/- 1.25527e-02 (d=42.27650, sign-consistent=100.0%); mid_tau_stripe_nonmonotone_defect_gain 4.59841e-03 +/- 3.02856e-03 (d=1.51835, sign-consistent=95.5%)
+  Conclusion: PRELIMINARY
+    Moderate stripe-aligned disorder is already showing a large, consistently positive reduction in mid-quench defect density together with stronger orientation order. The direction and effect size match the hypothesis, but the family is still below the 30-seed confirmation threshold.
+
+EXPERIMENT: exp_kellersegel_delay_pulse_sink_window_gpu_gpu (24 results, 24 seeds, 12 hosts)
+  Results: mean_adaptive_gain -1.10734e+01 +/- 9.19254e-03 (d=-1204.60580, sign-consistent=0.0%); mean_high_pulse_gain -1.15062e+01 +/- 1.53733e-02 (d=-748.45165, sign-consistent=0.0%); mean_mid_delay_gain -1.10892e+01 +/- 2.21186e-02 (d=-501.35323, sign-consistent=0.0%)
+  Conclusion: PRELIMINARY
+    The adaptive sink window is not outperforming the fixed sink in any accumulated seed; the observed effect is uniformly large and opposite to the hypothesis. This is an early negative result rather than a formal rejection because the family remains below the 30-seed rejection threshold.
