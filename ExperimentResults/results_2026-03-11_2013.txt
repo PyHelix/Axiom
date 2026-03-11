@@ -1,0 +1,46 @@
+Science analysis run date: 2026-03-11
+
+EXPERIMENT: exp_nasch_rampmeter_anticipation_memory (903 results, 903 seeds, 31 hosts)
+  Results: mean_best_broad_gain 0.10428 +/- 0.00322 (d=32.37324, sign-consistent=100.0%); mean_broad_synergy 0.10337 +/- 0.00310 (d=33.39076, sign-consistent=100.0%); mean_broad_best_fraction 0.31832 +/- 0.00906 (d=35.12502, sign-consistent=100.0%)
+  Conclusion: CONFIRMED
+    Moderate ramp-meter memory produces a large, reproducible gain when anticipation heterogeneity is broad, while homogeneous-driver cases stay near zero. The benefit is therefore conditional rather than generic, which supports the interaction mechanism in the hypothesis.
+
+EXPERIMENT: exp_hypercycle_catastrophe_exchange_inheritance (901 results, 901 seeds, 31 hosts)
+  Results: mean_best_mid_catastrophe_gain 0.04762 +/- 0.00356 (d=13.36377, sign-consistent=100.0%); mean_asymmetry_synergy 0.04746 +/- 0.00357 (d=13.30547, sign-consistent=100.0%); mean_strong_inheritance_support 0.03351 +/- 0.00462 (d=7.25180, sign-consistent=100.0%)
+  Conclusion: CONFIRMED
+    Moderate catastrophe timing increases coexistence and the benefit strengthens under asymmetric exchange. The effect stays positive across seeds, so catastrophe-driven rescue is a real regime here rather than a sampling artifact.
+
+EXPERIMENT: exp_marine_reserve_trophic_phase_mismatch (854 results, 854 seeds, 30 hosts)
+  Results: mean_async_gain 0.40602 +/- 0.00807 (d=50.28291, sign-consistent=100.0%); mean_bloom_drop 4.05319e-04 +/- 1.28053e-05 (d=31.65241, sign-consistent=100.0%); mean_high_ratio_mid_win_fraction 0.40536 +/- 0.01053 (d=38.51350, sign-consistent=100.0%)
+  Conclusion: CONFIRMED
+    Intermediate reserve phase lag strongly improves prey occupancy and rescue flux when predator mixing is fast. The consistent positive direction across seeds supports asynchronous reserve timing as the operative mechanism.
+
+EXPERIMENT: exp_directed_polymer_anisotropic_corridor_competition (2444 results, 2444 seeds, 43 hosts)
+  Results: mean_mixed_balanced_wander_gain -9.41302 +/- 0.06345 (d=-148.35947, sign-consistent=0.0%); positive_wander_gain_fraction 0.31931 +/- 0.00309 (d=103.32719, sign-consistent=100.0%); mean_mixed_balanced_energy_gain -0.60927 +/- 0.00276 (d=-220.88792, sign-consistent=0.0%)
+  Conclusion: REJECTED
+    Mixed anisotropic corridors perform worse than the pure corridor baselines on wandering, energy, and roughness metrics. The observed direction is opposite the hypothesis, so the proposed competitive advantage is not supported.
+
+EXPERIMENT: exp_cahnhilliard_quasiperiodic_wetting_gpu_gpu (502 results, 502 seeds, 20 hosts)
+  Results: mid_quasi_reduces_domain_size_vs_stripe 5.11873e-07 +/- 3.06591e-05 (d=-0.01670, sign-consistent=45.6%); mid_quasi_reduces_domain_size_vs_crossed -6.09145e-08 +/- 3.16263e-05 (d=0.00193, sign-consistent=50.0%); mid_quasi_preserves_isotropy_vs_stripe 7.20894e-07 +/- 2.66665e-04 (d=0.00270, sign-consistent=50.2%)
+  Conclusion: NO EFFECT
+    Mid-strength quasiperiodic wetting produces domain-size and isotropy changes that are effectively zero relative to stripe and crossed substrates. Interior optimum amplitudes exist, but they do not translate into the hypothesized morphology gain.
+
+EXPERIMENT: exp_marine_reserve_trophic_phase_mismatch_gpu_gpu (119 results, 119 seeds, 13 hosts)
+  Results: mean_best_async_gain -0.03087 +/- 2.20803e-04 (d=-139.80339, sign-consistent=0.0%); mean_best_flux_gain 0.01421 +/- 6.26806e-05 (d=226.70398, sign-consistent=100.0%); mean_best_sync_drop -6.49716e-07 +/- 5.83141e-10 (d=-1.11417e+03, sign-consistent=0.0%)
+  Conclusion: REJECTED
+    The GPU variant shows a strongly negative best async occupancy gain despite favorable flux and bloom-side metrics. That means the main ecological outcome moves opposite the hypothesis, so this family is rejected on the primary endpoint.
+
+EXPERIMENT: exp_marine_reserve_phase_lag_rescue (1548 results, 1548 seeds, 42 hosts)
+  Results: mean_best_async_gain 0.08923 +/- 0.00165 (d=53.92415, sign-consistent=100.0%); positive_async_gain_fraction 0.38897 +/- 0.00784 (d=49.62029, sign-consistent=100.0%); mean_best_async_flux_gain 0.03166 +/- 7.46774e-04 (d=42.39244, sign-consistent=100.0%)
+  Conclusion: CONFIRMED
+    Phase-lagged reserve timing yields a large positive async gain and higher rescue flux across a large seed set. The signal is highly consistent, which upgrades this family from exploratory to confirmed.
+
+EXPERIMENT: exp_metapop_predator_delay_refuge_reentrance (726 results, 726 seeds, 31 hosts)
+  Results: mean_gain_vs_best_alt -0.01838 +/- 5.25200e-04 (d=-34.99595, sign-consistent=0.0%); positive_gain_rate 0.00290 +/- 1.63773e-04 (d=17.69587, sign-consistent=100.0%); mean_coexist_adaptive 0.31376 +/- 0.00452 (d=69.48778, sign-consistent=100.0%)
+  Conclusion: REJECTED
+    Adaptive delayed refuge control lowers coexistence relative to the best alternative in almost every seed. A small positive reentrant index appears, but it is too weak to offset the primary negative effect on coexistence.
+
+EXPERIMENT: exp_may_lowrank_mutualism_localization (2592 results, 2592 seeds, 41 hosts)
+  Results: mean_window_width 24.44328 +/- 123.19400 (d=0.19841, sign-consistent=100.0%); mean_reactive_ipr 0.20837 +/- 0.00600 (d=34.70726, sign-consistent=100.0%); support_fraction_u_shape 0.02322 +/- 0.00472 (d=4.91894, sign-consistent=99.9%)
+  Conclusion: NO EFFECT
+    Low-rank mutualism changes localization-related quantities, but the predicted nonmonotonic reactive-window signature is rare and unstable. The main hypothesized U-shape is therefore not supported at a meaningful level.
