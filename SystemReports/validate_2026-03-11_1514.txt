@@ -1,0 +1,73 @@
+Validation Session Log
+Timestamp: 2026-03-11 15:14 Europe/Berlin
+
+Results Credited This Session
+- Processed results: 4792
+- Total awarded credit: 290427.18
+- CPU results credited: 4311
+- GPU results credited: 321
+- Denied sentinel results: 160 at 0.01 credit each
+- Credit scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.65615891530522e-14
+
+Anti-Cheat Review
+- Reviewed 200 sanitized numeric payloads from the live uncredited queue.
+- Denied 160 results after confirming an empty-payload pattern across the backlog.
+- Denial reason: sanitized result file contained no experiment_result payload, only metadata plus a small elapsed field.
+- Pattern concentration: host 367 only.
+- Affected experiment families:
+  exp_cahnhilliard_quasiperiodic_wetting_gpu_gpu
+  exp_swift_hohenberg_quasiperiodic_pinning_gpu_gpu
+  exp_kauffman_dominant_module_balance_gpu_gpu
+- Duplicate cross-host payloads found in the sampled review: none.
+- Two results had no sanitized file at review time; per workflow they were credited normally instead of denied.
+
+Per-Host Credit Summary
+- host 341: 54725.42
+- host 367: 41665.05
+- host 162: 18297.95
+- host 16: 16412.11
+- host 23: 15985.28
+- host 184: 14611.02
+- host 392: 13495.40
+- host 147: 10212.82
+- host 105: 9834.13
+- host 182: 8932.94
+- host 240: 8895.75
+- host 268: 7421.24
+- host 390: 6539.47
+- host 159: 6234.35
+- host 393: 5516.93
+- host 249: 5114.81
+- host 379: 5093.79
+- host 1: 4769.94
+- host 10: 4450.38
+- host 388: 4242.22
+- host 347: 4003.15
+- host 389: 3430.01
+- host 11: 2568.86
+- host 29: 2486.49
+- host 85: 2216.25
+- host 387: 1970.97
+- host 364: 1833.41
+- host 87: 1309.64
+- host 299: 1211.50
+- host 123: 1080.76
+- host 219: 1031.25
+- host 102: 1013.92
+- host 9: 890.15
+- host 57: 598.83
+- host 350: 376.27
+- host 137: 368.40
+- host 202: 335.68
+- host 222: 309.92
+- host 71: 290.49
+- host 345: 282.19
+- host 140: 218.08
+- host 134: 99.87
+- host 107: 50.09
+
+Cleanup and Operational Actions
+- Ran /tmp/axiom_credit.py to batch award price-per-FLOP credit and set validate_state=1.
+- Incremented /opt/axiom_boinc/html/user/credited_count.txt to 76010.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 76726.
+- Post-run queue check: 5 uncredited completed results remained after the batch, indicating new completions arrived during execution.
