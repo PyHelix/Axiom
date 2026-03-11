@@ -1,0 +1,79 @@
+Validation Session Log
+Timestamp: 2026-03-11_2117
+
+Results credited this session
+- First credit pass: 4301 results, 273932.92 credit
+- Second credit pass: 4 results, 56.15 credit
+- Total credited this session: 4305 results, 273989.07 credit
+- CPU results credited: 3966
+- GPU results credited: 339
+- Denied results: 0
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.55611507433774e-14
+
+Anti-cheat review
+- Reviewed a deterministic sample of 200 sanitized JSON payloads from the pending queue.
+- No stub runs under 5 seconds were present in the queue.
+- No trivial or empty numeric payloads were detected.
+- No duplicate payloads across different hosts were detected.
+- No coarse experiment-level outliers were detected in the pending sanitized set.
+- Flagged result IDs: none
+
+Per-host credit summary
+- The host breakdown below is exact for the initial 4258-result pre-credit snapshot saved to /tmp/axiom_uncredited_results.tsv.
+- Four additional results completed during the session and were credited in the second pass for 56.15 total credit; those race-arrival rows are included in the session total above but not broken out below by host.
+- Host 341: 200 results, 65845.66 credit
+- Host 324: 344 results, 17510.82 credit
+- Host 327: 220 results, 16074.79 credit
+- Host 330: 216 results, 14445.26 credit
+- Host 401: 228 results, 14390.44 credit
+- Host 16: 43 results, 14387.86 credit
+- Host 23: 46 results, 14205.01 credit
+- Host 332: 192 results, 13009.68 credit
+- Host 339: 225 results, 12829.04 credit
+- Host 395: 247 results, 11062.02 credit
+- Host 397: 173 results, 7573.52 credit
+- Host 398: 160 results, 6827.79 credit
+- Host 159: 57 results, 6789.84 credit
+- Host 396: 330 results, 5597.68 credit
+- Host 10: 11 results, 5319.85 credit
+- Host 1: 66 results, 4656.18 credit
+- Host 399: 224 results, 4262.19 credit
+- Host 400: 224 results, 4199.52 credit
+- Host 147: 8 results, 3764.56 credit
+- Host 210: 192 results, 3577.75 credit
+- Host 11: 18 results, 2898.00 credit
+- Host 29: 62 results, 2617.19 credit
+- Host 388: 80 results, 2471.01 credit
+- Host 390: 64 results, 2357.70 credit
+- Host 367: 58 results, 2165.46 credit
+- Host 389: 80 results, 1730.44 credit
+- Host 123: 120 results, 1542.00 credit
+- Host 85: 63 results, 1147.87 credit
+- Host 347: 23 results, 895.56 credit
+- Host 387: 64 results, 731.86 credit
+- Host 364: 32 results, 713.14 credit
+- Host 9: 8 results, 699.41 credit
+- Host 184: 1 results, 682.71 credit
+- Host 335: 16 results, 525.72 credit
+- Host 345: 39 results, 502.65 credit
+- Host 249: 1 results, 502.52 credit
+- Host 140: 19 results, 328.11 credit
+- Host 350: 16 results, 325.70 credit
+- Host 192: 24 results, 317.47 credit
+- Host 57: 9 results, 200.32 credit
+- Host 392: 8 results, 197.87 credit
+- Host 134: 19 results, 138.83 credit
+- Host 163: 10 results, 135.04 credit
+- Host 394: 7 results, 93.12 credit
+- Host 61: 2 results, 90.55 credit
+- Host 102: 3 results, 46.68 credit
+- Host 202: 3 results, 42.77 credit
+- Host 402: 1 results, 29.86 credit
+- Host 267: 1 results, 18.57 credit
+- Host 107: 1 results, 12.77 credit
+
+Cleanup actions taken
+- Ran crediting twice to clear late-arriving completions; final uncredited queue count is 0.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 81391.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 81474.
+- Temporary helper files in /tmp were created for this session and will be removed after report publication.
