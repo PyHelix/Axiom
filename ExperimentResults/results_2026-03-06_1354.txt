@@ -1,8 +1,0 @@
-AXIOM SCIENCE RESULTS
-Timestamp: 2026-03-06 13:54 UTC
-
-EXPERIMENT: critical_branching_skew_crossover (303 complete results, 303 seeds, 13 hosts)
-  Results: survival_corr_late = +0.97765 +/- 0.02402, Cohen's d = 40.70, sign consistency = 100.0% positive; cond_corr_late = -0.97415 +/- 0.03158, Cohen's d = -30.85, sign consistency = 100.0% negative; q90_corr_late = -0.74919 +/- 0.27257, Cohen's d = -2.75, sign consistency = 97.7% negative. Early survival CV = 0.12617 +/- 0.00025; late survival CV = 0.00968 +/- 0.00130; paired delta = -0.11649, paired d = -90.03.
-  Conclusion: REJECTED (opposite)
-    The late-time survival score does not collapse across matched-variance offspring laws. It remains strongly and consistently positively correlated with offspring skewness, so higher-skew critical laws keep a measurable survival advantage even at generation 512.
-    Conditional observables also retain directionally consistent skew dependence, with surviving-population size and upper-tail maxima both decreasing as skewness rises. This means the third moment is not just a transient finite-time nuisance here; it remains an experimentally visible control parameter deep into the late-time regime.
