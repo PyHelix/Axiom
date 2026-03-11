@@ -1,0 +1,116 @@
+Axiom science report | UTC timestamp 2026-03-11_0011
+
+EXPERIMENT: exp_baksneppen_bridge_concentration (593 results, 593 seeds, 20 hosts)
+  Results: summary.hub_localization_penalty -0.63360 +/- 0.00092 (d=-691.86, 100.0% sign-consistent); elapsed_sec +844.12503 +/- 15.02732 (d=56.17, 100.0% sign-consistent)
+  Conclusion: REJECTED
+    The dominant effect runs opposite to the staged hypothesis in the latest window. The present batch is large enough that this should be treated as a negative result rather than noise.
+
+EXPERIMENT: exp_quorum_refuge_pulse_memory (203 results, 203 seeds, 17 hosts)
+  Results: metric_8 +0.29170 +/- 0.00010 (d=2845.73, 100.0% sign-consistent); metric_11 +0.16271 +/- 0.00010 (d=1663.55, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_ofc_damage_healing_corridor (197 results, 197 seeds, 17 hosts)
+  Results: metric_8 -0.00298 +/- 0.00020 (d=-15.06, 100.0% sign-consistent); summary +0.01788 +/- 0.00669 (d=2.67, 99.5% sign-consistent)
+  Conclusion: NO EFFECT
+    The observed shifts are too small or too inconsistent to count as a meaningful effect in the current window. Additional runs may refine the estimate, but the present batch does not support a substantive claim.
+
+EXPERIMENT: exp_signed_sbm_core_bridge_balance_gpu_gpu (157 results, 157 seeds, 12 hosts)
+  Results: hypothesis.mid_neg_distributed_ipr_drop +0.02609 +/- 0.00096 (d=27.27, 100.0% sign-consistent); hypothesis.mid_neg_distributed_overlap_gain +0.00667 +/- 0.00356 (d=1.87, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_dla_drift_reversal_window (176 results, 176 seeds, 13 hosts)
+  Results: metric_2 +869.61085 +/- 27.26671 (d=31.89, 100.0% sign-consistent); metric_8 +0.18297 +/- 0.00989 (d=18.50, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_bootstrap_percolation_er (108 results, 108 seeds, 18 hosts)
+  Results: metric_37 +0.02898 +/- 0.00041 (d=70.71, 100.0% sign-consistent); metric_43 +0.02898 +/- 0.00041 (d=70.71, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_galtonwatson_extinction_universality (108 results, 108 seeds, 14 hosts)
+  Results: metric_3 +0.27328 +/- 0.00789 (d=34.64, 100.0% sign-consistent); metric_1 +973.45676 +/- 118.59376 (d=8.21, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_may_modular_hub_damping_alignment_gpu_gpu (15 results, 15 seeds, 10 hosts)
+  Results: summary.mean_hub_loading_alignment_corr -0.69107 +/- 0.00637 (d=-108.43, 100.0% sign-consistent); summary.mean_mid_modularity_hub_loading_delta +0.56624 +/- 0.01511 (d=37.47, 100.0% sign-consistent)
+  Conclusion: PRELIMINARY
+    The current window shows a coherent directional effect, but the sample is still below the confirmation bar. This looks worth keeping active rather than locking in as settled.
+
+EXPERIMENT: exp_bootstrap_threshold_correlation (79 results, 79 seeds, 6 hosts)
+  Results: summary +2.29855e+04 +/- 10153.36060 (d=2.26, 100.0% sign-consistent); metric_9 -1.83362e-05 +/- 0.00019 (d=-0.10, 50.6% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_goldbach_partition_growth (75 results, 75 seeds, 6 hosts)
+  Results: summary.grand_mean_ratio_to_HL +1.07222 +/- 0.00016 (d=6645.71, 100.0% sign-consistent); summary.grand_std_ratio +0.01995 +/- 0.00018 (d=113.09, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_metapop_hub_susceptibility_alignment_gpu_gpu (6 results, 6 seeds, 8 hosts)
+  Results: hypothesis.anti_alignment_increases_collapse_rate +0.79193 +/- 0.00535 (d=147.99, 100.0% sign-consistent); hypothesis.positive_alignment_increases_transient_window +0.00288 +/- 0.00020 (d=14.39, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
+
+EXPERIMENT: exp_tailspike_covariance_localization_gpu (70 results, 70 seeds, 2 hosts)
+  Results: metric_12 +0.21904 +/- 0.01590 (d=13.78, 100.0% sign-consistent); metric_15 +8.63109 +/- 0.67299 (d=12.82, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu_gpu (6 results, 6 seeds, 9 hosts)
+  Results: metric_15 +0.87472 +/- 0.00040 (d=2165.23, 100.0% sign-consistent); metric_13 +0.11570 +/- 0.00252 (d=45.91, 100.0% sign-consistent)
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
+
+EXPERIMENT: exp_fpp_fluctuation_exponent (60 results, 60 seeds, 6 hosts)
+  Results: metric_9 +0.75478 +/- 0.00234 (d=322.84, 100.0% sign-consistent); metric_7 +0.78487 +/- 0.00422 (d=185.85, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu (46 results, 46 seeds, 6 hosts)
+  Results: metric_1 +770.53326 +/- 0.38316 (d=2011.01, 100.0% sign-consistent); metric_8 -0.00632 +/- 0.00019 (d=-33.48, 100.0% sign-consistent)
+  Conclusion: CONFIRMED
+    The effect is stable across the current window and clears the prompt thresholds. The measured direction is consistent enough to treat this phenomenon as replicated in the latest batch.
+
+EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu_gpu (17 results, 17 seeds, 6 hosts)
+  Results: hypothesis.crossed_balance_gain_positive +2.28776e-04 +/- 0.00000 (d=532.02, 100.0% sign-consistent); hypothesis.crossed_firebreaks_help_at_mid_memory +1.97826e-07 +/- 0.00000 (d=0.11, 52.9% sign-consistent)
+  Conclusion: NO EFFECT
+    The observed shifts are too small or too inconsistent to count as a meaningful effect in the current window. Additional runs may refine the estimate, but the present batch does not support a substantive claim.
+
+EXPERIMENT: exp_hypergraph_pgg_inertia_crossover (44 results, 44 seeds, 9 hosts)
+  Results: condition_summary +0.00259 +/- 0.00254 (d=1.02, 88.6% sign-consistent); summary -0.03695 +/- 0.04077 (d=-0.91, 93.2% sign-consistent)
+  Conclusion: NO EFFECT
+    The observed shifts are too small or too inconsistent to count as a meaningful effect in the current window. Additional runs may refine the estimate, but the present batch does not support a substantive claim.
+
+EXPERIMENT: exp_signed_sbm_overlap_boundary_localization_gpu_gpu (40 results, 40 seeds, 7 hosts)
+  Results: hypothesis.mid_overlap_distributed_recovery_gain -6.41470e-05 +/- 0.00020 (d=-0.32, 65.0% sign-consistent); hypothesis.high_overlap_collapse_penalty +0.99793 +/- 0.00306 (d=326.29, 100.0% sign-consistent)
+  Conclusion: NO EFFECT
+    The observed shifts are too small or too inconsistent to count as a meaningful effect in the current window. Additional runs may refine the estimate, but the present batch does not support a substantive claim.
+
+EXPERIMENT: exp_swift_hohenberg_checkerboard_pinning_gpu (1 results, 1 seeds, 2 hosts)
+  Results: usable numeric payloads below threshold for summary statistics
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
+
+EXPERIMENT: exp_percolation_walk_dimension_3d_gpu_gpu (13 results, 13 seeds, 3 hosts)
+  Results: usable numeric payloads below threshold for summary statistics
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
+
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu_gpu (3 results, 3 seeds, 4 hosts)
+  Results: usable numeric payloads below threshold for summary statistics
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
+
+EXPERIMENT: exp_metapop_recurrence_recovery_alignment_gpu (1 results, 1 seeds, 4 hosts)
+  Results: usable numeric payloads below threshold for summary statistics
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu_gpu (12 results, 12 seeds, 3 hosts)
+  Results: usable numeric payloads below threshold for summary statistics
+  Conclusion: insufficient data
+    Usable numeric payloads are below the minimum threshold for a scientific call in this window. This family stays open until more analyzable results arrive.
