@@ -1,0 +1,8 @@
+PERFORMANCE AUDIT — 2026-03-10 19:49 UTC
+Slow experiments: 5
+- exp_depinning_mixed_columnar_crossover: avg 1663s, max 1675s — FIXED
+- exp_hypercycle_compartment_pulse_inheritance: avg 1653s, max 1663s — FIXED
+- exp_muller_ratchet_seedbank_corridor_synergy: avg 1656s, max 1743s — FIXED
+- exp_muller_ratchet_seedbank_refuge_tradeoff: avg 1654s, max 1710s — FIXED
+- exp_trophic_selfreg_coherence_crossover: avg 1465s, max 1465s — FIXED
+Tasks aborted: 5842
