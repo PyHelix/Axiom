@@ -1,0 +1,94 @@
+Validation Log
+Timestamp: 2026-03-11 01:18 CET
+Session result window: 2026-03-11 01:16:39 to 2026-03-11 01:17:21
+
+Results credited this session
+- Count: 2291
+- Total credit awarded: 181161.40
+- Denied sentinel results (0.01 credit): 36
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.6744217724480773e-14
+- Anti-cheat sample reviewed: 197 sanitized payloads
+- Uncredited results remaining after final pass: 0
+
+Anti-cheat flags
+- Result 2306022: empty numeric payload
+- Result 2306023: empty numeric payload
+- Result 2306030: empty numeric payload
+- Result 2306031: empty numeric payload
+- Result 2306036: empty numeric payload
+- Result 2306041: empty numeric payload
+- Result 2306043: empty numeric payload
+- Result 2306146: empty numeric payload
+- Result 2306150: empty numeric payload
+- Result 2307388: empty numeric payload
+- Result 2307389: empty numeric payload
+- Result 2307390: empty numeric payload
+- Result 2307391: empty numeric payload
+- Result 2307392: empty numeric payload
+- Result 2307393: empty numeric payload
+- Result 2307394: empty numeric payload
+- Result 2307395: empty numeric payload
+- Result 2307396: empty numeric payload
+- Result 2307397: empty numeric payload
+- Result 2307398: empty numeric payload
+- Result 2307399: empty numeric payload
+- Result 2307400: empty numeric payload
+- Result 2307402: empty numeric payload
+- Result 2307403: empty numeric payload
+- Result 2307404: empty numeric payload
+- Result 2307405: empty numeric payload
+- Result 2307406: empty numeric payload
+- Result 2307407: empty numeric payload
+- Result 2307408: empty numeric payload
+- Result 2308034: empty numeric payload
+- Result 2308035: empty numeric payload
+- Result 2308040: empty numeric payload
+- Result 2308051: empty numeric payload
+- Result 2308687: empty numeric payload
+- Result 2308688: empty numeric payload
+- Result 2339254: empty numeric payload
+
+Per-host credit summary
+- Host 341: 78 results, 43810.31 credit
+- Host 16: 43 results, 16985.14 credit
+- Host 23: 46 results, 16363.78 credit
+- Host 184: 21 results, 13959.65 credit
+- Host 105: 408 results, 12112.62 credit
+- Host 367: 267 results, 11817.36 credit
+- Host 159: 71 results, 10320.19 credit
+- Host 182: 10 results, 9933.52 credit
+- Host 10: 10 results, 7725.79 credit
+- Host 388: 165 results, 5010.86 credit
+- Host 240: 144 results, 4392.51 credit
+- Host 147: 40 results, 4180.66 credit
+- Host 268: 145 results, 3498.32 credit
+- Host 11: 12 results, 3238.13 credit
+- Host 29: 92 results, 2964.54 credit
+- Host 391: 42 results, 1730.42 credit
+- Host 87: 85 results, 1391.50 credit
+- Host 219: 48 results, 1352.40 credit
+- Host 392: 22 results, 1283.50 credit
+- Host 123: 113 results, 1183.90 credit
+- Host 61: 31 results, 886.14 credit
+- Host 102: 66 results, 858.83 credit
+- Host 345: 69 results, 796.67 credit
+- Host 222: 50 results, 723.16 credit
+- Host 85: 48 results, 712.53 credit
+- Host 9: 9 results, 654.67 credit
+- Host 1: 32 results, 610.29 credit
+- Host 249: 1 result, 543.04 credit
+- Host 385: 28 results, 418.55 credit
+- Host 350: 22 results, 380.31 credit
+- Host 387: 32 results, 352.80 credit
+- Host 347: 1 result, 304.05 credit
+- Host 140: 13 results, 240.18 credit
+- Host 137: 7 results, 159.51 credit
+- Host 134: 11 results, 109.01 credit
+- Host 255: 3 results, 88.29 credit
+- Host 107: 6 results, 68.27 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 71499
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 71904
+- Removed temporary credit script after execution
