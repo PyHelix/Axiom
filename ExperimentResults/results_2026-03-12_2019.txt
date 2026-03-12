@@ -1,0 +1,22 @@
+Axiom BOINC Scientific Analysis
+Generated: 2026-03-12 20:19 UTC
+
+EXPERIMENT: exp_epi_grid_commuter_immunity_resonance (5504 results, 5504 seeds, 51 hosts)
+  Discovered: 2026-03-12 17:10 UTC
+  Results: mean_mid_memory_attack_gain 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_mid_memory_bridge_drop -0.00011 +/- 0.00014 (d=-0.75882, sign-consistent=18.5%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. Intermediate commuter memory does not produce a measurable attack-rate reduction in the current window. The bridge-overlap shift is small, unstable, and remains below the prompt threshold for a meaningful effect.
+
+EXPERIMENT: exp_chemostat_crossfeeding_patch_switch (5160 results, 5160 seeds, 50 hosts)
+  Discovered: 2026-03-12 17:10 UTC
+  Results: mean_mid_switch_coexistence_gain -1.36252e-10 +/- 6.97161e-10 (d=-0.19544, sign-consistent=0.0%); mean_mid_switch_productivity_gain -5.45007e-11 +/- 2.78864e-10 (d=-0.19544, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The mid-switch regime does not improve coexistence or productivity by a meaningful margin in this dataset. All headline effects remain effectively zero relative to the observed run-to-run noise.
+
+EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu_gpu (45 results, 45 seeds, 13 hosts)
+  Discovered: 2026-03-10 18:56 UTC
+  Results: crossed_firebreaks_help_at_mid_memory 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); crossed_balance_gain_positive -5.69026e-06 +/- 0.00011 (d=-0.05029, sign-consistent=51.1%); crossed_mid_burn_advantage 1.79118e-07 +/- 2.19567e-06 (d=0.08158, sign-consistent=48.9%)
+  Conclusion: NO EFFECT. Crossed firebreaks do not deliver a reproducible mid-memory megafire reduction in the analyzed seeds. The auxiliary balance and burn metrics are also too small and too inconsistent to support the hypothesis.
+
+EXPERIMENT: exp_signed_sbm_core_bridge_balance_gpu_gpu (181 results, 181 seeds, 15 hosts)
+  Discovered: 2026-03-10 19:23 UTC
+  Results: mid_neg_distributed_overlap_gain 0.00949 +/- 0.00036 (d=26.19423, sign-consistent=100.0%); mid_neg_distributed_ipr_drop -0.00250 +/- 0.00011 (d=-23.63681, sign-consistent=0.0%); mid_neg_distributed_core_mass_drop 0.00663 +/- 0.00332 (d=1.99428, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. Distributed bridges increase overlap, but the localization term moves in the wrong direction and both headline shifts stay below the prompt's meaningful-effect threshold. The combined evidence does not support a stable confirmation or rejection claim for the full hypothesis.
