@@ -1,0 +1,58 @@
+Axiom BOINC Scientific Analysis
+Generated: 2026-03-12 18:20 UTC
+
+EXPERIMENT: exp_epi_grid_commuter_immunity_resonance (1805 results, 1805 seeds, 44 hosts)
+  Discovered: 2026-03-12 17:10 UTC
+  Results: mean_mid_memory_attack_gain 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_mid_memory_bridge_drop -0.00010 +/- 0.00013 (d=-0.79166, sign-consistent=18.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_chemostat_crossfeeding_patch_switch (1588 results, 1588 seeds, 41 hosts)
+  Discovered: 2026-03-12 17:10 UTC
+  Results: mean_mid_switch_coexistence_gain -1.47613e-10 +/- 6.86206e-10 (d=-0.21511, sign-consistent=0.1%); mean_mid_switch_productivity_gain -5.90452e-11 +/- 2.74482e-10 (d=-0.21511, sign-consistent=0.1%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_forestfire_ash_wind_feedback (1763 results, 1763 seeds, 45 hosts)
+  Discovered: 2026-03-12 15:01 UTC
+  Results: mid_ash_breach_reduction -0.00151 +/- 0.00341 (d=-0.44327, sign-consistent=29.8%); mid_ash_megafire_reduction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_hypergraph_pgg_refuge_turnover (1600 results, 1600 seeds, 47 hosts)
+  Discovered: 2026-03-12 15:05 UTC
+  Results: mid_turnover_coop_gain -0.00058 +/- 0.00083 (d=-0.69598, sign-consistent=20.9%); mid_turnover_mixed_gain 0.00047 +/- 0.00077 (d=0.61143, sign-consistent=75.6%); mid_turnover_switch_penalty -0.00050 +/- 9.98277e-05 (d=-4.99386, sign-consistent=99.9%); support_fraction 0.26656 +/- 0.06284 (d=4.24176, sign-consistent=99.8%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_levy_quasiperiodic_delocalization_gpu (440 results, 55 seeds, 16 hosts)
+  Discovered: 2026-03-12 17:09 UTC
+  Results: resonant_spacing_gain_mean 3.92672e-06 +/- 0.00068 (d=0.00574, sign-consistent=52.7%); resonant_ipr_drop_mean 1.05971e-07 +/- 1.70864e-06 (d=0.06202, sign-consistent=60.0%); moderate_best_fraction 0.03647 +/- 0.00515 (d=7.08257, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_grayscott_spatial_color_forcing_gpu (363 results, 44 seeds, 14 hosts)
+  Discovered: 2026-03-12 15:03 UTC
+  Results: mid_amp_pink_interface_excess_mean 7.34298e-05 +/- 1.45141e-06 (d=50.59214, sign-consistent=100.0%); mid_amp_pink_isotropy_gain_mean -0.00708 +/- 0.00058 (d=-12.30026, sign-consistent=0.0%); mid_amp_pink_entropy_excess_mean 0.03304 +/- 0.00218 (d=15.18079, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_forestfire_firebrand_canyon_persistence (891 results, 891 seeds, 34 hosts)
+  Discovered: 2026-03-12 13:04 UTC
+  Results: mid_canyon_nonmonotone_breach 5.07276e-05 +/- 0.00196 (d=0.02594, sign-consistent=51.5%); mid_canyon_nonmonotone_megafire 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); support_fraction 0.50309 +/- 0.23921 (d=2.10308, sign-consistent=94.8%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_quorum_sensing_corridor_hysteresis (860 results, 853 seeds, 33 hosts)
+  Discovered: 2026-03-12 13:04 UTC
+  Results: mid_corridor_area_gain 0.00900 +/- 0.00115 (d=7.82850, sign-consistent=100.0%); mid_corridor_width_gain -0.01044 +/- 0.00258 (d=-4.04727, sign-consistent=0.1%); support_fraction 0.99853 +/- 0.01910 (d=52.29191, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_muller_ratchet_seedbank_shock_memory_gpu (121 results, 65 seeds, 10 hosts)
+  Discovered: 2026-03-10 16:40 UTC
+  Results: mean_mid_memory_zero_class_gain 8.08124e-06 +/- 2.46252e-05 (d=0.32817, sign-consistent=64.6%); mean_seedbank_memory_superadditivity -0.00631 +/- 0.00019 (d=-33.55708, sign-consistent=0.0%); positive_fraction_mid_memory_advantage 0.00151 +/- 8.32190e-05 (d=18.09953, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured change is either too small to matter or not stable enough across seeds to support the hypothesis. Support remains insufficient for a directional claim even though secondary metrics may move.
+
+EXPERIMENT: exp_percolation_walk_dimension_3d_gpu (94 results, 62 seeds, 12 hosts)
+  Discovered: 2026-03-05 17:26 UTC
+  Results: mean_d_w 6.98086 +/- 0.09854 (d=70.84623, sign-consistent=50.0%); mean_d_w_minus_literature 3.10086 +/- 0.09854 (d=31.46952, sign-consistent=0.0%); n_good_trials 6.75806 +/- 4.65775 (d=1.45093, sign-consistent=100.0%)
+  Conclusion: REJECTED. The dominant shift runs opposite to the stated hypothesis for exp_percolation_walk_dimension_3d_gpu. The effect remains stable enough to rule out the proposed direction rather than a temporary null.
+
+EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu (113 results, 81 seeds, 16 hosts)
+  Discovered: 2026-03-05 17:26 UTC
+  Results: d_f_mean 1.30810 +/- 0.00093 (d=1401.82507, sign-consistent=100.0%); r2_mean 0.99963 +/- 0.00025 (d=3973.21274, sign-consistent=100.0%); n_good_fraction 1.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%)
+  Conclusion: CONFIRMED. The primary effect in exp_henon_chaos_boundary_fractal_gpu is directionally stable across the analyzed seeds. Support stays above the confirmation threshold and the observed shift is larger than the run-to-run noise.
+
