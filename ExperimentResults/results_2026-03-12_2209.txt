@@ -1,0 +1,52 @@
+Axiom Scientific Analysis
+Generated: 2026-03-12 22:09 UTC
+
+EXPERIMENT: exp_fpp_channel_anticorrelation_crossover (1805 results, 1805 seeds, 37 hosts)
+  Discovered: 2026-03-12 21:00 UTC
+  Results: mean_moderate_cost_gain -0.05228 +/- 0.10371 (d=-0.50413, sign-consistent=31.4%); mean_moderate_wander_drop -1.04430 +/- 1.93111 (d=-0.54078, sign-consistent=44.1%); support_fraction 0.19815 +/- 0.07271 (d=2.72540, sign-consistent=100.0%)
+  Conclusion: REJECTED. The primary cost and wander metrics move opposite to the proposed intermediate anti-correlation advantage. Support flags occur in a minority of seeds and do not overturn the direction of the main outcomes.
+
+EXPERIMENT: exp_fiberbundle_healing_patch_match (1795 results, 1795 seeds, 37 hosts)
+  Discovered: 2026-03-12 21:00 UTC
+  Results: mean_moderate_patch_peak_gain 0.00011 +/- 8.83894e-05 (d=1.23104, sign-consistent=90.6%); mean_moderate_patch_cluster_drop 0.01174 +/- 0.01229 (d=0.95575, sign-consistent=84.2%); support_fraction 0.06067 +/- 0.00101 (d=60.26702, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The observed gains are numerically tiny and remain at or below the 2% practical-effect threshold. The direction is mostly positive, but the magnitude is too small to count as a meaningful improvement.
+
+EXPERIMENT: exp_epi_grid_commuter_immunity_resonance (6439 results, 6439 seeds, 53 hosts)
+  Discovered: 2026-03-12 17:10 UTC
+  Results: mean_mid_memory_attack_gain 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_mid_memory_bridge_drop -0.00448 +/- 0.00029 (d=-15.71548, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The hypothesized reduction in attack rate does not appear at all in the full seed set. Bridge overlap shifts are small in absolute terms and run in the wrong direction, so the current data show no practical benefit.
+
+EXPERIMENT: exp_chemostat_crossfeeding_patch_switch (6066 results, 6066 seeds, 52 hosts)
+  Discovered: 2026-03-12 17:10 UTC
+  Results: mean_mid_switch_coexistence_gain -1.37083e-10 +/- 7.08390e-10 (d=-0.19351, sign-consistent=0.0%); mean_mid_switch_asymmetry_drop -5.48334e-11 +/- 2.83356e-10 (d=-0.19351, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. Both coexistence and asymmetry changes are effectively zero at machine precision across thousands of seeds. The current family does not support a meaningful patch-switch optimum.
+
+EXPERIMENT: exp_sbm_midrank_bridge_crossover_gpu (51 results, 47 seeds, 19 hosts)
+  Discovered: 2026-03-12 21:12 UTC
+  Results: mid_signal_midrank_advantage_mean 0.07741 +/- 0.00186 (d=41.64885, sign-consistent=100.0%); midrank_peak_excess_mean 0.03203 +/- 0.00133 (d=24.04278, sign-consistent=100.0%); heterogeneity_boost_mean 0.11274 +/- 0.00386 (d=29.19019, sign-consistent=100.0%)
+  Conclusion: CONFIRMED. All primary metrics are positive with very large standardized effects and perfect sign consistency across the usable seeds. The mid-rank bridge placement effect is stable enough to clear the confirmation threshold.
+
+EXPERIMENT: exp_signed_sbm_core_bridge_balance_gpu_gpu (236 results, 210 seeds, 23 hosts)
+  Discovered: 2026-03-10 19:23 UTC
+  Results: mid_neg_distributed_overlap_gain 0.00950 +/- 0.00034 (d=28.11676, sign-consistent=100.0%); mid_neg_distributed_ipr_drop -0.00250 +/- 9.83747e-05 (d=-25.43098, sign-consistent=0.0%); mid_neg_distributed_core_mass_drop 0.00659 +/- 0.00309 (d=2.13468, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The family remains mixed rather than coherently supportive, because localization improves in the opposite direction even while overlap and core-mass terms move positively. That combination fails the consistency requirement for confirmation.
+
+EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu_gpu (103 results, 65 seeds, 20 hosts)
+  Discovered: 2026-03-10 18:56 UTC
+  Results: crossed_firebreaks_help_at_mid_memory 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); crossed_balance_gain_positive -4.57030e-06 +/- 0.00014 (d=-0.03372, sign-consistent=49.2%); crossed_mid_burn_advantage 7.67360e-08 +/- 2.70392e-06 (d=0.02838, sign-consistent=47.7%)
+  Conclusion: NO EFFECT. The crossed-firebreak advantage vanishes once the family is aggregated across the larger seed set. Residual differences are tiny and fluctuate around zero rather than holding a stable sign.
+
+EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu_gpu (58 results, 55 seeds, 16 hosts)
+  Discovered: 2026-03-09 18:49 UTC
+  Results: mid_tau_medium_amp_stripe_defect_suppression_mean 0.08047 +/- 0.00239 (d=33.70043, sign-consistent=100.0%); mid_tau_medium_amp_stripe_orientation_gain_mean 0.52932 +/- 0.01321 (d=40.07211, sign-consistent=100.0%); mid_tau_stripe_nonmonotone_defect_gain_mean 0.00498 +/- 0.00264 (d=1.88890, sign-consistent=98.2%)
+  Conclusion: CONFIRMED. Moderate stripe disorder robustly suppresses defects and improves orientation at intermediate quench rate, with the nonmonotone signature still positive across nearly all seeds. The family now exceeds the 30-seed confirmation threshold with d above 1 on every reported metric.
+
+EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu (107 results, 0 seeds, 22 hosts)
+  Discovered: 2026-03-09 15:49 UTC
+  Results: mid_tau_medium_amp_stripe_defect_suppression_mean no-usable-data; mid_tau_medium_amp_stripe_orientation_gain_mean no-usable-data; mid_tau_stripe_nonmonotone_defect_gain_mean no-usable-data
+  Conclusion: SKIP. The sanitized files available for this family do not contain usable numeric experiment payloads. These look like incomplete or failed returns, so there is nothing statistical to aggregate.
+
+EXPERIMENT: exp_swift_hohenberg_moire_detuning_gpu (239 results, 27 seeds, 22 hosts)
+  Discovered: 2026-03-12 11:07 UTC
+  Results: mid_tau_mid_amp_intermediate_detuning_defect_excess_mean 0.00033 +/- 0.00012 (d=2.83869, sign-consistent=100.0%); mid_tau_mid_amp_intermediate_detuning_isotropy_gain_mean -0.06686 +/- 0.01753 (d=-3.81492, sign-consistent=0.0%); mid_tau_intermediate_detuning_nonmonotone_excess_mean -0.00029 +/- 0.00012 (d=-2.46837, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The family does not preserve the expected nonmonotone window once isotropy and nonmonotone excess are checked together. One defect metric is positive, but the other two key signatures reverse sign, so the net evidence is not supportive.
