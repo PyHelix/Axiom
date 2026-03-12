@@ -1,0 +1,92 @@
+Axiom BOINC Validation Log
+Session: 2026-03-12 02:08 CET
+
+Results credited this session
+Count: 8942
+Total credit awarded (script total): 483546.06
+Positive-credit result count: 8937
+Denied sentinel result count: 5
+CPU results: 8272
+GPU results: 665
+CPU_SCALE: 5.0196363564419115e-12
+GPU_SCALE: 2.7183629129544545e-14
+
+Anti-cheat flags
+Sample size: 200 sanitized JSON files from the uncredited queue
+Denied IDs: 2633359, 2633362, 2633395, 2633819, 2633821
+Reason: sanitized file contained only server metadata plus tiny elapsed value and no experiment_result payload; treated as empty-payload gaming / trivial stub and credited at 0.01 sentinel
+Additional note: one numeric outlier candidate was reviewed manually and not denied because the payload structure was complete and the anomaly was not high-confidence.
+
+Per-host credit summary (positive credit only)
+host_id	results	credit
+341	189	79686.41
+367	1708	61513.70
+395	353	14997.85
+401	356	14535.98
+327	302	14417.37
+324	302	14403.59
+398	350	14057.37
+105	326	13831.10
+397	326	13290.27
+333	314	12917.60
+184	17	12822.76
+339	296	11821.42
+16	29	11227.16
+23	28	9899.23
+334	229	9810.62
+332	264	9787.77
+182	9	9409.63
+330	254	9269.90
+240	240	8159.48
+192	145	7734.87
+10	9	6916.10
+268	240	6751.87
+390	180	6259.95
+400	352	6197.73
+210	330	5776.72
+399	325	5762.66
+388	182	5287.87
+396	322	5155.99
+407	9	4911.92
+379	9	4827.11
+249	10	4713.56
+147	9	4611.37
+405	8	4568.05
+1	72	4515.72
+404	8	4401.00
+406	8	4379.23
+393	8	4223.01
+408	8	4187.64
+409	8	4174.76
+410	7	4137.45
+159	43	3666.86
+389	181	3661.08
+347	50	3580.96
+413	8	2972.85
+29	74	2756.42
+85	120	2044.12
+412	1	1933.67
+11	7	1925.17
+2	44	997.20
+87	48	838.61
+123	60	725.16
+345	54	697.36
+411	7	600.33
+222	17	290.03
+80	1	247.49
+387	20	216.40
+163	16	206.65
+402	7	199.99
+219	6	197.21
+403	12	149.67
+71	5	118.40
+134	11	108.29
+107	2	23.42
+140	1	22.17
+394	1	13.02
+
+Cleanup actions
+Updated /opt/axiom_boinc/html/user/credited_count.txt to 92749
+Updated /opt/axiom_boinc/html/user/total_results_count.txt to 92923
+Temporary credit script removed from /tmp/axiom_credit.py
+No services, daemons, indexes, lock files, cron entries, or assimilator code were modified.
