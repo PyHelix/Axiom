@@ -1,0 +1,43 @@
+Axiom Validation Supplemental Log - 2026-03-12_0937
+
+Reason for supplemental pass
+- New completed results continued arriving after validate_2026-03-12_0933.txt was written and pushed.
+
+Additional credit awarded after the initial report
+- Drain pass 1: 48 results, 2184.98 credit, 9 denied
+- Drain pass 2: 60 results, 3055.20 credit, 4 denied
+- Drain pass 3: 1 result, 57.31 credit, 0 denied
+- Supplemental total: 109 results, 5297.49 credit, 13 denied
+- Immediate backlog check after the bounded drain loop: 0 uncredited results
+
+Anti-cheat flags in supplemental passes
+- Denied results set to 0.01 for trivial or empty sanitized payloads:
+  2780228 (host 413), 2781309 (host 147), 2782244 (host 413), 2782254 (host 407), 2782790 (host 413), 2782852 (host 404), 2782874 (host 405), 2782912 (host 147), 2783132 (host 413), 2781311 (host 147), 2782253 (host 413), 2782851 (host 404), 2783221 (host 413)
+
+Per-host credit summary
+- Summary window uses result.mod_time >= 2026-03-12 09:33:30 CET
+- This window is slightly wider than the three scripted drain passes because the completion queue remained live during reporting.
+- Host 324: 30 results, 1499.48 credit
+- Host 392: 5 results, 979.70 credit
+- Host 16: 2 results, 791.48 credit
+- Host 401: 19 results, 665.72 credit
+- Host 388: 16 results, 485.89 credit
+- Host 347: 1 results, 315.99 credit
+- Host 399: 28 results, 163.13 credit
+- Host 61: 9 results, 122.90 credit
+- Host 405: 3 results, 121.34 credit
+- Host 2: 4 results, 94.02 credit
+- Host 268: 1 results, 30.50 credit
+- Host 413: 9 results, 14.11 credit
+- Host 163: 1 results, 13.19 credit
+- Host 147: 3 results, 0.03 credit
+- Host 404: 3 results, 0.02 credit
+- Host 407: 2 results, 0.01 credit
+- Host 57: 1 results, 0.00 credit
+- Host 390: 4 results, 0.00 credit
+- Host 396: 4 results, 0.00 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 103735
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 97864
+- Immediate post-pass uncredited count reached zero before closing the session
