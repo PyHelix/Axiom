@@ -3,13 +3,15 @@ Timestamp: 2026-03-12 03:39 Europe/Berlin
 
 Results credited this session
 - 3265 completed results credited
-- 187884.66 total credit awarded
+- 3477 completed results credited
+- 202140.46 total credit awarded
 - Credit runs:
   - Pass 1: 3233 results, 183843.78 credit
   - Pass 2: 15 results, 456.94 credit
   - Pass 3: 4 results, 1360.84 credit
   - Pass 4: 4 results, 1217.81 credit
   - Drain loop: 9 results, 1005.29 credit
+  - Final settle pass: 212 results, 14255.80 credit
 - Live queue verification after drain: 0 uncredited completed results remaining
 
 Anti-cheat flags
@@ -34,7 +36,7 @@ Anti-cheat flags
 
 Per-host credit summary
 - Explicitly enumerated credited batch: 3245 result IDs, 186461.73 credit
-- Late-arrival drain batch: 20 additional results, 1422.93 credit
+- Late-arrival drain batches: 232 additional results, 15678.73 credit
 - Top hosts in the explicitly enumerated credited batch:
   - host 367: 724 results, 28276.81 credit
   - host 341: 56 results, 23921.08 credit
@@ -63,6 +65,6 @@ Per-host credit summary
   - host 405: 4 results, 2276.43 credit
 
 Cleanup actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 96575
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 96787
 - Updated /opt/axiom_boinc/html/user/total_results_count.txt to 96641
 - Removed temporary credit script from /tmp/axiom_credit.py
