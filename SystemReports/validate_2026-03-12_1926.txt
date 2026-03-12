@@ -1,0 +1,107 @@
+Axiom validation log 2026-03-12_1926
+
+Session results
+- Results credited this session: 6285
+- Total credit awarded to host/user totals: 229485.48
+- Denied sentinel results: 16 at 0.01 credit each
+- CPU results credited: 5676
+- GPU results credited: 593
+- Anti-cheat sample reviewed: 200 sanitized files out of 6101 available
+- Reporting window for this session summary: result.mod_time within the last 20 minutes
+
+Anti-cheat flags
+- Result 2967432 on host 413: empty/all-zero payload
+- Result 2971345 on host 393: empty/all-zero payload
+- Result 2971452 on host 406: empty/all-zero payload
+- Result 2998426 on host 413: empty/all-zero payload
+- Result 2998772 on host 413: empty/all-zero payload
+- Result 3003796 on host 393: empty/all-zero payload
+- Result 3003831 on host 405: empty/all-zero payload
+- Result 3003859 on host 406: empty/all-zero payload
+- Result 3003870 on host 249: empty/all-zero payload
+- Result 3003935 on host 407: empty/all-zero payload
+- Result 3007355 on host 407: empty/all-zero payload
+- Result 3007650 on host 406: empty/all-zero payload
+- Result 3008751 on host 393: empty/all-zero payload
+- Result 3008931 on host 249: empty/all-zero payload
+- Result 3009935 on host 249: empty/all-zero payload
+- Result 3011345 on host 249: empty/all-zero payload
+
+Per-host credit summary
+- Host 333: results=284, awarded_credit=12143.71, denied=0
+- Host 324: results=239, awarded_credit=12074.62, denied=0
+- Host 334: results=249, awarded_credit=11211.72, denied=0
+- Host 398: results=251, awarded_credit=10459.23, denied=0
+- Host 397: results=226, awarded_credit=9687.47, denied=0
+- Host 339: results=225, awarded_credit=9345.39, denied=0
+- Host 401: results=217, awarded_credit=9213.93, denied=0
+- Host 105: results=229, awarded_credit=9153.44, denied=0
+- Host 327: results=180, awarded_credit=8960.58, denied=0
+- Host 240: results=174, awarded_credit=8779.69, denied=0
+- Host 395: results=185, awarded_credit=8086.29, denied=0
+- Host 184: results=12, awarded_credit=8071.08, denied=0
+- Host 332: results=184, awarded_credit=7103.09, denied=0
+- Host 330: results=186, awarded_credit=7049.12, denied=0
+- Host 268: results=185, awarded_credit=5452.17, denied=0
+- Host 399: results=287, awarded_credit=5347.45, denied=0
+- Host 400: results=285, awarded_credit=5227.03, denied=0
+- Host 367: results=132, awarded_credit=4850.11, denied=0
+- Host 396: results=284, awarded_credit=4738.63, denied=0
+- Host 392: results=95, awarded_credit=4722.73, denied=0
+- Host 16: results=12, awarded_credit=4291.66, denied=0
+- Host 210: results=232, awarded_credit=4233.94, denied=0
+- Host 388: results=128, awarded_credit=4151.24, denied=0
+- Host 10: results=6, awarded_credit=3925.61, denied=0
+- Host 159: results=29, awarded_credit=3758.23, denied=0
+- Host 390: results=104, awarded_credit=3747.18, denied=0
+- Host 23: results=11, awarded_credit=3663.84, denied=0
+- Host 389: results=116, awarded_credit=2432.27, denied=0
+- Host 405: results=27, awarded_credit=2111.09, denied=1
+- Host 347: results=36, awarded_credit=2047.18, denied=0
+- Host 190: results=77, awarded_credit=2015.56, denied=0
+- Host 406: results=49, awarded_credit=1920.94, denied=3
+- Host 413: results=151, awarded_credit=1817.14, denied=3
+- Host 404: results=32, awarded_credit=1809.13, denied=0
+- Host 422: results=218, awarded_credit=1742.30, denied=0
+- Host 61: results=53, awarded_credit=1631.04, denied=0
+- Host 407: results=25, awarded_credit=1548.42, denied=2
+- Host 1: results=56, awarded_credit=1524.27, denied=0
+- Host 379: results=41, awarded_credit=1511.09, denied=0
+- Host 85: results=82, awarded_credit=1457.39, denied=0
+- Host 364: results=66, awarded_credit=1438.82, denied=0
+- Host 29: results=38, awarded_credit=1289.61, denied=0
+- Host 11: results=5, awarded_credit=1220.78, denied=0
+- Host 341: results=40, awarded_credit=1093.36, denied=0
+- Host 87: results=53, awarded_credit=948.00, denied=0
+- Host 249: results=103, awarded_credit=924.02, denied=4
+- Host 393: results=32, awarded_credit=909.84, denied=3
+- Host 410: results=6, awarded_credit=821.76, denied=0
+- Host 219: results=25, awarded_credit=812.27, denied=0
+- Host 299: results=2, awarded_credit=796.71, denied=0
+- Host 2: results=32, awarded_credit=754.50, denied=0
+- Host 123: results=60, awarded_credit=744.33, denied=0
+- Host 387: results=64, awarded_credit=703.43, denied=0
+- Host 409: results=12, awarded_credit=602.28, denied=0
+- Host 255: results=14, awarded_credit=445.22, denied=0
+- Host 9: results=5, awarded_credit=411.12, denied=0
+- Host 202: results=28, awarded_credit=394.24, denied=0
+- Host 345: results=26, awarded_credit=344.22, denied=0
+- Host 420: results=1, awarded_credit=281.26, denied=0
+- Host 350: results=13, awarded_credit=258.02, denied=0
+- Host 113: results=14, awarded_credit=195.96, denied=0
+- Host 421: results=3, awarded_credit=178.57, denied=0
+- Host 57: results=8, awarded_credit=174.29, denied=0
+- Host 358: results=9, awarded_credit=165.32, denied=0
+- Host 417: results=1, awarded_credit=130.31, denied=0
+- Host 222: results=7, awarded_credit=121.39, denied=0
+- Host 107: results=8, awarded_credit=99.07, denied=0
+- Host 134: results=8, awarded_credit=83.51, denied=0
+- Host 267: results=4, awarded_credit=73.94, denied=0
+- Host 394: results=4, awarded_credit=52.33, denied=0
+
+Cleanup actions
+- Price table freshness checked; no refresh required
+- Credit queue drained to zero after three passes to catch newly completed results
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 99588
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 99333
+- Temporary credit script scheduled for removal after report publication
