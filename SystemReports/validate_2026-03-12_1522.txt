@@ -7,8 +7,9 @@ Results credited this session:
 - Pass 3: 25 results, 1620.64 credit
 - Pass 4: 9 results, 263.39 credit
 - Pass 5: 22 results, 952.95 credit
-- Total credited: 5983 results
-- Total granted credit recorded in result table for this session batch: 252915.28
+- Pass 6: 145 results, 8231.21 credit
+- Total credited: 6128 results
+- Total granted credit recorded in result table for this session batch: 261146.45
 - Final uncredited completed results after catch-up loop: 0
 
 Anti-cheat review:
@@ -110,6 +111,30 @@ Per-host credit summary for this session:
 
 Cleanup and operational actions:
 - Verified price scale table freshness before crediting; refresh was not required
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 97659
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 97678
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 97804
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 97814
 - Crediting was repeated until the uncredited completed queue reached zero
+- Final catch-up pass host additions:
+- Host 327: 30 results, 1527.37 credit
+- Host 324: 28 results, 1427.32 credit
+- Host 240: 22 results, 1285.67 credit
+- Host 182: 1 results, 923.95 credit
+- Host 105: 1 results, 810.00 credit
+- Host 330: 13 results, 504.08 credit
+- Host 347: 5 results, 405.44 credit
+- Host 392: 12 results, 298.61 credit
+- Host 341: 5 results, 139.95 credit
+- Host 406: 2 results, 102.58 credit
+- Host 409: 2 results, 98.42 credit
+- Host 379: 2 results, 96.80 credit
+- Host 393: 3 results, 95.08 credit
+- Host 147: 2 results, 92.15 credit
+- Host 405: 1 results, 80.46 credit
+- Host 407: 1 results, 68.58 credit
+- Host 404: 1 results, 67.12 credit
+- Host 413: 6 results, 58.39 credit
+- Host 202: 3 results, 43.19 credit
+- Host 350: 2 results, 40.66 credit
+- Host 268: 1 results, 29.82 credit
+- Host 222: 1 results, 18.54 credit
+- Host 396: 1 results, 16.99 credit
