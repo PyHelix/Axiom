@@ -1,0 +1,37 @@
+Axiom BOINC Scientific Analysis
+Generated: 2026-03-12 1612 UTC
+
+EXPERIMENT: exp_forestfire_ash_wind_feedback (1087 results, 1087 seeds, 39 hosts)
+  Discovered: 2026-03-12 15:01 UTC
+  Results: mid_ash_breach_reduction -0.00147 +/- 0.00309 (d=-0.47792, sign-consistent=71.5%); mid_ash_megafire_reduction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The family does not show a meaningful effect at the tested sample sizes. The estimated change is either too small to matter or is not directionally stable across seeds.
+
+EXPERIMENT: exp_hypergraph_pgg_refuge_turnover (928 results, 928 seeds, 39 hosts)
+  Discovered: 2026-03-12 15:05 UTC
+  Results: mid_turnover_coop_gain -0.00061 +/- 0.00079 (d=-0.77570, sign-consistent=20.2%); mid_turnover_mixed_gain 0.00043 +/- 0.00072 (d=0.60269, sign-consistent=73.7%); mid_turnover_switch_penalty -0.00050 +/- 8.94743e-05 (d=-5.58161, sign-consistent=100.0%); support_fraction 0.26511 +/- 0.05859 (d=4.52482, sign-consistent=99.9%)
+  Conclusion: NO EFFECT. The family does not show a meaningful effect at the tested sample sizes. The estimated change is either too small to matter or is not directionally stable across seeds.
+
+EXPERIMENT: exp_rfim_domain_wall_roughness (1023 results, 874 seeds, 45 hosts)
+  Discovered: 2026-03-05 10:56 UTC
+  Results: h15_peak_gain_vs_h10_h20 0.50523 +/- 0.04638 (d=10.89279, sign-consistent=100.0%); mean_zeta_h15 1.46488 +/- 0.02467 (d=59.38395, sign-consistent=100.0%); mean_zeta_h40_minus_h05 -0.39564 +/- 0.15029 (d=-2.63252, sign-consistent=0.6%)
+  Conclusion: CONFIRMED. The mid-disorder roughness peak is consistently positive across the compiled runs. The disorder sweep does not support a simple monotone crossover; instead it shows a stable nonmonotone maximum near h=1.5.
+
+EXPERIMENT: exp_forestfire_firebrand_canyon_persistence (818 results, 818 seeds, 34 hosts)
+  Discovered: 2026-03-12 13:04 UTC
+  Results: mid_canyon_nonmonotone_breach 4.81694e-05 +/- 0.00197 (d=0.02443, sign-consistent=51.1%); mid_canyon_nonmonotone_megafire 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); support_fraction 0.50122 +/- 0.23810 (d=2.10509, sign-consistent=94.7%)
+  Conclusion: NO EFFECT. The family does not show a meaningful effect at the tested sample sizes. The estimated change is either too small to matter or is not directionally stable across seeds.
+
+EXPERIMENT: exp_quorum_sensing_corridor_hysteresis (789 results, 782 seeds, 34 hosts)
+  Discovered: 2026-03-12 13:04 UTC
+  Results: mid_corridor_area_gain 0.00899 +/- 0.00116 (d=7.77696, sign-consistent=100.0%); mid_corridor_width_gain -0.01045 +/- 0.00263 (d=-3.97697, sign-consistent=0.1%); support_fraction 0.99840 +/- 0.01993 (d=50.10447, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The family does not show a meaningful effect at the tested sample sizes. The estimated change is either too small to matter or is not directionally stable across seeds.
+
+EXPERIMENT: exp_grayscott_spatial_color_forcing_gpu (251 results, 31 seeds, 21 hosts)
+  Discovered: 2026-03-12 15:03 UTC
+  Results: mid_amp_pink_interface_excess_mean 7.33809e-05 +/- 1.17618e-06 (d=62.38903, sign-consistent=100.0%); mid_amp_pink_isotropy_gain_mean -0.00703 +/- 0.00049 (d=-14.24355, sign-consistent=0.0%); mid_amp_pink_entropy_excess_mean 0.03308 +/- 0.00206 (d=16.04763, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The family does not show a meaningful effect at the tested sample sizes. The estimated change is either too small to matter or is not directionally stable across seeds.
+
+EXPERIMENT: exp_ising_mpemba_annular_field_gpu (314 results, 45 seeds, 27 hosts)
+  Discovered: 2026-03-12 13:03 UTC
+  Results: mid_field_mid_radius_mpemba_gain_vs_inner_outer_mean 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mid_field_mid_radius_support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mid_field_mid_width_mpemba_gain_vs_narrow_broad_mean -0.50000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The family does not show a meaningful effect at the tested sample sizes. The estimated change is either too small to matter or is not directionally stable across seeds.
