@@ -1,0 +1,49 @@
+EXPERIMENT: exp_nasch_clustered_anticipation_memory (3427 results, 3427 seeds, 49 hosts)
+  Discovered: 2026-03-12 12:14 UTC
+  Results: mean_mid_cluster_advantage 1.72830 +/- 0.39039 (d=4.42715, sign-consistent=99.9%); intermediate_memory_support_fraction 0.83371 +/- 0.14880 (d=5.60298, sign-consistent=100.0%)
+  Conclusion: CONFIRMED. The primary effect is directionally consistent and well outside the observed noise over at least 30 seeds. This clears the confirmation threshold for the current-day window.
+
+EXPERIMENT: exp_muller_ratchet_corridor_shock_autocorrelation (408 results, 408 seeds, 32 hosts)
+  Discovered: 2026-03-12 12:14 UTC
+  Results: interaction_gain_mean 0.00018 +/- 0.00161 (d=0.11173, sign-consistent=53.4%); rescue_interaction_mean 0.01857 +/- 0.00459 (d=4.04558, sign-consistent=100.0%); support_fraction_mean 0.28980 +/- 0.03292 (d=8.80192, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect remains small relative to the batch variability or lacks consistent support across seeds. This window does not show a meaningful signal.
+
+EXPERIMENT: exp_nasch_incident_ramp_heterogeneity (353 results, 353 seeds, 38 hosts)
+  Discovered: 2026-03-12 12:14 UTC
+  Results: broad_profile_synergy_mean 0.00928 +/- 0.01935 (d=0.47980, sign-consistent=71.4%); broad_recovery_gain_mean 1.21875 +/- 3.20772 (d=0.37994, sign-consistent=69.1%); trimodal_best_fraction_mean 0.22890 +/- 0.01415 (d=16.17827, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect remains small relative to the batch variability or lacks consistent support across seeds. This window does not show a meaningful signal.
+
+EXPERIMENT: exp_forestfire_firebrand_canyon_persistence (395 results, 395 seeds, 27 hosts)
+  Discovered: 2026-03-12 13:04 UTC
+  Results: mid_canyon_nonmonotone_breach 5.94496e-05 +/- 0.00204 (d=0.02913, sign-consistent=50.4%); mid_canyon_nonmonotone_megafire 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); support_fraction 0.49684 +/- 0.23698 (d=2.09650, sign-consistent=94.4%)
+  Conclusion: NO EFFECT. The primary effect remains small relative to the batch variability or lacks consistent support across seeds. This window does not show a meaningful signal.
+
+EXPERIMENT: exp_quorum_sensing_corridor_hysteresis (367 results, 363 seeds, 23 hosts)
+  Discovered: 2026-03-12 13:04 UTC
+  Results: mid_corridor_area_gain 0.00898 +/- 0.00126 (d=7.12965, sign-consistent=100.0%); mid_corridor_width_gain -0.01049 +/- 0.00287 (d=-3.64931, sign-consistent=0.3%); support_fraction 0.99793 +/- 0.02263 (d=44.09167, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect remains small relative to the batch variability or lacks consistent support across seeds. This window does not show a meaningful signal.
+
+EXPERIMENT: exp_trophic_rank_forcing_localization_gpu (230 results, 36 seeds, 15 hosts)
+  Discovered: 2026-03-12 13:18 UTC
+  Results: mid_coherence_mid_alignment_reactivity_gain_vs_flat_steep_mean -0.00012 +/- 0.00048 (d=-0.25408, sign-consistent=30.6%); mid_coherence_mid_alignment_upper_mass_gain_vs_flat_mean -0.00015 +/- 0.00028 (d=-0.52922, sign-consistent=33.3%); mid_coherence_mid_alignment_support_fraction 0.32756 +/- 0.01697 (d=19.30225, sign-consistent=100.0%)
+  Conclusion: REJECTED. The primary effect runs opposite to the hypothesis across the current window. Additional seeds are no longer needed to see the direction mismatch.
+
+EXPERIMENT: exp_ising_mpemba_annular_field_gpu (220 results, 34 seeds, 15 hosts)
+  Discovered: 2026-03-12 13:18 UTC
+  Results: mid_field_mid_radius_mpemba_gain_vs_inner_outer_mean 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mid_field_mid_radius_support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mid_field_mid_width_mpemba_gain_vs_narrow_broad_mean -0.50000 +/- 0.00000 (d=inf, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The primary effect remains small relative to the batch variability or lacks consistent support across seeds. This window does not show a meaningful signal.
+
+EXPERIMENT: exp_ising_mpemba_chirped_field_gpu (80 results, 15 seeds, 11 hosts)
+  Discovered: 2026-03-12 12:15 UTC
+  Results: mid_field_mild_chirp_gain_vs_uniform_mean 0.04731 +/- 0.09441 (d=0.50112, sign-consistent=66.7%); mid_field_mild_chirp_support_fraction 0.25821 +/- 0.32715 (d=0.78925, sign-consistent=73.3%); mid_field_mild_chirp_crossover_advance_mean -2.80000 +/- 10.47664 (d=-0.26726, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The primary effect remains small relative to the batch variability or lacks consistent support across seeds. This window does not show a meaningful signal.
+
+EXPERIMENT: exp_swift_hohenberg_moire_detuning_gpu (45 results, 3 seeds, 3 hosts)
+  Discovered: 2026-03-12 12:15 UTC
+  Results: mid_tau_mid_amp_intermediate_detuning_defect_excess_mean 0.00037 +/- 4.02024e-05 (d=9.30875, sign-consistent=100.0%); mid_tau_mid_amp_intermediate_detuning_isotropy_gain_mean -0.05233 +/- 0.01178 (d=-4.44347, sign-consistent=0.0%); mid_tau_intermediate_detuning_nonmonotone_excess_mean -0.00022 +/- 3.21401e-05 (d=-6.91166, sign-consistent=0.0%)
+  Conclusion: SKIP. Fewer than 10 seeds were available in the current window, so this batch is too small to interpret.
+
+EXPERIMENT: exp_sbm_bridge_hub_localization_gpu_gpu (19 results, 10 seeds, 6 hosts)
+  Discovered: 2026-03-12 12:26 UTC
+  Results: mid_signal_bridge_penalty_positive 0.61451 +/- 0.00453 (d=135.74045, sign-consistent=100.0%); mid_signal_localization_gain_positive 0.04381 +/- 0.00111 (d=39.58586, sign-consistent=100.0%); bridge_corr_gain_positive 0.55531 +/- 0.00177 (d=312.94898, sign-consistent=100.0%)
+  Conclusion: PRELIMINARY. The effect is directionally positive in this batch, but the seed count is still below the confirmation threshold. More results are needed before locking the finding.
