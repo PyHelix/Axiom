@@ -1,0 +1,24 @@
+EXPERIMENT: exp_fiberbundle_delay_healing_entropy (4454 results, 4446 seeds, 52 hosts)
+  Discovered: 2026-03-04 10:09 UTC
+  Results: moderate_delay_mid_disorder_failure_gain 5.14481e-17 +/- 1.96086e-15 (d=0.02624, sign-consistent=2.6%); long_delay_failure_gain -2.65882e-18 +/- 1.69365e-15 (d=-0.00157, sign-consistent=18.8%)
+  Conclusion: NO EFFECT. Moderate healing delay does not increase failure load in any meaningful way, and the long-delay penalty is also negligible relative to run-to-run noise. With more than four thousand valid seeds, this now reads as a settled null result rather than an underpowered one.
+
+EXPERIMENT: exp_activation_function_landscape (1044 results, 1044 seeds, 32 hosts)
+  Discovered: 2026-03-06 21:58 UTC
+  Results: gelu_minus_relu_test_acc -0.03199 +/- 0.02308 (d=-1.38572, sign-consistent=0.0%); swish_minus_relu_test_acc -0.03067 +/- 0.02295 (d=-1.33647, sign-consistent=5.4%); sigmoid_minus_relu_test_acc -0.02726 +/- 0.04546 (d=-0.59949, sign-consistent=73.9%)
+  Conclusion: SKIP. This family is a descriptive benchmark rather than a single hypothesis test, so the confirm/reject thresholds do not apply cleanly. The current payloads still show a stable pattern: on this fixed small MLP, ReLU outperforms GELU and Swish, while sigmoid remains worse still.
+
+EXPERIMENT: exp_grayscott_crossed_feed_kill_alignment_gpu (36 valid results, 36 seeds, 11 hosts; 156 sanitized files total)
+  Discovered: 2026-03-09 22:46 UTC
+  Results: crossed_mid_interface_advantage 1.37274e-04 +/- 9.18310e-04 (d=0.14949, sign-consistent=44.4%); mid_vs_iid_interface_gain -0.00319 +/- 0.00155 (d=-2.05959, sign-consistent=5.6%); high_crossed_minus_high_aligned_entropy 0.01816 +/- 0.00655 (d=2.77337, sign-consistent=100.0%)
+  Conclusion: SKIP. Most recent files are incomplete, so this family is dominated by execution failures rather than clean scientific signal. Only 36 of 156 sanitized files contain experiment output, and the valid subset is internally mixed on the primary interface metrics.
+
+EXPERIMENT: exp_tailspike_covariance_localization_gpu (104 results, 104 seeds, 10 hosts)
+  Discovered: 2026-03-09 22:22 UTC
+  Results: critical_heavytail_block_advantage -8.24202e-05 +/- 5.26045e-04 (d=-0.15668, sign-consistent=46.2%); critical_tail_reversal -1.30354e-04 +/- 0.00456 (d=-0.02857, sign-consistent=45.2%); critical_tail_gap_penalty 0.12397 +/- 1.19191 (d=0.10401, sign-consistent=48.1%)
+  Conclusion: NO EFFECT. Heavy-tailed noise does not create the predicted block-favoring alignment window near the critical setting. All three summary contrasts stay near zero compared with their across-seed spread, so the current aggregate is best treated as null.
+
+EXPERIMENT: exp_xy_quench_stripe_vortex_gpu (385 results, 385 seeds, 18 hosts)
+  Discovered: 2026-03-09 23:48 UTC
+  Results: mid_tau_medium_amp_stripe_defect_suppression_vs_iid 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mid_tau_medium_amp_stripe_coherence_gain_vs_iid 0.56941 +/- 0.06387 (d=8.91559, sign-consistent=100.0%); mid_tau_high_amp_nonmonotone_defect_return 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The primary vortex-suppression metric is identically null across the valid payloads, even though the same runs show a large coherence increase. That means the hypothesized defect-reduction mechanism is not present in the returned data.
