@@ -1,0 +1,41 @@
+EXPERIMENT: exp_muller_ratchet_corridor_shock_autocorrelation (2060 results, 2060 seeds, 40 hosts)
+  Discovered: 2026-03-12 09:16 UTC
+  Results: mean_interaction_gain -1.62280e-05 +/- 0.00185 (d=-0.00877, sign-consistent=50.5%); support_fraction 0.28731 +/- 0.03565 (d=8.05894, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured effect remains too small or too noisy to support the hypothesis. Added seeds did not separate the target signal from background variation in a meaningful way.
+
+EXPERIMENT: exp_nasch_incident_ramp_heterogeneity (1516 results, 1516 seeds, 45 hosts)
+  Discovered: 2026-03-11 21:59 UTC
+  Results: mean_broad_synergy 0.00818 +/- 0.02056 (d=0.39775, sign-consistent=68.7%); mean_trimodal_best_fraction 0.22972 +/- 0.01480 (d=15.51832, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured effect remains too small or too noisy to support the hypothesis. Added seeds did not separate the target signal from background variation in a meaningful way.
+
+EXPERIMENT: exp_ising_mpemba_chirped_field_gpu (34 results, 34 seeds, 13 hosts)
+  Discovered: 2026-03-12 11:19 UTC
+  Results: mid_field_mild_chirp_gain_vs_uniform_mean 0.02902 +/- 0.03426 (d=0.84729, sign-consistent=70.6%); mid_field_mild_chirp_support_fraction 0.18022 +/- 0.14997 (d=1.20173, sign-consistent=82.4%)
+  Conclusion: NO EFFECT. The measured effect remains too small or too noisy to support the hypothesis. Added seeds did not separate the target signal from background variation in a meaningful way.
+
+EXPERIMENT: exp_spiked_covariance_mask_resonance_gpu_gpu (115 results, 115 seeds, 15 hosts)
+  Discovered: 2026-03-12 09:25 UTC
+  Results: critical_resonant_alignment_drop_vs_iid_mean 0.02320 +/- 0.00093 (d=24.89959, sign-consistent=0.0%); critical_resonant_is_worst_mean 0.01068 +/- 0.00251 (d=4.25642, sign-consistent=100.0%)
+  Conclusion: REJECTED. The estimated effect is now stably opposite to the hypothesized direction. Additional seeds strengthened the contradiction rather than rescuing the proposed mechanism.
+
+EXPERIMENT: exp_crowding_trap_memory_release_window (2647 results, 2647 seeds, 39 hosts)
+  Discovered: 2026-03-12 05:27 UTC
+  Results: mean_crowding_induced_reentrant_gain -0.00022 +/- 0.00012 (d=-1.84861, sign-consistent=2.3%); mean_interior_best_fraction 0.35187 +/- 0.00577 (d=61.03276, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured effect remains too small or too noisy to support the hypothesis. Added seeds did not separate the target signal from background variation in a meaningful way.
+
+EXPERIMENT: exp_metapop_seedbank_phase_pulse_rescue (2621 results, 2621 seeds, 39 hosts)
+  Discovered: 2026-03-12 05:27 UTC
+  Results: mean_mid_phase_gain 0.01545 +/- 7.17248e-05 (d=215.41582, sign-consistent=100.0%); mean_support_fraction 0.48705 +/- 0.00202 (d=241.50880, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The measured effect remains too small or too noisy to support the hypothesis. Added seeds did not separate the target signal from background variation in a meaningful way.
+
+EXPERIMENT: exp_swift_hohenberg_moire_detuning_gpu (14 results, 14 seeds, 9 hosts)
+  Discovered: 2026-03-12 11:27 UTC
+  Results: mid_tau_intermediate_detuning_nonmonotone_excess_mean -0.00030 +/- 0.00011 (d=-2.80816, sign-consistent=0.0%); mid_tau_mid_amp_intermediate_detuning_isotropy_gain_mean -0.06620 +/- 0.01749 (d=-3.78505, sign-consistent=0.0%)
+  Conclusion: NO EFFECT. The measured effect remains too small or too noisy to support the hypothesis. Added seeds did not separate the target signal from background variation in a meaningful way.
+
+EXPERIMENT: exp_kac_markov_sign_edge_crossover (149 results, 149 seeds, 9 hosts)
+  Discovered: 2026-03-12 11:27 UTC
+  Results: mean_moderate_edge_gain 0.02270 +/- 0.00298 (d=7.61786, sign-consistent=100.0%); moderate_support_fraction 1.00000 +/- 0.00000e+00 (d=inf, sign-consistent=100.0%)
+  Conclusion: CONFIRMED. The effect is large, directionally stable, and persists across the expanded seed set. The accumulated evidence clears the confirmation threshold with substantial margin.
+
+KEY_RESULT: exp_spiked_covariance_mask_resonance_gpu_gpu rejected; exp_kac_markov_sign_edge_crossover confirmed
