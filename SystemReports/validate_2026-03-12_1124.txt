@@ -1,0 +1,81 @@
+Validation session: 2026-03-12 11:24 Europe/Berlin
+
+Results credited this session
+- Credited results: 5413
+- Total credit awarded: 232001.10
+- CPU results credited: 4849
+- GPU results credited: 558
+- Denied results: 0
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.8219237480896414e-14
+- Queue status after drain loop: 0 uncredited completed experiment results remaining
+
+Anti-cheat review
+- Sampled 200 sanitized result files from the uncredited queue
+- Checks run: trivial/empty payload scan, duplicate payload hash scan, same-workunit outlier comparison, short-runtime review
+- Flagged results: none
+
+Per-host credit summary
+- Host 1: 2580.11
+- Host 2: 573.30
+- Host 9: 314.12
+- Host 10: 4714.06
+- Host 11: 1101.84
+- Host 16: 4864.06
+- Host 23: 6511.31
+- Host 29: 1524.21
+- Host 57: 154.38
+- Host 60: 11.89
+- Host 61: 1922.65
+- Host 71: 177.19
+- Host 85: 1524.30
+- Host 105: 10465.36
+- Host 134: 72.50
+- Host 137: 163.33
+- Host 147: 1810.69
+- Host 159: 2943.50
+- Host 163: 158.47
+- Host 182: 6060.32
+- Host 184: 6193.83
+- Host 192: 5023.88
+- Host 202: 287.86
+- Host 210: 3844.09
+- Host 240: 9425.23
+- Host 268: 4674.15
+- Host 299: 443.33
+- Host 324: 9020.70
+- Host 327: 10490.96
+- Host 330: 7310.71
+- Host 332: 6504.52
+- Host 333: 9753.45
+- Host 334: 9984.48
+- Host 339: 9358.26
+- Host 347: 2101.36
+- Host 350: 222.03
+- Host 364: 1021.08
+- Host 379: 1243.51
+- Host 387: 730.92
+- Host 388: 3323.79
+- Host 389: 1878.36
+- Host 390: 4087.23
+- Host 392: 8248.75
+- Host 393: 1921.22
+- Host 395: 11196.27
+- Host 396: 4020.20
+- Host 397: 10983.77
+- Host 398: 9380.60
+- Host 399: 4093.43
+- Host 400: 4211.78
+- Host 401: 10311.03
+- Host 404: 2379.83
+- Host 405: 1675.51
+- Host 406: 1272.05
+- Host 407: 2668.27
+- Host 409: 1113.49
+- Host 410: 2081.52
+- Host 413: 1872.05
+
+Cleanup actions
+- Created and ran /tmp/axiom_credit.py for the main batch, then removed it
+- Ran two follow-up inline credit passes to drain late-arriving completed results
+- Updated /opt/axiom_boinc/html/user/credited_count.txt from 96006 to 101419
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt from 100754 to 101420
