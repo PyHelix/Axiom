@@ -1,0 +1,75 @@
+Axiom Validation Log - 2026-03-12 17:16 Europe/Berlin
+
+Results credited this session
+- Batch 1: 4840 results, 177712.86 cobblestones
+- Batch 2: 39 results, 1331.95 cobblestones
+- Session total: 4879 results, 179044.81 cobblestones
+- Queue status after catch-up pass: 0 completed/uncredited results remaining
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.5319638598461795e-14
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from the uncredited queue
+- Flagged 17 GPU-task results for denied credit because the sanitized numeric payload was empty
+- Denied results were credited at the 0.01 sentinel value
+- Flagged result IDs and names:
+  2910355 exp_trophic_rank_forcing_localization_gpu_e27aa0_0 - empty numeric payload
+  2913315 exp_trophic_rank_forcing_localization_gpu_cfa051_0 - empty numeric payload
+  2913323 exp_ising_mpemba_annular_field_gpu_96aa86_0 - empty numeric payload
+  2914383 exp_ising_mpemba_annular_field_gpu_7fe59d_0 - empty numeric payload
+  2916958 exp_trophic_rank_forcing_localization_gpu_cd4f24_0 - empty numeric payload
+  2917170 exp_trophic_rank_forcing_localization_gpu_2929d2_0 - empty numeric payload
+  2917257 exp_trophic_rank_forcing_localization_gpu_8d34bc_0 - empty numeric payload
+  2957001 exp_grayscott_spatial_color_forcing_gpu_cac26d_0 - empty numeric payload
+  2957584 exp_grayscott_spatial_color_forcing_gpu_25a01a_0 - empty numeric payload
+  2957591 exp_grayscott_spatial_color_forcing_gpu_becb65_0 - empty numeric payload
+  2958112 exp_grayscott_spatial_color_forcing_gpu_d463eb_0 - empty numeric payload
+  2960444 exp_grayscott_spatial_color_forcing_gpu_2957e7_0 - empty numeric payload
+  2961486 exp_grayscott_spatial_color_forcing_gpu_a14a38_0 - empty numeric payload
+  2967393 exp_grayscott_spatial_color_forcing_gpu_2487f0_0 - empty numeric payload
+  2967398 exp_grayscott_spatial_color_forcing_gpu_a72e3c_0 - empty numeric payload
+  2967451 exp_grayscott_spatial_color_forcing_gpu_46eca7_0 - empty numeric payload
+  2967816 exp_grayscott_spatial_color_forcing_gpu_3146bb_0 - empty numeric payload
+
+Per-host credit summary
+- First batch credited 65 hosts. Top additions:
+  host 327 +10181.84
+  host 397 +9549.87
+  host 401 +9466.26
+  host 324 +9252.48
+  host 398 +9246.64
+  host 334 +8843.00
+  host 105 +8593.90
+  host 395 +8423.88
+  host 333 +8117.63
+  host 339 +8001.36
+  host 240 +7039.49
+  host 332 +5468.62
+  host 184 +5347.89
+  host 392 +5278.65
+  host 268 +4885.21
+- Catch-up batch credited 20 hosts:
+  host 395 +214.33
+  host 330 +179.36
+  host 334 +129.47
+  host 410 +128.06
+  host 29 +92.06
+  host 405 +82.37
+  host 396 +64.57
+  host 400 +52.46
+  host 409 +51.46
+  host 324 +46.45
+  host 379 +44.09
+  host 333 +39.84
+  host 393 +32.63
+  host 85 +32.30
+  host 406 +29.30
+  host 268 +29.47
+  host 388 +28.15
+  host 413 +19.89
+  host 399 +18.72
+  host 210 +16.96
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 99716
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 99742
+- Saved this report to /opt/axiom/experiment_session/
