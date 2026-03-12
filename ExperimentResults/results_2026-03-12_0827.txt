@@ -1,0 +1,39 @@
+EXPERIMENT: exp_metapop_seedbank_phase_pulse_rescue (1384 results, 1384 seeds, 36 hosts)
+  Discovered: 2026-03-12 05:27 UTC
+  Results: mean_mid_phase_gain 0.01546 +/- 7.57944e-05 (d=203.91736, sign-consistent=100.0%); mean_support_fraction 0.48687 +/- 0.00210 (d=231.95989, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect stayed within the practical noise band or below the 2% relevance threshold. This batch therefore does not show a meaningful advantage in the target regime.
+
+EXPERIMENT: exp_crowding_trap_memory_release_window (1377 results, 1377 seeds, 35 hosts)
+  Discovered: 2026-03-12 05:27 UTC
+  Results: mean_crowding_induced_reentrant_gain -0.00023 +/- 0.00014 (d=-1.66991, sign-consistent=2.6%); mean_interior_best_fraction 0.35146 +/- 0.00600 (d=58.57361, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect stayed within the practical noise band or below the 2% relevance threshold. This batch therefore does not show a meaningful advantage in the target regime.
+
+EXPERIMENT: exp_hypercycle_catastrophe_memory_exchange (3186 results, 3186 seeds, 40 hosts)
+  Discovered: 2026-03-12 03:07 UTC
+  Results: mean_mid_memory_advantage -0.00024 +/- 0.00782 (d=-0.03041, sign-consistent=48.1%); mean_intermediate_support_fraction 0.46157 +/- 0.01715 (d=26.91630, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect stayed within the practical noise band or below the 2% relevance threshold. This batch therefore does not show a meaningful advantage in the target regime.
+
+EXPERIMENT: exp_marine_reserve_rednoise_phase_locking (2940 results, 2940 seeds, 40 hosts)
+  Discovered: 2026-03-12 03:07 UTC
+  Results: mean_mid_memory_advantage 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_phase_lock_support_fraction 1.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The primary effect stayed within the practical noise band or below the 2% relevance threshold. This batch therefore does not show a meaningful advantage in the target regime.
+
+EXPERIMENT: exp_invasion_percolation_gradient_correlation_crossover (226 results, 226 seeds, 13 hosts)
+  Discovered: 2026-03-12 07:26 UTC
+  Results: target_trap_synergy_mean -0.08624 +/- 0.00377 (d=-22.85242, sign-consistent=0.0%); target_roughness_synergy_mean -6.98133 +/- 0.30212 (d=-23.10766, sign-consistent=0.0%); target_support_fraction 0.00112 +/- 0.00193 (d=0.58133, sign-consistent=31.0%)
+  Conclusion: REJECTED. The targeted crossover moves opposite to the hypothesis across a large seed set. Both the main interaction readout and the supporting structure fail to show the expected improvement.
+
+EXPERIMENT: exp_forestfire_ridge_windshift_interaction (220 results, 220 seeds, 13 hosts)
+  Discovered: 2026-03-12 07:26 UTC
+  Results: target_interaction_gain_mean -0.02090 +/- 0.00213 (d=-9.83011, sign-consistent=0.0%); target_support_fraction 0.12794 +/- 0.02246 (d=5.69614, sign-consistent=100.0%)
+  Conclusion: REJECTED. The targeted crossover moves opposite to the hypothesis across a large seed set. Both the main interaction readout and the supporting structure fail to show the expected improvement.
+
+EXPERIMENT: exp_schnakenberg_moire_detuning_gpu_gpu (121 results, 121 seeds, 25 hosts)
+  Discovered: 2026-03-12 05:56 UTC
+  Results: mid_nonmonotone_isotropy_excess_mean 1.59472e-06 +/- 0.00025 (d=0.00639, sign-consistent=50.4%); support_flag_mean 3.96771e-05 +/- 0.00034 (d=0.11738, sign-consistent=57.0%)
+  Conclusion: NO EFFECT. The primary effect stayed within the practical noise band or below the 2% relevance threshold. This batch therefore does not show a meaningful advantage in the target regime.
+
+EXPERIMENT: exp_sbm_spectral_detection_gpu_gpu (207 results, 207 seeds, 27 hosts)
+  Discovered: 2026-03-06 04:08 UTC
+  Results: thr_first_mean 1.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%); thr_last_mean 1.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%)
+  Conclusion: SKIP. The sanitized summaries remain schema-dependent across hardware tiers, so this family still does not support a single stable threshold readout. The boundary metrics are reported for visibility, but the batch should be revisited with a normalized export before drawing a scientific conclusion.
