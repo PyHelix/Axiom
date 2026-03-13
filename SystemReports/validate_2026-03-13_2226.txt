@@ -1,11 +1,11 @@
 Validation report
-Timestamp: 2026-03-13 22:29 CET
-Session window (result.mod_time): 2026-03-13 22:23:38 to 2026-03-13 22:29:21
+Timestamp: 2026-03-13 22:31 CET
+Session window (result.mod_time): 2026-03-13 22:23:38 to 2026-03-13 22:29:21, plus a final drain pass immediately after report publication
 
 Results credited this session
-- Credit passes executed: 6
-- Results credited: 15483
-- Total awarded credit: 246140.69
+- Credit passes executed: 7
+- Results credited: 15742
+- Total awarded credit: 248737.06
 - Denied sentinel results: 36 at 0.01 credit each
 - Credit formula scales used:
   CPU_SCALE=5.0196363564419115e-12
@@ -20,6 +20,7 @@ Credit pass totals
 - Pass 4: 248 results, 2028.40 credit
 - Pass 5: 5 results, 28.51 credit
 - Pass 6: 360 results, 3035.24 credit
+- Pass 7: 259 results, 2596.37 credit
 
 Anti-cheat review
 - Sampled sanitized result files: 200
@@ -64,7 +65,7 @@ Anti-cheat review
   - result 3640225 host 330 elapsed 4.131s
 
 Per-host credit summary
-Note: host totals below are grouped from the validation session window in `result.mod_time`.
+Note: host totals below are grouped from the `result.mod_time` session window through 22:29:21. A final drain pass credited 259 additional late arrivals after the report was first published.
 - host 1: 42 results, 2029.29 credit
 - host 2: 23 results, 338.31 credit
 - host 9: 11 results, 588.51 credit
