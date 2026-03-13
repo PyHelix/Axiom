@@ -78,6 +78,14 @@ Takes yesterday's findings scored >80 and enriches them with deeper analysis. Re
 ### Website Counters (cron, not a loop step)
 Leaderboard queries DB directly. Counter files updated every 15 min via cron.
 
+## Iterative Deepening — Adaptive Computation
+
+Experiments do not use fixed problem sizes. Instead, each task uses **iterative deepening**: it starts with a small problem (e.g., a 64x64 matrix), runs the computation, measures how long it took, and doubles the problem size for the next pass. Before each new pass, it estimates whether the next one will fit in the remaining time budget based on the known time complexity (e.g., O(N³) for eigenvalue decomposition means each doubling takes ~8x longer).
+
+This approach is **adversarial to pre-commitment** — the script never guesses in advance how large a computation the machine can handle. A fast machine automatically goes deeper than a slow one, and neither wastes time or runs over budget. The result is that every volunteer machine contributes the deepest computation it can within its time window.
+
+The AI research steps decide *which* scientific questions to investigate. The volunteer's hardware decides *how deep* it can go. Statistical power comes from running hundreds of independent seeds across the network, each going as deep as its host allows.
+
 ## Data-Driven Validation Philosophy
 
 The system validates through data, not trust. Every experiment runs across dozens to hundreds of independent seeds on separate volunteer hosts. Results are only considered meaningful when they show:
