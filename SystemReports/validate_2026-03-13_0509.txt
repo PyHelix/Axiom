@@ -1,65 +1,66 @@
 Axiom Validation Log
-Timestamp: 2026-03-13 05:09 CET
+Timestamp: 2026-03-13 05:13 CET
+Session window start: 2026-03-13 05:05:44 CET
 
 Session summary
-- Results credited this session: 7370
-- Total granted credit this session: 333783.57 cobblestones
-- Credit update batches: 2026-03-13 05:05:44 (7144), 2026-03-13 05:08:39 (179), 2026-03-13 05:09:24 (45), 2026-03-13 05:09:25 (2)
+- Results credited this session: 7598
+- Total granted credit this session: 341869.12 cobblestones
+- Denied sentinel grants: 3 results, 0.03 total credit
 - Queue status at close: 0 uncredited completed experiment results pending
 - Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.655217783995481e-14
 
 Anti-cheat review
 - Spot-checked 200 sanitized JSON files from the uncredited queue.
-- Denied results: 3
-- Result 3223518: empty sanitized payload, granted 0.01 denied sentinel
-- Result 3225824: empty sanitized payload, granted 0.01 denied sentinel
-- Result 3270881: empty sanitized payload, granted 0.01 denied sentinel
-- Heuristic outlier candidates from the sample were reviewed manually and not denied because their numeric structures matched family-level variation.
+- Denied results:
+  3223518: empty sanitized payload
+  3225824: empty sanitized payload
+  3270881: empty sanitized payload
+- Heuristic outlier candidates from the sample were manually reviewed and matched normal family-level numeric variation, so they were not denied.
 
 Per-host credit summary
 host_id\tcredit_added\tresults_credited
-367\t35039.55\t1012
+367\t39124.41\t1134
 16\t13002.00\t32
+324\t12641.39\t297
 327\t12439.25\t266
-324\t12326.80\t289
 23\t12168.60\t33
+105\t11738.12\t271
 334\t11586.12\t266
-105\t11567.95\t265
-401\t10880.97\t270
+395\t11385.14\t270
+401\t11349.98\t284
 398\t10822.71\t299
-395\t10812.79\t257
 184\t10729.03\t15
 333\t10678.22\t263
-240\t10606.67\t205
+240\t10676.89\t207
 339\t10544.16\t265
 397\t10538.38\t259
 392\t10503.31\t197
 332\t7442.90\t200
 330\t7137.59\t195
-388\t6577.51\t145
+388\t6638.18\t147
 10\t6065.51\t8
-268\t5575.00\t197
+268\t5687.85\t201
+399\t4954.37\t273
+400\t4848.37\t299
 405\t4750.97\t8
-400\t4737.84\t293
-399\t4561.20\t252
+210\t4614.40\t256
+396\t4506.09\t285
 410\t4476.14\t7
 407\t4450.05\t8
 409\t4414.88\t8
-210\t4392.41\t244
-396\t4359.12\t276
 390\t4237.83\t119
 393\t4189.18\t8
 147\t4058.31\t8
 404\t3993.27\t7
+406\t3890.86\t7
+379\t3818.54\t7
 249\t3735.17\t7
-406\t3334.66\t6
-379\t3278.89\t6
 1\t3166.54\t52
 212\t3138.62\t101
 413\t2904.94\t8
-389\t2496.06\t125
-417\t2390.35\t62
-61\t2214.88\t77
+417\t2548.11\t64
+389\t2538.28\t127
+61\t2245.62\t78
 11\t1992.40\t8
 420\t1804.83\t6
 85\t1512.12\t90
@@ -76,15 +77,15 @@ host_id\tcredit_added\tresults_credited
 345\t622.99\t50
 29\t522.01\t11
 421\t502.27\t8
-222\t333.53\t20
+222\t351.09\t21
 341\t295.95\t12
-113\t210.66\t15
+113\t224.70\t16
 267\t128.38\t7
 134\t88.66\t9
 107\t63.02\t5
 
 Cleanup actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 121089.
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 121168.
-- Removed temporary credit script from /tmp after execution.
-- Copied this log to the website system reports directory.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 121317.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 121315.
+- Removed temporary credit scripts from /tmp after execution.
+- Copied this log to /opt/axiom_boinc/html/user/system_reports/.
