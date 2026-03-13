@@ -2,18 +2,20 @@ Axiom BOINC Validation Log
 Timestamp: 2026-03-13_1448
 
 Results credited this session
-- Count: 28560
-- Total credit awarded: 589096.48
-- CPU results credited: 26098
-- GPU results credited: 1914
+- Count: 28823
+- Total credit awarded: 595004.91
+- CPU results credited: 26322
+- GPU results credited: 1953
 - Denied sentinel credits (0.01): 548
 - Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.5228781455604652e-14
 
 Queue handling
 - Initial uncredited finished results observed: 27709
 - Main pass credited 28058 results for 579855.36 credit
-- Tail passes credited 502 additional results for 9241.12 credit as new completions arrived during the live run
-- Final inline drain credited 123 results for 1768.37 credit and ended with 0 pending on the final check
+- First tail drains credited 502 additional results for 9241.12 credit as new completions arrived during the live run
+- Final inline drain before report publication credited 123 results for 1768.37 credit and ended with 0 pending on that check
+- Post-publication tail drain credited 263 more results for 5908.43 credit and again ended with 0 pending on that check
+- Note: this validator ran against a live queue; finished results continued to arrive while counters and reports were being updated
 
 Anti-cheat review
 - Random sanitized sample reviewed: 210 result payloads
@@ -44,7 +46,7 @@ Flagged sample results
 - result_id=3370097 host_id=367 elapsed=0.10s reason=empty experiment_result
 
 Per-host credit summary
-- Top hosts below reflect the main pass plus the final scripted tail pass; smaller intermediate tail passes added 4959.67 credit across the active queue drain.
+- Top hosts below reflect the main pass plus the final scripted tail pass; additional inline tail passes added 6728.04 credit across the live queue drain.
 - host_id=367 credited=71387.27
 - host_id=324 credited=26723.19
 - host_id=397 credited=24579.51
@@ -69,5 +71,5 @@ Per-host credit summary
 Cleanup actions taken
 - Updated /opt/axiom_boinc/html/user/credited_count.txt
 - Updated /opt/axiom_boinc/html/user/total_results_count.txt
-- Removed temporary /tmp/axiom_credit.py after crediting passes
-- Validation log copied to website system_reports and staged for Git publication after creation
+- Removed temporary /tmp/axiom_credit.py after scripted crediting passes
+- Validation log copied to website system_reports and published to Git
