@@ -1,0 +1,24 @@
+Validation Session: 2026-03-13 01:15 Europe/Berlin
+
+Results credited this session:
+- First credit sweep: 4649 results, 190311.19 total credit
+- Final top-up sweep: 77 results, 2837.69 total credit
+- Total credited this session: 4726 results, 193148.88 total credit
+- Queue state after final sweep: 0 uncredited completed experiment results remaining
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.592569574131894e-14
+
+Anti-cheat review:
+- Deterministic spot-check reviewed 200 sanitized JSON payloads from the uncredited queue
+- Checks applied: trivial/empty payloads, duplicate cross-host payloads, elapsed_time < 5 stubs, robust within-experiment outlier scan
+- Flags denied: 0
+- Final top-up sweep review on newly arrived results also found 0 flags
+
+Per-host credit summary:
+- Initial 4563-result queue snapshot top hosts by awarded credit: host 327 = 11185.24, host 16 = 10192.71, host 401 = 10192.58, host 397 = 10173.21, host 324 = 10097.05, host 395 = 9483.63, host 367 = 9209.80, host 339 = 9117.51, host 334 = 8802.05, host 184 = 8414.41, host 398 = 8358.37, host 333 = 8289.85, host 332 = 6031.13, host 330 = 6005.43, host 10 = 5234.02
+- Live queue growth during the first sweep added 86 more results before the next snapshot; those were credited in the same pass and are included in the total session credit above
+- Final top-up sweep host credits: host 10 = 741.56, host 367 = 304.97, host 395 = 268.90, host 398 = 195.52, host 334 = 183.89, host 401 = 132.16, host 330 = 131.54, host 397 = 124.11, host 210 = 120.91, host 324 = 103.69, host 332 = 102.03, host 400 = 80.10, host 327 = 80.03, host 333 = 67.32, host 339 = 67.09, host 399 = 52.09, host 396 = 50.63, host 1 = 31.15
+
+Cleanup and operational actions:
+- Updated /opt/axiom_boinc/html/user/credited_count.txt and /opt/axiom_boinc/html/user/total_results_count.txt
+- Current counter file values after update: credited_count=110539, total_results_count=110515
+- Temporary credit helper scripts were used from /tmp during execution
