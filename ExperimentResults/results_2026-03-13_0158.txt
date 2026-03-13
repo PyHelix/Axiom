@@ -1,0 +1,22 @@
+Axiom BOINC Scientific Analysis
+Generated: 2026-03-13 01:58 UTC
+
+EXPERIMENT: exp_baksneppen_bridge_concentration (262 results, 262 seeds, 14 hosts)
+  Discovered: 2026-03-13 00:59 UTC
+  Results: intermediate_advantage 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); hub_localization_penalty -0.64481 +/- 3.12856e-04 (d=-2061.06, sign-consistent=0.0%); bridge_fraction_peak 1.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The data do not show the predicted intermediate-concentration advantage in spanning avalanches. The peak fraction stays pinned at the extreme setting and the intermediate-advantage statistic remains exactly zero across the current seeds.
+
+EXPERIMENT: exp_correlated_random_multiplicative_persistence (135 results, 135 seeds, 18 hosts)
+  Discovered: 2026-03-13 01:03 UTC
+  Results: mean_delta_maxnorm_high_low 9.10045 +/- 6.56569e-02 (d=138.60611, sign-consistent=100.0%); mean_delta_tail_high_low 8.38604 +/- 6.32747e-02 (d=132.53386, sign-consistent=100.0%); mean_delta_slope_high_low 0.16787 +/- 5.57728e-03 (d=30.09913, sign-consistent=100.0%)
+  Conclusion: CONFIRMED. Higher prime-sign correlation produces a large and consistent increase in max-normalized persistence, tail persistence, and growth slope. With 135 seeds and very large effect sizes in the hypothesized direction, this finding meets the confirmation threshold.
+
+EXPERIMENT: exp_bistable_rednoise_adaptive_sampling (129 results, 129 seeds, 16 hosts)
+  Discovered: 2026-03-13 01:04 UTC
+  Results: mean_short_delay_lead_time_delta 6.38186 +/- 0.24671 (d=25.86772, sign-consistent=100.0%); mean_long_delay_lead_time_delta 6.43230 +/- 0.42853 (d=15.01017, sign-consistent=0.0%); delay_driven_regime_inversion_detected 0.26357 +/- 0.44057 (d=0.59824, sign-consistent=26.4%)
+  Conclusion: REJECTED. Adaptive sampling improves lead time at short delay, but it also improves lead time at long delay instead of producing the predicted penalty. Because the core inversion pattern fails in the opposite direction across 129 seeds, the proposed regime crossover is rejected.
+
+EXPERIMENT: exp_kuramoto_multiplex_fatigue_pinning_window (124 results, 124 seeds, 18 hosts)
+  Discovered: 2026-03-13 01:04 UTC
+  Results: reentrant_index_mean -4.40750e-04 +/- 4.44616e-04 (d=-0.99131, sign-consistent=25.0%); mid_gain_mean 3.22658e-03 +/- 2.90277e-04 (d=11.11550, sign-consistent=100.0%); support_fraction 0.43219 +/- 1.04865e-02 (d=41.21425, sign-consistent=100.0%)
+  Conclusion: NO EFFECT. The reentrant window statistic stays effectively at zero and trends slightly negative in the current window. Adaptive pinning shows a small average gain overall, but not the distinct intermediate-delay window required by the hypothesis.

@@ -30,3 +30,21 @@ Last updated: 2026-03-13
 
 EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu | Status: CONFIRMED | Results: mid_tau_medium_amp_stripe_defect_suppression_mean 0.08024 +/- 0.00269 (d=29.77526, sign-consistent=100.0%); mid_tau_medium_amp_stripe_orientation_gain_mean 0.52994 +/- 0.01458 (d=36.34203, sign-consistent=100.0%); mid_tau_stripe_nonmonotone_defect_gain_mean 0.00497 +/- 0.00302 (d=1.64690, sign-consistent=95.5%). 111 results, 111 seeds, 26 hosts.
 Last updated: 2026-03-13
+
+EXPERIMENT: exp_correlated_random_multiplicative_persistence | Status: CONFIRMED | Results: mean_delta_maxnorm_high_low 9.10045 +/- 6.56569e-02 (d=138.60611, sign-consistent=100.0%); mean_delta_tail_high_low 8.38604 +/- 6.32747e-02 (d=132.53386, sign-consistent=100.0%); mean_delta_slope_high_low 0.16787 +/- 5.57728e-03 (d=30.09913, sign-consistent=100.0%). 135 results, 135 seeds, 18 hosts.
+Last updated: 2026-03-13
+
+EXPERIMENT: exp_bistable_rednoise_adaptive_sampling | Status: REJECTED | Results: mean_short_delay_lead_time_delta 6.38186 +/- 0.24671 (d=25.86772, sign-consistent=100.0%); mean_long_delay_lead_time_delta 6.43230 +/- 0.42853 (d=15.01017, sign-consistent=0.0%); delay_driven_regime_inversion_detected 0.26357 +/- 0.44057 (d=0.59824, sign-consistent=26.4%). 129 results, 129 seeds, 16 hosts.
+Last updated: 2026-03-13
+
+DEPLOYED: exp_correlated_random_multiplicative_persistence | Query: "random multiplicative function correlated prime signs partial sums paper" | Found: work on random multiplicative functions and partial-sum bounds, but no exact test of Markov-correlated prime signs vs normalized persistence metrics. | Novel angle: finite-size crossover in max-normalized and slope-normalized partial sums under controlled prime-sign correlation.
+Last updated: 2026-03-13
+
+DEPLOYED: exp_bistable_rednoise_adaptive_sampling | Query: "early warning signals adaptive sampling red noise tipping point paper" | Found: early-warning and red-noise papers, but no exact delayed-observation adaptive-vs-fixed sampling benchmark on a drifting bistable SDE. | Novel angle: whether adaptive sampling gains at short delay invert into losses at long delay once red noise and observation lag are both present.
+Last updated: 2026-03-13
+
+DEPLOYED: exp_kuramoto_multiplex_fatigue_pinning_window | Query: "Kuramoto multiplex pinning control delay paper" | Found: pinning-control and delayed Kuramoto literature, but no exact shocked multiplex-fatigue setting with adaptive-vs-static pinning window search. | Novel angle: test for an intermediate delay window where adaptive pinning restores post-shock coherence better than static pinning on fatigued interlayer links.
+Last updated: 2026-03-13
+
+DEPLOYED: exp_fhn_quasiperiodic_phase_lag_pinning_gpu | Query: "FitzHugh-Nagumo quasiperiodic excitability recovery spiral anchoring paper"; "excitable media moire heterogeneity spiral wave FitzHugh-Nagumo"; "quasiperiodic heterogeneity spiral wave excitable media paper" | Found: broad spiral-wave control and heterogeneous excitable-media literature, but no direct batched study of phase-lagged quasiperiodic excitability x recovery fields in FitzHugh-Nagumo. | Novel angle: test whether intermediate phase lag between quasiperiodic excitability and recovery patterns creates stronger spiral-core pinning than aligned or anti-aligned fields across a GPU-batched detuning sweep.
+Last updated: 2026-03-13
