@@ -1,0 +1,73 @@
+Axiom BOINC Validation Log
+Timestamp: 2026-03-13_1448
+
+Results credited this session
+- Count: 28560
+- Total credit awarded: 589096.48
+- CPU results credited: 26098
+- GPU results credited: 1914
+- Denied sentinel credits (0.01): 548
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.5228781455604652e-14
+
+Queue handling
+- Initial uncredited finished results observed: 27709
+- Main pass credited 28058 results for 579855.36 credit
+- Tail passes credited 502 additional results for 9241.12 credit as new completions arrived during the live run
+- Final inline drain credited 123 results for 1768.37 credit and ended with 0 pending on the final check
+
+Anti-cheat review
+- Random sanitized sample reviewed: 210 result payloads
+- Sample flags recorded: 20 result IDs
+- Review focus: empty payload gaming, duplicate numeric payloads across hosts, outlier scan inside matching workunit groups, and instant-return stub behavior
+- Denied queue-wide rule also applied to all results with elapsed_time < 5 seconds
+
+Flagged sample results
+- result_id=3344457 host_id=367 elapsed=0.00s reason=empty experiment_result
+- result_id=3350927 host_id=395 elapsed=0.10s reason=exact duplicate payload across hosts (5 sample matches)
+- result_id=3352044 host_id=210 elapsed=0.10s reason=exact duplicate payload across hosts (4 sample matches)
+- result_id=3352977 host_id=401 elapsed=0.00s reason=exact duplicate payload across hosts (3 sample matches)
+- result_id=3353023 host_id=401 elapsed=0.00s reason=exact duplicate payload across hosts (3 sample matches)
+- result_id=3354278 host_id=340 elapsed=0.00s reason=exact duplicate payload across hosts (5 sample matches)
+- result_id=3355777 host_id=210 elapsed=0.10s reason=exact duplicate payload across hosts (4 sample matches)
+- result_id=3355923 host_id=210 elapsed=0.10s reason=exact duplicate payload across hosts (4 sample matches)
+- result_id=3357353 host_id=339 elapsed=0.30s reason=exact duplicate payload across hosts (5 sample matches)
+- result_id=3358290 host_id=339 elapsed=0.10s reason=exact duplicate payload across hosts (4 sample matches)
+- result_id=3360232 host_id=340 elapsed=0.00s reason=exact duplicate payload across hosts (5 sample matches)
+- result_id=3362393 host_id=399 elapsed=0.00s reason=exact duplicate payload across hosts (5 sample matches)
+- result_id=3363074 host_id=210 elapsed=0.00s reason=exact duplicate payload across hosts (3 sample matches)
+- result_id=3368682 host_id=367 elapsed=0.10s reason=empty experiment_result
+- result_id=3369070 host_id=367 elapsed=0.10s reason=empty experiment_result
+- result_id=3369295 host_id=367 elapsed=0.10s reason=empty experiment_result
+- result_id=3369436 host_id=367 elapsed=0.10s reason=empty experiment_result
+- result_id=3369461 host_id=367 elapsed=0.10s reason=empty experiment_result
+- result_id=3369710 host_id=367 elapsed=0.10s reason=empty experiment_result
+- result_id=3370097 host_id=367 elapsed=0.10s reason=empty experiment_result
+
+Per-host credit summary
+- Top hosts below reflect the main pass plus the final scripted tail pass; smaller intermediate tail passes added 4959.67 credit across the active queue drain.
+- host_id=367 credited=71387.27
+- host_id=324 credited=26723.19
+- host_id=397 credited=24579.51
+- host_id=327 credited=24425.18
+- host_id=395 credited=23838.56
+- host_id=16 credited=22950.15
+- host_id=334 credited=22766.08
+- host_id=105 credited=22721.48
+- host_id=184 credited=22523.79
+- host_id=23 credited=21894.23
+- host_id=398 credited=21337.35
+- host_id=240 credited=19539.70
+- host_id=332 credited=17591.81
+- host_id=330 credited=16757.81
+- host_id=10 credited=12675.40
+- host_id=147 credited=10079.66
+- host_id=388 credited=9364.55
+- host_id=141 credited=9249.21
+- host_id=410 credited=8728.89
+- host_id=210 credited=8725.35
+
+Cleanup actions taken
+- Updated /opt/axiom_boinc/html/user/credited_count.txt
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt
+- Removed temporary /tmp/axiom_credit.py after crediting passes
+- Validation log copied to website system_reports and staged for Git publication after creation
