@@ -41,11 +41,30 @@ if getattr(sys, "_MEIPASS", None):
         except Exception:
             pass
 
+        # Pre-check: only use system CUDA if its NVRTC is strictly newer than
+        # bundled 12.8 (i.e. version 13+). System NVRTC 12.x with bundled CuPy
+        # 12.8 headers causes "CUDA compiler and toolkit headers incompatible".
         if _sys_cuda:
-            # System CUDA found - use its NVRTC (supports newer GPU architectures)
+            try:
+                import glob as _glob_pre
+                _sys_lib_pre = os.path.join(_sys_cuda, "lib64")
+                _nvrtc_pre = sorted(_glob_pre.glob(os.path.join(_sys_lib_pre, "libnvrtc.so.*")), reverse=True)
+                _nvrtc_pre = [c for c in _nvrtc_pre if "builtins" not in c and "static" not in c and "alt" not in c]
+                if _nvrtc_pre:
+                    _ver_m = __import__("re").search(r"libnvrtc\.so\.(\d+)", _nvrtc_pre[0])
+                    if _ver_m and int(_ver_m.group(1)) <= 12:
+                        _sys_cuda = None  # Version <= 12, use bundled 12.8 instead
+                else:
+                    _sys_cuda = None  # No NVRTC found, use bundled
+            except Exception:
+                pass
+
+        if _sys_cuda:
+            # System CUDA 13+ found - use its NVRTC (supports newer GPU architectures)
             _sys_lib = os.path.join(_sys_cuda, "lib64")
             os.environ["LD_LIBRARY_PATH"] = _sys_lib + ":" + _meipass + ":" + os.environ.get("LD_LIBRARY_PATH", "")
             os.environ["CUDA_PATH"] = _sys_cuda
+            os.environ["CUDA_HOME"] = _sys_cuda  # Prevents cuda-pathfinder subprocess probe
             # Replace bundled libnvrtc with symlink to system version
             # so CuPy uses system NVRTC (which supports newer GPU archs)
             _bundled = os.path.join(_meipass, "libnvrtc.so.12")
@@ -60,17 +79,96 @@ if getattr(sys, "_MEIPASS", None):
                     _sys_nvrtc = _nvrtc_candidates[0]
             except Exception:
                 pass
-            if _sys_nvrtc and os.path.exists(_bundled):
+            # Only symlink system NVRTC if it's strictly newer than bundled 12.8
+            # (i.e. version 13+). Older system NVRTC (11.x, 12.0-12.7) causes
+            # header incompatibility with our bundled CuPy 12.8 headers.
+            _sys_nvrtc_major = 0
+            if _sys_nvrtc:
+                try:
+                    _ver_match = __import__('re').search(r'libnvrtc\.so\.(\d+)', _sys_nvrtc)
+                    if _ver_match:
+                        _sys_nvrtc_major = int(_ver_match.group(1))
+                except Exception:
+                    pass
+            if _sys_nvrtc and _sys_nvrtc_major > 12 and os.path.exists(_bundled):
                 try:
                     os.remove(_bundled)
                     os.symlink(_sys_nvrtc, _bundled)
                 except Exception:
                     pass
+            # Only symlink system builtins if system NVRTC is version 13+
+            if _sys_nvrtc_major > 12:
+                try:
+                    import glob as _glob2
+                    _sys_builtins = sorted(_glob2.glob(os.path.join(_sys_lib, "libnvrtc-builtins.so.*")), reverse=True)
+                    _sys_builtins = [b for b in _sys_builtins if "static" not in b]
+                    if _sys_builtins:
+                        for _sb in _sys_builtins:
+                            _local_name = os.path.join(_meipass, os.path.basename(_sb))
+                            if not os.path.exists(_local_name):
+                                try:
+                                    os.symlink(_sb, _local_name)
+                                except Exception:
+                                    pass
+                except Exception:
+                    pass
+            # Fallback: if no builtins ended up in MEIPASS, extract bundled ones
+            import glob as _glob3
+            _has_builtins = any(_glob3.glob(os.path.join(_meipass, "libnvrtc-builtins.so.*")))
+            if not _has_builtins:
+                try:
+                    import base64
+                    from nvrtc_builtins_data import NVRTC_BUILTINS_B64
+                    _nvrtc_so = os.path.join(_meipass, "libnvrtc-builtins.so.12.8")
+                    _data = base64.b64decode(NVRTC_BUILTINS_B64)
+                    with open(_nvrtc_so, "wb") as _f:
+                        _f.write(_data)
+                    for _compat in ["libnvrtc-builtins.so.12.4", "libnvrtc-builtins.so.12",
+                                    "libnvrtc-builtins.so"]:
+                        _compat_path = os.path.join(_meipass, _compat)
+                        if not os.path.exists(_compat_path):
+                            try:
+                                os.symlink(_nvrtc_so, _compat_path)
+                            except Exception:
+                                pass
+                except Exception:
+                    pass
+            # Also ensure CuPy headers are available (needed for NVRTC JIT)
+            _cupy_cuda_inc = os.path.join(_meipass, "cupy", "_core", "include", "cupy", "_cuda", "cuda-12")
+            _dest_inc = os.path.join(_meipass, "include")
+            if os.path.isdir(_cupy_cuda_inc) and not os.path.isfile(os.path.join(_dest_inc, "cuda_fp16.h")):
+                try:
+                    os.makedirs(_dest_inc, exist_ok=True)
+                    import shutil as _shutil2
+                    for _hf in os.listdir(_cupy_cuda_inc):
+                        _shutil2.copy2(os.path.join(_cupy_cuda_inc, _hf), os.path.join(_dest_inc, _hf))
+                except Exception:
+                    pass
         else:
-            # No system CUDA - use bundled libs only
-            os.environ["LD_LIBRARY_PATH"] = _meipass + ":" + os.environ.get("LD_LIBRARY_PATH", "")
-            os.environ["CUDA_PATH"] = _meipass
-            # Copy CuPy's bundled CUDA headers to _MEIPASS/include/ for NVRTC JIT
+            # No usable system CUDA (missing or NVRTC <= 12) - use bundled libs only
+
+            # Extract NVRTC builtins (needed before potential re-exec so old
+            # _MEIPASS has them when NVRTC loads from LD_LIBRARY_PATH)
+            _nvrtc_so = os.path.join(_meipass, "libnvrtc-builtins.so.12.8")
+            if not os.path.exists(_nvrtc_so):
+                try:
+                    import base64
+                    from nvrtc_builtins_data import NVRTC_BUILTINS_B64
+                    _data = base64.b64decode(NVRTC_BUILTINS_B64)
+                    with open(_nvrtc_so, "wb") as _f:
+                        _f.write(_data)
+                    for _compat in ["libnvrtc-builtins.so.12.4", "libnvrtc-builtins.so.12",
+                                    "libnvrtc-builtins.so"]:
+                        _compat_path = os.path.join(_meipass, _compat)
+                        if not os.path.exists(_compat_path):
+                            try:
+                                os.symlink(_nvrtc_so, _compat_path)
+                            except Exception:
+                                pass
+                except Exception:
+                    pass
+
+            # Copy CuPy bundled CUDA headers for NVRTC JIT
             _cupy_cuda_inc = os.path.join(_meipass, "cupy", "_core", "include", "cupy", "_cuda", "cuda-12")
             _dest_inc = os.path.join(_meipass, "include")
             if os.path.isdir(_cupy_cuda_inc) and not os.path.isfile(os.path.join(_dest_inc, "cuda_fp16.h")):
@@ -81,17 +179,24 @@ if getattr(sys, "_MEIPASS", None):
                         shutil.copy2(os.path.join(_cupy_cuda_inc, _hf), os.path.join(_dest_inc, _hf))
                 except Exception:
                     pass
-            # Extract NVRTC 12.4 builtins for bundled NVRTC
-            _nvrtc_so = os.path.join(_meipass, "libnvrtc-builtins.so.12.4")
-            if not os.path.exists(_nvrtc_so):
-                try:
-                    import base64
-                    from nvrtc_builtins_data import NVRTC_BUILTINS_B64
-                    _data = base64.b64decode(NVRTC_BUILTINS_B64)
-                    with open(_nvrtc_so, "wb") as _f:
-                        _f.write(_data)
-                except Exception:
-                    pass
+
+            # Set env vars for bundled CUDA
+            _existing_ldpath = os.environ.get("LD_LIBRARY_PATH", "")
+            _filtered_parts = [p for p in _existing_ldpath.split(":") if p and "/cuda" not in p.lower() and "nvidia" not in p.lower()]
+            os.environ["LD_LIBRARY_PATH"] = _meipass + ":" + ":".join(_filtered_parts)
+            os.environ["CUDA_PATH"] = _meipass
+            os.environ["CUDA_HOME"] = _meipass
+
+            # CRITICAL FIX: Re-exec so LD_LIBRARY_PATH takes effect at process
+            # start. The dynamic linker caches LD_LIBRARY_PATH at startup —
+            # setting it in Python does NOT affect dlopen(). Re-exec makes it
+            # active so dlopen("libnvrtc.so.12") finds our bundled 12.8 NVRTC
+            # before the system 12.x version in ldconfig cache.
+            # PID stays the same (execv replaces process image), so BOINC
+            # wrapper monitoring is unaffected.
+            if os.environ.get("_AXIOM_NVRTC_FIX") != "1":
+                os.environ["_AXIOM_NVRTC_FIX"] = "1"
+                os.execv(sys.executable, sys.argv)
 
 import math
 import random
@@ -114,28 +219,54 @@ try:
 except ImportError:
     pass
 
-try:
-    import cupy as np
-    import numpy as _real_numpy
-    HAS_GPU = True
-    HAS_NUMPY = True
-    np.cuda.Device(0).use()
-    _mem = np.cuda.Device(0).mem_info
-    print(f"[GPU] CuPy CUDA: {_mem[1]//1024//1024}MB total, {_mem[0]//1024//1024}MB free")
-except (ImportError, Exception) as _gpu_err:
-    if _IS_CUDA_BUILD:
-        # CUDA binary but GPU init failed - log error and exit so BOINC uses CPU version instead
-        print(f"[GPU] CUDA initialization failed: {_gpu_err}")
-        print("[GPU] This GPU binary requires NVIDIA driver 525+ for CUDA 12.x")
-        print("[GPU] Please update your NVIDIA drivers or use the CPU version")
-        sys.exit(1)
+# CUDA init with retry for transient OOM (GPU memory occupied by other processes)
+_GPU_INIT_RETRIES = 3
+_GPU_INIT_RETRY_DELAY = 30  # seconds
+
+for _gpu_attempt in range(_GPU_INIT_RETRIES + 1):
     try:
-        import numpy as np
+        import cupy as np
         import numpy as _real_numpy
+        HAS_GPU = True
         HAS_NUMPY = True
-        print("[CPU] Using NumPy")
-    except ImportError:
-        print("[CPU] Pure Python fallback (slow)")
+        np.cuda.Device(0).use()
+        _mem = np.cuda.Device(0).mem_info
+        print(f"[GPU] CuPy CUDA: {_mem[1]//1024//1024}MB total, {_mem[0]//1024//1024}MB free")
+        break  # Success
+    except ImportError as _gpu_err:
+        # CuPy not available at all - no point retrying
+        if _IS_CUDA_BUILD:
+            print(f"[GPU] CuPy import failed: {_gpu_err}")
+            sys.exit(1)
+        try:
+            import numpy as np
+            import numpy as _real_numpy
+            HAS_NUMPY = True
+            print("[CPU] Using NumPy")
+        except ImportError:
+            print("[CPU] Pure Python fallback (slow)")
+        break
+    except Exception as _gpu_err:
+        _is_oom = "MemoryAllocation" in str(_gpu_err) or "out of memory" in str(_gpu_err).lower()
+        if _IS_CUDA_BUILD and _is_oom and _gpu_attempt < _GPU_INIT_RETRIES:
+            import time as _time_retry
+            print(f"[GPU] CUDA init OOM (attempt {_gpu_attempt + 1}/{_GPU_INIT_RETRIES + 1}), retrying in {_GPU_INIT_RETRY_DELAY}s...")
+            _time_retry.sleep(_GPU_INIT_RETRY_DELAY)
+            HAS_GPU = False
+            continue
+        if _IS_CUDA_BUILD:
+            print(f"[GPU] CUDA initialization failed: {_gpu_err}")
+            print("[GPU] This GPU binary requires NVIDIA driver 525+ for CUDA 12.x")
+            print("[GPU] Please update your NVIDIA drivers or use the CPU version")
+            sys.exit(1)
+        try:
+            import numpy as np
+            import numpy as _real_numpy
+            HAS_NUMPY = True
+            print("[CPU] Using NumPy")
+        except ImportError:
+            print("[CPU] Pure Python fallback (slow)")
+        break
 
 
 def to_cpu(arr):

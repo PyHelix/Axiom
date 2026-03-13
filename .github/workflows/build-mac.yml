@@ -22,7 +22,7 @@ jobs:
         run: |
           cd build_src
           pyinstaller --onefile \
-            --name axiom_experiment_617_macos \
+            --name axiom_experiment_634_macos \
             --hidden-import=simple_ml \
             --add-data "simple_ml.py:." \
             --runtime-tmpdir . \
@@ -31,5 +31,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: axiom_experiment_617_macos
-          path: build_src/dist/axiom_experiment_617_macos
+          name: axiom_experiment_634_macos
+          path: build_src/dist/axiom_experiment_634_macos

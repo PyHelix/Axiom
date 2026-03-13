@@ -3,8 +3,8 @@
 import sys as _sys, os as _os
 _sys.stdout = _sys.stderr  # BOINC only captures stderr
 if len(_sys.argv) > 1 and not _sys.argv[1].startswith("--"):
-    _ncpus = _os.cpu_count() or 4
-    _threads = str(max(1, min(4, _ncpus // 3)))  # 3 threads per task, cap at 4
+    # v6.34: force single-core BLAS — each BOINC task is declared as 1 CPU
+    _threads = '1'
     _os.environ["OPENBLAS_NUM_THREADS"] = _threads
     _os.environ["MKL_NUM_THREADS"] = _threads
     _os.environ["OMP_NUM_THREADS"] = _threads
@@ -2615,6 +2615,7 @@ def _run_experiment_mode(wu, result_file):
     experiment_name = wu.get('experiment_name', 'unknown')
     script_url = wu.get('script_url', '')
     run_duration = wu.get('run_duration', 600)
+    exp_seed = wu.get('seed', 42)
     
     print(f"[EXP] Experiment mode: {experiment_name}")
     print(f"[EXP] Script URL: {script_url}")
@@ -2707,6 +2708,7 @@ def _run_experiment_mode(wu, result_file):
             print("[EXP] No GPU available, running CPU-only")
         
         # Compile and execute
+        exec_namespace['EXPERIMENT_SEED'] = exp_seed
         compiled = compile(script_code, 'experiment_script.py', 'exec')
         exec(compiled, exec_namespace)
         
