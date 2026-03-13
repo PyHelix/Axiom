@@ -1,0 +1,88 @@
+Validation Report
+Timestamp: 2026-03-13 03:04:07 CET
+Session window: result.mod_time >= 2026-03-13 02:55:00
+Queue status at cutoff: uncredited backlog drained to 0 on two consecutive checks immediately before aggregation
+
+Results credited this session
+- Count: 6294
+- Total credit awarded: 230457.48
+- CPU results: 6183
+- GPU results: 111
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.6760200558115976e-14
+
+Anti-cheat review
+- Sampled sanitized payloads: 200
+- Sanitized files available during sampling: 6055
+- Denied results: 0
+- Findings: no empty payload gaming, no duplicate cross-host payloads in sample, no short stub sample under 5s, no outlier payloads flagged in sample
+
+Per-host credit summary
+- Host 367: 859 results, 26579.79 credit
+- Host 324: 234 results, 9776.17 credit
+- Host 327: 232 results, 9761.43 credit
+- Host 333: 255 results, 9198.63 credit
+- Host 398: 258 results, 9010.94 credit
+- Host 334: 230 results, 8876.00 credit
+- Host 339: 248 results, 8714.45 credit
+- Host 395: 238 results, 8610.26 credit
+- Host 401: 235 results, 8521.35 credit
+- Host 184: 12 results, 8372.48 credit
+- Host 397: 232 results, 8250.90 credit
+- Host 105: 200 results, 7792.81 credit
+- Host 240: 168 results, 7208.31 credit
+- Host 392: 166 results, 6963.10 credit
+- Host 332: 193 results, 6282.04 credit
+- Host 330: 189 results, 6007.64 credit
+- Host 159: 7 results, 5314.04 credit
+- Host 399: 255 results, 3928.53 credit
+- Host 268: 149 results, 3923.07 credit
+- Host 388: 138 results, 3855.76 credit
+- Host 10: 5 results, 3833.93 credit
+- Host 400: 254 results, 3827.63 credit
+- Host 396: 271 results, 3798.23 credit
+- Host 210: 234 results, 3569.11 credit
+- Host 390: 104 results, 3360.45 credit
+- Host 410: 5 results, 3348.79 credit
+- Host 61: 123 results, 3186.22 credit
+- Host 23: 8 results, 3035.94 credit
+- Host 212: 101 results, 2711.71 credit
+- Host 413: 6 results, 2197.31 credit
+- Host 249: 4 results, 2128.20 credit
+- Host 393: 4 results, 2097.96 credit
+- Host 389: 102 results, 2000.09 credit
+- Host 11: 7 results, 1845.56 credit
+- Host 1: 36 results, 1804.35 credit
+- Host 417: 50 results, 1758.82 credit
+- Host 404: 3 results, 1647.55 credit
+- Host 379: 3 results, 1623.67 credit
+- Host 147: 3 results, 1527.88 credit
+- Host 85: 95 results, 1397.84 credit
+- Host 29: 38 results, 1214.41 credit
+- Host 405: 2 results, 1175.86 credit
+- Host 407: 2 results, 1125.69 credit
+- Host 406: 2 results, 1107.13 credit
+- Host 409: 2 results, 1106.65 credit
+- Host 364: 62 results, 1093.88 credit
+- Host 341: 44 results, 971.35 credit
+- Host 87: 55 results, 825.75 credit
+- Host 16: 2 results, 777.09 credit
+- Host 2: 25 results, 519.14 credit
+- Host 345: 45 results, 497.60 credit
+- Host 9: 6 results, 495.55 credit
+- Host 60: 48 results, 456.62 credit
+- Host 347: 1 result, 303.84 credit
+- Host 420: 1 result, 292.77 credit
+- Host 219: 8 results, 259.38 credit
+- Host 106: 9 results, 201.51 credit
+- Host 222: 8 results, 113.74 credit
+- Host 267: 6 results, 100.55 credit
+- Host 134: 8 results, 68.62 credit
+- Host 421: 1 result, 63.49 credit
+- Host 107: 3 results, 37.92 credit
+
+Cleanup actions
+- Updated result.granted_credit and result.validate_state for all session-credited rows
+- Incremented host.total_credit and user.total_credit additively
+- Updated website counters for credited_count and total_results_count
+- Temporary scripts removed from /tmp after completion
