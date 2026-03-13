@@ -5,7 +5,8 @@ Results credited this session
 - Pass 1: 4531 results, 194441.44 cobblestones awarded
 - Pass 2: 103 results, 5287.46 cobblestones awarded
 - Pass 3: 9 results, 359.73 cobblestones awarded
-- Total: 4643 results, 200088.63 cobblestones awarded
+- Pass 4: 328 results, 12395.71 cobblestones awarded
+- Total: 4971 results, 212484.34 cobblestones awarded
 - CPU_SCALE: 5.0196363564419115e-12
 - GPU_SCALE: 2.5319638598461795e-14
 - Final pending uncredited results after drain pass: 0
@@ -41,6 +42,6 @@ Per-host credit summary
 - Session-wide host totals were incremented in-database during each credit pass with additive updates only.
 
 Cleanup actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 130245
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 125757
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 130573
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 126053
 - Removed temporary credit script /tmp/axiom_credit.py after completion
