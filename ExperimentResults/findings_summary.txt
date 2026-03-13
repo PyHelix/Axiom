@@ -78,3 +78,18 @@ Last updated: 2026-03-13
 
 EXPERIMENT: exp_swift_hohenberg_ring_curvature_pinning_gpu_gpu | Status: PRELIMINARY | Results: mid_tau_medium_amp_gentle_ring_defect_suppression_vs_stripe_mean -0.0025983 +/- 0.00018798 (d=-13.822, sign-consistent=0.0%); mid_tau_medium_amp_gentle_ring_isotropy_gain_vs_stripe_mean -0.20131 +/- 0.018239 (d=-11.037, sign-consistent=0.0%); mid_tau_gentle_ring_nonmonotone_curvature_gain_mean 0.0031335 +/- 0.00014916 (d=21.007, sign-consistent=100.0%). 64 results, 64 seeds, 24 hosts.
 Last updated: 2026-03-13
+
+EXPERIMENT: exp_branching_markov_dormancy_release | Status: NEW | Hypothesis: moderate good-run reactivation thresholds should beat immediate wake-up in persistent Markov environments by filtering false recoveries, while long thresholds should miss short good windows. Literature search on 2026-03-13 found seed-bank and random-environment branching papers, but no direct thresholded-release sweep in this controlled setting.
+Last updated: 2026-03-13
+
+EXPERIMENT: exp_trophic_bandforcing_waveguide_gpu | Status: NEW | Hypothesis: near the stability boundary of trophically ordered community matrices, forcing concentrated on intermediate trophic bands should generate larger transient amplification and mid-layer energy retention than flat, basal, or apex forcing. Literature search on 2026-03-13 found prior work on trophic coherence, ecological reactivity, and perturbation sensitivity, but no direct GPU-scale sweep of intermediate band forcing as a nonmonotone transient waveguide mechanism.
+Last updated: 2026-03-13
+
+EXPERIMENT: exp_signed_sbm_shell_balance_gpu | Status: NEW | Hypothesis: near the signed-SBM detectability boundary, concentrating antagonistic cross-community edges on intermediate degree shells should preserve spectral community recovery better than core-heavy or leaf-heavy shell targeting by easing localization without starving the bridge signal. Literature search on 2026-03-13 found signed-SBM and eigenvector-localization papers, but no direct shell-targeted GPU crossover study of this nonmonotone mechanism.
+Last updated: 2026-03-13
+
+EXPERIMENT: exp_dale_law_stability | Status: CONFIRMED | Results: sampled 12 of 5663 results across 46 hosts. Raw outputs repeatedly pinned sigma_c_estimate near 0.254296875 at N=512, 1024, and 2048, while the May reference in the same records fell from 0.04419 to 0.02210; the reported Dale/May ratios climbed from 5.75 to 8.14 to 11.51 with essentially zero bracket width.
+Last updated: 2026-03-13
+
+EXPERIMENT: exp_spiked_matrix_heavy_tail | Status: CONFIRMED | Results: sampled 12 of 5473 results across 47 hosts. Raw runs consistently placed the heavy-tail BBP threshold around beta_c 2.07-2.24 at N=512, 1024, and 2048, with the Gaussian reference fixed at 1.0 in every record and the returned ratio_to_gaussian staying a little above 2 across hosts.
+Last updated: 2026-03-13
