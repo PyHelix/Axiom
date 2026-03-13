@@ -1,80 +1,32 @@
-EXPERIMENT: exp_branching_overdispersion_environment_resonance | Status: CONFIRMED | Results: mean_interior_peak_excess 0.33260 +/- 0.00193 (d=172.15678, sign-consistent=100.0%); interior_peak_rate 0.65898 +/- 0.00634 (d=103.91089, sign-consistent=100.0%). 1371 results, 1371 seeds, 26 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_fiberbundle_healing_patch_match | Status: NO EFFECT | Results: mean_moderate_patch_peak_gain 0.00011 +/- 9.02516e-05 (d=1.22187, sign-consistent=90.7%); mean_moderate_patch_cluster_drop 0.01160 +/- 0.01276 (d=0.90890, sign-consistent=84.3%); support_fraction 0.06068 +/- 0.00104 (d=58.18047, sign-consistent=100.0%). 2638 results, 2638 seeds, 40 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_hypercycle_catastrophe_lineage_memory | Status: CONFIRMED | Results: mean_best_mid_gain 0.39617 +/- 0.00723 (d=54.79222, sign-consistent=100.0%); positive_mid_gain_fraction 0.99284 +/- 0.00393 (d=252.76002, sign-consistent=100.0%). 263 results, 263 seeds, 23 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_hypergraph_pgg_inertia_crossover | Status: REJECTED | Results: mid_peak_advantage -0.03012 +/- 0.02785 (d=-1.08136, sign-consistent=2.8%); highk_mid_coop_gain -0.00522 +/- 0.01541 (d=-0.33859, sign-consistent=26.7%); strong_minus_mid_switch_gap 0.00197 +/- 0.00181 (d=1.08425, sign-consistent=92.1%). 941 results, 941 seeds, 48 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_kac_markov_sign_edge_crossover | Status: CONFIRMED | Results: mean_moderate_edge_gain 0.02270 +/- 0.00298 (d=7.61786, sign-consistent=100.0%); moderate_support_fraction 1.00000 +/- 0.00000e+00 (d=inf, sign-consistent=100.0%). 149 results, 149 seeds, 9 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_galtonwatson_markov_environment_crossover | Status: CONFIRMED | Results: mean_peak_p_stay 0.64066 +/- 0.01381 (d=46.39295, sign-consistent=100.0%); mean_peak_cv_tau 1.89824 +/- 0.05553 (d=34.18156, sign-consistent=100.0%); interior_peak_rate 0.53207 +/- 0.02422 (d=21.96633, sign-consistent=100.0%). 2685 results, 2685 seeds, 44 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_nasch_clustered_anticipation_memory | Status: CONFIRMED | Results: mean_mid_cluster_advantage 1.72830 +/- 0.39039 (d=4.42715, sign-consistent=99.9%); intermediate_memory_support_fraction 0.83371 +/- 0.14880 (d=5.60298, sign-consistent=100.0%). 3427 results, 3427 seeds, 49 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_forestfire_burnscar_wind_memory | Status: CONFIRMED | Results: best_cooldown 16.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%); best_lightning 0.00220 +/- 0.00000 (d=inf, sign-consistent=100.0%); best_wind_bias 2.40000 +/- 0.00000 (d=inf, sign-consistent=100.0%). 1007 results, 1007 seeds, 36 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_rfim_domain_wall_roughness | Status: CONFIRMED | Results: h15_peak_gain_vs_h10_h20 0.50523 +/- 0.04638 (d=10.89279, sign-consistent=100.0%); mean_zeta_h15 1.46488 +/- 0.02467 (d=59.38395, sign-consistent=100.0%); mean_zeta_h40_minus_h05 -0.39564 +/- 0.15029 (d=-2.63252, sign-consistent=0.6%). 1023 results, 874 seeds, 45 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_directed_polymer_kpz_exponent | Status: REJECTED | Results: mean_chi_all 0.70393 +/- 0.04081 (d=17.24955, sign-consistent=100.0%); chi_spread_across_dists 0.01691 +/- 0.00909 (d=1.85984, sign-consistent=100.0%); predicted_chi 0.33330 +/- 0.00000 (d=inf, sign-consistent=100.0%). 1206 results, 1206 seeds, 43 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_henon_chaos_boundary_fractal_gpu | Status: CONFIRMED | Results: d_f_mean 1.30810 +/- 0.00093 (d=1401.82507, sign-consistent=100.0%); r2_mean 0.99963 +/- 0.00025 (d=3973.21274, sign-consistent=100.0%); n_good_fraction 1.00000 +/- 0.00000 (d=inf, sign-consistent=100.0%). 113 results, 81 seeds, 16 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_depinning_elastic_line | Status: REJECTED | Results: zeta_est 0.05007 +/- 0.00919 (d=5.44758, sign-consistent=100.0%); zeta_theory 1.26600 +/- 0.00000 (d=inf, sign-consistent=100.0%). 948 results, 948 seeds, 54 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_sbm_midrank_bridge_crossover_gpu | Status: CONFIRMED | Results: mid_signal_midrank_advantage_mean 0.07741 +/- 0.00186 (d=41.64885, sign-consistent=100.0%); midrank_peak_excess_mean 0.03203 +/- 0.00133 (d=24.04278, sign-consistent=100.0%); heterogeneity_boost_mean 0.11274 +/- 0.00386 (d=29.19019, sign-consistent=100.0%). 51 results, 47 seeds, 19 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_hypercycle_async_catastrophe_memory | Status: NO EFFECT | Results: mean_async_gain 0.01330 +/- 0.00581 (d=2.28822, sign-consistent=98.1%); mean_memory_async_synergy 0.01340 +/- 0.00589 (d=2.27688, sign-consistent=98.1%); mean_refuge_gain -0.02770 +/- 0.00088 (d=-31.40567, sign-consistent=0.0%). 476 results, 476 seeds, 23 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu_gpu | Status: CONFIRMED | Results: mid_tau_medium_amp_stripe_defect_suppression_mean 0.08047 +/- 0.00239 (d=33.70043, sign-consistent=100.0%); mid_tau_medium_amp_stripe_orientation_gain_mean 0.52932 +/- 0.01321 (d=40.07211, sign-consistent=100.0%); mid_tau_stripe_nonmonotone_defect_gain_mean 0.00498 +/- 0.00264 (d=1.88890, sign-consistent=98.2%). 58 results, 55 seeds, 16 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_kellersegel_delay_pulse_sink_window_gpu | Status: REJECTED | Results: mean_adaptive_gain -11.07445 +/- 0.01073 (d=-1032.21588, sign-consistent=0.0%); positive_trial_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_high_pulse_gain -11.50642 +/- 0.01629 (d=-706.55547, sign-consistent=0.0%). 124 results, 124 seeds, 23 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_reservoir_delay_adaptive_release_window | Status: REJECTED | Results: mean_reentrant_gain -13.89585 +/- 1.05977 (d=-13.11213, sign-consistent=0.0%); support_rate_mid_delay_best 0.02703 +/- 0.00373 (d=7.25285, sign-consistent=100.0%). 2337 results, 2337 seeds, 40 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_chemostat_crossfeeding_patch_switch | Status: NO EFFECT | Results: mean_mid_switch_coexistence_gain -1.37083e-10 +/- 7.07723e-10 (d=-0.19370, sign-consistent=0.0%); mean_mid_switch_productivity_gain -5.48332e-11 +/- 2.83089e-10 (d=-0.19370, sign-consistent=0.0%); mean_mid_switch_asymmetry_drop 1.83988e-09 +/- 2.40431e-09 (d=0.76524, sign-consistent=80.7%). 6082 results, 6082 seeds, 52 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_branching_catastrophe_dormancy_memory | Status: REJECTED | Results: mean_mid_memory_gain 0.11017 +/- 1.82393e-04 (d=604.04745, sign-consistent=100.0%); mid_minus_edge_gain -0.02875 +/- 3.02414e-04 (d=-95.08433, sign-consistent=0.0%). 2319 results, 2319 seeds, 40 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_epi_grid_commuter_immunity_resonance | Status: NO EFFECT | Results: mean_mid_memory_attack_gain 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_mid_memory_peak_gain -0.00448 +/- 0.00029 (d=-15.59947, sign-consistent=0.0%); mean_mid_memory_bridge_drop -0.00011 +/- 0.00014 (d=-0.76528, sign-consistent=18.4%). 6453 results, 6453 seeds, 53 hosts.
+Last updated: 2026-03-13
 
-EXPERIMENT: exp_kpz_mixed_columnar_temporal_crossover_gpu_gpu | Status: REJECTED | Results: mid_mix_medium_amp_roughness_gain_vs_columnar -0.20762 +/- 0.00381 (d=-54.42414, sign-consistent=0.0%); mid_mix_medium_amp_anisotropy_drop_vs_columnar 0.15893 +/- 0.00157 (d=101.26550, sign-consistent=100.0%). 139 results, 139 seeds, 23 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_contact_process_quasiperiodic_refugia_gpu_gpu | Status: REJECTED | Results: mid_lambda_medium_amp_quasiperiodic_fragmentation_gain -0.02741 +/- 2.83671e-04 (d=-96.61193, sign-consistent=0.0%); mid_lambda_medium_amp_quasiperiodic_isotropy_gain 0.93037 +/- 0.00114 (d=813.66600, sign-consistent=100.0%). 121 results, 121 seeds, 24 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_rgg_degree_threshold_cascade_window | Status: REJECTED | Results: mean_mid_negative_gain_vs_zero -0.01160 +/- 0.00078 (d=-14.78828, sign-consistent=0.0%); interior_best_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%). 299 results, 299 seeds, 21 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_branching_dormancy_overdispersion_phase_rescue | Status: REJECTED | Results: mean_mid_wake_advantage -0.28152 +/- 1.35913e-04 (d=-2071.32461, sign-consistent=0.0%); mean_support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%). 83 results, 83 seeds, 9 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_invasion_percolation_gradient_correlation_crossover | Status: REJECTED | Results: target_trap_synergy_mean -0.08624 +/- 0.00377 (d=-22.85242, sign-consistent=0.0%); target_roughness_synergy_mean -6.98133 +/- 0.30212 (d=-23.10766, sign-consistent=0.0%); target_support_fraction 0.00112 +/- 0.00193 (d=0.58133, sign-consistent=31.0%). 226 results, 226 seeds, 13 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_forestfire_ridge_windshift_interaction | Status: REJECTED | Results: target_interaction_gain_mean -0.02090 +/- 0.00213 (d=-9.83011, sign-consistent=0.0%); target_support_fraction 0.12794 +/- 0.02246 (d=5.69614, sign-consistent=100.0%). 220 results, 220 seeds, 13 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_spiked_covariance_mask_resonance_gpu_gpu | Status: REJECTED | Results: critical_resonant_alignment_drop_vs_iid_mean 0.02320 +/- 0.00093 (d=24.89959, sign-consistent=0.0%); critical_resonant_is_worst_mean 0.01068 +/- 0.00251 (d=4.25642, sign-consistent=100.0%). 115 results, 115 seeds, 15 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_trophic_rank_forcing_localization_gpu | Status: REJECTED | Results: mid_coherence_mid_alignment_reactivity_gain_vs_flat_steep_mean -0.00012 +/- 0.00048 (d=-0.25408, sign-consistent=30.6%); mid_coherence_mid_alignment_upper_mass_gain_vs_flat_mean -0.00015 +/- 0.00028 (d=-0.52922, sign-consistent=33.3%); mid_coherence_mid_alignment_support_fraction 0.32756 +/- 0.01697 (d=19.30225, sign-consistent=100.0%). 230 results, 36 seeds, 15 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_percolation_walk_dimension_3d_gpu | Status: REJECTED | Results: mean_d_w 6.98086 +/- 0.09854 (d=70.84623, sign-consistent=50.0%); mean_d_w_minus_literature 3.10086 +/- 0.09854 (d=31.46952, sign-consistent=0.0%); n_good_trials 6.75806 +/- 4.65775 (d=1.45093, sign-consistent=100.0%). 94 results, 62 seeds, 12 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_fpp_channel_anticorrelation_crossover | Status: REJECTED | Results: mean_moderate_cost_gain -0.05228 +/- 0.10371 (d=-0.50413, sign-consistent=31.4%); mean_moderate_wander_drop -1.04430 +/- 1.93111 (d=-0.54078, sign-consistent=44.1%); support_fraction 0.19815 +/- 0.07271 (d=2.72540, sign-consistent=100.0%). 1805 results, 1805 seeds, 37 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_sbm_bridge_hub_localization_gpu_gpu | Status: PRELIMINARY | Results: mid_signal_bridge_penalty_positive 0.61451 +/- 0.00453 (d=135.74045, sign-consistent=100.0%); mid_signal_localization_gain_positive 0.04381 +/- 0.00111 (d=39.58586, sign-consistent=100.0%); bridge_corr_gain_positive 0.55531 +/- 0.00177 (d=312.94898, sign-consistent=100.0%). 19 results, 10 seeds, 6 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_fiberbundle_healing_patch_match | Status: NO EFFECT | Results: mean_moderate_patch_peak_gain 0.00011 +/- 8.83894e-05 (d=1.23104, sign-consistent=90.6%); mean_moderate_patch_cluster_drop 0.01174 +/- 0.01229 (d=0.95575, sign-consistent=84.2%); support_fraction 0.06067 +/- 0.00101 (d=60.26702, sign-consistent=100.0%). 1795 results, 1795 seeds, 37 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_epi_grid_commuter_immunity_resonance | Status: NO EFFECT | Results: mean_mid_memory_attack_gain 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); mean_mid_memory_bridge_drop -0.00448 +/- 0.00029 (d=-15.71548, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%). 6439 results, 6439 seeds, 53 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_chemostat_crossfeeding_patch_switch | Status: NO EFFECT | Results: mean_mid_switch_coexistence_gain -1.37083e-10 +/- 7.08390e-10 (d=-0.19351, sign-consistent=0.0%); mean_mid_switch_asymmetry_drop -5.48334e-11 +/- 2.83356e-10 (d=-0.19351, sign-consistent=0.0%); support_fraction 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%). 6066 results, 6066 seeds, 52 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_signed_sbm_core_bridge_balance_gpu_gpu | Status: NO EFFECT | Results: mid_neg_distributed_overlap_gain 0.00950 +/- 0.00034 (d=28.11676, sign-consistent=100.0%); mid_neg_distributed_ipr_drop -0.00250 +/- 9.83747e-05 (d=-25.43098, sign-consistent=0.0%); mid_neg_distributed_core_mass_drop 0.00659 +/- 0.00309 (d=2.13468, sign-consistent=100.0%). 236 results, 210 seeds, 23 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_wildfire_crossed_firebreak_windshift_gpu_gpu | Status: NO EFFECT | Results: crossed_firebreaks_help_at_mid_memory 0.00000 +/- 0.00000 (d=0.00000, sign-consistent=0.0%); crossed_balance_gain_positive -4.57030e-06 +/- 0.00014 (d=-0.03372, sign-consistent=49.2%); crossed_mid_burn_advantage 7.67360e-08 +/- 2.70392e-06 (d=0.02838, sign-consistent=47.7%). 103 results, 65 seeds, 20 hosts.
-Last updated: 2026-03-12
-
-EXPERIMENT: exp_swift_hohenberg_moire_detuning_gpu | Status: NO EFFECT | Results: mid_tau_mid_amp_intermediate_detuning_defect_excess_mean 0.00033 +/- 0.00012 (d=2.83869, sign-consistent=100.0%); mid_tau_mid_amp_intermediate_detuning_isotropy_gain_mean -0.06686 +/- 0.01753 (d=-3.81492, sign-consistent=0.0%); mid_tau_intermediate_detuning_nonmonotone_excess_mean -0.00029 +/- 0.00012 (d=-2.46837, sign-consistent=0.0%). 239 results, 27 seeds, 22 hosts.
-Last updated: 2026-03-12
+EXPERIMENT: exp_swift_hohenberg_quench_disorder_gpu | Status: CONFIRMED | Results: mid_tau_medium_amp_stripe_defect_suppression_mean 0.08024 +/- 0.00269 (d=29.77526, sign-consistent=100.0%); mid_tau_medium_amp_stripe_orientation_gain_mean 0.52994 +/- 0.01458 (d=36.34203, sign-consistent=100.0%); mid_tau_stripe_nonmonotone_defect_gain_mean 0.00497 +/- 0.00302 (d=1.64690, sign-consistent=95.5%). 111 results, 111 seeds, 26 hosts.
+Last updated: 2026-03-13
