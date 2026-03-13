@@ -1,0 +1,115 @@
+Validation report
+Timestamp: 2026-03-13 22:26 CET
+Session window (result.mod_time): 2026-03-13 22:23:38 to 2026-03-13 22:26:33
+
+Results credited this session
+- Credit passes executed: 5
+- Results credited: 15123
+- Total awarded credit: 243105.45
+- Denied sentinel results: 34 at 0.01 credit each
+- Credit formula scales used:
+  CPU_SCALE=5.0196363564419115e-12
+  GPU_SCALE=2.7378237946994742e-14
+- Price table freshness at first credit pass: 375 seconds old; no refresh needed
+- Uncredited backlog after final drain pass: 0
+
+Credit pass totals
+- Pass 1: 14737 results, 240002.04 credit
+- Pass 2: 65 results, 486.49 credit
+- Pass 3: 68 results, 560.01 credit
+- Pass 4: 248 results, 2028.40 credit
+- Pass 5: 5 results, 28.51 credit
+
+Anti-cheat review
+- Sampled sanitized result files: 200
+- Available sanitized files at sample time: 14558
+- Empty payload flags denied at sentinel credit:
+  - result 3512577 host 10 elapsed 99.489s: empty payload
+  - result 3512602 host 184 elapsed 34.727s: empty payload
+  - result 3512617 host 184 elapsed 29.737s: empty payload
+  - result 3512782 host 184 elapsed 34.658s: empty payload
+  - result 3512967 host 184 elapsed 33.891s: empty payload
+  - result 3513298 host 184 elapsed 33.871s: empty payload
+  - result 3616635 host 300 elapsed 60.790s: empty payload
+- Stub-filter denials (`elapsed_time < 5`): 27
+  - result 3543994 host 387 elapsed 1.043s
+  - result 3614571 host 141 elapsed 4.116s
+  - result 3614573 host 141 elapsed 3.069s
+  - result 3621610 host 389 elapsed 2.057s
+  - result 3625809 host 389 elapsed 2.115s
+  - result 3629033 host 324 elapsed 4.220s
+  - result 3632040 host 397 elapsed 4.062s
+  - result 3634729 host 332 elapsed 4.190s
+  - result 3634844 host 332 elapsed 4.109s
+  - result 3634888 host 332 elapsed 4.161s
+  - result 3635194 host 395 elapsed 3.125s
+  - result 3635198 host 395 elapsed 4.256s
+  - result 3635205 host 395 elapsed 4.172s
+  - result 3635210 host 395 elapsed 4.172s
+  - result 3635214 host 395 elapsed 3.207s
+  - result 3635345 host 141 elapsed 4.188s
+  - result 3635363 host 395 elapsed 4.657s
+  - result 3635365 host 395 elapsed 4.306s
+  - result 3635415 host 395 elapsed 4.321s
+  - result 3635462 host 395 elapsed 4.141s
+  - result 3635472 host 395 elapsed 4.316s
+  - result 3635504 host 395 elapsed 4.926s
+  - result 3635627 host 395 elapsed 4.156s
+  - result 3635665 host 395 elapsed 4.175s
+  - result 3635720 host 395 elapsed 4.484s
+  - result 3639382 host 389 elapsed 1.051s
+  - result 3639941 host 330 elapsed 4.229s
+
+Per-host credit summary
+Note: host totals below are grouped from the validation session window in `result.mod_time`.
+- host 1: 40 results, 2018.95 credit
+- host 2: 23 results, 338.31 credit
+- host 9: 11 results, 588.51 credit
+- host 10: 74 results, 6506.04 credit
+- host 11: 9 results, 2145.31 credit
+- host 16: 10 results, 2704.46 credit
+- host 29: 100 results, 2038.50 credit
+- host 57: 17 results, 146.80 credit
+- host 60: 82 results, 420.50 credit
+- host 71: 84 results, 1164.22 credit
+- host 105: 1 result, 13.52 credit
+- host 107: 28 results, 198.71 credit
+- host 108: 60 results, 448.76 credit
+- host 137: 5 results, 62.92 credit
+- host 141: 321 results, 4434.17 credit
+- host 182: 7 results, 6066.19 credit
+- host 184: 164 results, 4641.28 credit
+- host 186: 44 results, 7282.44 credit
+- host 210: 887 results, 5544.92 credit
+- host 300: 244 results, 4604.06 credit
+- host 324: 742 results, 13465.32 credit
+- host 327: 762 results, 16906.98 credit
+- host 330: 606 results, 9668.51 credit
+- host 332: 673 results, 11204.04 credit
+- host 333: 667 results, 12700.96 credit
+- host 334: 615 results, 14051.77 credit
+- host 339: 683 results, 12165.05 credit
+- host 340: 79 results, 2370.46 credit
+- host 347: 59 results, 1094.20 credit
+- host 367: 1770 results, 26585.44 credit
+- host 387: 207 results, 598.96 credit
+- host 389: 321 results, 2714.85 credit
+- host 390: 215 results, 4924.78 credit
+- host 394: 20 results, 101.08 credit
+- host 395: 662 results, 13793.43 credit
+- host 396: 1049 results, 5707.94 credit
+- host 397: 692 results, 11231.90 credit
+- host 398: 659 results, 9093.97 credit
+- host 399: 1200 results, 6309.87 credit
+- host 400: 746 results, 5821.18 credit
+- host 401: 302 results, 7395.72 credit
+- host 409: 5 results, 324.11 credit
+- host 413: 87 results, 1925.13 credit
+- host 426: 16 results, 1414.11 credit
+- host 433: 143 results, 167.94 credit
+
+Cleanup and operational actions
+- Updated `/opt/axiom_boinc/html/user/credited_count.txt`
+- Updated `/opt/axiom_boinc/html/user/total_results_count.txt`
+- Final queue check confirmed zero uncredited completed experiment results
+- Temporary crediting and anti-cheat files will be removed after report publication
