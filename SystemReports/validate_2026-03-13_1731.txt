@@ -1,0 +1,64 @@
+Axiom Validation Log
+Timestamp: 2026-03-13_1731
+
+Results credited this session:
+- Session starting credited_count.txt value: 154941
+- Current credited result count in DB: 180363
+- Exact results credited during this session: 25422
+- Captured credit from explicitly recorded passes: 394083.62
+- One additional 385-result recovery pass executed successfully after a shell-wrapper quoting fault; its stdout summary was not preserved, so the exact combined cobblestone total for the full session was not reconstructable from DB state alone without a pre-session credit snapshot.
+- Last recorded price scales: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.814704576352766e-14
+- Price table refresh needed: no
+- Credit queue behavior: repeatedly drained to zero, then refilled by newly-finished live results during verification.
+- Zero-pending snapshot was reached immediately after the final explicit pass that credited 30 results for 575.94 credit.
+
+Anti-cheat review:
+- Spot-check sample size: 200 sanitized JSON files
+- Results with sanitized files available at sample time: 24644
+- Denied IDs and reasons:
+  3455670 empty payload
+  3456057 empty payload
+  3456187 empty payload
+  3487883 duplicate payload across hosts
+  3488913 duplicate payload across hosts
+  3512165 empty payload
+  3512658 empty payload
+  3513617 empty payload
+  3513705 empty payload
+- The credit script also applied the under-5-second stub rule where encountered.
+
+Per-host credit summary:
+- Main pass top credited hosts:
+  host 367: 46170.71
+  host 324: 17676.02
+  host 327: 17223.35
+  host 334: 16757.89
+  host 395: 16666.75
+  host 333: 15015.51
+  host 397: 14817.81
+  host 398: 14434.16
+  host 16: 14054.04
+  host 339: 12479.78
+  host 332: 11746.57
+  host 330: 11201.43
+  host 23: 10666.64
+  host 105: 9564.59
+  host 159: 9387.56
+  host 182: 8876.23
+  host 186: 8650.67
+  host 240: 8582.36
+  host 10: 7799.94
+  host 1: 7173.92
+- Final explicit tail pass host summary:
+  host 388: 98.90
+  host 10: 83.81
+  host 332: 70.94
+  host 327: 48.21
+  host 186: 43.15
+
+Cleanup actions taken:
+- Ran anti-cheat sampler against sanitized results only.
+- Applied price-per-FLOP credit in repeated drain passes against all completed uncredited results present at each pass.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt from live DB count.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt from live DB count.
+- Copied validation logs to website system reports and repo system reports.
