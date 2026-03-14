@@ -1,0 +1,95 @@
+Axiom BOINC validation log
+Timestamp: 2026-03-14 09:22 CET
+
+Results credited this session
+- Updated result rows: 79705
+- Real credit awarded: 348858.468541 cobblestones
+- Sentinel-denied/no-credit rows: 49273
+- Queue status: reached 0 uncredited rows at one point during the session; a later live snapshot showed new rows arriving during ongoing ingest
+
+Anti-cheat review
+- Sampled sanitized JSON files: 200
+- Sample flags from review: 6
+- Flagged result IDs and reasons:
+  3873732 stub_under_5s
+  3878268 stub_under_5s
+  3900155 stub_under_5s
+  3909250 stub_under_5s
+  3911363 stub_under_5s
+  3921689 stub_under_5s
+- Full-run auto-denied stub successes (<5s, outcome=1): 2020
+- Zero-runtime orphan rows marked with denied sentinel 0.01 to clear the backlog while preserving no substantive credit: 42761
+
+Credit passes executed
+- /tmp/axiom_credit.py
+- /tmp/axiom_credit_cleanup.py
+- /tmp/axiom_credit_finalizer.py (run multiple times to sweep residual live backlog)
+- Website counters updated: /opt/axiom_boinc/html/user/credited_count.txt and /opt/axiom_boinc/html/user/total_results_count.txt
+
+Per-host credit summary
+Format: host_id	result_rows	real_credit
+0	42844	0.000000
+1	620	5329.611836
+2	19	39.040000
+9	48	669.596738
+10	9	5305.910000
+11	11	2131.530000
+16	19	7088.950000
+23	7	4628.690000
+29	484	2168.338336
+57	1	21.855489
+60	372	754.252334
+85	554	1806.516581
+87	662	795.870000
+105	1194	11401.099459
+106	22	110.639730
+107	5	1.740000
+108	96	342.820000
+111	1459	8416.352334
+123	530	1475.716108
+137	125	273.910000
+184	17	13621.491348
+210	1055	5979.898207
+219	14	197.770000
+222	199	551.190000
+240	1151	8963.073342
+249	18	2326.680000
+267	9	23.530000
+268	1114	5023.927610
+324	1451	16621.154480
+327	2132	16532.411145
+330	1842	9182.201877
+332	1811	10427.307250
+333	1631	13848.410206
+334	1371	14842.333087
+339	1638	13477.365813
+340	376	2421.117833
+347	284	3950.436948
+367	3827	53547.005322
+379	2	104.240000
+387	1492	2864.687779
+389	821	2678.852867
+390	952	5370.181691
+393	2	2174.360000
+395	1955	14609.752926
+396	445	1220.180000
+397	997	14274.456469
+398	923	14374.528096
+399	933	6309.965923
+400	849	6369.884930
+401	675	9710.520440
+404	8	3822.080000
+405	1	1156.752392
+406	2	1181.984797
+410	9	3644.420000
+413	8	3067.690000
+426	48	222.870000
+427	7	12253.760000
+429	17	816.310000
+431	9	521.970000
+434	195	0.000000
+435	573	676.686819
+
+Cleanup actions
+- Removed all granted_credit=0 rows from the active validation queue at the time of the final sweep
+- Copied this report to /opt/axiom_boinc/html/user/system_reports/
