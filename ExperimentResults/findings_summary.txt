@@ -48,14 +48,14 @@ Last updated: 2026-03-14
 
 EXPERIMENT: exp_consumer_resource_recycling_rescue_threshold
   Discovered: 2026-03-14 13:55 UTC
-  What you saw: sampled 8 of 180 results across 39 hosts. Most 1024-species payloads placed buffer_c_estimate tightly around 0.525 to 0.623 with narrow 4.27e-05 brackets and positive midlayer localization scores about 3.09 to 4.32, one 512-species run sat near 0.552 with slightly negative last_mean_max_real_part, and two 2048 first-pass jobs landed much higher around 2.01 to 2.06 with coarse brackets.
-  Conclusion: PRELIMINARY. Recycling buffers do appear able to restabilize the mismatched consumer-resource communities at an interior gain rather than only at the search ceiling. But the rescue threshold is not yet size-stable, because the deeper 2048 passes are still landing far above the 1024 cluster and the queue has not converged to a single band.
+  What you saw: sampled 14 of 11435 results across 76 hosts. Nearly every 512- and 1024-species payload landed at a tight interior buffer_c_estimate around 0.37 to 0.62, with most 1024 runs clustering especially around 0.48 to 0.62 on narrow 4.27e-05 brackets and positive midlayer localization scores about 3.00 to 3.80. But a deeper 2048 pass still sat far higher near 2.04 on a coarse first-pass bracket, so the queue still contains a size-dependent high-threshold branch.
+  Conclusion: PRELIMINARY. Recycling buffers are clearly opening an interior rescue threshold instead of only pushing against the upper search ceiling, and the unstable mode remains midlayer-localized across the sampled runs. The quantitative rescue gain is still unsettled because the dense 512 to 1024 cluster near about 0.5 has not yet reconciled with the much higher 2048 branch near 2.0.
 Last updated: 2026-03-14
 
 EXPERIMENT: exp_microgrid_islanding_fast_support_threshold
   Discovered: 2026-03-14 13:55 UTC
-  What you saw: sampled 8 of 115 results across 32 hosts. The CPU payloads split into two reproducible interior bands, with support_c_estimate around 1.46482 to 1.47656 in some runs and 2.20310 to 2.22654 in others, while bracket widths were essentially zero, last_mean_max_real_part stayed positive around 0.54 to 1.05, and island_localization_score stayed strong around 4.22 to 5.57.
-  Conclusion: PRELIMINARY. Fast support clearly opens an interior rescue threshold above the already unstable islanded-load regime, and the unstable edge mode remains island-concentrated as hypothesized. The threshold location itself is still bifurcated between two bands, so more seeds are needed before calling the rescue gain quantitatively settled.
+  What you saw: sampled 16 of 10168 results across 77 hosts. The CPU payloads still separate cleanly into two narrow interior bands, one near support_c_estimate 1.46482 to 1.47656 and the other near 2.20898 to 2.22654, with both bands now appearing at 1024 species on vanishing brackets and the unstable mode staying strongly island-localized at about 4.46 to 5.40. The lower band tends to carry the larger positive last_mean_max_real_part around 1.05, while the upper band remains positive but usually closer to about 0.54 to 0.56.
+  Conclusion: PRELIMINARY. Fast support does produce a real interior rescue threshold above the destabilized islanded baseline, and the leading unstable mode remains island-concentrated just as the mechanism predicts. The family is still not ready for a settled threshold claim, because the queue repeatedly resolves two distinct support bands rather than converging to a single critical gain.
 Last updated: 2026-03-14
 
 EXPERIMENT: exp_langton_ant_stripe_correlation_window
@@ -102,8 +102,8 @@ Last updated: 2026-03-14
 
 EXPERIMENT: exp_consumer_resource_recycling_locality_threshold
   Discovered: 2026-03-14 20:22 CET
-  What you saw: sampled 8 of 1470 results across 31 hosts. Every readable payload landed at an interior locality threshold rather than the search ceiling, with locality_c_estimate ranging from about 0.0569 up to 0.5685 while the last midlayer localization score stayed consistently above about 3.29 and usually around 3.3 to 3.9; most runs had already converged to 1024 species with very narrow brackets, though one 512-species run sat near the same low-threshold band.
-  Conclusion: PRELIMINARY. Recycling locality does appear to matter on its own: the rescue point is interior and the unstable mode remains concentrated in the middle trophic layers across the sampled hosts. The threshold location is not yet quantitatively settled, because the current queue spans roughly an order of magnitude in locality_c despite similar system sizes and bracket widths.
+  What you saw: sampled 14 of 7522 results across 52 hosts. Every readable CPU payload again landed at an interior locality threshold rather than the search ceiling, with locality_c_estimate spanning about 0.0500 to 0.4303 while most 1024-species runs clustered between roughly 0.08 and 0.43 on very tight 4.50e-05 or 1.76e-07 brackets. Throughout the sample the midlayer localization score stayed robustly high at about 3.15 to 4.18, so the unstable mode remained concentrated even as the inferred locality threshold moved around.
+  Conclusion: PRELIMINARY. Recycling locality does matter on its own: the rescue point is consistently interior, and the instability remains concentrated in the middle trophic layers across many hosts. But the threshold has not yet collapsed to a narrow quantitative band, because similarly converged 1024-species runs still range from barely above the minimum locality bound to about 0.43.
 Last updated: 2026-03-14
 
 EXPERIMENT: exp_rank_dynamics
