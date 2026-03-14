@@ -135,3 +135,33 @@ EXPERIMENT: exp_sam_vs_sgd_v2
   What you saw: sampled 8 of 44 results across 23 hosts. In every sampled payload, SAM won the sharpness comparison in about 35 to 42 of 48 tested configurations and cut mean sharpness from roughly 7.7 to 10.4 down to about 5.4 to 6.4, but mean test accuracy was usually slightly worse than SGD by about 0.003 to 0.012; only one sampled file showed a tiny positive average accuracy edge for SAM. Mean generalization gaps were usually similar or slightly smaller under SAM, but not enough to overcome the accuracy shortfall.
   Conclusion: REJECTED. Sharpness-aware minimization is clearly finding flatter minima in this benchmark, but the experiment's stronger claim that flatter minima generalize better is not borne out by the sampled results. Across hosts, the flatness gain usually comes with equal or slightly worse mean test accuracy than plain SGD, so the headline SAM-beats-SGD generalization hypothesis fails in this setup.
 Last updated: 2026-03-14
+
+EXPERIMENT: exp_prestressed_boundary_softmode_threshold
+  Discovered: 2026-03-14 21:10 CET
+  What you planned: CPU successor to the stub-only GPU boundary-softmode family, testing the prestress gradient where the lowest soft mode in a disordered cross-braced operator becomes boundary-localized. Literature search used the queries "prestressed metamaterial edge localized soft mode eigenvalue threshold", "mechanical metamaterial soft mode localization boundary prestress", and "disordered spring network soft mode localization boundary prestress"; the hits covered prestressed metamaterials, edge-mode mechanics, and soft-mode localization broadly, but not a dense iterative-deepening threshold map for this boundary relocalization transition.
+  Conclusion: STAGED. New numpy iterative-deepening script uses one deterministic disorder realization per seed and per matrix size, passed the mandatory dry-run, and is being deployed alongside the still-preliminary recycling-locality, recycling-rescue, and microgrid fast-support CPU families.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_quasispecies_seedbank_reactivation_leak_threshold_gpu
+  Discovered: 2026-03-14 21:45 CET
+  What you planned: GPU successor to the rejected zero-leak family, testing whether strong seed-bank buffering under fixed high recombination can survive only until cross-module reactivation leak exceeds a nonzero threshold. Literature search used the queries "quasispecies dormancy seed bank recombination modular fitness landscape", "\"Eigen model\" recombination dormancy seed bank", and "\"quasispecies\" reactivation dormancy recombination localization"; the hits covered quasispecies theory, recombination, and dormancy separately, but not a dense GPU finite-size threshold map for leak-driven loss of seed-bank localization.
+  Conclusion: STAGED. New cupy iterative-deepening script passed the mandatory dry-run with timeout exit 124, 600 GPU workunits were added for this family, 500 more were added to the still-preliminary recycling-locality GPU family, 300 more to the still-preliminary recycling-rescue GPU family, and residual GPU queues for the already retired autocatalytic-reservoir, microgrid support-imbalance, microgrid fast-support, seed-bank error-threshold, and seed-bank leak-threshold families were aborted before refill.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_quasispecies_seedbank_reactivation_leak_threshold_gpu_gpu (309 total results available, 8 you sampled, 18 hosts)
+  Discovered: 2026-03-14 21:52 UTC
+  What you saw: every sampled payload resolved a tight interior leak_c_estimate around 1.04 to 1.15 with essentially zero bracket width at current_active_state_count 2688, while reactivation_localization_score ranged from about 1.81 to 3.59 and usually stayed at or above the 2.05 localization cutoff. Peak module mass stayed high at roughly 0.64 to 0.95 and dormant mass fraction stayed high at roughly 0.84 to 0.97, so the buffered localized mode persisted until substantial cross-module reactivation leak was introduced.
+  Conclusion: CONFIRMED. In the live GPU runs, the seed-bank localization advantage is not destroyed immediately by infinitesimal reactivation leak; it survives up to a reproducible nonzero leak threshold near 1.1. That is the core hypothesis of this successor family, and the sampled hosts already show the threshold as an interior effect rather than a zero-leak collapse or a ceiling-saturated bound.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_grokking_dynamics_v6 (39 total results available, 6 you sampled, 23 hosts)
+  Discovered: 2026-03-14 21:52 UTC
+  What you saw: every sampled run reached train accuracy 1.0 by epoch 1000, never rose above about 0.027 to 0.062 test accuracy, and reported grokking_epoch = 0 all the way through roughly 38k to 232k completed epochs. Final weight norm stayed close to peak with ratio about 0.942 to 0.951, so the predicted delayed compression-and-generalization phase never appeared.
+  Conclusion: REJECTED. Lowering the modulus to P = 23 did not rescue grokking in this setup; the model still memorizes almost immediately and then sits at near-chance test accuracy. The claimed v6 window of delayed generalization within roughly 100k to 300k epochs is not supported by the sampled results, because no run shows the predicted late takeoff in test performance.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_sam_vs_sgd (44 total results available, 6 you sampled, 26 hosts)
+  Discovered: 2026-03-14 21:52 UTC
+  What you saw: all sampled payloads were numerically identical. In both tested configurations, SAM never beat SGD on either criterion: mean test accuracy stayed lower for SAM at about 0.704 versus 0.712 for SGD, and mean sharpness was much worse for SAM at about 13.53 versus 3.12 for SGD, with one configuration especially bad at SAM sharpness about 23.9 against SGD about 3.23.
+  Conclusion: REJECTED. In this v1 spiral benchmark, SAM is not finding flatter minima and it is not generalizing better than plain SGD. The failure is not subtle in the sampled outputs, because both the flatness metric and the accuracy metric move against the hypothesis.
+Last updated: 2026-03-14
