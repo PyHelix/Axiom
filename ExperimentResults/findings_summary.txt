@@ -15,13 +15,8 @@ EXPERIMENT: exp_sparse_heavytail_wigner_universality
 Last updated: 2026-03-14
 EXPERIMENT: exp_band_heavytail_wigner_poisson_gpu
   Discovered: 2026-03-13 23:49 UTC
-  What you saw: sampled 11 of 137 results across 13 hosts. Most usable GPU runs reached current_matrix_size 8192 with alpha_c_estimate between about 0.516 and 0.633, implying bandwidths roughly 46.7 to 57.3, while one sampled file was empty elapsed-only output and an earlier lower-depth sample hit an outlying alpha around 1.43 at N=2048. The heavy-tail values sit somewhat above the Gaussian family's lower plateaus but still overlap its 0.54-0.58 region strongly.
-  Conclusion: PRELIMINARY. The Student-t band family may be nudging the crossover bandwidth upward, but the spread is still too broad and overlaps too much with the Gaussian baseline to claim a clean heavy-tail shift. More depth is needed to tell whether the 0.58-0.63 cluster is the real asymptotic signal or just another finite-size plateau.
-Last updated: 2026-03-14
-EXPERIMENT: exp_branching_markov_dormancy_duration
-  Discovered: 2026-03-14 01:00 UTC
-  What you saw: the deduplicated 18-seed batch already shows a clean directional signal. Moderate persistence favors an interior dormancy duration, with mid_duration_rescues_moderate_persistence positive and extremely stable, while long_duration_overbuffers_high_persistence is clearly negative instead of revealing a broad long-delay advantage.
-  Conclusion: PRELIMINARY. Finite dormancy duration is looking like a real causal mechanism rather than noise, but the family still needs more seeds to determine whether the effect remains sharply interior once host-to-host variance broadens.
+  What you saw: sampled 8 of 730 results across 24 hosts. The readable GPU payloads reached current_matrix_size 224 to 512 with alpha_c_estimate spread from about 0.514 up to 0.772, implied bandwidths from roughly 8.5 to 56, and heavy_tail_requires_wider_band flipping sign from about -0.036 to +0.222 instead of staying uniformly positive.
+  Conclusion: NO EFFECT. The heavy-tail GPU family is not separating cleanly from the Gaussian crossover baseline: several sampled runs sit right at or below the nominal 0.55 reference while the larger upward shifts cluster in smaller-N passes. With that overlap and finite-size scatter, the live queue does not support a distinct heavy-tail upward shift in the crossover bandwidth.
 Last updated: 2026-03-14
 EXPERIMENT: exp_branching_markov_dormancy_trigger
   Discovered: 2026-03-14 01:00 UTC
@@ -60,9 +55,8 @@ EXPERIMENT: exp_autocatalytic_modular_inhibition_threshold
 Last updated: 2026-03-14
 EXPERIMENT: exp_autocatalytic_reservoir_inhibition_threshold_gpu
   Discovered: 2026-03-14 05:20 UTC
-  What you are testing: a new GPU origin-of-life chemistry experiment that bisects the inhibition level where a module-localized positive-growth autocatalytic mode collapses once every catalytic species is reversibly coupled to a protected reservoir copy, using iterative-deepening cupy eigensolves on dense symmetric block operators up to GPU-scaled dimensions.
-  Novelty check: searched for "autocatalytic set inhibition dormancy reservoir modular network paper", "RAF autocatalytic inhibition modular network paper", "autocatalytic chemical network dormant reservoir inhibition spectral threshold", and "seed bank autocatalytic network inhibition origin of life". I found prior work on RAF/autocatalytic inhibition and separate RNA-world or buffering/reservoir discussions, but no direct dense spectral threshold map for modular autocatalytic operators with an explicit reversible reservoir block under inhibition.
-  Conclusion: DEPLOYED. Staged as a new GPU family because it tests a specific reservoir-buffering mechanism that is distinct from the existing CPU inhibition-only family and from the quasispecies seed-bank threshold family while still using sustained cupy dense eigensolves that justify GPU slots.
+  What you saw: sampled 8 of 743 results across 25 hosts. Every readable payload pinned eta_c_estimate at 2.7945 to 2.8 with vanishing bracket width, while module_localization_score stayed above the 2.08 cutoff at about 3.23 to 8.74 and reservoir_mass_fraction was effectively 1.0 in every sample.
+  Conclusion: PRELIMINARY. Reversible reservoir coupling is strongly buffering the localized positive-growth mode against inhibition across the entire scanned range. The mechanism looks real, but scientifically the current queue is still a ceiling result: the collapse threshold has been pushed beyond eta = 2.8 rather than resolved at an interior value.
 Last updated: 2026-03-14
 EXPERIMENT: exp_quasispecies_modular_recombination_threshold
   Discovered: 2026-03-14 08:13 UTC
@@ -92,6 +86,11 @@ Last updated: 2026-03-14
 EXPERIMENT: exp_prestressed_metamaterial_buckling_threshold
   Discovered: 2026-03-14 11:08 UTC. Sampled 8 of 930 results across 44 hosts. Every sampled payload locked onto an interior kappa_c_estimate between about 0.9844 and 1.0125 with essentially zero bracket width, while last_mean_min_eig stayed strongly negative around -6.52 to -6.69 and brace_localization_score remained almost exactly 1.0002 rather than showing concentrated brace localization.
   Conclusion: CONFIRMED. The prestressed metamaterial family already has a sharp interior buckling threshold near kappa about 1.0 for the first soft-mode instability. What is being confirmed here is the instability threshold itself; the soft mode is not preferentially brace-localized in the sampled regime.
+Last updated: 2026-03-14
+EXPERIMENT: exp_prestressed_shell_delocalization_threshold_gpu
+  Discovered: 2026-03-14 11:16 UTC
+  What you saw: sampled 8 of 328 results across 11 hosts. Every readable payload converged to an interior rho_c_estimate between about 1.293 and 1.351 with effectively zero bracket width at shell sizes 2336 to 4096, while shell_localization_score stayed enormous at roughly 372 to 1332 but shell_mass_fraction sat only around 0.720 to 0.772 and core_mass_fraction around 0.228 to 0.280 instead of meeting the shell-confined cutoff.
+  Conclusion: CONFIRMED. The shell-to-core coupling does produce a sharp interior threshold where the lowest soft mode stops being shell-confined. What delocalizes here is the shell preference, not the spatial concentration itself: the mode remains strongly localized but spills decisively into the bulk once rho reaches about 1.3.
 Last updated: 2026-03-14
 EXPERIMENT: exp_microgrid_islanding_reserve_threshold
   Discovered: 2026-03-14 11:08 UTC
