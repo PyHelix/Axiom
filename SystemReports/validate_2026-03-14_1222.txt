@@ -1,0 +1,38 @@
+Validation session log
+Timestamp: 2026-03-14 12:22 CET
+
+Results credited this session
+- Direct credit sweeps run: 5
+- Results credited by direct sweeps: 487
+- Total credit granted by direct sweeps: 28510.99
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.7245085077146812e-14
+- Price table last_updated_unix: 1773486914
+
+Anti-cheat review
+- Sampled sanitized results available for review: 175
+- Flagged in sampled review: 3
+- Result 3987543 denied with 0.01 sentinel: stub success under 5 seconds
+- Result 3987658 denied with 0.01 sentinel: empty numeric payload
+- Result 3987991 denied with 0.01 sentinel: stub success under 5 seconds
+- One additional result was denied by the same sub-5-second stub rule during the final live credit sweep.
+
+Per-host credit summary
+- Exact full-session host deltas could not be reconstructed after the fact for the first sweep because a concurrent bulk validator update touched the `result` table in the same second window.
+- Credit was applied incrementally to host and user totals during each sweep as required; no absolute `total_credit` writes were used.
+- Later live sweeps after the concurrent bulk update credited additional results across multiple hosts, including host IDs 11, 105, 210, 327, 339, 367, 390, 395, 399, and 441.
+
+Post-run state
+- Current credited result count in database: 1332262
+- Remaining uncredited results with elapsed_time > 0 at 2026-03-14 12:22 CET: 9
+- Remaining uncredited results with elapsed_time = 0 at 2026-03-14 12:22 CET: 40377
+- Remaining nonzero-elapsed uncredited results are live arrivals that completed during the session while credit sweeps were running.
+
+Website counters
+- `/opt/axiom_boinc/html/user/credited_count.txt` updated to 1348603
+- `/opt/axiom_boinc/html/user/total_results_count.txt` updated to 283966
+
+Cleanup actions
+- Temporary anti-cheat script: `/tmp/axiom_anti_cheat.py`
+- Temporary credit script: `/tmp/axiom_credit.py`
+- Temporary anti-cheat outputs: `/tmp/axiom_flagged_ids.json`, `/tmp/axiom_anti_cheat_report.json`
+- Session log copied to website system reports directory.
