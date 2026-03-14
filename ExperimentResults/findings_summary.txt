@@ -54,20 +54,19 @@ Last updated: 2026-03-14
 
 EXPERIMENT: exp_quasispecies_seedbank_error_threshold_gpu
   Discovered: 2026-03-14 01:35 UTC
-  What you are testing: a new GPU block-matrix quasispecies experiment in evolutionary biology. It bisects the mutation strength where the leading eigenvector delocalizes on a modular rugged landscape once every active genotype is coupled to a dormant seed-bank copy, using iterative-deepening cupy eigensolves on dense symmetric operators up to GPU-scaled dimensions.
-  Novelty check: searched for quasispecies dormancy seed-bank error-threshold work, modular landscape plus dormancy threshold papers, and microbial seed-bank quasispecies models in fluctuating environments. I found broad quasispecies/error-threshold theory and separate dormancy or seed-bank theory, but no direct finite-size spectral threshold map for modular rugged quasispecies with an explicit dormant reservoir and GPU iterative deepening.
-  Conclusion: DEPLOYED. Staged as a new GPU family because it extends the new quasispecies direction into a genuinely distinct dormant-reservoir threshold problem while using sustained cupy dense eigensolves that justify GPU slots.
+  What you saw: sampled 8 of 70 results across 10 hosts. Six readable payloads all saturated at the upper mutation bracket with mu_c_estimate pinned at 0.38 and essentially zero bracket width, while module_localization_score stayed well above the 2.18 delocalization cutoff from about 8.04 up to 1992.79 and peak module mass remained high at roughly 0.694 to 0.998; two additional sampled files were elapsed-only GPU stubs with no numeric payload beyond runtime.
+  Conclusion: PRELIMINARY. The seed-bank reservoir is preserving modular localization across the entire scanned mutation range rather than revealing an interior error threshold. That is a strong directional signal for buffering, but the present batch is still ceiling-saturated at the 0.38 bracket edge, so it does not yet establish where delocalization actually begins.
 Last updated: 2026-03-14
 
 EXPERIMENT: exp_stage_structured_modularity_stability
   Discovered: 2026-03-14 04:30 UTC
-  What you saw: sampled 8 of 24 results across 5 hosts. Every sampled payload converged to a ceiling-near gamma_c_estimate of either 2.89453125 or 2.98828125 with vanishing bracket width, spanning current_species_count 256 to 1024, while the last_mean_max_real_part at the deepest pass stayed strongly positive at roughly 8.68 to 39.38.
-  Conclusion: PRELIMINARY. The modular stage-structured communities keep their majority-stable regime until almost the very top of the scanned coupling range, so juvenile-adult coupling is not erasing modular stabilization at any moderate value here. That is a real directional result, but with only 24 seeds the scientifically safe claim is still ceiling saturation rather than a settled asymptotic threshold.
+  What you saw: sampled 8 of 25 results across 5 hosts. Every sampled payload converged to a ceiling-near gamma_c_estimate between 2.7890625 and 2.98828125 with vanishing bracket width, spanning current_species_count 256 to 1024, while the last_mean_max_real_part at the deepest pass stayed strongly positive at roughly 8.68 to 39.38.
+  Conclusion: PRELIMINARY. The modular stage-structured communities keep their majority-stable regime until almost the very top of the scanned coupling range, so juvenile-adult coupling is not erasing modular stabilization at any moderate value here. That is a real directional result, but with only 25 seeds the scientifically safe claim is still ceiling saturation rather than a settled asymptotic threshold.
 Last updated: 2026-03-14
 
 EXPERIMENT: exp_autocatalytic_modular_inhibition_threshold
   Discovered: 2026-03-14 04:30 UTC
-  What you saw: sampled 8 of 58 results across 5 hosts. Every sampled payload converged to the same interior eta_c_estimate near 0.309375 with essentially zero bracket width at current_species_count 1024 or 2048, while last_mean_leading_eig stayed strongly positive around 17.68 to 37.33 and last_mean_module_mass sat near 0.251 to 0.252, which is almost perfectly spread across the four modules.
+  What you saw: sampled 8 of 59 results across 5 hosts. Every sampled payload converged to a narrow interior eta_c_estimate of either 0.309375 or 0.31875 with essentially zero bracket width at current_species_count 2048, while last_mean_leading_eig stayed strongly positive around 36.94 to 37.33 and last_mean_module_mass sat near 0.251 to 0.252, which is almost perfectly spread across the four modules.
   Conclusion: PRELIMINARY. The inhibition-collapse threshold itself looks strikingly sharp and reproducible, landing at the same eta on every sampled host. But the leading mode at that edge is already effectively delocalized across modules, so the current live evidence supports a clean growth-collapse threshold more than a specifically module-localized collapse mechanism.
 Last updated: 2026-03-14
 
