@@ -1,99 +1,59 @@
-EXPERIMENT: exp_hatano_nelson_anticorrelated_disorder
-  Discovered: 2026-03-13 23:49 UTC
-  What you saw: sampled 8 of 1710 results across 31 hosts. Every sampled payload stopped at current_matrix_size 1024 with W_low pinned at 5.9999999986, W_high at 6.0, W_c_estimate at 5.9999999993, and shift_vs_iid_ceiling essentially zero or very slightly negative.
-  Conclusion: REJECTED. Strong anti-correlation does not lower the Hatano-Nelson delocalization threshold below the IID ceiling in the sampled runs. The queue is repeatedly saturating at the same 6.0 ceiling as the baseline rather than opening a lower-threshold branch, so the hypothesized downward shift is not supported.
-Last updated: 2026-03-14
 EXPERIMENT: exp_branching_markov_dormancy_release
   Discovered: 2026-03-13 23:49 UTC
   What you saw: sampled 8 of 1258 results across 32 hosts. In nearly every readable table, the short release threshold 1 at p_stay=0.55 turned mean_tail_total from tens or low hundreds into thousands or millions, and high-persistence p_stay=0.85 runs usually survived under delayed release while immediate release stayed far smaller. But thresholds 3 and 6 often remained competitive at high persistence instead of failing cleanly, and fast-switching p_stay=0.25 runs did not show a stable penalty from waiting.
   Conclusion: PRELIMINARY. A short good-run filter clearly rescues persistence relative to immediate reactivation in the moderate- and high-persistence regime, so the release-delay effect itself looks real. The full window hypothesis is still incomplete, because overlong delays are not consistently worse once persistence is high and the fast-switching penalty remains mixed.
 Last updated: 2026-03-14
-EXPERIMENT: exp_sparse_heavytail_wigner_universality
-  Discovered: 2026-03-13 23:49 UTC
-  What you saw: sampled 6 of 801 results across 20 hosts. All six CPU payloads reached current_matrix_size 2048 with gamma_c_estimate tightly between 0.7175 and 0.7758, implied average degree about 5.5 to 8.6, and vs_lee_schnelli between about 2.15 and 2.33.
-  Conclusion: NO EFFECT. The heavy-tail sparse crossover is clearly well above the Lee-Schnelli 1/3 bound, but it is staying inside the same broad gamma_c band already seen for the Gaussian sparse family rather than showing a distinct new shift. At this stage the finite-variance Student-t noise is not producing a separable crossover exponent effect.
-Last updated: 2026-03-14
-EXPERIMENT: exp_band_heavytail_wigner_poisson_gpu
-  Discovered: 2026-03-13 23:49 UTC
-  What you saw: sampled 8 of 730 results across 24 hosts. The readable GPU payloads reached current_matrix_size 224 to 512 with alpha_c_estimate spread from about 0.514 up to 0.772, implied bandwidths from roughly 8.5 to 56, and heavy_tail_requires_wider_band flipping sign from about -0.036 to +0.222 instead of staying uniformly positive.
-  Conclusion: NO EFFECT. The heavy-tail GPU family is not separating cleanly from the Gaussian crossover baseline: several sampled runs sit right at or below the nominal 0.55 reference while the larger upward shifts cluster in smaller-N passes. With that overlap and finite-size scatter, the live queue does not support a distinct heavy-tail upward shift in the crossover bandwidth.
-Last updated: 2026-03-14
+
 EXPERIMENT: exp_branching_markov_dormancy_trigger
   Discovered: 2026-03-14 01:00 UTC
   What you saw: the 26-seed deduplicated batch points in the predicted direction for persistent environments. A short bad-run trigger beats immediate dormancy at high persistence and a long trigger clearly over-delays response, while the fast-switching penalty metric is still too weak to call settled.
   Conclusion: PRELIMINARY. The thresholded-entry mechanism is promising, but the full three-part story is not yet closed because the quick-switching failure mode has not separated cleanly enough from zero.
 Last updated: 2026-03-14
+
 EXPERIMENT: exp_quasispecies_modular_error_threshold
   Discovered: 2026-03-14 02:30 UTC
   What you saw: sampled 10 of 1881 results across 32 hosts. Every sampled payload again pinned mu_c_estimate at 0.4199968 against the 0.42 upper bracket, now at current_state_count 1024 or 2048, while module_localization_score stayed far above the 2.25 delocalization cutoff at about 12.6 to 832.6 and peak module mass remained around 0.73 to 0.97.
   Conclusion: PRELIMINARY. The modular rugged quasispecies remains strongly localized all the way to the top of the scanned mutation window, so the live queue is reinforcing a ceiling effect rather than resolving an interior error threshold. The signal is now robust across many hosts, but scientifically the finding is still that the transition lies beyond the current bracket, not that its location has been measured.
 Last updated: 2026-03-14
-EXPERIMENT: exp_branching_catastrophe_dormancy_memory
-  Discovered: 2026-03-14 02:30 UTC
-  What you saw: sampled 6 of 24 results across 8 hosts. Every sampled payload showed the same directional pattern: mid-memory rescue stayed positive around 0.1386 to 0.1391, edge-memory gain stayed negative around -0.0290 to -0.0284, and the positive_mid_gain_fraction remained very high at 0.9167 to 0.9583 with the best gains near 0.11.
-  Conclusion: CONFIRMED. Reversible dormancy produces a real intermediate-memory rescue window under clustered catastrophe persistence, and the effect is already highly stable across the available hosts. The edges do not merely weaken the benefit; they reverse it, which supports the temporal-matching mechanism rather than a generic dormancy bonus.
-Last updated: 2026-03-14
-EXPERIMENT: exp_reservoir_delay_adaptive_release_window
-  Discovered: 2026-03-14 02:30 UTC
-  What you saw: sampled 6 of 145 results across 17 hosts. Every sampled payload gave a positive delay0_gain around 28 to 29.5, but delay14_gain and delay42_gain were both catastrophically negative at roughly -4100 to -4205, leaving reentrant_gain consistently around -12.7 to -14.8 and support_rate_mid_delay_best near zero except for a single trial outlier.
-  Conclusion: REJECTED. The adaptive release controller works only without delay and collapses once the policy acts on stale risk information, so there is no mid-delay rescue window here. The sign is not ambiguous: the proposed reentrant benefit is replaced by a severe delayed-control failure across all sampled runs.
-Last updated: 2026-03-14
+
 EXPERIMENT: exp_quasispecies_seedbank_error_threshold_gpu
   Discovered: 2026-03-14 01:35 UTC
   What you saw: sampled 8 of 70 results across 10 hosts. Six readable payloads all saturated at the upper mutation bracket with mu_c_estimate pinned at 0.38 and essentially zero bracket width, while module_localization_score stayed well above the 2.18 delocalization cutoff from about 8.04 up to 1992.79 and peak module mass remained high at roughly 0.694 to 0.998; two additional sampled files were elapsed-only GPU stubs with no numeric payload beyond runtime.
   Conclusion: PRELIMINARY. The seed-bank reservoir is preserving modular localization across the entire scanned mutation range rather than revealing an interior error threshold. That is a strong directional signal for buffering, but the present batch is still ceiling-saturated at the 0.38 bracket edge, so it does not yet establish where delocalization actually begins.
 Last updated: 2026-03-14
+
 EXPERIMENT: exp_stage_structured_modularity_stability
   Discovered: 2026-03-14 04:30 UTC
   What you saw: sampled 8 of 25 results across 5 hosts. Every sampled payload converged to a ceiling-near gamma_c_estimate between 2.7890625 and 2.98828125 with vanishing bracket width, spanning current_species_count 256 to 1024, while the last_mean_max_real_part at the deepest pass stayed strongly positive at roughly 8.68 to 39.38.
   Conclusion: PRELIMINARY. The modular stage-structured communities keep their majority-stable regime until almost the very top of the scanned coupling range, so juvenile-adult coupling is not erasing modular stabilization at any moderate value here. That is a real directional result, but with only 25 seeds the scientifically safe claim is still ceiling saturation rather than a settled asymptotic threshold.
 Last updated: 2026-03-14
+
 EXPERIMENT: exp_autocatalytic_modular_inhibition_threshold
   Discovered: 2026-03-14 04:30 UTC
   What you saw: sampled 8 of 59 results across 5 hosts. Every sampled payload converged to a narrow interior eta_c_estimate of either 0.309375 or 0.31875 with essentially zero bracket width at current_species_count 2048, while last_mean_leading_eig stayed strongly positive around 36.94 to 37.33 and last_mean_module_mass sat near 0.251 to 0.252, which is almost perfectly spread across the four modules.
   Conclusion: PRELIMINARY. The inhibition-collapse threshold itself looks strikingly sharp and reproducible, landing at the same eta on every sampled host. But the leading mode at that edge is already effectively delocalized across modules, so the current live evidence supports a clean growth-collapse threshold more than a specifically module-localized collapse mechanism.
 Last updated: 2026-03-14
+
 EXPERIMENT: exp_autocatalytic_reservoir_inhibition_threshold_gpu
   Discovered: 2026-03-14 05:20 UTC
   What you saw: sampled 8 of 743 results across 25 hosts. Every readable payload pinned eta_c_estimate at 2.7945 to 2.8 with vanishing bracket width, while module_localization_score stayed above the 2.08 cutoff at about 3.23 to 8.74 and reservoir_mass_fraction was effectively 1.0 in every sample.
   Conclusion: PRELIMINARY. Reversible reservoir coupling is strongly buffering the localized positive-growth mode against inhibition across the entire scanned range. The mechanism looks real, but scientifically the current queue is still a ceiling result: the collapse threshold has been pushed beyond eta = 2.8 rather than resolved at an interior value.
 Last updated: 2026-03-14
-EXPERIMENT: exp_quasispecies_modular_recombination_threshold
-  Discovered: 2026-03-14 08:13 UTC
-  What you saw: sampled 8 of 7858 results across 34 hosts. Every sampled payload landed on an interior recombination threshold with rho_c_estimate between about 0.633 and 0.988 at fixed mutation 0.34 and state counts 1024 or 2048, while recombination_localization_score ranged from about 1.71 to 2.80 and peak_module_mass from about 0.592 to 0.826 rather than collapsing at the search bracket edge.
-  Conclusion: CONFIRMED. Recombination is breaking modular quasispecies localization at a genuine interior threshold, so this successor family is resolving the ceiling saturation that stalled the mutation-only run. The exact rho value is still seed-dependent, but the effect itself is now directionally stable across the sampled hosts.
+
+EXPERIMENT: exp_quasispecies_seedbank_recombination_threshold
+  Discovered: 2026-03-14 13:55 UTC
+  What you saw: sampled 8 of 2516 results across 45 hosts. Every sampled payload saturated at rho_high 3.2 with rho_c_estimate between 3.19375 and 3.19998, bracket widths of either 0.0125 or 4.88e-05, recombination_localization_score about 3.9976 to 3.9984, peak module mass about 0.99970 to 0.99980, and dormant mass fraction about 0.99755 to 0.99783.
+  Conclusion: CONFIRMED. Adding the seed-bank reservoir pushes the recombination-delocalization threshold far above the non-dormant modular baseline, which was previously resolved near rho about 0.63 to 0.99. The exact threshold is still beyond the current 3.2 bracket ceiling, but the upward shift itself is already unambiguous across the sampled hosts.
 Last updated: 2026-03-14
-EXPERIMENT: exp_stage_structured_modularity_advantage_threshold
-  Discovered: 2026-03-14 08:13 UTC
-  What you saw: sampled 20 of 8279 results across 33 hosts. The inferred gamma_c_estimate wandered broadly from about 0.086 up to 2.763 across sampled seeds and sizes, while last_modularity_advantage kept flipping sign between roughly -0.048 and +0.114 with support fractions ranging from 0.0 to 1.0; modular and shuffled leading real parts were usually extremely close in the same payload.
-  Conclusion: NO EFFECT. The paired stage-structured modularity advantage is not separating cleanly from zero in the live queue, so the proposed loss-of-advantage threshold is not yet behaving like a stable mechanism-level observable. What appears instead is strong seed-to-seed variability with modular and shuffled controls usually tracking each other too closely to support a robust advantage claim.
+
+EXPERIMENT: exp_consumer_resource_recycling_rescue_threshold
+  Discovered: 2026-03-14 13:55 UTC
+  What you saw: sampled 8 of 180 results across 39 hosts. Most 1024-species payloads placed buffer_c_estimate tightly around 0.525 to 0.623 with narrow 4.27e-05 brackets and positive midlayer localization scores about 3.09 to 4.32, one 512-species run sat near 0.552 with slightly negative last_mean_max_real_part, and two 2048 first-pass jobs landed much higher around 2.01 to 2.06 with coarse brackets.
+  Conclusion: PRELIMINARY. Recycling buffers do appear able to restabilize the mismatched consumer-resource communities at an interior gain rather than only at the search ceiling. But the rescue threshold is not yet size-stable, because the deeper 2048 passes are still landing far above the 1024 cluster and the queue has not converged to a single band.
 Last updated: 2026-03-14
-EXPERIMENT: exp_autocatalytic_modular_localization_threshold
-  Discovered: 2026-03-14 08:13 UTC
-  What you saw: sampled 8 of 7928 results across 35 hosts. Every sampled payload collapsed to an effectively zero inhibition threshold with eta_c_estimate around 2.56e-10 at species count 2048 or 6.56e-08 at species count 256, while last_mean_leading_eig stayed strongly positive around 8.25 to 52.92 but module_localization_score remained only about 1.0000 to 1.0017 and peak_module_mass only about 0.251 to 0.263.
-  Conclusion: REJECTED. The dominant autocatalytic growth mode is already effectively delocalized across modules before any meaningful inhibition is applied, so there is no interior inhibition-driven localization-collapse window to map here. Positive growth survives, but the localization mechanism itself is absent in the sampled regime.
-Last updated: 2026-03-14
-EXPERIMENT: exp_trophic_refuge_load_threshold_gpu
-  Discovered: 2026-03-14 11:08 UTC
-  What you saw: sampled 20 of 954 results across 34 hosts. Fourteen sampled files were elapsed-only GPU stubs, but all six readable payloads agreed: xi_c_estimate was pinned essentially at zero from about 9.54e-08 down to 1.20e-36, while localization_score stayed high at about 7.70 to 21.51 and lower_mid_layer_mass stayed near 0.638 to 0.640.
-  Conclusion: REJECTED. The refuge-coupled trophic operator is not opening an interior load-buffering window; in the readable runs the localized positive mode disappears immediately once load is increased beyond zero. The queue still contains many stub outputs, but the scientifically usable payloads are unanimous about the mechanism-level failure.
-Last updated: 2026-03-14
-EXPERIMENT: exp_consumer_resource_stoichiometric_mismatch_threshold
-  Discovered: 2026-03-14 11:08 UTC
-  What you saw: sampled 8 of 1131 results across 44 hosts. Every sampled payload reached current_N 2048 with chi_c_estimate between about 3.150 and 3.413 and essentially zero bracket width, while last_mean_max_real_part stayed positive around 0.545 to 0.683 and midlayer_localization_score stayed concentrated around 4.88 to 6.45.
-  Conclusion: CONFIRMED. Stoichiometric mismatch is producing a real interior stability threshold in the trophically coherent consumer-resource Jacobians rather than a bracket-edge saturation. The threshold varies modestly by seed but stays in a tight 3.1 to 3.4 band with stable midlayer concentration, which is already enough to support the proposed mechanism.
-Last updated: 2026-03-14
-EXPERIMENT: exp_prestressed_metamaterial_buckling_threshold
-  Discovered: 2026-03-14 11:08 UTC. Sampled 8 of 930 results across 44 hosts. Every sampled payload locked onto an interior kappa_c_estimate between about 0.9844 and 1.0125 with essentially zero bracket width, while last_mean_min_eig stayed strongly negative around -6.52 to -6.69 and brace_localization_score remained almost exactly 1.0002 rather than showing concentrated brace localization.
-  Conclusion: CONFIRMED. The prestressed metamaterial family already has a sharp interior buckling threshold near kappa about 1.0 for the first soft-mode instability. What is being confirmed here is the instability threshold itself; the soft mode is not preferentially brace-localized in the sampled regime.
-Last updated: 2026-03-14
-EXPERIMENT: exp_prestressed_shell_delocalization_threshold_gpu
-  Discovered: 2026-03-14 11:16 UTC
-  What you saw: sampled 8 of 328 results across 11 hosts. Every readable payload converged to an interior rho_c_estimate between about 1.293 and 1.351 with effectively zero bracket width at shell sizes 2336 to 4096, while shell_localization_score stayed enormous at roughly 372 to 1332 but shell_mass_fraction sat only around 0.720 to 0.772 and core_mass_fraction around 0.228 to 0.280 instead of meeting the shell-confined cutoff.
-  Conclusion: CONFIRMED. The shell-to-core coupling does produce a sharp interior threshold where the lowest soft mode stops being shell-confined. What delocalizes here is the shell preference, not the spatial concentration itself: the mode remains strongly localized but spills decisively into the bulk once rho reaches about 1.3.
-Last updated: 2026-03-14
-EXPERIMENT: exp_microgrid_islanding_reserve_threshold
-  Discovered: 2026-03-14 11:08 UTC
-  What you saw: sampled 8 of 964 results across 41 hosts. The sampled payloads gave lambda_c_estimate in a very narrow interior band from about 1.5438 to 1.6031, usually at current_bus_count 2048 and once at 1024, with last_mean_max_real_part around 2.83 to 2.87 and island_localization_score about 4.13 to 6.20.
-  Conclusion: CONFIRMED. Reserve-coupled modular swing Jacobians are losing small-signal stability at a reproducible interior load threshold rather than drifting to a ceiling or floor effect. The threshold location and island localization metrics are already stable enough across hosts to support the intended islanding-reserve mechanism.
+
+EXPERIMENT: exp_microgrid_islanding_fast_support_threshold
+  Discovered: 2026-03-14 13:55 UTC
+  What you saw: sampled 8 of 115 results across 32 hosts. The CPU payloads split into two reproducible interior bands, with support_c_estimate around 1.46482 to 1.47656 in some runs and 2.20310 to 2.22654 in others, while bracket widths were essentially zero, last_mean_max_real_part stayed positive around 0.54 to 1.05, and island_localization_score stayed strong around 4.22 to 5.57.
+  Conclusion: PRELIMINARY. Fast support clearly opens an interior rescue threshold above the already unstable islanded-load regime, and the unstable edge mode remains island-concentrated as hypothesized. The threshold location itself is still bifurcated between two bands, so more seeds are needed before calling the rescue gain quantitatively settled.
 Last updated: 2026-03-14
