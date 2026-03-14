@@ -1,0 +1,40 @@
+Validation Session Report
+Timestamp: 2026-03-14 20:14 Europe/Berlin
+
+Results credited this session
+- Initial uncredited backlog at session start: 124692
+- Results updated this session: 125199
+- Price-per-FLOP credit awarded to hosts/users: 233118.58
+- Zero-credit sentinel updates (0.01 denied/no-compute marker): 109913
+- Price scales used: CPU=5.0196363564419115e-12, GPU=2.5228781455604652e-14
+- Website counters updated:
+  credited_count.txt = 1440333
+  total_results_count.txt = 328853
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from /opt/axiom/experiment_results/sanitized
+- Flagged 9 results for duplicate byte-identical sanitized payloads across hosts
+- Denied result IDs:
+  4092866 duplicate sanitized payload across hosts
+  4097091 duplicate sanitized payload across hosts
+  4097700 duplicate sanitized payload across hosts
+  4101022 duplicate sanitized payload across hosts
+  4101557 duplicate sanitized payload across hosts
+  4102370 duplicate sanitized payload across hosts
+  4108228 duplicate sanitized payload across hosts
+  4110654 duplicate sanitized payload across hosts
+  4113295 duplicate sanitized payload across hosts
+
+Per-host credit summary
+- Final live tail-pass host deltas:
+  host 1: 7.33
+  host 23: 701.64
+  host 268: 26.97
+  host 388: 6.44
+- Bulk host and user totals were updated incrementally in batched SQL during the main credit passes.
+
+Cleanup actions
+- Marked zero-elapsed completed/aborted results with granted_credit=0.01 and validate_state=1 so they no longer remain in the uncredited backlog while preserving no-compute semantics.
+- Updated website counter files under /opt/axiom_boinc/html/user/
+- Remaining live uncredited results at report time: 79
+  These were newly finishing results entering the queue while this validation run was active.
