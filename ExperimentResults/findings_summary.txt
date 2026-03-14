@@ -21,3 +21,40 @@ EXPERIMENT: exp_band_heavytail_wigner_poisson_gpu
   What you saw: sampled 11 of 137 results across 13 hosts. Most usable GPU runs reached current_matrix_size 8192 with alpha_c_estimate between about 0.516 and 0.633, implying bandwidths roughly 46.7 to 57.3, while one sampled file was empty elapsed-only output and an earlier lower-depth sample hit an outlying alpha around 1.43 at N=2048. The heavy-tail values sit somewhat above the Gaussian family's lower plateaus but still overlap its 0.54-0.58 region strongly.
   Conclusion: PRELIMINARY. The Student-t band family may be nudging the crossover bandwidth upward, but the spread is still too broad and overlaps too much with the Gaussian baseline to claim a clean heavy-tail shift. More depth is needed to tell whether the 0.58-0.63 cluster is the real asymptotic signal or just another finite-size plateau.
 Last updated: 2026-03-14
+
+EXPERIMENT: exp_branching_markov_dormancy_duration
+  Discovered: 2026-03-14 01:00 UTC
+  What you saw: the deduplicated 18-seed batch already shows a clean directional signal. Moderate persistence favors an interior dormancy duration, with mid_duration_rescues_moderate_persistence positive and extremely stable, while long_duration_overbuffers_high_persistence is clearly negative instead of revealing a broad long-delay advantage.
+  Conclusion: PRELIMINARY. Finite dormancy duration is looking like a real causal mechanism rather than noise, but the family still needs more seeds to determine whether the effect remains sharply interior once host-to-host variance broadens.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_branching_markov_dormancy_trigger
+  Discovered: 2026-03-14 01:00 UTC
+  What you saw: the 26-seed deduplicated batch points in the predicted direction for persistent environments. A short bad-run trigger beats immediate dormancy at high persistence and a long trigger clearly over-delays response, while the fast-switching penalty metric is still too weak to call settled.
+  Conclusion: PRELIMINARY. The thresholded-entry mechanism is promising, but the full three-part story is not yet closed because the quick-switching failure mode has not separated cleanly enough from zero.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_quasispecies_modular_error_threshold
+  Discovered: 2026-03-14 02:30 UTC
+  What you saw: sampled 6 of 70 results across 13 hosts. Every sampled payload stopped after 4 passes at current_matrix_size 128 with mu_c_estimate pinned at 0.4199968 against the 0.42 upper bracket, while module_localization_score stayed far above the 2.25 delocalization cutoff at roughly 5.0 to 20.4 and peak module mass remained around 0.88 to 0.95.
+  Conclusion: PRELIMINARY. The modular rugged quasispecies is not delocalizing anywhere inside the current mutation bracket, so the first live batch is showing ceiling saturation rather than a resolved interior threshold. That makes the family scientifically interesting, but the present configuration cannot yet support a threshold claim because the observed transition is still beyond the scanned range.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_branching_catastrophe_dormancy_memory
+  Discovered: 2026-03-14 02:30 UTC
+  What you saw: sampled 6 of 24 results across 8 hosts. Every sampled payload showed the same directional pattern: mid-memory rescue stayed positive around 0.1386 to 0.1391, edge-memory gain stayed negative around -0.0290 to -0.0284, and the positive_mid_gain_fraction remained very high at 0.9167 to 0.9583 with the best gains near 0.11.
+  Conclusion: CONFIRMED. Reversible dormancy produces a real intermediate-memory rescue window under clustered catastrophe persistence, and the effect is already highly stable across the available hosts. The edges do not merely weaken the benefit; they reverse it, which supports the temporal-matching mechanism rather than a generic dormancy bonus.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_reservoir_delay_adaptive_release_window
+  Discovered: 2026-03-14 02:30 UTC
+  What you saw: sampled 6 of 145 results across 17 hosts. Every sampled payload gave a positive delay0_gain around 28 to 29.5, but delay14_gain and delay42_gain were both catastrophically negative at roughly -4100 to -4205, leaving reentrant_gain consistently around -12.7 to -14.8 and support_rate_mid_delay_best near zero except for a single trial outlier.
+  Conclusion: REJECTED. The adaptive release controller works only without delay and collapses once the policy acts on stale risk information, so there is no mid-delay rescue window here. The sign is not ambiguous: the proposed reentrant benefit is replaced by a severe delayed-control failure across all sampled runs.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_quasispecies_seedbank_error_threshold_gpu
+  Discovered: 2026-03-14 01:35 UTC
+  What you are testing: a new GPU block-matrix quasispecies experiment in evolutionary biology. It bisects the mutation strength where the leading eigenvector delocalizes on a modular rugged landscape once every active genotype is coupled to a dormant seed-bank copy, using iterative-deepening cupy eigensolves on dense symmetric operators up to GPU-scaled dimensions.
+  Novelty check: searched for quasispecies dormancy seed-bank error-threshold work, modular landscape plus dormancy threshold papers, and microbial seed-bank quasispecies models in fluctuating environments. I found broad quasispecies/error-threshold theory and separate dormancy or seed-bank theory, but no direct finite-size spectral threshold map for modular rugged quasispecies with an explicit dormant reservoir and GPU iterative deepening.
+  Conclusion: DEPLOYED. Staged as a new GPU family because it extends the new quasispecies direction into a genuinely distinct dormant-reservoir threshold problem while using sustained cupy dense eigensolves that justify GPU slots.
+Last updated: 2026-03-14
