@@ -1,0 +1,43 @@
+Validation Report
+Timestamp: 2026-03-14_1217
+
+Session credit summary
+- Credited this session: 16687 results
+- Total credit awarded: 532785.19
+- CPU results credited: 14328
+- GPU results credited: 257
+- Denied sentinel credit (0.01): 2102 results
+
+Anti-cheat review
+- Reviewed sanitized numeric payloads for all currently uncredited results with available `_safe.json` files.
+- Denied 2012 results for empty numeric payloads.
+- Denied 16 results for numeric outlier behavior versus same-experiment peers.
+- Denied 13 results for duplicate payloads across different hosts.
+- Denied 61 additional success results under 5 seconds as likely stub/instant-failure returns.
+- Flag concentration was strongest on host 367, which accounted for 1848 of the anti-cheat flags.
+
+Per-host credit summary
+- Main batch top hosts by credit: host 437 = 86872.94
+- Main batch top hosts by credit: host 367 = 38619.72
+- Main batch top hosts by credit: host 324 = 17303.53
+- Main batch top hosts by credit: host 341 = 16895.64
+- Main batch top hosts by credit: host 327 = 16801.83
+- Main batch top hosts by credit: host 395 = 16623.44
+- Main batch top hosts by credit: host 334 = 16198.14
+- Main batch top hosts by credit: host 401 = 16103.90
+- Main batch top hosts by credit: host 398 = 15659.58
+- Main batch top hosts by credit: host 339 = 15405.47
+- Additional follow-up passes awarded 22108.55 credit across small residual tails that were initially rounded to 0.00 by the prompt template's two-decimal SQL formatting.
+
+Operational notes
+- Price-per-FLOP crediting required multiple passes because the prompt template rounded some low-value positive credits to 0.00; reran with higher SQL precision to clear those real-compute rows.
+- Website counters updated:
+  - credited_count.txt incremented by 16687 to 1348116
+  - total_results_count.txt set to 283570
+- Current live queue still contains 40349 zero-elapsed no-compute rows at granted_credit=0, which match the prompt policy of no credit for elapsed_time=0.
+- The live system continued receiving/processing a small number of new positive-elapsed rows during this session; repeated passes were run to reduce that tail while preserving the no-credit rule for zero-elapsed results.
+
+Cleanup actions
+- Wrote and ran /tmp/axiom_credit.py for credit processing, then retained only until report generation.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt
