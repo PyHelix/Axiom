@@ -1,0 +1,59 @@
+Validation Report
+Timestamp: 2026-03-14 03:36 CET
+
+Results credited this session
+- Credit passes executed: 5
+- Results credited: 34165
+- Total price-per-FLOP credit awarded: 256179.02
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.695937079143253e-14
+- First large batch: 34036 results, 254136.13 credit
+- Follow-up batches: 60 results / 749.12 credit; 5 results / 35.01 credit; 6 results / 149.82 credit; 58 results / 1108.94 credit
+- Queue status checkpoint: uncredited queue drained to 0 and reconfirmed at 2026-03-14 03:40 CET after a 1 second recheck
+
+Anti-cheat review
+- Sample reviewed: 200 sanitized JSON files from uncredited completed results
+- Sanitized candidates available at review time: 33938
+- Flagged sample results denied with sentinel credit 0.01: 24
+- Flag reasons summary: 17 stub runs with elapsed_time < 5s; 7 empty numeric payloads
+- Flagged result IDs and reasons:
+  3658632 elapsed_time < 5s stub filter
+  3659753 empty numeric payload
+  3662124 elapsed_time < 5s stub filter
+  3666662 empty numeric payload
+  3667348 empty numeric payload
+  3669009 elapsed_time < 5s stub filter
+  3671108 elapsed_time < 5s stub filter
+  3672483 elapsed_time < 5s stub filter
+  3673146 elapsed_time < 5s stub filter
+  3682461 elapsed_time < 5s stub filter
+  3683062 elapsed_time < 5s stub filter
+  3683508 elapsed_time < 5s stub filter
+  3683521 elapsed_time < 5s stub filter
+  3686122 elapsed_time < 5s stub filter
+  3690411 elapsed_time < 5s stub filter
+  3711900 elapsed_time < 5s stub filter
+  3712600 elapsed_time < 5s stub filter
+  3752518 elapsed_time < 5s stub filter
+  3752523 elapsed_time < 5s stub filter
+  3753837 elapsed_time < 5s stub filter
+  3754282 empty numeric payload
+  3754414 empty numeric payload
+  3754787 empty numeric payload
+  3763903 empty numeric payload
+
+Per-host credit summary
+- Host and user totals were updated incrementally in SQL during each credit pass with `total_credit = total_credit + X`.
+- Exact per-host delta lines were not persisted by the provided credit script, and MariaDB statement-history access was unavailable for after-the-fact reconstruction in this session.
+
+Website counter updates
+- /opt/axiom_boinc/html/user/credited_count.txt updated to 231103
+- /opt/axiom_boinc/html/user/total_results_count.txt remains 230587
+
+Cleanup actions
+- Temporary credit and anti-cheat scripts executed from /tmp
+- Validation report copied to website system reports directory
+- Git repo updated with this system report
+
+Operational notes
+- Result arrival continued during the session, requiring multiple follow-up credit passes before the queue reached zero at the verification checkpoint.
+- Additional completed results may appear after the checkpoint and are handled by the next validation cycle.
