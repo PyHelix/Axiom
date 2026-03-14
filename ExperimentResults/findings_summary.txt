@@ -80,8 +80,21 @@ EXPERIMENT: exp_autocatalytic_modular_localization_threshold
   Conclusion: REJECTED. The dominant autocatalytic growth mode is already effectively delocalized across modules before any meaningful inhibition is applied, so there is no interior inhibition-driven localization-collapse window to map here. Positive growth survives, but the localization mechanism itself is absent in the sampled regime.
 Last updated: 2026-03-14
 EXPERIMENT: exp_trophic_refuge_load_threshold_gpu
-  Discovered: 2026-03-14 08:10 UTC
-  What you are testing: a new GPU ecology experiment that bisects the environmental load where a refuge-coupled trophic response operator loses its positive lower/mid-layer localized mode, using iterative-deepening cupy eigensolves on dense symmetric block operators up to GPU-scaled dimensions.
-  Novelty check: searched for "food web prey refuge trophic coherence stability paper", "ecological community matrix prey refuge spectral stability paper", "trophic coherence refuge food web transient amplification paper", and "predator prey refuge community matrix eigenvalue food web paper". I found prior work on trophic coherence and on prey-refuge effects in specific predator-prey models, but no direct dense GPU threshold map for a refuge-coupled trophic response operator tracking the load level where a localized amplification mode disappears.
-  Conclusion: DEPLOYED. Staged as a new GPU family to replace the retired seed-bank ceiling queue with an ecology mechanism test that is both scientifically distinct from the current origin-of-life and random-matrix families and genuinely GPU-justified by sustained dense eigensolves.
+  Discovered: 2026-03-14 11:08 UTC
+  What you saw: sampled 20 of 954 results across 34 hosts. Fourteen sampled files were elapsed-only GPU stubs, but all six readable payloads agreed: xi_c_estimate was pinned essentially at zero from about 9.54e-08 down to 1.20e-36, while localization_score stayed high at about 7.70 to 21.51 and lower_mid_layer_mass stayed near 0.638 to 0.640.
+  Conclusion: REJECTED. The refuge-coupled trophic operator is not opening an interior load-buffering window; in the readable runs the localized positive mode disappears immediately once load is increased beyond zero. The queue still contains many stub outputs, but the scientifically usable payloads are unanimous about the mechanism-level failure.
+Last updated: 2026-03-14
+EXPERIMENT: exp_consumer_resource_stoichiometric_mismatch_threshold
+  Discovered: 2026-03-14 11:08 UTC
+  What you saw: sampled 8 of 1131 results across 44 hosts. Every sampled payload reached current_N 2048 with chi_c_estimate between about 3.150 and 3.413 and essentially zero bracket width, while last_mean_max_real_part stayed positive around 0.545 to 0.683 and midlayer_localization_score stayed concentrated around 4.88 to 6.45.
+  Conclusion: CONFIRMED. Stoichiometric mismatch is producing a real interior stability threshold in the trophically coherent consumer-resource Jacobians rather than a bracket-edge saturation. The threshold varies modestly by seed but stays in a tight 3.1 to 3.4 band with stable midlayer concentration, which is already enough to support the proposed mechanism.
+Last updated: 2026-03-14
+EXPERIMENT: exp_prestressed_metamaterial_buckling_threshold
+  Discovered: 2026-03-14 11:08 UTC. Sampled 8 of 930 results across 44 hosts. Every sampled payload locked onto an interior kappa_c_estimate between about 0.9844 and 1.0125 with essentially zero bracket width, while last_mean_min_eig stayed strongly negative around -6.52 to -6.69 and brace_localization_score remained almost exactly 1.0002 rather than showing concentrated brace localization.
+  Conclusion: CONFIRMED. The prestressed metamaterial family already has a sharp interior buckling threshold near kappa about 1.0 for the first soft-mode instability. What is being confirmed here is the instability threshold itself; the soft mode is not preferentially brace-localized in the sampled regime.
+Last updated: 2026-03-14
+EXPERIMENT: exp_microgrid_islanding_reserve_threshold
+  Discovered: 2026-03-14 11:08 UTC
+  What you saw: sampled 8 of 964 results across 41 hosts. The sampled payloads gave lambda_c_estimate in a very narrow interior band from about 1.5438 to 1.6031, usually at current_bus_count 2048 and once at 1024, with last_mean_max_real_part around 2.83 to 2.87 and island_localization_score about 4.13 to 6.20.
+  Conclusion: CONFIRMED. Reserve-coupled modular swing Jacobians are losing small-signal stability at a reproducible interior load threshold rather than drifting to a ceiling or floor effect. The threshold location and island localization metrics are already stable enough across hosts to support the intended islanding-reserve mechanism.
 Last updated: 2026-03-14
