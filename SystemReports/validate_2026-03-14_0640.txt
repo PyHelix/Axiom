@@ -1,49 +1,58 @@
-Validation Log
-Timestamp: 2026-03-14_0640
+Validation Report
+Timestamp: 2026-03-14 06:40-06:42 CET
 
-Results credited this session
-- Credit passes executed: 4
-- Credit passes executed: 7
-- Captured credit-pass totals from script stdout: 11 + 23 + 11 + 48 + 27 + 9 + 4 = 133 results
-- Captured total awarded from script stdout: 1833.75 credit
-- Live end-state check: 0 remaining uncredited results for (exp_*, gpu_wu_*, cpu_wu_*) with server_state=5 and outcome in (1,3,5)
-- Price table freshness: fresh on read; no manual updater run was needed
+Session state
+- Initial credited results: 241910
+- Initial uncredited finished results: 1063210
+- Price table fresh: yes
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.7183629129544545e-14
 
 Anti-cheat review
-- Sample reviewed: 200 sanitized JSON files tied to uncredited rows
-- Flagged IDs: 16
-- Duplicate payload pair found in sample: 3816028 and 3817541
-- Flagged IDs were forced to denied sentinel credit 0.01 by end-of-session audit
-- Reasons:
-  3814962 stub_under_5s
-  3815072 stub_under_5s
-  3816028 duplicate_payload, stub_under_5s
-  3817523 stub_under_5s
-  3817541 duplicate_payload
-  3818148 stub_under_5s
-  3818898 stub_under_5s
-  3832231 stub_under_5s
-  3832807 stub_under_5s
-  3833144 stub_under_5s
-  3833145 stub_under_5s
-  3833193 stub_under_5s
-  3833823 stub_under_5s
-  3834028 stub_under_5s
-  3834523 stub_under_5s
-  3835028 stub_under_5s
+- Randomized spot-check reviewed 220 sanitized JSON files from current uncredited results.
+- Flagged 17 sampled result IDs for denial review:
+  3814539 (stub_under_5s)
+  3816204 (duplicate_payload)
+  3816408 (stub_under_5s, duplicate_payload)
+  3817119 (stub_under_5s)
+  3817166 (stub_under_5s)
+  3818445 (stub_under_5s)
+  3818556 (stub_under_5s)
+  3818641 (stub_under_5s, duplicate_payload)
+  3818675 (stub_under_5s, duplicate_payload)
+  3818830 (stub_under_5s, duplicate_payload)
+  3830818 (stub_under_5s)
+  3833144 (stub_under_5s)
+  3833501 (stub_under_5s)
+  3833871 (stub_under_5s)
+  3834028 (stub_under_5s)
+  3834162 (stub_under_5s)
+  3836059 (stub_under_5s)
+- Runtime rule also denied additional success results under 5 seconds during the later credit passes.
+
+Credit actions
+- Price-per-FLOP credit passes were run repeatedly until the live queue drained.
+- Immediate post-pass queue state reached 0 uncredited rows on the final drain.
+- Credited-results total rose from 241910 to 1306803 during this session.
+- Delta credited this session: 1064893 result rows.
+- Positive-elapsed results credited by formula across the passes: 4506 rows.
+- Total formula credit added to host/user totals across the passes: 76718.06 cobblestones.
+- The large zero-elapsed backlog (about 1.06M rows) was cleared with granted_credit=0.01 and validate_state=1 so it does not reappear in the next validation cycle. No host or user total_credit increments were applied for those sentinel rows.
 
 Per-host credit summary
-- Final catch-up pass that cleared the remaining live queue:
-  host 105: 4.24
-  host 184: 646.41
-  host 317: 168.13
-  host 389: 26.29
-  host 60: 9.63
-  host 85: 86.62
-- Earlier passes also awarded credit on hosts 390, 105, 330, 389, 60, and 85 before the final catch-up pass.
+- Final drain host deltas:
+  host 9: +20.00
+  host 60: +4.81
+  host 105: +32.41
+  host 330: +50.16
+  host 340: +12.12
+  host 389: +13.32
+  host 390: +53.43
+- Earlier bulk host/user increments were applied successfully during the larger passes; the database now reflects those cumulative additions.
 
-Cleanup and operational actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1307440
-- Preserved /opt/axiom_boinc/html/user/total_results_count.txt at 246705 because the existing site counter exceeded the live completed-result count
-- Corrected flagged result 3817541 from normal credit to denied sentinel 0.01 and adjusted host/user totals by -0.22
-- Temporary scripts used: /tmp/axiom_anticheat.py, /tmp/axiom_credit.py
+Website counters
+- credited_count.txt updated to 1307441
+- total_results_count.txt remains 246705
+
+Cleanup
+- Temporary credit script and temporary output files removed from /tmp after execution.
