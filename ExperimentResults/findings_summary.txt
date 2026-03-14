@@ -57,3 +57,27 @@ EXPERIMENT: exp_microgrid_islanding_fast_support_threshold
   What you saw: sampled 8 of 115 results across 32 hosts. The CPU payloads split into two reproducible interior bands, with support_c_estimate around 1.46482 to 1.47656 in some runs and 2.20310 to 2.22654 in others, while bracket widths were essentially zero, last_mean_max_real_part stayed positive around 0.54 to 1.05, and island_localization_score stayed strong around 4.22 to 5.57.
   Conclusion: PRELIMINARY. Fast support clearly opens an interior rescue threshold above the already unstable islanded-load regime, and the unstable edge mode remains island-concentrated as hypothesized. The threshold location itself is still bifurcated between two bands, so more seeds are needed before calling the rescue gain quantitatively settled.
 Last updated: 2026-03-14
+
+EXPERIMENT: exp_langton_ant_stripe_correlation_window
+  Discovered: 2026-03-14 14:01 UTC
+  What you saw: sampled 6 of 699 results across 19 hosts. In every sampled payload, adding spatial correlation from 0 to 2 or 5 turned most conditions from no highway within tens of millions of steps into fast highway formation, often in only thousands to hundreds of thousands of steps. Within those correlated runs, the moderate stripe amplitude 0.22 was usually faster than the strong 0.42 stripe and dramatically faster than the unstriped baseline at intermediate density, while the uncorrelated moderate-stripe condition often still failed completely.
+  Conclusion: CONFIRMED. Correlated disorder clearly opens the highway corridor regime, and a moderate stripe bias consistently helps more than either no stripe or the strongest stripe in the sampled runs. The suppression by the strongest stripe is not absolute, but the directional optimum at moderate bias is already robust across hosts and densities.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_wd_critical_width
+  Discovered: 2026-03-14 14:01 UTC
+  What you saw: sampled 10 of 43 results across 27 hosts. The claimed inverse-CP widths bounced all over the place: some seeds marked only w32 true, others marked w24 and w32, others made nearly every width from w24 through w96 true, and one even put the only true point at w64. Validation accuracies stayed clustered near chance around 0.48 to 0.54 across conditions, so the boundary call was being driven by tiny seed-level swings rather than a stable phase break.
+  Conclusion: NO EFFECT. The fine-grained sweep does not reveal a reproducible critical width between 32 and 64 in the current live data. Any apparent threshold is dominated by noisy, near-chance fluctuations across seeds, so the publication-level boundary claim is not supported by these sampled results.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_feature_rank_dynamics
+  Discovered: 2026-03-14 14:01 UTC
+  What you saw: sampled 6 of 39 results across 23 hosts. Across the readable payloads, final effective rank increased from roughly 21 to 23 at width 32 up to roughly 94 to 106 at width 256, but the rank-to-width ratio consistently fell from about 0.67 to 0.72 at width 32 down to about 0.37 to 0.41 at width 256. Training accuracy saturated near 1.0 for every width, while the wider models repeatedly devoted a smaller fraction of their capacity to the active representation subspace.
+  Conclusion: CONFIRMED. Wider networks are not filling their added representational capacity proportionally; they converge to lower effective rank relative to width across the sampled seeds. That sublinear scaling is exactly the predicted mechanism linking width to more compressed shared representations.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_neural_thermodynamics
+  Discovered: 2026-03-14 14:01 UTC
+  What you saw: sampled 4 of 36 results across 22 hosts. Every sampled payload was numerically identical, showing temperature proxy falling from about 1.37 at epoch 0 to about 0.039 by epoch 29 while entropy rose from about 2.25 to 3.85 and final test accuracy stayed around 0.927. The summary flags consistently reported cooling observed, no ordering increase, two detected transition markers, and a specific-heat peak sitting right at the start rather than mid-training.
+  Conclusion: PRELIMINARY. The cooling part of the thermodynamic picture is strong and reproducible, with training clearly moving from noisy to quieter weight dynamics while maintaining high accuracy. But the sharper phase-transition story remains incomplete because ordering does not increase and the strongest specific-heat excursion occurs at initialization rather than at a clean interior transition.
+Last updated: 2026-03-14
