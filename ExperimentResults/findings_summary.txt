@@ -117,3 +117,21 @@ EXPERIMENT: exp_prestressed_boundary_softmode_threshold_gpu
   What you saw: sampled 8 of 281 exact-prefix sanitized files across 20 hosts, then checked the whole exact-prefix file set for numeric payloads. All 281 files were elapsed-only stubs with no experiment_result block, so there is currently no eta threshold, edge-localization score, or soft-mode eigenvalue data to interpret.
   Conclusion: SKIP. The queue is returning runtimes but not scientific measurements yet, so the boundary-softmode hypothesis cannot be evaluated from the present sanitized outputs. This family should be revisited only after numeric payloads start appearing.
 Last updated: 2026-03-14
+
+EXPERIMENT: exp_epi_grid_delay_feedback_collapse
+  Discovered: 2026-03-14 19:09 UTC
+  What you saw: sampled 6 of 30 results across 21 hosts. Every sampled payload showed the same directional pattern: intermediate feedback delays won internal cost sweeps a bit more often than edge delays, with mid_delay_optimal_rate staying near 0.56 and best_delay_mean clustering around 3 steps. Fatigue_slope_mean stayed positive in every sample, outbreak-outage correlation stayed consistently positive around 0.45, and collapse_prob_mean remained exactly 0.0 throughout.
+  Conclusion: PRELIMINARY. A modest interior delay optimum is present, and stronger feedback fatigue consistently worsens the coupled epidemic-grid cost, so the reentrant-control part of the hypothesis looks real. But the collapse regime itself has not appeared in the sampled results, so the scientifically safe claim is still a soft intermediate-delay advantage rather than a confirmed delay-induced collapse mechanism.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_grokking_dynamics_v4
+  Discovered: 2026-03-14 19:09 UTC
+  What you saw: sampled 8 of 45 results across 22 hosts. Every sampled run hit train accuracy 1.0 by epoch 1000, never exceeded about 0.062 test accuracy, and reported grokking_epoch = 0 all the way out to roughly 462k to 500k epochs. Final weight norm stayed close to its peak with ratio about 0.960 to 0.962 instead of showing the large delayed compression the script predicted.
+  Conclusion: REJECTED. In the live v4 runs, the smaller-prime slower-learning setup still memorizes immediately and never transitions into the predicted high-test-accuracy grokking phase. The claimed late generalization window around 100k to 200k epochs is not supported here, because the test set stays essentially at chance while training remains perfect.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_sam_vs_sgd_v2
+  Discovered: 2026-03-14 19:09 UTC
+  What you saw: sampled 8 of 44 results across 23 hosts. In every sampled payload, SAM won the sharpness comparison in about 35 to 42 of 48 tested configurations and cut mean sharpness from roughly 7.7 to 10.4 down to about 5.4 to 6.4, but mean test accuracy was usually slightly worse than SGD by about 0.003 to 0.012; only one sampled file showed a tiny positive average accuracy edge for SAM. Mean generalization gaps were usually similar or slightly smaller under SAM, but not enough to overcome the accuracy shortfall.
+  Conclusion: REJECTED. Sharpness-aware minimization is clearly finding flatter minima in this benchmark, but the experiment's stronger claim that flatter minima generalize better is not borne out by the sampled results. Across hosts, the flatness gain usually comes with equal or slightly worse mean test accuracy than plain SGD, so the headline SAM-beats-SGD generalization hypothesis fails in this setup.
+Last updated: 2026-03-14
