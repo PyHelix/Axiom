@@ -2,16 +2,17 @@ Axiom Validation Log
 Timestamp: 2026-03-14 15:02 Europe/Berlin
 
 Results credited this session
-- Total credited results: 18644
-- Total credit awarded: 564950.623797
+- Total credited results: 19281
+- Total credit awarded: 590701.841676
 - Credit passes:
-  - Pass 1: 18349 results, 561192.24 credit
-  - Pass 2: 192 results, 2641.403797 credit
-  - Pass 3: 75 results, 753.15 credit
-  - Pass 4: 28 results, 363.83 credit
+  - Passes 1-4: 18644 results, 564950.623797 credit
+  - Tail pass A: 398 results, 21258.908256 credit
+  - Tail pass B: 63 results, 800.461306 credit
+  - Tail pass C: 82 results, 1608.011316 credit
+  - Tail pass D: 94 results, 2083.837001 credit
 - Initial queue discovered in Step 1: 88141 uncredited results
-- Remaining uncredited after crediting: 69950
-- Remaining set is entirely elapsed_time=0 cases, which receive no credit under the prompt policy
+- Stable residual set during validation: 69950 elapsed_time=0 results, which receive no credit under the prompt policy
+- The live queue continued admitting new positive-time completions during validation; these were picked up in the tail passes above
 
 Anti-cheat review
 - Eligible sanitized JSON files matched to the current uncredited queue: 0
@@ -46,6 +47,7 @@ Per-host credit summary
 Operational notes
 - Price table was fresh at runtime; no manual refresh was required
 - The prompt's original `:.2f` credit formatting left a small number of positive-credit tasks at `0.00`; the temporary script was updated to write higher precision and rerun until the positive-time residue reached zero
+- Additional positive-time results arrived while the validator was running; repeated tail passes credited these late arrivals
 - Host and user totals were updated incrementally with `total_credit = total_credit + X`
 
 Cleanup actions
