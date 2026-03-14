@@ -93,3 +93,27 @@ EXPERIMENT: exp_microgrid_islanding_support_imbalance_threshold_gpu
   What you saw: sampled 8 of 178 completed results across 17 hosts, then checked all 181 exact-prefix sanitized files for this experiment. Every inspected file was an elapsed-only stub with no numeric experiment_result payload, so there is currently no stability threshold, eigenvalue, or localization output to interpret.
   Conclusion: SKIP. The queue is active, but the present sanitized outputs do not yet contain scientific measurements, only runtimes. This experiment can be revisited once real numeric payloads start landing.
 Last updated: 2026-03-14
+
+EXPERIMENT: exp_consumer_resource_recycling_locality_threshold_gpu
+  Discovered: 2026-03-14 19:30 CET
+  What you planned: GPU successor to the recycling-rescue Jacobian family, testing whether recycling must be sufficiently local, not merely strong, to restabilize a stoichiometrically mismatched trophically coherent community. Literature search used the queries "nutrient recycling food web stability stoichiometry", "consumer-resource nutrient recycling stability food web", "food web recycling local feedback stability", and "consumer-resource recycling locality stability matrix"; the hits were broad recycling/stability papers, not a dense finite-size locality-threshold map.
+  Conclusion: STAGED. New cupy iterative-deepening script passed the mandatory dry-run after the CPU fallback was deepened, 600 GPU workunits were added for this family, and over-seeded GPU queues for exp_quasispecies_seedbank_leak_threshold_gpu, exp_microgrid_islanding_support_imbalance_threshold_gpu, exp_sbm_bridge_hub_localization_gpu, exp_trophic_selfreg_coherence_crossover_gpu, exp_autocatalytic_reservoir_inhibition_threshold_gpu, and exp_microgrid_islanding_fast_support_threshold_gpu were retired to free capacity for more informative runs.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_consumer_resource_recycling_locality_threshold
+  Discovered: 2026-03-14 20:22 CET
+  What you saw: sampled 8 of 1470 results across 31 hosts. Every readable payload landed at an interior locality threshold rather than the search ceiling, with locality_c_estimate ranging from about 0.0569 up to 0.5685 while the last midlayer localization score stayed consistently above about 3.29 and usually around 3.3 to 3.9; most runs had already converged to 1024 species with very narrow brackets, though one 512-species run sat near the same low-threshold band.
+  Conclusion: PRELIMINARY. Recycling locality does appear to matter on its own: the rescue point is interior and the unstable mode remains concentrated in the middle trophic layers across the sampled hosts. The threshold location is not yet quantitatively settled, because the current queue spans roughly an order of magnitude in locality_c despite similar system sizes and bracket widths.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_rank_dynamics
+  Discovered: 2026-03-14 20:22 CET
+  What you saw: sampled 4 of 44 results across 22 hosts. In every sampled payload, all 9 configurations showed rank decrease, with rank_decreased_pct fixed at 100%, mean final-to-initial rank ratio about 0.54 to 0.58, and rank-to-test-accuracy correlation consistently negative from about -0.57 down to -0.91; within the raw config rows, deeper and wider models usually showed the largest negative rank shifts, while the better test-accuracy bands clustered where activation rank had fallen hardest.
+  Conclusion: CONFIRMED. The live runs strongly support representation compression during training rather than rank expansion or neutrality. Lower final rank is consistently associated with better held-out accuracy in the sampled jobs, so the proposed compression-generalization link is already robust across seeds, widths, depths, and learning rates.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_prestressed_boundary_softmode_threshold_gpu
+  Discovered: 2026-03-14 20:22 CET
+  What you saw: sampled 8 of 281 exact-prefix sanitized files across 20 hosts, then checked the whole exact-prefix file set for numeric payloads. All 281 files were elapsed-only stubs with no experiment_result block, so there is currently no eta threshold, edge-localization score, or soft-mode eigenvalue data to interpret.
+  Conclusion: SKIP. The queue is returning runtimes but not scientific measurements yet, so the boundary-softmode hypothesis cannot be evaluated from the present sanitized outputs. This family should be revisited only after numeric payloads start appearing.
+Last updated: 2026-03-14
