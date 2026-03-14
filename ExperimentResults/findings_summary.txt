@@ -36,8 +36,8 @@ Last updated: 2026-03-14
 
 EXPERIMENT: exp_quasispecies_modular_error_threshold
   Discovered: 2026-03-14 02:30 UTC
-  What you saw: sampled 6 of 70 results across 13 hosts. Every sampled payload stopped after 4 passes at current_matrix_size 128 with mu_c_estimate pinned at 0.4199968 against the 0.42 upper bracket, while module_localization_score stayed far above the 2.25 delocalization cutoff at roughly 5.0 to 20.4 and peak module mass remained around 0.88 to 0.95.
-  Conclusion: PRELIMINARY. The modular rugged quasispecies is not delocalizing anywhere inside the current mutation bracket, so the first live batch is showing ceiling saturation rather than a resolved interior threshold. That makes the family scientifically interesting, but the present configuration cannot yet support a threshold claim because the observed transition is still beyond the scanned range.
+  What you saw: sampled 10 of 1881 results across 32 hosts. Every sampled payload again pinned mu_c_estimate at 0.4199968 against the 0.42 upper bracket, now at current_state_count 1024 or 2048, while module_localization_score stayed far above the 2.25 delocalization cutoff at about 12.6 to 832.6 and peak module mass remained around 0.73 to 0.97.
+  Conclusion: PRELIMINARY. The modular rugged quasispecies remains strongly localized all the way to the top of the scanned mutation window, so the live queue is reinforcing a ceiling effect rather than resolving an interior error threshold. The signal is now robust across many hosts, but scientifically the finding is still that the transition lies beyond the current bracket, not that its location has been measured.
 Last updated: 2026-03-14
 
 EXPERIMENT: exp_branching_catastrophe_dormancy_memory
@@ -57,4 +57,23 @@ EXPERIMENT: exp_quasispecies_seedbank_error_threshold_gpu
   What you are testing: a new GPU block-matrix quasispecies experiment in evolutionary biology. It bisects the mutation strength where the leading eigenvector delocalizes on a modular rugged landscape once every active genotype is coupled to a dormant seed-bank copy, using iterative-deepening cupy eigensolves on dense symmetric operators up to GPU-scaled dimensions.
   Novelty check: searched for quasispecies dormancy seed-bank error-threshold work, modular landscape plus dormancy threshold papers, and microbial seed-bank quasispecies models in fluctuating environments. I found broad quasispecies/error-threshold theory and separate dormancy or seed-bank theory, but no direct finite-size spectral threshold map for modular rugged quasispecies with an explicit dormant reservoir and GPU iterative deepening.
   Conclusion: DEPLOYED. Staged as a new GPU family because it extends the new quasispecies direction into a genuinely distinct dormant-reservoir threshold problem while using sustained cupy dense eigensolves that justify GPU slots.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_stage_structured_modularity_stability
+  Discovered: 2026-03-14 04:30 UTC
+  What you saw: sampled 8 of 24 results across 5 hosts. Every sampled payload converged to a ceiling-near gamma_c_estimate of either 2.89453125 or 2.98828125 with vanishing bracket width, spanning current_species_count 256 to 1024, while the last_mean_max_real_part at the deepest pass stayed strongly positive at roughly 8.68 to 39.38.
+  Conclusion: PRELIMINARY. The modular stage-structured communities keep their majority-stable regime until almost the very top of the scanned coupling range, so juvenile-adult coupling is not erasing modular stabilization at any moderate value here. That is a real directional result, but with only 24 seeds the scientifically safe claim is still ceiling saturation rather than a settled asymptotic threshold.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_autocatalytic_modular_inhibition_threshold
+  Discovered: 2026-03-14 04:30 UTC
+  What you saw: sampled 8 of 58 results across 5 hosts. Every sampled payload converged to the same interior eta_c_estimate near 0.309375 with essentially zero bracket width at current_species_count 1024 or 2048, while last_mean_leading_eig stayed strongly positive around 17.68 to 37.33 and last_mean_module_mass sat near 0.251 to 0.252, which is almost perfectly spread across the four modules.
+  Conclusion: PRELIMINARY. The inhibition-collapse threshold itself looks strikingly sharp and reproducible, landing at the same eta on every sampled host. But the leading mode at that edge is already effectively delocalized across modules, so the current live evidence supports a clean growth-collapse threshold more than a specifically module-localized collapse mechanism.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_autocatalytic_reservoir_inhibition_threshold_gpu
+  Discovered: 2026-03-14 05:20 UTC
+  What you are testing: a new GPU origin-of-life chemistry experiment that bisects the inhibition level where a module-localized positive-growth autocatalytic mode collapses once every catalytic species is reversibly coupled to a protected reservoir copy, using iterative-deepening cupy eigensolves on dense symmetric block operators up to GPU-scaled dimensions.
+  Novelty check: searched for "autocatalytic set inhibition dormancy reservoir modular network paper", "RAF autocatalytic inhibition modular network paper", "autocatalytic chemical network dormant reservoir inhibition spectral threshold", and "seed bank autocatalytic network inhibition origin of life". I found prior work on RAF/autocatalytic inhibition and separate RNA-world or buffering/reservoir discussions, but no direct dense spectral threshold map for modular autocatalytic operators with an explicit reversible reservoir block under inhibition.
+  Conclusion: DEPLOYED. Staged as a new GPU family because it tests a specific reservoir-buffering mechanism that is distinct from the existing CPU inhibition-only family and from the quasispecies seed-bank threshold family while still using sustained cupy dense eigensolves that justify GPU slots.
 Last updated: 2026-03-14
