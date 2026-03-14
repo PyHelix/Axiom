@@ -3,8 +3,9 @@ Timestamp: 2026-03-14_0640
 
 Results credited this session
 - Credit passes executed: 4
-- Captured credit-pass totals from script stdout: 11 + 23 + 11 + 48 = 93 results
-- Captured total awarded from script stdout: 1421.47 credit
+- Credit passes executed: 7
+- Captured credit-pass totals from script stdout: 11 + 23 + 11 + 48 + 27 + 9 + 4 = 133 results
+- Captured total awarded from script stdout: 1833.75 credit
 - Live end-state check: 0 remaining uncredited results for (exp_*, gpu_wu_*, cpu_wu_*) with server_state=5 and outcome in (1,3,5)
 - Price table freshness: fresh on read; no manual updater run was needed
 
@@ -42,7 +43,7 @@ Per-host credit summary
 - Earlier passes also awarded credit on hosts 390, 105, 330, 389, 60, and 85 before the final catch-up pass.
 
 Cleanup and operational actions
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 242548
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1307440
 - Preserved /opt/axiom_boinc/html/user/total_results_count.txt at 246705 because the existing site counter exceeded the live completed-result count
 - Corrected flagged result 3817541 from normal credit to denied sentinel 0.01 and adjusted host/user totals by -0.22
 - Temporary scripts used: /tmp/axiom_anticheat.py, /tmp/axiom_credit.py
