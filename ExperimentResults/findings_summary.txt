@@ -81,3 +81,15 @@ EXPERIMENT: exp_neural_thermodynamics
   What you saw: sampled 4 of 36 results across 22 hosts. Every sampled payload was numerically identical, showing temperature proxy falling from about 1.37 at epoch 0 to about 0.039 by epoch 29 while entropy rose from about 2.25 to 3.85 and final test accuracy stayed around 0.927. The summary flags consistently reported cooling observed, no ordering increase, two detected transition markers, and a specific-heat peak sitting right at the start rather than mid-training.
   Conclusion: PRELIMINARY. The cooling part of the thermodynamic picture is strong and reproducible, with training clearly moving from noisy to quieter weight dynamics while maintaining high accuracy. But the sharper phase-transition story remains incomplete because ordering does not increase and the strongest specific-heat excursion occurs at initialization rather than at a clean interior transition.
 Last updated: 2026-03-14
+
+EXPERIMENT: exp_quasispecies_seedbank_leak_threshold_gpu
+  Discovered: 2026-03-14 15:45 UTC
+  What you saw: sampled 8 of 21 completed results across 5 hosts, with 7 readable numeric payloads and 1 elapsed-only stub. Every readable payload drove leak_c_estimate essentially to zero, from about 1.38e-31 up to only 0.01094, while localization_score stayed far below the 2.08 modular-localization cutoff at about 0.18 to 1.06 even at leak_low = 0; peak module mass stayed modest at roughly 0.08 to 0.29 and dormant mass fractions ranged from about 0.15 to 0.80.
+  Conclusion: REJECTED. In the live GPU runs, the buffered zero-leak regime is already absent: strong recombination has effectively delocalized the leading mode before any added cross-module leak is introduced. That is the opposite of the proposed interior failure-threshold story, so the current evidence supports immediate collapse of the seed-bank localization advantage rather than a nonzero leak threshold.
+Last updated: 2026-03-14
+
+EXPERIMENT: exp_microgrid_islanding_support_imbalance_threshold_gpu
+  Discovered: 2026-03-14 15:45 UTC
+  What you saw: sampled 8 of 178 completed results across 17 hosts, then checked all 181 exact-prefix sanitized files for this experiment. Every inspected file was an elapsed-only stub with no numeric experiment_result payload, so there is currently no stability threshold, eigenvalue, or localization output to interpret.
+  Conclusion: SKIP. The queue is active, but the present sanitized outputs do not yet contain scientific measurements, only runtimes. This experiment can be revisited once real numeric payloads start landing.
+Last updated: 2026-03-14
