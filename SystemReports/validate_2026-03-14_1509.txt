@@ -1,0 +1,64 @@
+Axiom BOINC Validation Log
+Timestamp: 2026-03-14 15:09 Europe/Berlin
+Step: Validation & Credit (Step 3 of 9)
+
+Session summary
+- Initial quick stats: 1,312,951 credited / 70,231 uncredited.
+- Anti-cheat review: 0 flagged / 0 denied.
+- Reason anti-cheat sample was empty: for the current uncredited result set, no matching sanitized files existed at /opt/axiom/experiment_results/sanitized/{result_name}_safe.json, so Step 2 had no eligible files to sample this cycle.
+- Credit awarded by this session's credit passes: 828 results, 13288.86 total credit.
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6551242386259767e-14.
+- Website counters updated: credited_count.txt=1332533, total_results_count.txt=299099.
+
+Anti-cheat flags
+- None.
+- No denied sentinel credits were issued.
+
+Per-host credit summary
+- The queue was live and required repeated drain passes; the temporary prompt-mandated script overwrote its summary on each run instead of accumulating per-host totals across the whole session.
+- Latest drain pass host deltas (most recent 126 credited results / 2023.68 credit):
+  host 367 +342.53
+  host 23 +141.88
+  host 334 +135.16
+  host 327 +129.35
+  host 240 +124.85
+  host 442 +98.20
+  host 269 +92.78
+  host 339 +142.94
+  host 111 +71.49
+  host 141 +70.06
+  host 192 +62.26
+  host 333 +55.06
+  host 85 +54.77
+  host 16 +43.11
+  host 397 +43.26
+  host 400 +41.94
+  host 390 +40.40
+  host 399 +37.37
+  host 398 +33.73
+  host 401 +28.71
+  host 387 +23.61
+  host 332 +23.25
+  host 210 +21.73
+  host 123 +21.31
+  host 396 +13.18
+  host 105 +12.93
+  host 342 +12.57
+  host 330 +12.33
+  host 60 +11.64
+  host 439 +5.04
+  host 1 +4.66
+  host 222 +3.56
+  host 435 +1.34
+
+Post-credit state snapshot
+- Final quick stats at log time: 1,314,359 credited / 70,049 uncredited.
+- Remaining uncredited with elapsed_time > 0 at log time: 42.
+- Remaining uncredited with elapsed_time = 0 at last detailed check: 70,007.
+- Note: the validation queue was live throughout the session; new result rows continued arriving while counters and logs were being updated. The positive-elapsed backlog was repeatedly drained to zero during the session, then rose again as fresh results landed.
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt.
+- Prepared session report for website and Git publication.
+- Temporary files scheduled for removal after publication: /tmp/axiom_credit.py, /tmp/axiom_credit_summary.json, /tmp/axiom_anticheat.json.
