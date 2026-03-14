@@ -1,0 +1,48 @@
+Validation Log
+Timestamp: 2026-03-14_0640
+
+Results credited this session
+- Credit passes executed: 4
+- Captured credit-pass totals from script stdout: 11 + 23 + 11 + 48 = 93 results
+- Captured total awarded from script stdout: 1421.47 credit
+- Live end-state check: 0 remaining uncredited results for (exp_*, gpu_wu_*, cpu_wu_*) with server_state=5 and outcome in (1,3,5)
+- Price table freshness: fresh on read; no manual updater run was needed
+
+Anti-cheat review
+- Sample reviewed: 200 sanitized JSON files tied to uncredited rows
+- Flagged IDs: 16
+- Duplicate payload pair found in sample: 3816028 and 3817541
+- Flagged IDs were forced to denied sentinel credit 0.01 by end-of-session audit
+- Reasons:
+  3814962 stub_under_5s
+  3815072 stub_under_5s
+  3816028 duplicate_payload, stub_under_5s
+  3817523 stub_under_5s
+  3817541 duplicate_payload
+  3818148 stub_under_5s
+  3818898 stub_under_5s
+  3832231 stub_under_5s
+  3832807 stub_under_5s
+  3833144 stub_under_5s
+  3833145 stub_under_5s
+  3833193 stub_under_5s
+  3833823 stub_under_5s
+  3834028 stub_under_5s
+  3834523 stub_under_5s
+  3835028 stub_under_5s
+
+Per-host credit summary
+- Final catch-up pass that cleared the remaining live queue:
+  host 105: 4.24
+  host 184: 646.41
+  host 317: 168.13
+  host 389: 26.29
+  host 60: 9.63
+  host 85: 86.62
+- Earlier passes also awarded credit on hosts 390, 105, 330, 389, 60, and 85 before the final catch-up pass.
+
+Cleanup and operational actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 242548
+- Preserved /opt/axiom_boinc/html/user/total_results_count.txt at 246705 because the existing site counter exceeded the live completed-result count
+- Corrected flagged result 3817541 from normal credit to denied sentinel 0.01 and adjusted host/user totals by -0.22
+- Temporary scripts used: /tmp/axiom_anticheat.py, /tmp/axiom_credit.py
