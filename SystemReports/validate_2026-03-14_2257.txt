@@ -1,0 +1,27 @@
+Validation session: 2026-03-14 22:57 Europe/Berlin
+
+Results credited this session
+- Credited results: 16137
+- Total credit awarded: 299967.27
+- Final eligible queue remaining with elapsed_time > 0: 0
+- Remaining uncredited elapsed_time = 0 results: 1917
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.511068042660559e-14
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from /opt/axiom/experiment_results/sanitized/
+- Sample scan found 9 trivial payloads and 0 duplicate groups in the random global sample
+- Sampled 200 currently uncredited sanitized results with numeric review
+- Denied 5 results at sentinel credit 0.01 for empty duplicate payloads across hosts:
+  4115180, 4118706, 4124693, 4129860, 4132218
+- Success results with elapsed_time < 5 seconds were also denied at 0.01 by the credit script stub filter
+
+Per-host credit summary
+- Host total_credit fields were updated incrementally with total_credit = total_credit + X for every credited host touched in this session
+- No absolute host total_credit writes were performed
+
+Operational actions
+- Ran /tmp/axiom_credit.py repeatedly until the eligible nonzero-elapsed queue drained to zero
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1442877
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 331429
+- No daemons or services were stopped or restarted
+- No BOINC indexes, lock files, crontabs, systemd units, assimilator files, or experiment_session scripts were modified
