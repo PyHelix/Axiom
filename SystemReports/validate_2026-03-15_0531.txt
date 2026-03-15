@@ -70,5 +70,10 @@ Cleanup Actions
 - Wrote and executed /tmp/axiom_anticheat.py for sanitized-result sampling and denial list generation
 - Wrote and executed /tmp/axiom_credit.py for main price-per-FLOP credit pass
 - Wrote and executed /tmp/axiom_credit_catchup.py repeatedly to catch live arrivals and hostid=0 aborted rows skipped by the initial host join
-- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1450982
-- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 354595
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1451162
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 354735
+
+Late-Arrival Addendum
+- After the main report body above was prepared, 180 additional results completed and were credited in two final tail-clearing passes
+- Live validation queue was returned to 0 again after those passes
+- The website counters above include those 180 late arrivals
