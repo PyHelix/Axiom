@@ -1,0 +1,74 @@
+Validation Session Log
+Timestamp: 2026-03-15_0531
+
+Results Credited This Session
+- Results processed: 17114
+- Real credit awarded to hosts/users: 266748.31
+- CPU results credited by formula: 8398
+- GPU results credited by formula: 533
+- Anti-cheat denials at 0.01 sentinel: 9
+- Zero-elapsed/hostless aborts processed at 0.01 sentinel: 8174
+- Final live queue status: 0 uncredited results matching validation scope
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.5228781455604652e-14
+
+Anti-Cheat Flags
+- Sample size: 200 sanitized files reviewed from 8615 available sanitized uncredited results
+- 4140378: denied (empty_payload_missing_experiment_result)
+- 4140390: denied (empty_payload_missing_experiment_result)
+- 4154017: denied (empty_payload_missing_experiment_result)
+- 4155283: denied (empty_payload_missing_experiment_result)
+- 4155774: denied (empty_payload_missing_experiment_result)
+- 4155991: denied (empty_payload_missing_experiment_result)
+- 4156587: denied (empty_payload_missing_experiment_result)
+- 4157262: denied (empty_payload_missing_experiment_result)
+- 4164441: denied (empty_payload_missing_experiment_result)
+
+Per-Host Credit Summary
+- Host 1: +3657.79
+- Host 9: +683.78
+- Host 10: +2459.60
+- Host 11: +2101.10
+- Host 16: +12913.55
+- Host 23: +11405.48
+- Host 29: +2808.52
+- Host 60: +890.39
+- Host 61: +2540.42
+- Host 87: +553.42
+- Host 105: +14007.91
+- Host 106: +1806.31
+- Host 108: +245.45
+- Host 111: +9715.98
+- Host 123: +31.19
+- Host 127: +313.12
+- Host 134: +115.87
+- Host 137: +1094.10
+- Host 147: +4430.92
+- Host 182: +3113.12
+- Host 184: +4352.55
+- Host 202: +612.36
+- Host 219: +379.22
+- Host 222: +210.52
+- Host 249: +4391.45
+- Host 251: +90.96
+- Host 255: +233.34
+- Host 267: +31.93
+- Host 269: +10067.41
+- Host 317: +186.99
+- Host 345: +1102.83
+- Host 350: +141.95
+- Host 358: +730.19
+- Host 364: +1879.47
+- Host 367: +159442.87
+- Host 387: +1499.96
+- Host 389: +3540.37
+- Host 445: +1368.79
+- Host 452: +408.65
+- Host 457: +1066.03
+- Host 458: +122.52
+
+Cleanup Actions
+- Wrote and executed /tmp/axiom_anticheat.py for sanitized-result sampling and denial list generation
+- Wrote and executed /tmp/axiom_credit.py for main price-per-FLOP credit pass
+- Wrote and executed /tmp/axiom_credit_catchup.py repeatedly to catch live arrivals and hostid=0 aborted rows skipped by the initial host join
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1450982
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 354595
