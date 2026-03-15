@@ -1,0 +1,83 @@
+Axiom validation report 2026-03-15_0247
+Session start: 2026-03-15 02:44:13
+
+Results credited this session
+  Results handled: 20510
+  Productive credit granted (>0.01): 381853.08
+  Total granted including sentinels: 381896.37
+  Sentinel grants at 0.01: 4329 (43.29 total)
+  CPU appid=1: 14871 results, 150058.36 credit
+  GPU appid=2: 1304 results, 231794.72 credit
+  Price scales used: CPU=5.0196363564419115e-12, GPU=2.613816058162363e-14
+  Price table refresh: not needed (fresh)
+
+Anti-cheat flags
+  Sample reviewed: 200 sanitized JSON files from 15704 available uncredited sanitized payloads
+  Flagged 8 sampled results for duplicate empty payloads across hosts; each set to 0.01 sentinel:
+    result 4140392 host 367: empty sanitized payload duplicated across hosts
+    result 4140502 host 367: empty sanitized payload duplicated across hosts
+    result 4141029 host 105: empty sanitized payload duplicated across hosts
+    result 4141867 host 367: empty sanitized payload duplicated across hosts
+    result 4146226 host 367: empty sanitized payload duplicated across hosts
+    result 4146959 host 367: empty sanitized payload duplicated across hosts
+    result 4147064 host 367: empty sanitized payload duplicated across hosts
+    result 4152051 host 9: empty sanitized payload duplicated across hosts
+  Stub-filter denials: 4 successful results under 5 seconds set to 0.01 sentinel
+  Zero-elapsed handled: 4317 results set to 0.01 sentinel to clear the uncredited queue
+
+Per-host credit summary (>0.01 only)
+  host 367: 216195.14 credit across 4923 results
+  host 105: 14514.36 credit across 1121 results
+  host 184: 13322.47 credit across 62 results
+  host 111: 11084.80 credit across 676 results
+  host 240: 10535.76 credit across 817 results
+  host 269: 10369.95 credit across 1190 results
+  host 182: 9562.98 credit across 30 results
+  host 10: 9114.19 credit across 22 results
+  host 268: 7841.88 credit across 794 results
+  host 1: 7342.02 credit across 361 results
+  host 448: 6242.18 credit across 644 results
+  host 147: 5903.66 credit across 24 results
+  host 390: 5655.39 credit across 476 results
+  host 192: 4876.60 credit across 308 results
+  host 16: 4401.02 credit across 14 results
+  host 388: 4377.19 credit across 518 results
+  host 29: 3767.64 credit across 300 results
+  host 389: 3387.76 credit across 436 results
+  host 61: 3270.64 credit across 164 results
+  host 341: 3162.17 credit across 5 results
+  host 249: 2859.08 credit across 7 results
+  host 11: 2504.75 credit across 31 results
+  host 445: 2026.09 credit across 281 results
+  host 364: 1935.67 credit across 460 results
+  host 85: 1796.69 credit across 235 results
+  host 123: 1597.88 credit across 275 results
+  host 87: 1508.52 credit across 164 results
+  host 60: 1363.67 credit across 405 results
+  host 345: 1214.29 credit across 216 results
+  host 137: 1050.48 credit across 121 results
+  host 323: 1004.18 credit across 27 results
+  host 222: 866.65 credit across 171 results
+  host 358: 839.21 credit across 159 results
+  host 202: 803.54 credit across 218 results
+  host 108: 801.27 credit across 89 results
+  host 23: 768.71 credit across 9 results
+  host 393: 739.77 credit across 2 results
+  host 9: 719.66 credit across 46 results
+  host 54: 383.32 credit across 66 results
+  host 219: 355.57 credit across 32 results
+  host 452: 353.59 credit across 49 results
+  host 350: 343.92 credit across 23 results
+  host 106: 286.20 credit across 45 results
+  host 107: 260.76 credit across 46 results
+  host 127: 257.75 credit across 52 results
+  host 134: 150.23 credit across 28 results
+  host 267: 109.03 credit across 30 results
+  host 424: 20.28 credit across 2 results
+  host 450: 4.52 credit across 1 results
+
+Cleanup actions taken
+  Updated /opt/axiom_boinc/html/user/credited_count.txt to 1434422
+  Updated /opt/axiom_boinc/html/user/total_results_count.txt to 346277
+  Copied this report to /opt/axiom_boinc/html/user/system_reports/
+  Temp files scheduled for removal: /tmp/axiom_credit.py, /tmp/axiom_credit_summary.json, /tmp/axiom_credit_last.out, /tmp/axiom_host_summary.tsv, /tmp/axiom_denied.tsv
