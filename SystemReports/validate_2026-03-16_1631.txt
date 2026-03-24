@@ -1,0 +1,37 @@
+Validation report
+Timestamp: 2026-03-16_1631
+
+Session summary
+- Anti-cheat review sampled 200 sanitized result JSON files from /opt/axiom/experiment_results/sanitized.
+- Anti-cheat flags: none. No duplicate numeric payloads, no trivial all-zero payloads, and no sampled outliers crossed the review thresholds.
+- Price-per-FLOP scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.604730343876649e-14.
+- Results handled this session: 15567 total.
+- Positive-credit results: 12315 total (11976 CPU, 339 GPU).
+- Sentinel-close results: 3252 total.
+- Positive credit awarded this session: 526229.65 cobblestones.
+
+Immediate queue state
+- The bounded final catch-up loop reached 0 uncredited rows at the end of a pass.
+- The result queue is live and continued to receive new completions while counters were being refreshed; a later snapshot showed 10 newly arrived uncredited rows after the zero point.
+
+Cleanup actions
+- Closed 2068 hostid=0, outcome=5, elapsed_time=0 rows with granted_credit=0.01 and validate_state=1 so they do not remain pending indefinitely.
+- Applied granted_credit and validate_state updates in result-table batches only.
+- Incremented host.total_credit and user.total_credit additively only for positive-credit results.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 786709.
+- Refreshed /opt/axiom_boinc/html/user/total_results_count.txt to 408668.
+
+Top host credit additions this session
+- host 367: 150097.74
+- host 437: 131138.99
+- host 23: 10590.76
+- host 16: 10628.44
+- host 105: 10455.84
+- host 111: 11648.76
+- host 240: 9044.76
+- host 268: 8277.23
+- host 301: 7519.12
+- host 390: 6825.28
+
+Notes
+- The validation prompt contained two internal contradictions: it both forbade user-table updates and later instructed additive user.total_credit updates, and it both required every uncredited row to be handled and provided a script that skipped elapsed_time=0 rows. This run followed the additive credit path used by the live BOINC scripts and closed zero-elapsed aborted rows with the 0.01 sentinel so they would not remain pending.

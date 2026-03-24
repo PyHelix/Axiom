@@ -1,0 +1,58 @@
+PERFORMANCE AUDIT — 2026-03-10 19:49 UTC
+Slow experiments: 5
+- exp_depinning_mixed_columnar_crossover: avg 1663s, max 1675s — FIXED
+- exp_hypercycle_compartment_pulse_inheritance: avg 1653s, max 1663s — FIXED
+- exp_muller_ratchet_seedbank_corridor_synergy: avg 1656s, max 1743s — FIXED
+- exp_muller_ratchet_seedbank_refuge_tradeoff: avg 1654s, max 1710s — FIXED
+- exp_trophic_selfreg_coherence_crossover: avg 1465s, max 1465s — FIXED
+Tasks aborted: 5842
+PERFORMANCE AUDIT — 2026-03-11 03:13 UTC
+Slow experiments: 25
+- exp_goldbach_partition_growth_7ab349_3: avg 4688s, max 4688s — FIXED
+- exp_may_nested_mutualism_localization: avg 3634s, max 3634s — FIXED
+- exp_may_modular_hub_damping_alignment: avg 2510s, max 2970s — FIXED
+- exp_allencahn_crossed_quench_bias: avg 2081s, max 2374s — FIXED
+- exp_baksneppen_bridge_concentration_4a2788_1: avg 1947s, max 1947s — FIXED
+- exp_baksneppen_bridge_concentration_6103c5_1: avg 1766s, max 1766s — FIXED
+- exp_baksneppen_bridge_concentration_164b37_1: avg 1694s, max 1694s — FIXED
+- exp_baksneppen_bridge_concentration_a46772_1: avg 1631s, max 1631s — FIXED
+- exp_baksneppen_bridge_concentration_54c27e_1: avg 1584s, max 1584s — FIXED
+- exp_baksneppen_bridge_concentration_07da5f_1: avg 1575s, max 1575s — FIXED
+- exp_galtonwatson_extinction_universality_4fc81a_0: avg 1498s, max 1498s — FIXED
+- exp_baksneppen_bridge_concentration_5371ce_1: avg 1498s, max 1498s — FIXED
+- exp_baksneppen_bridge_concentration_597499_1: avg 1491s, max 1491s — FIXED
+- exp_baksneppen_bridge_concentration_3f6d7f_1: avg 1423s, max 1423s — FIXED
+- exp_baksneppen_bridge_concentration_2355e6_1: avg 1408s, max 1408s — FIXED
+- exp_baksneppen_bridge_concentration_5d783d_1: avg 1349s, max 1349s — FIXED
+- exp_baksneppen_bridge_concentration_dabc3c_1: avg 1318s, max 1318s — FIXED
+- exp_baksneppen_bridge_concentration_06c1bd_1: avg 1303s, max 1303s — FIXED
+- exp_baksneppen_bridge_concentration_d61a49_1: avg 1291s, max 1291s — FIXED
+- exp_baksneppen_bridge_concentration_d02020_1: avg 1279s, max 1279s — FIXED
+- exp_baksneppen_bridge_concentration_251df7_1: avg 1266s, max 1266s — FIXED
+- exp_baksneppen_bridge_concentration_271586_1: avg 1263s, max 1263s — FIXED
+- exp_baksneppen_bridge_concentration_2b3fdb_1: avg 1240s, max 1240s — FIXED
+- exp_baksneppen_bridge_concentration_015509_1: avg 1227s, max 1227s — FIXED
+- exp_baksneppen_bridge_concentration_f5a983_1: avg 1225s, max 1225s — FIXED
+Tasks aborted: 6524
+ERROR TRIAGE 1 — SLOW TASKS — 2026-03-12 02:51 UTC
+Slow experiments: 8
+- exp_activation_function_landscape_dd0598_2: avg 2573s, max 2573s — FIXED
+- exp_activation_function_landscape_3c4c3c_3: avg 1963s, max 1963s — FIXED
+- exp_activation_function_landscape_9ad2c9_3: avg 1928s, max 1928s — FIXED
+- exp_activation_function_landscape_a383bd_3: avg 1914s, max 1914s — FIXED
+- exp_activation_function_landscape_4df2fe_2: avg 1901s, max 1901s — FIXED
+- exp_activation_function_landscape_a5337c_3: avg 1836s, max 1836s — FIXED
+- exp_activation_function_landscape_c773b0_3: avg 1834s, max 1834s — FIXED
+- exp_activation_function_landscape_9936d9_2: avg 1834s, max 1834s — FIXED
+Tasks aborted: 0
+ERROR TRIAGE 1 — SLOW TASKS — 2026-03-13 00:21 UTC
+Slow experiments: 3
+- exp_kac_markov_sign_edge_crossover_b24f60_0: avg 2228s, max 2228s — FIXED
+- exp_sbm_midrank_bridge_crossover: avg 1955s, max 1955s — FIXED
+- exp_epi_grid_commuter_immunity_resonance_00852f_0: avg 1800s, max 1800s — FIXED
+Tasks aborted: 0
+ERROR TRIAGE 1 — SLOW TASKS — 2026-03-13 05:56 UTC
+Slow experiments: 2
+- exp_sbm_midrank_bridge_crossover: avg 1955s, max 1955s — FIXED
+- exp_fhn_quasiperiodic_phase_lag_pinning: avg 1808s, max 1808s — FIXED
+Tasks aborted: 2414

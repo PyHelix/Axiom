@@ -1,0 +1,51 @@
+Axiom BOINC Validation & Credit Log
+Timestamp (UTC): 2026-03-21 04:47
+
+Scope
+- Validation step executed for credit only.
+- Price table freshness verified before crediting. `gpu_price_table.json` age was 1681 seconds at check time, so no price refresh was required.
+- `credit_cron.log` showed recent successful activity throughout the session.
+
+Results Credited This Validation Session
+- 2026-03-21 04:44:00 UTC: 345 results, 26433.97 cobblestones
+- 2026-03-21 04:45:32 UTC: 20 results, 341.70 cobblestones
+- 2026-03-21 04:46:09 UTC: 52 results, 1005.84 cobblestones
+- 2026-03-21 04:46:16 UTC: 14 results, 190.20 cobblestones
+- 2026-03-21 04:46:49 UTC: 54 results, 1793.38 cobblestones
+- 2026-03-21 04:47:16 UTC: 42 results, 589.08 cobblestones
+- 2026-03-21 04:47:27 UTC: 13 results, 151.14 cobblestones
+- 2026-03-21 04:47:35 UTC: 12 results, 299.34 cobblestones
+
+Manual session total: 552 results, 30804.65 cobblestones
+
+Additional automatic credit activity during the same validation window
+- 2026-03-21 04:45:02 UTC: 65 results, 2379.33 cobblestones
+
+Per-Host Credit Summary
+Controlled pre-pass snapshot taken immediately before the 2026-03-21 04:46:49 UTC manual credit pass.
+Snapshot total: 53 results, 1765.04 cobblestones
+
+- host 268: 2 results, 877.37 cobblestones
+- host 367: 11 results, 177.68 cobblestones
+- host 27: 1 result, 124.62 cobblestones
+- host 338: 5 results, 110.69 cobblestones
+- host 87: 9 results, 81.45 cobblestones
+- host 324: 3 results, 76.79 cobblestones
+- host 497: 3 results, 51.19 cobblestones
+- host 339: 1 result, 40.24 cobblestones
+- host 106: 2 results, 39.06 cobblestones
+- host 451: 6 results, 34.63 cobblestones
+- host 330: 1 result, 29.83 cobblestones
+- host 395: 1 result, 29.01 cobblestones
+- host 332: 1 result, 28.97 cobblestones
+- host 141: 1 result, 23.03 cobblestones
+- host 340: 1 result, 14.03 cobblestones
+- host 202: 1 result, 11.24 cobblestones
+- host 376: 2 results, 10.77 cobblestones
+- host 364: 1 result, 2.98 cobblestones
+- host 60: 1 result, 1.47 cobblestones
+
+Operational Notes
+- The controlled 04:46:49 UTC pass reduced the live eligible queue (`JOIN host/workunit`, `elapsed_time > 0`) to zero at the post-pass check.
+- New finished results continued arriving immediately afterward. Additional manual passes at 04:47:16, 04:47:27, and 04:47:35 UTC credited those newly arrived eligible results.
+- At 04:47 UTC, the broad uncredited count remained high because most rows in that population are non-creditable historical entries with `elapsed_time = 0` and missing `host` rows. Those rows do not represent donated compute under the project credit rules.

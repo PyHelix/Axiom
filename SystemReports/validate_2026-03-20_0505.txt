@@ -1,0 +1,79 @@
+Axiom validation log
+Timestamp: 2026-03-20 05:05 UTC
+Session window: 2026-03-20 05:03:52 UTC to 2026-03-20 05:05:02 UTC
+
+Results credited this session
+- Credited results: 15133
+- Total result credit: 790406.32
+- Stub results at 0.01 credit: 29
+- Host credit added: 790406.03
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 3.0454346799266125e-14
+
+Per-host credit summary
+- Host 16: 12712.91
+- Host 17: 52926.19
+- Host 18: 91088.56
+- Host 19: 38082.62
+- Host 20: 19320.95
+- Host 22: 91621.82
+- Host 23: 12918.62
+- Host 29: 2870.45
+- Host 60: 1012.60
+- Host 61: 3004.59
+- Host 85: 2010.18
+- Host 87: 1986.31
+- Host 97: 4006.90
+- Host 105: 23824.23
+- Host 106: 3139.38
+- Host 107: 117.27
+- Host 111: 10262.54
+- Host 123: 1497.69
+- Host 127: 1232.38
+- Host 134: 105.28
+- Host 147: 5828.81
+- Host 210: 195.49
+- Host 240: 22763.90
+- Host 249: 6420.22
+- Host 267: 131.93
+- Host 268: 43204.27
+- Host 275: 2791.67
+- Host 289: 2598.78
+- Host 324: 9482.06
+- Host 327: 9411.55
+- Host 330: 9809.93
+- Host 332: 9999.03
+- Host 338: 9657.88
+- Host 339: 13354.14
+- Host 340: 12296.79
+- Host 341: 1477.64
+- Host 358: 794.60
+- Host 367: 182063.30
+- Host 376: 8939.57
+- Host 388: 13545.28
+- Host 389: 3005.64
+- Host 390: 6221.74
+- Host 395: 10476.16
+- Host 396: 202.54
+- Host 397: 393.72
+- Host 398: 495.58
+- Host 399: 187.52
+- Host 400: 200.96
+- Host 450: 1637.91
+- Host 459: 603.49
+- Host 467: 5379.98
+- Host 484: 129.79
+- Host 493: 495.03
+- Host 494: 7662.58
+- Host 497: 10935.35
+- Host 505: 4.56
+- Host 506: 60.30
+- Host 507: 106.23
+- Host 508: 159.54
+- Host 513: 3428.04
+- Host 524: 111.06
+
+Operational note
+- Remaining uncredited rows after this session: 110542
+- Rows with elapsed_time = 0 after this session: 110537
+- These zero-elapsed rows were left unchanged per the workflow rule to skip results with no compute time.

@@ -1,0 +1,49 @@
+AXIOM VALIDATION LOG — 2026-03-05 12:30 UTC
+=============================================
+
+RESULTS REVIEWED
+- 4 uncredited results found (server_state=5, outcome=1, granted_credit=0)
+
+CREDIT AWARDED (45 total)
+  Result 1698698: exp_grad_subspace_wd_gpu_gpu (host 299) — 15 credit
+    GPU experiment, 211s elapsed, established experiment with 85+ prior sanitized results.
+
+  Result 1709764: exp_pit_delay_inhibitor_resonance (host 325) — 15 credit
+    845s elapsed, confirmed finding (#15), 523+ sanitized results in corpus.
+
+  Result 1709818: exp_lorenz96_delay_assimilation_regime_shift (host 330) — 15 credit
+    847s elapsed, preliminary finding with 793+ sanitized results in corpus.
+
+  Result 1710876: exp_kauffman_autocatalytic_threshold (host 354) — 0 credit
+    3s elapsed, 0 CPU time, no sanitized file produced. Empty/failed result.
+
+Per-user credit summary:
+  Host 299 user: +15
+  Host 325 user: +15
+  Host 330 user: +15
+
+BROKEN EXPERIMENTS ABORTED
+  Aborted pending/running tasks for 5 experiments with 100% failure rate:
+  - cahnhilliard_delay_feedback_window (1 task, 39 prior failures)
+  - lyaprmt_gpu (7 tasks, 9 prior failures)
+  - dpcontact_gpu (5 tasks, 3 prior failures)
+  - dpcontact2d_gpu (6 tasks, 8 prior failures)
+  - kskpz_gpu (6 tasks, 3 prior failures)
+
+  axelnoise also 100% failure (10 failures) but 0 pending tasks.
+
+  High-failure experiments monitored (NOT aborted, still producing some successes):
+  - kpz2d_gpu: 88.9%, fpuheat_gpu: 83.3%, percwalk3d_gpu: 83.3%
+  - schnakwl_gpu: 80%, shkz_gpu: 72.7%, cmlsync_gpu: 66.7%
+  - spatial_pgg_punishment_criticality: 62.5%, contact_process_temporal_network: 60.7%
+
+STUCK TASKS CLEANUP
+  No stuck tasks found (>12h running with dead host or >48h running).
+
+WEBSITE COUNTERS UPDATED
+  credited_count: 683 (incremented by 3)
+  total_results_count: 716
+
+ACTIVE FLEET
+  91 hosts active in last 72h, 28 hosts running exp_ tasks.
+  Top: h299 (305 tasks), h123 (240), h87 (226)

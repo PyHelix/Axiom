@@ -1,0 +1,54 @@
+Validation Report
+Timestamp: 2026-03-11 04:07
+
+Results credited this session
+- Results credited: 1198
+- Total credit awarded: 97471.10
+- CPU results credited: 1058
+- GPU results credited: 139
+- Denied sentinel results: 1
+- CPU scale used: 5.0196363564419115e-12
+- GPU scale used: 2.7656285077146812e-14
+- Price table freshness at run time: 3121.81 seconds old
+
+Anti-cheat flags
+- Result 2336996 on host 85 denied at 0.01 credit: outlier vs exp_quorum_refuge_pulse_memory, magnitude ratio 0.0147
+
+Per-host credit summary
+- Host 1: 5242.08
+- Host 2: 462.74
+- Host 9: 818.86
+- Host 10: 7820.03
+- Host 11: 2809.48
+- Host 16: 11001.87
+- Host 23: 9213.60
+- Host 29: 2524.84
+- Host 61: 781.15
+- Host 85: 873.47
+- Host 87: 648.61
+- Host 102: 328.71
+- Host 105: 6648.34
+- Host 134: 82.78
+- Host 140: 155.43
+- Host 147: 4030.33
+- Host 159: 4078.83
+- Host 182: 10724.27
+- Host 184: 13025.83
+- Host 219: 126.29
+- Host 222: 368.87
+- Host 240: 5361.22
+- Host 249: 1663.84
+- Host 267: 182.87
+- Host 268: 4212.11
+- Host 341: 82.13
+- Host 345: 545.72
+- Host 350: 244.61
+- Host 388: 3412.20
+
+Cleanup actions taken
+- Reviewed 200 sanitized uncredited payloads from 1197 processed sanitized files
+- Updated result.granted_credit and result.validate_state for all 1198 uncredited completed results
+- Incremented host.total_credit and user.total_credit using additive updates only
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 72312
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 72986
+- Temporary files scheduled for removal after report sync: /tmp/axiom_anticheat_review.py, /tmp/axiom_credit.py, /tmp/axiom_credit_summary.json

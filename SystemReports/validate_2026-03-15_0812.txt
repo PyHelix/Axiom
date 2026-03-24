@@ -1,0 +1,33 @@
+Axiom validation log
+Timestamp: 2026-03-15 08:12 Europe/Berlin
+
+Results credited this session
+- Pass 1: 8548 results credited, 248134.58 cobblestones
+- Pass 2: 57 late-arriving results credited, 3753.15 cobblestones
+- Pass 3: 19 late-arriving results credited, 334.82 cobblestones
+- Session total: 8624 results credited, 252222.55 cobblestones
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.5228781455604652e-14
+- Main pass mix: 7783 CPU results, 745 GPU results
+- Catch-up passes: 68 additional late-arriving results credited while validation was running
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from 8519 uncredited results with sanitized payloads available
+- Denied 20 sampled results at 0.01 credit each for empty payload plus byte-identical payload duplication across hosts
+- Denied result IDs: 4172543, 4178911, 4178917, 4179110, 4179407, 4179795, 4180185, 4181723, 4182052, 4182160, 4182271, 4183035, 4183663, 4183902, 4184599, 4185278, 4185769, 4186816, 4187390, 4187850
+
+Per-host credit summary
+- Main pass host credit totals: host 1=2463.48, host 9=538.68, host 11=1857.78, host 16=6940.60, host 23=4109.93, host 29=2637.21, host 60=937.24, host 61=3085.48, host 87=1556.28, host 105=12660.14, host 106=5039.60, host 107=357.18, host 108=509.13, host 111=10546.39, host 123=1560.07, host 134=104.54, host 137=1100.37, host 147=4016.20, host 202=602.10, host 219=120.35, host 222=739.26, host 249=3021.10, host 255=98.34, host 267=70.70, host 269=10662.40, host 317=215.60, host 350=383.31, host 358=757.89, host 364=1818.88, host 367=151111.73, host 387=1544.39, host 389=3283.32, host 390=6079.23, host 452=1093.83, host 458=6511.85
+- Final catch-up pass host credit totals: host 111=42.32, host 123=23.90, host 222=4.22, host 269=31.80, host 367=150.93, host 387=2.88, host 390=78.78
+- Additional catch-up credit from the middle pass: 3753.15 cobblestones across 57 late-arriving results
+
+Operational state after crediting
+- Website counters updated: credited_count.txt incremented to 1347233
+- Website counters updated: total_results_count.txt set to 348613
+- Residual uncredited rows observed immediately after final pass: 18 with elapsed_time > 0, 8052 with elapsed_time = 0
+- The positive-elapsed remainder was still changing during validation and reflects new rows arriving after the last catch-up pass
+- The elapsed_time=0 remainder matches the aborted-task no-credit policy in this prompt
+
+Cleanup actions
+- Temporary review and credit scripts used from /tmp
+- Validation log copied to website system_reports directory
+- Validation log copied into Axiom_repo/SystemReports and committed to Git

@@ -1,0 +1,55 @@
+Validation Report
+Timestamp (UTC): 2026-03-23 00:24
+
+Credit activity this session:
+- Manual credit pass executed at 2026-03-23 00:24:21 UTC
+- Results credited this session: 395
+- Total cobblestones credited this session: 38569.99
+- Credit worker status: active
+- Latest credit worker log line: 2026-03-23 00:24:21 Credited 395 results, 38569.99 credit (CPU:381 GPU:14)
+
+Per-host credit summary for this session:
+- Host 485: 7 results, 26083.81 credit
+- Host 18: 1 result, 3423.36 credit
+- Host 249: 1 result, 982.38 credit
+- Host 147: 1 result, 877.76 credit
+- Host 105: 6 results, 876.60 credit
+- Host 268: 7 results, 751.30 credit
+- Host 23: 1 result, 667.18 credit
+- Host 551: 34 results, 666.52 credit
+- Host 507: 66 results, 612.42 credit
+- Host 550: 25 results, 487.00 credit
+- Host 398: 11 results, 387.98 credit
+- Host 497: 9 results, 318.36 credit
+- Host 396: 21 results, 304.19 credit
+- Host 376: 50 results, 285.81 credit
+- Host 539: 18 results, 259.69 credit
+- Host 269: 21 results, 252.13 credit
+- Host 29: 3 results, 217.88 credit
+- Host 111: 12 results, 181.08 credit
+- Host 240: 11 results, 156.89 credit
+- Host 97: 11 results, 124.02 credit
+- Host 87: 10 results, 123.10 credit
+- Host 390: 7 results, 114.20 credit
+- Host 61: 5 results, 113.73 credit
+- Host 389: 7 results, 54.05 credit
+- Host 123: 4 results, 38.18 credit
+- Host 364: 5 results, 31.16 credit
+- Host 459: 3 results, 29.82 credit
+- Host 358: 4 results, 28.91 credit
+- Host 456: 3 results, 21.64 credit
+- Host 210: 1 result, 19.67 credit
+- Host 60: 2 results, 19.57 credit
+- Host 202: 3 results, 15.00 credit
+- Host 484: 1 result, 8.92 credit
+- Host 134: 1 result, 7.92 credit
+- Host 341: 2 results, 7.42 credit
+- Host 554: 2 results, 6.17 credit
+- Host 330: 1 result, 5.97 credit
+- Host 2: 1 result, 4.38 credit
+- Host 106: 1 result, 2.78 credit
+- Host 63: 16 results, 0.97 credit
+
+Operational notes:
+- Price table freshness check passed before crediting.
+- Remaining eligible uncredited results after this pass: 1340565

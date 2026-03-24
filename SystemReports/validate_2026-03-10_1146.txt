@@ -1,0 +1,56 @@
+Axiom validation log 2026-03-10_1146
+
+Results credited this session
+  processed_results: 2785
+  awarded_credit_total: 130331.04
+  cpu_results: 2314
+  gpu_results: 155
+  denied_results: 316 (0.01 sentinel credit)
+  cpu_scale: 5.0196363564419115e-12
+  gpu_scale: 2.7487865398420663e-14
+
+Anti-cheat flags
+  reason: empty sanitized payload / no numeric experiment_result data
+  denied_count: 316
+  sample_spot_check: reviewed 200 sanitized files; non-empty nested numeric payloads were not denied after manual verification
+
+Per-host credit summary
+  host 2: credit_added=966.56, denied_results=0
+  host 9: credit_added=603.42, denied_results=11
+  host 10: credit_added=7363.88, denied_results=5
+  host 11: credit_added=1540.37, denied_results=13
+  host 16: credit_added=14501.02, denied_results=42
+  host 23: credit_added=9932.08, denied_results=65
+  host 29: credit_added=2526.61, denied_results=11
+  host 57: credit_added=467.05, denied_results=3
+  host 61: credit_added=1342.22, denied_results=0
+  host 80: credit_added=531.32, denied_results=3
+  host 85: credit_added=783.43, denied_results=0
+  host 87: credit_added=871.20, denied_results=0
+  host 102: credit_added=939.75, denied_results=0
+  host 123: credit_added=617.11, denied_results=0
+  host 134: credit_added=105.42, denied_results=0
+  host 140: credit_added=240.78, denied_results=0
+  host 159: credit_added=3933.43, denied_results=20
+  host 162: credit_added=7973.35, denied_results=14
+  host 182: credit_added=4913.30, denied_results=7
+  host 184: credit_added=10100.48, denied_results=17
+  host 202: credit_added=97.42, denied_results=0
+  host 219: credit_added=2450.83, denied_results=0
+  host 222: credit_added=676.62, denied_results=0
+  host 267: credit_added=270.45, denied_results=0
+  host 272: credit_added=26.06, denied_results=0
+  host 341: credit_added=7944.98, denied_results=3
+  host 345: credit_added=463.26, denied_results=0
+  host 347: credit_added=3236.43, denied_results=12
+  host 350: credit_added=381.39, denied_results=0
+  host 358: credit_added=184.92, denied_results=0
+  host 364: credit_added=990.69, denied_results=0
+  host 367: credit_added=42641.62, denied_results=90
+  host 377: credit_added=713.57, denied_results=0
+
+Cleanup actions
+  updated /opt/axiom_boinc/html/user/credited_count.txt to 62353
+  updated /opt/axiom_boinc/html/user/total_results_count.txt to 63156
+  final_uncredited_results: 0
+  note: one result briefly lacked a sanitized file during review (id 2225740) but was assimilated before the tail credit pass and was credited normally

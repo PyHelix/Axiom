@@ -1,0 +1,37 @@
+Axiom BOINC Validation/Credit Operational Log
+Session timestamp: 2026-03-04 20:29:35 CET
+Step scope: Validation, credit, cleanup only (no scientific findings)
+
+1) Live state review
+- Previously credited completed experiment results: 1086
+- Uncredited completed successful experiment results reviewed this session: 1
+  - Result ID 1672896 (host 6, appid 1, elapsed 851.55s)
+  - DB received_time: 2026-03-04 19:27:58 UTC
+  - Sanitized file status: not yet present in /opt/axiom/experiment_results/sanitized at review time
+  - Credit decision: deferred (0 this cycle) pending sanitized numeric result for quality/outlier validation
+- Failed completed experiment results currently present: 0
+- Failure rate by appid:
+  - appid 1: success 1041, failed 0, fail_pct 0.0
+  - appid 2: success 46, failed 0, fail_pct 0.0
+
+2) Credit actions
+- Total credit awarded this session: 0 (<= 10,000 safety cap)
+- Result credit updates: none
+- User total_credit increments: none
+- Host total_credit increments: none
+- Reviewed host/user for deferred result:
+  - host_id 6, user_id 4
+  - host total_credit (unchanged): 3092.2
+  - user total_credit (unchanged): 5171.378
+
+3) Cleanup actions
+- Abort stuck >12h on dead hosts: 0 rows updated
+- Abort hard-ceiling >48h tasks: 0 rows updated
+- Broken experiment aborts (>50% failure): none required (no failures observed)
+
+4) Experiment script bug review/fixes
+- No cross-host crash pattern detected in this cycle.
+- No experiment script changes made in this cycle.
+
+5) Notes for next validation cycle
+- Re-check result ID 1672896 after assimilator writes sanitized JSON; then award quality-based credit.

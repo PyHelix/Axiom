@@ -1,0 +1,50 @@
+Axiom BOINC Validation Log — 2026-03-05 16:38 UTC
+====================================================
+
+SYSTEM STATE
+- 83 active hosts (last 72h), top hosts: 287 (192 CPU), 95 (192 CPU), 85/87/123 (80 CPU each)
+- 98 uncredited results pending (all outcome=1, server_state=5)
+- Assimilator running (PID 1221) but lagging ~5.7 hours behind
+  - Latest sanitized file: 1772708184
+  - Earliest uncredited result: 1772728132
+  - All 98 uncredited results are post-assimilator; cannot credit without sanitized data
+
+CREDIT AWARDED: 0
+- No results could be credited this session — all 98 pending results await assimilator processing
+- 18,155 sanitized files with experiment data exist; all previously credited results are accounted for
+
+BROKEN EXPERIMENTS ABORTED (100% failure rate, 0 successes)
+Tasks aborted to save volunteer compute:
+- sis_delay_adaptive_rewiring_tradeoff: 2 tasks aborted (271 total failures, all outcome=5/6)
+- lotka_delay_adaptive: 1 task aborted (139 total failures, all outcome=5/6)
+- tangnat (tangled_nature_macroevolution): 25 tasks aborted (101 total failures, all outcome=5/6)
+- collatz_generalized_evt_gpu: 1 task aborted (12 failures)
+- cml_sync_transition_gpu: 1 task aborted (4 failures)
+- wdcurv_gpu (wd_curvature_trigger_gpu): 1 task aborted (19 failures)
+- wdtime_gpu (wd_timing_scale_gpu): 1 task aborted (18 failures)
+- wd_noise_trigger_gpu: 9 tasks aborted (5 failures)
+Total: 41 tasks aborted across 8 broken experiments
+
+STUCK TASKS: None
+- No tasks found running >12h on dead hosts
+- No tasks running >48h
+
+HIGH FAILURE RATE EXPERIMENTS (>50%, still producing some successes — NOT aborted)
+- rw_reset_fatigue_nonrenewal: 97.6% fail (7 success / 284 fail)
+- seasonal_metapop_vax_trigger: 96.3% (7/180)
+- wildfire_delay_adaptive_suppression: 94.3% (11/181)
+- cahnhilliard_delay_feedback_window: 90.5% (25/239)
+- nonmarkov_trap_release_window: 88.7% (25/196)
+- rbn_delay_fatigue_control: 69.2% (32/72)
+- xy_delay_thermostat_reentrance: 61.0% (129/202)
+These experiments still produce valid data intermittently. Not aborting.
+
+BUGS INVESTIGATED
+- SIS delay adaptive rewiring: All 271 failures are outcome=5 (aborted) or outcome=6 (client error), empty stderr.
+- Lotka delay adaptive harvest: Same pattern — 139 failures, outcome=5/6, empty stderr.
+- Tangnat: 101 failures, all outcome=5/6. Consistently fails.
+- GPU experiments (collatz_generalized_evt, cml_sync_transition, wdcurv, wdtime, wd_noise_trigger): All 100% failure, likely CUDA compatibility issues.
+
+No script fixes made this session — these experiments have been consistently failing across all hosts with no diagnostic stderr output, suggesting client-side incompatibility rather than script bugs.
+
+WEBSITE COUNTERS: Not updated (no credit awarded)

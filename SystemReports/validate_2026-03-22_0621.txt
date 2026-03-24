@@ -1,0 +1,55 @@
+Validation report
+Timestamp (UTC): 2026-03-22 06:21
+Step: Validation & Credit (Step 3 of 17)
+
+Current-state checks
+- Initial uncredited experiment-pattern results: 949213
+- Initial credited/uncredited quick stats (experiment-pattern rows): credited 5647374, uncredited 7918744
+- Initial zero-credit breakdown for experiment-pattern finished rows: 949107 with elapsed_time=0, 173 with elapsed_time>0
+- Price table freshness: fresh (age 38s at session start)
+- Credit cron status: active with recent entries in /opt/axiom/experiment_session/logs/credit_cron.log
+
+Credit actions performed this session
+- 2026-03-22 06:17:05 UTC: Credited 196 results for 3439.29 credit
+- 2026-03-22 06:17:55 UTC: Credited 81 results for 13506.92 credit
+- 2026-03-22 06:18:59 UTC: Credited 114 results for 1530.71 credit
+- 2026-03-22 06:20:23 UTC: Credited 29 results for 310.03 credit
+- 2026-03-22 06:20:48 UTC: Credited 61 results for 683.74 credit
+- 2026-03-22 06:21:02 UTC: Credited 31 results for 383.89 credit
+
+Results credited this session
+- Total results credited: 512
+- Total credit awarded: 19854.58
+- Note: The creditable backlog present at session start was drained. The remaining zero-credit rows are dominated by elapsed_time=0 skips; 17 elapsed_time>0 rows were still appearing as live new completions after the final pass.
+
+Per-host credit summary
+- Exact per-host summary captured directly from the final pre-credit batches sampled during this session (154 results, 2050.14 credit):
+- host 367: 14 results, 323.29 credit
+- host 330: 10 results, 180.54 credit
+- host 339: 10 results, 160.16 credit
+- host 539: 4 results, 143.99 credit
+- host 376: 27 results, 131.52 credit
+- host 338: 11 results, 121.63 credit
+- host 327: 10 results, 108.03 credit
+- host 97: 7 results, 106.91 credit
+- host 543: 12 results, 98.32 credit
+- host 497: 2 results, 83.53 credit
+- host 324: 7 results, 83.17 credit
+- host 332: 4 results, 74.79 credit
+- host 366: 4 results, 74.55 credit
+- host 106: 8 results, 71.97 credit
+- host 395: 5 results, 69.17 credit
+- host 61: 4 results, 47.59 credit
+- host 364: 3 results, 45.79 credit
+- host 375: 5 results, 37.75 credit
+- host 29: 1 result, 24.15 credit
+- host 399: 1 result, 19.91 credit
+- host 358: 2 results, 18.71 credit
+- host 202: 1 result, 13.16 credit
+- host 127: 1 result, 9.70 credit
+- host 60: 1 result, 1.81 credit
+
+Operational notes
+- No stale price-table refresh was required.
+- No service restarts or daemon intervention were performed.
+- No scientific findings are included in this report.

@@ -1,0 +1,48 @@
+Axiom validation log 2026-03-07_1818
+
+Operational summary
+- Reviewed uncredited experiment results currently in DB: 7554
+- Credited results this session: 762
+- Total credit awarded this session: 9697
+- Zero-credit decisions: 6135 empty payload, 8 suspiciously fast, 2 duplicate payload
+- Deferred (no sanitized file yet): 647
+- Stuck task cleanup sweep: 0 tasks matched the >12h running and >6h no-contact criteria after the update pass
+- Broken active experiment queues aborted: none this cycle
+- Experiment script bugs fixed: none this cycle
+
+Credited result groups
+- collatz_h342_r2_3156319_1772900586: 1 results, IDs 1840036; hosts 342; single payload-bearing long-runtime result; 10 credit -> 10 total credit
+- isr_trapmemory_delay_interaction: 485 results, IDs 1838253-1838264, 1838266-1838284, 1838286-1838288, 1838290-1838346, 1838348-1838350, 1838352-1838366, 1838368-1838371, 1838374-1838414, 1838419-1838438, 1838440-1838504, 1838507-1838508, 1838510-1838550, 1838552-1838562, 1838564-1838589, 1838591, 1838599-1838605, 1838607-1838657, 1838659-1838678, 1838680-1838708, 1838710-1838715, 1838717, 1838719-1838726, 1838728, 1838730-1838735, 1838737, 1838739-1838744, 1838752, 1838754-1838776, 1838778, 1838780-1838783; hosts 29, 57, 85, 87, 123, 195, 269, 324, 325, 327, 330, 333, 334, 335, 339, 340, 345, 350, 362; legacy numeric payload present; long runtime (~844s); non-duplicate payloads; 13 credit each -> 6305 total credit
+- may_heterogeneity_reactivity_localization: 36 results, IDs 1817173, 1817245-1817256, 1817259-1817266, 1817268-1817273, 1817276-1817277, 1817279-1817280, 1817284, 1817291-1817293, 1817295; hosts 345; rich numeric payload; long runtime (~850-871s); consistent with established experiment family; 14 credit each -> 504 total credit
+- may_lowrank_mutualism_localization: 7 results, IDs 1817693, 1817728, 1817746, 1817784, 1817795, 1817848, 1817873; hosts 123, 195, 325, 334, 340; valid long-form numeric payload; moderate runtime; 12 credit each -> 84 total credit
+- may_nested_mutualism_localization: 1 results, IDs 1820002; hosts 140; single long-runtime payload-bearing result; 12 credit -> 12 total credit
+- metapop_commuting_reactivity_localization: 220 results, IDs 1826144-1826145, 1826181, 1826247, 1826268, 1826334, 1826422-1826423, 1826448, 1827987, 1827990, 1827994, 1828021, 1828023, 1828088-1828092, 1828095-1828096, 1828104-1828108, 1828110-1828112, 1828215, 1828217, 1828220-1828221, 1828223, 1828226, 1828228, 1828237, 1828269, 1828272, 1828275, 1828278, 1828281, 1828285, 1828595, 1828947, 1828983, 1829007, 1829030, 1829033, 1829046, 1829050-1829051, 1829054, 1829061-1829062, 1829210, 1829567, 1829589, 1829605, 1829640, 1829648, 1829650-1829651, 1829653, 1829661, 1829663, 1829668, 1829673, 1830745, 1830750, 1830753, 1830756-1830758, 1830764, 1830795, 1831660, 1831684-1831685, 1831687, 1831692-1831693, 1831725-1831726, 1831864, 1831950-1831951, 1831954-1831959, 1832001, 1832008, 1832018, 1832076-1832078, 1832087-1832088, 1832117-1832118, 1832129-1832131, 1832135, 1832137, 1832139-1832140, 1832168, 1832173, 1832207-1832222, 1832231-1832237, 1832245-1832246, 1832254, 1832257-1832259, 1832265, 1832267-1832268, 1832270-1832271, 1832273-1832286, 1832288-1832290, 1832293, 1832296, 1832298, 1832302-1832310, 1832343, 1832345, 1832347-1832349, 1832352-1832358, 1832360, 1832362-1832363, 1832392, 1832397-1832401, 1832484, 1832505, 1832551, 1832557-1832560, 1832581, 1832599-1832600, 1832602-1832603, 1832605-1832606, 1832613-1832614, 1832624-1832626, 1832628, 1832630-1832631, 1832633-1832634; hosts 15, 29, 57, 85, 87, 107, 123, 195, 222, 269, 324, 327, 330, 332, 333, 334, 335, 339, 340, 362; legacy numeric payload present; long runtime (~840-846s); scientifically usable summary arrays; 12 credit each -> 2640 total credit
+- muller_ratchet_fluctuating_metapop: 11 results, IDs 1808484, 1808486, 1808488, 1808493, 1808501, 1808506, 1808581, 1808588, 1808599, 1808601, 1808603; hosts 345; valid long-runtime payloads only; suspicious sub-10s results excluded; 12 credit each -> 132 total credit
+- windang_h342_3156319_1772900586: 1 results, IDs 1840014; hosts 342; single payload-bearing long-runtime result; 10 credit -> 10 total credit
+
+Zero-credit / deferred review groups
+- isr_trapmemory_delay_interaction: 2 results; example IDs 1838439, 1838506; byte-identical numeric payload returned by different hosts -> 0 credit
+- may_nested_mutualism_localization: 3905 results; example IDs 1818789, 1818790, 1818792, 1818793, 1818798, 1818799, 1818800, 1818802, 1818803, 1818804, 1818811, 1818818 ...; sanitized file had metadata only with no experiment_result payload -> 0 credit
+- metapop_commuting_reactivity_localization: 2230 results; example IDs 1826149, 1826150, 1826151, 1826154, 1826155, 1826156, 1826187, 1826189, 1826191, 1826192, 1826193, 1826194 ...; sanitized file had metadata only with no experiment_result payload -> 0 credit
+- muller_ratchet_fluctuating_metapop: 8 results; example IDs 1808164, 1808409, 1808461, 1808532, 1808541, 1808553, 1808556, 1808557; elapsed time under 10s for an experiment whose valid returns cluster around ~856s -> 0 credit
+- bbp_spiked_covariance_gpu: 7 results; example IDs 1839236, 1839279, 1839299, 1839307, 1839468, 1840479, 1840829; sanitized file not present yet, deferred to next cycle
+- hyperpgg_h342_3156319_1772900586: 1 results; example IDs 1840019; sanitized file not present yet, deferred to next cycle
+- isr_trapmemory_delay_interaction: 636 results; example IDs 1838716, 1838718, 1838727, 1838729, 1838784, 1838785, 1838786, 1838787, 1838788, 1838789, 1838791, 1838792 ...; sanitized file not present yet, deferred to next cycle
+- nkwalk_h342_r1_3156319_1772900586: 1 results; example IDs 1840026; sanitized file not present yet, deferred to next cycle
+- nkwalk_h342_r2_3156319_1772900586: 1 results; example IDs 1840034; sanitized file not present yet, deferred to next cycle
+- sir_bimodal_scaling_gpu: 1 results; example IDs 1841608; sanitized file not present yet, deferred to next cycle
+
+Per-user credit totals after incremental update
+- user 40: +3132 session credit -> total_credit 747880.6953629984
+- user 56: +2305 session credit -> total_credit 161445.436246
+- user 88: +1862 session credit -> total_credit 14055.570597
+- user 44: +1048 session credit -> total_credit 51873.492348
+- user 127: +844 session credit -> total_credit 13591.143785999993
+- user 10: +267 session credit -> total_credit 32106.86046000001
+- user 6: +96 session credit -> total_credit 36456.71063199999
+- user 90: +36 session credit -> total_credit 70550.63129500001
+- user 130: +26 session credit -> total_credit 557.21128
+- user 23: +25 session credit -> total_credit 4166.654664000001
+- user 22: +24 session credit -> total_credit 2091.380152
+- user 124: +20 session credit -> total_credit 2984.25
+- user 30: +12 session credit -> total_credit 18649.207972

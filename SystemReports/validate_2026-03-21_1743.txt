@@ -1,0 +1,49 @@
+Axiom validation / credit session
+Timestamp (UTC): 2026-03-21 17:43
+
+Price table:
+- /opt/axiom/gpu_price_table.json fresh at session start
+- last_updated_unix=1774113317
+- age_seconds_at_check=1418
+- cpu_scale=5.0196363564419115e-12
+- gpu_scale=2.489547755177037e-14
+
+Credit cron status:
+- crontab entry present: */5 * * * * python3 /opt/axiom/axiom_credit_cron.py >> /opt/axiom/experiment_session/logs/credit_cron.log 2>&1
+- recent log entries confirmed before manual credit pass
+
+Results credited this session:
+- 2026-03-21 17:39:59 UTC: 564 results, 37920.66 credit
+- 2026-03-21 17:40:03 UTC: 1 result, 8.04 credit
+- 2026-03-21 17:40:08 UTC: 8 results, 73.33 credit
+- 2026-03-21 17:40:15 UTC: 12 results, 3466.53 credit
+- 2026-03-21 17:42:01 UTC: 204 results, 16354.59 credit
+- 2026-03-21 17:42:48 UTC: 92 results, 5518.98 credit
+- 2026-03-21 17:42:51 UTC: 4 results, 58.46 credit
+- 2026-03-21 17:43:23 UTC: 50 results, 813.00 credit
+- 2026-03-21 17:43:40 UTC: 25 results, 251.71 credit
+
+Session total credited:
+- 960 results
+- 64465.30 cobblestones
+
+Per-host credit summary:
+- Exact pre-credit host snapshot taken immediately before the 2026-03-21 17:43:23 UTC pass
+- Snapshot covered 38 pending eligible results totaling 634.49 credit
+- The 17:43:23 pass credited 50 results because additional completed results arrived during execution
+- hostid 367: 8 results, 194.65 credit
+- hostid 539: 2 results, 62.98 credit
+- hostid 159: 2 results, 59.89 credit
+- hostid 497: 2 results, 55.13 credit
+- hostid 324: 3 results, 54.68 credit
+- hostid 340: 3 results, 44.97 credit
+- hostid 376: 8 results, 39.29 credit
+- hostid 398: 1 result, 35.72 credit
+- hostid 339: 3 results, 33.85 credit
+- hostid 97: 3 results, 33.67 credit
+- hostid 395: 2 results, 15.32 credit
+- hostid 358: 1 result, 4.35 credit
+
+Operational note:
+- Joined eligible backlog (server_state=5, outcome IN (1,3,5), granted_credit=0, elapsed_time>0, matching BOINC experiment name patterns) was actively changing during the session as new results completed
+- Drain passes were run repeatedly to keep credit flowing; a small number of newly completed eligible rows may still appear between checks on this live system

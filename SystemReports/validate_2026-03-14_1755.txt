@@ -1,0 +1,60 @@
+Validation Log
+Timestamp: 2026-03-14 17:55 CET
+
+Results credited this session
+- Results credited: 19644
+- Total granted credit this session: 340682.05
+- Main bulk pass: 19365 results, 335075.62 credit
+- Residual precision pass: 147 results, 1764.52 credit
+- Tiny-positive floor pass: 44 results, 0.44 credit
+- Live queue catch-up pass: 88 results, 3841.47 credit
+- CPU results in main bulk pass: 18330
+- GPU results in main bulk pass: 1019
+- Denied sentinel results: 16 at 0.01 credit each
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6465394106718295e-14
+
+Anti-cheat review
+- Sample size: 220 sanitized result files from the current uncredited queue
+- Flagged and denied at 0.01 sentinel due to trivial numeric payloads:
+  - result 4090408: trivial repeated numeric payload
+  - result 4090643: trivial repeated numeric payload
+  - result 4091010: all-zero numeric payload
+  - result 4091011: all-zero numeric payload
+  - result 4091226: all-zero numeric payload
+  - result 4091811: all-zero numeric payload
+  - result 4092607: trivial repeated numeric payload
+  - result 4092885: trivial repeated numeric payload
+  - result 4092975: trivial repeated numeric payload
+  - result 4093280: trivial repeated numeric payload
+  - result 4093618: trivial repeated numeric payload
+  - result 4094440: all-zero numeric payload
+  - result 4094947: all-zero numeric payload
+- Additional denied sentinels applied automatically by policy: 3 successful sub-5-second stub-like results
+- No duplicate cross-host numeric payloads were found in the 220-file sample
+- No clear cross-host outlier pattern was found in the sampled groups after excluding trivial payloads
+
+Per-host credit summary
+- Main bulk pass host credit summary from /tmp/axiom_credit_summary.json:
+  - host 367: 62612.41
+  - host 341: 30772.30
+  - host 441: 20571.03
+  - host 105: 12515.48
+  - host 240: 11226.21
+  - host 192: 10920.09
+  - host 322: 10715.85
+  - host 269: 10190.76
+  - host 111: 10025.94
+  - host 16: 9785.66
+- Additional residual and live-tail credit was also applied after the bulk pass to clear tiny or newly-arrived nonzero-elapsed results.
+
+Operational notes
+- Price table freshness check passed; updater run was not needed
+- Website counters updated:
+  - /opt/axiom_boinc/html/user/credited_count.txt = 1333508
+  - /opt/axiom_boinc/html/user/total_results_count.txt = 317648
+- Remaining uncredited results after this session: 105459, all with elapsed_time=0
+- Remaining uncredited results with elapsed_time>0: 0
+
+Cleanup actions taken
+- Removed temporary credit script after execution
+- Temporary sampling and summary files left in /tmp for short-term auditability during this session

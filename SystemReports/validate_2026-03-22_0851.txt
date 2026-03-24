@@ -1,0 +1,65 @@
+Axiom validation and credit log
+Timestamp (UTC): 2026-03-22 08:51
+
+Live checks
+- Price table freshness OK: last_updated_unix age 2014 seconds at check time.
+- credit_cron.log shows active runs, including:
+  2026-03-22 08:45:04 Credited 559 results, 47642.42 credit (CPU:532 GPU:27)
+  2026-03-22 08:50:05 Credited 662 results, 26455.08 credit (CPU:649 GPU:13)
+
+Results credited this session
+- Reported batch used for per-host reconciliation: 559 results
+- Total cobblestones credited: 47642.42
+- Batch timestamp: 2026-03-22 08:45:04 UTC
+
+Per-host credit summary
+- hostid 487: 7 results, 14646.49 credit
+- hostid 486: 6 results, 10779.34 credit
+- hostid 544: 3 results, 5018.05 credit
+- hostid 105: 3 results, 2356.43 credit
+- hostid 437: 1 result, 2056.81 credit
+- hostid 18: 1 result, 1664.22 credit
+- hostid 367: 65 results, 1531.68 credit
+- hostid 268: 3 results, 1427.34 credit
+- hostid 147: 1 result, 829.14 credit
+- hostid 240: 1 result, 514.14 credit
+- hostid 494: 15 results, 487.97 credit
+- hostid 339: 24 results, 468.17 credit
+- hostid 542: 28 results, 462.50 credit
+- hostid 541: 32 results, 459.38 credit
+- hostid 332: 20 results, 379.81 credit
+- hostid 395: 28 results, 362.88 credit
+- hostid 376: 56 results, 360.24 credit
+- hostid 539: 24 results, 344.79 credit
+- hostid 327: 20 results, 341.78 credit
+- hostid 330: 31 results, 337.97 credit
+- hostid 497: 9 results, 324.66 credit
+- hostid 23: 1 result, 323.58 credit
+- hostid 324: 25 results, 316.66 credit
+- hostid 338: 25 results, 302.07 credit
+- hostid 375: 20 results, 295.62 credit
+- hostid 543: 22 results, 282.86 credit
+- hostid 97: 12 results, 163.22 credit
+- hostid 366: 8 results, 138.62 credit
+- hostid 424: 6 results, 92.36 credit
+- hostid 61: 5 results, 81.97 credit
+- hostid 85: 12 results, 80.38 credit
+- hostid 127: 8 results, 61.45 credit
+- hostid 202: 4 results, 51.41 credit
+- hostid 106: 3 results, 45.67 credit
+- hostid 358: 6 results, 43.39 credit
+- hostid 397: 1 result, 40.18 credit
+- hostid 60: 3 results, 35.48 credit
+- hostid 123: 4 results, 30.18 credit
+- hostid 364: 3 results, 27.30 credit
+- hostid 267: 1 result, 19.03 credit
+- hostid 493: 5 results, 17.07 credit
+- hostid 396: 1 result, 15.90 credit
+- hostid 456: 2 results, 8.26 credit
+- hostid 29: 1 result, 8.11 credit
+- hostid 2: 1 result, 5.65 credit
+- hostid 134: 1 result, 2.13 credit
+- hostid 548: 1 result, 0.04 credit
+
+Operational note
+- Credit flow is active via /opt/axiom/axiom_credit_cron.py; no service intervention performed.

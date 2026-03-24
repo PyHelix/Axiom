@@ -1,0 +1,55 @@
+Axiom validation log
+Timestamp: 2026-03-09 15:44 CET
+Session scope: validation, credit, and cleanup only
+
+Results credited this session
+- Credited results snapshot: 2387
+- Awarded credit snapshot: 36279.87 cobblestones
+- Denied sentinel results: 5
+- Credit formula: elapsed_time * p_fpops * 1e-11
+- Snapshot note: the completed-result queue remained live during validation; this report reflects the post-credit snapshot captured at 2026-03-09 15:44 CET after repeated drain passes.
+
+Anti-cheat review
+- Sampled 200 sanitized JSON payloads from 2261 initially uncredited completed results with sanitized files present
+- Flagged result IDs denied credit at 0.01 sentinel:
+  2041309 duplicate_payload,trivial_payload
+  2041312 duplicate_payload,trivial_payload
+  2041318 duplicate_payload,trivial_payload
+  2041322 duplicate_payload,trivial_payload
+  2041330 duplicate_payload,trivial_payload
+- Review findings summary: 5 duplicate payloads, 5 trivial payloads
+
+Per-host credit summary
+- host_id 1 results 226 credit 2541.70
+- host_id 2 results 97 credit 1772.75
+- host_id 9 results 8 credit 300.58
+- host_id 11 results 4 credit 34.13
+- host_id 16 results 5 credit 269.71
+- host_id 23 results 21 credit 951.84
+- host_id 29 results 146 credit 4004.25
+- host_id 57 results 22 credit 393.87
+- host_id 85 results 196 credit 2681.56
+- host_id 87 results 193 credit 1894.67
+- host_id 102 results 102 credit 1240.31
+- host_id 113 results 13 credit 123.95
+- host_id 123 results 275 credit 1908.65
+- host_id 134 results 8 credit 37.53
+- host_id 140 results 23 credit 465.83
+- host_id 159 results 134 credit 3739.77
+- host_id 202 results 96 credit 1122.56
+- host_id 219 results 29 credit 745.22
+- host_id 222 results 70 credit 1274.91
+- host_id 253 results 45 credit 512.55
+- host_id 255 results 48 credit 1489.73
+- host_id 271 results 10 credit 151.07
+- host_id 345 results 155 credit 1681.59
+- host_id 347 results 82 credit 1764.32
+- host_id 350 results 16 credit 265.95
+- host_id 353 results 79 credit 107.79
+- host_id 358 results 85 credit 1205.16
+- host_id 364 results 199 credit 3597.97
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 53377
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 54302
+- Repeated credit drain passes until the completed-result queue reached zero during the final validation loop

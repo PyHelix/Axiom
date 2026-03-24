@@ -1,0 +1,51 @@
+Axiom Validation & Credit Report
+Session timestamp (UTC): 2026-03-20 20:53
+
+Workflow notes:
+- Price table freshness check passed. `/opt/axiom/gpu_price_table.json` age was 2182 seconds at session start, so no refresh was needed.
+- `credit_cron.log` showed active recent runs before manual intervention.
+- One manual pass of `/opt/axiom/axiom_credit_cron.py` was executed to advance the backlog and produce a concrete session report.
+
+Live state:
+- Uncredited results before manual pass: 180355
+- Uncredited results after manual pass: 180278
+- Net backlog change during session: -77 (live queue can change while credit is being granted)
+
+Results credited this session:
+- Count: 127
+- Total cobblestones recorded on credited results: 6591.04
+
+Per-host credit summary:
+- host_id=16 results=1 credit=316.65
+- host_id=19 results=1 credit=773.68
+- host_id=61 results=3 credit=49.77
+- host_id=97 results=4 credit=98.86
+- host_id=106 results=1 credit=20.86
+- host_id=127 results=2 credit=19.43
+- host_id=141 results=6 credit=119.36
+- host_id=275 results=1 credit=19.42
+- host_id=323 results=1 credit=138.74
+- host_id=324 results=4 credit=78.08
+- host_id=327 results=9 credit=183.93
+- host_id=330 results=8 credit=219.84
+- host_id=332 results=2 credit=61.15
+- host_id=338 results=5 credit=106.92
+- host_id=339 results=8 credit=256.18
+- host_id=340 results=7 credit=228.79
+- host_id=364 results=2 credit=41.50
+- host_id=367 results=14 credit=3124.51
+- host_id=376 results=8 credit=41.33
+- host_id=386 results=6 credit=94.02
+- host_id=389 results=5 credit=63.75
+- host_id=390 results=3 credit=85.83
+- host_id=395 results=9 credit=166.04
+- host_id=456 results=1 credit=9.71
+- host_id=493 results=4 credit=16.82
+- host_id=497 results=3 credit=123.49
+- host_id=506 results=1 credit=4.14
+- host_id=531 results=2 credit=27.58
+- host_id=532 results=6 credit=100.66
+
+Operational notes:
+- Recent `credit_cron.log` entries immediately before the session showed regular credit activity at 20:40, 20:45, and 20:50 UTC.
+- This report contains only operational credit data.

@@ -1,0 +1,49 @@
+Axiom validation credit log
+Session timestamp (UTC): 2026-03-19_0832
+
+Credit awarded this session:
+- Results credited: 21804
+- Total cobblestones granted: 1017230.22
+- Pricing mode: price-per-FLOP
+- CPU scale: 5.019636356441911e-12
+- GPU scale: 2.586538701225352e-14
+
+Pass breakdown:
+- main_pass: 21562 results, 1010088.10 credit
+- followup_pass_1: 114 results, 2498.02 credit
+- drain_pass_1: 48 results, 1081.50 credit
+- drain_pass_2: 1 results, 31.07 credit
+- drain_pass_3: 6 results, 168.78 credit
+- drain_pass_4: 11 results, 1125.82 credit
+- drain_pass_5: 4 results, 86.15 credit
+- final_pass: 58 results, 2150.78 credit
+
+Backlog state:
+- Initial uncredited matching results at session start: 400518
+- Matching results already credited at session start: 1834964
+- Uncredited matching results at report cutoff: 380165
+- Remaining positive-elapsed uncredited at cutoff: 103
+- Remaining zero-elapsed uncredited at cutoff: 380062
+- Note: zero-elapsed results were left uncredited per the elapsed_time=0 skip rule; the positive-elapsed count reflects newly arriving completions at the session cutoff while repeated drain passes were still running.
+
+Per-host credit summary (final pass at report cutoff):
+- Host 19: 1 results, 625.51 credit
+- Host 105: 5 results, 578.49 credit
+- Host 240: 3 results, 37.71 credit
+- Host 327: 1 results, 17.04 credit
+- Host 330: 1 results, 22.04 credit
+- Host 332: 2 results, 63.48 credit
+- Host 338: 2 results, 43.41 credit
+- Host 339: 4 results, 133.46 credit
+- Host 345: 1 results, 6.38 credit
+- Host 358: 1 results, 13.88 credit
+- Host 367: 8 results, 251.05 credit
+- Host 388: 2 results, 38.82 credit
+- Host 389: 5 results, 60.96 credit
+- Host 390: 1 results, 18.24 credit
+- Host 398: 2 results, 41.98 credit
+- Host 399: 1 results, 16.65 credit
+- Host 400: 2 results, 28.58 credit
+- Host 503: 2 results, 7.61 credit
+- Host 507: 6 results, 61.99 credit
+- Host 508: 8 results, 83.49 credit

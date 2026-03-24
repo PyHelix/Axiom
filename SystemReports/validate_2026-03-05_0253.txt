@@ -1,0 +1,40 @@
+Axiom BOINC Validation & Credit Log
+Timestamp: 2026-03-05 01:53:41 UTC
+Host timezone timestamp: 2026-03-05 02:53:41 CET
+
+Scope
+- Step 2 operational validation/credit/cleanup only.
+- Scientific findings were not modified.
+
+Results Reviewed This Session
+- Uncredited successful exp results found: 7
+- Result IDs reviewed: 1692115,1692116,1692117,1692120,1692121,1692122,1692127
+- Quality review method: attempted mapping each uncredited result to sanitized numeric output in /opt/axiom/experiment_results/sanitized/*_safe.json via _result_name / basename; parsed numeric payload validity and outlier checks only on sanitized data.
+- Review outcome: 0/7 uncredited results had a matching sanitized payload available at review time; therefore scientific-value quality could not be verified for this batch.
+
+Credit Awarded
+- Session credit awarded: 0
+- Credited results this session: 0
+- Per-user credit increments: none
+- Per-host credit increments: none
+- Safety cap check: 0 <= 10000 (pass)
+
+Operational Cleanup
+- Dead-host stuck-task cleanup (>12h runtime and >6h no host contact): 0 rows updated.
+- Hard runtime ceiling cleanup (>48h runtime): 0 rows updated.
+
+Failure Pattern Review
+- Evaluated experiment-level failure rates and active queue.
+- No experiment met the 'clearly broken across multiple hosts with zero success and active queue' criterion for forced abort.
+- Observed repeated GPU exit code 195 cases on appid=2 with CUDA driver/runtime mismatch in stderr (insufficient NVIDIA driver for CUDA 12.x), indicating host compatibility issues rather than a confirmed cross-host script defect.
+
+Counters Updated
+- credited_count.txt incremented by N=0 (no change).
+- total_results_count.txt refreshed with max(existing, current_completed_success)=1825.
+
+Script/Bug Fixes
+- No experiment scripts were modified in this session.
+
+Notes
+- Credit pass deferred for the reviewed IDs until sanitized outputs become available for quality scoring.
+- Database remains the source of truth for credited/uncredited status.

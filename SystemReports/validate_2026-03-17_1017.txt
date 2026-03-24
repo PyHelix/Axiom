@@ -1,0 +1,98 @@
+Axiom BOINC Validation Log
+Timestamp: 2026-03-17T10:17:19Z
+Session window (result mod_time): 2026-03-17 10:14:21 to 2026-03-17 10:17:31 UTC
+
+Results credited this session
+- Credited results with granted_credit > 0: 29745
+- Total granted credit: 1273687.073617
+- Website counter credited_count.txt: 904577
+- Website counter total_results_count.txt: 408668
+
+Anti-cheat review
+- Sampled sanitized JSON files: 200
+- Uncredited results with sanitized payloads available at sample time: 29026
+- Denied results (0.01 sentinel):
+  - result_id=4522153 reason=outlier_within_experiment:exp_foodweb_trophic_coherence_nonreciprocity_threshold
+  - result_id=4530681 reason=outlier_within_experiment:exp_foodweb_trophic_coherence_nonreciprocity_threshold
+  - result_id=4545846 reason=trivial_or_empty_payload
+- Stub-denied success results under 5 seconds in first bulk pass: 288
+
+Per-host credit summary
+host_id\tcredit\tresults
+437\t265462.977265\t170
+367\t254294.673479\t5099
+22\t110585.111695\t112
+18\t100906.497903\t91
+485\t77197.218617\t58
+20\t70187.391862\t112
+17\t53112.600000\t70
+19\t51783.750000\t109
+16\t21756.200000\t104
+23\t20064.584043\t118
+301\t18319.550000\t31
+105\t18152.977587\t1324
+240\t17799.097936\t1262
+111\t16667.095060\t1424
+268\t16501.389009\t1203
+159\t15076.168406\t489
+322\t13252.180000\t17
+480\t12001.670000\t122
+390\t10164.155669\t1035
+488\t8698.380000\t32
+147\t7184.335947\t31
+388\t7118.407859\t854
+289\t6366.705681\t23
+97\t6278.913296\t751
+141\t6114.375330\t958
+389\t5010.476012\t1069
+275\t4769.650000\t28
+481\t4653.665061\t539
+29\t4466.666347\t381
+450\t4041.720000\t355
+61\t3664.372567\t431
+302\t3191.530000\t95
+387\t3170.746622\t1569
+494\t3111.420000\t370
+364\t2845.387551\t771
+445\t2609.851257\t359
+1\t2542.320000\t136
+85\t2504.514192\t835
+87\t2350.449970\t804
+123\t2337.151184\t585
+127\t2109.093038\t754
+341\t1997.570833\t323
+345\t1874.689450\t740
+376\t1433.310000\t997
+358\t1285.197958\t237
+414\t921.094290\t96
+493\t772.706888\t652
+108\t765.595845\t185
+344\t736.230000\t396
+202\t651.480000\t188
+459\t589.095361\t123
+60\t569.084679\t267
+424\t547.151148\t79
+479\t449.330330\t54
+113\t443.236802\t140
+486\t389.450000\t3
+483\t353.380000\t75
+394\t292.838991\t79
+373\t256.490000\t154
+137\t186.830000\t31
+134\t181.955790\t73
+317\t158.590000\t19
+57\t142.943850\t26
+106\t128.360000\t22
+366\t57.650000\t11
+491\t40.180000\t4
+107\t30.470000\t10
+63\t4.840958\t80
+495\t1.900000\t1
+
+Cleanup actions
+- Loaded price scales from /opt/axiom/gpu_price_table.json without refresh; table age was within the 3960 second freshness window.
+- Bulk credit pass completed with LEFT JOIN host handling so hostid=0 rows were not skipped during review.
+- Marked 5170 zero-elapsed rows validate_state=1 during the first pass because they had no compute time to credit.
+- Ran multiple precision cleanup passes after discovering very small computed credits were rounding down to 0.00 in the initial CASE update.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt and /opt/axiom_boinc/html/user/total_results_count.txt.
+- Residual uncredited snapshot at log time: total=5194, zero_elapsed=5178, positive_elapsed=16. The remaining positive-elapsed rows were live arrivals during the reporting snapshot.

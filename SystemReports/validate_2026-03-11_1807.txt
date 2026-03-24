@@ -1,0 +1,27 @@
+Axiom BOINC Validation Log - 2026-03-11 18:07 Europe/Berlin
+
+Results credited this session:
+- 6701 completed results credited in total.
+- 289995.12 total credit awarded with price-per-FLOP scaling.
+- Batch breakdown: 6541 results / 282532.58 credit; 35 results / 4571.55 credit; 86 results / 2890.99 credit; 19 results / 460.30 credit; 20 results / 500.44 credit.
+- App mix observed in the first two explicit credit summaries: 4534 CPU results and 307 GPU results; later drain batches were predominantly CPU-only tail completions.
+- Final live state after stabilization loop: 0 uncredited completed results pending; 83410 completed experimental results credited overall.
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6744217724480773e-14.
+
+Anti-cheat review:
+- Reviewed a deterministic random sample of 200 sanitized result files from the initial pending set.
+- Denied 1821 results at sentinel credit 0.01 for empty sanitized payloads; 1708 of those also had sanitized elapsed under 5 seconds.
+- No cross-host duplicate numeric payloads detected in the sampled review.
+- No numeric outlier denials applied.
+- Session anti-cheat host pattern: host 367 produced 1811 empty-payload returns, host 1 produced 6, and host 387 produced 4.
+
+Per-host summary:
+- Main price-per-FLOP credit batch touched 48 hosts.
+- Follow-up drain batches credited additional work on hosts 11 (+253.61), 85 (+35.76), 134 (+2.00), 222 (+17.56), 341 (+3539.12), 364 (+155.60), 367 (+74.64), and 388 (+493.26).
+- Anti-cheat denials were concentrated on host 367, with minor counts on hosts 1 and 387.
+
+Cleanup actions:
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 82699.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 83410.
+- Ran repeated drain passes until two consecutive zero-pending checks were observed.
+- Temporary helper files removed from /tmp after reporting.

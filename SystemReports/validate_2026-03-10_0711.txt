@@ -1,0 +1,55 @@
+Validation Report
+Timestamp: 2026-03-10 07:11 Europe/Berlin
+
+Session credit summary
+- Results credited this session: 3133
+- Total credit awarded this session: 125020.74
+- CPU results credited: 2993
+- GPU results credited: 139
+- Denied results: 1
+- CPU_SCALE used: 5.0196363564419115e-12
+- GPU_SCALE used: 2.6559691865020656e-14
+- Price table freshness: current; no updater run required
+- Crediting completed in two passes because new completed results arrived during the first pass
+
+Anti-cheat review
+- Sample reviewed: 200 sanitized JSON files
+- Sanitized files available at review time: 3081
+- Denied result 2148019 on host 16: trivial_or_empty_payload
+- Denied sentinel credit applied: 0.01
+
+Per-host credit summary
+- Host 1: 3586.39
+- Host 2: 953.75
+- Host 9: 506.80
+- Host 10: 7432.92
+- Host 16: 12310.96
+- Host 23: 10485.04
+- Host 29: 2111.16
+- Host 61: 2276.07
+- Host 85: 1416.23
+- Host 87: 816.31
+- Host 102: 962.36
+- Host 105: 3072.24
+- Host 123: 725.94
+- Host 134: 85.11
+- Host 140: 200.46
+- Host 182: 4787.09
+- Host 184: 8203.34
+- Host 219: 203.47
+- Host 222: 643.49
+- Host 240: 2980.08
+- Host 268: 2492.95
+- Host 271: 188.41
+- Host 272: 64.64
+- Host 341: 8061.56
+- Host 350: 454.56
+- Host 355: 2505.68
+- Host 358: 653.47
+- Host 367: 46840.29
+
+Operational checks and cleanup
+- Uncredited completed result count after crediting: 0
+- Website counters updated: credited_count=57935, total_results_count=58341
+- Session report copied to /opt/axiom_boinc/html/user/system_reports/
+- Session report staged for repository archival in /opt/axiom/Axiom_repo/SystemReports/

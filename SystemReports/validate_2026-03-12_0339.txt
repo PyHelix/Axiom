@@ -1,0 +1,70 @@
+Axiom validation session log
+Timestamp: 2026-03-12 03:39 Europe/Berlin
+
+Results credited this session
+- 3265 completed results credited
+- 3477 completed results credited
+- 202140.46 total credit awarded
+- Credit runs:
+  - Pass 1: 3233 results, 183843.78 credit
+  - Pass 2: 15 results, 456.94 credit
+  - Pass 3: 4 results, 1360.84 credit
+  - Pass 4: 4 results, 1217.81 credit
+  - Drain loop: 9 results, 1005.29 credit
+  - Final settle pass: 212 results, 14255.80 credit
+- Live queue verification after drain: 0 uncredited completed results remaining
+
+Anti-cheat flags
+- 102 denied results were set to the 0.01 sentinel
+- 98 GPU results denied for empty sanitized payloads
+  - Hosts involved: 367 (96 results), 410 (2 results)
+  - Sampled stderr showed Python/CuPy tracebacks only; extracted line references:
+    - axiom_streaming_client.py:2711
+    - experiment_script.py:229, 252, 266, 270, 288, 322, 323, 373, 380, 471, 479, 502
+    - cupy/_creation/from_data.py:94
+    - cupy/_core/core.pyx:1509, 2684, 2704
+- 4 CPU results denied for byte-identical payload duplication across different hosts
+  - Host pair 398 / 400: 2 reservoir_delay_adaptive_release_window results
+  - Host pair 210 / 397: 2 reservoir_delay_adaptive_release_window results
+- Denied host credit totals written by the session:
+  - host 210: 0.01
+  - host 367: 0.96
+  - host 397: 0.01
+  - host 398: 0.01
+  - host 400: 0.01
+  - host 410: 0.02
+
+Per-host credit summary
+- Explicitly enumerated credited batch: 3245 result IDs, 186461.73 credit
+- Late-arrival drain batches: 232 additional results, 15678.73 credit
+- Top hosts in the explicitly enumerated credited batch:
+  - host 367: 724 results, 28276.81 credit
+  - host 341: 56 results, 23921.08 credit
+  - host 333: 170 results, 7116.30 credit
+  - host 16: 18 results, 7057.97 credit
+  - host 401: 167 results, 6989.14 credit
+  - host 397: 155 results, 6499.80 credit
+  - host 23: 18 results, 6089.72 credit
+  - host 184: 8 results, 5986.83 credit
+  - host 398: 129 results, 5223.72 credit
+  - host 324: 94 results, 4581.32 credit
+  - host 327: 94 results, 4561.58 credit
+  - host 395: 100 results, 4271.18 credit
+  - host 334: 98 results, 4249.03 credit
+  - host 182: 4 results, 4154.69 credit
+  - host 339: 99 results, 4017.21 credit
+  - host 159: 27 results, 3815.85 credit
+  - host 240: 105 results, 3523.16 credit
+  - host 105: 75 results, 3401.52 credit
+  - host 332: 81 results, 3045.63 credit
+  - host 10: 4 results, 3034.31 credit
+  - host 330: 76 results, 2809.40 credit
+  - host 396: 171 results, 2799.23 credit
+  - host 268: 97 results, 2785.17 credit
+  - host 379: 5 results, 2404.89 credit
+  - host 405: 4 results, 2276.43 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 96787
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 96641
+- Removed temporary credit script from /tmp/axiom_credit.py

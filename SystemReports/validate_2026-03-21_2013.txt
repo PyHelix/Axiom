@@ -1,0 +1,69 @@
+Validation session: 2026-03-21 20:13 UTC
+Step: Validation & Credit (Step 3 of 17)
+
+Price table status
+- last_updated_unix: 1774120517
+- age_seconds_at_check: 3452
+- freshness: OK (below 3960 second threshold)
+
+Credit flow check
+- Recent credit_cron.log entries present through 2026-03-21 20:10:04 UTC
+- Uncredited results currently pending: 714093
+- Total credited results in database: 3249888
+
+Results credited this session
+- Session window used for attribution: 2026-03-21 20:10:00 UTC to 2026-03-21 20:14:59 UTC
+- Results credited: 727
+- Total cobblestones granted: 91418.38
+
+Per-host credit summary
+- host_id 367: 115 results, 17648.30 credit
+- host_id 437: 5 results, 14302.68 credit
+- host_id 486: 4 results, 10654.27 credit
+- host_id 487: 3 results, 10308.21 credit
+- host_id 485: 3 results, 8837.32 credit
+- host_id 18: 3 results, 6584.02 credit
+- host_id 22: 1 result, 3275.71 credit
+- host_id 268: 4 results, 2688.60 credit
+- host_id 17: 2 results, 2018.27 credit
+- host_id 19: 2 results, 1424.95 credit
+- host_id 159: 1 result, 1291.36 credit
+- host_id 240: 2 results, 1004.83 credit
+- host_id 23: 2 results, 961.28 credit
+- host_id 339: 36 results, 906.73 credit
+- host_id 147: 1 result, 827.87 credit
+- host_id 497: 24 results, 750.62 credit
+- host_id 338: 43 results, 720.63 credit
+- host_id 332: 32 results, 711.76 credit
+- host_id 330: 29 results, 683.74 credit
+- host_id 327: 42 results, 655.67 credit
+- host_id 16: 1 result, 639.98 credit
+- host_id 395: 39 results, 639.35 credit
+- host_id 324: 36 results, 620.80 credit
+- host_id 539: 23 results, 600.19 credit
+- host_id 376: 116 results, 562.12 credit
+- host_id 513: 1 result, 283.71 credit
+- host_id 97: 13 results, 276.60 credit
+- host_id 61: 12 results, 235.81 credit
+- host_id 106: 10 results, 171.78 credit
+- host_id 281: 17 results, 140.66 credit
+- host_id 29: 7 results, 139.28 credit
+- host_id 123: 21 results, 132.46 credit
+- host_id 364: 8 results, 131.47 credit
+- host_id 424: 11 results, 124.58 credit
+- host_id 459: 4 results, 69.45 credit
+- host_id 127: 13 results, 68.84 credit
+- host_id 398: 2 results, 66.97 credit
+- host_id 358: 5 results, 61.25 credit
+- host_id 60: 6 results, 45.32 credit
+- host_id 493: 12 results, 35.53 credit
+- host_id 85: 8 results, 32.48 credit
+- host_id 202: 3 results, 18.49 credit
+- host_id 57: 1 result, 17.89 credit
+- host_id 400: 1 result, 15.64 credit
+- host_id 399: 1 result, 15.58 credit
+- host_id 210: 1 result, 13.22 credit
+- host_id 134: 1 result, 2.11 credit
+
+Operational note
+- Credit is being handled by /opt/axiom/axiom_credit_cron.py and was active during this validation session.

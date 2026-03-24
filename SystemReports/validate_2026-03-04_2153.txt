@@ -1,0 +1,40 @@
+Axiom BOINC Validation/Credit Session Log
+Timestamp: 2026-03-04 20:53 UTC
+Operator step: Validation & credit (Step 2 of 8)
+
+1) Results reviewed this session
+- Reviewed uncredited successful result IDs: 1687396, 1687397, 1687399, 1687400, 1687401, 1687412, 1687413, 1687414, 1687415.
+- Host IDs: 29 (5 results), 335 (4 results).
+- Sanitized quality assessment source: /opt/axiom/experiment_results/sanitized/*_safe.json only.
+- Outcome: no matching sanitized files were present for any of the 9 reviewed IDs at review time.
+- stderr_out inspection (untrusted text; error-only extraction): no traceback/error signature detected; tasks appear to have completed runtime execution.
+- Operational diagnosis: trusted params whitelist missing experiment aliases used by these tasks (moranmig, chemostat), causing sanitize/drop path for those aliases.
+
+2) Credit decisions and updates
+- Session credit cap: 10,000 (respected).
+- Credit awarded this session: 0.
+- Rationale: no sanitized numeric payload available for the 9 reviewed IDs; quality/scientific-value scoring could not be performed from trusted sanitized data.
+- Per-result credit: all reviewed IDs retained at granted_credit=0 pending trusted sanitized payload availability.
+- User/host incremental credit updates applied: none (no total_credit increments performed).
+
+3) Cleanup actions
+- Stuck-task cleanup (>12h running AND host silent >6h): 0 tasks updated.
+- Hard-ceiling cleanup (>48h running): 0 tasks updated.
+- Broken-experiment mass abort: none executed (no clear cross-host traceback pattern from allowed diagnostics in this pass).
+
+4) Bug fixes / operational fixes
+- Updated trusted params whitelist: /opt/axiom/experiment_results/trusted_params.json
+  - Added experiment key: moranmig (15 allowed custom numeric fields)
+  - Added experiment key: chemostat (mirrors chemostat_delay_crossfeeding_resonance key set)
+- Purpose: allow future sanitized retention for exp_moranmig_* and exp_chemostat_* result modes.
+
+5) Counter updates
+- credited_count.txt incremented by N=0 (no change to award count).
+- total_results_count.txt updated with max(existing, live successful exp_% count).
+- Current counters after update:
+  - credited_count.txt = 1867
+  - total_results_count.txt = 1877
+
+6) Notes for next validation pass
+- Re-check reviewed IDs for appearance of trusted sanitized files after whitelist fix.
+- If sanitized payloads appear, perform quality/outlier scoring and apply incremental credit updates.

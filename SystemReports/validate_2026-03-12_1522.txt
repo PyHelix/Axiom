@@ -1,0 +1,140 @@
+Validation Session Log
+Timestamp: 2026-03-12 15:22 Europe/Berlin
+
+Results credited this session:
+- Pass 1: 5835 results, 245068.06 credit
+- Pass 2: 92 results, 5009.83 credit
+- Pass 3: 25 results, 1620.64 credit
+- Pass 4: 9 results, 263.39 credit
+- Pass 5: 22 results, 952.95 credit
+- Pass 6: 145 results, 8231.21 credit
+- Total credited: 6128 results
+- Total granted credit recorded in result table for this session batch: 261146.45
+- Final uncredited completed results after catch-up loop: 0
+
+Anti-cheat review:
+- Sampled 200 sanitized JSON payloads from the uncredited queue
+- Sanitized files present: 200
+- Denied for trivial or duplicate payload patterns: 13 results
+- Denied sentinel credit applied: 0.01
+
+Denied results:
+- Result 2882773: trivial_payload; duplicate_payload_with_result_2909253
+- Result 2909234: trivial_payload
+- Result 2909253: trivial_payload; duplicate_payload_with_result_2882773; duplicate_payload_with_result_2910791; duplicate_payload_with_result_2914377; duplicate_payload_with_result_2917164
+- Result 2909441: trivial_payload; duplicate_payload_with_result_2909755; duplicate_payload_with_result_2910739; duplicate_payload_with_result_2913972; duplicate_payload_with_result_2913983; duplicate_payload_with_result_2913991; duplicate_payload_with_result_2914275
+- Result 2909755: trivial_payload; duplicate_payload_with_result_2909441
+- Result 2910739: trivial_payload; duplicate_payload_with_result_2909441
+- Result 2910791: trivial_payload; duplicate_payload_with_result_2909253
+- Result 2913972: trivial_payload; duplicate_payload_with_result_2909441
+- Result 2913983: trivial_payload; duplicate_payload_with_result_2909441
+- Result 2913991: trivial_payload; duplicate_payload_with_result_2909441
+- Result 2914275: trivial_payload; duplicate_payload_with_result_2909441
+- Result 2914377: trivial_payload; duplicate_payload_with_result_2909253
+- Result 2917164: trivial_payload; duplicate_payload_with_result_2909253
+
+Per-host credit summary for this session:
+- Host 334: 254 results, 11673.16 credit
+- Host 395: 256 results, 11494.57 credit
+- Host 333: 256 results, 11202.39 credit
+- Host 339: 256 results, 10922.26 credit
+- Host 327: 210 results, 10700.46 credit
+- Host 324: 210 results, 10695.93 credit
+- Host 16: 20 results, 9970.26 credit
+- Host 105: 229 results, 9922.44 credit
+- Host 397: 224 results, 9818.06 credit
+- Host 401: 224 results, 9762.78 credit
+- Host 398: 224 results, 9553.61 credit
+- Host 392: 186 results, 9407.06 credit
+- Host 184: 14 results, 9399.30 credit
+- Host 240: 173 results, 8322.13 credit
+- Host 332: 192 results, 7585.77 credit
+- Host 330: 168 results, 6526.67 credit
+- Host 399: 288 results, 5758.73 credit
+- Host 182: 6 results, 5423.48 credit
+- Host 390: 144 results, 5319.06 credit
+- Host 268: 164 results, 4987.12 credit
+- Host 23: 11 results, 4953.76 credit
+- Host 400: 226 results, 4886.41 credit
+- Host 210: 240 results, 4679.66 credit
+- Host 388: 124 results, 4406.23 credit
+- Host 396: 224 results, 3806.45 credit
+- Host 10: 5 results, 3618.01 credit
+- Host 409: 62 results, 2969.49 credit
+- Host 1: 82 results, 2789.39 credit
+- Host 405: 34 results, 2709.40 credit
+- Host 404: 40 results, 2643.79 credit
+- Host 147: 55 results, 2362.11 credit
+- Host 389: 109 results, 2348.88 credit
+- Host 406: 50 results, 2273.51 credit
+- Host 407: 44 results, 2258.52 credit
+- Host 347: 29 results, 2125.95 credit
+- Host 190: 77 results, 2059.17 credit
+- Host 410: 9 results, 1804.91 credit
+- Host 29: 46 results, 1713.35 credit
+- Host 162: 19 results, 1667.52 credit
+- Host 379: 33 results, 1598.33 credit
+- Host 364: 66 results, 1536.99 credit
+- Host 85: 84 results, 1529.64 credit
+- Host 393: 41 results, 1306.75 credit
+- Host 11: 5 results, 1207.76 credit
+- Host 413: 119 results, 1149.51 credit
+- Host 87: 58 results, 1078.77 credit
+- Host 341: 35 results, 976.33 credit
+- Host 219: 25 results, 825.07 credit
+- Host 387: 64 results, 735.29 credit
+- Host 2: 27 results, 650.85 credit
+- Host 411: 22 results, 589.48 credit
+- Host 323: 4 results, 588.58 credit
+- Host 417: 5 results, 546.07 credit
+- Host 358: 28 results, 532.57 credit
+- Host 9: 5 results, 437.11 credit
+- Host 202: 28 results, 404.91 credit
+- Host 123: 26 results, 339.22 credit
+- Host 222: 16 results, 295.02 credit
+- Host 61: 9 results, 283.42 credit
+- Host 57: 9 results, 232.53 credit
+- Host 137: 8 results, 215.02 credit
+- Host 350: 10 results, 204.39 credit
+- Host 159: 5 results, 179.13 credit
+- Host 163: 12 results, 161.94 credit
+- Host 418: 9 results, 159.44 credit
+- Host 113: 10 results, 143.56 credit
+- Host 107: 10 results, 128.40 credit
+- Host 255: 7 results, 99.32 credit
+- Host 134: 7 results, 74.55 credit
+- Host 345: 5 results, 69.65 credit
+- Host 60: 4 results, 47.84 credit
+- Host 419: 1 results, 27.22 credit
+- Host 71: 1 results, 25.41 credit
+- Host 394: 1 results, 13.46 credit
+
+Cleanup and operational actions:
+- Verified price scale table freshness before crediting; refresh was not required
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 97804
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 97814
+- Crediting was repeated until the uncredited completed queue reached zero
+- Final catch-up pass host additions:
+- Host 327: 30 results, 1527.37 credit
+- Host 324: 28 results, 1427.32 credit
+- Host 240: 22 results, 1285.67 credit
+- Host 182: 1 results, 923.95 credit
+- Host 105: 1 results, 810.00 credit
+- Host 330: 13 results, 504.08 credit
+- Host 347: 5 results, 405.44 credit
+- Host 392: 12 results, 298.61 credit
+- Host 341: 5 results, 139.95 credit
+- Host 406: 2 results, 102.58 credit
+- Host 409: 2 results, 98.42 credit
+- Host 379: 2 results, 96.80 credit
+- Host 393: 3 results, 95.08 credit
+- Host 147: 2 results, 92.15 credit
+- Host 405: 1 results, 80.46 credit
+- Host 407: 1 results, 68.58 credit
+- Host 404: 1 results, 67.12 credit
+- Host 413: 6 results, 58.39 credit
+- Host 202: 3 results, 43.19 credit
+- Host 350: 2 results, 40.66 credit
+- Host 268: 1 results, 29.82 credit
+- Host 222: 1 results, 18.54 credit
+- Host 396: 1 results, 16.99 credit

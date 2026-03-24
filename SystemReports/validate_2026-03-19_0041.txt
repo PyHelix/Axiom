@@ -1,0 +1,96 @@
+Axiom validation log
+Session timestamp: 2026-03-19 00:41 UTC
+Session result mod_time window: 2026-03-19 00:38:50 to 2026-03-19 00:41:02 UTC
+
+Results credited this session
+- Credited results: 21686
+- Total cobblestones awarded: 827102.74
+- CPU app results: 21237
+- GPU app results: 449
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.5046865029091686e-14
+- Remaining uncredited finished results with elapsed_time > 0 at 2026-03-19 00:41:01 UTC: 0
+- Remaining uncredited finished results with elapsed_time = 0: 213618
+
+Per-host credit summary
+host_id=367 results=1680 credit=161676.91
+host_id=18 results=36 credit=76135.32
+host_id=22 results=32 credit=72868.35
+host_id=20 results=36 credit=48531.06
+host_id=17 results=37 credit=45386.08
+host_id=19 results=33 credit=32158.70
+host_id=508 results=2881 credit=24095.87
+host_id=507 results=2354 credit=19276.59
+host_id=240 results=345 credit=18748.57
+host_id=105 results=427 credit=18087.60
+host_id=268 results=342 credit=15080.86
+host_id=16 results=35 credit=14839.28
+host_id=397 results=469 credit=14525.78
+host_id=398 results=473 credit=14176.82
+host_id=339 results=449 credit=13011.87
+host_id=23 results=29 credit=12183.77
+host_id=340 results=433 credit=12051.39
+host_id=322 results=6 credit=12035.88
+host_id=497 results=319 credit=10865.61
+host_id=395 results=475 credit=10388.89
+host_id=111 results=344 credit=9988.89
+host_id=330 results=306 credit=9730.27
+host_id=332 results=296 credit=9640.03
+host_id=338 results=432 credit=9245.56
+host_id=327 results=441 credit=9144.89
+host_id=324 results=433 credit=9122.43
+host_id=388 results=225 credit=8731.92
+host_id=376 results=1408 credit=7406.41
+host_id=399 results=452 credit=6293.02
+host_id=400 results=465 credit=6199.25
+host_id=390 results=236 credit=6039.12
+host_id=519 results=66 credit=6023.05
+host_id=488 results=65 credit=5862.00
+host_id=210 results=430 credit=5770.56
+host_id=396 results=457 credit=5645.49
+host_id=147 results=10 credit=4743.09
+host_id=496 results=323 credit=4349.41
+host_id=272 results=96 credit=3874.07
+host_id=97 results=142 credit=3761.79
+host_id=513 results=118 credit=3429.86
+host_id=271 results=15 credit=3198.17
+host_id=389 results=226 credit=2890.80
+host_id=61 results=136 credit=2885.70
+host_id=29 results=85 credit=2777.60
+host_id=480 results=112 credit=2445.45
+host_id=481 results=94 credit=2151.04
+host_id=87 results=181 credit=2060.92
+host_id=85 results=146 credit=1962.34
+host_id=364 results=113 credit=1900.93
+host_id=123 results=170 credit=1587.86
+host_id=445 results=89 credit=1574.99
+host_id=387 results=218 credit=1559.55
+host_id=450 results=69 credit=1539.62
+host_id=504 results=456 credit=1441.52
+host_id=341 results=62 credit=1424.44
+host_id=503 results=457 credit=1421.78
+host_id=127 results=145 credit=1306.69
+host_id=345 results=113 credit=1143.83
+host_id=414 results=47 credit=1097.95
+host_id=459 results=59 credit=1011.60
+host_id=108 results=72 credit=874.25
+host_id=137 results=35 credit=804.90
+host_id=358 results=57 credit=779.47
+host_id=323 results=5 credit=765.93
+host_id=505 results=293 credit=722.65
+host_id=506 results=225 credit=720.94
+host_id=159 results=1 credit=680.20
+host_id=60 results=65 credit=533.85
+host_id=107 results=43 credit=469.51
+host_id=493 results=97 credit=401.41
+host_id=424 results=22 credit=335.60
+host_id=251 results=11 credit=273.07
+host_id=267 results=16 credit=267.95
+host_id=520 results=2 credit=267.74
+host_id=106 results=5 credit=170.21
+host_id=456 results=16 credit=140.20
+host_id=517 results=14 credit=127.18
+host_id=195 results=15 credit=120.18
+host_id=134 results=13 credit=110.37
+host_id=113 results=2 credit=25.15
+host_id=63 results=48 credit=2.89

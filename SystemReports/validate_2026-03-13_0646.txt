@@ -1,0 +1,50 @@
+Validation log
+Timestamp: 2026-03-13 06:46 Europe/Berlin
+
+Results credited this session
+- Pass 1: 4531 results, 194441.44 cobblestones awarded
+- Pass 2: 103 results, 5287.46 cobblestones awarded
+- Pass 3: 9 results, 359.73 cobblestones awarded
+- Pass 4: 328 results, 12395.71 cobblestones awarded
+- Pass 5: 116 results, 2748.88 cobblestones awarded
+- Total: 5087 results, 215233.22 cobblestones awarded
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.5319638598461795e-14
+- Final pending uncredited results after last completed drain pass: 0
+- Note: this is a live queue; additional uncredited results may appear immediately after validation as new work finishes.
+
+Anti-cheat review
+- Random sanitized sample reviewed: 200 results
+- Eligible results with sanitized payloads at review time: 4518
+- Duplicate payload groups in sample: 1
+- Denied sentinel credit (0.01) applied to 12 sampled results
+- Denied result IDs and reasons:
+  3285865: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3285916: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3285925: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3285980: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286066: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286079: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286180: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286226: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286328: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286451: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286612: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+  3286775: duplicate_payload_across_hosts, empty_numeric_payload, outlier_vs_family:kauffman_autocatalytic_threshold
+
+Per-host credit summary
+- Host 397: 1 denied result at 0.01 sentinel
+- Host 396: 3 denied results at 0.01 sentinel each
+- Host 334: 2 denied results at 0.01 sentinel each
+- Host 395: 2 denied results at 0.01 sentinel each
+- Host 401: 1 denied result at 0.01 sentinel
+- Host 339: 1 denied result at 0.01 sentinel
+- Host 60: 1 denied result at 0.01 sentinel
+- Host 398: 1 denied result at 0.01 sentinel
+- Session-wide host totals were incremented in-database during each credit pass with additive updates only.
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 130573
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 130689
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 126160
+- Removed temporary credit script /tmp/axiom_credit.py after completion

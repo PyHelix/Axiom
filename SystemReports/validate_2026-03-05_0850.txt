@@ -1,0 +1,27 @@
+Axiom BOINC Validation Log — 2026-03-05 08:50 UTC
+
+## Summary
+- 122 uncredited results found (all received ~08:19 today)
+- 0 results credited this session (assimilator has not yet produced sanitized files)
+- 1 stuck task aborted (result 1684697, host 61, oregonator experiment)
+- Total results counter updated: 2380 -> 2481
+
+## Stuck Task Cleanup
+- Result 1684697: exp_oregonator_delay_adaptive_illumination_window_h61 — host 61 silent 6.8h, task running 12.1h. Aborted.
+
+## Broken Experiments (100% failure rate, no pending work)
+- cahnhilliard_delay_feedback_window (0/47), ising_delay_adaptive_quench (0/15)
+- moranmig (0/10), rbn_delay_fatigue_control (0/55)
+- gene_drive_delay_resistance_window (0/12), abx_cycle (0/5), rd_phasejitter_adaptive_forcing (0/7)
+
+## Credit Awarded
+- 0 credit this session — all 122 uncredited results await assimilator processing
+- Will be credited next cycle once sanitized files exist
+
+## Counter Updates
+- total_results_count.txt: 2380 -> 2481
+- credited_count.txt: unchanged at 6484
+
+## Active Infrastructure
+- 90 hosts active (72h), 27 currently running tasks
+- Assimilator running (PID 1205)

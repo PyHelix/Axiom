@@ -1,0 +1,82 @@
+Axiom Validation Log - 2026-03-12_0933
+
+Results credited this session
+- Main pass: 5897 results, 266441.14 credit awarded
+- Cleanup pass: 15 results, 212.88 credit awarded
+- Session total: 5912 results, 266654.02 credit awarded
+- Uncredited backlog after cleanup: 0
+
+Anti-cheat flags
+- 32 denied results set to 0.01 sentinel
+- Sample review flagged 25 results on host 367 for trivial sanitized payloads:
+  2747701, 2748253, 2748266, 2748324, 2748573, 2748574, 2750278, 2750431, 2750688, 2751895, 2751897, 2751979, 2752360, 2752375, 2752628, 2752683, 2752790, 2755649, 2755680, 2757625, 2758641, 2758647, 2760121, 2760640, 2772584
+- Cleanup pass flagged 7 additional GPU results for empty sanitized payloads:
+  2780229 (host 413), 2780230 (host 413), 2781627 (host 405), 2782788 (host 407), 2782877 (host 404), 2782910 (host 147), 2783206 (host 413)
+
+Per-host credit summary
+- Session window uses result.mod_time >= 2026-03-12 09:29:53 CET
+- Host 367: 1416 results, 37865.09 credit
+- Host 105: 249 results, 12590.18 credit
+- Host 324: 212 results, 10467.25 credit
+- Host 334: 222 results, 9998.88 credit
+- Host 401: 237 results, 9694.76 credit
+- Host 339: 224 results, 9348.44 credit
+- Host 327: 180 results, 8988.16 credit
+- Host 395: 204 results, 8979.44 credit
+- Host 333: 207 results, 8867.76 credit
+- Host 397: 192 results, 8255.45 credit
+- Host 398: 192 results, 8038.95 credit
+- Host 392: 157 results, 8002.53 credit
+- Host 184: 9 results, 6921.04 credit
+- Host 240: 162 results, 6899.28 credit
+- Host 332: 167 results, 6469.49 credit
+- Host 16: 16 results, 6321.70 credit
+- Host 23: 16 results, 5672.84 credit
+- Host 330: 144 results, 5484.56 credit
+- Host 182: 5 results, 5233.47 credit
+- Host 268: 154 results, 4628.07 credit
+- Host 390: 109 results, 3946.56 credit
+- Host 402: 7 results, 3860.85 credit
+- Host 409: 7 results, 3826.52 credit
+- Host 393: 7 results, 3726.95 credit
+- Host 399: 196 results, 3623.81 credit
+- Host 400: 192 results, 3535.71 credit
+- Host 388: 85 results, 3503.73 credit
+- Host 406: 6 results, 3343.36 credit
+- Host 210: 180 results, 3295.88 credit
+- Host 379: 6 results, 3198.43 credit
+- Host 396: 192 results, 3116.58 credit
+- Host 10: 4 results, 3090.28 credit
+- Host 410: 7 results, 3032.08 credit
+- Host 407: 10 results, 2989.73 credit
+- Host 147: 12 results, 2851.35 credit
+- Host 1: 51 results, 2548.91 credit
+- Host 405: 7 results, 2509.89 credit
+- Host 347: 28 results, 2482.71 credit
+- Host 159: 3 results, 2354.48 credit
+- Host 404: 6 results, 2202.68 credit
+- Host 249: 4 results, 2157.78 credit
+- Host 389: 100 results, 2069.61 credit
+- Host 413: 17 results, 1975.89 credit
+- Host 29: 48 results, 1862.63 credit
+- Host 85: 72 results, 1275.92 credit
+- Host 11: 4 results, 1068.67 credit
+- Host 61: 30 results, 922.26 credit
+- Host 212: 23 results, 750.28 credit
+- Host 387: 64 results, 718.87 credit
+- Host 2: 28 results, 658.60 credit
+- Host 190: 7 results, 595.69 credit
+- Host 71: 7 results, 174.58 credit
+- Host 350: 8 results, 160.06 credit
+- Host 163: 11 results, 145.23 credit
+- Host 137: 4 results, 108.02 credit
+- Host 57: 4 results, 87.54 credit
+- Host 358: 4 results, 74.62 credit
+- Host 134: 6 results, 62.08 credit
+- Host 222: 1 results, 17.35 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 103626
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 97739
+- Removed temporary credit and anti-cheat scripts from /tmp
+- Copied this log to /opt/axiom_boinc/html/user/system_reports/

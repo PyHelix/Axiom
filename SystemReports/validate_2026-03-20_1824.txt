@@ -1,0 +1,76 @@
+Axiom validation and credit report
+Session window: 2026-03-20 18:22:40 UTC to 2026-03-20 18:24:30 UTC
+Report generated: 2026-03-20 18:24:30 UTC
+
+Price table freshness:
+- /opt/axiom/gpu_price_table.json last_updated_unix=1774030517
+- Checked at unix=1774030898
+- Age at check: 381 seconds
+- No manual refresh required
+
+Credit execution:
+- Direct runs of /opt/axiom/axiom_credit_cron.py during this session:
+  - 2026-03-20 18:22:43 UTC: 347 results, 11659.51 credit
+  - 2026-03-20 18:23:40 UTC: 118 results, 3847.70 credit
+  - 2026-03-20 18:23:49 UTC: 13 results, 2495.44 credit
+  - 2026-03-20 18:23:58 UTC: 13 results, 195.29 credit
+  - 2026-03-20 18:24:30 UTC: 67 results, 951.02 credit
+
+Results credited this session:
+- Count: 558
+- Total cobblestones granted: 19148.96
+
+Per-host credit summary:
+- host_id=22 results=2 credit=3808.04
+- host_id=17 results=2 credit=3440.07
+- host_id=18 results=1 credit=1912.57
+- host_id=16 results=3 credit=1834.40
+- host_id=367 results=55 credit=1707.53
+- host_id=23 results=1 credit=729.64
+- host_id=497 results=15 credit=479.98
+- host_id=339 results=29 credit=383.29
+- host_id=111 results=23 credit=346.47
+- host_id=340 results=21 credit=342.62
+- host_id=395 results=27 credit=332.32
+- host_id=330 results=18 credit=321.53
+- host_id=324 results=29 credit=295.25
+- host_id=338 results=26 credit=270.68
+- host_id=376 results=53 credit=267.76
+- host_id=332 results=16 credit=257.64
+- host_id=327 results=26 credit=256.48
+- host_id=494 results=15 credit=212.03
+- host_id=141 results=17 credit=204.81
+- host_id=390 results=13 credit=173.82
+- host_id=106 results=22 credit=169.19
+- host_id=513 results=1 credit=168.08
+- host_id=366 results=9 credit=156.49
+- host_id=393 results=14 credit=131.84
+- host_id=385 results=12 credit=88.32
+- host_id=61 results=7 credit=85.84
+- host_id=389 results=13 credit=83.96
+- host_id=424 results=8 credit=81.72
+- host_id=97 results=5 credit=69.51
+- host_id=386 results=9 credit=63.30
+- host_id=532 results=9 credit=57.61
+- host_id=87 results=7 credit=57.12
+- host_id=123 results=10 credit=53.32
+- host_id=29 results=4 credit=41.79
+- host_id=341 results=4 credit=33.03
+- host_id=60 results=7 credit=29.30
+- host_id=364 results=2 credit=27.76
+- host_id=534 results=2 credit=27.54
+- host_id=275 results=1 credit=27.17
+- host_id=127 results=5 credit=27.00
+- host_id=400 results=1 credit=17.50
+- host_id=358 results=3 credit=17.22
+- host_id=202 results=1 credit=15.15
+- host_id=493 results=6 credit=11.88
+- host_id=531 results=1 credit=9.00
+- host_id=107 results=1 credit=8.52
+- host_id=134 results=1 credit=6.89
+- host_id=396 results=1 credit=5.98
+
+Queue state after final pass:
+- Remaining uncredited with elapsed_time > 0 at snapshot time: 20
+- Remaining uncredited with elapsed_time = 0 at snapshot time: 122745
+- Note: the live queue was still receiving newly completed results during this session; the positive-elapsed remainder is a moving target

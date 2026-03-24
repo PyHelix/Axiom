@@ -1,0 +1,40 @@
+Validation Session Log
+Timestamp (UTC): 2026-03-18_0046
+
+Results credited this session
+- Pass 1: 7959 results, 449454.62 credit
+- Pass 2: 74 results, 5059.99 credit
+- Pass 3: 11 results, 198.48 credit
+- Pass 4: 6 results, 94.14 credit
+- Pass 5: 3 results, 73.89 credit
+- Session total: 8053 results, 454881.12 credit
+- CPU credited: 6975 results
+- GPU credited: 1078 results
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.695937079143253e-14
+
+Anti-cheat review
+- Spot-check sample targeted to uncredited results with elapsed_time > 0
+- Random rows sampled: 260
+- Sanitized payloads reviewed: 226
+- Trivial payloads found: 0
+- Duplicate payloads found across different hosts: 0
+- Experiment-level outliers flagged: 0
+- Denied sentinel credits applied: 0
+
+Per-host credit summary
+- Host totals were updated incrementally in the database during crediting.
+- The provided credit script did not persist the per-host aggregate map to disk or stdout, so an exact per-host session breakdown could not be reconstructed after execution from available server metadata.
+
+Website counters
+- credited_count.txt updated to 1250688
+- total_results_count.txt remains 466559
+
+Cleanup and operational notes
+- /tmp/axiom_credit.py created for crediting and removed after use
+- Price table freshness check passed; no price refresh was required
+- Website counter files updated with mode 644
+- Final snapshot at 2026-03-18_0046 UTC:
+- Uncredited results with elapsed_time > 0: 23
+- Uncredited results with elapsed_time = 0: 64588
+- Total credited experiment results in database: 1235624
+- Runtime-bearing uncredited count remained nonzero at snapshot because new completed results were continuing to arrive while credit passes were running

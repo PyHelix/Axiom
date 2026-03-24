@@ -1,0 +1,41 @@
+Axiom BOINC Validation Log (Top-up Pass)
+Timestamp: 2026-03-16_0027 CET
+Session credit window: 2026-03-16 00:27:27 to 2026-03-16 00:27:28 CET
+
+Results credited this pass:
+- Results updated: 410
+- Total granted credit: 9757.05
+- Denied-sentinel results (0.01): 0
+
+Per-host credit summary (hostid, results, granted_credit):
+1	18	34.29
+16	3	152.79
+17	5	3853.04
+19	1	23.25
+20	3	189.25
+29	13	47.38
+60	3	14.78
+61	11	26.76
+127	2	11.84
+134	1	2.57
+137	7	14.37
+212	24	100.65
+219	9	19.60
+222	1	11.02
+240	51	177.96
+269	27	147.68
+345	6	29.76
+358	5	13.53
+364	6	80.04
+367	101	1095.19
+388	31	82.12
+390	47	218.89
+394	1	5.21
+469	9	2785.89
+470	25	619.19
+
+Cleanup actions taken:
+- Credited the post-closeout arrival burst.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1288780.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 385256.
+- Validation queue check after top-up pass: 0 uncredited results remaining.

@@ -1,0 +1,58 @@
+Axiom Validation Log
+Timestamp: 2026-03-21 09:55 UTC
+Session window: 2026-03-21 09:53:00 UTC to 2026-03-21 09:57:40 UTC
+
+Results credited this session
+- Count: 954
+- Total cobblestones: 55906.20
+- Actionable uncredited backlog: drained to 0 nonzero-elapsed completed results at 2026-03-21 09:57:40 UTC
+
+Per-host credit summary
+host_id 487: 5 results, 20609.32 credit
+host_id 367: 95 results, 7116.28 credit
+host_id 17: 4 results, 5999.97 credit
+host_id 22: 1 result, 3274.27 credit
+host_id 18: 1 result, 3272.56 credit
+host_id 541: 113 results, 2331.52 credit
+host_id 19: 1 result, 1415.79 credit
+host_id 16: 2 results, 965.55 credit
+host_id 105: 1 result, 779.88 credit
+host_id 398: 24 results, 730.30 credit
+host_id 497: 22 results, 680.40 credit
+host_id 340: 40 results, 652.85 credit
+host_id 23: 1 result, 637.27 credit
+host_id 111: 36 results, 575.00 credit
+host_id 327: 49 results, 556.16 credit
+host_id 539: 33 results, 524.47 credit
+host_id 338: 42 results, 523.43 credit
+host_id 330: 37 results, 507.29 credit
+host_id 397: 16 results, 504.34 credit
+host_id 324: 43 results, 497.83 credit
+host_id 332: 32 results, 488.53 credit
+host_id 395: 46 results, 477.52 credit
+host_id 376: 69 results, 426.02 credit
+host_id 399: 25 results, 310.86 credit
+host_id 400: 18 results, 248.65 credit
+host_id 27: 1 result, 221.45 credit
+host_id 396: 19 results, 207.80 credit
+host_id 97: 20 results, 149.92 credit
+host_id 364: 19 results, 136.98 credit
+host_id 85: 11 results, 126.13 credit
+host_id 61: 8 results, 122.83 credit
+host_id 29: 6 results, 88.71 credit
+host_id 281: 11 results, 85.05 credit
+host_id 459: 6 results, 74.63 credit
+host_id 424: 9 results, 64.00 credit
+host_id 87: 6 results, 62.77 credit
+host_id 106: 3 results, 52.78 credit
+host_id 127: 7 results, 52.49 credit
+host_id 202: 6 results, 49.27 credit
+host_id 358: 6 results, 49.26 credit
+host_id 60: 12 results, 45.25 credit
+host_id 123: 6 results, 42.92 credit
+host_id 366: 4 results, 42.26 credit
+host_id 210: 2 results, 39.76 credit
+host_id 505: 15 results, 31.92 credit
+host_id 506: 13 results, 28.86 credit
+host_id 493: 7 results, 17.79 credit
+host_id 134: 1 result, 7.31 credit

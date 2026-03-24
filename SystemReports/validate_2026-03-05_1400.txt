@@ -1,0 +1,64 @@
+AXIOM VALIDATION LOG — 2026-03-05 14:00 UTC
+=============================================
+
+## Results Reviewed
+
+29 uncredited results found (IDs: 1703147, 1712105, 1712312, 1712315, 1712323,
+1712330, 1712339, 1712388, 1712477-1712498, 1712529-1712570, 1712893-1712897).
+
+All 29 results have validate_state=0 — the assimilator has not yet produced
+sanitized files for them. No credit can be awarded until sanitized data is
+available. These results will be picked up in the next validation cycle.
+
+Experiments represented: chimera_lifetime_scaling, spatialpgg, fiberheal,
+pitdelay, chemodelay, tritrophic, hkbc, lcs_fluctuation_universality,
+rsa_polydisperse_jamming, dp_moment_ratio, hk_bounded_confidence_consensus,
+dla_drift_fractal, rfim_domain_wall_roughness, nk_walk_scaling,
+sandpile_smallworld_avalanche_correlations, ofc_earthquake_bvalue,
+fbm_record_scaling, kauffman_autocatalytic_threshold,
+wd_curvature_trigger_gpu, chemostat_delay_crossfeeding_resonance,
+pit_delay_inhibitor_resonance, fiberbundle_delay_healing_entropy.
+
+Hosts with uncredited work: 1, 140, 159, 332, 333, 340.
+
+## Credit Awarded
+
+0 credit awarded this session (no sanitized results available).
+Total previously credited results in DB: 1480.
+
+## Cleanup Actions
+
+### Broken Experiment Abort
+Aborted all pending (unsent + in-progress) tasks for 9 experiments with 100%
+or near-100% failure rates and 0 successes under their full-name variants:
+
+- exp_cahnhilliard_delay_feedback_window (1 success / 135 failures = 99.3%)
+- exp_lotka_delay_adaptive_harvest (0 / 39 = 100%)
+- exp_rbn_delay_fatigue_control (0 / 41 = 100%)
+- exp_seir_delay_fatigue_control (0 / 32 = 100%)
+- exp_sis_delay_adaptive_rewiring_tradeoff (0 / 99 = 100%)
+- exp_kuramoto_delay_adaptive_efficiency (0 / 8 = 100%)
+- exp_mips_active_brownian_gpu (0 / 6 = 100%)
+- exp_votermod (0 / 3 = 100%)
+- exp_oscillatory_roughchannel_lbm_resonance (0 / 13 = 100%)
+
+NOTE: Shortened-name variants of these experiments (rbnfat, seirfat, etc.)
+deployed through the coordinator DO succeed — the failures are specific to the
+full-name WU deployments. Failure modes are outcome=5 (prior aborts) and
+outcome=6 (client detach/timeout), not script errors.
+
+### Stuck Task Cleanup
+0 stuck tasks found (>12h running, >6h no contact).
+0 tasks running >48h.
+
+## Website Counter Updates
+- total_results_count.txt: updated 1493 -> 1525
+- credited_count.txt: unchanged (no new credits)
+
+## Active Fleet
+91 active hosts (last 72h), top contributors by CPU cores:
+- Host 287: 192 cores, 256GB RAM
+- Host 95: 192 cores, 32GB RAM
+- Host 85/87/123: 80 cores, 128GB RAM each
+
+25 hosts currently running experiment tasks.

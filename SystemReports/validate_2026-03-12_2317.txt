@@ -1,0 +1,92 @@
+Validation Session Report
+Timestamp: 2026-03-12 23:17 Europe/Berlin
+
+Results credited this session
+- Total results credited: 5939
+- Total granted credit: 264265.82
+- CPU results: 5762
+- GPU results: 177
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.6760200558115976e-14
+- Credit update batches applied at DB mod_time timestamps: 2026-03-12 23:15:18 and 2026-03-12 23:15:58
+- Final uncredited completed experimental results remaining: 0
+
+Anti-cheat review
+- Random sample reviewed: 200 sanitized JSON payloads from the uncredited queue
+- Checks applied: trivial/empty payload screening, exact duplicate payload screening across hosts, experiment-level numeric outlier screening, stub filter for elapsed_time < 5 seconds
+- Denied results: 0
+- Notes: no sampled payloads were flagged as trivial, duplicated across hosts, or numeric outliers; no uncredited completed results had elapsed_time under 5 seconds
+
+Per-host credit summary
+- Host 1: 84 results, 4748.38 credit
+- Host 2: 22 results, 524.50 credit
+- Host 9: 6 results, 510.60 credit
+- Host 10: 6 results, 4659.98 credit
+- Host 11: 6 results, 1582.61 credit
+- Host 16: 28 results, 11007.91 credit
+- Host 23: 28 results, 10535.65 credit
+- Host 29: 34 results, 1332.03 credit
+- Host 57: 1 result, 21.98 credit
+- Host 60: 6 results, 70.55 credit
+- Host 61: 66 results, 2059.70 credit
+- Host 85: 65 results, 1179.29 credit
+- Host 87: 10 results, 183.72 credit
+- Host 113: 13 results, 185.13 credit
+- Host 134: 7 results, 73.47 credit
+- Host 141: 34 results, 3697.90 credit
+- Host 147: 3 results, 1522.95 credit
+- Host 159: 40 results, 5037.67 credit
+- Host 184: 12 results, 8553.59 credit
+- Host 210: 219 results, 4066.57 credit
+- Host 212: 63 results, 2121.22 credit
+- Host 219: 27 results, 882.09 credit
+- Host 222: 5 results, 87.32 credit
+- Host 249: 2 results, 1069.20 credit
+- Host 267: 5 results, 92.65 credit
+- Host 287: 714 results, 13838.32 credit
+- Host 324: 209 results, 10610.32 credit
+- Host 327: 180 results, 9126.71 credit
+- Host 330: 168 results, 6498.47 credit
+- Host 332: 144 results, 5663.76 credit
+- Host 333: 191 results, 8284.57 credit
+- Host 334: 152 results, 6946.50 credit
+- Host 339: 128 results, 5414.54 credit
+- Host 341: 35 results, 971.09 credit
+- Host 342: 96 results, 3187.59 credit
+- Host 345: 48 results, 654.68 credit
+- Host 347: 34 results, 2617.33 credit
+- Host 364: 50 results, 1108.91 credit
+- Host 367: 875 results, 32500.09 credit
+- Host 379: 5 results, 2717.46 credit
+- Host 387: 64 results, 721.70 credit
+- Host 388: 97 results, 3290.62 credit
+- Host 389: 89 results, 1902.92 credit
+- Host 390: 96 results, 3524.50 credit
+- Host 392: 98 results, 4953.71 credit
+- Host 393: 7 results, 3737.69 credit
+- Host 394: 2 results, 26.26 credit
+- Host 395: 224 results, 10005.86 credit
+- Host 396: 193 results, 3264.04 credit
+- Host 397: 160 results, 6980.80 credit
+- Host 398: 224 results, 9503.52 credit
+- Host 399: 248 results, 4684.04 credit
+- Host 400: 224 results, 4172.66 credit
+- Host 401: 224 results, 9696.75 credit
+- Host 403: 79 results, 978.87 credit
+- Host 404: 6 results, 3416.71 credit
+- Host 405: 5 results, 2887.22 credit
+- Host 406: 6 results, 3324.80 credit
+- Host 407: 4 results, 2224.99 credit
+- Host 409: 5 results, 2774.43 credit
+- Host 410: 3 results, 1833.79 credit
+- Host 413: 7 results, 2611.65 credit
+- Host 420: 4 results, 1174.67 credit
+- Host 422: 49 results, 626.62 credit
+
+Cleanup actions
+- Updated `result.granted_credit` and `result.validate_state` for all completed uncredited experimental results
+- Incremented `host.total_credit` and `user.total_credit` additively only
+- Updated website counters:
+  - `/opt/axiom_boinc/html/user/credited_count.txt` => 105757
+  - `/opt/axiom_boinc/html/user/total_results_count.txt` => 105784
+- Removed temporary files `/tmp/axiom_credit.py` and `/tmp/axiom_uncredited.tsv`

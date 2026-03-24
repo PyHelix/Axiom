@@ -1,0 +1,34 @@
+Axiom validation log - 2026-03-09_001420
+
+Session summary
+Processed results: 7
+Approved byte-weighted results: 7
+Denied sentinel results: 0
+Approved-byte pool: 25250
+Budget distributed: 10000.00
+Sanitized files sampled for review: 0
+Missing sanitized files at review time: 7
+
+Sampled anti-cheat review
+No sanitized files available for sampling.
+
+Per-user totals
+user 50: +1500.00 -> 5740.30
+user 90: +500.00 -> 76830.31
+user 94: +1000.00 -> 46345.90
+user 136: +500.00 -> 34735.98
+
+Cleanup
+No stuck or broken tasks cleaned up in this validation pass.
+
+Bug fixes
+No experiment script changes were required in this validation pass.
+
+Result decisions
+result 1974056 (host 372): exp_fpp_fluctuation_exponent - elapsed 846.20s, nbytes 5101 -> 500.00 byte-weighted credit
+result 1974064 (host 372): exp_bootstrap_threshold_correlation - elapsed 845.16s, nbytes 2286 -> 500.00 byte-weighted credit
+result 1974176 (host 372): exp_standard_map_ftle_transition - elapsed 958.88s, nbytes 3349 -> 500.00 byte-weighted credit
+result 1975116 (host 367): exp_contact_process_multiplex_activity_crossover - elapsed 861.65s, nbytes 3461 -> 500.00 byte-weighted credit
+result 1976103 (host 353): exp_kellersegel_crossed_resource_sensitivity_gpu_gpu - elapsed 19.13s, nbytes 3051 -> 500.00 byte-weighted credit
+result 1976492 (host 353): exp_spiked_covariance_toeplitz_localization_gpu_gpu - elapsed 18.10s, nbytes 2698 -> 500.00 byte-weighted credit
+result 1976668 (host 222): exp_fpp_fluctuation_exponent - elapsed 862.30s, nbytes 5304 -> 500.00 byte-weighted credit

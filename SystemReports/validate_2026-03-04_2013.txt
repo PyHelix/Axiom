@@ -1,0 +1,34 @@
+AXIOM VALIDATION/CREDIT LOG
+Timestamp: 2026-03-04T20:13:44+01:00
+Session type: Step 2 (validation, credit, cleanup)
+
+1) Results reviewed this session
+- Live DB query at session time returned 0 uncredited successful experiment results:
+  SELECT COUNT(*) FROM result WHERE server_state=5 AND outcome=1 AND granted_credit=0 AND name LIKE 'exp_%';
+  -> 0
+- Because no uncredited successful results were present at execution time, no per-result quality scoring or credit grants were applied in this run.
+
+2) Credit awarded
+- Results credited this session: 0
+- Total credit awarded this session: 0 (safety cap 10,000 respected)
+- Per-user credit increments: none
+- Per-host credit increments: none
+
+3) Cleanup actions
+- Stuck tasks aborted (>12h running and host silent >6h): 0
+- Hard-ceiling tasks aborted (>48h running): 0
+- Broken experiment mass-aborts (>50% fail and consistent crash pattern): none triggered
+
+4) System state snapshot
+- running experiment tasks (server_state in 1,2,4): 2009
+- failed completed experiment tasks (server_state=5 and outcome!=1): 0
+- website counter credited_count.txt: 841 -> 841
+- website counter total_results_count.txt: 841 -> 841
+
+5) Script/code fixes
+- Bugs found in experiment scripts this session: none
+- Experiment script modifications: none
+
+Notes
+- Scientific findings are handled in Step 1 and were not modified here.
+- This log is operational only (validation/credit/cleanup).

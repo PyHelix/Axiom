@@ -1,0 +1,25 @@
+Axiom validation log 2026-03-08_1441
+Processed results: 5
+Safe JSON exact matches available: 0
+Sampled sanitized files: 0
+Queue summary by family:
+- exp_abx_cycle_hgt_delay_resonance: 2
+- exp_ageing_voter_modular_polarization: 1
+- exp_grayscott_crossed_stripe_interaction_gpu_gpu: 1
+- exp_markov_branching_rescue_correlation: 1
+Denial summary:
+- none
+Validation notes:
+- No current sanitized payloads matched exact result names; payload-level duplicate/empty review could not be performed this cycle.
+- Credit budget applied only to non-denied results using DB nbytes.
+- No stuck/broken tasks cleaned up in this step.
+- No experiment scripts modified in this step.
+Per-user totals:
+- user 55: +23.44, total 27935.04
+- user 83: +150.00, total 59828.84
+Results reviewed this session:
+- result 1917394 (host 347): exp_markov_branching_rescue_correlation_c92032_0 | family exp_markov_branching_rescue_correlation | elapsed 843.959s | nbytes 148504 | median 148504 | byte_weighted median=148504 -> 50.00 credit
+- result 1917397 (host 347): exp_ageing_voter_modular_polarization_63d7b5_0 | family exp_ageing_voter_modular_polarization | elapsed 850.011s | nbytes 57113 | median 57113 | byte_weighted median=57113 -> 50.00 credit
+- result 1919283 (host 159): exp_grayscott_crossed_stripe_interaction_gpu_gpu_002431_0 | family exp_grayscott_crossed_stripe_interaction_gpu_gpu | elapsed 50.591s | nbytes 2986 | median 2986 | byte_weighted median=2986 -> 50.00 credit
+- result 1921049 (host 364): exp_abx_cycle_hgt_delay_resonance_8dbd32_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 2.024s | nbytes 245 | median 245.0 | byte_weighted median=245.0 -> 11.72 credit
+- result 1921053 (host 202): exp_abx_cycle_hgt_delay_resonance_b3430a_0 | family exp_abx_cycle_hgt_delay_resonance | elapsed 2.024s | nbytes 245 | median 245.0 | byte_weighted median=245.0 -> 11.72 credit

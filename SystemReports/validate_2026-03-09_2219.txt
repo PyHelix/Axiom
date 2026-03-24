@@ -1,0 +1,121 @@
+Axiom validation log 2026-03-09_2219
+
+Results credited this session
+286 results processed
+215 results granted normal FLOPS-based credit
+71 results denied with 0.01 sentinel credit after anti-cheat review
+Normal credit awarded: 7051.32 cobblestones
+Total granted including denied sentinel credits: 7052.09 cobblestones
+Eligible uncredited results remaining after run: 0
+
+Anti-cheat review
+Randomized sample reviewed: 200 sanitized JSON files out of 281 available sanitized uncredited results
+Primary denial pattern: empty or trivial sanitized experiment_result payloads ({})
+Denied result IDs and reasons:
+2111285: trivial_payload
+2111343: trivial_payload
+2111346: trivial_payload
+2111355: duplicate_of_2112312; trivial_payload
+2111367: trivial_payload
+2111423: duplicate_of_2112092; duplicate_of_2112581; trivial_payload
+2111448: duplicate_of_2112273; duplicate_of_2112908; trivial_payload
+2111451: trivial_payload
+2111464: trivial_payload
+2111476: trivial_payload
+2111519: trivial_payload
+2111525: trivial_payload
+2111534: duplicate_of_2111632; duplicate_of_2111853; duplicate_of_2111944; trivial_payload
+2111543: trivial_payload
+2111546: trivial_payload
+2111549: trivial_payload
+2111583: duplicate_of_2114085; trivial_payload
+2111595: duplicate_of_2114087; trivial_payload
+2111601: duplicate_of_2114079; trivial_payload
+2111632: duplicate_of_2111534; trivial_payload
+2111644: duplicate_of_2114085; trivial_payload
+2111652: duplicate_of_2114079; trivial_payload
+2111692: trivial_payload
+2111715: trivial_payload
+2111716: duplicate_of_2111955; trivial_payload
+2111757: trivial_payload
+2111787: duplicate_of_2113405; trivial_payload
+2111834: duplicate_of_2114086; trivial_payload
+2111844: duplicate_of_2113497; trivial_payload
+2111853: duplicate_of_2111534; trivial_payload
+2111937: duplicate_of_2114091; trivial_payload
+2111944: duplicate_of_2111534; trivial_payload
+2111955: duplicate_of_2111716; trivial_payload
+2111972: duplicate_of_2114094; trivial_payload
+2112041: duplicate_of_2114091; trivial_payload
+2112070: duplicate_of_2113442; trivial_payload
+2112092: duplicate_of_2111423; trivial_payload
+2112226: duplicate_of_2114246; trivial_payload
+2112266: duplicate_of_2114077; trivial_payload
+2112273: duplicate_of_2111448; trivial_payload
+2112312: duplicate_of_2111355; trivial_payload
+2112514: duplicate_of_2114077; trivial_payload
+2112543: duplicate_of_2114081; trivial_payload
+2112549: duplicate_of_2114173; trivial_payload
+2112581: duplicate_of_2111423; trivial_payload
+2112883: duplicate_of_2114086; trivial_payload
+2112888: duplicate_of_2114091; trivial_payload
+2112908: duplicate_of_2111448; trivial_payload
+2113053: duplicate_of_2114081; trivial_payload
+2113123: duplicate_of_2114094; trivial_payload
+2113228: trivial_payload
+2113405: duplicate_of_2111787; trivial_payload
+2113442: duplicate_of_2112070; trivial_payload
+2113452: trivial_payload
+2113483: trivial_payload
+2113497: duplicate_of_2111844; trivial_payload
+2113532: duplicate_of_2114094; trivial_payload
+2114077: duplicate_of_2112266; duplicate_of_2112514; trivial_payload
+2114079: duplicate_of_2111601; duplicate_of_2111652; trivial_payload
+2114081: duplicate_of_2112543; duplicate_of_2113053; trivial_payload
+2114082: trivial_payload
+2114085: duplicate_of_2111583; duplicate_of_2111644; trivial_payload
+2114086: duplicate_of_2111834; duplicate_of_2112883; trivial_payload
+2114087: duplicate_of_2111595; trivial_payload
+2114091: duplicate_of_2111937; duplicate_of_2112041; duplicate_of_2112888; trivial_payload
+2114092: trivial_payload
+2114094: duplicate_of_2111972; duplicate_of_2113123; duplicate_of_2113532; trivial_payload
+2114116: trivial_payload
+2114173: duplicate_of_2112549; trivial_payload
+2114227: trivial_payload
+2114246: duplicate_of_2112226; trivial_payload
+
+Per-host credit summary
+host_id	results	credit
+355	37	1827.83
+219	24	1543.85
+159	21	892.95
+29	12	788.74
+345	35	363.52
+222	9	313.29
+61	5	243.26
+1	7	188.13
+347	7	174.97
+140	5	165.90
+102	8	137.20
+57	4	134.50
+134	5	76.64
+2	4	71.92
+16	58	52.91
+366	1	22.79
+376	2	17.55
+184	20	15.55
+350	1	14.12
+23	17	5.55
+11	4	0.92
+
+Cleanup actions
+Updated result.granted_credit and result.validate_state for all 286 eligible results
+Incremented host.total_credit and user.total_credit additively
+Updated /opt/axiom_boinc/html/user/credited_count.txt to 51330
+Updated /opt/axiom_boinc/html/user/total_results_count.txt to 51235
+Copied this log to /opt/axiom_boinc/html/user/system_reports/
+Prepared this log for git publication in /opt/axiom/Axiom_repo/SystemReports/
+Temporary analysis files kept under /tmp for traceability during this session
+
+Notes
+Initial queue snapshot showed 284 uncredited completed results; two additional results reached the same eligible state before the credit query executed, so 286 results were processed in total.

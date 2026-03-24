@@ -1,0 +1,28 @@
+Axiom Validation Log - 2026-03-18_1119 UTC
+
+Results credited this session:
+- Credited results: 28809
+- Total credit awarded to hosts: >= 1229918.26
+- Additional final-pass host credit was applied for 58 results, but that pass was not logged separately as a total
+- Initial pass: 28144 results, 1200384.11 credit
+- Follow-up passes: 665 additional results, >= 29534.15 additional logged credit before the final 58-result pass
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.6559691865020656e-14
+
+Anti-cheat review:
+- Sampled sanitized results: 200
+- Uncredited results with sanitized files available at review time: 27002
+- Flagged sampled results: 0
+- Denied result: id 5207892, reason stub_under_5s, hostid 510
+
+Per-host credit summary:
+- Full per-host totals for the initial 28144-result pass were recorded during execution; subsequent live-queue follow-up passes added more host credit while new results continued to finish on the server
+- Highest initial-pass host credits included host 437: 194831.66, host 485: 140800.81, host 486: 138440.68, host 18: 91541.14, host 367: 67818.44, host 17: 55026.68, host 20: 54260.47
+
+Cleanup actions taken:
+- Refreshed stale price table with /opt/axiom/axiom_price_updater.py before crediting
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1460531
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 553318
+- Removed temporary files from /tmp
+- User table totals were not updated because this session disallows UPDATE/INSERT on the user table
+- Post-run snapshot on 2026-03-18 11:25 UTC showed 207 joined positive-elapsed uncredited results due new completions arriving during this active session

@@ -1,0 +1,52 @@
+Validation Log
+Timestamp: 2026-03-16_0736
+
+Results credited this session
+- Credited results: 7106
+- Total credit awarded: 395200.43
+- CPU results credited: 6838
+- GPU results credited: 268
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.819718604750556e-14
+
+Anti-cheat review
+- Reviewed 200 sanitized JSON files sampled from uncredited results with existing `_safe.json` payloads.
+- Flagged results denied: 0
+- Notes: no byte-identical cross-host duplicates, no trivial all-zero/repeated payloads, and no strong numeric outliers detected in the sampled set.
+
+Per-host credit summary
+- Scope: newest 7106 credited result rows in the current result table, using numeric host IDs only.
+- Host 367: 1663 results, 97466.21 credit
+- Host 18: 20 results, 39902.06 credit
+- Host 17: 30 results, 33552.71 credit
+- Host 20: 18 results, 29889.29 credit
+- Host 22: 13 results, 26343.74 credit
+- Host 19: 27 results, 17542.96 credit
+- Host 16: 26 results, 11899.60 credit
+- Host 23: 17 results, 8773.19 credit
+- Host 240: 546 results, 7191.46 credit
+- Host 105: 643 results, 6259.27 credit
+- Host 268: 476 results, 5895.40 credit
+- Host 390: 419 results, 3698.72 credit
+- Host 450: 300 results, 3114.82 credit
+- Host 388: 345 results, 2913.19 credit
+- Host 389: 416 results, 2522.96 credit
+- Host 269: 199 results, 1733.48 credit
+- Host 11: 6 results, 1637.58 credit
+- Host 106: 280 results, 1411.89 credit
+- Host 147: 2 results, 1335.08 credit
+- Host 29: 148 results, 1312.26 credit
+
+Operational notes
+- Price table freshness check passed; no manual refresh was needed.
+- Website counters updated:
+- credited_count.txt: 1260014
+- total_results_count.txt: 398073
+- Live post-run state at log time:
+- Uncredited results with elapsed_time > 0: 111
+- Uncredited results with elapsed_time = 0: 8010
+- The positive-elapsed remainder reflects new completions arriving while the validator was running; the queue was drained to zero during the pass, then repopulated by new reports.
+- The zero-elapsed remainder matches the prompt's no-credit policy for tasks that never started or never reported compute time.
+
+Cleanup actions taken
+- Temporary review and credit scripts were written under /tmp for this session and removed after use.

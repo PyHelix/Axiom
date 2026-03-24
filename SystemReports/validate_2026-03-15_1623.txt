@@ -1,0 +1,108 @@
+Axiom validation log - 2026-03-15_1623
+
+Results credited this session
+- Count: 19352
+- Total cobblestones awarded: 524103.92
+- CPU results credited: 17601
+- GPU results credited: 854
+- Denied sentinel results: 15 (0.01 credit each)
+- Zero-elapsed results skipped: 4987
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.604730343876649e-14
+
+Anti-cheat review
+- Spot-check sample size: 200 sanitized JSON files
+- Sanitized files present among uncredited results at review time: 19134
+- Result 4210498: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4218285: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4220919: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4233540: byte_identical_payload_on_multiple_hosts
+- Result 4234288: byte_identical_payload_on_multiple_hosts
+- Result 4235950: byte_identical_payload_on_multiple_hosts
+- Result 4236435: byte_identical_payload_on_multiple_hosts
+- Result 4237333: stub_success_under_5s
+- Result 4237754: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4237987: stub_success_under_5s
+- Result 4238076: stub_success_under_5s
+- Result 4240696: byte_identical_payload_on_multiple_hosts
+- Result 4243779: stub_success_under_5s
+- Result 4244535: stub_success_under_5s, byte_identical_payload_on_multiple_hosts
+- Result 4246249: stub_success_under_5s
+
+Per-host credit summary
+- Host 9: 719.63
+- Host 11: 2236.60
+- Host 16: 13736.07
+- Host 17: 24997.75
+- Host 18: 36279.42
+- Host 19: 22581.89
+- Host 20: 22513.39
+- Host 22: 16790.21
+- Host 23: 10333.36
+- Host 29: 2761.17
+- Host 57: 241.05
+- Host 60: 1012.80
+- Host 61: 2506.79
+- Host 80: 739.96
+- Host 85: 1866.66
+- Host 87: 1256.13
+- Host 105: 13165.66
+- Host 106: 3552.35
+- Host 107: 142.25
+- Host 108: 988.93
+- Host 111: 10870.42
+- Host 123: 1338.67
+- Host 127: 195.79
+- Host 134: 113.87
+- Host 137: 427.95
+- Host 141: 7940.67
+- Host 159: 731.10
+- Host 202: 636.79
+- Host 212: 4854.53
+- Host 222: 226.58
+- Host 240: 11646.41
+- Host 267: 60.45
+- Host 268: 9870.59
+- Host 269: 9571.71
+- Host 317: 16.31
+- Host 323: 986.84
+- Host 342: 1363.75
+- Host 345: 1241.48
+- Host 350: 415.49
+- Host 358: 814.41
+- Host 364: 1828.45
+- Host 367: 156293.57
+- Host 379: 1552.44
+- Host 387: 1668.47
+- Host 388: 4401.56
+- Host 389: 3438.03
+- Host 390: 6350.47
+- Host 393: 1014.79
+- Host 404: 1647.91
+- Host 405: 1641.73
+- Host 406: 1063.26
+- Host 407: 1046.78
+- Host 408: 3348.56
+- Host 409: 1804.90
+- Host 410: 1212.06
+- Host 424: 40.68
+- Host 437: 7041.20
+- Host 450: 1847.80
+- Host 452: 1120.29
+- Host 456: 58.60
+- Host 458: 8670.16
+- Host 459: 323.06
+- Host 460: 5309.63
+- Host 461: 2917.65
+- Host 462: 16722.56
+- Host 463: 45.85
+- Host 465: 48071.32
+- Host 466: 1624.76
+- Host 467: 251.50
+
+Cleanup actions taken
+- Updated /opt/axiom_boinc/html/user/credited_count.txt incrementally
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt using max(existing, live_total)
+- Removed /tmp/axiom_credit.py after execution
+- Current website credited_count.txt: 1336550
+- Current website total_results_count.txt: 385403

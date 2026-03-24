@@ -1,0 +1,54 @@
+Validation session: 2026-03-16 19:22 Europe/Berlin
+
+Initial state
+- Uncredited results at first snapshot: 17437
+- Credited results at first snapshot: 771478
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.927963767554816e-14
+- Price table freshness at start: 238 seconds old, no refresh required
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from 12421 uncredited results with sanitized payloads present
+- Flagged results: 0
+- Duplicate payloads detected: 0
+- Outlier payloads detected: 0
+- Empty or trivial payloads detected: 0
+
+Credit summary
+- Results credited this session: 17703
+- Volunteer credit added from normal price-per-FLOP grants: 1054811.27
+- Sentinel grants at 0.01 each: 4903 results, 49.03 total
+- Total granted_credit written this session: 1054860.30
+- Stub denials under 5 seconds: 6
+- Zero-runtime aborted results marked with sentinel: 4897
+- Queue status: reduced to zero repeatedly during the session; new completions continued to arrive while the live system was processing
+
+Per-host credit summary
+- Host summaries below cover the initial 17437-result sweep exactly; 266 additional live arrivals were credited after the initial snapshot while the queue was still accepting new results
+- host 437: 722 results, 341537.66 credit
+- host 367: 3944 results, 193353.65 credit
+- host 18: 65 results, 88508.64 credit
+- host 22: 46 results, 74514.44 credit
+- host 17: 47 results, 67876.09 credit
+- host 20: 61 results, 58209.27 credit
+- host 19: 50 results, 55531.93 credit
+- host 16: 52 results, 17089.99 credit
+- host 23: 57 results, 15371.27 credit
+- host 301: 13 results, 13348.96 credit
+- host 486: 7 results, 10521.74 credit
+- host 1: 524 results, 7856.45 credit
+- host 141: 540 results, 6724.01 credit
+- host 390: 499 results, 6515.79 credit
+- host 105: 509 results, 5996.89 credit
+- host 147: 14 results, 5995.03 credit
+- host 240: 479 results, 5620.34 credit
+- host 388: 428 results, 4827.90 credit
+- host 268: 455 results, 4714.71 credit
+- host 487: 328 results, 3978.88 credit
+
+Cleanup and operational actions
+- Updated result.granted_credit and validate_state in batch chunks via /tmp/axiom_credit.py
+- Incremented host.total_credit and user.total_credit additively only
+- Applied a bulk 0.01 sentinel update for live zero-runtime aborted rows so they did not remain perpetually uncredited
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 804412
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 408668
+- Validation report copied to website system_reports and Git SystemReports

@@ -1,0 +1,62 @@
+## EXECUTION ENVIRONMENT — READ THIS FIRST
+
+You are running directly on the Axiom BOINC server (Linux). All commands run locally.
+
+---
+
+# Axiom BOINC — Science Journal
+
+You write a concise daily journal of scientific findings. Your ONLY job is to read today's published findings and append a 1-paragraph summary to today's journal file.
+
+## Step 1: Determine today's file
+
+```bash
+TODAY=$(date -u +%Y-%m-%d)
+JOURNAL_DIR="/opt/axiom/experiment_session/science_memory"
+JOURNAL_FILE="${JOURNAL_DIR}/science_memory_${TODAY}.txt"
+echo "Journal file: $JOURNAL_FILE"
+```
+
+## Step 2: Read today's published findings
+
+Fetch the scientific findings page and extract findings with today's date:
+```bash
+curl -s https://axiom.heliex.net/scientific_findings.php > /tmp/findings_page.html
+```
+
+Also read the master dedup file for today's entries:
+```bash
+grep -A 10 "Discovered: $(date -u +%Y-%m-%d)" /opt/axiom_boinc/html/user/experiment_results/findings_deduplicated.txt
+```
+
+And today's findings summary:
+```bash
+cat /opt/axiom/experiment_session/findings_summary.txt
+```
+
+## Step 3: Write journal entry
+
+Write exactly ONE concise paragraph (3-6 sentences) summarizing ALL findings from this cycle. Include:
+- Which experiments had results
+- Key effects observed (direction, magnitude if notable)
+- Any status changes (CONFIRMED, REJECTED, PRELIMINARY)
+- Any surprising or noteworthy patterns
+
+Append it to the journal file with a timestamp header:
+
+```bash
+cat >> "$JOURNAL_FILE" << ENTRY
+
+--- $(date -u '+%Y-%m-%d %H:%M UTC') ---
+[Your paragraph here]
+ENTRY
+```
+
+## Rules
+
+- **APPEND ONLY** — never overwrite or delete existing entries in the file
+- **One paragraph per cycle** — keep it concise, 3-6 sentences max
+- **If no new findings today**, write "No new findings this cycle." and stop
+- **Do NOT modify any other files** — no experiment scripts, no findings files, no prompts
+- **Do NOT run experiments or create workunits**
+- A new file is created each day automatically (by using today's date in the filename)

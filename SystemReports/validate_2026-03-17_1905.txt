@@ -1,0 +1,59 @@
+Axiom Validation Log - 2026-03-17 19:05 UTC
+
+Results credited this session
+- Result rows updated: 201366
+- Price-per-FLOP credit granted: 1236851.72 cobblestones
+- Compute-bearing results credited: 13890
+- CPU compute results: 13236
+- GPU compute results: 654
+- Denied sentinel results from anti-cheat/stub review: 192
+- Zero-elapsed aborted results marked with sentinel review credit: 187284
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.604730343876649e-14
+
+Anti-cheat flags
+- Sampled 200 sanitized JSON files from 13492 eligible uncredited results with sanitized payloads.
+- Flagged result 4704649: elapsed_under_5s
+- Flagged result 4725065: elapsed_under_5s
+- Flagged result 4734384: elapsed_under_5s
+- Flagged result 4746699: trivial_numeric_payload
+- Flagged result 4761878: elapsed_under_5s
+- Flagged result 4773057: trivial_numeric_payload
+- Flagged result 4774791: trivial_numeric_payload
+- Flagged result 4782989: trivial_numeric_payload
+- Duplicate payload groups seen in sample: 1
+- Invalid sanitized JSON files in sample: 0
+
+Per-host credit summary
+- Host 367: 192456.02
+- Host 437: 181891.83
+- Host 486: 156900.98
+- Host 485: 138038.49
+- Host 18: 96573.64
+- Host 22: 93785.45
+- Host 20: 60931.68
+- Host 17: 55887.26
+- Host 19: 35430.63
+- Host 16: 17704.00
+- Host 23: 17666.70
+- Host 322: 15778.55
+- Host 111: 12113.48
+- Host 159: 11461.09
+- Host 240: 8428.10
+- Host 105: 7703.98
+- Host 497: 7386.02
+- Host 268: 7225.34
+- Host 390: 6996.38
+- Host 388: 6736.72
+
+Cleanup actions
+- Price table freshness checked; refresh not required.
+- Public counters updated.
+- Validation log copied to website system reports.
+- Temporary credit and anti-cheat scripts removed from /tmp.
+- Queue snapshot after final catch-up pass: 0 uncredited results.
+
+Post-publication catch-up
+- Additional result rows updated after initial report snapshot: 1395
+- Additional price-per-FLOP credit granted: 10045.50 cobblestones
+- Additional compute-bearing results credited: 68
+- Additional zero-elapsed aborted results marked with sentinel review credit: 1327

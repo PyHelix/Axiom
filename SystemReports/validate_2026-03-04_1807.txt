@@ -1,0 +1,32 @@
+Axiom BOINC Validation Log
+Timestamp: 2026-03-04T18:07:39+01:00
+Session Type: Step 2/4 validation, credit, cleanup
+
+1) Results reviewed this session
+- Reviewed uncredited successful results snapshot: 74
+- Result IDs reviewed: 1672934,1677757,1680371,1680372,1680376,1680381,1680383,1680387,1680391,1680394,1680398,1680399,1680400,1680404,1680407,1680410,1680413,1680414,1680419,1680422,1680423,1680425,1680426,1680435,1680436,1680437,1680441,1680447,1680449,1680451,1680452,1680459,1680461,1680467,1682042,1682043,1682044,1682045,1682050,1682051,1682056,1682057,1682062,1682063,1682068,1682069,1682078,1682079,1682084,1682085,1682123,1682126,1682127,1682128,1682129,1682130,1682131,1682132,1682134,1682136,1682137,1682139,1682141,1682143,1682145,1682148,1682151,1683419,1683423,1683603,1683604,1683608,1683616,1683651
+- Sanitized artifact check: 0/74 exact matches at /opt/axiom/experiment_results/sanitized/{result_name}_safe.json
+- Decision: No credit granted this session because no reviewed result had a corresponding sanitized numeric file to evaluate quality/outliers.
+
+2) Credit awarded
+- Total credit awarded this session: 0 (session cap 10,000 respected)
+- Result credits changed: none
+- User total_credit increments: none
+- Host total_credit increments: none
+- Pending uncredited-success distribution by user id: u40:65, u83:4, u1:2, u56:1, u10:1, u4:1
+
+3) Cleanup actions
+- Stuck task cleanup (>12h run and host >6h silent): executed, rows affected = 0
+- Hard-ceiling cleanup (>48h run): executed, rows affected = 0
+- Website counters updated:
+  - credited_count.txt incremented by 0
+  - total_results_count.txt set to max(existing, completed_success_count)
+
+4) Failure pattern review
+- Recent high-failure experiment signatures (top sample): chemxfeed fail=5 succ=0 pct=100.0; chemxfeed_r7 fail=4 succ=0 pct=100.0; fiberheal_r3 fail=4 succ=0 pct=100.0; pitdelay_r1 fail=5 succ=0 pct=100.0; l96shift_r5 fail=4 succ=0 pct=100.0; l96shift_r7 fail=4 succ=0 pct=100.0; chemxfeed_r4 fail=4 succ=0 pct=100.0; l96shift_r1 fail=5 succ=0 pct=100.0; fiberheal_r5 fail=4 succ=0 pct=100.0; l96shift_r3 fail=5 succ=0 pct=100.0
+- CPU failures sampled for oscillatory_roughchannel_lbm_resonance show exit_status=0 with outcome=5 history; no deterministic crash traceback available from sanitized path for this session.
+- No experiment script changes were made in this session.
+
+5) Bugs found/fixed
+- No script bug was conclusively identified from trusted/sanitized evidence in this run.
+- No experiment scripts were modified or redeployed in this step.

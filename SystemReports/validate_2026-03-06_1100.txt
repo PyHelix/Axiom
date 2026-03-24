@@ -1,0 +1,71 @@
+AXIOM VALIDATION LOG — 2026-03-06 11:00 UTC
+=============================================
+
+SESSION SUMMARY
+- Results reviewed: 466 uncredited successful results
+- Credit awarded: 2,275 total (455 results credited, 11 zero-credit)
+- Tasks aborted: 11 (tangnat in-progress on host 325, broken experiment)
+- Stuck tasks cleaned: 0 (none found)
+- 48h+ tasks cleaned: 0 (none found)
+- Bugs found: 0 new
+
+CREDIT AWARDED PER HOST/USER
+  Host 339 (user 40): +395 credit
+  Host 105 (user 44): +260 credit
+  Host 195 (user 88): +220 credit
+  Host 333 (user 40): +210 credit
+  Host 330 (user 40): +165 credit
+  Host 334 (user 40): +150 credit
+  Host 1   (user  1): +125 credit
+  Host 327 (user 40): +125 credit
+  Host 219 (user 90): +120 credit
+  Host 351 (user 131): +120 credit
+  Host 29  (user 10): +105 credit
+  Host 325 (user 40): +80 credit
+  Host 332 (user 40): +70 credit
+  Host 360 (user  6): +70 credit
+  Host 346 (user 52): +30 credit
+  Host 23  (user  6): +10 credit
+  Host 345 (user 127): +10 credit
+  Host 350 (user 130): +5 credit
+  Host 353 (user 94): +5 credit
+
+CREDIT QUALITY BREAKDOWN
+- Most results scored 5 credit (low/minimal data or assimilator pending)
+- 11 results scored 0 credit (empty experiment_result — no usable data)
+- No outlier/suspicious results detected this session
+
+BROKEN EXPERIMENTS ABORTED
+- tangnat (tangled_nature_macroevolution): 80.2% historical failure rate
+  Aborted 11 in-progress tasks on host 325
+  Already confirmed as REJECTED by science step
+
+GPU EXPERIMENTS — 100% FAILURE RATE (no in-progress work to abort)
+  All GPU-only experiments continue to fail at 100%:
+  - grad_subspace_wd_gpu, dpcontact2d_gpu, percwalk3d_gpu, ksrough_gpu,
+    schnakwl_gpu, depinning_roughness_2d_gpu, kpz2d_gpu, lyaprmt_gpu,
+    isingmpemba_gpu, wfstep_gpu, swift, cml_sync_transition_gpu,
+    and many others (30+ GPU experiment types)
+  Root cause: likely CUDA dependency issues on volunteer machines.
+  No pending/in-progress work exists for these experiments.
+
+HIGH-FAILURE CPU EXPERIMENTS (>50% fail rate, monitored)
+  - nagelschreckenberg_lookahead: 81.1% (0 in-progress)
+  - battery_pulse_delay_plating_resonance: 85.7% (1 in-progress)
+  - fisher_delay_adaptive_culling: 77.8% (4 in-progress)
+  - cstr_poison_purge_reentrance: 71.4% (4 in-progress)
+  - sandpile_smallworld_avalanche_correlations: 66.7% (3 in-progress)
+  Note: several already REJECTED by science analysis.
+
+STUCK TASK CLEANUP
+- No tasks found running >12h on hosts with >6h no contact
+- No tasks found running >48h
+
+ACTIVE FLEET
+- 88 active hosts (contacted in last 72h)
+- 31 hosts with running exp_ tasks
+- Top contributors: host 107 (86 tasks), host 325 (72), host 327 (72)
+
+WEBSITE COUNTERS UPDATED
+- credited_count.txt: 10451 -> 10906
+- total_results_count.txt: 10806 (unchanged)

@@ -1,0 +1,61 @@
+Axiom BOINC Validation Log — 2026-03-05 12:05 UTC
+====================================================
+
+## Results Reviewed
+
+5 results credited this session (sanitized files not yet available, credited conservatively based on elapsed time):
+- r1698207 h113 (minority_game_memory_heterogeneity, 856s) — 10 credit
+- r1698212 h113 (contact_process_temporal_network, 868s) — 10 credit
+- r1708964 h340 (contact_process_temporal_network, 922s) — 10 credit
+- r1709227 h345 (rfim_domain_wall_roughness, 797s) — 10 credit
+- r1709344 h255 (bkfault_delay_adaptive_damping_window, 863s) — 10 credit
+
+2 results skipped (too short, no sanitized file):
+- r1708586 h354 (metapallee, 3s) — 0 credit
+- r1708648 h29 (nkwalk_s0, 51s) — 0 credit
+
+## Credit Awarded
+
+Total credit this session: 50
+- user/host 113: +20
+- user/host 255: +10
+- user/host 340: +10
+- user/host 345: +10
+
+Previously credited (by validator): 11,541 results at 5 credit each
+Database is source of truth for all credited result IDs.
+
+## Stuck/Broken Task Cleanup
+
+Stuck tasks (>12h, dead host): 0
+Tasks >48h: 0
+Aborted broken experiments: 1 pending task for axelnoise (100% failure rate)
+
+## Experiments with 100% Failure Rate
+
+rd_phasejitter_adaptive_forcing, chimeralife_s0, axelnoise, contactproc_s0,
+ising_delay_adaptive_quench, spatialpgg_s0, abx_cycle, tangnat, rfimrough_s0,
+oscillary_roughchannel_lbm_resonance, axelnoise_s0, tangled_nature_macroevolution,
+ofcquake_s0, gene_drive_delay_resistance_window, depinning_roughness_2d_gpu,
+mingame_s0, spatial_pgg_delay_fatigue
+
+Most had no pending tasks. Only axelnoise had 1 pending task aborted.
+
+## High Failure Experiments (>90%)
+
+rbn_delay_fatigue_control: 99.2%, cahnhilliard_delay_feedback_window: 99.1%,
+nagelschreckenberg_lookahead: 98.1%, adaptive_voter_delay_rewiring: 97.7%,
+kuramoto_islanding_fatigue_reclosure: 94.3%, baksneppen_modular_avalanche: 91.8%
+
+Not aborting — occasional successes indicate host-specific issues.
+
+## Active System State
+
+- 90+ active hosts (last 72h)
+- 28 hosts with running tasks
+- Assimilator running (PID 1221)
+- 2 uncredited results pending (short runtime, awaiting assimilator)
+
+## Website Counters
+
+credited_count.txt: 5,863 | total_results_count.txt: 6,131

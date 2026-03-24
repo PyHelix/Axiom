@@ -1,0 +1,88 @@
+Axiom BOINC validation log
+Timestamp: 2026-03-20 15:55 UTC
+Session credit window: 2026-03-20 15:51:55 UTC to 2026-03-20 15:54:02 UTC
+
+Results credited this session: 14468
+Total cobblestones awarded this session: 777939.88
+CPU results credited: 14031
+GPU results credited: 437
+CPU scale used: 5.0196363564419115e-12
+GPU scale used: 2.7291740079205278e-14
+
+Current post-session state:
+- Credited results total: 3076851
+- Uncredited results total: 66182
+- Uncredited zero-elapsed results: 65966
+- Uncredited eligible results with host/workunit present and elapsed_time > 0 at query time: 216
+
+Per-host credit summary for this session:
+host 16	17395.48	48 results
+host 17	54171.76	43 results
+host 18	88409.85	43 results
+host 19	36908.53	43 results
+host 22	90287.19	48 results
+host 23	15837.85	43 results
+host 29	3233.61	104 results
+host 57	92.09	5 results
+host 60	1104.77	236 results
+host 61	3283.48	143 results
+host 85	2058.37	250 results
+host 87	2263.78	241 results
+host 97	4557.72	195 results
+host 106	2033.75	107 results
+host 111	11548.67	380 results
+host 123	1656.74	239 results
+host 127	895.99	109 results
+host 134	126.14	29 results
+host 137	634.20	34 results
+host 141	39802.46	513 results
+host 147	5689.94	12 results
+host 202	683.65	104 results
+host 210	219.04	13 results
+host 251	51.53	2 results
+host 267	142.85	24 results
+host 275	576.41	2 results
+host 289	1907.99	5 results
+host 302	3180.01	61 results
+host 323	1650.46	10 results
+host 324	10496.12	531 results
+host 327	10485.08	537 results
+host 330	10845.93	416 results
+host 332	11131.08	416 results
+host 338	10567.16	543 results
+host 339	14953.62	526 results
+host 340	13741.65	489 results
+host 341	1622.84	79 results
+host 345	1292.31	248 results
+host 358	880.03	63 results
+host 364	2066.07	221 results
+host 367	183165.72	1614 results
+host 376	10005.11	2008 results
+host 389	3500.33	335 results
+host 390	6853.05	295 results
+host 395	12043.33	602 results
+host 396	218.33	16 results
+host 397	526.14	15 results
+host 398	279.73	10 results
+host 399	205.23	13 results
+host 400	278.94	13 results
+host 424	2674.05	150 results
+host 428	169.00	34 results
+host 450	780.25	31 results
+host 451	234.91	48 results
+host 456	1.30	1 results
+host 459	667.35	65 results
+host 488	3586.66	5 results
+host 493	598.75	308 results
+host 494	10905.27	408 results
+host 496	279.09	21 results
+host 497	12771.65	488 results
+host 498	5427.73	216 results
+host 506	16.38	7 results
+host 507	113.74	17 results
+host 508	190.61	21 results
+host 513	3732.27	308 results
+host 524	90.63	2 results
+host 531	16106.38	76 results
+host 532	23897.24	165 results
+host 534	134.51	21 results

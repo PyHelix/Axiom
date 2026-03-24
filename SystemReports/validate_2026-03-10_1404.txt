@@ -1,0 +1,108 @@
+Validation Session: 2026-03-10 14:04 Europe/Berlin
+
+Results credited this session
+- Credited results: 3290
+- Total cobblestones awarded: 151206.52
+- CPU results credited: 2456
+- GPU results credited: 787
+- Denied sentinel results: 46
+- CPU scale used: 5.0196363564419115e-12
+- GPU scale used: 2.8002151112706383e-14
+- Price table freshness: current at run time, no manual refresh required
+
+Anti-cheat review
+- Sampled sanitized result files: 200
+- Uncredited results with sanitized files available during review: 3283
+- Denied patterns observed:
+-   40 results had empty sanitized payloads with no experiment_result body and duplicated payload structure across hosts
+-   6 results were numeric outliers within their experiment family on num_sum, num_mean, and num_std
+- Denied result IDs and reasons:
+-   2221410 duplicate_payload_cross_host, empty_payload
+-   2221414 duplicate_payload_cross_host, empty_payload
+-   2221500 duplicate_payload_cross_host, empty_payload
+-   2223121 duplicate_payload_cross_host, empty_payload
+-   2223128 duplicate_payload_cross_host, empty_payload
+-   2223142 duplicate_payload_cross_host, empty_payload
+-   2223151 duplicate_payload_cross_host, empty_payload
+-   2223294 duplicate_payload_cross_host, empty_payload
+-   2228653 family_outlier:num_mean,num_std,num_sum
+-   2228681 family_outlier:num_mean,num_std,num_sum
+-   2237652 family_outlier:num_mean,num_std,num_sum
+-   2238867 duplicate_payload_cross_host, empty_payload
+-   2239074 duplicate_payload_cross_host, empty_payload
+-   2239276 duplicate_payload_cross_host, empty_payload
+-   2239285 duplicate_payload_cross_host, empty_payload
+-   2239352 duplicate_payload_cross_host, empty_payload
+-   2239398 duplicate_payload_cross_host, empty_payload
+-   2239406 duplicate_payload_cross_host, empty_payload
+-   2239412 duplicate_payload_cross_host, empty_payload
+-   2248996 family_outlier:num_mean,num_std,num_sum
+-   2249029 family_outlier:num_mean,num_std,num_sum
+-   2250661 family_outlier:num_mean,num_std,num_sum
+-   2251827 duplicate_payload_cross_host, empty_payload
+-   2251867 duplicate_payload_cross_host, empty_payload
+-   2252067 duplicate_payload_cross_host, empty_payload
+-   2252072 duplicate_payload_cross_host, empty_payload
+-   2252075 duplicate_payload_cross_host, empty_payload
+-   2252252 duplicate_payload_cross_host, empty_payload
+-   2252256 duplicate_payload_cross_host, empty_payload
+-   2252727 duplicate_payload_cross_host, empty_payload
+-   2252769 duplicate_payload_cross_host, empty_payload
+-   2252794 duplicate_payload_cross_host, empty_payload
+-   2252799 duplicate_payload_cross_host, empty_payload
+-   2252800 duplicate_payload_cross_host, empty_payload
+-   2252821 duplicate_payload_cross_host, empty_payload
+-   2252855 duplicate_payload_cross_host, empty_payload
+-   2252860 duplicate_payload_cross_host, empty_payload
+-   2252861 duplicate_payload_cross_host, empty_payload
+-   2252876 duplicate_payload_cross_host, empty_payload
+-   2252896 duplicate_payload_cross_host, empty_payload
+-   2252907 duplicate_payload_cross_host, empty_payload
+-   2252911 duplicate_payload_cross_host, empty_payload
+-   2252939 duplicate_payload_cross_host, empty_payload
+-   2253184 duplicate_payload_cross_host, empty_payload
+-   2253191 duplicate_payload_cross_host, empty_payload
+-   2253509 duplicate_payload_cross_host, empty_payload
+
+Per-host credit summary
+- Host 10: 6693.92
+- Host 102: 709.49
+- Host 107: 64.66
+- Host 11: 2010.18
+- Host 123: 618.43
+- Host 134: 101.43
+- Host 140: 221.00
+- Host 159: 6128.64
+- Host 16: 15497.03
+- Host 162: 19318.57
+- Host 182: 6519.38
+- Host 184: 8531.39
+- Host 2: 704.99
+- Host 202: 430.12
+- Host 219: 2040.08
+- Host 222: 580.39
+- Host 23: 11604.87
+- Host 29: 2250.78
+- Host 299: 433.94
+- Host 341: 7255.71
+- Host 345: 44.90
+- Host 347: 3733.88
+- Host 350: 263.05
+- Host 364: 1491.65
+- Host 367: 48919.62
+- Host 377: 569.05
+- Host 57: 380.16
+- Host 61: 464.83
+- Host 80: 1097.01
+- Host 85: 838.10
+- Host 87: 1003.57
+- Host 9: 685.71
+
+Cleanup and operational actions
+- Updated result.granted_credit and validate_state for all 3290 uncredited completed results
+- Incremented host.total_credit and user.total_credit additively only
+- Updated website counter files:
+-   credited_count.txt = 65641
+-   total_results_count.txt = 66337
+- Post-run uncredited completed results remaining: 0
+- Temporary scripts and reports generated in /tmp for this session; removed after log publication

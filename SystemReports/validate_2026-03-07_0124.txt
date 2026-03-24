@@ -1,0 +1,41 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-07 01:24
+Step: Validation, credit, and cleanup
+
+Session summary
+- Reviewed successful uncredited experiment results in the live DB.
+- Active queue check: `spacing_ratio_crossover` (2078 active) and `may_ecosystem_stability_structure` (794 active) dominate current work; no active experiment met the threshold for abort.
+- Stuck task check (>12h runtime, >6h no host contact): 0 tasks matched cleanup criteria.
+
+Results reviewed this session
+- Result 1791026, host 334: sanitized file present; payload nested under a single `experiment_result` key, so the batch script treated it as minimal and awarded 25 credit.
+- Result 1791722, host 123: sanitized file present; payload nested under a single `experiment_result` key, so the batch script treated it as minimal and awarded 25 credit.
+- Result 1791724, host 345: sanitized file present; payload nested under a single `experiment_result` key, so the batch script treated it as minimal and awarded 25 credit.
+- Result 1791725, host 345: sanitized file present; payload nested under a single `experiment_result` key, so the batch script treated it as minimal and awarded 25 credit.
+- Remaining successful uncredited results after batch pass: 121.
+- Post-pass audit of remaining 121 results: 93 missing sanitized files, 28 sanitized files present but missing `experiment_result`, 0 additional creditable payloads found.
+
+Spot-checks of sanitized data
+- `exp_aah_delay_dephasing_window_559cf43e_0_safe.json`: payload present; top-level `experiment_result` contains a list of length 12.
+- `exp_allee_delay_climate_harvest_b812a57c_0_safe.json`: payload present; top-level `experiment_result` contains a list of length 438.
+- `exp_allee_delay_climate_harvest_b45f75fe_0_safe.json`: payload present; top-level `experiment_result` contains a list of length 438.
+- `exp_allee_delay_climate_harvest_8c940e63_0_safe.json`: payload present; top-level `experiment_result` contains a list of length 438.
+- `exp_mayreact_gap_gpu_47787d5c_0_safe.json`: sanitized file exists but `experiment_result` is missing; only metadata and elapsed time are present.
+
+Credit awarded
+- Batch script output: Credited 4 results, Total credit 100, Hosts credited 3.
+- Host 123 / user 56: +25 credit. Host total now 61077.41; user total now 155806.62.
+- Host 334 / user 40: +25 credit. Host total now 37253.50; user total now 732048.4271749984.
+- Host 345 / user 127: +50 credit. Host total now 11798.20; user total now 11798.20.
+- Website counters updated: `credited_count.txt` = 532, `total_results_count.txt` = 652.
+
+Cleanup actions
+- No stuck tasks met abort criteria.
+- No currently active experiment was aborted.
+
+Issues found
+- `mayreact_gap_gpu` still shows a data-quality block: sanitized files exist for reviewed outputs but some are missing `experiment_result`, consistent with the current findings summary.
+- The batch credit rule discounts nested single-key dict payloads to 25 credit even when the nested list payload looks substantial. No script change was made in this validation step because the prompt required use of the existing batch method.
+
+Bugs fixed in experiment scripts
+- None in this session.

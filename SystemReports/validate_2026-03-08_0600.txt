@@ -1,0 +1,994 @@
+Axiom validation log
+Timestamp: 2026-03-08 06:00:37
+Supersedes earlier 2026-03-08 validation drafts after late zero-credit rows were reconciled.
+
+Session summary
+Reviewed results this session: 937
+Credited results: 936
+Denied results: 1
+Sanitized payloads present: 494
+Sanitized payloads missing at review time: 443
+Science findings summary reviewed: /opt/axiom/experiment_session/findings_summary.txt
+
+Cycle credit summary
+cycle_bin 328320: 1 reviewed, 0 credited, 0.00 total credit; malformed payload denied
+cycle_bin 328321: 62 reviewed, 62 credited @ 50.00 each, 3100.00 total
+cycle_bin 328322: 522 reviewed, 522 credited @ 19.16 each, 10001.52 total
+cycle_bin 328323: 352 reviewed, 352 credited @ 30.49 each, 10732.48 total
+Total credit added this session: 23834.00
+
+Anti-cheat review
+Spot-check sample size: 10 sanitized JSON files from current queue.
+Cross-host duplicate payload groups found: 0.
+Suspicious sub-10-second completions found in credited cohort: 0.
+Denied result: 1868680 host 353 exp_may_nested_mutualism_localization_gpu_gpu_c914e9_3 -- sanitized file existed but lacked experiment_result; only elapsed numeric present -> 0 credit.
+Sample review 1873148 host 85 exp_galtonwatson_markov_environment_crossover_850c6a_1 -- numeric payload present, values scanned (497 numbers, min=0.0, max=1918606425.0); no duplicate or speed anomaly.
+Sample review 1873167 host 85 exp_galtonwatson_markov_environment_crossover_850c7c_1 -- numeric payload present, values scanned (497 numbers, min=0.0, max=128281400.0); no duplicate or speed anomaly.
+Sample review 1873598 host 87 exp_galtonwatson_markov_environment_crossover_850e2b_1 -- numeric payload present, values scanned (497 numbers, min=0.0, max=1889340884.0); no duplicate or speed anomaly.
+Sample review 1876056 host 85 exp_voter_modular_consensus_6f00c0_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=1454119558.0); no duplicate or speed anomaly.
+Sample review 1876276 host 85 exp_voter_modular_consensus_6f0191_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=1188393093.0); no duplicate or speed anomaly.
+Sample review 1876341 host 271 exp_voter_modular_consensus_6f01d2_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=1826285464.0); no duplicate or speed anomaly.
+Sample review 1876371 host 230 exp_voter_modular_consensus_6f01ef_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=1364927873.0); no duplicate or speed anomaly.
+Sample review 1876898 host 269 exp_voter_modular_consensus_6f03e0_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=1292558678.0); no duplicate or speed anomaly.
+Sample review 1876938 host 29 exp_voter_modular_consensus_6f0406_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=222115921.0); no duplicate or speed anomaly.
+Sample review 1877306 host 345 exp_voter_modular_consensus_6f0563_0 -- numeric payload present, values scanned (958 numbers, min=0.0, max=814638194.0); no duplicate or speed anomaly.
+
+Per-user totals
+user 1: +1046.98 credit this session -> total 29226.70
+user 6: +325.24 credit this session -> total 43195.10
+user 10: +959.01 credit this session -> total 37077.42
+user 22: +137.62 credit this session -> total 2548.28
+user 30: +225.94 credit this session -> total 19475.44
+user 31: +1407.52 credit this session -> total 6054.72
+user 44: +9018.44 credit this session -> total 93004.54
+user 56: +7428.52 credit this session -> total 187604.93
+user 67: +573.14 credit this session -> total 8448.26
+user 72: +221.26 credit this session -> total 13094.46
+user 88: +321.39 credit this session -> total 30026.53
+user 90: +627.12 credit this session -> total 76649.45
+user 94: +152.45 credit this session -> total 39173.07
+user 99: +260.41 credit this session -> total 9420.94
+user 127: +1128.96 credit this session -> total 16794.81
+
+Results reviewed this session
+result 1802470 (host 23): gpu_wu_533dcc_0 -- sanitized payload present; elapsed 968.062s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1802534 (host 23): gpu_wu_965886_0 -- sanitized payload present; elapsed 973.759s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1802602 (host 362): gpu_wu_5788d1_0 -- sanitized payload present; elapsed 953.887s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1804526 (host 23): gpu_wu_3b4038_0 -- sanitized payload present; elapsed 966.716s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1804724 (host 362): gpu_wu_977ce9_0 -- sanitized payload present; elapsed 964.618s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810076 (host 362): gpu_wu_927451_0 -- sanitized payload present; elapsed 938.257s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810113 (host 362): gpu_wu_5ec8dc_0 -- sanitized payload present; elapsed 912.782s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810146 (host 362): gpu_wu_3d738b_0 -- sanitized payload present; elapsed 878.397s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810429 (host 362): gpu_wu_ac4895_0 -- sanitized payload present; elapsed 872.848s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810430 (host 362): gpu_wu_6a2c26_0 -- sanitized payload present; elapsed 924.101s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810441 (host 362): gpu_wu_048d83_0 -- sanitized payload present; elapsed 894.477s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1810674 (host 362): gpu_wu_c14daf_0 -- sanitized payload present; elapsed 911.017s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1817294 (host 362): gpu_wu_a96ef8_0 -- sanitized payload present; elapsed 909.307s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1817597 (host 362): gpu_wu_6cecab_0 -- sanitized payload present; elapsed 923.062s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1818001 (host 362): gpu_wu_9d78b3_0 -- sanitized payload present; elapsed 873.302s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1818493 (host 362): gpu_wu_2ee287_0 -- sanitized payload not yet present at review time; elapsed 933.500s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1818902 (host 362): gpu_wu_dace20_0 -- sanitized payload present; elapsed 885.172s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1818957 (host 362): gpu_wu_a51907_0 -- sanitized payload present; elapsed 904.457s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1830427 (host 1): gpu_wu_a8cb94_0 -- sanitized payload present; elapsed 1034.280s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1868680 (host 353): exp_may_nested_mutualism_localization_gpu_gpu_c914e9_3 -- sanitized payload missing experiment_result -> 0 credit (malformed/trivial payload)
+result 1869643 (host 29): exp_rps_striped_mobility_coexistence_gpu_gpu_548bcf_0 -- sanitized payload present; elapsed 988.887s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872850 (host 87): exp_galtonwatson_markov_environment_crossover_8508ea_1 -- sanitized payload present; elapsed 825.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872854 (host 87): exp_galtonwatson_markov_environment_crossover_8508ec_1 -- sanitized payload present; elapsed 826.672s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872862 (host 87): exp_galtonwatson_markov_environment_crossover_850911_1 -- sanitized payload present; elapsed 827.719s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872865 (host 87): exp_galtonwatson_markov_environment_crossover_8509e6_1 -- sanitized payload present; elapsed 827.891s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872885 (host 87): exp_galtonwatson_markov_environment_crossover_850b08_1 -- sanitized payload present; elapsed 831.109s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872899 (host 87): exp_galtonwatson_markov_environment_crossover_850b64_1 -- sanitized payload present; elapsed 825.953s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1872910 (host 87): exp_galtonwatson_markov_environment_crossover_850b70_1 -- sanitized payload present; elapsed 831.297s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873043 (host 140): exp_galtonwatson_markov_environment_crossover_850c01_1 -- sanitized payload present; elapsed 846.275s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873066 (host 140): exp_galtonwatson_markov_environment_crossover_850c17_1 -- sanitized payload present; elapsed 852.195s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873097 (host 29): exp_galtonwatson_markov_environment_crossover_850c36_1 -- sanitized payload present; elapsed 810.667s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873130 (host 85): exp_galtonwatson_markov_environment_crossover_850c57_1 -- sanitized payload present; elapsed 818.156s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873144 (host 85): exp_galtonwatson_markov_environment_crossover_850c64_1 -- sanitized payload present; elapsed 840.484s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873146 (host 85): exp_galtonwatson_markov_environment_crossover_850c66_1 -- sanitized payload present; elapsed 837.609s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873148 (host 85): exp_galtonwatson_markov_environment_crossover_850c6a_1 -- sanitized payload present; elapsed 839.234s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873149 (host 85): exp_galtonwatson_markov_environment_crossover_850c69_1 -- sanitized payload present; elapsed 839.766s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873153 (host 85): exp_galtonwatson_markov_environment_crossover_850c6f_1 -- sanitized payload present; elapsed 839.406s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873155 (host 85): exp_galtonwatson_markov_environment_crossover_850c70_1 -- sanitized payload present; elapsed 838.828s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873157 (host 85): exp_galtonwatson_markov_environment_crossover_850c71_1 -- sanitized payload present; elapsed 841.125s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873159 (host 85): exp_galtonwatson_markov_environment_crossover_850c75_1 -- sanitized payload present; elapsed 838.734s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873160 (host 85): exp_galtonwatson_markov_environment_crossover_850c74_1 -- sanitized payload present; elapsed 808.875s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873161 (host 85): exp_galtonwatson_markov_environment_crossover_850c76_1 -- sanitized payload present; elapsed 837.469s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873167 (host 85): exp_galtonwatson_markov_environment_crossover_850c7c_1 -- sanitized payload present; elapsed 837.703s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873169 (host 85): exp_galtonwatson_markov_environment_crossover_850c7e_1 -- sanitized payload present; elapsed 840.219s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873173 (host 85): exp_galtonwatson_markov_environment_crossover_850c81_1 -- sanitized payload present; elapsed 814.219s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873174 (host 85): exp_galtonwatson_markov_environment_crossover_850c83_1 -- sanitized payload present; elapsed 812.797s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873180 (host 85): exp_galtonwatson_markov_environment_crossover_850c89_1 -- sanitized payload present; elapsed 813.547s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873182 (host 85): exp_galtonwatson_markov_environment_crossover_850c8b_1 -- sanitized payload present; elapsed 838.719s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873183 (host 85): exp_galtonwatson_markov_environment_crossover_850c8c_1 -- sanitized payload present; elapsed 814.594s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873184 (host 85): exp_galtonwatson_markov_environment_crossover_850c8d_1 -- sanitized payload present; elapsed 839.000s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873186 (host 85): exp_galtonwatson_markov_environment_crossover_850c8e_1 -- sanitized payload present; elapsed 813.594s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873196 (host 85): exp_galtonwatson_markov_environment_crossover_850c99_1 -- sanitized payload present; elapsed 818.984s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873199 (host 85): exp_galtonwatson_markov_environment_crossover_850c9c_1 -- sanitized payload present; elapsed 840.672s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873205 (host 85): exp_galtonwatson_markov_environment_crossover_850ca1_1 -- sanitized payload present; elapsed 841.562s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873238 (host 230): exp_galtonwatson_markov_environment_crossover_850cc2_1 -- sanitized payload present; elapsed 845.187s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873239 (host 230): exp_galtonwatson_markov_environment_crossover_850cc4_1 -- sanitized payload present; elapsed 850.404s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873240 (host 230): exp_galtonwatson_markov_environment_crossover_850cc5_1 -- sanitized payload present; elapsed 846.287s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873241 (host 230): exp_galtonwatson_markov_environment_crossover_850cc6_1 -- sanitized payload present; elapsed 849.327s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873254 (host 85): exp_galtonwatson_markov_environment_crossover_850cd2_1 -- sanitized payload present; elapsed 837.750s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873260 (host 85): exp_galtonwatson_markov_environment_crossover_850cd9_1 -- sanitized payload present; elapsed 838.609s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873262 (host 85): exp_galtonwatson_markov_environment_crossover_850cdb_1 -- sanitized payload present; elapsed 840.547s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873263 (host 85): exp_galtonwatson_markov_environment_crossover_850cdc_1 -- sanitized payload present; elapsed 840.469s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873275 (host 230): exp_galtonwatson_markov_environment_crossover_850ce7_1 -- sanitized payload present; elapsed 849.327s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873278 (host 230): exp_galtonwatson_markov_environment_crossover_850ceb_1 -- sanitized payload present; elapsed 846.267s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873280 (host 230): exp_galtonwatson_markov_environment_crossover_850cec_1 -- sanitized payload present; elapsed 848.292s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873282 (host 230): exp_galtonwatson_markov_environment_crossover_850cef_1 -- sanitized payload present; elapsed 847.406s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873290 (host 85): exp_galtonwatson_markov_environment_crossover_850cf8_1 -- sanitized payload present; elapsed 814.406s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873291 (host 85): exp_galtonwatson_markov_environment_crossover_850cf7_1 -- sanitized payload present; elapsed 823.938s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873292 (host 85): exp_galtonwatson_markov_environment_crossover_850cf9_1 -- sanitized payload present; elapsed 837.281s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873295 (host 85): exp_galtonwatson_markov_environment_crossover_850cfd_1 -- sanitized payload present; elapsed 840.938s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873300 (host 85): exp_galtonwatson_markov_environment_crossover_850d02_1 -- sanitized payload present; elapsed 837.969s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873301 (host 85): exp_galtonwatson_markov_environment_crossover_850d01_1 -- sanitized payload present; elapsed 818.672s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873306 (host 85): exp_galtonwatson_markov_environment_crossover_850d06_1 -- sanitized payload present; elapsed 841.297s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873316 (host 85): exp_galtonwatson_markov_environment_crossover_850d12_1 -- sanitized payload present; elapsed 814.094s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873317 (host 85): exp_galtonwatson_markov_environment_crossover_850d11_1 -- sanitized payload present; elapsed 813.375s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873319 (host 85): exp_galtonwatson_markov_environment_crossover_850d13_1 -- sanitized payload present; elapsed 840.422s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873320 (host 85): exp_galtonwatson_markov_environment_crossover_850d15_1 -- sanitized payload present; elapsed 818.422s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873325 (host 85): exp_galtonwatson_markov_environment_crossover_850d1a_1 -- sanitized payload present; elapsed 813.625s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873327 (host 85): exp_galtonwatson_markov_environment_crossover_850d1c_1 -- sanitized payload present; elapsed 840.797s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873329 (host 85): exp_galtonwatson_markov_environment_crossover_850d1f_1 -- sanitized payload present; elapsed 839.016s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873331 (host 85): exp_galtonwatson_markov_environment_crossover_850d20_1 -- sanitized payload present; elapsed 840.266s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873332 (host 85): exp_galtonwatson_markov_environment_crossover_850d21_1 -- sanitized payload present; elapsed 837.969s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873333 (host 85): exp_galtonwatson_markov_environment_crossover_850d22_1 -- sanitized payload present; elapsed 838.891s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873334 (host 85): exp_galtonwatson_markov_environment_crossover_850d24_1 -- sanitized payload present; elapsed 839.766s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873335 (host 85): exp_galtonwatson_markov_environment_crossover_850d23_1 -- sanitized payload present; elapsed 839.266s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873336 (host 85): exp_galtonwatson_markov_environment_crossover_850d25_1 -- sanitized payload present; elapsed 839.234s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873337 (host 85): exp_galtonwatson_markov_environment_crossover_850d26_1 -- sanitized payload present; elapsed 838.688s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873338 (host 85): exp_galtonwatson_markov_environment_crossover_850d27_1 -- sanitized payload present; elapsed 838.781s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873339 (host 85): exp_galtonwatson_markov_environment_crossover_850d29_1 -- sanitized payload present; elapsed 840.500s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873340 (host 85): exp_galtonwatson_markov_environment_crossover_850d28_1 -- sanitized payload present; elapsed 839.828s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873343 (host 222): exp_galtonwatson_markov_environment_crossover_850d2c_1 -- sanitized payload present; elapsed 862.798s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873348 (host 222): exp_galtonwatson_markov_environment_crossover_850d31_1 -- sanitized payload present; elapsed 864.436s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873350 (host 222): exp_galtonwatson_markov_environment_crossover_850d33_1 -- sanitized payload present; elapsed 876.496s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873357 (host 222): exp_galtonwatson_markov_environment_crossover_850d3a_1 -- sanitized payload present; elapsed 863.444s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873367 (host 85): exp_galtonwatson_markov_environment_crossover_850d44_1 -- sanitized payload present; elapsed 839.359s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873385 (host 85): exp_galtonwatson_markov_environment_crossover_850d56_1 -- sanitized payload present; elapsed 808.750s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873387 (host 85): exp_galtonwatson_markov_environment_crossover_850d58_1 -- sanitized payload present; elapsed 839.828s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873393 (host 85): exp_galtonwatson_markov_environment_crossover_850d5d_1 -- sanitized payload present; elapsed 839.484s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873396 (host 85): exp_galtonwatson_markov_environment_crossover_850d61_1 -- sanitized payload present; elapsed 839.469s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873398 (host 85): exp_galtonwatson_markov_environment_crossover_850d63_1 -- sanitized payload present; elapsed 837.969s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873403 (host 85): exp_galtonwatson_markov_environment_crossover_850d68_1 -- sanitized payload present; elapsed 839.422s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873404 (host 85): exp_galtonwatson_markov_environment_crossover_850d69_1 -- sanitized payload present; elapsed 809.609s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873406 (host 85): exp_galtonwatson_markov_environment_crossover_850d6a_1 -- sanitized payload present; elapsed 839.312s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873409 (host 85): exp_galtonwatson_markov_environment_crossover_850d6e_1 -- sanitized payload present; elapsed 837.828s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873410 (host 85): exp_galtonwatson_markov_environment_crossover_850d6f_1 -- sanitized payload present; elapsed 825.484s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873415 (host 85): exp_galtonwatson_markov_environment_crossover_850d74_1 -- sanitized payload present; elapsed 818.531s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873436 (host 85): exp_galtonwatson_markov_environment_crossover_850d88_1 -- sanitized payload present; elapsed 841.281s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873439 (host 85): exp_galtonwatson_markov_environment_crossover_850d8c_1 -- sanitized payload present; elapsed 818.641s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873442 (host 85): exp_galtonwatson_markov_environment_crossover_850d8f_1 -- sanitized payload present; elapsed 841.031s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873444 (host 85): exp_galtonwatson_markov_environment_crossover_850d91_1 -- sanitized payload present; elapsed 818.531s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873445 (host 85): exp_galtonwatson_markov_environment_crossover_850d93_1 -- sanitized payload present; elapsed 838.219s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873447 (host 85): exp_galtonwatson_markov_environment_crossover_850d94_1 -- sanitized payload present; elapsed 840.328s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873458 (host 85): exp_galtonwatson_markov_environment_crossover_850d9f_1 -- sanitized payload present; elapsed 841.609s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873464 (host 85): exp_galtonwatson_markov_environment_crossover_850da4_1 -- sanitized payload present; elapsed 814.797s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873467 (host 85): exp_galtonwatson_markov_environment_crossover_850da8_1 -- sanitized payload present; elapsed 838.859s within family norms; no duplicate/speed flags -> 50.00 credit
+result 1873497 (host 29): exp_galtonwatson_markov_environment_crossover_850dc6_1 -- sanitized payload present; elapsed 885.390s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873598 (host 87): exp_galtonwatson_markov_environment_crossover_850e2b_1 -- sanitized payload present; elapsed 827.094s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873601 (host 87): exp_galtonwatson_markov_environment_crossover_850e2f_1 -- sanitized payload present; elapsed 826.078s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873607 (host 87): exp_galtonwatson_markov_environment_crossover_850e33_1 -- sanitized payload present; elapsed 827.922s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873609 (host 87): exp_galtonwatson_markov_environment_crossover_850e36_1 -- sanitized payload present; elapsed 828.562s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873628 (host 87): exp_galtonwatson_markov_environment_crossover_850e4a_1 -- sanitized payload present; elapsed 828.828s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873659 (host 269): exp_galtonwatson_markov_environment_crossover_850e68_1 -- sanitized payload present; elapsed 820.391s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873687 (host 269): exp_galtonwatson_markov_environment_crossover_850e84_1 -- sanitized payload present; elapsed 827.516s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873688 (host 269): exp_galtonwatson_markov_environment_crossover_850e85_1 -- sanitized payload present; elapsed 821.203s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873990 (host 1): gpu_wu_086063_2 -- sanitized payload present; elapsed 1227.668s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873991 (host 272): gpu_wu_0af524_2 -- sanitized payload present; elapsed 888.729s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873993 (host 353): gpu_wu_8fd8ab_2 -- sanitized payload not yet present at review time; elapsed 907.507s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1873994 (host 353): gpu_wu_5e7f8d_2 -- sanitized payload not yet present at review time; elapsed 906.497s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1873995 (host 16): gpu_wu_795a0b_2 -- sanitized payload present; elapsed 1083.287s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873996 (host 16): gpu_wu_350852_2 -- sanitized payload present; elapsed 1110.962s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873997 (host 16): gpu_wu_5f4995_2 -- sanitized payload present; elapsed 1097.109s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1873998 (host 16): gpu_wu_07230c_2 -- sanitized payload present; elapsed 1101.904s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1873999 (host 271): gpu_wu_476fc5_1 -- sanitized payload present; elapsed 938.803s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874000 (host 29): gpu_wu_9f7999_1 -- sanitized payload present; elapsed 1239.175s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874001 (host 23): gpu_wu_53e183_1 -- sanitized payload not yet present at review time; elapsed 972.530s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1874002 (host 23): gpu_wu_61786f_1 -- sanitized payload present; elapsed 971.586s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874008 (host 29): gpu_wu_256321_1 -- sanitized payload present; elapsed 1138.898s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1874011 (host 29): gpu_wu_d6c1d4_1 -- sanitized payload present; elapsed 1183.875s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874014 (host 29): gpu_wu_cd5264_1 -- sanitized payload not yet present at review time; elapsed 1197.651s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1874023 (host 23): gpu_wu_eea58b_1 -- sanitized payload present; elapsed 973.624s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1874026 (host 272): gpu_wu_b49845_1 -- sanitized payload present; elapsed 890.547s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874116 (host 1): exp_hypergraph_pgg_fixation_76011e_0 -- sanitized payload present; elapsed 929.493s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874118 (host 1): exp_hypergraph_pgg_fixation_76011f_0 -- sanitized payload present; elapsed 930.475s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874301 (host 1): exp_hypergraph_pgg_fixation_7601d1_0 -- sanitized payload present; elapsed 867.654s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874302 (host 1): exp_hypergraph_pgg_fixation_7601d2_0 -- sanitized payload present; elapsed 850.448s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874303 (host 1): exp_hypergraph_pgg_fixation_7601d4_0 -- sanitized payload present; elapsed 790.529s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874320 (host 1): exp_hypergraph_pgg_fixation_7601e4_0 -- sanitized payload present; elapsed 860.685s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874323 (host 1): exp_hypergraph_pgg_fixation_7601e7_0 -- sanitized payload present; elapsed 852.193s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874332 (host 1): exp_hypergraph_pgg_fixation_7601f0_0 -- sanitized payload present; elapsed 879.327s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874519 (host 269): exp_hypergraph_pgg_fixation_76028c_0 -- sanitized payload present; elapsed 861.484s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874526 (host 269): exp_hypergraph_pgg_fixation_760293_0 -- sanitized payload present; elapsed 788.844s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874534 (host 269): exp_hypergraph_pgg_fixation_76029b_0 -- sanitized payload present; elapsed 842.422s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874535 (host 269): exp_hypergraph_pgg_fixation_76029c_0 -- sanitized payload present; elapsed 820.984s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874539 (host 269): exp_hypergraph_pgg_fixation_7602a1_0 -- sanitized payload present; elapsed 914.844s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874540 (host 269): exp_hypergraph_pgg_fixation_7602a0_0 -- sanitized payload present; elapsed 932.203s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874541 (host 269): exp_hypergraph_pgg_fixation_7602a2_0 -- sanitized payload present; elapsed 846.406s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1874543 (host 269): exp_hypergraph_pgg_fixation_7602a5_0 -- sanitized payload present; elapsed 786.219s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875851 (host 140): exp_voter_modular_consensus_6f0001_0 -- sanitized payload present; elapsed 821.716s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875889 (host 23): exp_bootstrap_striped_threshold_gpu_297f56_0 -- sanitized payload present; elapsed 869.516s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875891 (host 140): exp_voter_modular_consensus_6f0025_0 -- sanitized payload present; elapsed 825.559s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1875910 (host 140): exp_voter_modular_consensus_6f0036_0 -- sanitized payload present; elapsed 818.180s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875911 (host 140): exp_voter_modular_consensus_6f0039_0 -- sanitized payload present; elapsed 836.153s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875912 (host 140): exp_voter_modular_consensus_6f0038_0 -- sanitized payload present; elapsed 829.114s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875919 (host 140): exp_voter_modular_consensus_6f0040_0 -- sanitized payload not yet present at review time; elapsed 824.860s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1875920 (host 140): exp_voter_modular_consensus_6f003f_0 -- sanitized payload present; elapsed 825.975s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875921 (host 23): exp_bootstrap_striped_threshold_gpu_84bfa0_0 -- sanitized payload present; elapsed 859.395s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1875995 (host 85): exp_voter_modular_consensus_6f0085_0 -- sanitized payload present; elapsed 799.938s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876019 (host 85): exp_voter_modular_consensus_6f009c_0 -- sanitized payload present; elapsed 811.094s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876022 (host 85): exp_voter_modular_consensus_6f009f_0 -- sanitized payload present; elapsed 811.641s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876038 (host 85): exp_voter_modular_consensus_6f00ad_0 -- sanitized payload present; elapsed 819.547s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876042 (host 85): exp_voter_modular_consensus_6f00b2_0 -- sanitized payload present; elapsed 800.031s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876049 (host 85): exp_voter_modular_consensus_6f00b8_0 -- sanitized payload present; elapsed 811.844s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876050 (host 85): exp_voter_modular_consensus_6f00b9_0 -- sanitized payload not yet present at review time; elapsed 811.359s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876056 (host 85): exp_voter_modular_consensus_6f00c0_0 -- sanitized payload present; elapsed 801.406s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876102 (host 85): exp_voter_modular_consensus_6f00ed_0 -- sanitized payload present; elapsed 780.250s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876103 (host 85): exp_voter_modular_consensus_6f00ec_0 -- sanitized payload present; elapsed 820.406s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876107 (host 85): exp_voter_modular_consensus_6f00f2_0 -- sanitized payload present; elapsed 801.859s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876110 (host 85): exp_voter_modular_consensus_6f00f3_0 -- sanitized payload present; elapsed 811.453s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876126 (host 272): exp_bootstrap_striped_threshold_gpu_06dd4c_0 -- sanitized payload present; elapsed 856.387s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876163 (host 271): exp_bootstrap_striped_threshold_gpu_3cc422_0 -- sanitized payload present; elapsed 853.129s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876212 (host 1): exp_bootstrap_striped_threshold_gpu_b42326_0 -- sanitized payload present; elapsed 903.840s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876225 (host 85): exp_voter_modular_consensus_6f0161_0 -- sanitized payload present; elapsed 812.125s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876226 (host 85): exp_voter_modular_consensus_6f0162_0 -- sanitized payload present; elapsed 821.406s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876227 (host 85): exp_voter_modular_consensus_6f0164_0 -- sanitized payload present; elapsed 780.984s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876228 (host 85): exp_voter_modular_consensus_6f0163_0 -- sanitized payload present; elapsed 812.719s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876250 (host 85): exp_voter_modular_consensus_6f0179_0 -- sanitized payload present; elapsed 811.891s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876253 (host 85): exp_voter_modular_consensus_6f017a_0 -- sanitized payload present; elapsed 820.594s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876254 (host 85): exp_voter_modular_consensus_6f017d_0 -- sanitized payload present; elapsed 820.844s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876256 (host 85): exp_voter_modular_consensus_6f017e_0 -- sanitized payload present; elapsed 811.453s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876257 (host 85): exp_voter_modular_consensus_6f017f_0 -- sanitized payload present; elapsed 800.141s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876261 (host 85): exp_voter_modular_consensus_6f0183_0 -- sanitized payload present; elapsed 811.484s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876271 (host 85): exp_voter_modular_consensus_6f018d_0 -- sanitized payload present; elapsed 799.078s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876273 (host 85): exp_voter_modular_consensus_6f018e_0 -- sanitized payload present; elapsed 818.484s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876276 (host 85): exp_voter_modular_consensus_6f0191_0 -- sanitized payload present; elapsed 821.672s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876278 (host 85): exp_voter_modular_consensus_6f0193_0 -- sanitized payload present; elapsed 801.672s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876279 (host 85): exp_voter_modular_consensus_6f0194_0 -- sanitized payload present; elapsed 802.016s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876280 (host 85): exp_voter_modular_consensus_6f0196_0 -- sanitized payload present; elapsed 810.875s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876333 (host 230): exp_voter_modular_consensus_6f01c8_0 -- sanitized payload not yet present at review time; elapsed 831.341s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876337 (host 230): exp_voter_modular_consensus_6f01cd_0 -- sanitized payload present; elapsed 831.750s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876338 (host 271): exp_voter_modular_consensus_6f01ce_0 -- sanitized payload present; elapsed 812.574s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876339 (host 271): exp_voter_modular_consensus_6f01cf_0 -- sanitized payload present; elapsed 821.002s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876340 (host 271): exp_voter_modular_consensus_6f01d0_0 -- sanitized payload present; elapsed 818.498s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876341 (host 271): exp_voter_modular_consensus_6f01d2_0 -- sanitized payload present; elapsed 816.592s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876343 (host 230): exp_voter_modular_consensus_6f01d3_0 -- sanitized payload not yet present at review time; elapsed 819.137s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876347 (host 230): exp_voter_modular_consensus_6f01d6_0 -- sanitized payload not yet present at review time; elapsed 831.478s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876349 (host 230): exp_voter_modular_consensus_6f01d9_0 -- sanitized payload not yet present at review time; elapsed 826.381s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876350 (host 230): exp_voter_modular_consensus_6f01da_0 -- sanitized payload not yet present at review time; elapsed 817.120s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876352 (host 230): exp_voter_modular_consensus_6f01dc_0 -- sanitized payload present; elapsed 818.944s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876353 (host 230): exp_voter_modular_consensus_6f01dd_0 -- sanitized payload present; elapsed 832.756s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876354 (host 230): exp_voter_modular_consensus_6f01de_0 -- sanitized payload present; elapsed 822.104s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876355 (host 230): exp_voter_modular_consensus_6f01df_0 -- sanitized payload present; elapsed 831.332s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876356 (host 230): exp_voter_modular_consensus_6f01e0_0 -- sanitized payload present; elapsed 828.169s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876357 (host 230): exp_voter_modular_consensus_6f01e1_0 -- sanitized payload present; elapsed 826.169s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876358 (host 230): exp_voter_modular_consensus_6f01e2_0 -- sanitized payload present; elapsed 833.368s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876359 (host 230): exp_voter_modular_consensus_6f01e3_0 -- sanitized payload present; elapsed 831.719s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876360 (host 230): exp_voter_modular_consensus_6f01e4_0 -- sanitized payload present; elapsed 831.770s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876361 (host 230): exp_voter_modular_consensus_6f01e5_0 -- sanitized payload present; elapsed 836.624s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876362 (host 230): exp_voter_modular_consensus_6f01e7_0 -- sanitized payload present; elapsed 817.857s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876363 (host 230): exp_voter_modular_consensus_6f01e6_0 -- sanitized payload present; elapsed 819.078s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876364 (host 230): exp_voter_modular_consensus_6f01e9_0 -- sanitized payload present; elapsed 833.745s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876365 (host 230): exp_voter_modular_consensus_6f01e8_0 -- sanitized payload present; elapsed 827.289s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876366 (host 230): exp_voter_modular_consensus_6f01eb_0 -- sanitized payload present; elapsed 829.251s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876367 (host 230): exp_voter_modular_consensus_6f01ea_0 -- sanitized payload present; elapsed 819.157s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876368 (host 230): exp_voter_modular_consensus_6f01ed_0 -- sanitized payload present; elapsed 815.974s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876369 (host 230): exp_voter_modular_consensus_6f01ec_0 -- sanitized payload present; elapsed 827.270s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876370 (host 16): exp_bootstrap_striped_threshold_gpu_68d4c1_0 -- sanitized payload not yet present at review time; elapsed 867.006s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876371 (host 230): exp_voter_modular_consensus_6f01ef_0 -- sanitized payload present; elapsed 834.580s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876372 (host 230): exp_voter_modular_consensus_6f01ee_0 -- sanitized payload present; elapsed 831.422s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876373 (host 230): exp_voter_modular_consensus_6f01f0_0 -- sanitized payload present; elapsed 833.395s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876374 (host 230): exp_voter_modular_consensus_6f01f2_0 -- sanitized payload present; elapsed 823.121s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876375 (host 230): exp_voter_modular_consensus_6f01f1_0 -- sanitized payload present; elapsed 833.273s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876376 (host 230): exp_voter_modular_consensus_6f01f3_0 -- sanitized payload present; elapsed 820.858s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876377 (host 230): exp_voter_modular_consensus_6f01f4_0 -- sanitized payload present; elapsed 829.286s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876378 (host 230): exp_voter_modular_consensus_6f01f6_0 -- sanitized payload present; elapsed 818.893s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876379 (host 230): exp_voter_modular_consensus_6f01f5_0 -- sanitized payload present; elapsed 833.072s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876380 (host 230): exp_voter_modular_consensus_6f01f7_0 -- sanitized payload present; elapsed 824.936s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876381 (host 230): exp_voter_modular_consensus_6f01f8_0 -- sanitized payload present; elapsed 833.087s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876382 (host 230): exp_voter_modular_consensus_6f01f9_0 -- sanitized payload present; elapsed 819.748s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876383 (host 230): exp_voter_modular_consensus_6f01fb_0 -- sanitized payload present; elapsed 822.890s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876384 (host 230): exp_voter_modular_consensus_6f01fa_0 -- sanitized payload present; elapsed 816.697s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876385 (host 230): exp_voter_modular_consensus_6f01fc_0 -- sanitized payload present; elapsed 818.770s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876386 (host 230): exp_voter_modular_consensus_6f01fd_0 -- sanitized payload present; elapsed 833.561s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876387 (host 230): exp_voter_modular_consensus_6f01ff_0 -- sanitized payload present; elapsed 821.075s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876388 (host 230): exp_voter_modular_consensus_6f01fe_0 -- sanitized payload present; elapsed 815.372s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876390 (host 271): exp_voter_modular_consensus_6f0201_0 -- sanitized payload present; elapsed 817.796s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876391 (host 230): exp_voter_modular_consensus_6f0202_0 -- sanitized payload present; elapsed 820.489s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876392 (host 230): exp_voter_modular_consensus_6f0203_0 -- sanitized payload not yet present at review time; elapsed 833.547s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876394 (host 230): exp_voter_modular_consensus_6f0206_0 -- sanitized payload not yet present at review time; elapsed 829.397s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876395 (host 230): exp_voter_modular_consensus_6f0205_0 -- sanitized payload present; elapsed 832.491s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876397 (host 230): exp_voter_modular_consensus_6f0207_0 -- sanitized payload present; elapsed 822.996s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876398 (host 230): exp_voter_modular_consensus_6f020a_0 -- sanitized payload not yet present at review time; elapsed 815.071s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876401 (host 230): exp_voter_modular_consensus_6f020d_0 -- sanitized payload present; elapsed 824.198s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876402 (host 230): exp_voter_modular_consensus_6f020c_0 -- sanitized payload present; elapsed 834.325s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876403 (host 230): exp_voter_modular_consensus_6f020e_0 -- sanitized payload present; elapsed 827.347s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876404 (host 230): exp_voter_modular_consensus_6f020f_0 -- sanitized payload present; elapsed 834.468s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876405 (host 230): exp_voter_modular_consensus_6f0211_0 -- sanitized payload present; elapsed 829.235s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876406 (host 230): exp_voter_modular_consensus_6f0210_0 -- sanitized payload present; elapsed 835.470s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876407 (host 230): exp_voter_modular_consensus_6f0213_0 -- sanitized payload present; elapsed 820.081s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876408 (host 230): exp_voter_modular_consensus_6f0212_0 -- sanitized payload present; elapsed 818.495s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876428 (host 85): exp_voter_modular_consensus_6f0226_0 -- sanitized payload present; elapsed 809.406s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876429 (host 85): exp_voter_modular_consensus_6f0227_0 -- sanitized payload present; elapsed 808.484s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876430 (host 85): exp_voter_modular_consensus_6f0228_0 -- sanitized payload present; elapsed 808.875s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876431 (host 85): exp_voter_modular_consensus_6f022a_0 -- sanitized payload present; elapsed 809.172s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876433 (host 85): exp_voter_modular_consensus_6f022c_0 -- sanitized payload present; elapsed 820.203s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876437 (host 85): exp_voter_modular_consensus_6f022f_0 -- sanitized payload present; elapsed 809.641s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876441 (host 85): exp_voter_modular_consensus_6f0233_0 -- sanitized payload not yet present at review time; elapsed 811.297s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876446 (host 85): exp_voter_modular_consensus_6f0236_0 -- sanitized payload present; elapsed 820.859s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876483 (host 87): exp_voter_modular_consensus_6f0255_0 -- sanitized payload not yet present at review time; elapsed 760.797s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876488 (host 87): exp_voter_modular_consensus_6f025b_0 -- sanitized payload not yet present at review time; elapsed 815.391s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876492 (host 87): exp_voter_modular_consensus_6f025d_0 -- sanitized payload present; elapsed 766.188s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876494 (host 87): exp_voter_modular_consensus_6f025f_0 -- sanitized payload present; elapsed 767.344s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876499 (host 87): exp_voter_modular_consensus_6f0265_0 -- sanitized payload not yet present at review time; elapsed 816.391s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876500 (host 87): exp_voter_modular_consensus_6f0267_0 -- sanitized payload present; elapsed 766.906s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876501 (host 87): exp_voter_modular_consensus_6f0266_0 -- sanitized payload present; elapsed 779.609s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876505 (host 87): exp_voter_modular_consensus_6f026a_0 -- sanitized payload not yet present at review time; elapsed 807.969s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876510 (host 85): exp_voter_modular_consensus_6f0270_0 -- sanitized payload present; elapsed 819.500s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876512 (host 85): exp_voter_modular_consensus_6f0271_0 -- sanitized payload present; elapsed 809.172s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876516 (host 85): exp_voter_modular_consensus_6f0276_0 -- sanitized payload not yet present at review time; elapsed 811.812s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876528 (host 85): exp_voter_modular_consensus_6f027f_0 -- sanitized payload present; elapsed 782.312s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876529 (host 85): exp_voter_modular_consensus_6f0280_0 -- sanitized payload present; elapsed 811.766s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876530 (host 85): exp_voter_modular_consensus_6f0282_0 -- sanitized payload present; elapsed 821.500s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876531 (host 85): exp_voter_modular_consensus_6f0281_0 -- sanitized payload present; elapsed 801.703s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876532 (host 85): exp_voter_modular_consensus_6f0283_0 -- sanitized payload present; elapsed 810.312s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876537 (host 85): exp_voter_modular_consensus_6f0287_0 -- sanitized payload present; elapsed 810.719s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876538 (host 85): exp_voter_modular_consensus_6f0289_0 -- sanitized payload present; elapsed 799.375s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876539 (host 85): exp_voter_modular_consensus_6f028b_0 -- sanitized payload present; elapsed 819.922s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876565 (host 85): exp_voter_modular_consensus_6f02a4_0 -- sanitized payload present; elapsed 808.547s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876566 (host 85): exp_voter_modular_consensus_6f02a6_0 -- sanitized payload present; elapsed 812.312s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876567 (host 85): exp_voter_modular_consensus_6f02a5_0 -- sanitized payload present; elapsed 809.531s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876568 (host 85): exp_voter_modular_consensus_6f02a8_0 -- sanitized payload present; elapsed 809.516s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876569 (host 85): exp_voter_modular_consensus_6f02a7_0 -- sanitized payload present; elapsed 809.531s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876570 (host 85): exp_voter_modular_consensus_6f02aa_0 -- sanitized payload present; elapsed 809.266s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876571 (host 85): exp_voter_modular_consensus_6f02a9_0 -- sanitized payload present; elapsed 809.000s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876579 (host 1): exp_bootstrap_striped_threshold_gpu_ab8062_0 -- sanitized payload present; elapsed 897.308s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876580 (host 85): exp_voter_modular_consensus_6f02b2_0 -- sanitized payload present; elapsed 799.312s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876584 (host 85): exp_voter_modular_consensus_6f02b4_0 -- sanitized payload present; elapsed 801.156s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876586 (host 85): exp_voter_modular_consensus_6f02b6_0 -- sanitized payload present; elapsed 810.344s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876590 (host 85): exp_voter_modular_consensus_6f02bb_0 -- sanitized payload present; elapsed 822.250s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876600 (host 85): exp_voter_modular_consensus_6f02c5_0 -- sanitized payload present; elapsed 811.344s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876601 (host 85): exp_voter_modular_consensus_6f02c7_0 -- sanitized payload present; elapsed 799.297s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876607 (host 85): exp_voter_modular_consensus_6f02cc_0 -- sanitized payload present; elapsed 819.188s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876609 (host 85): exp_voter_modular_consensus_6f02ce_0 -- sanitized payload present; elapsed 821.234s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876619 (host 85): exp_voter_modular_consensus_6f02d6_0 -- sanitized payload present; elapsed 810.969s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876623 (host 85): exp_voter_modular_consensus_6f02da_0 -- sanitized payload present; elapsed 809.969s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876626 (host 85): exp_voter_modular_consensus_6f02dd_0 -- sanitized payload present; elapsed 811.562s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876632 (host 85): exp_voter_modular_consensus_6f02e3_0 -- sanitized payload present; elapsed 820.516s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876635 (host 85): exp_voter_modular_consensus_6f02e4_0 -- sanitized payload present; elapsed 809.750s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876636 (host 85): exp_voter_modular_consensus_6f02e6_0 -- sanitized payload present; elapsed 799.891s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876640 (host 85): exp_voter_modular_consensus_6f02ea_0 -- sanitized payload present; elapsed 811.203s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876642 (host 85): exp_voter_modular_consensus_6f02ec_0 -- sanitized payload present; elapsed 812.609s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876643 (host 85): exp_voter_modular_consensus_6f02ee_0 -- sanitized payload not yet present at review time; elapsed 811.094s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876650 (host 85): exp_voter_modular_consensus_6f02f4_0 -- sanitized payload present; elapsed 819.578s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876651 (host 85): exp_voter_modular_consensus_6f02f3_0 -- sanitized payload present; elapsed 780.516s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876652 (host 85): exp_voter_modular_consensus_6f02f5_0 -- sanitized payload present; elapsed 810.297s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876653 (host 85): exp_voter_modular_consensus_6f02f7_0 -- sanitized payload present; elapsed 780.891s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876657 (host 85): exp_voter_modular_consensus_6f02fb_0 -- sanitized payload present; elapsed 811.297s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876699 (host 269): exp_voter_modular_consensus_6f0321_0 -- sanitized payload present; elapsed 794.156s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876700 (host 269): exp_voter_modular_consensus_6f0322_0 -- sanitized payload present; elapsed 801.641s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876734 (host 269): exp_voter_modular_consensus_6f0342_0 -- sanitized payload present; elapsed 805.891s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876735 (host 269): exp_voter_modular_consensus_6f0343_0 -- sanitized payload present; elapsed 816.656s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876746 (host 87): exp_voter_modular_consensus_6f034d_0 -- sanitized payload present; elapsed 801.188s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876748 (host 269): exp_voter_modular_consensus_6f0350_0 -- sanitized payload present; elapsed 804.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876749 (host 269): exp_voter_modular_consensus_6f0351_0 -- sanitized payload present; elapsed 801.422s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876750 (host 269): exp_voter_modular_consensus_6f0352_0 -- sanitized payload present; elapsed 806.578s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876751 (host 269): exp_voter_modular_consensus_6f0353_0 -- sanitized payload present; elapsed 802.156s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876752 (host 269): exp_voter_modular_consensus_6f0354_0 -- sanitized payload present; elapsed 808.969s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876753 (host 269): exp_voter_modular_consensus_6f0355_0 -- sanitized payload present; elapsed 801.141s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876754 (host 269): exp_voter_modular_consensus_6f0356_0 -- sanitized payload present; elapsed 803.578s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876755 (host 269): exp_voter_modular_consensus_6f0357_0 -- sanitized payload present; elapsed 803.641s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876756 (host 269): exp_voter_modular_consensus_6f0358_0 -- sanitized payload present; elapsed 807.500s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876757 (host 269): exp_voter_modular_consensus_6f0359_0 -- sanitized payload present; elapsed 805.281s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876758 (host 269): exp_voter_modular_consensus_6f035a_0 -- sanitized payload present; elapsed 806.188s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876759 (host 269): exp_voter_modular_consensus_6f035b_0 -- sanitized payload present; elapsed 809.297s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876760 (host 107): exp_voter_modular_consensus_6f035c_0 -- sanitized payload present; elapsed 820.872s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876761 (host 269): exp_voter_modular_consensus_6f035e_0 -- sanitized payload present; elapsed 805.688s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876762 (host 269): exp_voter_modular_consensus_6f035d_0 -- sanitized payload present; elapsed 801.375s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876763 (host 269): exp_voter_modular_consensus_6f035f_0 -- sanitized payload present; elapsed 805.094s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876764 (host 269): exp_voter_modular_consensus_6f0360_0 -- sanitized payload present; elapsed 806.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876765 (host 269): exp_voter_modular_consensus_6f0362_0 -- sanitized payload present; elapsed 803.188s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876766 (host 269): exp_voter_modular_consensus_6f0361_0 -- sanitized payload present; elapsed 805.578s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876767 (host 269): exp_voter_modular_consensus_6f0363_0 -- sanitized payload present; elapsed 802.250s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876768 (host 107): exp_voter_modular_consensus_6f0364_0 -- sanitized payload present; elapsed 822.928s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876769 (host 269): exp_voter_modular_consensus_6f0365_0 -- sanitized payload present; elapsed 823.844s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876770 (host 269): exp_voter_modular_consensus_6f0367_0 -- sanitized payload present; elapsed 802.141s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876771 (host 269): exp_voter_modular_consensus_6f0366_0 -- sanitized payload present; elapsed 805.125s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876772 (host 269): exp_voter_modular_consensus_6f0369_0 -- sanitized payload present; elapsed 804.281s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876773 (host 269): exp_voter_modular_consensus_6f0368_0 -- sanitized payload present; elapsed 802.688s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876774 (host 269): exp_voter_modular_consensus_6f036b_0 -- sanitized payload present; elapsed 809.250s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876775 (host 269): exp_voter_modular_consensus_6f036a_0 -- sanitized payload present; elapsed 806.266s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876776 (host 269): exp_voter_modular_consensus_6f036c_0 -- sanitized payload present; elapsed 803.188s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876777 (host 269): exp_voter_modular_consensus_6f036e_0 -- sanitized payload present; elapsed 803.906s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876778 (host 269): exp_voter_modular_consensus_6f036d_0 -- sanitized payload present; elapsed 805.688s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876779 (host 269): exp_voter_modular_consensus_6f036f_0 -- sanitized payload present; elapsed 804.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876780 (host 269): exp_voter_modular_consensus_6f0370_0 -- sanitized payload present; elapsed 798.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876781 (host 269): exp_voter_modular_consensus_6f0372_0 -- sanitized payload present; elapsed 802.094s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876782 (host 269): exp_voter_modular_consensus_6f0371_0 -- sanitized payload present; elapsed 807.734s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876783 (host 269): exp_voter_modular_consensus_6f0374_0 -- sanitized payload present; elapsed 803.578s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876786 (host 269): exp_voter_modular_consensus_6f0373_0 -- sanitized payload present; elapsed 800.234s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876787 (host 269): exp_voter_modular_consensus_6f0375_0 -- sanitized payload present; elapsed 803.828s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876788 (host 269): exp_voter_modular_consensus_6f0377_0 -- sanitized payload present; elapsed 802.859s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876789 (host 269): exp_voter_modular_consensus_6f0376_0 -- sanitized payload present; elapsed 808.547s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876790 (host 269): exp_voter_modular_consensus_6f0379_0 -- sanitized payload present; elapsed 808.578s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876791 (host 269): exp_voter_modular_consensus_6f0378_0 -- sanitized payload present; elapsed 785.141s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876792 (host 269): exp_voter_modular_consensus_6f037a_0 -- sanitized payload present; elapsed 788.078s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876793 (host 269): exp_voter_modular_consensus_6f037b_0 -- sanitized payload present; elapsed 811.000s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876794 (host 269): exp_voter_modular_consensus_6f037d_0 -- sanitized payload present; elapsed 812.938s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876798 (host 87): exp_voter_modular_consensus_6f0380_0 -- sanitized payload not yet present at review time; elapsed 816.250s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876799 (host 87): exp_voter_modular_consensus_6f0381_0 -- sanitized payload present; elapsed 768.312s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876802 (host 222): exp_voter_modular_consensus_6f0384_0 -- sanitized payload present; elapsed 862.337s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876803 (host 222): exp_voter_modular_consensus_6f0383_0 -- sanitized payload present; elapsed 856.810s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876804 (host 269): exp_voter_modular_consensus_6f0386_0 -- sanitized payload present; elapsed 806.797s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876805 (host 222): exp_voter_modular_consensus_6f0385_0 -- sanitized payload present; elapsed 859.575s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876806 (host 222): exp_voter_modular_consensus_6f0387_0 -- sanitized payload present; elapsed 856.527s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876807 (host 222): exp_voter_modular_consensus_6f0388_0 -- sanitized payload present; elapsed 861.403s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876808 (host 269): exp_voter_modular_consensus_6f0389_0 -- sanitized payload present; elapsed 805.938s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876809 (host 269): exp_voter_modular_consensus_6f038b_0 -- sanitized payload present; elapsed 799.766s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876810 (host 269): exp_voter_modular_consensus_6f038a_0 -- sanitized payload present; elapsed 801.234s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876811 (host 269): exp_voter_modular_consensus_6f038c_0 -- sanitized payload present; elapsed 820.359s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876812 (host 269): exp_voter_modular_consensus_6f038d_0 -- sanitized payload present; elapsed 804.781s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876813 (host 269): exp_voter_modular_consensus_6f038f_0 -- sanitized payload present; elapsed 808.641s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876821 (host 269): exp_voter_modular_consensus_6f0396_0 -- sanitized payload present; elapsed 802.438s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876822 (host 269): exp_voter_modular_consensus_6f0397_0 -- sanitized payload present; elapsed 813.391s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876851 (host 87): exp_voter_modular_consensus_6f03b3_0 -- sanitized payload present; elapsed 775.844s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876853 (host 87): exp_voter_modular_consensus_6f03b5_0 -- sanitized payload not yet present at review time; elapsed 807.203s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876854 (host 87): exp_voter_modular_consensus_6f03b6_0 -- sanitized payload present; elapsed 786.750s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876855 (host 87): exp_voter_modular_consensus_6f03b7_0 -- sanitized payload present; elapsed 769.297s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876856 (host 87): exp_voter_modular_consensus_6f03b8_0 -- sanitized payload not yet present at review time; elapsed 806.812s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876857 (host 87): exp_voter_modular_consensus_6f03b9_0 -- sanitized payload present; elapsed 777.172s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876858 (host 87): exp_voter_modular_consensus_6f03ba_0 -- sanitized payload present; elapsed 775.688s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876859 (host 87): exp_voter_modular_consensus_6f03bb_0 -- sanitized payload present; elapsed 785.938s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876860 (host 87): exp_voter_modular_consensus_6f03bc_0 -- sanitized payload present; elapsed 779.266s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876861 (host 87): exp_voter_modular_consensus_6f03be_0 -- sanitized payload present; elapsed 766.453s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876863 (host 87): exp_voter_modular_consensus_6f03bf_0 -- sanitized payload present; elapsed 768.656s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876864 (host 87): exp_voter_modular_consensus_6f03c0_0 -- sanitized payload present; elapsed 766.375s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876865 (host 87): exp_voter_modular_consensus_6f03c1_0 -- sanitized payload present; elapsed 767.266s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876869 (host 87): exp_voter_modular_consensus_6f03c4_0 -- sanitized payload present; elapsed 828.016s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876873 (host 87): exp_voter_modular_consensus_6f03c8_0 -- sanitized payload present; elapsed 779.750s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876875 (host 87): exp_voter_modular_consensus_6f03cb_0 -- sanitized payload present; elapsed 789.219s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876876 (host 87): exp_voter_modular_consensus_6f03cc_0 -- sanitized payload present; elapsed 820.812s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876878 (host 87): exp_voter_modular_consensus_6f03cd_0 -- sanitized payload present; elapsed 779.547s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876880 (host 87): exp_voter_modular_consensus_6f03cf_0 -- sanitized payload present; elapsed 777.656s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876881 (host 87): exp_voter_modular_consensus_6f03d2_0 -- sanitized payload present; elapsed 778.031s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876882 (host 29): exp_voter_modular_consensus_6f03d1_0 -- sanitized payload present; elapsed 851.816s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876883 (host 269): exp_voter_modular_consensus_6f03d3_0 -- sanitized payload present; elapsed 802.797s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876884 (host 269): exp_voter_modular_consensus_6f03d5_0 -- sanitized payload present; elapsed 805.891s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876885 (host 269): exp_voter_modular_consensus_6f03d4_0 -- sanitized payload present; elapsed 808.172s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876886 (host 269): exp_voter_modular_consensus_6f03d6_0 -- sanitized payload present; elapsed 786.094s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876887 (host 269): exp_voter_modular_consensus_6f03d7_0 -- sanitized payload present; elapsed 818.047s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876888 (host 269): exp_voter_modular_consensus_6f03d8_0 -- sanitized payload present; elapsed 803.656s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876889 (host 269): exp_voter_modular_consensus_6f03d9_0 -- sanitized payload present; elapsed 807.641s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876891 (host 269): exp_voter_modular_consensus_6f03da_0 -- sanitized payload present; elapsed 790.781s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876892 (host 269): exp_voter_modular_consensus_6f03db_0 -- sanitized payload present; elapsed 810.969s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876893 (host 269): exp_voter_modular_consensus_6f03dc_0 -- sanitized payload present; elapsed 792.812s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876894 (host 269): exp_voter_modular_consensus_6f03dd_0 -- sanitized payload present; elapsed 805.891s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876895 (host 269): exp_voter_modular_consensus_6f03de_0 -- sanitized payload present; elapsed 789.766s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876896 (host 269): exp_voter_modular_consensus_6f03df_0 -- sanitized payload present; elapsed 794.219s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876898 (host 269): exp_voter_modular_consensus_6f03e0_0 -- sanitized payload present; elapsed 814.875s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876900 (host 87): exp_voter_modular_consensus_6f03e2_0 -- sanitized payload present; elapsed 767.797s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876901 (host 87): exp_voter_modular_consensus_6f03e1_0 -- sanitized payload present; elapsed 769.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876903 (host 87): exp_voter_modular_consensus_6f03e3_0 -- sanitized payload not yet present at review time; elapsed 817.391s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876904 (host 87): exp_voter_modular_consensus_6f03e5_0 -- sanitized payload present; elapsed 789.844s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876906 (host 87): exp_voter_modular_consensus_6f03e6_0 -- sanitized payload present; elapsed 768.203s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876909 (host 87): exp_voter_modular_consensus_6f03ea_0 -- sanitized payload present; elapsed 766.109s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876911 (host 87): exp_voter_modular_consensus_6f03ec_0 -- sanitized payload present; elapsed 788.438s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876917 (host 87): exp_voter_modular_consensus_6f03f2_0 -- sanitized payload not yet present at review time; elapsed 818.891s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876918 (host 87): exp_voter_modular_consensus_6f03f4_0 -- sanitized payload present; elapsed 768.531s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876920 (host 87): exp_voter_modular_consensus_6f03f5_0 -- sanitized payload present; elapsed 778.000s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876922 (host 87): exp_voter_modular_consensus_6f03f7_0 -- sanitized payload present; elapsed 769.156s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876925 (host 87): exp_voter_modular_consensus_6f03fa_0 -- sanitized payload not yet present at review time; elapsed 807.344s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876926 (host 87): exp_voter_modular_consensus_6f03fb_0 -- sanitized payload present; elapsed 765.328s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876929 (host 87): exp_voter_modular_consensus_6f03fd_0 -- sanitized payload present; elapsed 792.125s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876931 (host 87): exp_voter_modular_consensus_6f03fe_0 -- sanitized payload present; elapsed 769.203s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876932 (host 87): exp_voter_modular_consensus_6f03ff_0 -- sanitized payload not yet present at review time; elapsed 746.266s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876933 (host 87): exp_voter_modular_consensus_6f0400_0 -- sanitized payload present; elapsed 776.391s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876934 (host 29): exp_voter_modular_consensus_6f0402_0 -- sanitized payload present; elapsed 860.622s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876935 (host 29): exp_voter_modular_consensus_6f0401_0 -- sanitized payload present; elapsed 851.884s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876936 (host 29): exp_voter_modular_consensus_6f0403_0 -- sanitized payload present; elapsed 851.884s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876937 (host 29): exp_voter_modular_consensus_6f0404_0 -- sanitized payload present; elapsed 851.816s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876938 (host 29): exp_voter_modular_consensus_6f0406_0 -- sanitized payload present; elapsed 851.884s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876939 (host 29): exp_voter_modular_consensus_6f0405_0 -- sanitized payload present; elapsed 851.816s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876940 (host 29): exp_voter_modular_consensus_6f0408_0 -- sanitized payload present; elapsed 851.884s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876941 (host 29): exp_voter_modular_consensus_6f0407_0 -- sanitized payload present; elapsed 860.622s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876942 (host 29): exp_voter_modular_consensus_6f0409_0 -- sanitized payload present; elapsed 869.899s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876943 (host 29): exp_voter_modular_consensus_6f040b_0 -- sanitized payload present; elapsed 852.823s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876945 (host 29): exp_voter_modular_consensus_6f040a_0 -- sanitized payload present; elapsed 860.622s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876946 (host 29): exp_voter_modular_consensus_6f040d_0 -- sanitized payload present; elapsed 851.884s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876947 (host 29): exp_voter_modular_consensus_6f040c_0 -- sanitized payload present; elapsed 863.514s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876948 (host 29): exp_voter_modular_consensus_6f040f_0 -- sanitized payload present; elapsed 851.816s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876949 (host 29): exp_voter_modular_consensus_6f040e_0 -- sanitized payload present; elapsed 859.619s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876950 (host 29): exp_voter_modular_consensus_6f0411_0 -- sanitized payload present; elapsed 866.499s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876951 (host 29): exp_voter_modular_consensus_6f0410_0 -- sanitized payload present; elapsed 865.494s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876952 (host 29): exp_voter_modular_consensus_6f0412_0 -- sanitized payload present; elapsed 865.494s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876953 (host 29): exp_voter_modular_consensus_6f0413_0 -- sanitized payload present; elapsed 851.884s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876954 (host 29): exp_voter_modular_consensus_6f0414_0 -- sanitized payload present; elapsed 859.619s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876955 (host 222): exp_voter_modular_consensus_6f0415_0 -- sanitized payload present; elapsed 849.833s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876956 (host 222): exp_voter_modular_consensus_6f0416_0 -- sanitized payload not yet present at review time; elapsed 842.616s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876957 (host 222): exp_voter_modular_consensus_6f0417_0 -- sanitized payload present; elapsed 860.860s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876959 (host 29): exp_voter_modular_consensus_6f0419_0 -- sanitized payload present; elapsed 859.619s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876960 (host 29): exp_voter_modular_consensus_6f041a_0 -- sanitized payload present; elapsed 851.816s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876961 (host 29): exp_voter_modular_consensus_6f041b_0 -- sanitized payload present; elapsed 866.499s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876962 (host 87): exp_voter_modular_consensus_6f041d_0 -- sanitized payload present; elapsed 788.891s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876964 (host 222): exp_voter_modular_consensus_6f041f_0 -- sanitized payload present; elapsed 858.025s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876965 (host 222): exp_voter_modular_consensus_6f041e_0 -- sanitized payload present; elapsed 859.575s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876968 (host 222): exp_voter_modular_consensus_6f0422_0 -- sanitized payload present; elapsed 857.508s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876970 (host 222): exp_voter_modular_consensus_6f0424_0 -- sanitized payload present; elapsed 859.805s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876971 (host 222): exp_voter_modular_consensus_6f0425_0 -- sanitized payload present; elapsed 856.204s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876972 (host 222): exp_voter_modular_consensus_6f0426_0 -- sanitized payload not yet present at review time; elapsed 847.012s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876974 (host 222): exp_voter_modular_consensus_6f0427_0 -- sanitized payload present; elapsed 871.541s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876975 (host 222): exp_voter_modular_consensus_6f042a_0 -- sanitized payload not yet present at review time; elapsed 856.756s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876977 (host 222): exp_voter_modular_consensus_6f042b_0 -- sanitized payload present; elapsed 858.862s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876978 (host 222): exp_voter_modular_consensus_6f042c_0 -- sanitized payload present; elapsed 858.224s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876981 (host 222): exp_voter_modular_consensus_6f042e_0 -- sanitized payload present; elapsed 849.611s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876982 (host 222): exp_voter_modular_consensus_6f0431_0 -- sanitized payload present; elapsed 841.357s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876983 (host 222): exp_voter_modular_consensus_6f0430_0 -- sanitized payload present; elapsed 849.773s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876984 (host 222): exp_voter_modular_consensus_6f0433_0 -- sanitized payload present; elapsed 866.646s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876987 (host 222): exp_voter_modular_consensus_6f0435_0 -- sanitized payload present; elapsed 857.524s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876988 (host 222): exp_voter_modular_consensus_6f0436_0 -- sanitized payload not yet present at review time; elapsed 834.562s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1876989 (host 87): exp_voter_modular_consensus_6f0437_0 -- sanitized payload present; elapsed 777.828s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1876991 (host 87): exp_voter_modular_consensus_6f0439_0 -- sanitized payload present; elapsed 768.250s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876992 (host 87): exp_voter_modular_consensus_6f043a_0 -- sanitized payload present; elapsed 777.094s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876993 (host 87): exp_voter_modular_consensus_6f043b_0 -- sanitized payload present; elapsed 777.953s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876994 (host 87): exp_voter_modular_consensus_6f043c_0 -- sanitized payload present; elapsed 777.703s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876995 (host 87): exp_voter_modular_consensus_6f043e_0 -- sanitized payload present; elapsed 779.328s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876996 (host 87): exp_voter_modular_consensus_6f043d_0 -- sanitized payload present; elapsed 778.594s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876997 (host 87): exp_voter_modular_consensus_6f043f_0 -- sanitized payload present; elapsed 819.109s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876998 (host 87): exp_voter_modular_consensus_6f0440_0 -- sanitized payload present; elapsed 778.016s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1876999 (host 87): exp_voter_modular_consensus_6f0441_0 -- sanitized payload present; elapsed 767.031s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877000 (host 87): exp_voter_modular_consensus_6f0443_0 -- sanitized payload present; elapsed 776.500s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1877001 (host 87): exp_voter_modular_consensus_6f0442_0 -- sanitized payload present; elapsed 789.047s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877003 (host 87): exp_voter_modular_consensus_6f0444_0 -- sanitized payload present; elapsed 786.969s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877004 (host 87): exp_voter_modular_consensus_6f0446_0 -- sanitized payload present; elapsed 766.234s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877005 (host 87): exp_voter_modular_consensus_6f0447_0 -- sanitized payload present; elapsed 766.875s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877006 (host 87): exp_voter_modular_consensus_6f0448_0 -- sanitized payload present; elapsed 769.625s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877007 (host 1): exp_voter_modular_consensus_6f0449_0 -- sanitized payload present; elapsed 848.976s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877008 (host 1): exp_voter_modular_consensus_6f044a_0 -- sanitized payload present; elapsed 820.309s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877009 (host 1): exp_voter_modular_consensus_6f044b_0 -- sanitized payload present; elapsed 844.085s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877010 (host 1): exp_voter_modular_consensus_6f044c_0 -- sanitized payload present; elapsed 842.225s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877011 (host 1): exp_voter_modular_consensus_6f044e_0 -- sanitized payload present; elapsed 849.973s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877012 (host 1): exp_voter_modular_consensus_6f044d_0 -- sanitized payload present; elapsed 858.300s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877013 (host 1): exp_voter_modular_consensus_6f044f_0 -- sanitized payload present; elapsed 841.585s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877014 (host 1): exp_voter_modular_consensus_6f0450_0 -- sanitized payload present; elapsed 847.998s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877015 (host 1): exp_voter_modular_consensus_6f0451_0 -- sanitized payload present; elapsed 845.717s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877016 (host 1): exp_voter_modular_consensus_6f0453_0 -- sanitized payload present; elapsed 830.153s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877017 (host 1): exp_voter_modular_consensus_6f0452_0 -- sanitized payload present; elapsed 830.339s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877018 (host 1): exp_voter_modular_consensus_6f0454_0 -- sanitized payload present; elapsed 851.685s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877020 (host 87): exp_voter_modular_consensus_6f0456_0 -- sanitized payload present; elapsed 776.422s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1877021 (host 87): exp_voter_modular_consensus_6f0457_0 -- sanitized payload present; elapsed 777.062s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1877022 (host 87): exp_voter_modular_consensus_6f0459_0 -- sanitized payload not yet present at review time; elapsed 806.969s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877023 (host 87): exp_voter_modular_consensus_6f0458_0 -- sanitized payload present; elapsed 777.531s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1877024 (host 87): exp_voter_modular_consensus_6f045a_0 -- sanitized payload present; elapsed 787.938s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877025 (host 87): exp_voter_modular_consensus_6f045b_0 -- sanitized payload present; elapsed 827.625s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877026 (host 87): exp_voter_modular_consensus_6f045c_0 -- sanitized payload present; elapsed 777.500s within family norms; no duplicate/speed flags -> 30.49 credit
+result 1877060 (host 345): exp_voter_modular_consensus_6f047d_0 -- sanitized payload not yet present at review time; elapsed 843.246s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877061 (host 345): exp_voter_modular_consensus_6f047c_0 -- sanitized payload not yet present at review time; elapsed 835.800s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877066 (host 345): exp_voter_modular_consensus_6f0482_0 -- sanitized payload not yet present at review time; elapsed 843.239s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877074 (host 345): exp_voter_modular_consensus_6f048a_0 -- sanitized payload not yet present at review time; elapsed 840.247s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877098 (host 358): exp_voter_modular_consensus_6f04a0_0 -- sanitized payload present; elapsed 826.913s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877100 (host 358): exp_voter_modular_consensus_6f04a2_0 -- sanitized payload present; elapsed 824.149s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877101 (host 358): exp_voter_modular_consensus_6f04a3_0 -- sanitized payload present; elapsed 843.261s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877102 (host 358): exp_voter_modular_consensus_6f04a4_0 -- sanitized payload present; elapsed 821.931s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877104 (host 358): exp_voter_modular_consensus_6f04a6_0 -- sanitized payload present; elapsed 828.800s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877105 (host 358): exp_voter_modular_consensus_6f04a5_0 -- sanitized payload present; elapsed 819.742s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877106 (host 358): exp_voter_modular_consensus_6f04a7_0 -- sanitized payload present; elapsed 827.801s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877107 (host 358): exp_voter_modular_consensus_6f04a8_0 -- sanitized payload present; elapsed 832.216s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877108 (host 358): exp_voter_modular_consensus_6f04aa_0 -- sanitized payload present; elapsed 840.408s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877109 (host 358): exp_voter_modular_consensus_6f04a9_0 -- sanitized payload present; elapsed 828.215s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877156 (host 358): exp_voter_modular_consensus_6f04d7_0 -- sanitized payload present; elapsed 835.917s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877157 (host 345): exp_voter_modular_consensus_6f04d9_0 -- sanitized payload not yet present at review time; elapsed 821.566s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877240 (host 358): exp_voter_modular_consensus_6f0527_0 -- sanitized payload present; elapsed 826.441s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877298 (host 345): exp_voter_modular_consensus_6f055c_0 -- sanitized payload not yet present at review time; elapsed 848.151s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877299 (host 345): exp_voter_modular_consensus_6f055b_0 -- sanitized payload not yet present at review time; elapsed 859.707s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877300 (host 345): exp_voter_modular_consensus_6f055e_0 -- sanitized payload present; elapsed 827.695s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877301 (host 345): exp_voter_modular_consensus_6f055d_0 -- sanitized payload not yet present at review time; elapsed 845.547s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877302 (host 345): exp_voter_modular_consensus_6f0560_0 -- sanitized payload present; elapsed 840.607s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877303 (host 345): exp_voter_modular_consensus_6f055f_0 -- sanitized payload not yet present at review time; elapsed 823.309s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877304 (host 345): exp_voter_modular_consensus_6f0562_0 -- sanitized payload not yet present at review time; elapsed 840.459s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877305 (host 345): exp_voter_modular_consensus_6f0561_0 -- sanitized payload not yet present at review time; elapsed 822.926s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877306 (host 345): exp_voter_modular_consensus_6f0563_0 -- sanitized payload present; elapsed 840.607s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877307 (host 345): exp_voter_modular_consensus_6f0565_0 -- sanitized payload not yet present at review time; elapsed 820.224s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877308 (host 345): exp_voter_modular_consensus_6f0564_0 -- sanitized payload not yet present at review time; elapsed 828.306s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877310 (host 345): exp_voter_modular_consensus_6f0567_0 -- sanitized payload not yet present at review time; elapsed 819.921s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877312 (host 345): exp_voter_modular_consensus_6f0569_0 -- sanitized payload present; elapsed 837.421s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877313 (host 345): exp_voter_modular_consensus_6f056a_0 -- sanitized payload not yet present at review time; elapsed 847.714s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877314 (host 345): exp_voter_modular_consensus_6f056b_0 -- sanitized payload not yet present at review time; elapsed 822.130s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877315 (host 345): exp_voter_modular_consensus_6f056c_0 -- sanitized payload not yet present at review time; elapsed 845.642s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877316 (host 345): exp_voter_modular_consensus_6f056e_0 -- sanitized payload not yet present at review time; elapsed 825.045s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877317 (host 345): exp_voter_modular_consensus_6f056d_0 -- sanitized payload not yet present at review time; elapsed 820.016s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877318 (host 345): exp_voter_modular_consensus_6f056f_0 -- sanitized payload not yet present at review time; elapsed 840.403s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877319 (host 345): exp_voter_modular_consensus_6f0570_0 -- sanitized payload not yet present at review time; elapsed 821.266s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877322 (host 345): exp_voter_modular_consensus_6f0574_0 -- sanitized payload not yet present at review time; elapsed 840.673s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877323 (host 345): exp_voter_modular_consensus_6f0573_0 -- sanitized payload present; elapsed 845.228s within family norms; no duplicate/speed flags -> 19.16 credit
+result 1877331 (host 345): exp_voter_modular_consensus_6f057a_0 -- sanitized payload not yet present at review time; elapsed 827.826s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877332 (host 345): exp_voter_modular_consensus_6f057c_0 -- sanitized payload not yet present at review time; elapsed 817.191s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877333 (host 345): exp_voter_modular_consensus_6f057d_0 -- sanitized payload not yet present at review time; elapsed 845.228s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877334 (host 345): exp_voter_modular_consensus_6f057e_0 -- sanitized payload not yet present at review time; elapsed 847.381s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877335 (host 345): exp_voter_modular_consensus_6f057f_0 -- sanitized payload not yet present at review time; elapsed 848.823s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877336 (host 345): exp_voter_modular_consensus_6f0580_0 -- sanitized payload not yet present at review time; elapsed 842.964s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877337 (host 345): exp_voter_modular_consensus_6f0582_0 -- sanitized payload not yet present at review time; elapsed 821.132s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877338 (host 345): exp_voter_modular_consensus_6f0581_0 -- sanitized payload not yet present at review time; elapsed 837.421s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877339 (host 345): exp_voter_modular_consensus_6f0583_0 -- sanitized payload not yet present at review time; elapsed 835.118s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877340 (host 345): exp_voter_modular_consensus_6f0584_0 -- sanitized payload not yet present at review time; elapsed 825.012s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877341 (host 345): exp_voter_modular_consensus_6f0585_0 -- sanitized payload not yet present at review time; elapsed 842.410s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877342 (host 345): exp_voter_modular_consensus_6f0586_0 -- sanitized payload not yet present at review time; elapsed 822.147s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877343 (host 345): exp_voter_modular_consensus_6f0587_0 -- sanitized payload not yet present at review time; elapsed 826.278s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877364 (host 1): exp_voter_modular_consensus_6f059a_0 -- sanitized payload not yet present at review time; elapsed 831.510s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877367 (host 1): exp_voter_modular_consensus_6f059e_0 -- sanitized payload not yet present at review time; elapsed 826.292s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877370 (host 1): exp_voter_modular_consensus_6f05a0_0 -- sanitized payload not yet present at review time; elapsed 830.512s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877372 (host 1): exp_voter_modular_consensus_6f05a3_0 -- sanitized payload not yet present at review time; elapsed 831.842s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877419 (host 353): exp_bootstrap_striped_threshold_gpu_c5ba6e_0 -- sanitized payload not yet present at review time; elapsed 857.106s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877492 (host 269): exp_voter_modular_consensus_6f0612_0 -- sanitized payload not yet present at review time; elapsed 806.141s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877542 (host 269): exp_voter_modular_consensus_6f063d_0 -- sanitized payload not yet present at review time; elapsed 813.062s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877564 (host 271): exp_bootstrap_striped_threshold_gpu_614f24_0 -- sanitized payload not yet present at review time; elapsed 853.113s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877647 (host 272): exp_bootstrap_striped_threshold_gpu_05572c_0 -- sanitized payload not yet present at review time; elapsed 856.548s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877666 (host 269): exp_voter_modular_consensus_6f06b7_0 -- sanitized payload not yet present at review time; elapsed 794.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877677 (host 269): exp_voter_modular_consensus_6f06c1_0 -- sanitized payload not yet present at review time; elapsed 807.125s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877678 (host 269): exp_voter_modular_consensus_6f06c2_0 -- sanitized payload not yet present at review time; elapsed 808.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877679 (host 269): exp_voter_modular_consensus_6f06c4_0 -- sanitized payload not yet present at review time; elapsed 807.828s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877680 (host 269): exp_voter_modular_consensus_6f06c3_0 -- sanitized payload not yet present at review time; elapsed 804.297s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877683 (host 269): exp_voter_modular_consensus_6f06c6_0 -- sanitized payload not yet present at review time; elapsed 801.234s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877684 (host 269): exp_voter_modular_consensus_6f06c8_0 -- sanitized payload not yet present at review time; elapsed 808.266s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877685 (host 269): exp_voter_modular_consensus_6f06c9_0 -- sanitized payload not yet present at review time; elapsed 816.031s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877686 (host 269): exp_voter_modular_consensus_6f06ca_0 -- sanitized payload not yet present at review time; elapsed 802.203s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877687 (host 269): exp_voter_modular_consensus_6f06cb_0 -- sanitized payload not yet present at review time; elapsed 803.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877688 (host 269): exp_voter_modular_consensus_6f06cc_0 -- sanitized payload not yet present at review time; elapsed 804.281s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877689 (host 269): exp_voter_modular_consensus_6f06cd_0 -- sanitized payload not yet present at review time; elapsed 804.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877690 (host 269): exp_voter_modular_consensus_6f06ce_0 -- sanitized payload not yet present at review time; elapsed 797.688s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877691 (host 269): exp_voter_modular_consensus_6f06cf_0 -- sanitized payload not yet present at review time; elapsed 798.391s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877736 (host 269): exp_voter_modular_consensus_6f06f9_0 -- sanitized payload not yet present at review time; elapsed 807.594s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877737 (host 269): exp_voter_modular_consensus_6f06fb_0 -- sanitized payload not yet present at review time; elapsed 786.547s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877738 (host 269): exp_voter_modular_consensus_6f06fc_0 -- sanitized payload not yet present at review time; elapsed 815.359s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877739 (host 269): exp_voter_modular_consensus_6f06fd_0 -- sanitized payload not yet present at review time; elapsed 816.078s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877740 (host 269): exp_voter_modular_consensus_6f06fe_0 -- sanitized payload not yet present at review time; elapsed 812.469s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877741 (host 269): exp_voter_modular_consensus_6f06ff_0 -- sanitized payload not yet present at review time; elapsed 807.859s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877742 (host 269): exp_voter_modular_consensus_6f0701_0 -- sanitized payload not yet present at review time; elapsed 814.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877743 (host 269): exp_voter_modular_consensus_6f0700_0 -- sanitized payload not yet present at review time; elapsed 794.953s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877744 (host 269): exp_voter_modular_consensus_6f0703_0 -- sanitized payload not yet present at review time; elapsed 798.062s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877745 (host 269): exp_voter_modular_consensus_6f0702_0 -- sanitized payload not yet present at review time; elapsed 822.797s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877746 (host 269): exp_voter_modular_consensus_6f0705_0 -- sanitized payload not yet present at review time; elapsed 813.812s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877747 (host 269): exp_voter_modular_consensus_6f0704_0 -- sanitized payload not yet present at review time; elapsed 814.562s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877748 (host 269): exp_voter_modular_consensus_6f0706_0 -- sanitized payload not yet present at review time; elapsed 799.969s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877749 (host 269): exp_voter_modular_consensus_6f0707_0 -- sanitized payload not yet present at review time; elapsed 819.125s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877750 (host 269): exp_voter_modular_consensus_6f0708_0 -- sanitized payload not yet present at review time; elapsed 790.047s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877751 (host 269): exp_voter_modular_consensus_6f0709_0 -- sanitized payload not yet present at review time; elapsed 798.422s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877752 (host 269): exp_voter_modular_consensus_6f070a_0 -- sanitized payload not yet present at review time; elapsed 812.844s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877753 (host 269): exp_voter_modular_consensus_6f070b_0 -- sanitized payload not yet present at review time; elapsed 813.250s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877754 (host 269): exp_voter_modular_consensus_6f070c_0 -- sanitized payload not yet present at review time; elapsed 815.531s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877755 (host 269): exp_voter_modular_consensus_6f070e_0 -- sanitized payload not yet present at review time; elapsed 796.156s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877758 (host 269): exp_voter_modular_consensus_6f0710_0 -- sanitized payload not yet present at review time; elapsed 809.328s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877782 (host 269): exp_voter_modular_consensus_6f0727_0 -- sanitized payload not yet present at review time; elapsed 812.234s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877783 (host 269): exp_voter_modular_consensus_6f0728_0 -- sanitized payload not yet present at review time; elapsed 795.594s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877784 (host 269): exp_voter_modular_consensus_6f0729_0 -- sanitized payload not yet present at review time; elapsed 815.281s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877785 (host 269): exp_voter_modular_consensus_6f072a_0 -- sanitized payload not yet present at review time; elapsed 811.750s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877786 (host 269): exp_voter_modular_consensus_6f072b_0 -- sanitized payload not yet present at review time; elapsed 814.344s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877793 (host 353): exp_bootstrap_striped_threshold_gpu_642756_0 -- sanitized payload not yet present at review time; elapsed 860.282s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1877802 (host 269): exp_voter_modular_consensus_6f073b_0 -- sanitized payload not yet present at review time; elapsed 806.406s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877803 (host 269): exp_voter_modular_consensus_6f073a_0 -- sanitized payload not yet present at review time; elapsed 816.078s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877804 (host 269): exp_voter_modular_consensus_6f073c_0 -- sanitized payload not yet present at review time; elapsed 806.203s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877805 (host 269): exp_voter_modular_consensus_6f073d_0 -- sanitized payload not yet present at review time; elapsed 787.531s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877806 (host 269): exp_voter_modular_consensus_6f073e_0 -- sanitized payload not yet present at review time; elapsed 785.547s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877807 (host 269): exp_voter_modular_consensus_6f073f_0 -- sanitized payload not yet present at review time; elapsed 809.688s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877808 (host 269): exp_voter_modular_consensus_6f0740_0 -- sanitized payload not yet present at review time; elapsed 813.625s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877809 (host 269): exp_voter_modular_consensus_6f0742_0 -- sanitized payload not yet present at review time; elapsed 813.078s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877810 (host 269): exp_voter_modular_consensus_6f0741_0 -- sanitized payload not yet present at review time; elapsed 797.625s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877831 (host 269): exp_voter_modular_consensus_6f0756_0 -- sanitized payload not yet present at review time; elapsed 801.406s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877832 (host 269): exp_voter_modular_consensus_6f0755_0 -- sanitized payload not yet present at review time; elapsed 810.219s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877833 (host 269): exp_voter_modular_consensus_6f0757_0 -- sanitized payload not yet present at review time; elapsed 803.266s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877834 (host 269): exp_voter_modular_consensus_6f0758_0 -- sanitized payload not yet present at review time; elapsed 800.484s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877835 (host 269): exp_voter_modular_consensus_6f075a_0 -- sanitized payload not yet present at review time; elapsed 808.578s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877836 (host 272): exp_bootstrap_striped_threshold_gpu_c7d92f_0 -- sanitized payload not yet present at review time; elapsed 856.944s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877837 (host 269): exp_voter_modular_consensus_6f0759_0 -- sanitized payload not yet present at review time; elapsed 798.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1877838 (host 269): exp_voter_modular_consensus_6f075b_0 -- sanitized payload not yet present at review time; elapsed 796.641s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878029 (host 269): exp_voter_modular_consensus_6f0810_0 -- sanitized payload not yet present at review time; elapsed 806.391s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878030 (host 269): exp_voter_modular_consensus_6f080f_0 -- sanitized payload not yet present at review time; elapsed 811.609s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878031 (host 269): exp_voter_modular_consensus_6f0811_0 -- sanitized payload not yet present at review time; elapsed 802.938s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878032 (host 269): exp_voter_modular_consensus_6f0813_0 -- sanitized payload not yet present at review time; elapsed 802.844s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878033 (host 269): exp_voter_modular_consensus_6f0812_0 -- sanitized payload not yet present at review time; elapsed 801.641s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878034 (host 269): exp_voter_modular_consensus_6f0814_0 -- sanitized payload not yet present at review time; elapsed 808.406s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878035 (host 269): exp_voter_modular_consensus_6f0815_0 -- sanitized payload not yet present at review time; elapsed 811.234s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878036 (host 269): exp_voter_modular_consensus_6f0817_0 -- sanitized payload not yet present at review time; elapsed 809.344s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878037 (host 269): exp_voter_modular_consensus_6f0816_0 -- sanitized payload not yet present at review time; elapsed 809.906s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878038 (host 269): exp_voter_modular_consensus_6f0818_0 -- sanitized payload not yet present at review time; elapsed 806.172s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878118 (host 113): exp_voter_modular_consensus_6f0863_0 -- sanitized payload not yet present at review time; elapsed 806.891s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878119 (host 113): exp_voter_modular_consensus_6f0864_0 -- sanitized payload not yet present at review time; elapsed 811.984s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878121 (host 113): exp_voter_modular_consensus_6f0865_0 -- sanitized payload not yet present at review time; elapsed 806.609s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878124 (host 113): exp_voter_modular_consensus_6f0869_0 -- sanitized payload not yet present at review time; elapsed 811.844s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878125 (host 113): exp_voter_modular_consensus_6f086b_0 -- sanitized payload not yet present at review time; elapsed 810.281s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878127 (host 113): exp_voter_modular_consensus_6f086d_0 -- sanitized payload not yet present at review time; elapsed 799.844s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878131 (host 113): exp_voter_modular_consensus_6f0871_0 -- sanitized payload not yet present at review time; elapsed 816.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878133 (host 113): exp_voter_modular_consensus_6f0872_0 -- sanitized payload not yet present at review time; elapsed 812.531s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878136 (host 269): exp_voter_modular_consensus_6f0875_0 -- sanitized payload not yet present at review time; elapsed 795.516s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878139 (host 269): exp_voter_modular_consensus_6f0878_0 -- sanitized payload not yet present at review time; elapsed 810.312s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878140 (host 269): exp_voter_modular_consensus_6f0879_0 -- sanitized payload not yet present at review time; elapsed 805.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878141 (host 269): exp_voter_modular_consensus_6f087b_0 -- sanitized payload not yet present at review time; elapsed 805.062s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878142 (host 269): exp_voter_modular_consensus_6f087a_0 -- sanitized payload not yet present at review time; elapsed 808.844s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878143 (host 1): exp_voter_modular_consensus_6f087c_0 -- sanitized payload not yet present at review time; elapsed 824.229s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878144 (host 1): exp_voter_modular_consensus_6f087d_0 -- sanitized payload not yet present at review time; elapsed 846.115s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878145 (host 1): exp_voter_modular_consensus_6f087e_0 -- sanitized payload not yet present at review time; elapsed 822.353s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878146 (host 1): exp_voter_modular_consensus_6f0880_0 -- sanitized payload not yet present at review time; elapsed 826.731s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878147 (host 1): exp_voter_modular_consensus_6f087f_0 -- sanitized payload not yet present at review time; elapsed 853.650s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878148 (host 1): exp_voter_modular_consensus_6f0881_0 -- sanitized payload not yet present at review time; elapsed 853.541s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878149 (host 1): exp_voter_modular_consensus_6f0882_0 -- sanitized payload not yet present at review time; elapsed 843.798s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878152 (host 1): exp_voter_modular_consensus_6f0884_0 -- sanitized payload not yet present at review time; elapsed 837.807s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878153 (host 1): exp_voter_modular_consensus_6f0887_0 -- sanitized payload not yet present at review time; elapsed 831.845s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878154 (host 1): exp_voter_modular_consensus_6f0886_0 -- sanitized payload not yet present at review time; elapsed 846.328s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878155 (host 1): exp_voter_modular_consensus_6f0888_0 -- sanitized payload not yet present at review time; elapsed 832.285s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878158 (host 1): exp_voter_modular_consensus_6f088b_0 -- sanitized payload not yet present at review time; elapsed 834.191s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878159 (host 1): exp_voter_modular_consensus_6f088c_0 -- sanitized payload not yet present at review time; elapsed 836.310s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878170 (host 1): exp_voter_modular_consensus_6f0897_0 -- sanitized payload not yet present at review time; elapsed 830.400s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878171 (host 1): exp_voter_modular_consensus_6f0896_0 -- sanitized payload not yet present at review time; elapsed 840.403s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878178 (host 269): exp_voter_modular_consensus_6f089d_0 -- sanitized payload not yet present at review time; elapsed 804.453s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878179 (host 269): exp_voter_modular_consensus_6f089f_0 -- sanitized payload not yet present at review time; elapsed 804.938s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878180 (host 269): exp_voter_modular_consensus_6f08a0_0 -- sanitized payload not yet present at review time; elapsed 809.031s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878181 (host 269): exp_voter_modular_consensus_6f08a1_0 -- sanitized payload not yet present at review time; elapsed 819.500s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878182 (host 269): exp_voter_modular_consensus_6f08a2_0 -- sanitized payload not yet present at review time; elapsed 809.031s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878183 (host 269): exp_voter_modular_consensus_6f08a3_0 -- sanitized payload not yet present at review time; elapsed 810.734s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878184 (host 269): exp_voter_modular_consensus_6f08a4_0 -- sanitized payload not yet present at review time; elapsed 814.031s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878185 (host 269): exp_voter_modular_consensus_6f08a5_0 -- sanitized payload not yet present at review time; elapsed 820.812s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878198 (host 271): exp_bootstrap_striped_threshold_gpu_56cb02_0 -- sanitized payload not yet present at review time; elapsed 853.167s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878227 (host 1): exp_voter_modular_consensus_6f08cd_0 -- sanitized payload not yet present at review time; elapsed 836.873s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878230 (host 269): exp_voter_modular_consensus_6f08cf_0 -- sanitized payload not yet present at review time; elapsed 807.078s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878231 (host 269): exp_voter_modular_consensus_6f08d0_0 -- sanitized payload not yet present at review time; elapsed 804.969s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878232 (host 269): exp_voter_modular_consensus_6f08d2_0 -- sanitized payload not yet present at review time; elapsed 814.344s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878233 (host 269): exp_voter_modular_consensus_6f08d1_0 -- sanitized payload not yet present at review time; elapsed 816.812s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878234 (host 269): exp_voter_modular_consensus_6f08d4_0 -- sanitized payload not yet present at review time; elapsed 802.859s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878235 (host 269): exp_voter_modular_consensus_6f08d3_0 -- sanitized payload not yet present at review time; elapsed 801.125s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878236 (host 269): exp_voter_modular_consensus_6f08d5_0 -- sanitized payload not yet present at review time; elapsed 809.172s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878237 (host 269): exp_voter_modular_consensus_6f08d7_0 -- sanitized payload not yet present at review time; elapsed 809.125s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878239 (host 269): exp_voter_modular_consensus_6f08d8_0 -- sanitized payload not yet present at review time; elapsed 809.359s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878241 (host 269): exp_voter_modular_consensus_6f08d9_0 -- sanitized payload not yet present at review time; elapsed 808.781s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878243 (host 269): exp_voter_modular_consensus_6f08dc_0 -- sanitized payload not yet present at review time; elapsed 807.688s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878247 (host 271): exp_bootstrap_striped_threshold_gpu_62e995_0 -- sanitized payload not yet present at review time; elapsed 852.921s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878249 (host 269): exp_voter_modular_consensus_6f08df_0 -- sanitized payload not yet present at review time; elapsed 804.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878250 (host 269): exp_voter_modular_consensus_6f08e1_0 -- sanitized payload not yet present at review time; elapsed 810.562s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878251 (host 269): exp_voter_modular_consensus_6f08e3_0 -- sanitized payload not yet present at review time; elapsed 805.281s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878256 (host 269): exp_voter_modular_consensus_6f08e8_0 -- sanitized payload not yet present at review time; elapsed 814.719s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878259 (host 269): exp_voter_modular_consensus_6f08ea_0 -- sanitized payload not yet present at review time; elapsed 803.531s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878260 (host 269): exp_voter_modular_consensus_6f08eb_0 -- sanitized payload not yet present at review time; elapsed 807.000s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878261 (host 353): exp_bootstrap_striped_threshold_gpu_19f605_0 -- sanitized payload not yet present at review time; elapsed 857.245s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878262 (host 269): exp_voter_modular_consensus_6f08ec_0 -- sanitized payload not yet present at review time; elapsed 807.953s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878263 (host 269): exp_voter_modular_consensus_6f08ed_0 -- sanitized payload not yet present at review time; elapsed 807.688s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878264 (host 269): exp_voter_modular_consensus_6f08ef_0 -- sanitized payload not yet present at review time; elapsed 811.844s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878265 (host 269): exp_voter_modular_consensus_6f08ee_0 -- sanitized payload not yet present at review time; elapsed 810.891s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878268 (host 269): exp_voter_modular_consensus_6f08f1_0 -- sanitized payload not yet present at review time; elapsed 812.375s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878271 (host 269): exp_voter_modular_consensus_6f08f5_0 -- sanitized payload not yet present at review time; elapsed 808.172s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878274 (host 269): exp_voter_modular_consensus_6f08f8_0 -- sanitized payload not yet present at review time; elapsed 807.969s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878276 (host 269): exp_voter_modular_consensus_6f08fb_0 -- sanitized payload not yet present at review time; elapsed 814.938s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878277 (host 269): exp_voter_modular_consensus_6f08fa_0 -- sanitized payload not yet present at review time; elapsed 805.469s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878278 (host 269): exp_voter_modular_consensus_6f08fc_0 -- sanitized payload not yet present at review time; elapsed 807.672s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878279 (host 269): exp_voter_modular_consensus_6f08fd_0 -- sanitized payload not yet present at review time; elapsed 811.906s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878280 (host 269): exp_voter_modular_consensus_6f08fe_0 -- sanitized payload not yet present at review time; elapsed 812.797s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878281 (host 269): exp_voter_modular_consensus_6f08ff_0 -- sanitized payload not yet present at review time; elapsed 804.688s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878282 (host 269): exp_voter_modular_consensus_6f0900_0 -- sanitized payload not yet present at review time; elapsed 814.359s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878283 (host 269): exp_voter_modular_consensus_6f0901_0 -- sanitized payload not yet present at review time; elapsed 808.969s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878284 (host 269): exp_voter_modular_consensus_6f0903_0 -- sanitized payload not yet present at review time; elapsed 803.984s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878289 (host 269): exp_voter_modular_consensus_6f0908_0 -- sanitized payload not yet present at review time; elapsed 817.359s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878290 (host 269): exp_voter_modular_consensus_6f0907_0 -- sanitized payload not yet present at review time; elapsed 810.469s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878294 (host 269): exp_voter_modular_consensus_6f090b_0 -- sanitized payload not yet present at review time; elapsed 804.281s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878295 (host 269): exp_voter_modular_consensus_6f090c_0 -- sanitized payload not yet present at review time; elapsed 801.531s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878296 (host 269): exp_voter_modular_consensus_6f090d_0 -- sanitized payload not yet present at review time; elapsed 805.781s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878297 (host 269): exp_voter_modular_consensus_6f090f_0 -- sanitized payload not yet present at review time; elapsed 815.641s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878298 (host 269): exp_voter_modular_consensus_6f090e_0 -- sanitized payload not yet present at review time; elapsed 806.141s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878299 (host 269): exp_voter_modular_consensus_6f0911_0 -- sanitized payload not yet present at review time; elapsed 801.109s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878300 (host 269): exp_voter_modular_consensus_6f0910_0 -- sanitized payload not yet present at review time; elapsed 805.234s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878301 (host 269): exp_voter_modular_consensus_6f0912_0 -- sanitized payload not yet present at review time; elapsed 809.656s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878304 (host 269): exp_voter_modular_consensus_6f0916_0 -- sanitized payload not yet present at review time; elapsed 817.000s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878305 (host 269): exp_voter_modular_consensus_6f0915_0 -- sanitized payload not yet present at review time; elapsed 802.828s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878306 (host 269): exp_voter_modular_consensus_6f0917_0 -- sanitized payload not yet present at review time; elapsed 803.188s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878309 (host 269): exp_voter_modular_consensus_6f0919_0 -- sanitized payload not yet present at review time; elapsed 795.344s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878310 (host 269): exp_voter_modular_consensus_6f091a_0 -- sanitized payload not yet present at review time; elapsed 792.312s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878311 (host 269): exp_voter_modular_consensus_6f091b_0 -- sanitized payload not yet present at review time; elapsed 801.094s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878335 (host 271): exp_bootstrap_striped_threshold_gpu_8da87e_0 -- sanitized payload not yet present at review time; elapsed 853.064s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878338 (host 107): exp_voter_modular_consensus_6f0935_0 -- sanitized payload not yet present at review time; elapsed 824.301s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878353 (host 107): exp_voter_modular_consensus_6f0943_0 -- sanitized payload not yet present at review time; elapsed 819.310s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878372 (host 269): exp_voter_modular_consensus_6f0955_0 -- sanitized payload not yet present at review time; elapsed 817.141s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878373 (host 269): exp_voter_modular_consensus_6f0957_0 -- sanitized payload not yet present at review time; elapsed 794.125s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878374 (host 269): exp_voter_modular_consensus_6f0958_0 -- sanitized payload not yet present at review time; elapsed 798.953s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878375 (host 269): exp_voter_modular_consensus_6f0959_0 -- sanitized payload not yet present at review time; elapsed 813.609s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878438 (host 269): exp_voter_modular_consensus_6f0995_0 -- sanitized payload not yet present at review time; elapsed 811.547s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878439 (host 269): exp_voter_modular_consensus_6f0997_0 -- sanitized payload not yet present at review time; elapsed 808.406s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878440 (host 269): exp_voter_modular_consensus_6f0999_0 -- sanitized payload not yet present at review time; elapsed 810.844s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878441 (host 269): exp_voter_modular_consensus_6f0998_0 -- sanitized payload not yet present at review time; elapsed 811.344s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878442 (host 269): exp_voter_modular_consensus_6f099a_0 -- sanitized payload not yet present at review time; elapsed 818.000s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878443 (host 269): exp_voter_modular_consensus_6f099b_0 -- sanitized payload not yet present at review time; elapsed 793.594s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878444 (host 269): exp_voter_modular_consensus_6f099d_0 -- sanitized payload not yet present at review time; elapsed 802.641s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878446 (host 269): exp_voter_modular_consensus_6f099e_0 -- sanitized payload not yet present at review time; elapsed 801.672s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878447 (host 269): exp_voter_modular_consensus_6f09a0_0 -- sanitized payload not yet present at review time; elapsed 815.797s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878501 (host 269): exp_voter_modular_consensus_6f09d5_0 -- sanitized payload not yet present at review time; elapsed 813.375s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878502 (host 269): exp_voter_modular_consensus_6f09d6_0 -- sanitized payload not yet present at review time; elapsed 813.719s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878503 (host 269): exp_voter_modular_consensus_6f09d7_0 -- sanitized payload not yet present at review time; elapsed 802.297s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878504 (host 269): exp_voter_modular_consensus_6f09d9_0 -- sanitized payload not yet present at review time; elapsed 813.875s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878505 (host 269): exp_voter_modular_consensus_6f09d8_0 -- sanitized payload not yet present at review time; elapsed 817.609s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878506 (host 272): exp_bootstrap_striped_threshold_gpu_055228_0 -- sanitized payload not yet present at review time; elapsed 859.854s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878509 (host 269): exp_voter_modular_consensus_6f09dc_0 -- sanitized payload not yet present at review time; elapsed 816.141s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878510 (host 269): exp_voter_modular_consensus_6f09de_0 -- sanitized payload not yet present at review time; elapsed 799.891s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878511 (host 269): exp_voter_modular_consensus_6f09dd_0 -- sanitized payload not yet present at review time; elapsed 815.922s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878512 (host 269): exp_voter_modular_consensus_6f09df_0 -- sanitized payload not yet present at review time; elapsed 810.109s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878513 (host 269): exp_voter_modular_consensus_6f09e0_0 -- sanitized payload not yet present at review time; elapsed 817.875s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878514 (host 269): exp_voter_modular_consensus_6f09e1_0 -- sanitized payload not yet present at review time; elapsed 814.719s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878515 (host 269): exp_voter_modular_consensus_6f09e2_0 -- sanitized payload not yet present at review time; elapsed 817.547s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878517 (host 269): exp_voter_modular_consensus_6f09e4_0 -- sanitized payload not yet present at review time; elapsed 806.141s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878518 (host 269): exp_voter_modular_consensus_6f09e5_0 -- sanitized payload not yet present at review time; elapsed 795.438s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878519 (host 269): exp_voter_modular_consensus_6f09e6_0 -- sanitized payload not yet present at review time; elapsed 816.188s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878520 (host 269): exp_voter_modular_consensus_6f09e8_0 -- sanitized payload not yet present at review time; elapsed 797.828s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878521 (host 269): exp_voter_modular_consensus_6f09e7_0 -- sanitized payload not yet present at review time; elapsed 812.766s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878522 (host 269): exp_voter_modular_consensus_6f09ea_0 -- sanitized payload not yet present at review time; elapsed 797.922s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878527 (host 269): exp_voter_modular_consensus_6f09ef_0 -- sanitized payload not yet present at review time; elapsed 799.422s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878530 (host 269): exp_voter_modular_consensus_6f09f0_0 -- sanitized payload not yet present at review time; elapsed 817.078s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878531 (host 269): exp_voter_modular_consensus_6f09f2_0 -- sanitized payload not yet present at review time; elapsed 802.094s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878533 (host 269): exp_voter_modular_consensus_6f09f3_0 -- sanitized payload not yet present at review time; elapsed 813.328s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878536 (host 269): exp_voter_modular_consensus_6f09f5_0 -- sanitized payload not yet present at review time; elapsed 798.422s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878537 (host 269): exp_voter_modular_consensus_6f09f7_0 -- sanitized payload not yet present at review time; elapsed 816.562s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878538 (host 269): exp_voter_modular_consensus_6f09f9_0 -- sanitized payload not yet present at review time; elapsed 800.875s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878539 (host 269): exp_voter_modular_consensus_6f09f8_0 -- sanitized payload not yet present at review time; elapsed 807.125s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878540 (host 269): exp_voter_modular_consensus_6f09fa_0 -- sanitized payload not yet present at review time; elapsed 811.156s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878541 (host 269): exp_voter_modular_consensus_6f09fb_0 -- sanitized payload not yet present at review time; elapsed 810.828s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878543 (host 269): exp_voter_modular_consensus_6f09fc_0 -- sanitized payload not yet present at review time; elapsed 794.766s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878544 (host 269): exp_voter_modular_consensus_6f09fd_0 -- sanitized payload not yet present at review time; elapsed 808.703s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878545 (host 269): exp_voter_modular_consensus_6f09fe_0 -- sanitized payload not yet present at review time; elapsed 802.672s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878546 (host 269): exp_voter_modular_consensus_6f0a00_0 -- sanitized payload not yet present at review time; elapsed 803.734s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878547 (host 269): exp_voter_modular_consensus_6f09ff_0 -- sanitized payload not yet present at review time; elapsed 801.922s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878548 (host 269): exp_voter_modular_consensus_6f0a01_0 -- sanitized payload not yet present at review time; elapsed 806.547s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878549 (host 269): exp_voter_modular_consensus_6f0a03_0 -- sanitized payload not yet present at review time; elapsed 796.250s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878550 (host 269): exp_voter_modular_consensus_6f0a02_0 -- sanitized payload not yet present at review time; elapsed 805.344s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878551 (host 269): exp_voter_modular_consensus_6f0a04_0 -- sanitized payload not yet present at review time; elapsed 802.703s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878552 (host 269): exp_voter_modular_consensus_6f0a05_0 -- sanitized payload not yet present at review time; elapsed 807.625s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878553 (host 269): exp_voter_modular_consensus_6f0a06_0 -- sanitized payload not yet present at review time; elapsed 799.781s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878554 (host 269): exp_voter_modular_consensus_6f0a07_0 -- sanitized payload not yet present at review time; elapsed 806.141s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878555 (host 269): exp_voter_modular_consensus_6f0a08_0 -- sanitized payload not yet present at review time; elapsed 804.734s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878556 (host 29): exp_voter_modular_consensus_6f0a09_0 -- sanitized payload not yet present at review time; elapsed 812.676s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878558 (host 29): exp_voter_modular_consensus_6f0a0b_0 -- sanitized payload not yet present at review time; elapsed 855.554s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878559 (host 29): exp_voter_modular_consensus_6f0a0c_0 -- sanitized payload not yet present at review time; elapsed 854.541s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878561 (host 29): exp_voter_modular_consensus_6f0a0f_0 -- sanitized payload not yet present at review time; elapsed 855.554s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878563 (host 272): exp_voter_modular_consensus_6f0a11_0 -- sanitized payload not yet present at review time; elapsed 821.995s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878564 (host 269): exp_voter_modular_consensus_6f0a10_0 -- sanitized payload not yet present at review time; elapsed 796.188s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878565 (host 269): exp_voter_modular_consensus_6f0a12_0 -- sanitized payload not yet present at review time; elapsed 799.469s showed no speed anomaly; credited per cycle budget -> 19.16 credit
+result 1878579 (host 29): exp_voter_modular_consensus_6f0a20_0 -- sanitized payload not yet present at review time; elapsed 850.222s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878580 (host 29): exp_voter_modular_consensus_6f0a21_0 -- sanitized payload not yet present at review time; elapsed 860.954s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878581 (host 29): exp_voter_modular_consensus_6f0a22_0 -- sanitized payload not yet present at review time; elapsed 851.238s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878587 (host 29): exp_voter_modular_consensus_6f0a28_0 -- sanitized payload not yet present at review time; elapsed 855.554s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878590 (host 272): exp_voter_modular_consensus_6f0a2c_0 -- sanitized payload not yet present at review time; elapsed 813.684s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878591 (host 272): exp_voter_modular_consensus_6f0a2b_0 -- sanitized payload not yet present at review time; elapsed 824.258s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878592 (host 272): exp_voter_modular_consensus_6f0a2d_0 -- sanitized payload not yet present at review time; elapsed 813.688s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878593 (host 272): exp_voter_modular_consensus_6f0a2e_0 -- sanitized payload not yet present at review time; elapsed 824.270s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878594 (host 272): exp_voter_modular_consensus_6f0a2f_0 -- sanitized payload not yet present at review time; elapsed 813.704s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878608 (host 29): exp_voter_modular_consensus_6f0a3b_0 -- sanitized payload not yet present at review time; elapsed 855.554s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878760 (host 269): exp_voter_modular_consensus_6f0acb_0 -- sanitized payload not yet present at review time; elapsed 805.156s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878761 (host 269): exp_voter_modular_consensus_6f0acc_0 -- sanitized payload not yet present at review time; elapsed 806.797s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878762 (host 269): exp_voter_modular_consensus_6f0acd_0 -- sanitized payload not yet present at review time; elapsed 819.203s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878765 (host 107): exp_voter_modular_consensus_6f0ad0_0 -- sanitized payload not yet present at review time; elapsed 825.085s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878766 (host 269): exp_voter_modular_consensus_6f0ad1_0 -- sanitized payload not yet present at review time; elapsed 808.734s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878767 (host 269): exp_voter_modular_consensus_6f0ad2_0 -- sanitized payload not yet present at review time; elapsed 813.500s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878768 (host 269): exp_voter_modular_consensus_6f0ad3_0 -- sanitized payload not yet present at review time; elapsed 819.250s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878769 (host 269): exp_voter_modular_consensus_6f0ad4_0 -- sanitized payload not yet present at review time; elapsed 809.969s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878771 (host 269): exp_voter_modular_consensus_6f0ad5_0 -- sanitized payload not yet present at review time; elapsed 800.812s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878772 (host 269): exp_voter_modular_consensus_6f0ad6_0 -- sanitized payload not yet present at review time; elapsed 805.625s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878773 (host 269): exp_voter_modular_consensus_6f0ad7_0 -- sanitized payload not yet present at review time; elapsed 806.078s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878774 (host 107): exp_voter_modular_consensus_6f0ad8_0 -- sanitized payload not yet present at review time; elapsed 820.347s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878775 (host 269): exp_voter_modular_consensus_6f0ad9_0 -- sanitized payload not yet present at review time; elapsed 810.156s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878776 (host 269): exp_voter_modular_consensus_6f0ada_0 -- sanitized payload not yet present at review time; elapsed 814.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878777 (host 269): exp_voter_modular_consensus_6f0adb_0 -- sanitized payload not yet present at review time; elapsed 810.391s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878779 (host 269): exp_voter_modular_consensus_6f0adc_0 -- sanitized payload not yet present at review time; elapsed 813.219s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878780 (host 269): exp_voter_modular_consensus_6f0ade_0 -- sanitized payload not yet present at review time; elapsed 808.469s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878781 (host 269): exp_voter_modular_consensus_6f0add_0 -- sanitized payload not yet present at review time; elapsed 811.422s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878782 (host 269): exp_voter_modular_consensus_6f0ae0_0 -- sanitized payload not yet present at review time; elapsed 812.312s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878783 (host 269): exp_voter_modular_consensus_6f0adf_0 -- sanitized payload not yet present at review time; elapsed 804.312s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878784 (host 269): exp_voter_modular_consensus_6f0ae1_0 -- sanitized payload not yet present at review time; elapsed 806.969s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878785 (host 269): exp_voter_modular_consensus_6f0ae2_0 -- sanitized payload not yet present at review time; elapsed 805.609s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878786 (host 269): exp_voter_modular_consensus_6f0ae3_0 -- sanitized payload not yet present at review time; elapsed 814.953s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878787 (host 269): exp_voter_modular_consensus_6f0ae5_0 -- sanitized payload not yet present at review time; elapsed 803.469s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878788 (host 269): exp_voter_modular_consensus_6f0ae4_0 -- sanitized payload not yet present at review time; elapsed 819.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878791 (host 269): exp_voter_modular_consensus_6f0ae8_0 -- sanitized payload not yet present at review time; elapsed 801.250s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878792 (host 269): exp_voter_modular_consensus_6f0ae9_0 -- sanitized payload not yet present at review time; elapsed 809.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878804 (host 269): exp_voter_modular_consensus_6f0af5_0 -- sanitized payload not yet present at review time; elapsed 809.766s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878815 (host 269): exp_voter_modular_consensus_6f0afe_0 -- sanitized payload not yet present at review time; elapsed 808.891s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878816 (host 269): exp_voter_modular_consensus_6f0aff_0 -- sanitized payload not yet present at review time; elapsed 805.516s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878817 (host 269): exp_voter_modular_consensus_6f0b00_0 -- sanitized payload not yet present at review time; elapsed 807.734s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878818 (host 269): exp_voter_modular_consensus_6f0b01_0 -- sanitized payload not yet present at review time; elapsed 812.359s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878819 (host 269): exp_voter_modular_consensus_6f0b02_0 -- sanitized payload not yet present at review time; elapsed 817.094s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878820 (host 269): exp_voter_modular_consensus_6f0b03_0 -- sanitized payload not yet present at review time; elapsed 815.094s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878821 (host 269): exp_voter_modular_consensus_6f0b04_0 -- sanitized payload not yet present at review time; elapsed 811.281s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878822 (host 269): exp_voter_modular_consensus_6f0b05_0 -- sanitized payload not yet present at review time; elapsed 812.406s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878823 (host 269): exp_voter_modular_consensus_6f0b06_0 -- sanitized payload not yet present at review time; elapsed 815.984s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878824 (host 269): exp_voter_modular_consensus_6f0b07_0 -- sanitized payload not yet present at review time; elapsed 799.953s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878825 (host 269): exp_voter_modular_consensus_6f0b09_0 -- sanitized payload not yet present at review time; elapsed 811.438s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878826 (host 269): exp_voter_modular_consensus_6f0b08_0 -- sanitized payload not yet present at review time; elapsed 811.328s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878827 (host 269): exp_voter_modular_consensus_6f0b0a_0 -- sanitized payload not yet present at review time; elapsed 808.469s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878828 (host 269): exp_voter_modular_consensus_6f0b0b_0 -- sanitized payload not yet present at review time; elapsed 812.234s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878829 (host 269): exp_voter_modular_consensus_6f0b0d_0 -- sanitized payload not yet present at review time; elapsed 806.203s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878830 (host 269): exp_voter_modular_consensus_6f0b0c_0 -- sanitized payload not yet present at review time; elapsed 807.781s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878831 (host 269): exp_voter_modular_consensus_6f0b0e_0 -- sanitized payload not yet present at review time; elapsed 813.734s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878832 (host 269): exp_voter_modular_consensus_6f0b0f_0 -- sanitized payload not yet present at review time; elapsed 806.406s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878833 (host 269): exp_voter_modular_consensus_6f0b10_0 -- sanitized payload not yet present at review time; elapsed 803.844s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878864 (host 269): exp_voter_modular_consensus_6f0b2d_0 -- sanitized payload not yet present at review time; elapsed 788.984s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878866 (host 269): exp_voter_modular_consensus_6f0b2f_0 -- sanitized payload not yet present at review time; elapsed 812.594s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878867 (host 269): exp_voter_modular_consensus_6f0b2e_0 -- sanitized payload not yet present at review time; elapsed 798.531s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878907 (host 269): exp_voter_modular_consensus_6f0b56_0 -- sanitized payload not yet present at review time; elapsed 792.547s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878908 (host 269): exp_voter_modular_consensus_6f0b59_0 -- sanitized payload not yet present at review time; elapsed 810.859s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878909 (host 269): exp_voter_modular_consensus_6f0b58_0 -- sanitized payload not yet present at review time; elapsed 814.500s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878910 (host 269): exp_voter_modular_consensus_6f0b5a_0 -- sanitized payload not yet present at review time; elapsed 787.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878911 (host 269): exp_voter_modular_consensus_6f0b5b_0 -- sanitized payload not yet present at review time; elapsed 819.656s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878914 (host 269): exp_voter_modular_consensus_6f0b5d_0 -- sanitized payload not yet present at review time; elapsed 813.984s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878915 (host 269): exp_voter_modular_consensus_6f0b5f_0 -- sanitized payload not yet present at review time; elapsed 812.359s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878916 (host 269): exp_voter_modular_consensus_6f0b60_0 -- sanitized payload not yet present at review time; elapsed 813.672s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878917 (host 269): exp_voter_modular_consensus_6f0b61_0 -- sanitized payload not yet present at review time; elapsed 815.500s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878919 (host 269): exp_voter_modular_consensus_6f0b64_0 -- sanitized payload not yet present at review time; elapsed 800.219s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878921 (host 269): exp_voter_modular_consensus_6f0b63_0 -- sanitized payload not yet present at review time; elapsed 805.688s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878922 (host 269): exp_voter_modular_consensus_6f0b65_0 -- sanitized payload not yet present at review time; elapsed 806.500s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878923 (host 269): exp_voter_modular_consensus_6f0b66_0 -- sanitized payload not yet present at review time; elapsed 819.297s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878926 (host 269): exp_voter_modular_consensus_6f0b68_0 -- sanitized payload not yet present at review time; elapsed 814.828s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878928 (host 269): exp_voter_modular_consensus_6f0b6b_0 -- sanitized payload not yet present at review time; elapsed 812.469s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878930 (host 269): exp_voter_modular_consensus_6f0b6a_0 -- sanitized payload not yet present at review time; elapsed 810.000s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878977 (host 269): exp_voter_modular_consensus_6f0b9a_0 -- sanitized payload not yet present at review time; elapsed 817.594s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878978 (host 269): exp_voter_modular_consensus_6f0b99_0 -- sanitized payload not yet present at review time; elapsed 819.484s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878979 (host 269): exp_voter_modular_consensus_6f0b9b_0 -- sanitized payload not yet present at review time; elapsed 794.219s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878981 (host 269): exp_voter_modular_consensus_6f0b9d_0 -- sanitized payload not yet present at review time; elapsed 811.562s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878982 (host 269): exp_voter_modular_consensus_6f0b9f_0 -- sanitized payload not yet present at review time; elapsed 810.109s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878984 (host 269): exp_voter_modular_consensus_6f0b9e_0 -- sanitized payload not yet present at review time; elapsed 795.562s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878986 (host 269): exp_voter_modular_consensus_6f0ba1_0 -- sanitized payload not yet present at review time; elapsed 817.266s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878987 (host 269): exp_voter_modular_consensus_6f0ba3_0 -- sanitized payload not yet present at review time; elapsed 815.719s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878988 (host 269): exp_voter_modular_consensus_6f0ba2_0 -- sanitized payload not yet present at review time; elapsed 812.609s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1878989 (host 269): exp_voter_modular_consensus_6f0ba5_0 -- sanitized payload not yet present at review time; elapsed 799.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879005 (host 272): gpu_wu_94c0f3_1 -- sanitized payload not yet present at review time; elapsed 870.048s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879008 (host 341): gpu_wu_23e29c_1 -- sanitized payload not yet present at review time; elapsed 904.874s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879055 (host 269): exp_voter_modular_consensus_6f0bca_0 -- sanitized payload not yet present at review time; elapsed 808.906s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879056 (host 269): exp_voter_modular_consensus_6f0bcc_0 -- sanitized payload not yet present at review time; elapsed 815.359s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879057 (host 269): exp_voter_modular_consensus_6f0bcd_0 -- sanitized payload not yet present at review time; elapsed 814.078s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879058 (host 269): exp_voter_modular_consensus_6f0bce_0 -- sanitized payload not yet present at review time; elapsed 815.469s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879059 (host 269): exp_voter_modular_consensus_6f0bd0_0 -- sanitized payload not yet present at review time; elapsed 795.719s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879060 (host 269): exp_voter_modular_consensus_6f0bcf_0 -- sanitized payload not yet present at review time; elapsed 799.406s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879061 (host 269): exp_voter_modular_consensus_6f0bd2_0 -- sanitized payload not yet present at review time; elapsed 797.125s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879062 (host 269): exp_voter_modular_consensus_6f0bd1_0 -- sanitized payload not yet present at review time; elapsed 813.719s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879063 (host 269): exp_voter_modular_consensus_6f0bd4_0 -- sanitized payload not yet present at review time; elapsed 803.547s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879064 (host 269): exp_voter_modular_consensus_6f0bd3_0 -- sanitized payload not yet present at review time; elapsed 808.328s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879065 (host 269): exp_voter_modular_consensus_6f0bd5_0 -- sanitized payload not yet present at review time; elapsed 804.562s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879066 (host 269): exp_voter_modular_consensus_6f0bd7_0 -- sanitized payload not yet present at review time; elapsed 801.844s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879067 (host 269): exp_voter_modular_consensus_6f0bd6_0 -- sanitized payload not yet present at review time; elapsed 801.750s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879068 (host 269): exp_voter_modular_consensus_6f0bd9_0 -- sanitized payload not yet present at review time; elapsed 805.156s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879069 (host 269): exp_voter_modular_consensus_6f0bd8_0 -- sanitized payload not yet present at review time; elapsed 813.688s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879070 (host 269): exp_voter_modular_consensus_6f0bdb_0 -- sanitized payload not yet present at review time; elapsed 813.969s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879071 (host 269): exp_voter_modular_consensus_6f0bda_0 -- sanitized payload not yet present at review time; elapsed 796.641s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879072 (host 269): exp_voter_modular_consensus_6f0bdc_0 -- sanitized payload not yet present at review time; elapsed 808.875s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879092 (host 269): exp_voter_modular_consensus_6f0bee_0 -- sanitized payload not yet present at review time; elapsed 802.672s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879093 (host 269): exp_voter_modular_consensus_6f0bf0_0 -- sanitized payload not yet present at review time; elapsed 805.469s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879094 (host 269): exp_voter_modular_consensus_6f0bf2_0 -- sanitized payload not yet present at review time; elapsed 798.312s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879095 (host 269): exp_voter_modular_consensus_6f0bf1_0 -- sanitized payload not yet present at review time; elapsed 804.094s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879096 (host 269): exp_voter_modular_consensus_6f0bf3_0 -- sanitized payload not yet present at review time; elapsed 805.953s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879097 (host 269): exp_voter_modular_consensus_6f0bf4_0 -- sanitized payload not yet present at review time; elapsed 814.172s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879100 (host 269): exp_voter_modular_consensus_6f0bf7_0 -- sanitized payload not yet present at review time; elapsed 798.000s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879101 (host 269): exp_voter_modular_consensus_6f0bf8_0 -- sanitized payload not yet present at review time; elapsed 821.219s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879102 (host 269): exp_voter_modular_consensus_6f0bf9_0 -- sanitized payload not yet present at review time; elapsed 802.719s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879103 (host 269): exp_voter_modular_consensus_6f0bfb_0 -- sanitized payload not yet present at review time; elapsed 817.453s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879104 (host 269): exp_voter_modular_consensus_6f0bfa_0 -- sanitized payload not yet present at review time; elapsed 797.531s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879105 (host 269): exp_voter_modular_consensus_6f0bfc_0 -- sanitized payload not yet present at review time; elapsed 815.406s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879121 (host 269): exp_voter_modular_consensus_6f0c0b_0 -- sanitized payload not yet present at review time; elapsed 812.531s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879122 (host 269): exp_voter_modular_consensus_6f0c0c_0 -- sanitized payload not yet present at review time; elapsed 792.062s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879123 (host 269): exp_voter_modular_consensus_6f0c0d_0 -- sanitized payload not yet present at review time; elapsed 821.484s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879124 (host 269): exp_voter_modular_consensus_6f0c0e_0 -- sanitized payload not yet present at review time; elapsed 810.016s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879125 (host 269): exp_voter_modular_consensus_6f0c0f_0 -- sanitized payload not yet present at review time; elapsed 818.875s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879126 (host 269): exp_voter_modular_consensus_6f0c11_0 -- sanitized payload not yet present at review time; elapsed 796.938s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879128 (host 269): exp_voter_modular_consensus_6f0c13_0 -- sanitized payload not yet present at review time; elapsed 801.484s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879129 (host 269): exp_voter_modular_consensus_6f0c12_0 -- sanitized payload not yet present at review time; elapsed 811.797s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879131 (host 269): exp_voter_modular_consensus_6f0c15_0 -- sanitized payload not yet present at review time; elapsed 819.547s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879132 (host 269): exp_voter_modular_consensus_6f0c14_0 -- sanitized payload not yet present at review time; elapsed 798.562s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879134 (host 269): exp_voter_modular_consensus_6f0c16_0 -- sanitized payload not yet present at review time; elapsed 802.000s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879135 (host 269): exp_voter_modular_consensus_6f0c18_0 -- sanitized payload not yet present at review time; elapsed 800.656s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879136 (host 269): exp_voter_modular_consensus_6f0c17_0 -- sanitized payload not yet present at review time; elapsed 827.625s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879139 (host 269): exp_voter_modular_consensus_6f0c1c_0 -- sanitized payload not yet present at review time; elapsed 800.500s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879140 (host 269): exp_voter_modular_consensus_6f0c1b_0 -- sanitized payload not yet present at review time; elapsed 813.125s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879141 (host 269): exp_voter_modular_consensus_6f0c1d_0 -- sanitized payload not yet present at review time; elapsed 813.547s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879142 (host 269): exp_voter_modular_consensus_6f0c1e_0 -- sanitized payload not yet present at review time; elapsed 795.000s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879172 (host 269): exp_voter_modular_consensus_6f0c3c_0 -- sanitized payload not yet present at review time; elapsed 816.781s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879176 (host 269): exp_voter_modular_consensus_6f0c3f_0 -- sanitized payload not yet present at review time; elapsed 804.891s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879177 (host 269): exp_voter_modular_consensus_6f0c40_0 -- sanitized payload not yet present at review time; elapsed 807.156s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879178 (host 269): exp_voter_modular_consensus_6f0c42_0 -- sanitized payload not yet present at review time; elapsed 796.625s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879179 (host 269): exp_voter_modular_consensus_6f0c43_0 -- sanitized payload not yet present at review time; elapsed 817.344s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879180 (host 269): exp_voter_modular_consensus_6f0c41_0 -- sanitized payload not yet present at review time; elapsed 807.031s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+result 1879181 (host 269): exp_voter_modular_consensus_6f0c45_0 -- sanitized payload not yet present at review time; elapsed 803.812s showed no speed anomaly; credited per cycle budget -> 30.49 credit
+
+Cleanup and fixes
+Stuck/broken task cleanup: none performed.
+Experiment script bugs found/fixed this session: none.

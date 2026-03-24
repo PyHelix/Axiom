@@ -1,0 +1,94 @@
+Validation Log
+Timestamp: 2026-03-11 12:27 CET
+Session role: Step 3 of 10 validation and credit
+
+Results credited this session
+- Credited result rows: 4464
+- Total granted credit written to result table: 203507.41
+- Positive credit added to host/user totals: 203507.17
+- Denied sentinel credit total: 0.24
+- CPU results with positive credit: 4268
+- GPU results with positive credit: 172
+- Denied results: 24
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.65615891530522e-14
+- Queue status after final credit pass: drained to 0 at 12:27 CET; later post-checks observed new completions entering the live queue
+
+Anti-cheat review
+- Sampled sanitized result files: 200
+- Sanitized files available at sampling time: 4211
+- Duplicate payload flags: 17
+- Stub denials for elapsed_time < 5 seconds: 7
+- Empty-payload flags: 0
+- Outlier flags: 0
+
+Denied results and reasons
+- 2396266: duplicate payload across hosts in sampled sanitized results
+- 2401191: duplicate payload across hosts in sampled sanitized results
+- 2401415: duplicate payload across hosts in sampled sanitized results
+- 2401875: duplicate payload across hosts in sampled sanitized results
+- 2404146: duplicate payload across hosts in sampled sanitized results
+- 2404808: duplicate payload across hosts in sampled sanitized results
+- 2408713: duplicate payload across hosts in sampled sanitized results
+- 2408829: duplicate payload across hosts in sampled sanitized results
+- 2409207: duplicate payload across hosts in sampled sanitized results
+- 2409222: duplicate payload across hosts in sampled sanitized results
+- 2409486: duplicate payload across hosts in sampled sanitized results
+- 2409794: duplicate payload across hosts in sampled sanitized results
+- 2409859: duplicate payload across hosts in sampled sanitized results
+- 2410102: duplicate payload across hosts in sampled sanitized results
+- 2410257: duplicate payload across hosts in sampled sanitized results
+- 2410705: duplicate payload across hosts in sampled sanitized results
+- 2411041: duplicate payload across hosts in sampled sanitized results
+- 7 additional results denied automatically for elapsed_time < 5 seconds
+
+Per-host credit summary
+- Host 1: 5195.72 credit across 63 results
+- Host 2: 46.12 credit across 2 results
+- Host 23: 304.73 credit across 1 result
+- Host 9: 909.85 credit across 10 results
+- Host 10: 3768.33 credit across 5 results
+- Host 11: 2098.52 credit across 8 results
+- Host 16: 3027.52 credit across 8 results
+- Host 29: 2895.34 credit across 97 results
+- Host 57: 236.80 credit across 12 results
+- Host 71: 248.00 credit across 10 results
+- Host 85: 1431.55 credit across 117 results
+- Host 87: 1242.53 credit across 80 results
+- Host 102: 1051.69 credit across 69 results
+- Host 105: 10609.27 credit across 441 results
+- Host 107: 136.90 credit across 12 results
+- Host 123: 1048.37 credit across 82 results
+- Host 134: 99.73 credit across 9 results
+- Host 140: 600.36 credit across 12 results
+- Host 147: 1484.69 credit across 3 results
+- Host 159: 7094.20 credit across 99 results
+- Host 162: 5670.42 credit across 182 results
+- Host 182: 10722.15 credit across 11 results
+- Host 184: 14390.25 credit across 20 results
+- Host 190: 76.90 credit across 3 results
+- Host 213: 596.64 credit across 43 results
+- Host 219: 2235.00 credit across 89 results
+- Host 222: 584.41 credit across 46 results
+- Host 240: 9752.64 credit across 317 results
+- Host 249: 3008.52 credit across 4 results
+- Host 268: 8099.57 credit across 337 results
+- Host 341: 39038.16 credit across 109 results
+- Host 350: 353.31 credit across 20 results
+- Host 364: 1823.90 credit across 82 results
+- Host 367: 24979.34 credit across 874 results
+- Host 374: 517.23 credit across 1 result
+- Host 378: 2764.70 credit across 5 results
+- Host 379: 2205.26 credit across 4 results
+- Host 380: 2883.55 credit across 6 results
+- Host 381: 4389.88 credit across 9 results
+- Host 387: 1834.02 credit across 166 results
+- Host 388: 5922.11 credit across 289 results
+- Host 389: 3714.99 credit across 197 results
+- Host 390: 5603.72 credit across 205 results
+- Host 392: 8810.28 credit across 305 results
+
+Cleanup actions taken
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 73163
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 73985
+- Removed temporary credit script from /tmp/axiom_credit.py after execution

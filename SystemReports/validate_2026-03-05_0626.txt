@@ -1,0 +1,53 @@
+Axiom BOINC Validation Report — 2026-03-05 06:26 UTC
+
+== SYSTEM STATE ==
+Active hosts: 87 (last 72h contact)
+Uncredited successful results: 328
+Total queued/in-progress tasks: 729
+
+== STUCK TASK CLEANUP ==
+Checked for tasks >12h on hosts gone >6h: 2 found on host 60 (borderline at 12.4h)
+  - Result 1683295: exp_abx_cycle_hgt_delay_resonance_h60 (12.4h running, host gone 12.4h)
+  - Result 1683296: exp_battery_pulse_delay_plating_resonance_h60 (12.4h running, host gone 12.4h)
+  UPDATE applied: 0 rows (tasks at exact threshold boundary; transitioner may have handled)
+Checked for tasks >48h: none found
+
+== BROKEN EXPERIMENT ANALYSIS ==
+25 experiment types with 100% failure rate (0 successes):
+  gene_drive_delay_resistance_window (12), ising_delay_adaptive_quench (8),
+  pit_delay_inhibitor_resonance (5), rw_reset_fatigue_nonrenewal (19),
+  seir_delay_fatigue_control (25), rbn_delay_fatigue_control (41),
+  tritrophic_delay (37), kuramoto_delay_adaptive_efficiency (16),
+  sandpile_delay_adaptive_dissipation (6), metapop_corridor_delay_forecast (39),
+  sis_delay_adaptive_rewiring_tradeoff (32), brusselator_delay_sensor_noise (25),
+  nonmarkov_trap_release_window (4), toggle_delay_adaptive_control (6),
+  interdep_flow_memory_shedding_tradeoff (29), cahnhilliard_delay_feedback_window (33),
+  lorenz96_delay_assimilation_regime_shift (17), schlogl_delay_adaptive_gain_resonance (4),
+  autocatalytic_dilution_memory_window (19), wildfire_delay_adaptive_suppression (25),
+  rps_delay_jitter_adaptive_mobility (7), lotka_delay_adaptive (30),
+  fiberbundle_delay (32), xy_delay_thermostat_reentrance (12), moranmig (10)
+No queued work remained for these experiments.
+
+11 experiments with >80% failure rate (some successes):
+  genedrive_delayres 97.1%, adaptive_voter_delay_rewiring 97.0%,
+  grayscott_delay_pulse_feedback 96.6%, climate_delay_carbon 92.5%,
+  cascade_forecast_delay_shedding 90.5%, chemostat_delay_crossfeeding_resonance 88.0%,
+  kuramoto_delay_noisy_control 87.5%, allee_delay_climate 85.7%,
+  fisher_delay_adaptive_culling 84.6%, seasonal_metapop_vax_trigger 84.6%,
+  battery_pulse_delay_plating_resonance 83.3%
+
+== CREDIT REVIEW ==
+328 uncredited successful results identified.
+0 results had matching sanitized files — assimilator (PID 1205) running but hasn't
+processed this batch yet. Credit deferred to next validation cycle.
+Credit awarded this session: 0
+
+== WEBSITE COUNTERS ==
+Total results counter updated: 32 -> 328
+Credited results counter: unchanged
+
+== NOTES ==
+- 25 experiment types are completely broken (100% failure). Deploy step should
+  investigate and fix scripts before redeploying.
+- Assimilator is lagging behind result completion.
+- Host 60 had 2 borderline stuck tasks at the 12h threshold.

@@ -1,0 +1,75 @@
+Validation Log
+Timestamp: 2026-03-10 16:15 Europe/Berlin
+
+Results credited this session
+- Processed results: 2758
+- Total credit awarded: 144732.72
+- CPU results credited: 2446
+- GPU results credited: 301
+- Denied sentinel results: 11
+- Short-runtime denials: 0
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.6738556477334984e-14
+- Price table refreshed during run: no
+
+Anti-cheat review
+- Checked uncredited backlog for sanitized files before credit run.
+- Uncredited results seen in anti-cheat pass: 2756
+- Sanitized files present: 2746
+- Missing sanitized files at sample time: 10
+- Random sanitized sample reviewed: 200 results across 23 hosts
+- Denied results were flagged for duplicate byte-identical numeric payloads across hosts.
+- Denied result IDs and reasons:
+  2223057 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2223098 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2223310 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2252254 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2253301 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2253316 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2253317 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2254327 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2255416 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2267594 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+  2267745 duplicate payload across hosts [11, 16, 23, 29, 162, 184, 367]
+
+Per-host credit summary
+- host 10: 5845.37
+- host 102: 848.94
+- host 107: 12.62
+- host 11: 2219.78
+- host 123: 1299.44
+- host 134: 92.21
+- host 140: 196.88
+- host 159: 7748.11
+- host 16: 13232.52
+- host 162: 16467.49
+- host 182: 8523.27
+- host 184: 10211.53
+- host 2: 867.17
+- host 202: 489.39
+- host 219: 2329.98
+- host 222: 578.98
+- host 23: 10718.25
+- host 255: 60.95
+- host 267: 72.70
+- host 271: 197.72
+- host 29: 2517.35
+- host 341: 8557.54
+- host 345: 727.46
+- host 347: 1582.66
+- host 350: 371.38
+- host 364: 1726.56
+- host 367: 43115.56
+- host 377: 616.36
+- host 57: 301.73
+- host 61: 50.63
+- host 85: 1244.82
+- host 87: 1344.31
+- host 9: 563.08
+
+Cleanup and operational actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 68399
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 69098
+- Post-credit check showed 5 uncredited completed results remaining; these arrived after the credit run and were not left pending by the session.
+- Temporary anti-cheat script was removed after execution.
+- Temporary credit script and summary files were retained until report publication, then removed.

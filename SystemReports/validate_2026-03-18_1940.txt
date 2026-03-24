@@ -1,0 +1,115 @@
+Axiom BOINC Validation Log
+Session: 2026-03-18_1940 UTC
+Step: Validation & Credit (Step 3 of 13)
+
+Initial credit queue snapshot:
+- Uncredited results matching experiment patterns: 125844
+- Quick stats snapshot: 1726343 credited, 125844 uncredited
+
+Price-per-FLOP scales used:
+- CPU_SCALE=5.0196363564419115e-12
+- GPU_SCALE=2.604730343876649e-14
+
+Results credited this session snapshot:
+- Results credited: 19681
+- Total credit awarded: 1287525.66
+- Session identification query: result.mod_time >= '2026-03-18 19:30:00' UTC
+
+Queue status after final sweep snapshot:
+- Remaining zero-credit results with elapsed_time > 0: 31
+- Remaining zero-credit results with elapsed_time = 0: 108932
+- Note: this is a live queue. Positive-elapsed completions continued arriving during the session. Zero-elapsed rows were left at zero credit per the credit rule for no compute time.
+
+Per-host credit summary:
+- host 437: 62 results, 180212.34 credit
+- host 367: 2088 results, 173918.68 credit
+- host 485: 55 results, 131438.70 credit
+- host 486: 60 results, 130858.44 credit
+- host 22: 35 results, 80783.54 credit
+- host 18: 35 results, 78279.86 credit
+- host 515: 240 results, 64051.58 credit
+- host 20: 36 results, 54536.62 credit
+- host 17: 38 results, 48249.31 credit
+- host 19: 36 results, 37150.83 credit
+- host 16: 35 results, 16193.18 credit
+- host 23: 39 results, 15675.73 credit
+- host 508: 2151 results, 14850.44 credit
+- host 322: 9 results, 12137.89 credit
+- host 497: 432 results, 11673.95 credit
+- host 111: 439 results, 10868.77 credit
+- host 507: 1446 results, 9955.52 credit
+- host 397: 357 results, 9232.95 credit
+- host 141: 231 results, 8862.51 credit
+- host 398: 369 results, 8838.56 credit
+- host 105: 307 results, 8709.01 credit
+- host 339: 360 results, 8223.23 credit
+- host 395: 404 results, 7633.93 credit
+- host 340: 324 results, 7445.40 credit
+- host 240: 245 results, 7353.50 credit
+- host 268: 232 results, 7297.92 credit
+- host 332: 253 results, 7108.24 credit
+- host 330: 256 results, 7029.11 credit
+- host 390: 300 results, 6511.29 credit
+- host 324: 356 results, 6484.85 credit
+- host 488: 9 results, 6351.72 credit
+- host 327: 333 results, 6128.88 credit
+- host 338: 308 results, 5579.26 credit
+- host 376: 1126 results, 5311.28 credit
+- host 147: 8 results, 5303.31 credit
+- host 480: 62 results, 4780.77 credit
+- host 496: 378 results, 4568.86 credit
+- host 388: 297 results, 4450.83 credit
+- host 97: 168 results, 4252.81 credit
+- host 481: 48 results, 4217.60 credit
+- host 399: 332 results, 3891.69 credit
+- host 210: 365 results, 3890.45 credit
+- host 400: 344 results, 3771.14 credit
+- host 396: 353 results, 3726.58 credit
+- host 513: 156 results, 3613.10 credit
+- host 272: 117 results, 3473.65 credit
+- host 389: 299 results, 3119.10 credit
+- host 61: 150 results, 3046.69 credit
+- host 29: 107 results, 2937.69 credit
+- host 302: 104 results, 2852.58 credit
+- host 518: 17 results, 2073.11 credit
+- host 364: 150 results, 1975.59 credit
+- host 106: 124 results, 1771.55 credit
+- host 424: 140 results, 1694.98 credit
+- host 387: 303 results, 1670.34 credit
+- host 323: 9 results, 1642.56 credit
+- host 123: 223 results, 1628.53 credit
+- host 341: 72 results, 1573.38 credit
+- host 127: 201 results, 1318.79 credit
+- host 445: 85 results, 1309.25 credit
+- host 345: 157 results, 1236.21 credit
+- host 108: 99 results, 1159.52 credit
+- host 459: 82 results, 1103.81 credit
+- host 271: 11 results, 1034.95 credit
+- host 504: 392 results, 986.90 credit
+- host 358: 74 results, 814.41 credit
+- host 366: 48 results, 736.41 credit
+- host 60: 118 results, 712.18 credit
+- host 202: 79 results, 616.32 credit
+- host 71: 29 results, 610.63 credit
+- host 414: 29 results, 593.80 credit
+- host 107: 56 results, 568.69 credit
+- host 503: 185 results, 482.94 credit
+- host 506: 191 results, 431.00 credit
+- host 505: 189 results, 426.52 credit
+- host 451: 46 results, 355.65 credit
+- host 450: 8 results, 308.52 credit
+- host 113: 26 results, 306.30 credit
+- host 57: 13 results, 247.22 credit
+- host 159: 1 results, 176.16 credit
+- host 517: 16 results, 144.50 credit
+- host 456: 25 results, 142.61 credit
+- host 479: 6 results, 132.59 credit
+- host 483: 11 results, 131.60 credit
+- host 195: 17 results, 130.63 credit
+- host 134: 15 results, 116.52 credit
+- host 516: 30 results, 97.54 credit
+- host 137: 6 results, 96.83 credit
+- host 491: 2 results, 76.75 credit
+- host 373: 22 results, 50.78 credit
+- host 63: 48 results, 2.90 credit
+- host 468: 32 results, 2.32 credit

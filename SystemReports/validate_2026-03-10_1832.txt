@@ -1,0 +1,87 @@
+Validation Report
+Timestamp: 2026-03-10 18:32 Europe/Berlin
+
+Session summary
+- Sampled 200 sanitized JSON files during anti-cheat review.
+- Price table freshness check passed; no manual updater run was required.
+- Results credited this session: 2979
+- Total credit awarded this session: 124512.98
+- CPU results credited: 2432
+- GPU results credited: 516
+- Denied results set to 0.01 sentinel: 31
+- Remaining uncredited results after drain loop: 0
+
+Anti-cheat flags
+- All denied results were sampled sanitized payloads with empty `experiment_result` content and duplicate payload hashes across multiple hosts.
+- Result 2222184 on host 10: empty_payload, duplicate_payload_across_hosts
+- Result 2223321 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2223324 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2223325 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2223339 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2238623 on host 10: empty_payload, duplicate_payload_across_hosts
+- Result 2238633 on host 10: empty_payload, duplicate_payload_across_hosts
+- Result 2238899 on host 184: empty_payload, duplicate_payload_across_hosts
+- Result 2238900 on host 184: empty_payload, duplicate_payload_across_hosts
+- Result 2238915 on host 341: empty_payload, duplicate_payload_across_hosts
+- Result 2238928 on host 184: empty_payload, duplicate_payload_across_hosts
+- Result 2238932 on host 184: empty_payload, duplicate_payload_across_hosts
+- Result 2238947 on host 184: empty_payload, duplicate_payload_across_hosts
+- Result 2238968 on host 341: empty_payload, duplicate_payload_across_hosts
+- Result 2239022 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2239070 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2239077 on host 9: empty_payload, duplicate_payload_across_hosts
+- Result 2239229 on host 182: empty_payload, duplicate_payload_across_hosts
+- Result 2253211 on host 182: empty_payload, duplicate_payload_across_hosts
+- Result 2253601 on host 11: empty_payload, duplicate_payload_across_hosts
+- Result 2253844 on host 11: empty_payload, duplicate_payload_across_hosts
+- Result 2253984 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2253985 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2254308 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2255404 on host 10: empty_payload, duplicate_payload_across_hosts
+- Result 2256109 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2258131 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2267351 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2267364 on host 29: empty_payload, duplicate_payload_across_hosts
+- Result 2267478 on host 16: empty_payload, duplicate_payload_across_hosts
+- Result 2267496 on host 16: empty_payload, duplicate_payload_across_hosts
+
+Per-host credit summary
+- Host 2: 806.47
+- Host 9: 467.44
+- Host 10: 6420.83
+- Host 11: 1913.09
+- Host 16: 13721.23
+- Host 23: 10597.24
+- Host 29: 2327.62
+- Host 57: 189.45
+- Host 61: 74.30
+- Host 85: 1109.55
+- Host 87: 289.60
+- Host 102: 693.52
+- Host 107: 109.91
+- Host 123: 737.86
+- Host 134: 77.13
+- Host 140: 231.38
+- Host 159: 8584.52
+- Host 162: 1671.26
+- Host 182: 6447.59
+- Host 184: 5562.74
+- Host 202: 524.92
+- Host 219: 2187.61
+- Host 222: 591.69
+- Host 255: 180.67
+- Host 299: 456.32
+- Host 341: 9227.02
+- Host 345: 464.21
+- Host 346: 140.16
+- Host 347: 2530.37
+- Host 350: 330.80
+- Host 364: 1462.51
+- Host 367: 44160.71
+- Host 377: 223.28
+
+Cleanup actions
+- Ran three incremental credit passes to absorb results that completed during validation.
+- Updated `/opt/axiom_boinc/html/user/credited_count.txt` to 71378.
+- Updated `/opt/axiom_boinc/html/user/total_results_count.txt` to 72061.
+- Removed temporary credit script `/tmp/axiom_credit.py`.

@@ -1,0 +1,88 @@
+Validation Log
+Timestamp: 2026-03-15 13:40 Europe/Berlin
+
+Results credited this session
+- Credited results: 12257
+- Total credit awarded: 395116.42
+- CPU results credited: 11927
+- GPU results credited: 290
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.6333017724480773e-14
+- Price table refreshed: no
+
+Anti-cheat flags
+- Denied sentinel credit (0.01): 40 results
+- Empty payload: 31 results
+  Result IDs: 4193023, 4193029, 4193265, 4193292, 4193294, 4196659, 4198867, 4199050, 4201748, 4201879, 4203433, 4210455, 4210469, 4216742, 4217391, 4217688, 4218192, 4218375, 4218790, 4218803, 4219324, 4219436, 4219439, 4219638, 4219639, 4219641, 4219645, 4221482, 4221584, 4221892, 4221980
+- Duplicate payload across hosts: 8 results
+  Result IDs: 4213572, 4215072, 4215482, 4215717, 4218454, 4220152, 4220413, 4220726
+- Stub success under 5 seconds: 1 result
+  Result ID: 4217492
+
+Per-host credit summary
+- Host 9: 754.58
+- Host 11: 2237.49
+- Host 16: 7035.18
+- Host 23: 14136.66
+- Host 29: 2937.33
+- Host 57: 218.70
+- Host 60: 986.46
+- Host 61: 2164.20
+- Host 80: 453.05
+- Host 85: 265.71
+- Host 87: 1343.43
+- Host 105: 11161.87
+- Host 107: 79.58
+- Host 108: 788.66
+- Host 111: 10633.17
+- Host 123: 1562.11
+- Host 134: 112.33
+- Host 141: 9947.15
+- Host 147: 914.53
+- Host 159: 6733.63
+- Host 202: 603.11
+- Host 212: 1895.91
+- Host 219: 220.33
+- Host 222: 112.29
+- Host 240: 11526.44
+- Host 267: 83.21
+- Host 268: 10172.75
+- Host 269: 9078.94
+- Host 317: 487.43
+- Host 341: 14287.56
+- Host 345: 1046.93
+- Host 347: 2547.08
+- Host 350: 427.26
+- Host 358: 811.87
+- Host 364: 1855.05
+- Host 367: 171438.42
+- Host 379: 1047.05
+- Host 387: 1477.86
+- Host 388: 3382.16
+- Host 389: 3407.63
+- Host 390: 5980.75
+- Host 393: 1538.50
+- Host 404: 1110.41
+- Host 405: 1145.27
+- Host 406: 1071.89
+- Host 407: 1051.77
+- Host 410: 650.47
+- Host 424: 453.52
+- Host 437: 17798.82
+- Host 450: 713.37
+- Host 452: 1400.26
+- Host 458: 11072.02
+- Host 459: 394.14
+- Host 460: 4669.63
+- Host 461: 2610.81
+- Host 462: 27976.69
+- Host 464: 5102.97
+
+Cleanup actions taken
+- Updated result.granted_credit and validate_state in batches
+- Incremented host.total_credit and user.total_credit incrementally
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1317798
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 366654
+- Remaining uncredited results after this run: 5508
+- Remaining zero-elapsed results: 5495
+- Remaining results waiting on assimilated sanitized payloads: 13

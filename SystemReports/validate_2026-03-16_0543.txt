@@ -1,0 +1,73 @@
+Axiom validation log 2026-03-16_0543
+
+Results credited this session
+- Count: 14605 across 4 incremental passes
+- Total credit awarded: 507257.09
+- Primary-pass CPU results credited: 13734
+- Primary-pass GPU results credited: 438
+- Denied sentinel results: 1
+- CPU scale: 5.019636356441911e-12
+- GPU scale: 2.604730343876649e-14
+- Remaining uncredited results at log close: 4208
+- Remaining zero-elapsed no-credit results at log close: 4191
+- Remaining positive-elapsed uncredited results at log close: 17
+- Total credited results in database at log close: 1294068
+- Note: positive-elapsed residuals were still arriving while the credit loop was running
+
+Anti-cheat review
+- Sample size: 200 sanitized JSON files
+- Denied result 4334944: empty numeric payload
+
+Per-host credit summary
+- Host 1: 1626.50
+- Host 9: 795.22
+- Host 11: 2299.61
+- Host 16: 19418.19
+- Host 17: 36583.10
+- Host 18: 50592.23
+- Host 19: 6171.45
+- Host 20: 40658.52
+- Host 22: 47770.56
+- Host 23: 16749.51
+- Host 29: 2910.80
+- Host 60: 859.33
+- Host 61: 2303.43
+- Host 85: 1708.75
+- Host 87: 1199.27
+- Host 105: 15564.25
+- Host 106: 3026.48
+- Host 108: 346.54
+- Host 113: 251.64
+- Host 123: 1039.94
+- Host 127: 197.33
+- Host 134: 117.32
+- Host 137: 1144.66
+- Host 147: 4347.42
+- Host 222: 796.37
+- Host 240: 12551.08
+- Host 267: 272.08
+- Host 268: 11784.60
+- Host 269: 10440.33
+- Host 345: 1191.50
+- Host 350: 34.03
+- Host 358: 852.10
+- Host 364: 1873.68
+- Host 367: 169222.54
+- Host 387: 1493.25
+- Host 388: 5032.08
+- Host 389: 3596.28
+- Host 390: 6423.69
+- Host 394: 290.63
+- Host 450: 4623.06
+- Host 452: 1029.69
+- Host 456: 206.25
+- Host 459: 236.58
+- Host 469: 871.25
+- Host 470: 784.89
+
+Cleanup actions taken
+- Updated result.granted_credit and validate_state in batches
+- Incremented host.total_credit and user.total_credit incrementally
+- Updated /opt/axiom_boinc/html/user/credited_count.txt
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt
+- Ran 3 follow-up incremental sweeps to drain newly finished results

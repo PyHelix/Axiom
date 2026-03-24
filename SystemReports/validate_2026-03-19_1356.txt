@@ -1,0 +1,99 @@
+Axiom validation session report 2026-03-19_1356 UTC
+
+Results credited this session: 82461
+Total cobblestones added to host totals: 1427749.62
+CPU-priced results: 20625
+GPU-priced results: 932
+Sentinel 0.01 results: 60904
+CPU_SCALE: 5.019636356441911478e-12
+GPU_SCALE: 2.802821121974631032e-14
+Latest sweep completed: 2026-03-19 13:57:30 UTC
+
+Per-host credit summary:
+Host 16: 17174.96
+Host 17: 55401.44
+Host 18: 89016.42
+Host 19: 39035.12
+Host 20: 58967.20
+Host 22: 82393.56
+Host 23: 17375.24
+Host 27: 24.09
+Host 29: 3135.84
+Host 57: 135.15
+Host 60: 408.02
+Host 61: 3184.89
+Host 63: 4.04
+Host 85: 2144.67
+Host 87: 1968.77
+Host 97: 4375.36
+Host 105: 22388.97
+Host 106: 104.31
+Host 111: 11244.47
+Host 123: 1680.10
+Host 127: 1157.12
+Host 134: 126.92
+Host 137: 517.62
+Host 141: 4521.01
+Host 147: 5835.07
+Host 202: 521.68
+Host 210: 6290.86
+Host 240: 24714.55
+Host 251: 129.32
+Host 267: 627.19
+Host 268: 23088.24
+Host 269: 11174.09
+Host 271: 3093.63
+Host 272: 3686.71
+Host 275: 1255.45
+Host 279: 142.45
+Host 289: 3531.57
+Host 300: 15523.19
+Host 302: 2084.48
+Host 323: 842.98
+Host 324: 10234.27
+Host 327: 10211.11
+Host 330: 10174.58
+Host 332: 10753.36
+Host 338: 10097.74
+Host 339: 14258.64
+Host 340: 13223.56
+Host 341: 1604.27
+Host 345: 1234.07
+Host 358: 856.79
+Host 364: 2023.69
+Host 367: 190585.55
+Host 373: 201.72
+Host 376: 6284.26
+Host 387: 523.96
+Host 388: 13805.58
+Host 389: 3285.77
+Host 390: 6669.86
+Host 395: 11507.05
+Host 396: 142.42
+Host 397: 373.66
+Host 398: 254.71
+Host 399: 6820.38
+Host 400: 6630.26
+Host 424: 1705.60
+Host 428: 162.85
+Host 437: 195272.81
+Host 445: 1545.47
+Host 450: 3442.23
+Host 451: 390.71
+Host 459: 974.28
+Host 467: 9608.51
+Host 483: 206.45
+Host 484: 91.16
+Host 485: 152067.19
+Host 486: 148700.46
+Host 494: 7542.56
+Host 496: 471.56
+Host 497: 11968.39
+Host 504: 1529.73
+Host 505: 732.15
+Host 506: 32.18
+Host 507: 9134.21
+Host 508: 25963.05
+Host 513: 3699.85
+Host 516: 5.18
+Host 523: 1719.02

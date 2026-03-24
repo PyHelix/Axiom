@@ -1,0 +1,114 @@
+Axiom validation log 2026-03-17_1311 UTC
+
+Results credited this session
+- Credited results: 30048
+- Total credit awarded: 1168229.77
+- CPU-priced results: 27718
+- GPU-priced results: 795
+- Denied sentinel results (0.01 credit): 1535
+- CPU_SCALE: 5.019636356441911e-12
+- GPU_SCALE: 2.604730343876649e-14
+
+Anti-cheat flags
+- Result 4552587: empty sanitized payload
+- Result 4575767: empty sanitized payload
+- Result 4584328: empty sanitized payload
+- Result 4585520: empty sanitized payload
+- Result 4587021: empty sanitized payload
+- Result 4587493: empty sanitized payload
+- Result 4587563: empty sanitized payload
+- Result 4590205: empty sanitized payload
+- Result 4592094: empty sanitized payload
+- Result 4598172: empty sanitized payload
+- Result 4599656: empty sanitized payload
+- Result 4604725: empty sanitized payload
+- Result 4606650: empty sanitized payload
+- Result 4607400: empty sanitized payload
+- Result 4615281: empty sanitized payload
+- Result 4616333: empty sanitized payload
+- Result 4617569: empty sanitized payload
+- Result 4626067: empty sanitized payload
+
+Per-host credit summary
+- Host 1: 2643.20
+- Host 16: 14092.49
+- Host 17: 45231.13
+- Host 18: 60176.82
+- Host 19: 27760.08
+- Host 20: 55499.74
+- Host 22: 88435.22
+- Host 23: 16343.37
+- Host 29: 1947.01
+- Host 57: 250.65
+- Host 60: 544.58
+- Host 61: 2373.10
+- Host 63: 1.91
+- Host 85: 1313.97
+- Host 87: 1021.83
+- Host 97: 4149.81
+- Host 105: 14234.15
+- Host 108: 179.73
+- Host 111: 11692.94
+- Host 113: 188.75
+- Host 123: 1174.14
+- Host 127: 1154.03
+- Host 134: 126.94
+- Host 137: 26.98
+- Host 141: 4169.45
+- Host 147: 2262.37
+- Host 159: 10429.24
+- Host 202: 530.12
+- Host 235: 1045.43
+- Host 240: 14130.71
+- Host 267: 15.42
+- Host 268: 11122.83
+- Host 275: 3496.36
+- Host 289: 4107.50
+- Host 301: 11883.83
+- Host 302: 2070.88
+- Host 317: 151.50
+- Host 322: 12115.06
+- Host 323: 318.19
+- Host 341: 1597.26
+- Host 345: 1297.79
+- Host 358: 854.14
+- Host 364: 2136.41
+- Host 367: 166989.40
+- Host 373: 5.73
+- Host 376: 382.69
+- Host 387: 1480.70
+- Host 388: 4119.25
+- Host 389: 3699.07
+- Host 390: 6851.51
+- Host 394: 200.32
+- Host 414: 130.53
+- Host 424: 1851.85
+- Host 437: 387076.06
+- Host 445: 309.61
+- Host 450: 3683.47
+- Host 459: 742.75
+- Host 479: 1043.36
+- Host 480: 2465.70
+- Host 481: 3109.47
+- Host 483: 164.12
+- Host 485: 124449.99
+- Host 486: 12941.48
+- Host 488: 5646.24
+- Host 491: 91.16
+- Host 492: 374.15
+- Host 493: 450.14
+- Host 496: 218.75
+- Host 497: 5455.21
+
+Cleanup actions taken
+- Ran one full credit pass plus three catch-up credit passes for results that arrived during the session
+- Updated result.granted_credit and validate_state in batch chunks
+- Incremented host.total_credit and user.total_credit additively
+- Updated website counters: credited_count.txt=934625 and total_results_count.txt=411706
+- Copied this log to html/user/system_reports and Axiom_repo/SystemReports
+- Published updated report to Git commit 9d90f85, then revised the report locally for final totals
+- Removed temporary credit script and summary files from /tmp after the first pass; catch-up script remains until final cleanup
+- Remaining granted_credit=0 rows at final snapshot: 57010
+- Remaining elapsed_time=0 rows: 56992
+- Remaining elapsed_time>0 rows: 18 (new completions arriving during live processing)
+- Total completed result counter after update: 411706

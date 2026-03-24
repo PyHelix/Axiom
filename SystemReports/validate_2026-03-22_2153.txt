@@ -1,0 +1,62 @@
+Validation session: 2026-03-22 21:45 UTC to 2026-03-22 21:53 UTC
+Report generated: 2026-03-22 21:53 UTC
+
+Results credited this session:
+- 1310 results credited
+- 25793.87 cobblestones granted
+- Source: /opt/axiom/experiment_session/logs/credit_cron.log entries from 2026-03-22 21:45:00 UTC through 2026-03-22 21:51:33 UTC
+
+Per-host credit summary:
+- Captured manual cleanup passes totaled 479 results and 11678.59 cobblestones
+- Host summary below reflects the host-level distribution captured immediately before the 21:50:12 UTC and 21:51:33 UTC credit runs
+
+hostid	results	credit
+552	1	3930.12
+159	3	1544.55
+550	36	496.15
+339	19	474.86
+507	78	469.59
+551	33	454.56
+332	15	405.83
+398	11	329.14
+497	11	317.63
+330	11	288.16
+111	12	265.14
+338	22	263.80
+397	8	257.00
+324	14	253.68
+376	48	235.52
+395	13	212.81
+539	9	183.85
+327	10	139.01
+396	12	126.09
+97	6	124.80
+400	9	110.09
+87	7	92.57
+61	4	64.79
+2	5	62.77
+358	5	59.22
+399	4	55.35
+364	5	54.04
+123	4	46.74
+1	7	46.63
+249	2	45.69
+60	5	39.21
+493	13	35.46
+459	2	33.25
+504	11	31.70
+29	2	29.16
+202	3	24.65
+506	12	22.36
+127	2	20.44
+534	1	15.07
+134	1	9.45
+505	2	5.44
+554	1	2.25
+
+Operational notes:
+- Price table freshness check passed; no manual refresh required
+- Credit worker was run manually to drain the live eligible backlog during this session
+- Remaining joinable results with elapsed_time > 0 at 2026-03-22 21:53 UTC: 173
+- Remaining joinable results with elapsed_time = 0 at 2026-03-22 21:53 UTC: 7634
+- Remaining orphaned uncredited results with missing host/workunit joins at 2026-03-22 21:53 UTC: 1276776

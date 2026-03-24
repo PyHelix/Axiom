@@ -1,0 +1,52 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-06 21:15
+
+Session scope
+- Validation, credit, and cleanup only.
+- Trusted review source used: /opt/axiom/experiment_results/sanitized/*_safe.json
+- Scientific findings source consulted for context only: /opt/axiom/experiment_session/findings_summary.txt
+
+Results reviewed this session
+- Reviewed 53 successful uncredited BOINC results:
+  1745905, 1787407, 1787415, 1787416, 1787449, 1787591, 1787632, 1787652, 1787805, 1787905, 1787908, 1788329, 1788737, 1788738, 1788744, 1788745, 1788748, 1788749, 1788758, 1788763, 1788781, 1789116, 1789977, 1789983, 1789989, 1789990, 1789995, 1789997, 1789998, 1789999, 1790036, 1790037, 1790040, 1790043, 1790044, 1790047, 1790052, 1790053, 1790066, 1790067, 1790075, 1790080, 1790212, 1790216, 1790354, 1790355, 1790357, 1790516, 1790517, 1790518, 1790519, 1790520, 1790630
+- Brief analysis: every reviewed result was present in BOINC as outcome=1/server_state=5/granted_credit=0, but no corresponding trusted sanitized payload was available in /opt/axiom/experiment_results/sanitized at validation time.
+- Credit decision: deferred for all 53 results until their sanitized numeric payloads exist. No credit awarded without trusted result data.
+- Representative result names left pending:
+  exp_fput_heat_conductivity_1c2fc14d_0
+  exp_fhn_spiral_tip_fractal_gpu_gpu_c822ad_0
+  exp_fhn_coherence_resonance_gpu_gpu_5c4358_0
+  exp_structured_smin_crossover_gpu_gpu_de7246_0
+  exp_band_rmt_localization_gpu_gpu_f6c715_0
+  exp_cahnhilliard_mobility_disorder_gpu_gpu_323c19_0
+  exp_critical_branching_skew_crossover_bc1cbe_1
+  exp_quorum_sensing_spatial_hysteresis_d315e1e7_1
+  exp_winding_number_spitzer_1d22eb09_1
+  exp_kauffman_autocatalytic_threshold_c078a64f_1
+  exp_benford_logistic_transition_6e991be3_1
+  exp_rsa_polydisperse_jamming_fbd46e9b_1
+
+Credit awarded
+- Result credit written: 0
+- User credit increments written: none
+- Host credit increments written: none
+- Session credit total: 0 / 10000 cap
+
+Per-user totals this session
+- No user totals changed because no trusted sanitized payloads were available for the reviewed queue.
+
+Stuck/broken tasks cleaned up
+- Applied dead-host stuck-task cleanup query for tasks running more than 12 hours on hosts absent more than 6 hours.
+- Rows updated: 1
+- The most recent matching cleaned task at query time was result 1783170 on host 350.
+
+Failure-pattern review
+- Recent success/failure patterns were checked for the experiments represented in the current queue.
+- Several experiments show replica-0 failures followed by replica-1 successes. That is not sufficient evidence of a broken script by itself.
+- No experiment was aborted this session because no experiment met the threshold of being clearly broken across hosts while still actively wasting compute in a way justified by the prompt rules.
+
+Bugs found and fixed in experiment scripts
+- None. No script change was made in /opt/axiom_boinc/html/user/experiments/.
+
+Operational notes
+- Findings summary indicates these experiment families are scientifically interpretable, but this validation step did not use findings text as a substitute for trusted per-result numeric payloads.
+- Website counters were not incremented because zero results were credited this session.

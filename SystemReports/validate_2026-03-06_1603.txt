@@ -1,0 +1,61 @@
+Axiom validation log
+Timestamp: 2026-03-06_1603
+
+Operational summary
+- Reviewed pending successful experiment results: 355
+- Trusted sanitized payloads found for reviewed pending results: 0/355
+- Credit awarded this session: 0
+- Website credited_count.txt left unchanged at 0
+- Website total_results_count.txt left unchanged at 962 (live completed total is 355)
+- Stuck tasks cleaned up: 0
+- Broken experiments aborted: 0
+
+Results reviewed this session
+- All 355 pending successful exp_% results were checked against /opt/axiom/experiment_results/sanitized/*_safe.json by exact result-name match.
+- No matching trusted sanitized JSON payloads were present for any pending result, so quality validation and crediting were deferred for all reviewed IDs.
+- Per prompt guardrails, no raw upload files were read and no credit was inferred from elapsed_time alone.
+
+Pending result IDs by experiment (credit deferred: missing trusted sanitized payload)
+- critical_branching_skew_crossover: 129 results; IDs 1741402, 1741406, 1741474, 1741491, 1741499, 1741502, 1741503, 1741507, 1741508, 1741509, 1741510, 1741511, ...
+- hyperpgg: 23 results; IDs 1783122, 1783189, 1783205, 1783213, 1783221, 1783537, 1783553, 1785686, 1788378, 1788386, 1788394, 1788402, ...
+- benford: 23 results; IDs 1783124, 1783183, 1783199, 1783539, 1783547, 1785680, 1785699, 1788372, 1788380, 1788388, 1788396, 1788404, ...
+- goldecay: 23 results; IDs 1783186, 1783194, 1783210, 1783534, 1783542, 1785702, 1785718, 1788375, 1788383, 1788391, 1788399, 1788407, ...
+- windang: 22 results; IDs 1783184, 1783208, 1783224, 1783540, 1783548, 1785681, 1788373, 1788381, 1788389, 1788397, 1788405, 1788413, ...
+- bootperc: 22 results; IDs 1783185, 1783193, 1783201, 1783217, 1783549, 1785682, 1788374, 1788382, 1788390, 1788398, 1788406, 1788414, ...
+- votermod: 19 results; IDs 1783187, 1783195, 1785684, 1785711, 1788376, 1788384, 1788392, 1788400, 1788408, 1788416, 1788424, 1788432, ...
+- collatz: 18 results; IDs 1783190, 1783198, 1783538, 1788379, 1788387, 1788395, 1788403, 1788411, 1788419, 1788427, 1788435, 1788443, ...
+- nkwalk: 14 results; IDs 1785677, 1785685, 1785704, 1788377, 1788385, 1788393, 1788433, 1788441, 1788449, 1788457, 1788465, 1788477, ...
+- cml_sync_transition_gpu_gpu: 12 results; IDs 1780757, 1780761, 1780847, 1780859, 1780862, 1780869, 1780880, 1780922, 1780932, 1787686, 1787710, 1787758
+- ginibre_spacing_universality_gpu_gpu: 7 results; IDs 1782125, 1782126, 1782127, 1782132, 1782135, 1787722, 1787754
+- rsa_polydisperse_jamming: 6 results; IDs 1745746, 1777930, 1777942, 1777990, 1778050, 1778134
+- sparse_wigner_tw_edge: 6 results; IDs 1777932, 1777956, 1778028, 1778124, 1778136, 1778148
+- random_poly_roots_gpu_gpu: 6 results; IDs 1782413, 1782424, 1782427, 1787683, 1787715, 1787755
+- quorum_sensing_spatial_hysteresis: 5 results; IDs 1745721, 1777989, 1778001, 1778013, 1778049
+- fput_heat_conductivity: 5 results; IDs 1777969, 1777993, 1778053, 1778065, 1778137
+- galtonwatson_extinction_universality: 4 results; IDs 1777983, 1777995, 1778103, 1778127
+- winding_number_spitzer: 3 results; IDs 1745726, 1777958, 1778126
+- benford_logistic_transition: 2 results; IDs 1777924, 1777996
+- kauffman_autocatalytic_threshold: 2 results; IDs 1777940, 1777952
+- band_rmt_localization_gpu_gpu: 2 results; IDs 1787676, 1787756
+- fhn_spiral_tip_fractal_gpu_gpu: 1 results; IDs 1787679
+- fhn_coherence_resonance_gpu_gpu: 1 results; IDs 1787688
+
+Credit actions
+- No result/user/host credit rows were updated because no reviewed pending result had a trusted sanitized payload available for scientific-value assessment.
+- Total credit added to result table: 0
+- Total credit added to user table: 0
+- Total credit added to host table: 0
+
+Cleanup actions
+- Ran stuck-task cleanup query for exp_% tasks older than 12h on hosts silent for >6h; rows affected: 0.
+- Failure-rate scan found no experiment family with more than two completed failures, so no broken-experiment abort was applied.
+- Investigated the two current failed results via stderr_out only:
+  result 1783659 on host 63 (exp_benford_h63_2560813_1772794149_0) exited with status 195; stderr shows PyInstaller/Python DLL load failure before experiment code ran.
+  result 1788370 on host 63 (exp_windang_h63_2611325_1772804023_0) exited with status 195; stderr shows PyInstaller/Python DLL load failure before experiment code ran.
+
+Bugs found and fixed in experiment scripts
+- No experiment script changes were made this session. The observed failures were isolated host-environment DLL load issues on one host, not a reproducible cross-host experiment bug.
+
+Artifacts used
+- /tmp/analyze_pending_results.py
+- /tmp/pending_results_analysis.json

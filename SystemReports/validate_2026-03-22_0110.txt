@@ -1,0 +1,63 @@
+Validation report
+Timestamp: 2026-03-22 01:10 UTC
+Session window: 2026-03-22 01:06:38 UTC to 2026-03-22 01:10:10 UTC
+
+Credit system status
+- Price table checked at session start. last_updated_unix=1774138517 (2026-03-22 00:15:17 UTC), within the 3960 second freshness window. No manual refresh required.
+- credit_cron is installed in crontab and active every 5 minutes.
+- Latest observed credit_cron entry during this session: 2026-03-22 01:10:05 UTC, Credited 480 results, 42328.77 credit (CPU:462 GPU:18).
+
+Current backlog snapshot
+- Uncredited completed results at session start: 830342
+
+Results credited this session
+- Cron-confirmed batch this session: 480 results, 42328.77 cobblestones
+- Result-table delta during this session window (mod_time >= 2026-03-22 01:06:38 UTC): 1006 results, 79724.73 granted credit
+- Note: result.mod_time advanced across 2026-03-22 01:10:04, 01:10:09, and 01:10:10 UTC, so the broader session-window delta is larger than the single cron summary line.
+
+Per-host credit summary
+- host 437: 7 results, 25334.38 credit
+- host 487: 4 results, 15050.15 credit
+- host 367: 140 results, 11069.62 credit
+- host 485: 1 result, 3693.19 credit
+- host 19: 2 results, 2200.02 credit
+- host 17: 1 result, 2063.56 credit
+- host 105: 2 results, 1974.99 credit
+- host 486: 1 result, 1869.99 credit
+- host 23: 3 results, 1657.49 credit
+- host 159: 1 result, 1336.32 credit
+- host 240: 1 result, 1045.45 credit
+- host 339: 37 results, 937.54 credit
+- host 375: 121 results, 769.10 credit
+- host 543: 119 results, 758.91 credit
+- host 376: 148 results, 709.96 credit
+- host 539: 28 results, 708.41 credit
+- host 332: 29 results, 707.56 credit
+- host 395: 41 results, 704.23 credit
+- host 497: 24 results, 703.35 credit
+- host 324: 40 results, 702.09 credit
+- host 327: 43 results, 676.81 credit
+- host 330: 30 results, 657.30 credit
+- host 338: 41 results, 619.04 credit
+- host 520: 1 result, 535.60 credit
+- host 249: 1 result, 491.12 credit
+- host 147: 1 result, 458.29 credit
+- host 366: 17 results, 407.26 credit
+- host 29: 7 results, 322.26 credit
+- host 513: 1 result, 301.61 credit
+- host 97: 16 results, 273.14 credit
+- host 61: 12 results, 217.82 credit
+- host 85: 17 results, 175.98 credit
+- host 111: 7 results, 124.14 credit
+- host 364: 10 results, 111.82 credit
+- host 123: 17 results, 107.76 credit
+- host 127: 8 results, 55.49 credit
+- host 358: 5 results, 54.03 credit
+- host 202: 5 results, 41.78 credit
+- host 493: 7 results, 27.45 credit
+- host 534: 2 results, 21.34 credit
+- host 394: 2 results, 16.37 credit
+- host 400: 1 result, 15.38 credit
+- host 134: 1 result, 7.19 credit
+- host 60: 3 results, 5.55 credit
+- host 459: 1 result, 3.89 credit

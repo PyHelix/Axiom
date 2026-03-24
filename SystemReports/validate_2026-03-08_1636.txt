@@ -1,0 +1,38 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-08 16:36:19 CET
+Step: Validation & credit only
+
+Session summary
+- Findings summary reviewed before crediting. Active families in this cycle were dominated by exp_ageing_voter_modular_polarization, exp_abx_cycle_hgt_delay_resonance, exp_sparse_wigner_tw_edge, exp_markov_branching_rescue_correlation, exp_hypergraph_pgg_inertia_crossover, and current GPU families.
+- Primary batch reviewed 5298 completed uncredited results. Credits applied: 3124 weighted approvals, 2174 denied sentinels (0.01) from family-median nbytes anomalies under the configured >3x / <0.2x rule.
+- Drain passes reviewed and credited 68 additional late-arriving completed results under the same rules.
+- Website counters after session: credited_count=43341, total_results_count=44332.
+- Final queue check at 2026-03-08 16:36:19 CET: 0 uncredited completed experiment results pending.
+
+Validation basis
+- Current live pool had no matching per-result sanitized JSON files at review time, so payload-level review for current results was unavailable this cycle.
+- Historical sanitized sample from active families: 200 files sampled, 183 contained experiment_result, 0 empty payloads, 0 duplicate payload groups, trials_completed median 11970.5 (min 10394, max 13547).
+- Credit weighting used DB-extracted xml_doc_out nbytes only. Per-family nbytes medians were used for abnormal-size denial checks. Retired experiment registry checked; no retired-family sentinel denials were needed in this session.
+
+Representative reviewed results
+- result 1900999 (host 140): exp_ageing_voter_modular_polarization_e62d3f_0 -> 0.01 credit sentinel; nbytes 54205 exceeded 3x family median 249; no matching sanitized JSON yet.
+- result 1901283 (host 113): exp_abx_cycle_hgt_delay_resonance_3a72f2_0 -> 0.01 credit sentinel; nbytes 17266 exceeded 3x family median 245; no matching sanitized JSON yet.
+- result 1901354 (host 113): exp_sparse_wigner_tw_edge_1d545c_0 -> 0.01 credit sentinel; nbytes 21047 exceeded 3x family median 237; no matching sanitized JSON yet.
+- result 1925820 (host 202): exp_abx_cycle_hgt_delay_resonance_dd4b92_0 -> 2.84 credit; nbytes 245 matched family median band; no matching sanitized JSON yet.
+- result 1926106 (host 202): exp_hypergraph_pgg_inertia_crossover_52686c_0 -> 2.87 credit; nbytes within family median band.
+- result 1926116 (host 202): exp_ageing_voter_modular_polarization_a31b54_0 -> 32.71 credit; nbytes within weighted pool and below per-result cap.
+- result 1926160 (host 202): exp_sparse_wigner_tw_edge_4e27b4_0 -> 50.00 credit cap reached.
+- result 1926161 (host 202): exp_markov_branching_rescue_correlation_1c7f93_0 -> 50.00 credit cap reached.
+
+Per-user totals (primary batch top additions)
+- user 55: +2870.10 credit -> total 30805.14
+- user 83: +219.89 credit -> total 60048.73
+- user 30: +50.07 credit -> total 20466.62
+- user 80: +15.83 credit -> total 7869.73
+- user 10: +8.23 credit -> total 39348.95
+
+Cleanup / operations
+- Host and user total_credit fields were incremented, not overwritten.
+- credited_count.txt and total_results_count.txt were updated.
+- No stuck-task cleanup was performed in this step.
+- No experiment scripts were modified and no bugs were fixed in this step.

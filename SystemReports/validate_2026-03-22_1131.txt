@@ -1,0 +1,53 @@
+Validation session report
+Timestamp (UTC): 2026-03-22 11:31
+
+Price table check:
+- /opt/axiom/gpu_price_table.json last_updated_unix=1774178116
+- Freshness at validation start: 700 seconds old
+- cpu_scale=5.0196363564419115e-12
+- gpu_scale=2.586538701225352e-14
+- No price refresh needed
+
+Credit execution summary:
+- credit_cron.log showed recent successful activity before intervention
+- Manual credit runs triggered in this session:
+  2026-03-22 11:27:46 UTC: 409 results, 4461.95 credit
+  2026-03-22 11:29:19 UTC: 221 results, 2582.09 credit
+  2026-03-22 11:29:41 UTC: 49 results, 465.91 credit
+  2026-03-22 11:29:53 UTC: 15 results, 199.27 credit
+  2026-03-22 11:30:58 UTC: 128 results, 1538.74 credit
+- Results credited this session: 822
+- Total credit awarded this session: 9247.96
+
+Operational state:
+- Uncredited results matching name filter after session snapshot: 1064533
+- Joined positive-credit backlog was actively drained, but new completed results continued to arrive during execution
+- credit_cron is installed in crontab and continues running every 5 minutes
+
+Per-host credit summary:
+- Frozen actionable backlog snapshot used for host accounting: 168 results, 1987.18 credit
+- Host 541: 465.57
+- Host 542: 306.04
+- Host 327: 120.72
+- Host 324: 111.10
+- Host 111: 90.62
+- Host 339: 87.61
+- Host 375: 85.35
+- Host 543: 80.99
+- Host 395: 76.07
+- Host 338: 75.47
+- Host 97: 72.46
+- Host 539: 62.35
+- Host 330: 57.21
+- Host 376: 48.93
+- Host 127: 36.01
+- Host 2: 35.01
+- Host 332: 29.12
+- Host 497: 27.58
+- Host 202: 25.14
+- Host 210: 19.97
+- Host 451: 18.69
+- Host 358: 16.88
+- Host 364: 16.72
+- Host 123: 13.53
+- Host 424: 8.03

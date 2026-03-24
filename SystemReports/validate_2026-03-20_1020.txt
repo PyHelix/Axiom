@@ -1,0 +1,86 @@
+Axiom BOINC validation log
+Timestamp (UTC): 2026-03-20_1020
+Step: Validation & Credit (Step 3 of 17)
+
+Price-per-FLOP scales used:
+- CPU_SCALE=5.0196363564419115e-12
+- GPU_SCALE=2.6777454364919562e-14
+
+Results credited this session:
+- Credited results: 12922
+- Total credit awarded: 691105.06
+
+Operational notes:
+- Credit was awarded in repeated passes because new completed results continued arriving during execution.
+- Remaining uncredited records at the end of the session were overwhelmingly elapsed_time=0 rows, which the workflow specifies to skip entirely.
+
+Per-host credit summary:
+- Host 16: 14886.63
+- Host 17: 48583.79
+- Host 18: 83468.86
+- Host 19: 35142.18
+- Host 22: 83313.34
+- Host 23: 16256.65
+- Host 29: 2940.39
+- Host 57: 137.64
+- Host 60: 1038.44
+- Host 61: 3015.21
+- Host 85: 2041.86
+- Host 87: 2060.40
+- Host 97: 4089.08
+- Host 105: 13973.11
+- Host 106: 612.27
+- Host 107: 280.39
+- Host 111: 10591.37
+- Host 123: 1500.45
+- Host 127: 1072.41
+- Host 134: 110.33
+- Host 137: 399.34
+- Host 141: 10319.62
+- Host 147: 4659.79
+- Host 210: 159.97
+- Host 240: 12726.80
+- Host 267: 71.25
+- Host 268: 11771.85
+- Host 275: 877.95
+- Host 289: 3002.47
+- Host 302: 1964.61
+- Host 317: 442.62
+- Host 324: 9745.77
+- Host 327: 9719.32
+- Host 330: 10085.19
+- Host 332: 10184.21
+- Host 338: 9677.07
+- Host 339: 13775.90
+- Host 340: 12716.73
+- Host 341: 1508.34
+- Host 345: 1193.73
+- Host 358: 822.76
+- Host 364: 1192.33
+- Host 367: 164472.63
+- Host 376: 8847.12
+- Host 388: 9688.73
+- Host 389: 3071.03
+- Host 390: 6345.39
+- Host 395: 10917.86
+- Host 396: 181.26
+- Host 397: 489.82
+- Host 398: 367.83
+- Host 399: 137.31
+- Host 400: 232.76
+- Host 424: 297.86
+- Host 450: 2442.51
+- Host 456: 107.47
+- Host 459: 683.97
+- Host 467: 328.22
+- Host 493: 529.35
+- Host 494: 9470.83
+- Host 496: 689.73
+- Host 497: 11436.91
+- Host 505: 8.72
+- Host 506: 77.50
+- Host 507: 66.53
+- Host 508: 126.69
+- Host 513: 3444.47
+- Host 531: 2559.07
+- Host 532: 1951.03

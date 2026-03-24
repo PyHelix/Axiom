@@ -1,0 +1,81 @@
+Validation Report
+Timestamp: 2026-03-12_0738
+Session window (result.mod_time): 2026-03-12 07:36:48 to 2026-03-12 07:37:34
+
+Results credited this session
+- Count: 5704
+- Total credit awarded: 304983.37
+- CPU credited: 5385
+- GPU credited: 317
+- Denied sentinel results: 2
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6744217724480773e-14
+- Queue state after final pass: 0 uncredited matching results pending
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from the live uncredited queue
+- Flagged result 2684678 (host 367): sanitized payload contained only metadata with no experiment_result numeric payload; denied at 0.01 credit
+- Flagged result 2697623 (host 367): sanitized payload contained only metadata with no experiment_result numeric payload; denied at 0.01 credit
+- No duplicate cross-host payloads or family outliers were flagged in the sampled set
+
+Per-host credit summary for this session
+hostid=1 results=77 credit=4556.75
+hostid=2 results=28 credit=665.84
+hostid=11 results=8 credit=2206.05
+hostid=16 results=21 credit=8531.01
+hostid=23 results=11 credit=4122.00
+hostid=29 results=55 credit=2198.21
+hostid=71 results=7 credit=179.02
+hostid=85 results=60 credit=1068.59
+hostid=105 results=207 credit=10067.30
+hostid=134 results=8 credit=84.04
+hostid=147 results=7 credit=3661.67
+hostid=159 results=2 credit=1529.44
+hostid=163 results=13 credit=173.77
+hostid=182 results=7 credit=7326.86
+hostid=184 results=16 credit=12207.45
+hostid=190 results=11 credit=291.28
+hostid=210 results=210 credit=3893.22
+hostid=222 results=28 credit=497.85
+hostid=240 results=144 credit=5216.02
+hostid=249 results=7 credit=3743.68
+hostid=268 results=138 credit=4112.63
+hostid=299 results=2 credit=837.99
+hostid=324 results=239 credit=12097.06
+hostid=327 results=210 credit=10617.95
+hostid=330 results=168 credit=6475.56
+hostid=332 results=191 credit=7466.60
+hostid=333 results=255 credit=11050.64
+hostid=334 results=236 credit=10801.12
+hostid=339 results=254 credit=10722.68
+hostid=345 results=22 credit=301.47
+hostid=347 results=39 credit=3356.16
+hostid=350 results=3 credit=60.64
+hostid=367 results=847 credit=52088.75
+hostid=379 results=8 credit=4341.20
+hostid=387 results=64 credit=727.06
+hostid=388 results=80 credit=2458.54
+hostid=389 results=93 credit=1970.73
+hostid=390 results=104 credit=3807.94
+hostid=393 results=7 credit=3783.19
+hostid=394 results=6 credit=79.28
+hostid=395 results=251 credit=11199.91
+hostid=396 results=256 credit=4323.74
+hostid=397 results=256 credit=11126.65
+hostid=398 results=256 credit=10858.11
+hostid=399 results=256 credit=4856.81
+hostid=400 results=230 credit=4284.71
+hostid=401 results=224 credit=9672.63
+hostid=402 results=32 credit=979.46
+hostid=404 results=6 credit=3556.63
+hostid=405 results=7 credit=4203.30
+hostid=406 results=7 credit=3922.44
+hostid=407 results=7 credit=4025.08
+hostid=408 results=2 credit=1169.16
+hostid=409 results=7 credit=4174.44
+hostid=410 results=7 credit=4644.86
+hostid=413 results=7 credit=2608.24
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 93305
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 92770
+- Removed session temp scripts from /tmp after crediting

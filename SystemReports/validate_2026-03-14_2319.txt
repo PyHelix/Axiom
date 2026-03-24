@@ -1,0 +1,66 @@
+Axiom Validation Log
+Timestamp: 2026-03-14_2319
+
+Results credited this session
+- Count: 2211
+- Total credit awarded: 40097.04
+- CPU results credited: 2015
+- GPU results credited: 196
+- CPU scale: 5.019636356441911e-12
+- GPU scale: 2.522878145560465e-14
+
+Anti-cheat review
+- Sampled sanitized result files: 200
+- Flagged/denied results: 0
+- Denied IDs: none
+- Notes: Sampled files were checked for empty/trivial payloads, duplicate numeric payloads across hosts, and broad outliers within experiment families. No suspicious payloads were found in the reviewed set.
+
+Per-host credit summary
+host 367: 21719.08
+host 105: 1499.50
+host 240: 1399.68
+host 111: 1394.33
+host 192: 1345.84
+host 269: 1317.61
+host 184: 978.91
+host 141: 914.94
+host 268: 908.82
+host 10: 818.44
+host 182: 792.55
+host 442: 755.88
+host 390: 751.04
+host 1: 665.95
+host 388: 594.40
+host 389: 571.66
+host 61: 545.21
+host 364: 324.63
+host 29: 323.92
+host 85: 305.96
+host 159: 304.32
+host 445: 255.19
+host 11: 233.73
+host 87: 223.30
+host 54: 175.41
+host 60: 169.84
+host 345: 164.42
+host 123: 154.73
+host 222: 103.45
+host 202: 86.35
+host 9: 58.23
+host 249: 51.03
+host 424: 50.17
+host 127: 29.44
+host 137: 28.94
+host 350: 26.32
+host 16: 19.83
+host 23: 19.15
+host 134: 14.84
+
+Cleanup actions taken
+- Updated result.granted_credit and result.validate_state for credited results in batch SQL updates
+- Incremented host.total_credit and user.total_credit using additive updates only
+- Updated /opt/axiom_boinc/html/user/credited_count.txt
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt
+- Remaining granted_credit=0 results after run: 2125
+- Remaining zero-elapsed/no-compute results after run: 2047
+- Remaining uncredited results with sanitized files present: 58

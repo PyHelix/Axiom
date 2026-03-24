@@ -1,0 +1,98 @@
+Axiom BOINC Validation Log
+Session: 2026-03-12 02:18 CET
+Session window closed on a zero-pending check after repeated tail drains; the queue is live and may refill immediately after closure.
+
+Results credited this session
+Total results credited: 9524
+Positive-credit results: 9511
+Denied sentinel results (0.01): 13
+Positive credit awarded (DB rounded sum): 515750.06
+Denied sentinel total: 0.13
+CPU positive-credit results (appid=1): 8818
+GPU positive-credit results (appid=2): 693
+CPU_SCALE: 5.0196363564419115e-12
+GPU_SCALE: 2.7183629129544545e-14
+
+Anti-cheat flags
+Sampled 200 sanitized JSON files from the initial uncredited queue and reviewed all later tail batches directly.
+Manual empty-payload denials: 2633359, 2633362, 2633395, 2633819, 2633821
+Reason: sanitized file contained only server metadata plus tiny elapsed value and no experiment_result payload; treated as empty-payload gaming / trivial stub.
+Auto-denied stub results via elapsed_time < 5s rule: 2617613, 2617614, 2617615, 2617618, 2617625, 2617627, 2617629, 2617630
+Reason: sub-5-second runtime stub / instant-failure pattern per validation policy.
+Reviewed but not denied: one numeric outlier candidate from the initial sample had a complete payload and was not high-confidence enough for rejection.
+
+Per-host credit summary (positive credit only)
+host_id	results	credit
+341	199	84913.77
+367	1773	63755.39
+395	372	15790.26
+327	327	15594.87
+401	379	15467.41
+324	321	15318.00
+398	379	15222.62
+105	343	14847.27
+397	351	14314.19
+184	18	13614.10
+333	327	13444.47
+339	320	12804.51
+16	31	12022.23
+334	254	10903.99
+332	276	10225.31
+23	28	9899.23
+330	265	9683.52
+182	9	9409.63
+240	255	8665.52
+192	145	7734.87
+268	254	7151.57
+10	9	6916.10
+1	107	6828.61
+390	190	6601.35
+400	366	6449.81
+399	351	6212.86
+210	345	6022.16
+249	12	5658.50
+388	193	5609.06
+396	341	5453.41
+379	10	5362.76
+147	10	5118.84
+404	9	4960.09
+406	9	4934.39
+407	9	4911.92
+410	8	4745.90
+408	9	4738.28
+409	9	4721.84
+405	8	4568.05
+393	8	4223.01
+347	51	3892.91
+389	192	3886.77
+159	43	3666.86
+413	9	3344.40
+29	80	3001.40
+85	129	2192.59
+11	8	2191.23
+412	1	1933.67
+2	46	1044.41
+345	79	1022.74
+87	48	838.61
+123	60	725.16
+411	7	600.33
+387	40	429.76
+299	1	427.37
+222	20	337.30
+402	10	275.55
+80	1	247.49
+163	18	229.33
+219	6	197.21
+403	12	149.67
+134	12	118.62
+71	5	118.40
+107	2	23.42
+140	1	22.17
+394	1	13.02
+
+Cleanup actions
+Updated /opt/axiom_boinc/html/user/credited_count.txt to 93331
+Updated /opt/axiom_boinc/html/user/total_results_count.txt to 93367
+Temporary credit script removed from /tmp/axiom_credit.py
+Published validation report to /opt/axiom_boinc/html/user/system_reports/
+No services, daemons, indexes, lock files, cron entries, or assimilator code were modified.

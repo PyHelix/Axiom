@@ -1,0 +1,40 @@
+Axiom validation log
+Timestamp (UTC): 2026-03-22_0350
+Step: Validation & Credit (bounded final pass)
+
+Results credited this session: 127
+Total cobblestones granted this session: 12611.586989050884
+Zero-elapsed results skipped: 892730
+Eligible uncredited results remaining at end-of-pass: 16
+
+Per-host credit summary:
+host_id=60 results=1 credit=7.150626722263905
+host_id=61 results=2 credit=39.71771519566837
+host_id=97 results=5 credit=80.71063249580989
+host_id=123 results=6 credit=44.349237751612016
+host_id=127 results=3 credit=20.95997485353609
+host_id=202 results=1 credit=12.040507286099222
+host_id=324 results=4 credit=61.20268274982069
+host_id=327 results=6 credit=97.68150913276506
+host_id=330 results=2 credit=56.10001212941012
+host_id=332 results=3 credit=66.29354155338359
+host_id=338 results=6 credit=86.80540410373328
+host_id=339 results=4 credit=91.30422299651747
+host_id=364 results=1 credit=16.43111758766819
+host_id=366 results=1 credit=27.13779639772167
+host_id=367 results=18 credit=477.83382740040315
+host_id=375 results=12 credit=70.5188523053704
+host_id=376 results=17 credit=85.02413789783881
+host_id=395 results=3 credit=62.15881076151456
+host_id=399 results=1 credit=20.642596527934685
+host_id=437 results=1 credit=2116.0443680241556
+host_id=451 results=4 credit=27.00863210012927
+host_id=459 results=3 credit=50.96949752554687
+host_id=487 results=2 credit=8471.140170906307
+host_id=497 results=2 credit=53.545383558895246
+host_id=513 results=1 credit=292.09446813748065
+host_id=539 results=3 credit=99.60703758748946
+host_id=543 results=15 credit=77.11422536180712
+
+Operational note:
+Credit was applied directly to eligible result rows in a live system receiving new completions during the run. This report reflects the bounded final pass used for publication.

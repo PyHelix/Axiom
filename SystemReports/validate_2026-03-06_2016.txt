@@ -1,0 +1,51 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-06 20:16 Europe/Berlin
+Step: Validation, credit, and cleanup
+
+Results reviewed this session
+- Reviewed 762 successful uncredited `exp_%` rows from the live database.
+- Verified 16 rows against matching sanitized numeric payloads in `/opt/axiom/experiment_results/sanitized/*_safe.json`.
+- Deferred 746 successful rows with `granted_credit=0` because no matching sanitized artifact was present yet. Those rows were not credited in this session.
+
+Reviewed result IDs and brief analysis
+- 1740095 (`exp_fputheat_h350_r2_2029835_1772769721_10`): sanitized payload present with non-empty numeric legacy array; awarded 5 credit.
+- 1742368 (`exp_critical_branching_skew_crossover_ae72b5_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742499 (`exp_critical_branching_skew_crossover_ba70ea_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742580 (`exp_critical_branching_skew_crossover_e235bb_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742583 (`exp_critical_branching_skew_crossover_2fa345_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742584 (`exp_critical_branching_skew_crossover_f54d50_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742585 (`exp_critical_branching_skew_crossover_afb1db_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742590 (`exp_critical_branching_skew_crossover_715081_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742591 (`exp_critical_branching_skew_crossover_76c436_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742592 (`exp_critical_branching_skew_crossover_1a2179_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742596 (`exp_critical_branching_skew_crossover_48644b_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742599 (`exp_critical_branching_skew_crossover_def833_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742601 (`exp_critical_branching_skew_crossover_4fb6da_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742602 (`exp_critical_branching_skew_crossover_cf27f4_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742606 (`exp_critical_branching_skew_crossover_7f34ec_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+- 1742628 (`exp_critical_branching_skew_crossover_705758_0`): sanitized payload present with complete numeric array (~401 numeric values); awarded 5 credit.
+
+Credit awarded
+- Session total credit awarded: 80
+- Session credited result count: 16
+- Credit cap check: within 10,000-session limit
+- Host 113 / User 72: +5 credit; host total now 12873.203999999994; user total now 12873.203999999994
+- Host 345 / User 127: +75 credit across 15 results; host total now 11243.199999999993; user total now 11243.199999999993
+- Host 350 / User 130: +5 credit; host total now 501.9; user total now 501.9
+
+Website counters updated
+- `credited_count.txt`: 16
+- `total_results_count.txt`: 763
+
+Cleanup actions
+- Checked broken experiment pattern `exp_quorum_sensing_spatial%`: 0 unsent/in-progress rows to abort.
+- Checked stuck tasks (>12h runtime and >6h no host contact): 0 rows to abort.
+
+Bugs found and fixed
+- No experiment script changes were made in this validation step.
+- No daemon or service intervention performed.
+
+Operational notes
+- Findings summary reviewed from `/opt/axiom/experiment_session/findings_summary.txt` to inform conservative quality decisions.
+- `critical_branching_skew_crossover` remains scientifically useful despite rejected hypothesis; verified payload completeness justified normal credit for returned data.
+- Many recent successful rows still lack matching sanitized artifacts. They should be re-reviewed in a later validation pass after assimilation catches up.

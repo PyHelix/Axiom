@@ -1,0 +1,61 @@
+Validation session: 2026-03-10 22:25 Europe/Berlin
+
+Results credited this session
+- 1381 results updated across two credit passes
+- Productive credit awarded: 120322.22
+- Denied sentinel credit awarded: 0.85
+- Total granted_credit written this session: 120323.07
+- CPU results credited: 1125
+- GPU results credited: 171
+- Denied results: 85
+
+Anti-cheat review
+- Spot-checked 200 random sanitized JSON files from the live uncredited queue
+- Expanded exact-match review across all 1325 sanitized files that existed at first pass because the sample revealed a repeatable failure mode
+- Denied reason: sanitized file had no experiment_result payload (metadata-only result)
+- No non-empty duplicate payloads across hosts were found
+- No additional exact all-zero or single-value trivial payloads were found
+- Denied results by host: host 147 = 57, host 249 = 7, host 367 = 21
+
+Per-host credit summary
+- Host 1: 1607.89
+- Host 2: 23.13
+- Host 9: 408.27
+- Host 10: 4374.53
+- Host 11: 1851.28
+- Host 16: 9702.37
+- Host 23: 8253.32
+- Host 29: 1630.03
+- Host 57: 70.50
+- Host 61: 377.35
+- Host 85: 216.54
+- Host 102: 306.13
+- Host 105: 5901.25
+- Host 134: 69.47
+- Host 137: 391.79
+- Host 140: 126.99
+- Host 147: 79.52
+- Host 159: 6110.63
+- Host 182: 5836.24
+- Host 184: 6459.10
+- Host 222: 382.43
+- Host 249: 432.89
+- Host 255: 59.41
+- Host 341: 5895.54
+- Host 345: 8.76
+- Host 347: 1795.66
+- Host 350: 217.03
+- Host 366: 168.01
+- Host 367: 54525.11
+- Host 385: 1151.26
+- Host 386: 104.99
+- Host 387: 537.90
+- Host 388: 1211.20
+- Host 390: 35.70
+
+Cleanup and operational actions
+- Verified gpu_price_table.json freshness; no updater run was needed
+- Ran price-per-FLOP credit script twice to catch results that finished during the first pass
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 74857
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 73676
+- Final queue check: 0 uncredited completed experiment results remain

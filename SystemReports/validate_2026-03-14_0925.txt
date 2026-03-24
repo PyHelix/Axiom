@@ -1,0 +1,52 @@
+Validation Log
+Timestamp: 2026-03-14 09:25 CET
+Role: Step 3 validation and credit
+
+Price-Per-FLOP scales used:
+- CPU_SCALE=5.0196363564419115e-12
+- GPU_SCALE=2.65615891530522e-14
+- gpu_price_table.json freshness check passed at run time; no refresh was required
+
+Results credited this session:
+- 544 host-linked results credited with price-per-FLOP credit
+- 14395.26 total credit granted
+- Anti-cheat denials: 0
+
+Anti-cheat review:
+- Sampled the currently assimilated uncredited sanitized payloads available during this session
+- 21 current uncredited results had sanitized *_safe.json files available at review time
+- No empty-payload gaming, duplicate cross-host payloads, same-experiment outliers, or successful <5s stubs were flagged
+
+Cleanup actions:
+- 235 zero-elapsed aborted rows were marked processed with the 0.01 denied sentinel and validate_state=1 so they do not remain permanently in the uncredited queue
+- Website counters updated:
+  credited_count.txt incremented by 544
+  total_results_count.txt refreshed to 274666
+- Temporary credit script executed from /tmp/axiom_credit.py
+
+Queue cutoff:
+- The live queue was drained to zero multiple times during this session
+- Because new results continued arriving while validation was running, the queue had refilled to 1 fresh uncredited result immediately after the final bounded drain cycle
+- This log records the cutoff state for the completed validation run rather than a permanently quiescent queue
+
+Per-host credit summary:
+- The database does not retain per-host session deltas directly; the summary below is an approximation from the receive-time window that best matches this session's credited rows (received_time >= 1773476425)
+- host 427: 1 results, 2965.83 credit
+- host 367: 115 results, 2165.42 credit
+- host 423: 1 results, 1096.65 credit
+- host 1: 15 results, 1090.21 credit
+- host 324: 31 results, 615.27 credit
+- host 339: 25 results, 606.62 credit
+- host 398: 22 results, 536.07 credit
+- host 395: 23 results, 505.19 credit
+- host 333: 21 results, 492.03 credit
+- host 397: 16 results, 480.83 credit
+- host 327: 19 results, 453.00 credit
+- host 401: 19 results, 444.66 credit
+- host 332: 19 results, 382.46 credit
+- host 330: 14 results, 337.75 credit
+- host 390: 22 results, 324.85 credit
+
+Notes:
+- No scientific findings are included here; this is an operational validation log only
+- No BOINC daemons, MariaDB, Apache, lock files, cron, systemd units, or experiment-session scripts were modified

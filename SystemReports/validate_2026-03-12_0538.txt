@@ -1,0 +1,96 @@
+Validation session: 2026-03-12 05:38 Europe/Berlin
+
+Summary
+- Results credited this session: 2774
+- Results credited this session: 2801
+- Total credit awarded this session: 166426.85
+- Anti-cheat sample reviewed: 200 sanitized JSON files
+- Sanitized files found for uncredited results during review: 2535
+- Flagged and denied at sentinel credit 0.01: 10
+- Final zero-backlog checks were reached multiple times during the session; the queue continued to refill with new completions after those checks because the project is live
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6562301297967807e-14
+- Price table freshness at first credit pass: 1167 seconds old, no refresh required
+
+Anti-cheat flags
+- 2684681: single_repeated_value
+- 2684686: single_repeated_value
+- 2684687: single_repeated_value
+- 2684702: single_repeated_value
+- 2685225: single_repeated_value
+- 2685260: single_repeated_value
+- 2685850: single_repeated_value
+- 2686068: single_repeated_value
+- 2686144: single_repeated_value
+- 2686147: single_repeated_value
+
+Credit notes
+- Main pass: 2701 results, 161317.37 credit
+- Catch-up pass 1: 1 result, 6.94 credit
+- Catch-up pass 2: 12 results, 1527.76 credit
+- Catch-up pass 3: 46 results, 1477.67 credit
+- Catch-up pass 4: 14 results, 434.80 credit
+- Catch-up pass 5: 5 results, 690.90 credit
+- Catch-up pass 6: 22 results, 971.41 credit
+- Denied results were assigned granted_credit=0.01
+- Short-runtime denial rule for elapsed_time < 5 remained active; no additional denials occurred outside the flagged sample
+
+Per-host credit summary
+- host 1: 40 results, 1649.49 credit
+- host 2: 24 results, 572.94 credit
+- host 10: 6 results, 4664.56 credit
+- host 11: 6 results, 1582.27 credit
+- host 16: 20 results, 8037.88 credit
+- host 23: 17 results, 4978.55 credit
+- host 29: 42 results, 1667.84 credit
+- host 60: 5 results, 53.96 credit
+- host 71: 7 results, 174.71 credit
+- host 87: 54 results, 1002.08 credit
+- host 105: 107 results, 4868.89 credit
+- host 123: 60 results, 776.56 credit
+- host 134: 3 results, 29.59 credit
+- host 147: 3 results, 1584.87 credit
+- host 159: 29 results, 3921.27 credit
+- host 163: 6 results, 80.42 credit
+- host 182: 3 results, 3031.04 credit
+- host 184: 12 results, 9038.83 credit
+- host 210: 150 results, 2793.87 credit
+- host 222: 20 results, 356.35 credit
+- host 240: 90 results, 3314.32 credit
+- host 249: 4 results, 2146.40 credit
+- host 268: 89 results, 2627.79 credit
+- host 324: 88 results, 4473.82 credit
+- host 327: 61 results, 3083.80 credit
+- host 330: 72 results, 2776.88 credit
+- host 332: 71 results, 2585.95 credit
+- host 333: 96 results, 4177.80 credit
+- host 334: 84 results, 3829.30 credit
+- host 339: 66 results, 2676.64 credit
+- host 345: 19 results, 249.10 credit
+- host 347: 15 results, 1267.77 credit
+- host 367: 430 results, 23351.48 credit
+- host 379: 6 results, 3240.17 credit
+- host 389: 104 results, 2224.71 credit
+- host 390: 48 results, 1689.41 credit
+- host 393: 6 results, 3175.00 credit
+- host 394: 1 result, 13.35 credit
+- host 395: 99 results, 4349.38 credit
+- host 396: 96 results, 1633.48 credit
+- host 397: 96 results, 4174.13 credit
+- host 398: 96 results, 4102.70 credit
+- host 399: 128 results, 2432.26 credit
+- host 400: 156 results, 2812.26 credit
+- host 401: 96 results, 4154.18 credit
+- host 402: 13 results, 386.43 credit
+- host 404: 5 results, 2887.02 credit
+- host 405: 6 results, 3277.55 credit
+- host 406: 7 results, 3824.73 credit
+- host 407: 7 results, 3453.05 credit
+- host 408: 6 results, 3119.49 credit
+- host 409: 6 results, 3492.04 credit
+- host 410: 4 results, 2323.44 credit
+- host 413: 6 results, 2235.05 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 88832
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 88808
+- Removed temporary scripts after completion

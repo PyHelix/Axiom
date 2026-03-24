@@ -1,0 +1,89 @@
+Validation Session Log
+Timestamp: 2026-03-15 19:12 Europe/Berlin
+Result update window: 2026-03-15 19:09:45 to 2026-03-15 19:11:45
+
+Results credited this session
+- Credited results: 17512
+- Total credit awarded: 595814.09
+- CPU results: 16854
+- GPU results: 658
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.7285118694839516e-14
+
+Anti-cheat review
+- Sampled 200 sanitized JSON files from 17243 uncredited results with sanitized payloads available.
+- No empty payload, trivial repeated-value payload, or cross-host byte-identical duplicate was found in the sampled review.
+- Denied sentinel credit applied to 114 results due to success outcome with elapsed_time < 5 seconds (stub filter).
+- Sample denial reason: short success runtimes such as result IDs 4230966, 4237502, 4237830, 4240422, 4241658.
+
+Per-host credit summary
+- host 367: 178606.96 credit across 2980 results
+- host 18: 84601.18 credit across 109 results
+- host 22: 83812.68 credit across 68 results
+- host 20: 53983.29 credit across 148 results
+- host 19: 31907.31 credit across 71 results
+- host 240: 13215.99 credit across 848 results
+- host 17: 12808.75 credit across 6 results
+- host 458: 12525.15 credit across 16 results
+- host 105: 11930.70 credit across 987 results
+- host 111: 11172.51 credit across 994 results
+- host 268: 10905.60 credit across 861 results
+- host 269: 10737.04 credit across 1429 results
+- host 141: 8318.80 credit across 1131 results
+- host 390: 6481.56 credit across 594 results
+- host 450: 6291.54 credit across 716 results
+- host 106: 5434.73 credit across 935 results
+- host 388: 4566.38 credit across 601 results
+- host 342: 3714.47 credit across 360 results
+- host 389: 3475.72 credit across 506 results
+- host 61: 3125.06 credit across 325 results
+- host 29: 2743.22 credit across 215 results
+- host 147: 2724.34 credit across 13 results
+- host 11: 2482.17 credit across 10 results
+- host 23: 2264.35 credit across 2 results
+- host 16: 2032.68 credit across 1 result
+- host 364: 1966.28 credit across 211 results
+- host 212: 1892.91 credit across 198 results
+- host 85: 1849.35 credit across 269 results
+- host 323: 1805.09 credit across 5 results
+- host 387: 1720.91 credit across 432 results
+- host 123: 1598.44 credit across 295 results
+- host 87: 1420.52 credit across 207 results
+- host 345: 1198.42 credit across 203 results
+- host 213: 1112.59 credit across 2 results
+- host 60: 1096.71 credit across 211 results
+- host 461: 1089.20 credit across 129 results
+- host 358: 844.51 credit across 176 results
+- host 9: 809.26 credit across 19 results
+- host 222: 787.00 credit across 130 results
+- host 108: 774.22 credit across 140 results
+- host 202: 642.77 credit across 121 results
+- host 302: 573.55 credit across 16 results
+- host 445: 568.43 credit across 105 results
+- host 452: 542.41 credit across 81 results
+- host 393: 524.51 credit across 89 results
+- host 350: 435.10 credit across 88 results
+- host 386: 380.93 credit across 59 results
+- host 459: 314.69 credit across 27 results
+- host 137: 289.91 credit across 45 results
+- host 127: 261.49 credit across 40 results
+- host 57: 237.51 credit across 42 results
+- host 366: 236.20 credit across 28 results
+- host 219: 210.50 credit across 23 results
+- host 467: 207.49 credit across 43 results
+- host 317: 195.15 credit across 29 results
+- host 134: 117.57 credit across 43 results
+- host 107: 68.43 credit across 18 results
+- host 267: 62.72 credit across 9 results
+- host 394: 54.25 credit across 7 results
+- host 456: 26.74 credit across 4 results
+- host 90: 17.33 credit across 3 results
+- host 80: 10.24 credit across 2 results
+- host 376: 6.30 credit across 5 results
+- host 468: 2.28 credit across 32 results
+
+Cleanup actions
+- Ran repeated credit passes until the live elapsed_time > 0 tail was drained to zero during the pass loop; a later cutoff check saw 27 new elapsed_time > 0 results arrive after the final pass window.
+- 15791 results remained at granted_credit = 0 with elapsed_time = 0 at cutoff; these match the no-compute-time policy in the credit script.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1353589.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 402431.

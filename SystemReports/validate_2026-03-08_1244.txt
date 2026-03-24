@@ -1,0 +1,62 @@
+Axiom validation log
+Timestamp: 2026-03-08_1244
+
+Queue summary
+- Reviewed results: 29
+- Available exact-match sanitized payloads in current queue: 0
+- Total pool bytes (xml_doc_out nbytes): 186322
+- Budget: 10000
+- Credited: 26
+- Denied abnormal-size sentinel 0.01: 1
+- Denied retired sentinel 0.01: 2
+
+Science context used for quality decisions
+- exp_ageing_voter_modular_polarization: status=ACTIVE last_updated=2026-03-08
+
+Sanitized sample audit
+- Sampled recent safe files: 200
+- Empty payloads in sample: 21
+- Thin/trivial payloads in sample: 0
+- Cross-host duplicate groups in sample: 1
+- duplicate_sample: exp_grayscott_striped_kill_disorder_gpu_gpu_77cc44_0_safe.json host=367, exp_grayscott_striped_kill_disorder_gpu_gpu_d8e04b_0_safe.json host=367, gpu_wu_4d2fef_0_safe.json host=367, gpu_wu_c83d88_0_safe.json host=367, exp_grayscott_striped_kill_disorder_gpu_gpu_047ca9_0_safe.json host=367
+
+Credit by user
+- user 6: +0.01 session_credit -> total 47638.44
+- user 10: +50.01 session_credit -> total 39077.48
+- user 55: +117.70 session_credit -> total 20168.08
+- user 83: +800.00 session_credit -> total 58572.14
+
+Results reviewed this session
+- result 1892895 (host 29): exp_grayscott_crossed_stripe_interaction_gpu_gpu_579362_0 — nbytes 17888, elapsed 1077.76s, no exact safe payload yet -> 50.00 credit
+- result 1905143 (host 159): exp_benford_h159_3607967_1772965744_0 — nbytes 6474, elapsed 854.97s, no exact safe payload yet -> 50.00 credit
+- result 1905144 (host 159): exp_windang_h159_3607967_1772965744_1 — nbytes 8919, elapsed 843.54s, no exact safe payload yet -> 50.00 credit
+- result 1905146 (host 159): exp_goldecay_h159_3607967_1772965744_3 — nbytes 6287, elapsed 814.11s, no exact safe payload yet -> 50.00 credit
+- result 1905147 (host 159): exp_votermod_h159_3607967_1772965744_4 — nbytes 18821, elapsed 816.48s, no exact safe payload yet -> 50.00 credit
+- result 1905148 (host 159): exp_nkwalk_h159_3607967_1772965744_5 — nbytes 1248, elapsed 20.50s, no exact safe payload yet -> 50.00 credit
+- result 1905149 (host 159): exp_hyperpgg_h159_3607967_1772965744_6 — nbytes 6027, elapsed 859.67s, no exact safe payload yet -> 50.00 credit
+- result 1905154 (host 159): exp_goldecay_h159_r1_3607967_1772965744_11 — nbytes 6293, elapsed 814.10s, no exact safe payload yet -> 50.00 credit
+- result 1905158 (host 159): exp_collatz_h159_r1_3607967_1772965744_15 — nbytes 2696, elapsed 854.94s, no exact safe payload yet -> 50.00 credit
+- result 1905159 (host 159): exp_benford_h159_r2_3607967_1772965744_16 — nbytes 6470, elapsed 864.15s, no exact safe payload yet -> 50.00 credit
+- result 1905160 (host 159): exp_windang_h159_r2_3607967_1772965744_17 — nbytes 8932, elapsed 846.74s, no exact safe payload yet -> 50.00 credit
+- result 1905161 (host 159): exp_bootperc_h159_r2_3607967_1772965744_18 — nbytes 2872, elapsed 1185.67s, no exact safe payload yet -> 50.00 credit
+- result 1905162 (host 159): exp_goldecay_h159_r2_3607967_1772965744_19 — nbytes 6276, elapsed 813.79s, no exact safe payload yet -> 50.00 credit
+- result 1905163 (host 159): exp_votermod_h159_r2_3607967_1772965744_20 — nbytes 18856, elapsed 814.89s, no exact safe payload yet -> 50.00 credit
+- result 1905164 (host 159): exp_nkwalk_h159_r2_3607967_1772965744_21 — nbytes 1251, elapsed 18.30s, no exact safe payload yet -> 50.00 credit
+- result 1905166 (host 159): exp_collatz_h159_r2_3607967_1772965744_23 — nbytes 2540, elapsed 860.93s, no exact safe payload yet -> 50.00 credit
+- result 1905167 (host 159): exp_benford_h159_r3_3607967_1772965744_24 — nbytes 6475, elapsed 852.98s, no exact safe payload yet -> 50.00 credit
+- result 1907039 (host 29): exp_kauffman_autocatalytic_threshold_abf72d_0 — retired experiment family exp_kauffman_autocatalytic_threshold -> 0.01 sentinel
+- result 1907392 (host 360): exp_ageing_voter_modular_polarization_2dc29a_0 — nbytes 54582 vs median 249.0 for exp_ageing_voter_modular_polarization -> denied sentinel 0.01
+- result 1909338 (host 202): exp_ageing_voter_modular_polarization_8ec805_0 — nbytes 249, elapsed 3.12s, no exact safe payload yet, science status ACTIVE -> 13.36 credit
+- result 1909350 (host 202): exp_abx_cycle_hgt_delay_resonance_d9806a_0 — nbytes 245, elapsed 3.04s, no exact safe payload yet -> 13.15 credit
+- result 1909356 (host 202): exp_kauffman_autocatalytic_threshold_4a1410_0 — retired experiment family exp_kauffman_autocatalytic_threshold -> 0.01 sentinel
+- result 1909367 (host 202): exp_ageing_voter_modular_polarization_d9693b_0 — nbytes 249, elapsed 3.05s, no exact safe payload yet, science status ACTIVE -> 13.36 credit
+- result 1909368 (host 202): exp_ageing_voter_modular_polarization_0e37c4_0 — nbytes 249, elapsed 2.02s, no exact safe payload yet, science status ACTIVE -> 13.36 credit
+- result 1909369 (host 202): exp_sparse_wigner_tw_edge_6db697_0 — nbytes 237, elapsed 3.04s, no exact safe payload yet -> 12.72 credit
+- result 1909379 (host 202): exp_abx_cycle_hgt_delay_resonance_5405dd_0 — nbytes 245, elapsed 2.03s, no exact safe payload yet -> 13.15 credit
+- result 1909380 (host 202): exp_sparse_wigner_tw_edge_a6e8bb_0 — nbytes 237, elapsed 2.02s, no exact safe payload yet -> 12.72 credit
+- result 1909381 (host 202): exp_abx_cycle_hgt_delay_resonance_93c0aa_0 — nbytes 245, elapsed 4.06s, no exact safe payload yet -> 13.15 credit
+- result 1909382 (host 202): exp_sparse_wigner_tw_edge_ffa8d3_0 — nbytes 237, elapsed 4.13s, no exact safe payload yet -> 12.72 credit
+
+Cleanup
+- No stuck/broken task cleanup actions performed by this step.
+- No experiment scripts modified in this validation cycle.

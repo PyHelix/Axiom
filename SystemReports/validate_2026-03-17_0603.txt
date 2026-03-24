@@ -1,0 +1,92 @@
+Axiom validation log - 2026-03-17_0603 UTC
+
+Session summary
+- Results credited this session: 16721
+- Volunteer credit added to host/user totals: 578914.09
+- Result-table credit written (including 0.01 sentinels): 578983.90
+- Zero-elapsed aborted results marked with 0.01 sentinel: 6981
+- Remaining uncredited finished results after final sweep: 0
+- Database quick stats now: credited=859645, uncredited=104
+- Price scales used: CPU_SCALE=5.019636356442e-12, GPU_SCALE=2.512071229134e-14
+- Price table last_updated_unix: 1773724517
+
+Anti-cheat review
+- Sanitized uncredited results available at review time: 9060
+- Random sanitized files sampled: 200
+- Anti-cheat flagged result IDs: 0
+- No sampled sanitized payloads were flagged for trivial payloads, duplicate numeric payloads, or experiment-level outliers.
+- Zero-elapsed aborted rows were denied via 0.01 sentinel and did not increase host/user total_credit.
+
+Per-host credit summary
+- Host 367: results=1750, credit_added=163378.44
+- Host 22: results=42, credit_added=71544.78
+- Host 18: results=38, credit_added=58225.72
+- Host 20: results=43, credit_added=50714.25
+- Host 17: results=42, credit_added=39941.69
+- Host 19: results=44, credit_added=32830.60
+- Host 16: results=41, credit_added=14350.92
+- Host 480: results=238, credit_added=14254.81
+- Host 105: results=736, credit_added=14237.63
+- Host 240: results=746, credit_added=12436.43
+- Host 23: results=38, credit_added=11383.96
+- Host 268: results=728, credit_added=10127.14
+- Host 159: results=105, credit_added=9216.61
+- Host 111: results=681, credit_added=8177.88
+- Host 494: results=458, credit_added=7795.95
+- Host 301: results=8, credit_added=7026.76
+- Host 488: results=16, credit_added=6087.04
+- Host 147: results=16, credit_added=5524.12
+- Host 390: results=420, credit_added=4383.22
+- Host 289: results=15, credit_added=3279.94
+- Host 388: results=357, credit_added=3062.22
+- Host 1: results=192, credit_added=2777.66
+- Host 275: results=14, credit_added=2597.33
+- Host 97: results=373, credit_added=2492.70
+- Host 85: results=304, credit_added=2285.22
+- Host 389: results=343, credit_added=2117.41
+- Host 29: results=183, credit_added=2079.64
+- Host 387: results=1077, credit_added=2046.48
+- Host 87: results=228, credit_added=1627.92
+- Host 127: results=229, credit_added=1434.11
+- Host 61: results=241, credit_added=1432.80
+- Host 364: results=159, credit_added=1344.48
+- Host 123: results=424, credit_added=1318.74
+- Host 481: results=85, credit_added=1267.07
+- Host 341: results=202, credit_added=1074.22
+- Host 345: results=167, credit_added=996.86
+- Host 358: results=138, credit_added=602.98
+- Host 459: results=45, credit_added=591.26
+- Host 344: results=307, credit_added=588.90
+- Host 108: results=96, credit_added=469.29
+- Host 493: results=190, credit_added=438.89
+- Host 445: results=70, credit_added=405.64
+- Host 479: results=65, credit_added=357.94
+- Host 113: results=211, credit_added=299.70
+- Host 394: results=27, credit_added=217.07
+- Host 60: results=36, credit_added=205.18
+- Host 483: results=55, credit_added=195.39
+- Host 134: results=173, credit_added=103.58
+- Host 317: results=8, credit_added=91.73
+- Host 137: results=16, credit_added=75.82
+- Host 492: results=11, credit_added=75.41
+- Host 491: results=4, credit_added=25.08
+- Host 376: results=11, credit_added=12.84
+- Host 107: results=3, credit_added=9.14
+- Host 373: results=4, credit_added=6.04
+- Host 63: results=48, credit_added=1.92
+- Host 0: results=4228, credit_added=0.00
+- Host 106: results=22, credit_added=0.00
+- Host 302: results=3, credit_added=0.00
+- Host 323: results=1, credit_added=0.00
+- Host 437: results=12, credit_added=0.00
+- Host 487: results=1, credit_added=0.00
+- Host 490: results=50, credit_added=0.00
+
+Cleanup actions
+- Updated result.granted_credit and validate_state for the full visible backlog until the uncredited queue reached zero.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt and /opt/axiom_boinc/html/user/total_results_count.txt.
+- Prepared this validation log for website and Git archival.
+
+Post-log note
+- Additional bounded sweeps continued during archival because new finished results kept arriving in the live queue.
+- The website credited counter was corrected to 874955 after reconciling those late-session rows and an earlier double-add while updating the counter file.

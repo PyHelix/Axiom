@@ -1,0 +1,59 @@
+Validation report
+Timestamp (UTC): 2026-03-21 02:08
+Session window: 2026-03-21 02:04:50 through 2026-03-21 02:08:35 UTC
+
+Credit activity
+- Results credited this session: 673
+- Total credit awarded this session: 33617.05 cobblestones
+- Credit method: price-per-FLOP credit via /opt/axiom/axiom_credit_cron.py
+- Price table freshness: current; no manual refresh required
+
+Per-host credit summary
+- host 367: 89 results, 7856.74 credit
+- host 19: 3 results, 3939.61 credit
+- host 22: 1 result, 3648.45 credit
+- host 17: 3 results, 3374.60 credit
+- host 268: 3 results, 2459.86 credit
+- host 18: 1 result, 1852.36 credit
+- host 16: 2 results, 1071.85 credit
+- host 340: 39 results, 784.66 credit
+- host 339: 38 results, 760.21 credit
+- host 23: 1 result, 708.37 credit
+- host 497: 18 results, 647.64 credit
+- host 395: 41 results, 610.56 credit
+- host 376: 125 results, 584.07 credit
+- host 111: 27 results, 567.15 credit
+- host 332: 25 results, 560.29 credit
+- host 338: 36 results, 532.29 credit
+- host 240: 1 result, 521.81 credit
+- host 327: 32 results, 490.29 credit
+- host 324: 31 results, 451.98 credit
+- host 330: 20 results, 443.48 credit
+- host 97: 15 results, 246.31 credit
+- host 141: 15 results, 234.04 credit
+- host 61: 12 results, 190.92 credit
+- host 123: 16 results, 100.20 credit
+- host 29: 5 results, 90.08 credit
+- host 87: 8 results, 86.10 credit
+- host 364: 6 results, 80.22 credit
+- host 185: 3 results, 79.33 credit
+- host 85: 6 results, 77.84 credit
+- host 127: 9 results, 70.37 credit
+- host 459: 5 results, 69.75 credit
+- host 341: 3 results, 58.17 credit
+- host 210: 3 results, 56.82 credit
+- host 60: 7 results, 42.90 credit
+- host 358: 3 results, 38.72 credit
+- host 106: 2 results, 37.27 credit
+- host 202: 3 results, 37.27 credit
+- host 398: 1 result, 34.49 credit
+- host 396: 2 results, 30.94 credit
+- host 534: 2 results, 29.75 credit
+- host 107: 3 results, 22.66 credit
+- host 493: 6 results, 16.19 credit
+- host 400: 1 result, 13.48 credit
+- host 134: 1 result, 6.96 credit
+
+Operational notes
+- Actionable backlog (joinable results with elapsed_time > 0 and granted_credit = 0) was reduced to 0 at the end of the session.
+- Non-creditable rows with elapsed_time = 0 remain excluded per policy.

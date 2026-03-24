@@ -1,0 +1,56 @@
+Axiom Validation Log - 2026-03-17 04:12 Europe/Berlin
+
+Session scope
+- Initial uncredited queue at session start: 25482 results
+- Initial credited count at session start: 816546 results
+- Final credited count snapshot: 842905 results
+- Final uncredited snapshot: 20 results
+- Note: a live tail of newly completed results continued to arrive during the sweep, so the queue snapshot remained nonzero by a small amount at the end of the run.
+
+Credit awarded this session
+- Results credited this session: 26359
+- Total compute credit added to host/user totals: 688435.67
+- Price table freshness: current, no manual refresh needed
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.65615891530522e-14
+- Main batch credited: 11630 results for 677574.61 credit
+- Residual and live-tail cleanup credit added: 10861.06
+- Aborted zero-start results marked with 0.01 sentinel to clear the queue without adding host/user credit: 7138
+
+Anti-cheat review
+- Sampled 200 sanitized numeric results from 11556 available sanitized files tied to the uncredited queue
+- Denied with 0.01 sentinel: 4 results
+- Result 4476304 denied: outlier vs experiment peers (exp_quasispecies_seedbank_reactivation_asymmetry_threshold)
+- Result 4476961 denied: outlier vs experiment peers (exp_quasispecies_seedbank_reactivation_asymmetry_threshold)
+- Result 4489706 denied: outlier vs experiment peers (exp_consumer_resource_recycling_delay_threshold)
+- Result 4490175 denied: outlier vs experiment peers (exp_consumer_resource_recycling_delay_threshold)
+- No duplicate cross-host payloads found in the sample
+- No sub-5-second stub successes found in the sample
+
+Per-host credit summary
+- Main batch top hosts by added credit:
+  host 367: 186660.23
+  host 22: 93299.40
+  host 18: 76812.76
+  host 20: 55946.99
+  host 17: 52344.76
+  host 19: 32424.98
+  host 490: 17851.33
+  host 23: 14356.98
+  host 16: 13604.00
+  host 105: 12473.21
+  host 301: 12294.91
+  host 240: 10983.35
+  host 111: 10374.55
+  host 159: 9886.27
+  host 268: 9837.67
+- Additional residual and live-tail passes added 10861.06 credit across active hosts while clearing late-arriving rows.
+
+Website counters
+- credited_count.txt updated to 858136
+- total_results_count.txt remains 408668 (existing value exceeded current completed-results snapshot 341880)
+
+Cleanup actions
+- Removed temporary credit and analysis scripts from /tmp after execution
+- Copied this log to the website system reports directory
+- Git sync attempted for SystemReports update

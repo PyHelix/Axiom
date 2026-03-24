@@ -1,0 +1,39 @@
+Validation Session Log
+Timestamp: 2026-03-18 14:24 UTC
+
+Results credited this session:
+- Results transitioned from uncredited to credited during session: 236825
+- Approximate total granted credit this session: 1394536.00
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.604730343876649e-14
+- Initial credited/uncredited snapshot: 1459902 credited, 230929 uncredited
+- Final credited/uncredited snapshot: 1695727 credited, 2158 uncredited
+
+Anti-cheat review:
+- Reviewed 200 randomized sanitized JSON files from the live uncredited queue
+- Safe sanitized candidates seen during sampling: 33891
+- Denied for anti-cheat anomalies: none
+- Denied sentinel usage applied only for stub/zero-elapsed handling
+
+Per-host credit summary:
+- Recent credited cohort top hosts by granted credit (result id >= 5330000):
+  host 485: 14 results, 20915.66 credit
+  host 22: 9 results, 13203.46 credit
+  host 367: 556 results, 11388.75 credit
+  host 486: 12 results, 11080.80 credit
+  host 437: 4 results, 10578.48 credit
+  host 18: 6 results, 9580.79 credit
+  host 20: 5 results, 8749.12 credit
+  host 17: 10 results, 8066.87 credit
+  host 508: 1402 results, 7317.77 credit
+  host 19: 8 results, 6810.27 credit
+
+Operational notes:
+- The prompt-provided script rounded sub-cent awards to 0.00; this was corrected by rerunning with higher SQL precision so low-credit valid results did not remain pending.
+- Remaining elapsed_time=0 rows were marked with the 0.01 denied sentinel so they would not remain permanently uncredited.
+- Additional catch-up passes were run because new completions continued arriving during the session.
+- Residual uncredited count at close was 2158, representing live arrivals after the batch passes rather than the original backlog.
+
+Cleanup actions:
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1730809
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 589645
+- Removed temporary credit script: /tmp/axiom_credit.py

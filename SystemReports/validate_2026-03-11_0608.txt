@@ -1,0 +1,30 @@
+Validation Report
+Timestamp: 2026-03-11 06:08 Europe/Berlin
+Credit window: 2026-03-11 06:07:12 to 2026-03-11 06:07:42
+
+Results credited this session
+- Count: 31
+- Total cobblestones awarded: 1137.79
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.604730343876649e-14
+- Anti-cheat review reused the prior 06:06 flagged-ID set; no new sampled denials were added in this follow-up drain
+- Queue reached zero during the final drain loop; new completions may continue arriving afterward because the project is live
+
+Anti-cheat flags
+- None newly added in this follow-up window
+
+Per-host credit summary
+- Host 147: 1 results, 488.69 credit
+- Host 105: 8 results, 164.63 credit
+- Host 268: 6 results, 150.54 credit
+- Host 1: 6 results, 81.03 credit
+- Host 140: 1 results, 80.75 credit
+- Host 240: 2 results, 70.24 credit
+- Host 388: 2 results, 36.52 credit
+- Host 159: 3 results, 34.97 credit
+- Host 102: 2 results, 30.42 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 74041
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 74020
+- Follow-up drain cleared results that arrived after the 06:06 report was generated

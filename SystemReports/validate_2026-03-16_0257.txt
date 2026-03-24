@@ -1,0 +1,95 @@
+Validation report 2026-03-16 02:57 CET
+
+Session scope
+- Initial uncredited results at start: 18,022
+- Spot-check sample reviewed: 200 sanitized JSON files
+- Sanitized files available at sample time: 13,672
+- Uncredited rows missing sanitized files at sample time: 2,474
+
+Credit awarded this session
+- Results credited with price-per-FLOP formulas: 14,075
+- Total credit added to host/user totals: 561,057.67
+- CPU scale used: 5.0196363564419115e-12
+- GPU scale used: 2.604730343876649e-14
+- First major pass: 13,842 results, 545,699.41 credit
+- Incremental pass 2: 95 results, 11,764.69 credit
+- Incremental pass 3: 21 results, 1,714.21 credit
+- Incremental pass 4: 20 results, 214.82 credit
+- Incremental pass 5: 76 results, 1,198.31 credit
+- Incremental pass 6: 21 results, 466.23 credit
+
+Denied / sentinel-marked results
+- Anti-cheat denied at 0.01 sentinel: 11
+- Zero-elapsed no-compute rows marked 0.01 sentinel to clear backlog without incrementing host/user totals: 4,328
+- Total sentinel-marked rows this session: 4,339
+
+Anti-cheat flags
+- Result 4311045: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4323034: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4325425: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4330616: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4330680: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4330689: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4330861: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4330875: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4330996: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4331899: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+- Result 4331910: empty_numeric_payload; duplicate_payload_across_hosts [11,18,22,23,367,458]
+
+Per-host credit summary
+- Host 367: 160,370.79
+- Host 22: 59,084.82
+- Host 18: 55,510.65
+- Host 20: 49,017.29
+- Host 17: 38,462.36
+- Host 469: 31,270.35
+- Host 19: 22,544.20
+- Host 470: 20,164.67
+- Host 105: 12,631.53
+- Host 23: 11,880.27
+- Host 268: 11,328.54
+- Host 240: 9,973.49
+- Host 458: 9,633.44
+- Host 16: 9,286.75
+- Host 269: 8,479.56
+- Host 390: 5,714.21
+- Host 1: 5,496.15
+- Host 450: 4,717.52
+- Host 147: 4,319.76
+- Host 388: 3,882.84
+- Host 389: 2,853.06
+- Host 11: 2,570.15
+- Host 29: 2,293.01
+- Host 61: 1,729.11
+- Host 427: 1,701.74
+- Host 364: 1,618.50
+- Host 212: 1,575.02
+- Host 387: 1,248.07
+- Host 85: 1,201.15
+- Host 106: 1,117.22
+- Host 345: 1,003.44
+- Host 137: 845.02
+- Host 358: 700.98
+- Host 9: 700.16
+- Host 87: 654.47
+- Host 60: 619.24
+- Host 323: 527.24
+- Host 202: 376.67
+- Host 123: 370.75
+- Host 452: 348.31
+- Host 108: 307.47
+- Host 394: 256.15
+- Host 222: 222.88
+- Host 127: 192.05
+- Host 219: 151.94
+- Host 134: 102.42
+- Host 456: 64.64
+- Host 107: 8.59
+- Residual live-tail credit from two drain passes not retained in temp per-host summaries: 1,929.03
+
+Cleanup / operational actions
+- Wrote and executed /tmp/axiom_credit.py for price-per-FLOP crediting
+- Re-ran credit pass multiple times to drain newly arriving completed results
+- Updated /opt/axiom_boinc/html/user/credited_count.txt from 1,277,371 to 1,291,446
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt from 389,405 to 390,565
+- Final snapshot still showed 142 newly arrived uncredited rows after the last drain/query race; the queue was actively changing during report generation

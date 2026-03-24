@@ -1,0 +1,108 @@
+Axiom validation log - 2026-03-18 08:34 UTC
+
+Results credited this session
+- Credited results: 41670
+- Total cobblestones awarded: 1032340.65
+- CPU results: 40859
+- GPU results: 811
+- Anti-cheat denied: 0
+- Zero-elapsed exclusions: 92634
+- Price scales: CPU=5.0196363564419115e-12 GPU=2.695937079143253e-14
+
+Anti-cheat review
+- Sampled sanitized JSON files: 200
+- Sanitized files available in recent uncredited pool: 385
+- Flags: none
+
+Operational notes
+- Remaining granted_credit=0 rows are zero-elapsed rows with missing host records; per policy they receive no credit.
+- The prompt forbids UPDATE/INSERT on the user table, so user.total_credit was not modified.
+
+Per-host credit summary (host_id\tresults\tcredit)
+18	85	113859.97
+367	4400	112606.74
+20	72	59902.30
+17	79	55629.67
+19	97	49531.55
+437	10	30706.48
+485	11	30079.89
+508	4420	27988.02
+507	4427	27754.70
+339	991	24273.84
+16	107	22726.42
+23	109	21898.25
+22	44	21800.53
+340	954	20661.83
+240	841	20036.91
+395	1125	19758.70
+322	25	19459.09
+105	942	19351.84
+486	8	19203.63
+111	791	18942.50
+397	791	18392.42
+332	764	18108.96
+398	762	17844.23
+330	772	17779.07
+338	1102	17342.58
+324	1129	17153.73
+268	739	15677.72
+376	2650	13991.10
+327	842	13079.81
+390	536	11221.10
+147	28	8992.96
+399	822	8282.10
+400	786	8080.61
+388	565	7936.99
+97	396	7901.94
+210	746	7434.17
+396	796	7217.02
+389	502	5463.03
+61	320	5395.08
+450	282	5209.10
+29	216	5199.15
+141	89	4699.40
+249	45	4585.89
+212	254	4385.53
+481	212	3709.99
+496	307	3632.67
+488	7	3570.26
+497	149	3469.29
+387	568	2885.06
+123	397	2832.84
+341	154	2658.71
+127	368	2364.17
+503	828	1888.90
+504	825	1877.06
+459	140	1873.84
+108	158	1516.57
+358	127	1451.26
+480	57	1268.53
+506	394	909.76
+505	490	909.73
+302	53	820.26
+479	53	773.27
+107	87	684.26
+202	81	625.51
+493	266	613.71
+106	41	568.40
+113	44	529.63
+445	34	499.28
+483	43	481.99
+71	22	465.80
+60	59	407.04
+216	16	219.41
+134	25	201.93
+251	8	170.44
+491	13	169.67
+267	21	159.33
+455	18	144.10
+394	16	126.75
+484	15	116.32
+456	16	103.62
+57	6	89.95
+63	80	4.79
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt from 1390052 to 1431722
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt from 524020 to 524906
+- Removed temporary scripts /tmp/axiom_anticheat.py and /tmp/axiom_credit.py

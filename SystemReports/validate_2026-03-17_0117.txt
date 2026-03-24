@@ -1,0 +1,82 @@
+Axiom validation log 2026-03-17_0117
+
+Results credited this session
+- Count: 14981
+- Total cobblestones awarded: 592688.04
+- CPU results credited: 14502
+- GPU results credited: 479
+- Denied sentinel results: 0
+- Zero-elapsed skipped by credit policy: 3820
+- CPU_SCALE: 5.019636356441911e-12
+- GPU_SCALE: 2.747329627517069e-14
+- Remaining uncredited queue after run: 8497
+
+Anti-cheat review
+- Sanitized results available in current queue: 14741
+- Sampled sanitized results: 200
+- Flagged/denied result IDs: 0
+- No sampled results met the deny criteria in this session.
+
+Per-host credit summary
+- Host 1: +5168.88
+- Host 105: +7029.31
+- Host 106: +399.07
+- Host 107: +21.84
+- Host 108: +479.00
+- Host 111: +7368.98
+- Host 113: +278.28
+- Host 123: +1525.81
+- Host 127: +1424.47
+- Host 137: +474.92
+- Host 141: +596.70
+- Host 147: +4702.75
+- Host 159: +10693.80
+- Host 16: +12770.69
+- Host 17: +49729.71
+- Host 18: +43554.71
+- Host 19: +16087.39
+- Host 20: +51744.05
+- Host 22: +81296.09
+- Host 23: +10883.80
+- Host 240: +7744.09
+- Host 251: +637.93
+- Host 268: +6686.73
+- Host 29: +2636.03
+- Host 301: +15392.34
+- Host 302: +720.03
+- Host 323: +1124.10
+- Host 344: +920.33
+- Host 345: +1307.41
+- Host 358: +906.73
+- Host 364: +2078.88
+- Host 367: +183651.26
+- Host 387: +1723.04
+- Host 388: +5077.05
+- Host 389: +4035.44
+- Host 390: +6541.83
+- Host 394: +303.43
+- Host 445: +623.55
+- Host 459: +444.72
+- Host 479: +496.88
+- Host 480: +3346.88
+- Host 481: +1093.54
+- Host 483: +288.71
+- Host 488: +4246.17
+- Host 489: +9.50
+- Host 490: +24105.20
+- Host 491: +41.86
+- Host 492: +18.72
+- Host 60: +615.89
+- Host 61: +2284.59
+- Host 63: +3.46
+- Host 71: +1.19
+- Host 85: +1570.81
+- Host 87: +1387.74
+- Host 97: +4391.68
+
+Cleanup actions taken
+- Updated result.granted_credit and validate_state in batch chunks of 500.
+- Incremented host.total_credit and user.total_credit by session deltas only.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 831777.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 408668.
+- Temporary scripts and summaries staged in /tmp for this run.

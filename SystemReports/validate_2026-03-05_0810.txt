@@ -1,0 +1,70 @@
+Axiom BOINC Validation Log — 2026-03-05 08:10 UTC
+
+== Session Summary ==
+
+Credit awarded: 0 (no results ready for crediting)
+Tasks aborted (broken experiments): 10
+Tasks aborted (stuck/48h): 0
+Total completed results counter updated: 2349 -> 2380
+
+== Uncredited Results ==
+
+18 results found with granted_credit=0, but ALL have validate_state=0
+(not yet assimilated). These were received at ~08:05 today and the
+assimilator has not yet processed them. No sanitized files available.
+Credit will be awarded in the next validation cycle once assimilation completes.
+
+Result IDs pending assimilation:
+1690980 (vicsek_delay_noise_window_gpu, host 341)
+1693427 (lyapunov_rmt_gpu, host 159)
+1693437 (lyapunov_rmt_gpu, host 341)
+1693655 (lyapunov_rmt_gpu, host 29)
+1696280 (schellingtax, host 350)
+1697300-1697319 (batch from host 341: minority_game, contact_process,
+  collatz_evt, spatial_pgg, levy_foraging, potts_pulse, oscillatory_lbm,
+  sandpile_smallworld)
+1697693 (contact_process_temporal_network, host 340)
+
+== Broken Experiment Cleanup ==
+
+Aborted ALL pending tasks (unsent + in-progress) for 100% failure experiments:
+
+- cahnhilliard_delay_feedback_window: 3 tasks aborted (44 failures, 0 successes)
+- ising_delay_adaptive_quench: 2 tasks aborted (13 failures, 0 successes)
+- rbn_delay_fatigue_control: 2 tasks aborted (53 failures, 0 successes)
+- rd_phasejitter_adaptive_forcing: 3 tasks aborted (4 failures, 0 successes)
+
+moranmig, gene_drive_delay_resistance_window, abx_cycle: also 100% failure
+but had 0 pending tasks — no action needed.
+
+== High Failure Rate Experiments (>80%, not 100%) ==
+
+These experiments have very high failure rates but some successes:
+- adaptive_voter_delay_rewiring: 97.6% failure (3 success / 123 fail)
+- kuramoto_delay_adaptive_efficiency: 95.0% (1/19)
+- lotka_delay_adaptive: 93.1% (4/54)
+- rw_reset_fatigue_nonrenewal: 90.8% (8/79)
+- climate_delay_carbon: 88.7% (7/55)
+- cascade_forecast_delay_shedding: 88.6% (9/70)
+- battery_pulse_delay_plating_resonance: 88.5% (3/23)
+- allee_delay_climate: 88.5% (3/23)
+- kuramoto_delay_noisy_control: 82.9% (7/34)
+
+These need investigation by the Science/Deploy steps. Not aborting since
+they have some successful completions (may be host-specific issues).
+
+== Stuck/Dead Host Tasks ==
+
+No tasks found running >12h on hosts with >6h no contact.
+No tasks found running >48h.
+
+== Active Fleet ==
+
+91 active hosts (contacted in last 72h)
+25 hosts currently running experiment tasks
+Top contributors: hosts 324,327,333,334,340 (32-core machines with 60-90 tasks each)
+
+== Website Counters ==
+
+credited_count.txt: 6484 (unchanged, no new credits)
+total_results_count.txt: 2349 -> 2380 (31 new completed results)

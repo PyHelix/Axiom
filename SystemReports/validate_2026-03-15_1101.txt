@@ -1,0 +1,77 @@
+Axiom validation session report 2026-03-15_1101
+
+Validation summary
+- Results credited this session: 23433
+- Total granted credit this session: 281299.03
+- Initial uncredited queue at session start: 22603
+- Remaining uncredited queue at verification: 0
+- Price table status: fresh, no manual refresh needed
+
+Anti-cheat review
+- Sample size reviewed: 200 sanitized payloads
+- Population with sanitized files available: 9742
+- Denied sentinel 0.01 applied to result 4193247: empty_or_all_zero_payload
+
+Cleanup actions
+- Main price-per-FLOP pass applied CPU/GPU credit formulas to all eligible rows with benchmarks
+- Residual hostid=0 and zero-elapsed rows were marked with the 0.01 denied sentinel and validate_state=1 to stop recycle-through of no-start tasks
+- Additional short cleanup sweeps were run until the verification query reached zero at the end of the session
+
+Per-host credit summary
+- host 367: 2766 results, 169575.42 credit
+- host 105: 1090 results, 12401.67 credit
+- host 269: 1271 results, 11450.76 credit
+- host 111: 1208 results, 10922.98 credit
+- host 16: 68 results, 9398.89 credit
+- host 23: 82 results, 6221.68 credit
+- host 458: 30 results, 6059.24 credit
+- host 390: 645 results, 6021.65 credit
+- host 240: 503 results, 5921.65 credit
+- host 268: 488 results, 5854.87 credit
+- host 147: 35 results, 3578.17 credit
+- host 389: 644 results, 3436.73 credit
+- host 460: 230 results, 2977.52 credit
+- host 29: 240 results, 2765.94 credit
+- host 61: 250 results, 2528.80 credit
+- host 11: 47 results, 2169.99 credit
+- host 141: 240 results, 1978.06 credit
+- host 404: 5 results, 1877.49 credit
+- host 364: 186 results, 1819.66 credit
+- host 123: 652 results, 1721.75 credit
+- host 387: 533 results, 1687.90 credit
+- host 87: 600 results, 1473.98 credit
+- host 106: 215 results, 1197.11 credit
+- host 60: 178 results, 1103.82 credit
+- host 358: 199 results, 879.33 credit
+- host 108: 162 results, 791.34 credit
+- host 192: 28 results, 728.16 credit
+- host 9: 45 results, 651.99 credit
+- host 452: 69 results, 619.40 credit
+- host 345: 107 results, 551.31 credit
+- host 350: 94 results, 478.85 credit
+- host 222: 82 results, 347.60 credit
+- host 202: 126 results, 287.77 credit
+- host 459: 17 results, 279.09 credit
+- host 57: 30 results, 239.80 credit
+- host 107: 51 results, 233.53 credit
+- host 137: 35 results, 224.71 credit
+- host 219: 28 results, 216.54 credit
+- host 212: 21 results, 169.26 credit
+- host 134: 213 results, 118.01 credit
+- host 424: 16 results, 103.19 credit
+- host 0: 9294 results, 92.94 credit
+- host 267: 30 results, 77.37 credit
+- host 437: 2 results, 56.95 credit
+- host 457: 269 results, 2.69 credit
+- host 127: 79 results, 0.79 credit
+- host 1: 74 results, 0.74 credit
+- host 403: 10 results, 0.48 credit
+- host 317: 40 results, 0.40 credit
+- host 341: 34 results, 0.34 credit
+- host 255: 33 results, 0.33 credit
+- host 456: 16 results, 0.16 credit
+- host 249: 13 results, 0.13 credit
+- host 162: 4 results, 0.04 credit
+- host 448: 3 results, 0.03 credit
+- host 323: 2 results, 0.02 credit
+- host 251: 1 results, 0.01 credit

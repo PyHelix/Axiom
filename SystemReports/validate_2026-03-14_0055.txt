@@ -1,0 +1,76 @@
+Axiom Validation Log
+Timestamp: 2026-03-14_0055
+Session window start: 2026-03-14 00:50:59 CET
+Zero-queue check reached: 2026-03-14 00:56:21 CET
+
+Results credited this session:
+- Result rows updated: 20933
+- Total granted credit: 254138.14
+- Price-per-FLOP credit excluding denied sentinels: 254114.86
+- Denied sentinel rows (0.01 credit): 2328
+- Price scales used: CPU=5.0196363564419115e-12, GPU=2.5202473023157774e-14
+
+Anti-cheat review:
+- Random sanitized sample reviewed: 200
+- Flagged from review: 2302
+- Stub/runtime denials from review: 2300
+- Trivial numeric payloads in sample: 5
+- Missing experiment_result in sample: 5
+- Duplicate cross-host groups observed in sample: 3
+- Sample trivial payload result IDs: 3659647, 3659926, 3666867, 3667015, 3673883
+- Denied reasons applied operationally: elapsed<5 seconds and sampled trivial numeric payloads
+
+Per-host credit summary (host_id	results	granted_credit	denied_rows):
+324	855	15469.20	118
+327	827	15439.12	100
+334	1079	14778.79	186
+398	1228	14580.03	1
+397	1231	14542.98	1
+395	846	14452.46	13
+333	995	13984.86	185
+339	932	13557.27	125
+401	1042	13500.03	0
+332	681	9524.40	16
+330	724	9356.63	12
+16	23	8011.30	11
+111	490	7195.99	129
+184	103	6707.16	1
+390	605	6258.77	134
+399	1133	6091.31	0
+400	1193	6042.18	108
+210	1266	5601.12	156
+396	985	5523.02	0
+10	46	5164.48	0
+23	20	5079.12	7
+1	268	4254.92	13
+105	450	3881.04	144
+240	325	3652.70	120
+393	40	2930.26	16
+389	503	2770.21	128
+268	319	2637.99	121
+106	415	2582.71	146
+340	174	2366.55	58
+159	66	2335.58	26
+141	227	2244.33	57
+387	437	2069.45	0
+29	179	2042.50	53
+249	52	1538.76	30
+11	35	1407.72	0
+433	539	1219.52	0
+347	30	965.38	2
+137	103	962.83	36
+60	231	876.17	22
+219	67	627.87	17
+426	22	607.96	0
+9	21	539.45	0
+108	62	290.71	19
+2	29	219.14	9
+267	17	171.43	0
+394	16	72.73	7
+107	2	10.01	1
+
+Cleanup and operational actions:
+- Credited queue drained to zero at 2026-03-14 00:56:21 CET; later arrivals after that cutoff are outside this report.
+- Updated website counters: /opt/axiom_boinc/html/user/credited_count.txt and /opt/axiom_boinc/html/user/total_results_count.txt
+- Copied this log to /opt/axiom_boinc/html/user/system_reports/
+- Temporary working files scheduled for removal: /tmp/axiom_credit.py, /tmp/axiom_anticheat.py, /tmp/axiom_uncredited_results.tsv, /tmp/axiom_host_summary.tsv, /tmp/axiom_credit_summary.json, /tmp/axiom_anticheat_summary.json, /tmp/axiom_session_summary.json

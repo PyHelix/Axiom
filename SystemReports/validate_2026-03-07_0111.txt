@@ -1,0 +1,32 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-07 01:11 Europe/Berlin
+Session scope: validation, credit, cleanup
+
+Results reviewed this session
+- Result 1792674 (host 1): sanitized numeric payload present for `random_poly_roots_gpu_gpu`; complete payload structure, population-consistent, awarded 100 credit.
+- Result 1793376 (host 272): sanitized numeric payload present for `random_poly_roots_gpu_gpu`; complete payload structure, population-consistent, awarded 100 credit.
+- Result 1792675 (host 1): sanitized numeric payload present for `band_rmt_localization_gpu_gpu`; complete payload structure, population-consistent, awarded 100 credit.
+- Result 1792989 (host 272): sanitized numeric payload present for `cahnhilliard_mobility_disorder_gpu_gpu`; complete payload structure, population-consistent, awarded 100 credit.
+- Result 1793370 (host 323): sanitized numeric payload present for `ginibre_spacing_universality_gpu_gpu`; complete payload structure, population-consistent, awarded 100 credit.
+
+Deferred results
+- 553 additional successful `exp_%` results remain uncredited after this session because no matching sanitized payload was available yet for review under the current live database state.
+- These deferred results were not credited or modified.
+
+Credit awarded
+- Total credit awarded this session: 500
+- Host 1 / User 1: +200 credit. Host total now 18984.645579000007. User total now 22214.645579000007.
+- Host 272 / User 67: +200 credit. Host total now 235. User total now 4475.936.
+- Host 323 / User 122: +100 credit. Host total now 6401.5. User total now 8585.2.
+
+Counters updated
+- credited_count.txt: 5
+- total_results_count.txt: 577
+
+Stuck/broken tasks cleaned up
+- Stuck task cleanup query found no tasks meeting the >12h running and >6h no-contact criteria.
+- No active unsent/in-progress tasks were found for the clearly broken families checked during this session (`allee_delay_climate_harvest`, `aah_delay_dephasing_window`, `antibiotic_delay_fatigue_switch`, `allencahn_delay_adaptive_quench_window_gpu`, `band_rmt_localization_gpu`).
+- No abort updates were issued in this session.
+
+Bugs found and fixed
+- No experiment script changes were made in this session.

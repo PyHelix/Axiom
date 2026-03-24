@@ -1,0 +1,38 @@
+AXIOM VALIDATION LOG — 2026-03-05 11:02 UTC
+=============================================
+
+RESULTS REVIEWED: 202 uncredited results (outcome=1, server_state=5)
+CREDIT AWARDED: 970 total across 194 results (8 zero-elapsed results got 0 credit)
+
+PER-HOST CREDIT:
+  Host 9:   5 credit (1 result - lyapunov_rmt_gpu)
+  Host 29:  30 credit (6 results - fppwander, hkconsensus, chimeralife, dladrift, contactproc, mingame)
+  Host 159: 10 credit (2 results - chimera_lifetime_scaling, hkconsensus_s0)
+  Host 324: 160 credit (32 results - collatz, potts, spatial_pgg, levy, climate_delay, cstr, cascade, kuramoto, toggle, l96shift, metavax, sisrewire)
+  Host 325: 160 credit (32 results - tritrophic, grayscott, pit_delay, fiberbundle, autocatalytic, climate_delay, interdep_flow, lorenz96, chemostat)
+  Host 327: 80 credit (16 results - l96delay, xydelaytherm, fiberheal, pitdelay, chemodelay, tritrophic, lotkadelay, sisrewire, grayscott, cahnwindow)
+  Host 330: 160 credit (32 results - xy_delay, grayscott, fiberbundle, seasonal_metapop, lorenz96, chemostat, tritrophic, metapop_allee)
+  Host 332: 70 credit (14 results - spatial_pgg, lorenz96, grayscott, fiberbundle, chemostat, tritrophic, metapop_allee, seasonal_metapop, xy_delay)
+  Host 334: 155 credit (31 results - grayscott, cahnwindow, xydelaytherm, fiberheal, pitdelay, chemodelay, tritrophic, lotkadelay, sisrewire, l96delay)
+  Host 340: 135 credit (27 results - spatial_pgg, levy, potts, contact_process, minority_game, collatz)
+  Host 350: 5 credit (1 result - collatz_evt_tails)
+
+ZERO-CREDIT RESULTS (8):
+  Host 345: 8 results with 0 elapsed time (instant returns, no computation)
+  Result IDs: 1697767, 1697768, 1697769, 1697771, 1697775, 1697779, 1697780, 1697783
+
+CLEANUP ACTIONS:
+  Stuck tasks (>12h, host silent >6h): 0 found
+  Tasks >48h: 0 found
+  No cleanup needed this session.
+
+FAILURE RATE ANALYSIS:
+  Multiple experiments at 100% failure (all known broken, previously identified):
+  - tangled_nature_macroevolution, nagelschreckenberg_lookahead, depinning_roughness_2d_gpu
+  - axelnoise_s0, ofcquake_s0, gene_drive_delay_resistance_window, etc.
+  These are tracked in findings_summary.txt as BROKEN. No new breakages detected.
+
+ACTIVE HOSTS: 89 hosts contacted in last 72h, 25 hosts with running tasks
+WEBSITE COUNTERS UPDATED: credited_count=5261, total_results_count=5469
+
+NO BUGS FIXED this session - all experiments operating normally.

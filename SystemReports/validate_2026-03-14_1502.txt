@@ -1,0 +1,58 @@
+Axiom Validation Log
+Timestamp: 2026-03-14 15:02 Europe/Berlin
+
+Results credited this session
+- Total credited results: 19281
+- Total credit awarded: 590701.841676
+- Credit passes:
+  - Passes 1-4: 18644 results, 564950.623797 credit
+  - Tail pass A: 398 results, 21258.908256 credit
+  - Tail pass B: 63 results, 800.461306 credit
+  - Tail pass C: 82 results, 1608.011316 credit
+  - Tail pass D: 94 results, 2083.837001 credit
+- Initial queue discovered in Step 1: 88141 uncredited results
+- Stable residual set during validation: 69950 elapsed_time=0 results, which receive no credit under the prompt policy
+- The live queue continued admitting new positive-time completions during validation; these were picked up in the tail passes above
+
+Anti-cheat review
+- Eligible sanitized JSON files matched to the current uncredited queue: 0
+- Sample reviewed: 0 files
+- Flagged/denied results: 0
+- Reason: no current uncredited results had a corresponding sanitized payload at `/opt/axiom/experiment_results/sanitized/{result_name}_safe.json`, so there was no anti-cheat sample to review this cycle
+
+Per-host credit summary
+- Top hosts from the initial discovered queue:
+  - Host 437: 186778.33
+  - Host 367: 46204.51
+  - Host 395: 15879.61
+  - Host 397: 15528.24
+  - Host 398: 14963.82
+  - Host 333: 14724.77
+  - Host 334: 14302.92
+  - Host 324: 13418.40
+  - Host 105: 12615.95
+  - Host 401: 11928.28
+  - Host 327: 11665.93
+  - Host 341: 11554.82
+  - Host 339: 11391.98
+  - Host 111: 10685.82
+  - Host 332: 10229.65
+  - Host 330: 10042.32
+  - Host 192: 9231.30
+  - Host 240: 9224.44
+  - Host 184: 7976.09
+  - Host 269: 7692.76
+- Additional late-arriving/race-tail results were picked up by reruns in passes 2-4
+
+Operational notes
+- Price table was fresh at runtime; no manual refresh was required
+- The prompt's original `:.2f` credit formatting left a small number of positive-credit tasks at `0.00`; the temporary script was updated to write higher precision and rerun until the positive-time residue reached zero
+- Additional positive-time results arrived while the validator was running; repeated tail passes credited these late arrivals
+- Host and user totals were updated incrementally with `total_credit = total_credit + X`
+
+Cleanup actions
+- Updated `/opt/axiom_boinc/html/user/credited_count.txt`
+- Updated `/opt/axiom_boinc/html/user/total_results_count.txt`
+- Published this log to `/opt/axiom_boinc/html/user/system_reports/`
+- Staged this log for Git publication in `/opt/axiom/Axiom_repo/SystemReports/`
+- Removed temporary files in `/tmp/` after completion

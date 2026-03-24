@@ -1,0 +1,68 @@
+Axiom BOINC Validation & Credit Log
+Session timestamp: 2026-03-21 15:04 UTC
+Step: Validation & Credit (credit only)
+
+State discovery:
+- Raw uncredited completed results at session start: 593099
+- Raw credited/uncredited quick stats query was not used for decision-making after it proved slow on the live table.
+- Eligible credit backlog isolated by join + elapsed_time>0 at session start: 543
+- Price table freshness check: /opt/axiom/gpu_price_table.json was 2575 seconds old at check time, so no refresh was needed.
+- credit_cron.log showed active credit flow before intervention.
+
+Credit activity during this session:
+- 2026-03-21 14:59:37 Credited 556 results, 52245.45 credit
+- 2026-03-21 15:00:43 Credited 50 results, 536.42 credit
+- 2026-03-21 15:01:10 Credited 96 results, 5206.58 credit
+- 2026-03-21 15:01:29 Credited 33 results, 8715.87 credit
+- 2026-03-21 15:04:39 Credited 336 results, 7167.17 credit
+- 2026-03-21 15:04:55 Credited 16 results, 223.29 credit
+- 2026-03-21 15:05:02 Credited 10 results, 167.28 credit
+
+Results credited this session:
+- Count: 1097
+- Total cobblestones granted: 74262.06
+
+Per-host credit summary:
+- Exact per-host reconstruction is only directly queryable for rows that still retain the original crediting mod_time. Earlier credited rows from this session were subsequently touched by normal BOINC lifecycle updates, so their per-host decomposition is no longer recoverable from the live result table without binary-log reconstruction.
+- Exact per-host summary below covers retained credit timestamps 2026-03-21 15:01:10, 2026-03-21 15:01:29, and 2026-03-21 15:04:39 only: 465 results, 21089.54 credit total.
+- host 29: 5 results, 64.85 credit
+- host 60: 4 results, 13.90 credit
+- host 61: 4 results, 65.70 credit
+- host 85: 6 results, 73.97 credit
+- host 97: 14 results, 104.39 credit
+- host 106: 6 results, 49.93 credit
+- host 111: 14 results, 312.68 credit
+- host 134: 1 result, 2.14 credit
+- host 147: 1 result, 845.14 credit
+- host 159: 1 result, 20.14 credit
+- host 202: 2 results, 9.17 credit
+- host 268: 1 result, 888.28 credit
+- host 281: 17 results, 101.45 credit
+- host 302: 20 results, 1004.50 credit
+- host 324: 4 results, 34.02 credit
+- host 327: 16 results, 223.16 credit
+- host 330: 14 results, 198.26 credit
+- host 332: 13 results, 192.10 credit
+- host 338: 18 results, 264.40 credit
+- host 339: 22 results, 304.10 credit
+- host 340: 16 results, 204.64 credit
+- host 358: 5 results, 40.47 credit
+- host 364: 8 results, 61.06 credit
+- host 367: 110 results, 1560.47 credit
+- host 376: 57 results, 281.72 credit
+- host 395: 18 results, 311.79 credit
+- host 399: 2 results, 8.06 credit
+- host 424: 8 results, 80.33 credit
+- host 437: 1 result, 2096.35 credit
+- host 459: 1 result, 6.83 credit
+- host 486: 1 result, 1827.40 credit
+- host 487: 2 results, 8419.27 credit
+- host 493: 6 results, 10.97 credit
+- host 497: 22 results, 601.21 credit
+- host 520: 1 result, 527.89 credit
+- host 539: 24 results, 278.80 credit
+
+Operational notes:
+- The vast majority of raw uncredited completed rows observed on the live table had elapsed_time=0 and are intentionally skipped by the credit rules.
+- The eligible queue is live and continued to receive new completed results during this session; counts changed while the session was running.
+- No user preferences, host preferences, daemons, MariaDB service, crontab entries, lock files, or assimilator code were modified.

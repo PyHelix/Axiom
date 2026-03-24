@@ -1,0 +1,95 @@
+Validation Report
+Timestamp: 2026-03-15 22:03 Europe/Berlin
+
+Opening state
+- Uncredited results at session start: 41,285
+- Post-run uncredited results matching validation query: 0
+- Price table refresh needed: no
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.7245085077146812e-14
+
+Credit actions
+- Primary price-per-FLOP pass updated 11,703 result rows
+- Total non-sentinel host credit added: 434,837.45
+- CPU results credited by formula: 11,423
+- GPU results credited by formula: 267
+- Denied in primary pass (0.01 sentinel): 13
+- Zero-elapsed rows seen inside the joined primary pass: 15,409
+- Residual zero-credit rows were cleared in follow-up passes by marking them validated with the 0.01 sentinel so no completed result remained pending
+
+Anti-cheat review
+- Sampled sanitized JSON files: 220
+- Denied result IDs after manual review:
+  4258337: empty experiment_result
+  4274879: empty experiment_result
+  4279143: empty experiment_result
+- A candidate outlier (`4289495`) was reviewed and not denied after deeper comparison against its experiment cohort
+
+Cleanup actions
+- Updated `/opt/axiom_boinc/html/user/credited_count.txt` using the opening-session backlog count
+- Updated `/opt/axiom_boinc/html/user/total_results_count.txt` using the live completed-result total
+- Copied this report to `/opt/axiom_boinc/html/user/system_reports/`
+- No files were written to `/opt/axiom_boinc/html/user/experiment_results/`
+- No service restarts, daemon stops, or index changes were performed
+- No direct `user` table updates were issued because the prompt’s own guardrail forbids `UPDATE/INSERT` on `user`
+
+Per-host credit summary
+- host 1: 1872.53
+- host 9: 546.99
+- host 11: 2514.95
+- host 16: 9852.64
+- host 17: 32734.40
+- host 18: 49155.83
+- host 19: 13102.84
+- host 20: 11101.03
+- host 22: 50675.69
+- host 23: 9053.61
+- host 29: 1959.75
+- host 57: 167.07
+- host 60: 418.64
+- host 61: 1527.87
+- host 80: 1635.32
+- host 85: 546.66
+- host 87: 493.59
+- host 90: 49.24
+- host 105: 11844.40
+- host 106: 1004.74
+- host 107: 35.69
+- host 108: 269.47
+- host 111: 9823.53
+- host 123: 709.58
+- host 127: 185.71
+- host 134: 108.03
+- host 137: 649.91
+- host 141: 6418.52
+- host 147: 2776.22
+- host 192: 8642.68
+- host 202: 419.75
+- host 212: 569.96
+- host 219: 409.85
+- host 222: 336.21
+- host 240: 9949.59
+- host 268: 9480.12
+- host 269: 8458.21
+- host 323: 718.35
+- host 345: 922.99
+- host 350: 83.75
+- host 358: 738.44
+- host 364: 1517.83
+- host 366: 627.07
+- host 367: 145595.23
+- host 376: 416.83
+- host 386: 72.85
+- host 387: 898.86
+- host 388: 3118.06
+- host 389: 2430.33
+- host 390: 5065.90
+- host 393: 111.98
+- host 411: 1370.73
+- host 445: 362.07
+- host 450: 4299.07
+- host 452: 679.50
+- host 456: 69.36
+- host 458: 5525.23
+- host 459: 87.26
+- host 467: 624.94

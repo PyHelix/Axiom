@@ -1,0 +1,41 @@
+Validation Session Log
+Timestamp: 2026-03-16 22:22 CET
+Session credit window: 2026-03-16 22:20:14 to 2026-03-16 22:21:08 CET
+
+Results credited this session
+- 12384 results updated
+- 1020268.11 cobblestones granted in-session
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.7725957318345084e-14
+
+Anti-cheat review
+- Spot-checked 200 sanitized JSON files from the uncredited queue
+- Flagged 1 result for denial sentinel credit
+- Result 4456223: sanitized payload contained no numeric experiment_result payload, only metadata and elapsed value
+
+Per-host credit summary
+- Host 437: 452 results, 354606.62 credit
+- Host 367: 4629 results, 204931.03 credit
+- Host 22: 105 results, 97543.76 credit
+- Host 18: 102 results, 84567.86 credit
+- Host 20: 91 results, 60261.48 credit
+- Host 17: 113 results, 52345.25 credit
+- Host 19: 79 results, 32056.80 credit
+- Host 23: 103 results, 16877.57 credit
+- Host 16: 70 results, 17064.00 credit
+- Host 490: 191 results, 13762.20 credit
+- Host 301: 13 results, 12061.45 credit
+- Host 141: 705 results, 8946.70 credit
+- Host 147: 27 results, 6519.02 credit
+- Host 390: 452 results, 6484.53 credit
+- Host 1: 308 results, 5326.60 credit
+- Host 388: 391 results, 4720.67 credit
+- Host 481: 174 results, 4328.45 credit
+- Host 487: 16 results, 4038.19 credit
+- Host 389: 393 results, 3430.10 credit
+- Host 97: 334 results, 3425.10 credit
+
+Cleanup and operational actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 816796
+- Verified /opt/axiom_boinc/html/user/total_results_count.txt at 408668
+- Positive-elapsed uncredited queue was live during execution and had 56 rows at log time
+- Zero-elapsed uncredited rows at log time: 4455

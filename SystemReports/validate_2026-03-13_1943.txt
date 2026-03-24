@@ -1,0 +1,97 @@
+Axiom Validation Log — 2026-03-13 19:43 CET
+
+Results credited this session
+  Count: 4743
+  Total credit awarded: 85343.83
+  CPU results credited: 4292
+  GPU results credited: 267
+  Denied sentinel results: 5
+  CPU_SCALE: 5.0196363564419115e-12
+  GPU_SCALE: 2.664303498281195e-14
+
+Anti-cheat flags
+  Sampled sanitized results: 200
+  Flagged result IDs denied at 0.01 credit:
+    result_id=3512073 host_id=184 elapsed=30.07812 reason=byte-identical numeric payload shared across 5 hosts; empty numeric payload
+    result_id=3512151 host_id=16 elapsed=37.931826 reason=byte-identical numeric payload shared across 5 hosts; empty numeric payload
+    result_id=3512163 host_id=10 elapsed=98.5457 reason=byte-identical numeric payload shared across 5 hosts; empty numeric payload
+    result_id=3512418 host_id=184 elapsed=35.886017 reason=byte-identical numeric payload shared across 5 hosts; empty numeric payload
+    result_id=3514352 host_id=426 elapsed=111.553635 reason=byte-identical numeric payload shared across 5 hosts; empty numeric payload
+
+Per-host credit summary
+  Reconstructed from result rows updated during the validation window (2026-03-13 19:43:03 to 19:44:54).
+  host_id	credit	results
+  367	8746.40	801
+  324	5286.68	215
+  395	4797.00	172
+  182	3943.80	9
+  186	3551.16	38
+  16	3528.58	31
+  327	3104.15	96
+  330	2638.82	92
+  334	2542.90	85
+  333	2534.42	87
+  401	2425.87	85
+  10	2425.35	32
+  339	2289.36	65
+  332	2185.24	73
+  184	2115.58	75
+  342	1657.67	118
+  141	1623.72	136
+  210	1599.49	275
+  396	1579.30	216
+  105	1573.76	131
+  397	1540.24	146
+  398	1494.69	64
+  240	1424.00	105
+  390	1367.12	78
+  268	1258.92	116
+  106	1143.33	108
+  399	1103.46	74
+  400	1048.02	151
+  29	939.13	57
+  347	876.47	19
+  389	830.56	77
+  159	787.88	29
+  388	748.39	37
+  11	701.91	14
+  1	691.80	142
+  61	671.62	25
+  426	671.36	15
+  340	655.12	27
+  85	578.04	65
+  71	521.39	49
+  123	399.85	58
+  387	337.98	64
+  2	328.24	33
+  87	283.08	21
+  108	265.89	35
+  9	264.00	13
+  137	246.38	13
+  23	231.90	13
+  255	186.49	12
+  60	166.31	25
+  222	132.85	11
+  424	121.56	11
+  127	115.01	5
+  202	113.64	11
+  113	113.55	7
+  107	51.96	12
+  57	42.54	8
+  134	30.37	3
+  300	19.33	3
+
+Cleanup actions
+  Removed temporary credit script: /tmp/axiom_credit.py
+  Removed temporary anti-cheat script: /tmp/axiom_anticheat.py
+  Updated website counters: /opt/axiom_boinc/html/user/credited_count.txt and /opt/axiom_boinc/html/user/total_results_count.txt
+  Copied this log to /opt/axiom_boinc/html/user/system_reports/
+
+Follow-up catch-up
+  After the initial report write/publish, additional completed results arrived and were credited in one final drain pass.
+  Additional results credited: 179
+  Additional credit awarded: 2690.02
+  Immediate queue recheck after catch-up: 0 uncredited completed experiment results
+
+Post-run state
+  Remaining uncredited completed experiment results at log time: 0

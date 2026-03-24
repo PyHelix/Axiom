@@ -1,0 +1,60 @@
+Axiom Validation & Credit Log
+Timestamp UTC: 2026-03-20 23:27:55
+
+Results credited this session
+- Count: 568
+- Total cobblestones: 17306.910716
+- CPU results: 457
+- GPU results: 12
+- Stub results: 0
+
+Per-host credit summary
+- Host 16: 3 results, 1015.290000 credit
+- Host 17: 1 results, 1523.090000 credit
+- Host 18: 1 results, 1668.570000 credit
+- Host 19: 1 results, 1402.860000 credit
+- Host 22: 1 results, 3241.370000 credit
+- Host 23: 1 results, 324.010000 credit
+- Host 29: 4 results, 67.650000 credit
+- Host 60: 4 results, 19.860000 credit
+- Host 61: 11 results, 108.328305 credit
+- Host 85: 5 results, 64.430000 credit
+- Host 87: 6 results, 82.210000 credit
+- Host 97: 14 results, 135.262787 credit
+- Host 111: 29 results, 332.791738 credit
+- Host 123: 8 results, 44.610000 credit
+- Host 127: 4 results, 14.633849 credit
+- Host 134: 1 results, 6.900000 credit
+- Host 141: 14 results, 173.386396 credit
+- Host 185: 2 results, 61.894865 credit
+- Host 202: 4 results, 23.655775 credit
+- Host 289: 2 results, 623.240000 credit
+- Host 323: 1 results, 591.700000 credit
+- Host 324: 39 results, 321.540233 credit
+- Host 327: 35 results, 278.606767 credit
+- Host 330: 29 results, 362.242995 credit
+- Host 332: 24 results, 395.158603 credit
+- Host 338: 39 results, 324.659844 credit
+- Host 339: 38 results, 502.019277 credit
+- Host 340: 24 results, 404.452017 credit
+- Host 341: 6 results, 76.912431 credit
+- Host 358: 5 results, 29.444262 credit
+- Host 364: 3 results, 34.590000 credit
+- Host 367: 57 results, 1296.132372 credit
+- Host 376: 70 results, 328.932050 credit
+- Host 389: 17 results, 98.847109 credit
+- Host 390: 15 results, 168.675082 credit
+- Host 395: 34 results, 301.703959 credit
+- Host 397: 1 results, 33.830000 credit
+- Host 459: 5 results, 61.400000 credit
+- Host 497: 6 results, 232.840000 credit
+- Host 506: 3 results, 12.780000 credit
+- Host 520: 1 results, 516.400000 credit
+
+Operational notes
+- Live uncredited count after session: 240478
+- Remaining CPU rows with elapsed_time=0: 239419
+- Remaining GPU rows with elapsed_time=0: 986
+- Remaining GPU rows missing host metrics: 868
+- Remaining uncredited rows were not awarded credit because the prompt rules say to skip elapsed_time=0 rows, and GPU rows missing a host record do not have the required FLOPS inputs for the stated formula.
+- The live uncredited count is volatile because new completed results continue to arrive while the session runs.

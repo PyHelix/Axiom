@@ -1,0 +1,18 @@
+Axiom BOINC Validation Log (Late-arrival Top-up)
+Timestamp: 2026-03-16_0030 CET
+Session credit window: 2026-03-16 00:28:46 to 2026-03-16 00:29:46 CET
+
+Results credited in late-arrival sweeps:
+- Results updated: 360
+- Total granted credit: 8671.03
+- Denied-sentinel results (0.01): 0
+
+Per-host credit summary (hostid, results, granted_credit):
+367	18	198.98
+470	1	0.78
+
+Cleanup actions taken:
+- Credited all late-arriving completed results observed during closeout sweeps.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1289153.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 385496.
+- Validation queue snapshot after final sweep: 0 uncredited results remaining.

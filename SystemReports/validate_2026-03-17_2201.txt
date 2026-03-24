@@ -1,0 +1,99 @@
+Validation Log
+Timestamp: 2026-03-17_2201 UTC
+
+Session Summary
+- Anti-cheat sample: 200 sanitized JSON files reviewed from 5,738 uncredited results with sanitized payloads available
+- Anti-cheat flags: none
+- Results finalized this session: 81,558
+- Host credit added this session: 606,930.938048
+- Price scales used: CPU=5.0196363564419115e-12, GPU=2.5228781455604652e-14
+- Queue status at sweep close: 0 pending; note that new rows can complete immediately after publication on the live system
+
+Credit Notes
+- Main batch credited 9,010 started results
+- Follow-up precision and residual sweeps credited additional started results that were left at 0 by rounding or late arrival
+- Zero-compute rows finalized: 72,360 rows with elapsed_time=0 were marked complete with granted_credit=0.000001 so they do not remain perpetually pending
+- Denied sentinel for anti-cheat: not used this session
+
+Per-Host Credit Added
+- Host 16: 12929.292627
+- Host 17: 36627.820000
+- Host 18: 67750.648847
+- Host 19: 23610.149403
+- Host 20: 44657.377893
+- Host 22: 55643.035532
+- Host 23: 14339.897345
+- Host 29: 2015.260000
+- Host 57: 126.090000
+- Host 60: 686.408153
+- Host 61: 2852.422245
+- Host 63: 3.341171
+- Host 85: 1526.900000
+- Host 87: 1477.060000
+- Host 90: 4554.910000
+- Host 97: 2618.875367
+- Host 108: 272.640000
+- Host 111: 4324.420000
+- Host 113: 357.052897
+- Host 123: 674.250000
+- Host 127: 1365.150000
+- Host 134: 128.290000
+- Host 141: 18109.200000
+- Host 147: 5385.376415
+- Host 159: 10212.890000
+- Host 202: 75.320000
+- Host 212: 1666.360000
+- Host 235: 1443.998745
+- Host 249: 3498.187426
+- Host 267: 22.720000
+- Host 275: 983.190000
+- Host 289: 1255.180000
+- Host 290: 5093.750000
+- Host 302: 4139.455890
+- Host 322: 15207.250000
+- Host 323: 1659.180000
+- Host 341: 1226.524665
+- Host 345: 841.770000
+- Host 358: 525.900000
+- Host 364: 107.830000
+- Host 366: 572.030000
+- Host 367: 187344.220596
+- Host 376: 1942.940000
+- Host 385: 3670.820000
+- Host 387: 1205.430000
+- Host 388: 2208.380000
+- Host 389: 1752.460000
+- Host 390: 2239.460000
+- Host 393: 2073.390000
+- Host 424: 1649.721511
+- Host 445: 235.080000
+- Host 455: 110.660000
+- Host 456: 45.010000
+- Host 459: 521.900241
+- Host 471: 4212.260000
+- Host 472: 3704.030000
+- Host 473: 4936.630000
+- Host 474: 5458.130000
+- Host 475: 3660.020000
+- Host 476: 3935.640000
+- Host 477: 4483.310000
+- Host 478: 4104.810000
+- Host 479: 246.850000
+- Host 480: 626.560000
+- Host 481: 1942.760000
+- Host 483: 157.120000
+- Host 488: 6545.461079
+- Host 491: 222.170000
+- Host 492: 77.100000
+- Host 493: 268.640000
+- Host 496: 421.070000
+- Host 497: 6361.500000
+
+Cleanup Actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 1242635
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 458577
+- Copied this log to /opt/axiom_boinc/html/user/system_reports/
+- Prepared this log for Git tracking in /opt/axiom/Axiom_repo/SystemReports/
+
+Notes
+- The prompt file contained an internal conflict about user-table writes. To honor the stricter top-level guardrail, this session did not run UPDATE statements against the user table.

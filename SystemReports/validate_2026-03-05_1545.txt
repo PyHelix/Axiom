@@ -1,0 +1,46 @@
+Axiom BOINC — Validation Log 2026-03-05 15:45 UTC
+
+## Session Summary
+- Credit awarded: 0 (assimilator has not yet processed today's 409 uncredited results)
+- Tasks aborted: 94 (broken experiments with 100% failure rate)
+- Stuck tasks cleaned: 0 (none found)
+
+## Uncredited Results
+409 results completed today (14:53-15:15 UTC) awaiting assimilator processing.
+No sanitized files available yet — assimilator last wrote at 11:56 UTC.
+These results will be credited in a future validation cycle once sanitized.
+
+## Already Credited
+2146 results previously credited in the database.
+
+## Broken Experiment Cleanup — GPU (77 tasks aborted)
+All had 100% failure rates with zero successes:
+- gradsubwd_gpu: 10 tasks aborted
+- fhncr_gpu: 11 tasks aborted
+- wdcurv_gpu: 12 tasks aborted
+- wdnoise_gpu: 10 tasks aborted
+- wdtime_gpu: 11 tasks aborted
+- mips_active_brownian_gpu: 1 task aborted
+- wd_noise_trigger_gpu: 18 tasks aborted
+- cml_sync_transition_gpu: 2 tasks aborted
+- fhn_coherence_resonance_gpu: 2 tasks aborted
+
+## Broken Experiment Cleanup — CPU (17 tasks aborted)
+High failure rates (>90%):
+- cahnhilliard_delay_feedback_window (99.5% fail): 3 tasks aborted
+- battery_pulse_delay_plating_resonance (95% fail): 3 tasks aborted
+- adaptive_voter_delay_rewiring (91.7% fail): 5 tasks aborted
+- rbn_delay_fatigue_control (89% fail): 5 tasks aborted
+- seir_delay_fatigue_control (86.3% fail): 1 task aborted
+
+## Website Counter Update
+- total_results_count.txt updated: 2422 -> 2572
+
+## Active Hosts
+87 hosts active in last 72h across Windows, Linux, and macOS.
+30 hosts currently running tasks (711 total in-flight).
+
+## Notes
+- Assimilator (PID 1221) is running but appears behind on processing.
+- Many 100% failure GPU experiments suggest CUDA compatibility issues across the fleet.
+- No experiment script bugs were investigated this cycle as the failures are likely environmental (GPU driver/CUDA mismatches on volunteer machines).

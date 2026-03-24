@@ -1,0 +1,113 @@
+Axiom validation log - 2026-03-15_1627
+
+Results credited this session
+- Credit passes completed: 4
+- Results credited this session: 19967
+- Total cobblestones awarded: 545748.10
+- CPU results credited: 18187
+- GPU results credited: 860
+- Denied sentinel results: 38 (0.01 credit each)
+- Initial price table freshness: fresh (373 seconds old)
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.604730343876649e-14
+
+Anti-cheat review
+- Spot-check sample size: 200 sanitized JSON files
+- Sanitized files present among uncredited results at review time: 19134
+- Clear denial criteria used after spot-check validation: empty payloads, byte-identical payloads on multiple hosts, and successful sub-5s stubs
+- Result 4210498: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4218285: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4220919: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4233540: byte_identical_payload_on_multiple_hosts
+- Result 4234288: byte_identical_payload_on_multiple_hosts
+- Result 4235950: byte_identical_payload_on_multiple_hosts
+- Result 4236435: byte_identical_payload_on_multiple_hosts
+- Result 4237333: stub_success_under_5s
+- Result 4237754: empty_payload, byte_identical_payload_on_multiple_hosts
+- Result 4237987: stub_success_under_5s
+- Result 4238076: stub_success_under_5s
+- Result 4240696: byte_identical_payload_on_multiple_hosts
+- Result 4243779: stub_success_under_5s
+- Result 4244535: stub_success_under_5s, byte_identical_payload_on_multiple_hosts
+- Result 4246249: stub_success_under_5s
+- Additional automated stub denials in follow-up live sweeps: 23 results
+
+Per-host credit summary
+- Host 9: 719.63
+- Host 11: 2236.60
+- Host 16: 14509.09
+- Host 17: 26172.77
+- Host 18: 36279.42
+- Host 19: 22581.89
+- Host 20: 22513.39
+- Host 22: 19178.43
+- Host 23: 10333.36
+- Host 29: 2761.17
+- Host 57: 241.05
+- Host 60: 1042.75
+- Host 61: 2567.72
+- Host 80: 739.96
+- Host 85: 1927.91
+- Host 87: 1256.13
+- Host 105: 13398.25
+- Host 106: 3775.79
+- Host 107: 142.25
+- Host 108: 988.93
+- Host 111: 11178.24
+- Host 123: 1413.67
+- Host 127: 195.79
+- Host 134: 119.74
+- Host 137: 472.94
+- Host 141: 8148.40
+- Host 159: 731.10
+- Host 202: 652.61
+- Host 212: 4983.71
+- Host 222: 268.22
+- Host 240: 11824.61
+- Host 267: 60.45
+- Host 268: 10141.27
+- Host 269: 9846.35
+- Host 317: 198.52
+- Host 323: 986.84
+- Host 342: 1454.41
+- Host 345: 1276.81
+- Host 350: 440.05
+- Host 358: 841.46
+- Host 364: 1896.85
+- Host 367: 169593.00
+- Host 379: 1552.44
+- Host 387: 1702.65
+- Host 388: 4510.89
+- Host 389: 3590.63
+- Host 390: 6551.53
+- Host 393: 1014.79
+- Host 404: 1647.91
+- Host 405: 1641.73
+- Host 406: 1063.26
+- Host 407: 1046.78
+- Host 408: 3348.56
+- Host 409: 1804.90
+- Host 410: 1212.06
+- Host 424: 40.68
+- Host 437: 7041.20
+- Host 450: 2316.38
+- Host 452: 1120.29
+- Host 456: 58.60
+- Host 458: 8670.16
+- Host 459: 323.06
+- Host 460: 5367.80
+- Host 461: 3053.44
+- Host 462: 16722.56
+- Host 463: 45.85
+- Host 465: 48071.32
+- Host 466: 1624.76
+- Host 467: 512.39
+
+Cleanup actions taken
+- Updated /opt/axiom_boinc/html/user/credited_count.txt incrementally after each pass
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt using max(existing, live_total)
+- Removed /tmp/axiom_credit.py after the final pass
+- Copied validation report to /opt/axiom_boinc/html/user/system_reports/
+- Current website credited_count.txt: 1337165
+- Current website total_results_count.txt: 385943
+- Residual live queue after final sweep: 27 non-zero elapsed results still uncredited (fresh arrivals), 11733 elapsed_time=0 results left at zero credit per policy

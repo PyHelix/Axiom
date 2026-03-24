@@ -1,0 +1,51 @@
+Validation Session
+Timestamp (UTC): 2026-03-21 12:27
+
+Credit Flow Check
+- Price table fresh at validation start (age 544 seconds)
+- credit_cron.log had recent successful entries before this session
+- Manual validation pass executed via /opt/axiom/axiom_credit_cron.py
+
+Results Credited This Session
+- Actual credited by validation pass: 261 results
+- Actual total credit awarded: 4166.11 cobblestones
+- Log entry: 2026-03-21 12:26:47 Credited 261 results, 4166.11 credit (CPU:260 GPU:1)
+
+Per-Host Credit Summary
+- Snapshot taken immediately before the validation pass identified 240 results worth 3907.43 credit
+- 21 additional results worth 258.68 credit arrived during execution and were included in the actual credited total above
+- Pre-run per-host summary for the validated batch snapshot:
+  host_id 541: 789.12 credit
+  host_id 19: 730.35 credit
+  host_id 367: 491.16 credit
+  host_id 542: 260.61 credit
+  host_id 398: 214.42 credit
+  host_id 327: 156.38 credit
+  host_id 340: 144.64 credit
+  host_id 111: 131.62 credit
+  host_id 539: 126.08 credit
+  host_id 376: 108.14 credit
+  host_id 85: 89.96 credit
+  host_id 338: 75.27 credit
+  host_id 61: 66.92 credit
+  host_id 399: 63.39 credit
+  host_id 332: 59.46 credit
+  host_id 97: 56.44 credit
+  host_id 395: 52.42 credit
+  host_id 497: 37.53 credit
+  host_id 330: 34.99 credit
+  host_id 324: 33.61 credit
+  host_id 493: 31.37 credit
+  host_id 424: 26.90 credit
+  host_id 364: 25.66 credit
+  host_id 202: 24.17 credit
+  host_id 459: 17.45 credit
+  host_id 396: 17.18 credit
+  host_id 127: 16.11 credit
+  host_id 358: 14.02 credit
+  host_id 505: 8.15 credit
+  host_id 60: 3.91 credit
+
+Verification
+- Matching uncredited result count after the pass: 535799
+- Credit is flowing, but the matching uncredited population is still increasing faster than a single manual pass clears it

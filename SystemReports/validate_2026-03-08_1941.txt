@@ -1,0 +1,21 @@
+Validation session: 2026-03-08_1941
+Final single-result live queue drain
+Results reviewed this session: 1
+Sanitized payloads reviewed: 0 present / 1 missing
+Eligible results: 0
+Denied sentinel results: 1
+
+Results reviewed this session:
+result 1934765 (host 366): exp_minority_game_delay_memory_interaction | elapsed=856.12s | nbytes=33210 | missing sanitized payload -> 0.01 credit
+
+Per-user totals:
+user 50: +0.01 credit, total_credit=15.82
+
+Per-host totals:
+host 366: +0.01 credit, total_credit=15.67
+
+Stuck/broken tasks cleaned up:
+none
+
+Any bugs found and fixed in experiment scripts:
+none

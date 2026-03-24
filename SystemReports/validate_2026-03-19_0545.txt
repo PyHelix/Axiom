@@ -1,0 +1,86 @@
+Axiom validation and credit log
+Session start: 2026-03-19 05:45 UTC
+Session report time: 2026-03-19 05:45 UTC onward via result.mod_time
+
+Results credited this session: 21542
+Total granted credit this session: 900246.86 cobblestones
+
+Per-host credit summary:
+host 367: 1614 results, 172834.57 credit
+host 18: 36 results, 84324.84 credit
+host 22: 37 results, 84229.38 credit
+host 20: 39 results, 52911.61 credit
+host 17: 36 results, 47837.44 credit
+host 19: 35 results, 33042.40 credit
+host 508: 2502 results, 23986.60 credit
+host 507: 2532 results, 23851.91 credit
+host 240: 334 results, 22204.88 credit
+host 268: 329 results, 19948.50 credit
+host 105: 436 results, 19933.45 credit
+host 322: 9 results, 15239.55 credit
+host 16: 39 results, 14881.56 credit
+host 23: 35 results, 14818.16 credit
+host 397: 457 results, 14514.28 credit
+host 398: 449 results, 14131.62 credit
+host 339: 404 results, 12886.75 credit
+host 340: 457 results, 12123.90 credit
+host 388: 228 results, 11796.89 credit
+host 494: 353 results, 11046.98 credit
+host 497: 350 results, 10860.56 credit
+host 395: 454 results, 10702.68 credit
+host 111: 342 results, 10232.69 credit
+host 332: 300 results, 9650.11 credit
+host 330: 300 results, 9578.41 credit
+host 338: 416 results, 9283.38 credit
+host 327: 429 results, 9250.84 credit
+host 324: 419 results, 9130.36 credit
+host 519: 74 results, 8536.73 credit
+host 376: 1336 results, 7226.39 credit
+host 399: 445 results, 6257.51 credit
+host 400: 445 results, 6133.77 credit
+host 390: 267 results, 6075.69 credit
+host 210: 427 results, 5708.47 credit
+host 396: 430 results, 5596.86 credit
+host 147: 7 results, 4530.26 credit
+host 496: 249 results, 4407.25 credit
+host 97: 146 results, 3985.26 credit
+host 272: 100 results, 3569.04 credit
+host 513: 127 results, 3543.67 credit
+host 271: 21 results, 3213.32 credit
+host 480: 122 results, 3128.73 credit
+host 61: 124 results, 2954.14 credit
+host 289: 8 results, 2949.11 credit
+host 389: 240 results, 2867.93 credit
+host 481: 123 results, 2857.30 credit
+host 29: 80 results, 2844.02 credit
+host 87: 191 results, 1990.58 credit
+host 450: 94 results, 1923.73 credit
+host 85: 193 results, 1892.57 credit
+host 364: 112 results, 1861.48 credit
+host 445: 83 results, 1592.10 credit
+host 387: 222 results, 1591.46 credit
+host 123: 230 results, 1486.22 credit
+host 341: 65 results, 1455.88 credit
+host 503: 441 results, 1431.59 credit
+host 504: 448 results, 1411.69 credit
+host 27: 7 results, 1310.00 credit
+host 106: 65 results, 1281.25 credit
+host 127: 115 results, 1210.40 credit
+host 345: 123 results, 1111.02 credit
+host 459: 51 results, 1011.61 credit
+host 60: 98 results, 954.86 credit
+host 137: 38 results, 831.16 credit
+host 358: 57 results, 768.13 credit
+host 414: 32 results, 701.64 credit
+host 505: 238 results, 700.82 credit
+host 506: 203 results, 694.32 credit
+host 493: 161 results, 483.63 credit
+host 451: 33 results, 350.71 credit
+host 113: 20 results, 236.33 credit
+host 107: 13 results, 126.57 credit
+host 134: 13 results, 106.53 credit
+host 267: 5 results, 81.01 credit
+host 483: 1 results, 16.26 credit
+host 1: 1 results, 7.84 credit
+host 521: 1 results, 2.99 credit
+host 63: 46 results, 2.73 credit

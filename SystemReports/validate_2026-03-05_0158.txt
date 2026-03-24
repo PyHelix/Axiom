@@ -1,0 +1,53 @@
+AXIOM VALIDATION SESSION LOG
+Timestamp: 2026-03-05 01:58:48 CET
+Step: Validation/Credit/Cleanup (Step 2)
+
+1) RESULTS REVIEWED THIS SESSION
+- Uncredited successful results currently pending review: 74
+- Review method: matched DB result.name against sanitized JSON _result_name in /opt/axiom/experiment_results/sanitized/*_safe.json.
+- Match outcome: 0/15 pending successful results had sanitized payloads available at review time.
+- Decision: 0 credit awarded this session because scientific payloads were unavailable for quality scoring.
+
+Reviewed result IDs (pending success queue at review time):
+- result_id=1689620 host_id=1 user_id=1 appid=2 name=exp_vicsek_delay_noise_window_gpu_gpu_h1_c1772666898_n9_1615417_1772667464_32
+- result_id=1690259 host_id=324 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h324_r46_1772628327_1683562_1772669056_0
+- result_id=1690261 host_id=324 user_id=40 appid=1 name=exp_tritrophic_delay_harvest_resilience_h324_r47_1772628327_1683672_1772669068_0
+- result_id=1690265 host_id=324 user_id=40 appid=1 name=exp_cahnhilliard_delay_feedback_window_h324_r48_1772628327_1683687_1772669080_0
+- result_id=1690266 host_id=324 user_id=40 appid=1 name=exp_climate_delay_carbon_hysteresis_window_h324_r49_1772628327_1683690_1772669091_0
+- result_id=1690361 host_id=325 user_id=40 appid=1 name=exp_tritroph_r15_h325_s0304_cpu_090631_1689341_1772669691_0
+- result_id=1690461 host_id=330 user_id=40 appid=1 name=exp_metapop_corridor_delay_forecast_h330_r1772614241_1208_1705654_1772669901_0
+- result_id=1690508 host_id=330 user_id=40 appid=1 name=exp_wildfire_delay_adaptive_suppression_h330_r1772614241_1209_1707860_1772669914_0
+- result_id=1690522 host_id=345 user_id=127 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h345_r4_1708242_1772669917_12
+- result_id=1690578 host_id=341 user_id=99 appid=1 name=exp_grayscott_delay_pulse_feedback_h341_r9_1715435_1772669955_28
+- result_id=1690583 host_id=341 user_id=99 appid=1 name=exp_fisher_allee_movinghabitat_delay_culling_window_h341_r11_1715435_1772669955_33
+- result_id=1690604 host_id=330 user_id=40 appid=1 name=exp_grayscott_delay_pulse_feedback_h330_r1772614241_1210_1719434_1772670007_0
+- result_id=1690605 host_id=330 user_id=40 appid=1 name=exp_ising_delay_adaptive_quench_h330_r1772614241_1211_1719736_1772670021_0
+- result_id=1690606 host_id=330 user_id=40 appid=1 name=exp_tritrophic_delay_harvest_resilience_h330_r1772614241_1212_1719923_1772670038_0
+- result_id=1690986 host_id=339 user_id=40 appid=1 name=exp_seir_delay_fatigue_control_h339_1763089_1772670942_0
+
+2) CREDIT ACTIONS
+- Total credit awarded this session: 0
+- Safety cap check (<=10000/session): PASS
+- Per-user credit increments: none
+- DB credit update statements executed: none (no qualifying sanitized payloads)
+
+3) CLEANUP ACTIONS
+- Dead-host stuck task cleanup (>12h runtime and >6h no host contact): 0 tasks updated
+- Hard-ceiling cleanup (>48h runtime): 0 tasks updated
+
+4) FAILURE/BROKEN-EXPERIMENT CHECK
+- Examined recent (48h) failure patterns by experiment family.
+- Observed dominant failure mode: outcome=5 with exit_status=0 across high-failure families; this is not a crash traceback pattern.
+- GPU-specific non-success events with exit_status=195 were present in small counts and not sufficient to classify a family as globally broken this session.
+- Broken experiment abort actions executed: none
+
+5) SCRIPT BUGS FOUND/FIXED
+- No experiment script modifications were required this session.
+
+6) WEBSITE COUNTERS
+- credited_count.txt: unchanged (1191 -> 1191)
+- total_results_count.txt: updated to max(existing, live_db_count) = 1254
+
+7) NOTES
+- findings_summary.txt was consulted only to align operational validation context.
+- No scientific findings were authored in this operational validation log.

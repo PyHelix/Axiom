@@ -1,0 +1,103 @@
+Validation Log
+Timestamp: 2026-03-09 12:43 CET
+Step: Validation & Credit
+
+Session summary
+- Results credited this session: 13616
+- Paid results: 13057
+- Denied results (0.01 sentinel): 559
+- Total cobblestones awarded: 265089.62
+- Credit formula applied: elapsed_time * p_fpops * 1e-11
+- Backlog status after drain loop: 0 uncredited results remaining at verification time
+
+Live state observed
+- Initial uncredited count observed at session start: 13477
+- First full credit pass processed: 13514 results
+- Additional live arrivals drained in follow-up passes: 102 results
+- Post-session total completed valid results counter: 51526
+- Website credited results counter after update: 64003
+
+Anti-cheat review
+- Spot-check sample size: 200 sanitized numeric result files
+- Sample review flagged 25 result IDs
+- Automatic stub-filter denials across the full credited session: 542 results with elapsed_time < 5 seconds
+- Additional non-stub denials from the anti-cheat sample: 17 results
+
+Denied result IDs from sampled anti-cheat review
+- 1890172: outlier vs exp_langton_ant_frozen_stripe_disorder sample (robust z=13.7)
+- 1932139: empty numeric payload
+- 1936608: empty numeric payload
+- 1936650: empty numeric payload
+- 1994819: outlier vs exp_standard_map_anticorrelated_kicks sample (robust z=1706.9)
+- 1994870: empty numeric payload
+- 2009931: byte-identical payload seen on different hosts
+- 2012299: elapsed_time under 5 seconds
+- 2013085: elapsed_time under 5 seconds
+- 2014692: elapsed_time under 5 seconds
+- 2015716: elapsed_time under 5 seconds
+- 2015885: elapsed_time under 5 seconds
+- 2016385: elapsed_time under 5 seconds
+- 2017438: empty numeric payload
+- 2018729: elapsed_time under 5 seconds
+- 2020113: elapsed_time under 5 seconds
+- 2020427: empty numeric payload
+- 2020543: byte-identical payload seen on different hosts
+- 2022071: empty numeric payload
+- 2028430: empty numeric payload
+- 2034853: empty numeric payload
+- 2036711: empty numeric payload
+- 2038343: empty numeric payload
+- 2038796: empty numeric payload
+- 2039128: empty numeric payload
+
+Per-host credit summary
+- Host 367: 142974.79 credits, 4131 results, 178 denied
+- Host 269: 23098.43 credits, 650 results, 0 denied
+- Host 87: 13411.90 credits, 812 results, 68 denied
+- Host 219: 11931.54 credits, 1006 results, 2 denied
+- Host 1: 7116.14 credits, 665 results, 0 denied
+- Host 85: 6734.81 credits, 603 results, 42 denied
+- Host 29: 6252.09 credits, 358 results, 4 denied
+- Host 2: 4479.15 credits, 248 results, 0 denied
+- Host 230: 4328.00 credits, 96 results, 0 denied
+- Host 123: 4267.88 credits, 876 results, 146 denied
+- Host 345: 4247.18 credits, 683 results, 0 denied
+- Host 372: 3733.53 credits, 96 results, 0 denied
+- Host 102: 3843.97 credits, 358 results, 33 denied
+- Host 15: 3672.08 credits, 97 results, 0 denied
+- Host 222: 3512.42 credits, 183 results, 0 denied
+- Host 253: 2129.68 credits, 122 results, 0 denied
+- Host 364: 2111.86 credits, 73 results, 0 denied
+- Host 113: 2065.05 credits, 262 results, 6 denied
+- Host 140: 1519.76 credits, 183 results, 1 denied
+- Host 137: 1503.41 credits, 28 results, 0 denied
+- Host 105: 1279.64 credits, 609 results, 58 denied
+- Host 359: 1241.33 credits, 116 results, 5 denied
+- Host 353: 1147.17 credits, 805 results, 10 denied
+- Host 74: 915.57 credits, 16 results, 0 denied
+- Host 159: 859.14 credits, 26 results, 0 denied
+- Host 96: 844.29 credits, 23 results, 0 denied
+- Host 347: 843.59 credits, 18 results, 0 denied
+- Host 190: 779.46 credits, 16 results, 0 denied
+- Host 360: 700.92 credits, 85 results, 1 denied
+- Host 57: 557.36 credits, 14 results, 0 denied
+- Host 350: 506.10 credits, 71 results, 0 denied
+- Host 366: 463.60 credits, 8 results, 0 denied
+- Host 107: 449.94 credits, 18 results, 0 denied
+- Host 376: 371.80 credits, 58 results, 0 denied
+- Host 271: 329.39 credits, 21 results, 0 denied
+- Host 16: 428.91 credits, 8 results, 0 denied
+- Host 349: 164.04 credits, 4 results, 0 denied
+- Host 195: 123.63 credits, 137 results, 2 denied
+- Host 374: 43.67 credits, 2 results, 0 denied
+- Host 323: 43.01 credits, 1 results, 0 denied
+- Host 9: 42.55 credits, 1 results, 0 denied
+- Host 272: 10.93 credits, 21 results, 3 denied
+- Host 373: 5.74 credits, 1 results, 0 denied
+- Host 267: 4.17 credits, 7 results, 0 denied
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt
+- Removed temporary credit script from /tmp after publishing
+- No result files were deleted

@@ -1,0 +1,45 @@
+Validation Log
+Timestamp: 2026-03-11 23:14 Europe/Berlin
+
+Session summary
+- Initial snapshot before credit pass: 4,723 uncredited completed results; credited/uncredited quick stats = 79,035 / 4,723.
+- Credit pass 1 at 23:13: credited 4,824 results, awarded 263,325.78 positive credit, denied 16 results at 0.01 sentinel.
+- Credit pass 2 at 23:15: credited 212 additional results that arrived during the session, awarded 9,243.26 positive credit, denied 4 results at 0.01 sentinel.
+- Session total: 5,036 results processed, 272,569.04 positive credit awarded.
+- Final uncredited completed result count: 0.
+- Price-per-FLOP scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.65615891530522e-14.
+
+Anti-cheat review
+- Sampled 200 sanitized JSON payloads from the uncredited queue.
+- Denied 19 GPU results for empty numeric payloads; the sampled set also showed duplicate byte-identical payloads across hosts for this pattern.
+- Denied 1 additional result by stub filter because elapsed_time < 5 seconds.
+
+Denied results
+- 2578705 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_9c9b03_0 host 210: empty numeric payload, duplicate payload across hosts.
+- 2605475 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_6aa80c_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2605576 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_cff501_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2605645 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_4b88d7_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2605780 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_8eca36_1 host 192: empty sanitized payload in tail review.
+- 2605790 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_09b162_1 host 192: empty sanitized payload in tail review.
+- 2605822 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_e7f064_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2605825 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_c5dc60_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2605844 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_a9fec1_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2605929 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_141371_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2606295 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_8892fa_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2606492 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_473750_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2606509 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_729fb3_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2606727 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_1d78f3_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2607700 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_3e5847_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2607765 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_e99055_1 host 192: empty sanitized payload in tail review.
+- 2607768 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_4d4ab4_1 host 192: empty sanitized payload in tail review.
+- 2608714 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_6536e7_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2608723 exp_marine_reserve_trophic_phase_mismatch_gpu_gpu_928aee_1 host 192: empty numeric payload, duplicate payload across hosts.
+- 2604466 exp_hypercycle_catastrophe_exchange_inheritance_0e2391_0 host 1: stub filter denial, elapsed_time=0.
+
+Per-host credit summary
+- Recent session mod_time aggregation showed the largest credited hosts as: host 367 = 23,174.90 credit; host 192 = 17,725.65; host 341 = 17,011.39; host 401 = 16,123.14; host 327 = 12,883.21; host 16 = 11,615.46; host 324 = 11,469.58; host 397 = 11,194.65; host 339 = 10,905.25; host 395 = 10,518.56; host 398 = 9,931.84; host 23 = 9,878.18; host 330 = 7,000.14; host 333 = 6,839.49; host 332 = 6,606.45.
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 84,054.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 84,073.
+- Removed temporary scripts and working TSV files from /tmp after the credit passes completed.

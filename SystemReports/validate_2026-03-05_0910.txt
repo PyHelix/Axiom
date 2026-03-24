@@ -1,0 +1,42 @@
+AXIOM VALIDATION LOG — 2026-03-05 09:10 UTC
+=============================================
+
+## Results Reviewed
+
+2 uncredited results found:
+- Result 1699599: exp_collatz_evt_tails_h340_r9 — received 08:50, 866s runtime, exit_status=0
+- Result 1700310: exp_fppchi_h340_r15 — received 08:50, 5s runtime, exit_status=0
+
+Both results are very recent (received ~20 min ago). No sanitized files exist yet — assimilator has not processed them. Deferred to next validation cycle.
+
+Note: Result 1700310 (fppchi) ran only 5 seconds — suspiciously short. Will review sanitized output when available.
+
+## Credit Awarded
+
+None this session (0 credit). No sanitized results available to assess quality.
+
+## Stuck/Dead Task Cleanup
+
+- No stuck tasks found (>12h running on dead hosts)
+- No tasks exceeded 48h ceiling
+
+## Broken Experiment Triage
+
+Checked 100% failure rate experiments for pending work:
+- cahnhilliard_delay_feedback_window: no pending tasks
+- ising_delay_adaptive_quench: no pending tasks
+- rd_phasejitter_adaptive_forcing: no pending tasks
+- rbn_delay_fatigue_control: no pending tasks
+
+All broken experiments already fully completed/aborted — no volunteer compute wasted.
+
+## Active Infrastructure
+
+- 87 active hosts in last 72h
+- 23 hosts with running tasks (~780 in-progress tasks)
+- 6461 previously credited results
+- 12,589 sanitized result files
+
+## Summary
+
+Light session — system is healthy. Two new results pending assimilation, no cleanup needed.

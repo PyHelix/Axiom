@@ -1,0 +1,37 @@
+AXIOM VALIDATION LOG
+Timestamp: 2026-03-05 00:11 (Europe/Berlin)
+Step: Validation/Credit/Cleanup (Step 2)
+
+RESULTS REVIEWED THIS SESSION
+- Reviewed completed, uncredited result IDs: 1687780, 1687781, 1687782, 1687783, 1687832, 1687833, 1687834, 1687835, 1687841.
+- Database status for all above: server_state=5, outcome=1, granted_credit=0.
+- Sanitized-data gate check: no matching sanitized JSON found in /opt/axiom/experiment_results/sanitized for the 9 workunits/results yet.
+- Credit decision: deferred this cycle (0 credit) because scientific-value scoring must use sanitized numeric payloads only.
+
+CREDIT AWARDED
+- Session credit awarded: 0 (cap 10,000 respected).
+- Per-user deltas this session:
+  - user 10: +0 (total remains 23048.59000000001)
+  - user 40: +0 (total remains 530215.4101749985)
+  - user 127: +0 (total remains 6582.199999999993)
+- Per-host deltas this session:
+  - host 29: +0 (total remains 23020.59000000001)
+  - host 335: +0 (total remains 33484.350999999995)
+  - host 345: +0 (total remains 6582.199999999993)
+
+CLEANUP ACTIONS
+- Stuck-task cleanup check (>12h run and host offline >6h): 0 tasks matched, 0 aborted.
+- Hard-ceiling cleanup check (>48h run): 0 tasks matched, 0 aborted.
+
+FAILURE/HEALTH CHECK
+- Recent completed experiment outcomes (last 5000 result IDs):
+  - appid=1: outcome 1 => 55, outcome 0 => 237, outcome 5 => 1100
+  - appid=2: outcome 1 => 6, outcome 0 => 30
+- Recent failed/canceled sample dominated by outcome=5 with exit_status=0 (operational cancellations/timeouts pattern, not traceback crash evidence in this validation pass).
+
+BUGS FOUND / FIXED IN EXPERIMENT SCRIPTS
+- No script bug was diagnosed/fixed in this session.
+
+NOTES
+- No cumulative result-ID memory file maintained; database remains the source of truth.
+- No files were written to /opt/axiom_boinc/html/user/experiment_results/.

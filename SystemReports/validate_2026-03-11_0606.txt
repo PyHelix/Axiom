@@ -1,0 +1,58 @@
+Validation Report
+Timestamp: 2026-03-11 06:06 Europe/Berlin
+Credit window: 2026-03-11 06:04:00 to 2026-03-11 06:05:26
+
+Results credited this session
+- Count: 1738
+- Total cobblestones awarded: 53261.75
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.604730343876649e-14
+- Initial anti-cheat sample size: 200 sanitized JSON payloads
+- Remaining uncredited experiment results after final pass: 0
+
+Anti-cheat flags
+- 2379178: byte-identical payload duplicated across hosts
+- 2379181: byte-identical payload duplicated across hosts
+- 2379915: byte-identical payload duplicated across hosts
+- 2383167: byte-identical payload duplicated across hosts
+- 2384474: byte-identical payload duplicated across hosts
+- 2386660: byte-identical payload duplicated across hosts
+- 2386716: byte-identical payload duplicated across hosts
+- 2391297: byte-identical payload duplicated across hosts
+- 2391479: empty numeric payload
+- Denied results were assigned granted_credit=0.01 sentinel credit
+- DB elapsed_time < 5 seconds was also denied automatically by the credit script if encountered
+
+Per-host credit summary
+- Host 105: 361 results, 7715.55 credit
+- Host 240: 250 results, 7002.14 credit
+- Host 10: 8 results, 6034.24 credit
+- Host 268: 258 results, 5740.20 credit
+- Host 388: 232 results, 5418.26 credit
+- Host 147: 9 results, 4383.92 credit
+- Host 249: 6 results, 3563.61 credit
+- Host 61: 66 results, 1809.37 credit
+- Host 159: 75 results, 1769.22 credit
+- Host 11: 9 results, 1734.30 credit
+- Host 29: 64 results, 1272.26 credit
+- Host 1: 60 results, 908.98 credit
+- Host 85: 60 results, 866.80 credit
+- Host 102: 59 results, 755.94 credit
+- Host 182: 1 results, 735.34 credit
+- Host 2: 41 results, 642.87 credit
+- Host 123: 62 results, 638.19 credit
+- Host 222: 38 results, 620.62 credit
+- Host 184: 1 results, 589.97 credit
+- Host 345: 42 results, 429.14 credit
+- Host 341: 10 results, 197.46 credit
+- Host 140: 9 results, 175.50 credit
+- Host 317: 5 results, 88.60 credit
+- Host 9: 1 results, 68.74 credit
+- Host 134: 9 results, 65.30 credit
+- Host 350: 1 results, 18.31 credit
+- Host 267: 1 results, 16.92 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 74010
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 73991
+- Temporary scripts created in /tmp for anti-cheat sampling and crediting

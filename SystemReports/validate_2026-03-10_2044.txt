@@ -1,0 +1,65 @@
+Validation Session Log
+Timestamp: 2026-03-10 20:44 Europe/Berlin
+
+Results credited this session
+- Completed results credited: 2410
+- Positive-credit results: 2381
+- Denied sentinel results: 29
+- Total awarded credit: 110585.73
+- CPU results credited: 2008
+- GPU results credited: 373
+- CPU scale used: 5.0196363564419115e-12
+- GPU scale used: 2.65615891530522e-14
+- Post-run uncredited completed results remaining: 0
+
+Anti-cheat flags
+- Sample reviewed: 200 sanitized JSON files from the uncredited queue
+- Flagged results were denied with granted_credit=0.01
+- Reason pattern: missing_or_empty_experiment_result in sanitized payload
+- Denied result IDs:
+  2221470, 2239110, 2239151, 2254221, 2254319, 2254967, 2255608, 2255843,
+  2255855, 2255864, 2255888, 2255900, 2255902, 2256043, 2258141, 2267240,
+  2267289, 2267290, 2267294, 2267382, 2267405, 2267413, 2267421, 2267549,
+  2267616, 2267621, 2267629, 2267658, 2267754
+
+Per-host credit summary
+- Host 367: 1107 results, 38786.19 credit
+- Host 16: 34 results, 11268.87 credit
+- Host 23: 38 results, 10576.33 credit
+- Host 184: 88 results, 7824.38 credit
+- Host 341: 73 results, 6299.80 credit
+- Host 182: 41 results, 5818.94 credit
+- Host 10: 44 results, 5026.91 credit
+- Host 159: 59 results, 4567.56 credit
+- Host 347: 24 results, 2879.11 credit
+- Host 29: 60 results, 2494.93 credit
+- Host 85: 121 results, 1988.65 credit
+- Host 364: 74 results, 1677.55 credit
+- Host 11: 53 results, 1158.22 credit
+- Host 87: 57 results, 1041.21 credit
+- Host 1: 26 results, 969.27 credit
+- Host 102: 56 results, 890.91 credit
+- Host 2: 36 results, 850.29 credit
+- Host 123: 59 results, 757.53 credit
+- Host 345: 59 results, 714.25 credit
+- Host 219: 22 results, 673.06 credit
+- Host 385: 32 results, 530.73 credit
+- Host 366: 18 results, 507.78 credit
+- Host 222: 28 results, 472.44 credit
+- Host 386: 26 results, 439.97 credit
+- Host 9: 33 results, 433.07 credit
+- Host 350: 20 results, 392.99 credit
+- Host 346: 19 results, 390.27 credit
+- Host 61: 7 results, 214.41 credit
+- Host 202: 16 results, 209.70 credit
+- Host 140: 10 results, 202.88 credit
+- Host 57: 8 results, 191.17 credit
+- Host 107: 12 results, 150.05 credit
+- Host 134: 8 results, 84.72 credit
+- Host 249: 5 results, 61.28 credit
+- Host 376: 8 results, 40.19 credit
+
+Cleanup actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 73695
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 74412
+- No services or daemons were restarted

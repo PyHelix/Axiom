@@ -1,0 +1,128 @@
+Axiom validation log
+Session start: 2026-03-19 11:07 UTC
+Session type: Step 3 validation and credit
+
+Price-per-FLOP scales:
+- CPU_SCALE=5.0196363564419115e-12
+- GPU_SCALE=2.7139486065207747e-14
+- price_table_last_updated_unix=1773915316
+
+Results credited this session:
+- total_results_credited=457895
+- total_result_credit_awarded=1294959.37
+- sentinel_0_01_results=436457
+- formula_results_gt_0_01=21438
+
+Per-host credit summary:
+- hostid=437 results_credited=81 result_credit_awarded=183687.55
+- hostid=367 results_credited=1767 result_credit_awarded=176056.02
+- hostid=485 results_credited=78 result_credit_awarded=143951.02
+- hostid=18 results_credited=56 result_credit_awarded=89136.40
+- hostid=22 results_credited=53 result_credit_awarded=88608.12
+- hostid=486 results_credited=39 result_credit_awarded=60743.06
+- hostid=20 results_credited=53 result_credit_awarded=54761.45
+- hostid=17 results_credited=45 result_credit_awarded=53881.25
+- hostid=19 results_credited=53 result_credit_awarded=36066.40
+- hostid=508 results_credited=2566 result_credit_awarded=24897.53
+- hostid=507 results_credited=2563 result_credit_awarded=24529.84
+- hostid=240 results_credited=455 result_credit_awarded=24076.69
+- hostid=268 results_credited=447 result_credit_awarded=21767.10
+- hostid=105 results_credited=663 result_credit_awarded=21206.83
+- hostid=23 results_credited=48 result_credit_awarded=16330.04
+- hostid=16 results_credited=50 result_credit_awarded=15523.19
+- hostid=339 results_credited=605 result_credit_awarded=13759.49
+- hostid=388 results_credited=304 result_credit_awarded=12764.47
+- hostid=340 results_credited=633 result_credit_awarded=12660.35
+- hostid=497 results_credited=420 result_credit_awarded=11435.55
+- hostid=395 results_credited=580 result_credit_awarded=11033.63
+- hostid=111 results_credited=446 result_credit_awarded=10594.43
+- hostid=332 results_credited=367 result_credit_awarded=10129.10
+- hostid=330 results_credited=379 result_credit_awarded=9923.71
+- hostid=338 results_credited=548 result_credit_awarded=9781.35
+- hostid=324 results_credited=543 result_credit_awarded=9683.96
+- hostid=327 results_credited=573 result_credit_awarded=9563.08
+- hostid=398 results_credited=323 result_credit_awarded=8701.43
+- hostid=269 results_credited=662 result_credit_awarded=8067.20
+- hostid=322 results_credited=5 result_credit_awarded=7117.45
+- hostid=376 results_credited=675 result_credit_awarded=6621.75
+- hostid=399 results_credited=530 result_credit_awarded=6477.19
+- hostid=400 results_credited=547 result_credit_awarded=6439.66
+- hostid=390 results_credited=327 result_credit_awarded=6236.87
+- hostid=210 results_credited=535 result_credit_awarded=5980.91
+- hostid=147 results_credited=10 result_credit_awarded=5044.57
+- hostid=0 results_credited=433558 result_credit_awarded=4335.58
+- hostid=496 results_credited=257 result_credit_awarded=4292.42
+- hostid=97 results_credited=186 result_credit_awarded=4067.42
+- hostid=141 results_credited=195 result_credit_awarded=4009.30
+- hostid=302 results_credited=85 result_credit_awarded=3884.03
+- hostid=397 results_credited=153 result_credit_awarded=3700.48
+- hostid=513 results_credited=159 result_credit_awarded=3246.55
+- hostid=61 results_credited=163 result_credit_awarded=3069.25
+- hostid=29 results_credited=107 result_credit_awarded=3008.81
+- hostid=389 results_credited=297 result_credit_awarded=2980.79
+- hostid=396 results_credited=239 result_credit_awarded=2727.34
+- hostid=467 results_credited=196 result_credit_awarded=2384.50
+- hostid=275 results_credited=6 result_credit_awarded=2321.65
+- hostid=87 results_credited=293 result_credit_awarded=1958.91
+- hostid=364 results_credited=132 result_credit_awarded=1918.29
+- hostid=85 results_credited=295 result_credit_awarded=1900.77
+- hostid=272 results_credited=68 result_credit_awarded=1790.73
+- hostid=424 results_credited=134 result_credit_awarded=1683.92
+- hostid=450 results_credited=120 result_credit_awarded=1655.64
+- hostid=271 results_credited=6 result_credit_awarded=1653.24
+- hostid=123 results_credited=285 result_credit_awarded=1518.94
+- hostid=504 results_credited=493 result_credit_awarded=1506.44
+- hostid=341 results_credited=76 result_credit_awarded=1465.18
+- hostid=445 results_credited=92 result_credit_awarded=1447.40
+- hostid=300 results_credited=42 result_credit_awarded=1342.63
+- hostid=27 results_credited=16 result_credit_awarded=1278.27
+- hostid=345 results_credited=154 result_credit_awarded=1184.55
+- hostid=127 results_credited=136 result_credit_awarded=1138.76
+- hostid=289 results_credited=4 result_credit_awarded=1132.60
+- hostid=459 results_credited=57 result_credit_awarded=981.78
+- hostid=192 results_credited=38 result_credit_awarded=958.60
+- hostid=503 results_credited=333 result_credit_awarded=906.28
+- hostid=60 results_credited=94 result_credit_awarded=825.18
+- hostid=387 results_credited=136 result_credit_awarded=810.49
+- hostid=358 results_credited=69 result_credit_awarded=775.37
+- hostid=505 results_credited=233 result_credit_awarded=728.98
+- hostid=106 results_credited=80 result_credit_awarded=705.71
+- hostid=202 results_credited=36 result_credit_awarded=424.22
+- hostid=483 results_credited=29 result_credit_awarded=299.28
+- hostid=213 results_credited=24 result_credit_awarded=260.93
+- hostid=267 results_credited=18 result_credit_awarded=235.09
+- hostid=57 results_credited=11 result_credit_awarded=197.88
+- hostid=373 results_credited=101 result_credit_awarded=195.50
+- hostid=451 results_credited=38 result_credit_awarded=188.27
+- hostid=480 results_credited=21 result_credit_awarded=185.77
+- hostid=134 results_credited=36 result_credit_awarded=112.92
+- hostid=506 results_credited=46 result_credit_awarded=109.41
+- hostid=493 results_credited=53 result_credit_awarded=84.04
+- hostid=428 results_credited=6 result_credit_awarded=62.20
+- hostid=137 results_credited=11 result_credit_awarded=61.98
+- hostid=63 results_credited=47 result_credit_awarded=2.47
+- hostid=369 results_credited=152 result_credit_awarded=1.52
+- hostid=517 results_credited=58 result_credit_awarded=0.58
+- hostid=195 results_credited=51 result_credit_awarded=0.51
+- hostid=521 results_credited=37 result_credit_awarded=0.37
+- hostid=515 results_credited=16 result_credit_awarded=0.16
+- hostid=488 results_credited=10 result_credit_awarded=0.10
+- hostid=519 results_credited=10 result_credit_awarded=0.10
+- hostid=494 results_credited=9 result_credit_awarded=0.09
+- hostid=279 results_credited=9 result_credit_awarded=0.09
+- hostid=481 results_credited=8 result_credit_awarded=0.08
+- hostid=414 results_credited=7 result_credit_awarded=0.07
+- hostid=108 results_credited=6 result_credit_awarded=0.06
+- hostid=281 results_credited=6 result_credit_awarded=0.06
+- hostid=1 results_credited=4 result_credit_awarded=0.04
+- hostid=113 results_credited=4 result_credit_awarded=0.04
+- hostid=518 results_credited=4 result_credit_awarded=0.04
+- hostid=479 results_credited=3 result_credit_awarded=0.03
+- hostid=107 results_credited=3 result_credit_awarded=0.03
+- hostid=323 results_credited=2 result_credit_awarded=0.02
+- hostid=456 results_credited=1 result_credit_awarded=0.01
+- hostid=516 results_credited=1 result_credit_awarded=0.01
+- hostid=415 results_credited=1 result_credit_awarded=0.01
+
+Queue status after session snapshot:
+- remaining_uncredited_matching_results=0

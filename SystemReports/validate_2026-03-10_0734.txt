@@ -1,0 +1,53 @@
+Validation Log
+Timestamp: 2026-03-10 07:34 Europe/Berlin
+
+Session summary
+- Anti-cheat review sampled 200 sanitized JSON files from the initial uncredited queue.
+- Anti-cheat flags: none.
+- Credit passes completed: 5.
+- Results credited this session: 438.
+- Total credit written to result rows this session: 17914.00.
+- CPU results: 418.
+- GPU results: 20.
+- Denied sentinel results (0.01 credit): 0.
+- Price scales used: CPU_SCALE=5.0196363564419115e-12, GPU_SCALE=2.6738556477334984e-14.
+- Price table timestamp: 2026-03-10T06:15:16Z.
+- Uncredited queue after final pass: 0.
+
+Anti-cheat review
+- Empty payload gaming: no sampled cases flagged.
+- Outlier detection: no sampled cases flagged.
+- Duplicate/identical results across hosts: no sampled cases flagged.
+- Stub filter under 5 seconds: no sampled cases flagged in the reviewed sample.
+
+Per-host credit summary
+- Host 367: 234 results, 7042.97 credit
+- Host 16: 7 results, 2739.86 credit
+- Host 23: 8 results, 2112.63 credit
+- Host 341: 7 results, 1536.05 credit
+- Host 105: 31 results, 790.22 credit
+- Host 10: 1 result, 783.48 credit
+- Host 240: 20 results, 588.46 credit
+- Host 268: 20 results, 500.26 credit
+- Host 61: 10 results, 256.20 credit
+- Host 219: 9 results, 228.67 credit
+- Host 29: 9 results, 221.53 credit
+- Host 355: 7 results, 169.98 credit
+- Host 2: 8 results, 154.40 credit
+- Host 9: 2 results, 148.95 credit
+- Host 1: 13 results, 135.95 credit
+- Host 102: 10 results, 126.90 credit
+- Host 271: 7 results, 94.75 credit
+- Host 222: 6 results, 90.38 credit
+- Host 377: 21 results, 82.09 credit
+- Host 358: 4 results, 47.80 credit
+- Host 350: 2 results, 31.52 credit
+- Host 140: 1 result, 22.45 credit
+- Host 134: 1 result, 8.50 credit
+
+Cleanup and operational actions
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 58373.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 58734.
+- Removed temporary credit script /tmp/axiom_credit.py.
+- No result files were deleted.
+- No services, daemons, lock files, crontabs, or systemd units were modified.

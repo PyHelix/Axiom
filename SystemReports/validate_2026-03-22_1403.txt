@@ -1,0 +1,75 @@
+AXIOM BOINC VALIDATION LOG
+Session: 2026-03-22 14:03 UTC
+Step: Validation & Credit (Step 3 of 17)
+
+Credit status
+- Price table fresh at check time; no manual refresh required.
+- Credit cron present in crontab and recent log entries confirm active processing.
+
+Results credited this session
+- Session window: 2026-03-22 14:00:00 UTC to 2026-03-22 14:05:00 UTC
+- Results credited: 2016
+- Total cobblestones granted: 131540.67
+
+Per-host credit summary
+hostid=487 results=7 credit=28110.17
+hostid=437 results=7 credit=27483.43
+hostid=544 results=4 credit=26257.73
+hostid=18 results=3 credit=8504.89
+hostid=486 results=2 credit=7374.49
+hostid=17 results=3 credit=5200.03
+hostid=22 results=1 credit=3403.55
+hostid=542 results=169 credit=2789.48
+hostid=240 results=3 credit=2579.69
+hostid=541 results=144 credit=2284.87
+hostid=19 results=1 credit=1470.32
+hostid=23 results=2 credit=1320.44
+hostid=339 results=93 credit=907.97
+hostid=497 results=25 credit=791.04
+hostid=375 results=126 credit=750.37
+hostid=105 results=1 credit=737.42
+hostid=543 results=124 credit=723.19
+hostid=111 results=84 credit=694.13
+hostid=509 results=1 credit=678.17
+hostid=395 results=103 credit=670.95
+hostid=330 results=126 credit=666.91
+hostid=16 results=1 credit=662.00
+hostid=332 results=122 credit=645.27
+hostid=539 results=27 credit=636.84
+hostid=324 results=112 credit=626.23
+hostid=338 results=105 credit=622.86
+hostid=376 results=130 credit=614.22
+hostid=327 results=106 credit=608.45
+hostid=520 results=1 credit=536.31
+hostid=268 results=1 credit=489.02
+hostid=321 results=1 credit=469.69
+hostid=366 results=55 credit=318.14
+hostid=97 results=41 credit=260.90
+hostid=61 results=38 credit=191.95
+hostid=323 results=1 credit=134.41
+hostid=424 results=17 credit=125.55
+hostid=364 results=9 credit=120.16
+hostid=277 results=45 credit=110.14
+hostid=29 results=24 credit=107.37
+hostid=106 results=17 credit=94.34
+hostid=123 results=15 credit=80.03
+hostid=87 results=9 credit=74.92
+hostid=85 results=7 credit=73.75
+hostid=60 results=10 credit=70.76
+hostid=2 results=17 credit=64.73
+hostid=459 results=5 credit=60.31
+hostid=127 results=16 credit=59.28
+hostid=358 results=14 credit=49.45
+hostid=397 results=1 credit=47.78
+hostid=202 results=15 credit=39.47
+hostid=534 results=3 credit=38.64
+hostid=493 results=14 credit=32.49
+hostid=400 results=2 credit=28.15
+hostid=396 results=2 credit=26.50
+hostid=210 results=1 credit=12.75
+hostid=134 results=1 credit=7.24
+hostid=505 results=2 credit=1.33
+
+Operational notes
+- Uncredited backlog snapshot after verification query: 1114196 results still pending credit.
+- Credit cron continues to process backlog in 5-minute intervals.

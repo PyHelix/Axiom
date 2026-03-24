@@ -1,0 +1,31 @@
+Axiom BOINC Validation Log
+Session timestamp: 2026-03-05_0223
+Step: Validation & Credit (Step 2 of 8)
+
+1) Results reviewed this session
+- Uncredited successful exp results reviewed: 147
+- Result ID range reviewed: 1689317..1691864
+- Result sent_time range: 1772667121..1772672640
+- IDs reviewed (database source of truth):
+1689317,1689469,1689517,1689545,1689615,1689963,1690518,1690520,1690524,1690525,1690527,1690529,1690535,1690572,1690577,1690581,1690582,1690593,1690594,1690622,1690637,1690650,1690656,1690658,1690660,1690662,1690664,1690695,1690699,1690701,1690706,1690708,1690711,1690712,1690715,1690719,1690721,1690724,1690725,1690726,1690728,1690731,1690733,1690735,1690746,1690751,1690912,1690914,1690917,1690918,1690920,1690958,1690963,1690969,1690979,1690982,1690983,1690984,1690985,1690998,1690999,1691000,1691001,1691004,1691005,1691006,1691007,1691008,1691010,1691011,1691012,1691013,1691038,1691040,1691041,1691042,1691043,1691044,1691045,1691046,1691047,1691050,1691051,1691054,1691057,1691059,1691061,1691272,1691273,1691279,1691282,1691286,1691287,1691288,1691289,1691291,1691292,1691293,1691295,1691296,1691302,1691303,1691304,1691305,1691306,1691308,1691362,1691373,1691374,1691375,1691377,1691427,1691466,1691467,1691469,1691470,1691472,1691479,1691481,1691482,1691483,1691484,1691485,1691487,1691489,1691490,1691491,1691495,1691515,1691539,1691600,1691679,1691687,1691688,1691689,1691690,1691691,1691692,1691816,1691818,1691851,1691853,1691854,1691858,1691861,1691862,1691864
+- Brief analysis: all reviewed results are currently newer than sanitized ingest max timestamp (1772665407); no trusted numeric experiment_result payloads are available yet in /opt/axiom/experiment_results/sanitized for this ID range.
+
+2) Credit awarded
+- Credited results this session: 0
+- Total credit awarded this session: 0 (session cap 10,000 respected)
+- Per-user increments: none
+- Per-host increments: none
+- Rationale: credit is quality-based and requires trusted sanitized numeric outputs; no matching sanitized records yet for reviewed uncredited IDs.
+
+3) Cleanup actions
+- Stuck tasks from dead hosts aborted (>12h run and >6h no contact): 0
+- Hard-ceiling aborts (>48h runtime): 0
+- Broken experiment aborts (specific family): none applied this session
+- Failure review note: high historical fail percentages exist for multiple families, but dominant failing outcomes in sampled sets were abort-coded or single-host clusters, not confirmed multi-host script crash signatures requiring immediate family-wide abort.
+
+4) Bugs found and fixed
+- No experiment script bugs were fixed in this session.
+
+5) Operational notes
+- findings_summary.txt was read for context only; no scientific findings were modified here.
+- No files were written to /opt/axiom_boinc/html/user/experiment_results/.

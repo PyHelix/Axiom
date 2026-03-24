@@ -1,0 +1,43 @@
+Axiom validation log - 2026-03-09_0013
+
+Session summary
+Processed results: 13
+Approved byte-weighted results: 7
+Denied sentinel results: 6
+Approved-byte pool: 26977
+Budget distributed: 10000.00
+Sanitized files sampled for review: 0
+Missing sanitized files at review time: 13
+
+Sampled anti-cheat review
+No sanitized files available for sampling.
+
+Per-user totals
+user 10: +2000.00 -> 39771.19
+user 34: +0.01 -> 932.10
+user 50: +500.00 -> 4240.30
+user 56: +0.04 -> 179296.17
+user 72: +0.01 -> 630.85
+user 94: +500.00 -> 45345.90
+user 136: +500.00 -> 34235.98
+
+Cleanup
+No stuck or broken tasks cleaned up in this validation pass.
+
+Bug fixes
+No experiment script changes were required in this validation pass.
+
+Result decisions
+result 1941523 (host 113): exp_critical_branching_skew_crossover - elapsed 833.45s, nbytes 13052 -> 0.01 denied sentinel (retired/aborted family exp_critical_branching_skew_crossover)
+result 1974098 (host 372): exp_bootstrap_threshold_correlation - elapsed 845.04s, nbytes 2279 -> 500.00 byte-weighted credit
+result 1975163 (host 367): exp_fpp_fluctuation_exponent - elapsed 842.54s, nbytes 5102 -> 500.00 byte-weighted credit
+result 1976087 (host 353): exp_kellersegel_crossed_resource_sensitivity_gpu_gpu - elapsed 19.10s, nbytes 3051 -> 500.00 byte-weighted credit
+result 1978117 (host 29): exp_standard_map_ftle_transition - elapsed 911.51s, nbytes 4704 -> 500.00 byte-weighted credit
+result 1978169 (host 29): exp_bootstrap_threshold_correlation - elapsed 827.83s, nbytes 2419 -> 500.00 byte-weighted credit
+result 1978175 (host 29): exp_standard_map_ftle_transition - elapsed 924.55s, nbytes 4715 -> 500.00 byte-weighted credit
+result 1978178 (host 29): exp_standard_map_ftle_transition - elapsed 904.53s, nbytes 4707 -> 500.00 byte-weighted credit
+result 1978586 (host 87): exp_spacing_ratio_crossover - elapsed 782.05s, nbytes 16101 -> 0.01 denied sentinel (retired/aborted family exp_spacing_ratio_crossover)
+result 1978589 (host 87): exp_spacing_ratio_crossover - elapsed 901.62s, nbytes 16099 -> 0.01 denied sentinel (retired/aborted family exp_spacing_ratio_crossover)
+result 1978593 (host 87): exp_spacing_ratio_crossover - elapsed 900.48s, nbytes 16078 -> 0.01 denied sentinel (retired/aborted family exp_spacing_ratio_crossover)
+result 1978598 (host 87): exp_spacing_ratio_crossover - elapsed 995.98s, nbytes 16110 -> 0.01 denied sentinel (retired/aborted family exp_spacing_ratio_crossover)
+result 1979406 (host 102): exp_spacing_ratio_crossover - elapsed 1021.11s, nbytes 16090 -> 0.01 denied sentinel (retired/aborted family exp_spacing_ratio_crossover)

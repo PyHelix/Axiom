@@ -1,0 +1,116 @@
+Axiom validation session log 2026-03-18_1707 UTC
+
+Results credited this session
+- Count: 30616
+- Total cobblestones: 1386679.10
+- CPU results: 29856
+- GPU results: 711
+- Denied stub results (0.01 sentinel): 49
+- Zero-elapsed no-credit results skipped: 152
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.613816058162363e-14
+
+Anti-cheat review
+- Sampled sanitized JSON files: 200
+- Sanitized files present for current uncredited set during sampling: 30239
+- Denied result IDs: none
+- Review findings: no empty-payload, duplicate, or extreme-outlier flags in the sample
+
+Per-host credit summary
+- Host 105: +11667.34
+- Host 106: +1213.96
+- Host 107: +576.93
+- Host 108: +1284.08
+- Host 111: +11021.01
+- Host 113: +324.04
+- Host 123: +1623.50
+- Host 127: +1303.62
+- Host 134: +123.67
+- Host 137: +258.70
+- Host 141: +4477.05
+- Host 147: +5537.53
+- Host 16: +16468.57
+- Host 17: +52291.96
+- Host 18: +88381.99
+- Host 19: +36136.28
+- Host 192: +5117.30
+- Host 195: +153.89
+- Host 20: +55516.22
+- Host 202: +645.99
+- Host 210: +6181.21
+- Host 213: +3985.55
+- Host 22: +83561.23
+- Host 23: +17159.28
+- Host 240: +11399.62
+- Host 251: +289.16
+- Host 267: +398.71
+- Host 268: +10481.44
+- Host 29: +3278.47
+- Host 302: +4237.38
+- Host 322: +13317.42
+- Host 323: +1584.77
+- Host 324: +10069.86
+- Host 327: +10082.16
+- Host 330: +10384.99
+- Host 332: +10588.30
+- Host 338: +10033.94
+- Host 339: +14106.63
+- Host 340: +13154.48
+- Host 341: +1511.70
+- Host 345: +1217.05
+- Host 358: +840.11
+- Host 364: +2004.35
+- Host 367: +178908.05
+- Host 369: +2.95
+- Host 376: +9529.59
+- Host 387: +1694.98
+- Host 388: +4517.98
+- Host 389: +3046.24
+- Host 390: +6582.60
+- Host 394: +16.78
+- Host 395: +11548.91
+- Host 396: +6103.22
+- Host 397: +15600.00
+- Host 398: +14161.35
+- Host 399: +6743.59
+- Host 400: +6643.58
+- Host 437: +184624.43
+- Host 445: +653.30
+- Host 450: +1117.68
+- Host 451: +120.17
+- Host 456: +70.78
+- Host 459: +890.32
+- Host 479: +1337.10
+- Host 480: +3721.17
+- Host 483: +721.89
+- Host 485: +131438.52
+- Host 486: +133905.26
+- Host 488: +5105.44
+- Host 496: +4663.56
+- Host 497: +12066.85
+- Host 503: +1414.49
+- Host 504: +1558.77
+- Host 505: +727.82
+- Host 506: +734.42
+- Host 507: +8811.85
+- Host 508: +25983.26
+- Host 509: +2179.70
+- Host 513: +3385.92
+- Host 514: +3184.13
+- Host 515: +50407.97
+- Host 516: +81.20
+- Host 517: +66.42
+- Host 57: +259.62
+- Host 60: +337.91
+- Host 61: +3191.61
+- Host 63: +3.00
+- Host 71: +519.46
+- Host 97: +4303.82
+
+Cleanup actions taken
+- Updated result.granted_credit and validate_state in batch chunks
+- Incremented host.total_credit for 89 hosts
+- Updated /opt/axiom_boinc/html/user/credited_count.txt
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt
+- Removed /tmp/axiom_anticheat.py
+- Pending removal after report publication: /tmp/axiom_credit.py, /tmp/axiom_credit_summary.json

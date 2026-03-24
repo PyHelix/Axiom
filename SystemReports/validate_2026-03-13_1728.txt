@@ -1,0 +1,64 @@
+Axiom Validation Log
+Timestamp: 2026-03-13_1728
+
+Results credited this session:
+- Total results credited: 24912
+- Total credit awarded: 391668.25
+- CPU results credited: 23804
+- GPU results credited: 1091
+- Denied sentinel credits (0.01): 17
+- Price table refresh needed: no
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.814704576352766e-14
+- Credit passes run: 4
+  pass 1: 24755 results, 388944.90 credit
+  pass 2: 61 results, 903.45 credit
+  pass 3: 81 results, 1469.68 credit
+  pass 4: 15 results, 350.22 credit
+- Queue status after drain: 0 uncredited completed results pending
+
+Anti-cheat review:
+- Spot-check sample size: 200 sanitized JSON files
+- Results with sanitized files available at sample time: 24644
+- Denied IDs and reasons:
+  3455670 empty payload
+  3456057 empty payload
+  3456187 empty payload
+  3487883 duplicate payload across hosts
+  3488913 duplicate payload across hosts
+  3512165 empty payload
+  3512658 empty payload
+  3513617 empty payload
+  3513705 empty payload
+- Additional denied sentinels came from the under-5-second stub rule in the credit script.
+
+Per-host credit summary:
+- Main pass top credited hosts:
+  host 367: 46170.71
+  host 324: 17676.02
+  host 327: 17223.35
+  host 334: 16757.89
+  host 395: 16666.75
+  host 333: 15015.51
+  host 397: 14817.81
+  host 398: 14434.16
+  host 16: 14054.04
+  host 339: 12479.78
+  host 332: 11746.57
+  host 330: 11201.43
+  host 23: 10666.64
+  host 105: 9564.59
+  host 159: 9387.56
+  host 182: 8876.23
+  host 186: 8650.67
+  host 240: 8582.36
+  host 10: 7799.94
+  host 1: 7173.92
+- Tail drain passes credited an additional 1723.35 across newly-finished results after the main pass.
+
+Cleanup actions taken:
+- Ran anti-cheat sampler against sanitized results only.
+- Applied price-per-FLOP credit in repeated drain passes until pending completed results reached zero.
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 179853.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 179984.
+- Temporary scripts scheduled for removal: /tmp/axiom_anticheat.py, /tmp/axiom_credit.py.

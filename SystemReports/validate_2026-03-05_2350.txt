@@ -1,0 +1,59 @@
+AXIOM BOINC — Validation & Credit Log
+Date: 2026-03-05 23:50 UTC
+======================================
+
+RESULTS REVIEWED & CREDITED
+----------------------------
+94 successful results credited this session.
+Total credit awarded: 1004 (964 initial batch + 40 late arrivals)
+
+Credit breakdown by user:
+  User 1:   +64  (host 1, 6 results: galtonwatson, votermod, goldecay, randfib, stdmap, langton)
+  User 10:  +15  (host 29, 1 result: hkphase_gpu)
+  User 30:  +12  (host 140, 1 result: dpmomentratio)
+  User 40:  +716 (hosts 324/325/327/330/332/333/334, 65 results across delay-window and scaling experiments)
+  User 90:  +32  (host 222, 3 results: stdmap, goldecay, hkbound)
+  User 94:  +120 (host 339, 8 results: contact_process, minority_game, collatz_evt, spatial_pgg, levy_foraging, potts_pulse)
+  User 99:  +70  (hosts 335/341, 7 results: galtonwatson, votermod, goldecay, randfib, stdmap, langton, hkbound)
+  User 132: +15  (host 355, 1 result: wd_timing_scale_gpu_gpu)
+
+Experiment types credited (GPU: 15 cr, CPU >15min: 12 cr, standard: 10 cr):
+  GPU experiments (15 cr each): schnakenberg_wavelength_gpu, percolation_walk_dimension_3d_gpu,
+    wd_curvature_trigger_gpu, wd_timing_scale_gpu, hkphase_gpu, wd_timing_scale_gpu_gpu
+  High-compute (12 cr): dpmomentratio, stdmap, contact_process_temporal_network,
+    spatial_pgg_punishment_criticality, galtonwatson
+  Standard (10 cr each): all remaining delay-window, phase transition, and scaling experiments
+
+Note: Sanitized result files not yet available for these results (assimilator behind,
+12,368 WUs in queue). Credit awarded based on successful completion status and experiment context.
+
+CLEANUP ACTIONS
+---------------
+Aborted broken experiments:
+  - exp_lotkaharv (lotka_delay_adaptive_harvest): 5 pending tasks aborted
+    (100% failure rate, 20 total failures, 0 successes)
+
+Stuck task check: No tasks running >12h on dead hosts. No tasks >48h.
+GPU 100% failure experiments checked: No pending work remaining.
+
+WEBSITE COUNTERS UPDATED
+------------------------
+  credited_count.txt: 5511 -> 5605
+  total_results_count.txt: 5719 -> 5813
+
+SYSTEM STATUS
+-------------
+  Active hosts: 82 (last 72h)
+  Assimilator: running (PID 1221)
+  Assimilator backlog: 12,368 workunits in ready state
+  No daemon issues observed.
+
+HIGH FAILURE RATE EXPERIMENTS (monitoring)
+------------------------------------------
+  rw_reset_fatigue_nonrenewal: 97.6% fail — no pending work
+  seasonal_metapop_vax_trigger: 95.1% fail — no pending work
+  wildfire_delay_adaptive_suppression: 93.3% fail — no pending work
+  cahnhilliard_delay_feedback_window: 88.6% fail — 11 pending (has successes, not broken)
+  oscillatory_roughchannel_lbm_resonance: 89.4% fail — 3 pending (has successes, not broken)
+
+NO BUGS FIXED THIS SESSION.

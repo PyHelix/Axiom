@@ -1,0 +1,85 @@
+Validation Session: 2026-03-12 13:21 Europe/Berlin
+
+Results credited this session:
+- Completed uncredited queue processed to zero remaining.
+- Results credited: 5620
+- Total cobblestones awarded: 242325.53
+- CPU results credited: 4678
+- GPU results credited: 941
+- Denied sentinel credits: 1
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.5319638598461795e-14
+- Price table refresh run: no
+
+Anti-cheat flags:
+- Result ID 2883366: denied at 0.01 credit due to count_outlier_same_experiment during 200-result sanitized sample review.
+- Sampled sanitized results: 200
+- Eligible uncredited results with sanitized files at review time: 5571
+
+Per-host credit summary:
+- Host 1: 3776.62
+- Host 2: 577.33
+- Host 9: 467.46
+- Host 10: 3906.73
+- Host 11: 1903.85
+- Host 16: 4483.56
+- Host 23: 2900.83
+- Host 29: 1756.17
+- Host 57: 155.87
+- Host 60: 14.04
+- Host 61: 1551.20
+- Host 71: 101.72
+- Host 85: 1333.48
+- Host 105: 9918.21
+- Host 134: 74.07
+- Host 147: 3384.32
+- Host 159: 5340.72
+- Host 162: 213.18
+- Host 163: 161.67
+- Host 182: 5512.33
+- Host 184: 8040.04
+- Host 202: 349.90
+- Host 210: 3910.98
+- Host 219: 1157.02
+- Host 222: 149.69
+- Host 240: 9170.50
+- Host 255: 61.29
+- Host 268: 4362.98
+- Host 324: 12201.10
+- Host 327: 11232.66
+- Host 330: 6446.61
+- Host 332: 6615.86
+- Host 333: 9781.95
+- Host 334: 10273.18
+- Host 339: 9514.40
+- Host 341: 561.72
+- Host 345: 562.78
+- Host 347: 2874.44
+- Host 350: 266.00
+- Host 364: 1094.47
+- Host 379: 3392.32
+- Host 387: 734.60
+- Host 388: 3244.48
+- Host 389: 2250.66
+- Host 390: 2366.16
+- Host 392: 7544.97
+- Host 393: 3633.10
+- Host 395: 8596.17
+- Host 396: 3803.42
+- Host 397: 9795.29
+- Host 398: 9547.06
+- Host 399: 3650.70
+- Host 400: 4194.78
+- Host 401: 9736.64
+- Host 404: 2728.11
+- Host 405: 3703.53
+- Host 406: 3694.86
+- Host 407: 3591.10
+- Host 409: 3701.52
+- Host 410: 3792.58
+- Host 413: 2462.55
+
+Cleanup actions:
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 105278.
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 105301.
+- Temporary scripts in /tmp were retained because shell policy blocked deletion in this session.

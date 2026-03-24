@@ -1,0 +1,56 @@
+Validation Report
+Timestamp: 2026-03-13 03:06:36 CET
+Session window: result.mod_time >= 2026-03-13 03:04:08
+Queue status at cutoff: post-report backlog drained to 0 on two consecutive checks immediately before aggregation
+
+Results credited this continuation pass
+- Count: 158
+- Total credit awarded: 9454.79
+- CPU results: 149
+- GPU results: 9
+- CPU scale: 5.0196363564419115e-12
+- GPU scale: 2.6760200558115976e-14
+
+Anti-cheat review
+- Continuation pass used the same anti-cheat posture as the primary session log at 2026-03-13_0304
+- Denied results: 0
+
+Per-host credit summary
+- Host 184: 2 results, 1449.56 credit
+- Host 392: 5 results, 953.28 credit
+- Host 367: 24 results, 705.61 credit
+- Host 379: 1 result, 541.33 credit
+- Host 406: 1 result, 534.26 credit
+- Host 393: 1 result, 531.49 credit
+- Host 240: 3 results, 464.62 credit
+- Host 23: 1 result, 406.32 credit
+- Host 397: 11 results, 386.32 credit
+- Host 413: 1 result, 366.04 credit
+- Host 401: 8 results, 291.76 credit
+- Host 398: 8 results, 282.23 credit
+- Host 330: 8 results, 248.27 credit
+- Host 333: 7 results, 241.09 credit
+- Host 324: 5 results, 229.97 credit
+- Host 327: 5 results, 213.22 credit
+- Host 390: 6 results, 188.16 credit
+- Host 395: 4 results, 159.24 credit
+- Host 210: 10 results, 158.55 credit
+- Host 332: 4 results, 132.36 credit
+- Host 399: 8 results, 130.88 credit
+- Host 339: 4 results, 129.29 credit
+- Host 334: 3 results, 104.16 credit
+- Host 400: 6 results, 102.05 credit
+- Host 268: 3 results, 90.19 credit
+- Host 105: 3 results, 86.23 credit
+- Host 61: 3 results, 78.72 credit
+- Host 219: 2 results, 50.82 credit
+- Host 417: 2 results, 48.59 credit
+- Host 396: 3 results, 47.19 credit
+- Host 389: 2 results, 41.87 credit
+- Host 364: 2 results, 34.37 credit
+- Host 85: 2 results, 26.75 credit
+
+Cleanup actions
+- Updated result.granted_credit and result.validate_state for all continuation-pass rows
+- Incremented host.total_credit and user.total_credit additively
+- Updated website counters for credited_count and total_results_count

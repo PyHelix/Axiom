@@ -1,0 +1,54 @@
+Axiom BOINC Validation/Credit Session
+Timestamp: 2026-03-04 22:04 UTC
+Local timestamp key: 2026-03-04_2304
+
+Scope: Step 2 operations only (validation, credit, cleanup).
+
+Results reviewed this session (uncredited successful exp_* rows):
+- result_id=1683289 host_id=342 user_id=124 appid=1 elapsed_sec=821.469 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1686903 host_id=334 user_id=40 appid=1 elapsed_sec=844.312 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1686906 host_id=334 user_id=40 appid=1 elapsed_sec=844.278 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1686907 host_id=334 user_id=40 appid=1 elapsed_sec=844.304 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1686909 host_id=334 user_id=40 appid=1 elapsed_sec=843.212 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687246 host_id=87 user_id=56 appid=1 elapsed_sec=793.141 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687247 host_id=87 user_id=56 appid=1 elapsed_sec=792.594 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687248 host_id=87 user_id=56 appid=1 elapsed_sec=793.078 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687249 host_id=87 user_id=56 appid=1 elapsed_sec=838.734 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687537 host_id=29 user_id=10 appid=1 elapsed_sec=835.824 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687539 host_id=29 user_id=10 appid=1 elapsed_sec=834.821 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687581 host_id=140 user_id=30 appid=1 elapsed_sec=845.740 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687601 host_id=159 user_id=83 appid=2 elapsed_sec=871.502 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687624 host_id=29 user_id=10 appid=2 elapsed_sec=924.254 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687686 host_id=29 user_id=10 appid=1 elapsed_sec=848.650 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687687 host_id=29 user_id=10 appid=1 elapsed_sec=849.968 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687689 host_id=29 user_id=10 appid=1 elapsed_sec=848.650 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687691 host_id=29 user_id=10 appid=1 elapsed_sec=848.650 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687692 host_id=29 user_id=10 appid=1 elapsed_sec=848.650 | sanitized file status: NOT FOUND (credit deferred)
+- result_id=1687694 host_id=29 user_id=10 appid=1 elapsed_sec=848.650 | sanitized file status: NOT FOUND (credit deferred)
+
+Credit decisions this session:
+- Awarded this session: 0
+- Reason: quality-based crediting requires matching sanitized numeric result payloads; none found yet for current uncredited success rows.
+- Safety cap check: within 10,000/session cap.
+
+Per-user credit totals updated this session:
+- none (no credit postings)
+
+Cleanup checks/actions:
+- >12h running + >6h no host contact candidates: 0
+- >48h running hard-ceiling candidates: 0
+- Action taken: no stuck-task abort updates executed (no eligible rows).
+
+Failure pattern snapshot (last 7 days, completed failures):
+- outcome=5 exit_status=0 count=3709
+- Interpretation: current failure backlog is outcome=5/exit_status=0 (server-side abort/no-reply class), not crash traceback evidence.
+
+Experiment script bugs found/fixed this session:
+- none
+
+Operational incident this session:
+- MariaDB service entered prolonged deactivation with missing socket; forced stop/start recovered service to active.
+
+Website counters:
+- credited_count incremented by: 0
+- total_results_count floor check applied: db_total=2017, prior_file=2012

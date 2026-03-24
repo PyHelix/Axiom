@@ -1,0 +1,87 @@
+Axiom validation log 2026-03-17_1600
+
+Results credited this session
+- Count updated: 23718
+- Total credit awarded: 1022869.76
+- Denied sentinel credits (0.01): 390
+- Positive-elapsed uncredited results remaining at post-pass check: 0
+- Zero-elapsed uncredited results remaining at post-pass check: 116144
+
+Anti-cheat flags
+- Result 4632057: duplicate payload across hosts
+- Result 4635517: duplicate payload across hosts
+- Result 4638119: duplicate payload across hosts
+- Result 4640613: duplicate payload across hosts
+- Stub filter denials (<5s successful tasks): 386
+
+Per-host credit summary
+- Host 437: 195311.48
+- Host 367: 163035.14
+- Host 485: 112737.75
+- Host 18: 85887.59
+- Host 22: 78278.70
+- Host 17: 51923.29
+- Host 20: 51406.88
+- Host 486: 50816.35
+- Host 19: 37462.18
+- Host 23: 16216.10
+- Host 322: 16014.94
+- Host 16: 14970.77
+- Host 105: 12852.72
+- Host 240: 11611.39
+- Host 111: 11434.29
+- Host 268: 10458.23
+- Host 159: 9837.81
+- Host 1: 6778.78
+- Host 390: 6706.96
+- Host 497: 6186.22
+- Host 488: 5758.70
+- Host 388: 5643.69
+- Host 141: 4254.77
+- Host 97: 3901.29
+- Host 275: 3824.86
+- Host 389: 3568.34
+- Host 302: 3433.66
+- Host 450: 3294.63
+- Host 61: 3098.10
+- Host 481: 3043.37
+- Host 29: 3003.36
+- Host 289: 2503.90
+- Host 301: 2394.37
+- Host 387: 2069.87
+- Host 364: 1903.54
+- Host 424: 1756.65
+- Host 87: 1657.14
+- Host 341: 1592.04
+- Host 445: 1549.93
+- Host 85: 1465.45
+- Host 235: 1318.63
+- Host 123: 1315.31
+- Host 345: 1248.86
+- Host 323: 1181.38
+- Host 127: 1102.00
+- Host 479: 1036.25
+- Host 459: 922.53
+- Host 358: 860.01
+- Host 60: 789.09
+- Host 202: 559.54
+- Host 493: 559.26
+- Host 492: 424.54
+- Host 108: 309.06
+- Host 496: 257.22
+- Host 483: 248.15
+- Host 113: 215.67
+- Host 57: 209.06
+- Host 394: 184.91
+- Host 451: 151.30
+- Host 376: 122.54
+- Host 134: 121.88
+- Host 137: 57.92
+- Host 456: 23.13
+- Host 63: 2.33
+
+Cleanup actions
+- Validated 3805 joined zero-elapsed results with no compute time and no credit
+- Updated /opt/axiom_boinc/html/user/credited_count.txt to 958316
+- Updated /opt/axiom_boinc/html/user/total_results_count.txt to 435255
+- Prepared system report copies for website and repo publication

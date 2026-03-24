@@ -1,0 +1,39 @@
+Axiom BOINC Validation Log
+Session: 2026-03-06_1329 UTC
+Step: Validation & Credit (operational only)
+
+Results reviewed this session
+- Reviewed current uncredited successful experiment results in the live database: IDs 1740173 through 1785687, 950 total at review time.
+- Trusted-data check: 0 of 950 current uncredited successful results had a matching sanitized JSON file in /opt/axiom/experiment_results/sanitized/ at validation time.
+- Credit decision: no positive credit awarded this session because trusted numeric-only payloads were not yet available for the current uncredited success set. Raw upload files were not read.
+- Existing previously credited experiment results present in DB: 15.
+
+Credit awarded
+- Total credit awarded this session: 0.
+- Per-user credit additions this session: none.
+- Per-host credit additions this session: none.
+- credited_count.txt increment: 0.
+- total_results_count.txt refreshed to max(existing, completed-success-count); resulting value: 962.
+
+Stuck/broken tasks cleaned up
+- Cleaned 22 stuck in-progress tasks that had run longer than 12 hours on hosts with no RPC contact for more than 6 hours.
+- All 22 cleaned tasks were on host 323.
+- Cleaned result IDs: 1728416, 1728418, 1728419, 1728420, 1728512, 1728514, 1728515, 1728516, 1728608, 1728610, 1728611, 1728612, 1733289, 1733299, 1733309, 1733319, 1733329, 1733339, 1733349, 1733359, 1733369, 1733379.
+- Post-cleanup stuck-task check returned 0 remaining tasks matching the dead-host criteria.
+
+Failures reviewed
+- Recent GPU failures were inspected for host-specific crash patterns.
+- Result 1780756 (host 1, exp_cml_sync_transition_gpu_gpu_53f577_0) reported a Windows loader failure: missing python311.dll in the packaged executable environment, exit status 195.
+- Results 1780866-1780981 for cml_sync_transition_gpu_gpu and result 1782089 for ginibre_spacing_universality_gpu_gpu also failed on host 1 with exit status 203 after the same host began showing GPU task failures.
+- No experiment currently met the >50% broken-experiment abort threshold across multiple hosts, so no experiment-wide abort was executed.
+- Earlier failed/stale results on hosts 321 and 323 were operational dead-host/stale-task cases, not evidence of a current server-side experiment script bug.
+
+Experiment scripts / fixes
+- No experiment script changes were made this session.
+- No server-side experiment bug was confirmed from the current failure pattern.
+- The observed GPU failure signature is consistent with a volunteer host runtime/environment problem rather than a BOINC server or experiment-source defect.
+
+Operational notes
+- MariaDB, BOINC daemons, axiom_assimilator.py, axiom_codex_loop.sh, axiom_security_patrol.sh, and Apache were not stopped or modified.
+- No raw upload files were read.
+- No files were written to /opt/axiom_boinc/html/user/experiment_results/.

@@ -1,0 +1,57 @@
+Axiom BOINC Validation Log — 2026-03-05 05:10 UTC
+
+## Summary
+
+- Credit awarded this session: 0
+- Results reviewed: 509 uncredited results found, all pending assimilation
+- Stuck tasks cleaned: 0
+- Broken experiments aborted: 0
+
+## Uncredited Results (509 total)
+
+All 509 uncredited successful results have workunit assimilate_state=1 (pending).
+No sanitized files exist for these results — credit deferred until assimilation completes.
+
+## Assimilator Issue (REQUIRES ATTENTION)
+
+The axiom_assimilator.py (PID 1205) appears stuck:
+- Running for 36+ minutes, 0% CPU, sleeping state
+- No DB connection visible in SHOW PROCESSLIST (stale connection likely)
+- Last sanitized file created at 03:57 UTC — no new files since
+- 873 workunits at assimilate_state=1 (612 have validate_state=1 results ready)
+- Upload files exist and are accessible for these results
+- The assimilator IS running but not processing WUs — likely a stale MySQLdb connection
+  that silently fails in the main loop's DB reconnection logic
+- ACTION NEEDED: PyHelix should restart the assimilator process to clear the stale connection
+
+## Failure Analysis
+
+Experiment failure rates (completed only, no pending work to abort):
+- pit_delay_inhibitor_resonance: 100% failure (0/7), all outcome=6 (timeout) — no pending WUs
+- schellingtax: 73.5% failure (86/117) — no pending WUs
+- lorenz96_delay_assimilation_regime_shift: 69.2% failure (27/39) — no pending WUs
+- tritrophic_delay: 66.7% failure (22/33) — no pending WUs
+- grayscott_delay_pulse_feedback: 40.8% failure (40/98) — no pending WUs
+- fisher_allee_movinghabitat_delay_culling_window: 26.6% failure (17/64) — no pending WUs
+No pending tasks exist for any broken experiments — no aborts needed.
+
+## Stuck Task Cleanup
+
+- Dead-host stuck tasks (>12h runtime, >6h no contact): 0 found
+- Hard ceiling tasks (>48h runtime): 0 found
+
+## Active Infrastructure
+
+- 88 active hosts (last 72h), 2-192 CPUs
+- 21 hosts currently running tasks
+- 684 tasks in flight (unsent + in-progress)
+- Assimilator running but stuck (PID 1205)
+
+## Website Counters
+
+- credited_count.txt: 2279 (unchanged, no credit awarded)
+- total_results_count.txt: 1825 (unchanged, existing value > current completed)
+
+## Script/Bug Fixes
+
+No experiment scripts modified this session.

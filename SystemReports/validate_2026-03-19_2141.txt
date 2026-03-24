@@ -1,0 +1,87 @@
+Validation Session Log
+Timestamp (UTC): 2026-03-19 21:41
+
+Results credited this session:
+- Primary batch credited: 10880 results
+- Primary batch total credit: 1145807.82 cobblestones
+- Follow-up corrective crediting: additional joinable rows were credited after the primary batch to clean up rows missed by the first pass and rounding-sensitive updates on the live queue
+- Remaining uncredited rows on live queue continue to change during runtime; zero-elapsed joinable rows were skipped per prompt rule, and host-orphaned rows could not be evaluated with the prompt's required host join
+
+Primary batch host credit summary:
+- Host 16: 15510.59
+- Host 17: 50094.24
+- Host 18: 82193.04
+- Host 19: 37189.98
+- Host 20: 55661.74
+- Host 22: 83670.92
+- Host 23: 13077.66
+- Host 29: 2892.47
+- Host 57: 129.90
+- Host 60: 645.18
+- Host 61: 2980.43
+- Host 71: 292.56
+- Host 85: 2086.39
+- Host 87: 2028.01
+- Host 97: 4090.10
+- Host 106: 1418.16
+- Host 107: 79.16
+- Host 111: 10403.02
+- Host 123: 1416.29
+- Host 127: 868.90
+- Host 134: 107.93
+- Host 141: 29690.39
+- Host 147: 4861.45
+- Host 159: 7330.62
+- Host 202: 180.64
+- Host 210: 151.85
+- Host 249: 4255.70
+- Host 267: 140.58
+- Host 281: 44.85
+- Host 289: 2230.18
+- Host 302: 2772.03
+- Host 323: 1603.28
+- Host 324: 9475.37
+- Host 327: 9472.80
+- Host 330: 9860.99
+- Host 332: 10078.80
+- Host 338: 9478.22
+- Host 339: 13516.89
+- Host 340: 12401.79
+- Host 341: 1071.05
+- Host 345: 1183.19
+- Host 358: 796.18
+- Host 364: 575.13
+- Host 367: 170459.32
+- Host 373: 135.91
+- Host 376: 8367.01
+- Host 388: 12386.71
+- Host 389: 3009.37
+- Host 390: 6258.83
+- Host 395: 10711.58
+- Host 396: 128.24
+- Host 397: 355.76
+- Host 398: 331.69
+- Host 399: 175.10
+- Host 400: 165.93
+- Host 424: 1655.47
+- Host 437: 157436.06
+- Host 445: 763.15
+- Host 459: 852.29
+- Host 486: 101850.25
+- Host 487: 146719.10
+- Host 494: 9297.55
+- Host 496: 383.43
+- Host 497: 11284.69
+- Host 505: 1.53
+- Host 506: 63.55
+- Host 507: 57.51
+- Host 508: 140.71
+- Host 513: 3504.65
+- Host 524: 888.18
+- Host 527: 415.58
+
+Operational notes:
+- CPU_SCALE used: 5.0196363564419115e-12
+- GPU_SCALE used: 2.674323246290227e-14
+- Price table freshness check passed; no refresh was needed
+- The prompt forbids writes to the user table, so no user-table credit increments were performed

@@ -1,0 +1,103 @@
+Axiom validation log
+Timestamp: 2026-03-18 22:14 UTC
+
+Results credited this session: 19496
+Total credit awarded this session: 950698.59
+CPU results credited: 19094
+GPU results credited: 401
+CPU_SCALE: 5.0196363564419115e-12
+GPU_SCALE: 2.695937079143253e-14
+
+Results still uncredited after run: 162096
+Zero-elapsed results skipped per policy: 162068
+
+Per-host credit summary:
+Host 367: 160135.44
+Host 22: 84841.71
+Host 18: 80663.02
+Host 437: 54376.25
+Host 20: 54189.82
+Host 486: 43990.14
+Host 17: 39651.09
+Host 485: 37774.39
+Host 19: 26879.62
+Host 141: 24147.30
+Host 508: 24085.16
+Host 397: 14415.42
+Host 507: 14337.30
+Host 398: 14111.62
+Host 339: 13342.94
+Host 23: 13145.35
+Host 322: 12970.64
+Host 16: 12478.59
+Host 340: 12306.45
+Host 515: 12011.90
+Host 497: 11070.75
+Host 395: 10794.93
+Host 111: 10395.99
+Host 332: 10050.46
+Host 330: 9466.30
+Host 327: 9438.13
+Host 324: 9431.96
+Host 338: 9376.38
+Host 159: 9049.16
+Host 376: 7294.46
+Host 400: 6221.73
+Host 399: 6189.18
+Host 390: 6179.99
+Host 210: 5802.73
+Host 396: 5609.95
+Host 488: 5036.49
+Host 147: 4695.56
+Host 496: 4282.92
+Host 388: 4237.54
+Host 272: 4005.68
+Host 97: 3986.24
+Host 302: 3224.49
+Host 513: 3150.63
+Host 61: 2939.92
+Host 389: 2936.77
+Host 29: 2831.85
+Host 271: 2575.79
+Host 450: 2144.44
+Host 364: 1815.30
+Host 323: 1660.61
+Host 445: 1622.80
+Host 424: 1598.77
+Host 387: 1563.55
+Host 123: 1459.04
+Host 341: 1426.10
+Host 504: 1425.02
+Host 127: 1210.18
+Host 345: 1116.65
+Host 459: 1041.20
+Host 503: 1028.76
+Host 108: 1022.91
+Host 414: 998.35
+Host 481: 928.90
+Host 106: 862.05
+Host 358: 793.93
+Host 85: 758.12
+Host 519: 719.37
+Host 506: 713.15
+Host 505: 709.39
+Host 107: 538.11
+Host 479: 422.41
+Host 137: 400.57
+Host 480: 398.58
+Host 60: 359.09
+Host 483: 287.70
+Host 113: 277.45
+Host 71: 273.26
+Host 267: 246.49
+Host 202: 145.28
+Host 517: 138.28
+Host 195: 116.66
+Host 251: 115.03
+Host 134: 107.04
+Host 57: 46.08
+Host 105: 34.66
+Host 456: 19.05
+Host 493: 16.44
+Host 268: 4.89
+Host 63: 2.58

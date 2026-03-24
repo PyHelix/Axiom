@@ -1,0 +1,306 @@
+Validation session: 2026-03-08_1939
+Recovered first batch mod_time: 2026-03-08 19:36:04
+Results reviewed this session: 248
+Sanitized payloads reviewed: 248
+Eligible results: 0
+Denied sentinel results: 248
+Candidate byte pool: 0
+Credit budget applied: 10000.00
+
+Results reviewed this session:
+result 1924929 (host 347): exp_kellersegel_crossed_resource_sensitivity_gpu_gpu | elapsed=873.40s | nbytes=46335 | missing sanitized payload -> 0.01 credit
+result 1927496 (host 74): exp_minority_game_delay_memory_interaction | elapsed=873.65s | nbytes=34621 | missing sanitized payload -> 0.01 credit
+result 1927883 (host 349): exp_minority_game_delay_memory_interaction | elapsed=866.91s | nbytes=34622 | missing sanitized payload -> 0.01 credit
+result 1927890 (host 349): exp_minority_game_delay_memory_interaction | elapsed=879.00s | nbytes=34634 | missing sanitized payload -> 0.01 credit
+result 1927899 (host 349): exp_minority_game_delay_memory_interaction | elapsed=871.94s | nbytes=34610 | missing sanitized payload -> 0.01 credit
+result 1928514 (host 87): exp_minority_game_delay_memory_interaction | elapsed=835.39s | nbytes=34661 | missing sanitized payload -> 0.01 credit
+result 1928541 (host 87): exp_minority_game_delay_memory_interaction | elapsed=834.34s | nbytes=34571 | missing sanitized payload -> 0.01 credit
+result 1929006 (host 87): exp_minority_game_delay_memory_interaction | elapsed=916.12s | nbytes=34623 | missing sanitized payload -> 0.01 credit
+result 1929007 (host 87): exp_minority_game_delay_memory_interaction | elapsed=906.36s | nbytes=34589 | missing sanitized payload -> 0.01 credit
+result 1929013 (host 87): exp_minority_game_delay_memory_interaction | elapsed=836.72s | nbytes=34603 | missing sanitized payload -> 0.01 credit
+result 1929462 (host 195): exp_spiked_covariance_mask_correlation_gpu_gpu | elapsed=876.97s | nbytes=3965 | missing sanitized payload -> 0.01 credit
+result 1929485 (host 195): exp_cahnhilliard_crossed_mobility_bias_gpu_gpu | elapsed=873.14s | nbytes=3490 | missing sanitized payload -> 0.01 credit
+result 1929575 (host 347): exp_minority_game_delay_memory_interaction | elapsed=858.29s | nbytes=34716 | missing sanitized payload -> 0.01 credit
+result 1929615 (host 159): exp_minority_game_delay_memory_interaction | elapsed=854.80s | nbytes=34637 | missing sanitized payload -> 0.01 credit
+result 1929652 (host 159): exp_minority_game_delay_memory_interaction | elapsed=861.80s | nbytes=34607 | missing sanitized payload -> 0.01 credit
+result 1929759 (host 87): exp_minority_game_delay_memory_interaction | elapsed=836.42s | nbytes=34581 | missing sanitized payload -> 0.01 credit
+result 1929761 (host 87): exp_minority_game_delay_memory_interaction | elapsed=906.31s | nbytes=34624 | missing sanitized payload -> 0.01 credit
+result 1929764 (host 87): exp_minority_game_delay_memory_interaction | elapsed=915.20s | nbytes=34667 | missing sanitized payload -> 0.01 credit
+result 1929793 (host 87): exp_minority_game_delay_memory_interaction | elapsed=835.05s | nbytes=34592 | missing sanitized payload -> 0.01 credit
+result 1929959 (host 113): exp_minority_game_delay_memory_interaction | elapsed=848.95s | nbytes=34637 | missing sanitized payload -> 0.01 credit
+result 1930135 (host 87): exp_minority_game_delay_memory_interaction | elapsed=914.97s | nbytes=34602 | missing sanitized payload -> 0.01 credit
+result 1930183 (host 87): exp_minority_game_delay_memory_interaction | elapsed=835.06s | nbytes=34586 | missing sanitized payload -> 0.01 credit
+result 1930292 (host 74): exp_minority_game_delay_memory_interaction | elapsed=875.69s | nbytes=34638 | missing sanitized payload -> 0.01 credit
+result 1930357 (host 74): exp_minority_game_delay_memory_interaction | elapsed=874.65s | nbytes=34618 | missing sanitized payload -> 0.01 credit
+result 1930382 (host 74): exp_minority_game_delay_memory_interaction | elapsed=882.96s | nbytes=34592 | missing sanitized payload -> 0.01 credit
+result 1930393 (host 74): exp_minority_game_delay_memory_interaction | elapsed=885.01s | nbytes=34636 | missing sanitized payload -> 0.01 credit
+result 1930395 (host 74): exp_minority_game_delay_memory_interaction | elapsed=877.77s | nbytes=34663 | missing sanitized payload -> 0.01 credit
+result 1930626 (host 87): exp_minority_game_delay_memory_interaction | elapsed=837.08s | nbytes=34582 | missing sanitized payload -> 0.01 credit
+result 1930669 (host 230): exp_minority_game_delay_memory_interaction | elapsed=908.73s | nbytes=34641 | missing sanitized payload -> 0.01 credit
+result 1930672 (host 113): exp_minority_game_delay_memory_interaction | elapsed=847.56s | nbytes=34610 | missing sanitized payload -> 0.01 credit
+result 1930858 (host 16): exp_kellersegel_crossed_resource_sensitivity_gpu_gpu | elapsed=856.49s | nbytes=46386 | missing sanitized payload -> 0.01 credit
+result 1931008 (host 230): exp_minority_game_delay_memory_interaction | elapsed=886.10s | nbytes=34651 | missing sanitized payload -> 0.01 credit
+result 1931011 (host 230): exp_minority_game_delay_memory_interaction | elapsed=911.86s | nbytes=34616 | missing sanitized payload -> 0.01 credit
+result 1931249 (host 190): exp_kellersegel_crossed_resource_sensitivity_gpu_gpu | elapsed=895.49s | nbytes=46573 | missing sanitized payload -> 0.01 credit
+result 1931260 (host 230): exp_minority_game_delay_memory_interaction | elapsed=899.48s | nbytes=34612 | missing sanitized payload -> 0.01 credit
+result 1931744 (host 102): exp_minority_game_delay_memory_interaction | elapsed=862.21s | nbytes=34630 | missing sanitized payload -> 0.01 credit
+result 1931840 (host 102): exp_minority_game_delay_memory_interaction | elapsed=871.53s | nbytes=34631 | missing sanitized payload -> 0.01 credit
+result 1931903 (host 15): exp_minority_game_delay_memory_interaction | elapsed=884.84s | nbytes=34617 | missing sanitized payload -> 0.01 credit
+result 1932000 (host 74): exp_minority_game_delay_memory_interaction | elapsed=876.72s | nbytes=34636 | missing sanitized payload -> 0.01 credit
+result 1932005 (host 74): exp_minority_game_delay_memory_interaction | elapsed=876.72s | nbytes=34628 | missing sanitized payload -> 0.01 credit
+result 1932064 (host 74): exp_minority_game_delay_memory_interaction | elapsed=883.79s | nbytes=34604 | missing sanitized payload -> 0.01 credit
+result 1932220 (host 15): exp_minority_game_delay_memory_interaction | elapsed=888.95s | nbytes=34615 | missing sanitized payload -> 0.01 credit
+result 1932230 (host 102): exp_minority_game_delay_memory_interaction | elapsed=846.67s | nbytes=34590 | missing sanitized payload -> 0.01 credit
+result 1932272 (host 230): exp_minority_game_delay_memory_interaction | elapsed=847.00s | nbytes=34650 | missing sanitized payload -> 0.01 credit
+result 1932274 (host 230): exp_minority_game_delay_memory_interaction | elapsed=908.63s | nbytes=34666 | missing sanitized payload -> 0.01 credit
+result 1932310 (host 102): exp_minority_game_delay_memory_interaction | elapsed=873.78s | nbytes=34599 | missing sanitized payload -> 0.01 credit
+result 1932315 (host 102): exp_minority_game_delay_memory_interaction | elapsed=855.99s | nbytes=34641 | missing sanitized payload -> 0.01 credit
+result 1932320 (host 102): exp_minority_game_delay_memory_interaction | elapsed=868.31s | nbytes=34629 | missing sanitized payload -> 0.01 credit
+result 1932674 (host 140): exp_minority_game_delay_memory_interaction | elapsed=864.89s | nbytes=33254 | missing sanitized payload -> 0.01 credit
+result 1932701 (host 15): exp_minority_game_delay_memory_interaction | elapsed=886.90s | nbytes=34644 | missing sanitized payload -> 0.01 credit
+result 1932704 (host 15): exp_minority_game_delay_memory_interaction | elapsed=883.81s | nbytes=34649 | missing sanitized payload -> 0.01 credit
+result 1932754 (host 15): exp_minority_game_delay_memory_interaction | elapsed=887.92s | nbytes=34625 | missing sanitized payload -> 0.01 credit
+result 1932762 (host 15): exp_minority_game_delay_memory_interaction | elapsed=882.78s | nbytes=34648 | missing sanitized payload -> 0.01 credit
+result 1932800 (host 15): exp_minority_game_delay_memory_interaction | elapsed=884.84s | nbytes=34645 | missing sanitized payload -> 0.01 credit
+result 1932812 (host 15): exp_minority_game_delay_memory_interaction | elapsed=884.84s | nbytes=34577 | missing sanitized payload -> 0.01 credit
+result 1932988 (host 230): exp_minority_game_delay_memory_interaction | elapsed=912.66s | nbytes=34610 | missing sanitized payload -> 0.01 credit
+result 1932989 (host 230): exp_minority_game_delay_memory_interaction | elapsed=916.68s | nbytes=34642 | missing sanitized payload -> 0.01 credit
+result 1933850 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.01s | nbytes=33175 | missing sanitized payload -> 0.01 credit
+result 1933857 (host 367): exp_minority_game_delay_memory_interaction | elapsed=872.11s | nbytes=33217 | missing sanitized payload -> 0.01 credit
+result 1933862 (host 367): exp_minority_game_delay_memory_interaction | elapsed=873.29s | nbytes=33246 | missing sanitized payload -> 0.01 credit
+result 1933863 (host 367): exp_minority_game_delay_memory_interaction | elapsed=864.07s | nbytes=33239 | missing sanitized payload -> 0.01 credit
+result 1933873 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.03s | nbytes=33227 | missing sanitized payload -> 0.01 credit
+result 1933875 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.05s | nbytes=33251 | missing sanitized payload -> 0.01 credit
+result 1933879 (host 367): exp_minority_game_delay_memory_interaction | elapsed=863.05s | nbytes=33213 | missing sanitized payload -> 0.01 credit
+result 1933881 (host 367): exp_minority_game_delay_memory_interaction | elapsed=865.46s | nbytes=33222 | missing sanitized payload -> 0.01 credit
+result 1933891 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.04s | nbytes=33252 | missing sanitized payload -> 0.01 credit
+result 1933892 (host 367): exp_minority_game_delay_memory_interaction | elapsed=865.47s | nbytes=33208 | missing sanitized payload -> 0.01 credit
+result 1933895 (host 367): exp_minority_game_delay_memory_interaction | elapsed=867.56s | nbytes=33260 | missing sanitized payload -> 0.01 credit
+result 1933897 (host 367): exp_minority_game_delay_memory_interaction | elapsed=873.83s | nbytes=33235 | missing sanitized payload -> 0.01 credit
+result 1933901 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.98s | nbytes=33249 | missing sanitized payload -> 0.01 credit
+result 1933921 (host 367): exp_minority_game_delay_memory_interaction | elapsed=874.25s | nbytes=33224 | missing sanitized payload -> 0.01 credit
+result 1933926 (host 367): exp_minority_game_delay_memory_interaction | elapsed=860.61s | nbytes=33234 | missing sanitized payload -> 0.01 credit
+result 1933930 (host 367): exp_minority_game_delay_memory_interaction | elapsed=873.18s | nbytes=33235 | missing sanitized payload -> 0.01 credit
+result 1933933 (host 367): exp_minority_game_delay_memory_interaction | elapsed=875.08s | nbytes=33222 | missing sanitized payload -> 0.01 credit
+result 1934014 (host 367): exp_minority_game_delay_memory_interaction | elapsed=864.66s | nbytes=33256 | missing sanitized payload -> 0.01 credit
+result 1934019 (host 367): exp_minority_game_delay_memory_interaction | elapsed=864.98s | nbytes=33228 | missing sanitized payload -> 0.01 credit
+result 1934021 (host 367): exp_minority_game_delay_memory_interaction | elapsed=875.69s | nbytes=33227 | missing sanitized payload -> 0.01 credit
+result 1934022 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.87s | nbytes=33233 | missing sanitized payload -> 0.01 credit
+result 1934024 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.52s | nbytes=33224 | missing sanitized payload -> 0.01 credit
+result 1934058 (host 367): exp_minority_game_delay_memory_interaction | elapsed=846.92s | nbytes=33169 | missing sanitized payload -> 0.01 credit
+result 1934078 (host 367): exp_minority_game_delay_memory_interaction | elapsed=862.53s | nbytes=33220 | missing sanitized payload -> 0.01 credit
+result 1934079 (host 367): exp_minority_game_delay_memory_interaction | elapsed=860.54s | nbytes=33210 | missing sanitized payload -> 0.01 credit
+result 1934083 (host 367): exp_minority_game_delay_memory_interaction | elapsed=861.54s | nbytes=33229 | missing sanitized payload -> 0.01 credit
+result 1934089 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.11s | nbytes=33208 | missing sanitized payload -> 0.01 credit
+result 1934113 (host 367): exp_minority_game_delay_memory_interaction | elapsed=867.62s | nbytes=33195 | missing sanitized payload -> 0.01 credit
+result 1934117 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.00s | nbytes=33227 | missing sanitized payload -> 0.01 credit
+result 1934124 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.03s | nbytes=33228 | missing sanitized payload -> 0.01 credit
+result 1934181 (host 367): exp_minority_game_delay_memory_interaction | elapsed=853.67s | nbytes=33233 | missing sanitized payload -> 0.01 credit
+result 1934184 (host 367): exp_minority_game_delay_memory_interaction | elapsed=874.73s | nbytes=33176 | missing sanitized payload -> 0.01 credit
+result 1934251 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.25s | nbytes=33231 | missing sanitized payload -> 0.01 credit
+result 1934252 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.22s | nbytes=33274 | missing sanitized payload -> 0.01 credit
+result 1934257 (host 367): exp_minority_game_delay_memory_interaction | elapsed=875.81s | nbytes=33218 | missing sanitized payload -> 0.01 credit
+result 1934261 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.65s | nbytes=33217 | missing sanitized payload -> 0.01 credit
+result 1934270 (host 367): exp_minority_game_delay_memory_interaction | elapsed=867.33s | nbytes=33187 | missing sanitized payload -> 0.01 credit
+result 1934282 (host 367): exp_minority_game_delay_memory_interaction | elapsed=862.46s | nbytes=33243 | missing sanitized payload -> 0.01 credit
+result 1934308 (host 367): exp_minority_game_delay_memory_interaction | elapsed=864.65s | nbytes=33241 | missing sanitized payload -> 0.01 credit
+result 1934337 (host 367): exp_minority_game_delay_memory_interaction | elapsed=858.13s | nbytes=33241 | missing sanitized payload -> 0.01 credit
+result 1934343 (host 367): exp_minority_game_delay_memory_interaction | elapsed=875.40s | nbytes=33220 | missing sanitized payload -> 0.01 credit
+result 1934347 (host 367): exp_minority_game_delay_memory_interaction | elapsed=867.70s | nbytes=33252 | missing sanitized payload -> 0.01 credit
+result 1934348 (host 367): exp_minority_game_delay_memory_interaction | elapsed=875.35s | nbytes=33193 | missing sanitized payload -> 0.01 credit
+result 1934350 (host 367): exp_minority_game_delay_memory_interaction | elapsed=853.66s | nbytes=33201 | missing sanitized payload -> 0.01 credit
+result 1934359 (host 367): exp_minority_game_delay_memory_interaction | elapsed=847.19s | nbytes=33255 | missing sanitized payload -> 0.01 credit
+result 1934380 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.74s | nbytes=33242 | missing sanitized payload -> 0.01 credit
+result 1934392 (host 367): exp_minority_game_delay_memory_interaction | elapsed=876.76s | nbytes=33229 | missing sanitized payload -> 0.01 credit
+result 1934397 (host 367): exp_minority_game_delay_memory_interaction | elapsed=874.26s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1934398 (host 367): exp_minority_game_delay_memory_interaction | elapsed=858.91s | nbytes=33230 | missing sanitized payload -> 0.01 credit
+result 1934399 (host 367): exp_minority_game_delay_memory_interaction | elapsed=845.37s | nbytes=33261 | missing sanitized payload -> 0.01 credit
+result 1934403 (host 367): exp_minority_game_delay_memory_interaction | elapsed=862.08s | nbytes=33230 | missing sanitized payload -> 0.01 credit
+result 1934406 (host 367): exp_minority_game_delay_memory_interaction | elapsed=850.19s | nbytes=33186 | missing sanitized payload -> 0.01 credit
+result 1934424 (host 367): exp_minority_game_delay_memory_interaction | elapsed=853.64s | nbytes=33212 | missing sanitized payload -> 0.01 credit
+result 1934429 (host 367): exp_minority_game_delay_memory_interaction | elapsed=874.37s | nbytes=33252 | missing sanitized payload -> 0.01 credit
+result 1934432 (host 367): exp_minority_game_delay_memory_interaction | elapsed=863.25s | nbytes=33200 | missing sanitized payload -> 0.01 credit
+result 1934437 (host 367): exp_minority_game_delay_memory_interaction | elapsed=864.30s | nbytes=33244 | missing sanitized payload -> 0.01 credit
+result 1934441 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.87s | nbytes=33229 | missing sanitized payload -> 0.01 credit
+result 1934443 (host 367): exp_minority_game_delay_memory_interaction | elapsed=865.45s | nbytes=33224 | missing sanitized payload -> 0.01 credit
+result 1934453 (host 367): exp_minority_game_delay_memory_interaction | elapsed=860.20s | nbytes=33216 | missing sanitized payload -> 0.01 credit
+result 1934456 (host 367): exp_minority_game_delay_memory_interaction | elapsed=855.58s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1934463 (host 367): exp_minority_game_delay_memory_interaction | elapsed=957.98s | nbytes=33199 | missing sanitized payload -> 0.01 credit
+result 1934465 (host 367): exp_minority_game_delay_memory_interaction | elapsed=871.82s | nbytes=33228 | missing sanitized payload -> 0.01 credit
+result 1934466 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.82s | nbytes=33205 | missing sanitized payload -> 0.01 credit
+result 1934467 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.84s | nbytes=33175 | missing sanitized payload -> 0.01 credit
+result 1934469 (host 367): exp_minority_game_delay_memory_interaction | elapsed=856.57s | nbytes=33244 | missing sanitized payload -> 0.01 credit
+result 1934472 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.72s | nbytes=33252 | missing sanitized payload -> 0.01 credit
+result 1934475 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.80s | nbytes=33223 | missing sanitized payload -> 0.01 credit
+result 1934479 (host 367): exp_minority_game_delay_memory_interaction | elapsed=877.74s | nbytes=33257 | missing sanitized payload -> 0.01 credit
+result 1934484 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.44s | nbytes=33248 | missing sanitized payload -> 0.01 credit
+result 1934485 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1011.62s | nbytes=33256 | missing sanitized payload -> 0.01 credit
+result 1934487 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1018.41s | nbytes=33221 | missing sanitized payload -> 0.01 credit
+result 1934489 (host 367): exp_minority_game_delay_memory_interaction | elapsed=872.51s | nbytes=33232 | missing sanitized payload -> 0.01 credit
+result 1934496 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.46s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1934497 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.41s | nbytes=33203 | missing sanitized payload -> 0.01 credit
+result 1934499 (host 367): exp_minority_game_delay_memory_interaction | elapsed=864.29s | nbytes=33196 | missing sanitized payload -> 0.01 credit
+result 1934501 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.46s | nbytes=33222 | missing sanitized payload -> 0.01 credit
+result 1934503 (host 367): exp_minority_game_delay_memory_interaction | elapsed=867.39s | nbytes=33255 | missing sanitized payload -> 0.01 credit
+result 1934506 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.47s | nbytes=33246 | missing sanitized payload -> 0.01 credit
+result 1934509 (host 367): exp_minority_game_delay_memory_interaction | elapsed=876.59s | nbytes=33147 | missing sanitized payload -> 0.01 credit
+result 1934514 (host 367): exp_minority_game_delay_memory_interaction | elapsed=845.27s | nbytes=33252 | missing sanitized payload -> 0.01 credit
+result 1934516 (host 367): exp_minority_game_delay_memory_interaction | elapsed=872.89s | nbytes=33216 | missing sanitized payload -> 0.01 credit
+result 1934520 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1022.70s | nbytes=33228 | missing sanitized payload -> 0.01 credit
+result 1934521 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.80s | nbytes=33229 | missing sanitized payload -> 0.01 credit
+result 1934523 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.80s | nbytes=33225 | missing sanitized payload -> 0.01 credit
+result 1934526 (host 367): exp_minority_game_delay_memory_interaction | elapsed=862.88s | nbytes=33215 | missing sanitized payload -> 0.01 credit
+result 1934527 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1011.77s | nbytes=33245 | missing sanitized payload -> 0.01 credit
+result 1934529 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.48s | nbytes=33244 | missing sanitized payload -> 0.01 credit
+result 1934531 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1008.52s | nbytes=33254 | missing sanitized payload -> 0.01 credit
+result 1934533 (host 367): exp_minority_game_delay_memory_interaction | elapsed=875.95s | nbytes=33210 | missing sanitized payload -> 0.01 credit
+result 1934537 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.14s | nbytes=33212 | missing sanitized payload -> 0.01 credit
+result 1934538 (host 367): exp_minority_game_delay_memory_interaction | elapsed=955.97s | nbytes=33262 | missing sanitized payload -> 0.01 credit
+result 1934540 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.52s | nbytes=33208 | missing sanitized payload -> 0.01 credit
+result 1934541 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.49s | nbytes=33224 | missing sanitized payload -> 0.01 credit
+result 1934544 (host 367): exp_minority_game_delay_memory_interaction | elapsed=876.13s | nbytes=33261 | missing sanitized payload -> 0.01 credit
+result 1934551 (host 367): exp_minority_game_delay_memory_interaction | elapsed=999.49s | nbytes=33253 | missing sanitized payload -> 0.01 credit
+result 1934552 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.54s | nbytes=33228 | missing sanitized payload -> 0.01 credit
+result 1934554 (host 367): exp_minority_game_delay_memory_interaction | elapsed=844.83s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1934557 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.36s | nbytes=33230 | missing sanitized payload -> 0.01 credit
+result 1934564 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.90s | nbytes=33229 | missing sanitized payload -> 0.01 credit
+result 1934566 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.52s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1934571 (host 367): exp_minority_game_delay_memory_interaction | elapsed=872.69s | nbytes=33201 | missing sanitized payload -> 0.01 credit
+result 1934573 (host 367): exp_minority_game_delay_memory_interaction | elapsed=855.44s | nbytes=33219 | missing sanitized payload -> 0.01 credit
+result 1934579 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.50s | nbytes=33257 | missing sanitized payload -> 0.01 credit
+result 1934580 (host 367): exp_minority_game_delay_memory_interaction | elapsed=854.66s | nbytes=33242 | missing sanitized payload -> 0.01 credit
+result 1934581 (host 367): exp_minority_game_delay_memory_interaction | elapsed=969.48s | nbytes=33212 | missing sanitized payload -> 0.01 credit
+result 1934583 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1027.09s | nbytes=33216 | missing sanitized payload -> 0.01 credit
+result 1934593 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.91s | nbytes=33234 | missing sanitized payload -> 0.01 credit
+result 1934594 (host 367): exp_minority_game_delay_memory_interaction | elapsed=868.09s | nbytes=33202 | missing sanitized payload -> 0.01 credit
+result 1934598 (host 367): exp_minority_game_delay_memory_interaction | elapsed=934.09s | nbytes=33221 | missing sanitized payload -> 0.01 credit
+result 1934602 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.87s | nbytes=33245 | missing sanitized payload -> 0.01 credit
+result 1934603 (host 367): exp_minority_game_delay_memory_interaction | elapsed=924.29s | nbytes=33225 | missing sanitized payload -> 0.01 credit
+result 1934604 (host 367): exp_minority_game_delay_memory_interaction | elapsed=860.63s | nbytes=33206 | missing sanitized payload -> 0.01 credit
+result 1934610 (host 367): exp_minority_game_delay_memory_interaction | elapsed=847.75s | nbytes=33236 | missing sanitized payload -> 0.01 credit
+result 1934612 (host 367): exp_minority_game_delay_memory_interaction | elapsed=949.53s | nbytes=33221 | missing sanitized payload -> 0.01 credit
+result 1934613 (host 367): exp_minority_game_delay_memory_interaction | elapsed=944.27s | nbytes=33256 | missing sanitized payload -> 0.01 credit
+result 1934615 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.17s | nbytes=33239 | missing sanitized payload -> 0.01 credit
+result 1934616 (host 367): exp_minority_game_delay_memory_interaction | elapsed=939.89s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1934624 (host 367): exp_minority_game_delay_memory_interaction | elapsed=873.67s | nbytes=33223 | missing sanitized payload -> 0.01 credit
+result 1934627 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.25s | nbytes=33247 | missing sanitized payload -> 0.01 credit
+result 1934628 (host 367): exp_minority_game_delay_memory_interaction | elapsed=865.37s | nbytes=33195 | missing sanitized payload -> 0.01 credit
+result 1934629 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1007.21s | nbytes=33245 | missing sanitized payload -> 0.01 credit
+result 1934635 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.52s | nbytes=33230 | missing sanitized payload -> 0.01 credit
+result 1934638 (host 367): exp_minority_game_delay_memory_interaction | elapsed=870.75s | nbytes=33202 | missing sanitized payload -> 0.01 credit
+result 1934641 (host 367): exp_minority_game_delay_memory_interaction | elapsed=857.31s | nbytes=33228 | missing sanitized payload -> 0.01 credit
+result 1934644 (host 367): exp_minority_game_delay_memory_interaction | elapsed=1009.69s | nbytes=33209 | missing sanitized payload -> 0.01 credit
+result 1934649 (host 367): exp_minority_game_delay_memory_interaction | elapsed=869.30s | nbytes=33240 | missing sanitized payload -> 0.01 credit
+result 1934650 (host 367): exp_minority_game_delay_memory_interaction | elapsed=955.89s | nbytes=33253 | missing sanitized payload -> 0.01 credit
+result 1934756 (host 366): exp_minority_game_delay_memory_interaction | elapsed=881.01s | nbytes=33232 | missing sanitized payload -> 0.01 credit
+result 1934762 (host 366): exp_minority_game_delay_memory_interaction | elapsed=865.75s | nbytes=33248 | missing sanitized payload -> 0.01 credit
+result 1934763 (host 366): exp_minority_game_delay_memory_interaction | elapsed=909.45s | nbytes=33171 | missing sanitized payload -> 0.01 credit
+result 1934796 (host 366): exp_minority_game_delay_memory_interaction | elapsed=852.29s | nbytes=33251 | missing sanitized payload -> 0.01 credit
+result 1934798 (host 366): exp_minority_game_delay_memory_interaction | elapsed=849.05s | nbytes=33249 | missing sanitized payload -> 0.01 credit
+result 1934799 (host 366): exp_minority_game_delay_memory_interaction | elapsed=873.02s | nbytes=33191 | missing sanitized payload -> 0.01 credit
+result 1934801 (host 366): exp_minority_game_delay_memory_interaction | elapsed=882.86s | nbytes=33258 | missing sanitized payload -> 0.01 credit
+result 1935381 (host 96): exp_minority_game_delay_memory_interaction | elapsed=914.76s | nbytes=34623 | missing sanitized payload -> 0.01 credit
+result 1935809 (host 57): exp_minority_game_delay_memory_interaction | elapsed=873.04s | nbytes=34588 | missing sanitized payload -> 0.01 credit
+result 1935858 (host 74): exp_minority_game_delay_memory_interaction | elapsed=883.76s | nbytes=34631 | missing sanitized payload -> 0.01 credit
+result 1935860 (host 74): exp_minority_game_delay_memory_interaction | elapsed=881.69s | nbytes=34608 | missing sanitized payload -> 0.01 credit
+result 1935866 (host 74): exp_minority_game_delay_memory_interaction | elapsed=881.66s | nbytes=34663 | missing sanitized payload -> 0.01 credit
+result 1935876 (host 74): exp_minority_game_delay_memory_interaction | elapsed=886.92s | nbytes=34611 | missing sanitized payload -> 0.01 credit
+result 1936011 (host 74): exp_minority_game_delay_memory_interaction | elapsed=883.79s | nbytes=34642 | missing sanitized payload -> 0.01 credit
+result 1936014 (host 74): exp_minority_game_delay_memory_interaction | elapsed=885.87s | nbytes=34656 | missing sanitized payload -> 0.01 credit
+result 1936017 (host 74): exp_minority_game_delay_memory_interaction | elapsed=879.69s | nbytes=34632 | missing sanitized payload -> 0.01 credit
+result 1936050 (host 2): exp_minority_game_delay_memory_interaction | elapsed=870.39s | nbytes=34631 | missing sanitized payload -> 0.01 credit
+result 1936135 (host 360): exp_minority_game_delay_memory_interaction | elapsed=858.13s | nbytes=33224 | missing sanitized payload -> 0.01 credit
+result 1936139 (host 360): exp_minority_game_delay_memory_interaction | elapsed=869.76s | nbytes=33237 | missing sanitized payload -> 0.01 credit
+result 1936140 (host 360): exp_minority_game_delay_memory_interaction | elapsed=856.59s | nbytes=33247 | missing sanitized payload -> 0.01 credit
+result 1936158 (host 360): exp_minority_game_delay_memory_interaction | elapsed=864.83s | nbytes=33173 | missing sanitized payload -> 0.01 credit
+result 1936220 (host 96): exp_minority_game_delay_memory_interaction | elapsed=844.94s | nbytes=34643 | missing sanitized payload -> 0.01 credit
+result 1936240 (host 96): exp_minority_game_delay_memory_interaction | elapsed=847.00s | nbytes=34644 | missing sanitized payload -> 0.01 credit
+result 1936280 (host 96): exp_minority_game_delay_memory_interaction | elapsed=873.31s | nbytes=34605 | missing sanitized payload -> 0.01 credit
+result 1936298 (host 96): exp_minority_game_delay_memory_interaction | elapsed=846.98s | nbytes=34643 | missing sanitized payload -> 0.01 credit
+result 1936451 (host 96): exp_hypergraph_pgg_inertia_crossover | elapsed=545.64s | nbytes=12452 | missing sanitized payload -> 0.01 credit
+result 1936527 (host 2): exp_nasch_anticipation_heterogeneity | elapsed=867.46s | nbytes=8323 | missing sanitized payload -> 0.01 credit
+result 1936557 (host 2): exp_nasch_anticipation_heterogeneity | elapsed=870.50s | nbytes=8347 | missing sanitized payload -> 0.01 credit
+result 1936600 (host 107): exp_nasch_anticipation_heterogeneity | elapsed=867.64s | nbytes=8304 | missing sanitized payload -> 0.01 credit
+result 1936653 (host 96): exp_minority_game_delay_memory_interaction | elapsed=849.05s | nbytes=34616 | missing sanitized payload -> 0.01 credit
+result 1936773 (host 2): exp_markov_branching_rescue_correlation | elapsed=846.33s | nbytes=148512 | missing sanitized payload -> 0.01 credit
+result 1936938 (host 360): exp_nasch_anticipation_heterogeneity | elapsed=864.44s | nbytes=7975 | missing sanitized payload -> 0.01 credit
+result 1936948 (host 360): exp_hypergraph_pgg_inertia_crossover | elapsed=546.82s | nbytes=11982 | missing sanitized payload -> 0.01 credit
+result 1936950 (host 360): exp_nasch_anticipation_heterogeneity | elapsed=863.63s | nbytes=7960 | missing sanitized payload -> 0.01 credit
+result 1936963 (host 107): exp_nasch_anticipation_heterogeneity | elapsed=863.66s | nbytes=8306 | missing sanitized payload -> 0.01 credit
+result 1937002 (host 107): exp_hypergraph_pgg_inertia_crossover | elapsed=545.69s | nbytes=12377 | missing sanitized payload -> 0.01 credit
+result 1937674 (host 190): exp_markov_branching_rescue_correlation | elapsed=848.96s | nbytes=148418 | missing sanitized payload -> 0.01 credit
+result 1937679 (host 190): exp_nasch_anticipation_heterogeneity | elapsed=863.04s | nbytes=8312 | missing sanitized payload -> 0.01 credit
+result 1937680 (host 190): exp_hypergraph_pgg_inertia_crossover | elapsed=546.13s | nbytes=12454 | missing sanitized payload -> 0.01 credit
+result 1937684 (host 190): exp_nasch_anticipation_heterogeneity | elapsed=874.69s | nbytes=8203 | missing sanitized payload -> 0.01 credit
+result 1937686 (host 190): exp_minority_game_delay_memory_interaction | elapsed=887.53s | nbytes=34650 | missing sanitized payload -> 0.01 credit
+result 1937687 (host 190): exp_markov_branching_rescue_correlation | elapsed=850.04s | nbytes=148545 | missing sanitized payload -> 0.01 credit
+result 1937688 (host 190): exp_nasch_anticipation_heterogeneity | elapsed=870.59s | nbytes=8278 | missing sanitized payload -> 0.01 credit
+result 1937689 (host 190): exp_minority_game_delay_memory_interaction | elapsed=890.63s | nbytes=34636 | missing sanitized payload -> 0.01 credit
+result 1937690 (host 190): exp_nasch_anticipation_heterogeneity | elapsed=871.71s | nbytes=8262 | missing sanitized payload -> 0.01 credit
+result 1937691 (host 190): exp_nasch_anticipation_heterogeneity | elapsed=871.71s | nbytes=8235 | missing sanitized payload -> 0.01 credit
+result 1937692 (host 190): exp_minority_game_delay_memory_interaction | elapsed=902.58s | nbytes=34673 | missing sanitized payload -> 0.01 credit
+result 1938015 (host 372): exp_hypergraph_pgg_inertia_crossover | elapsed=542.64s | nbytes=11776 | missing sanitized payload -> 0.01 credit
+result 1938029 (host 372): exp_markov_branching_rescue_correlation | elapsed=845.53s | nbytes=142239 | missing sanitized payload -> 0.01 credit
+result 1938031 (host 372): exp_markov_branching_rescue_correlation | elapsed=844.36s | nbytes=142196 | missing sanitized payload -> 0.01 credit
+result 1938032 (host 372): exp_nasch_anticipation_heterogeneity | elapsed=874.17s | nbytes=7968 | missing sanitized payload -> 0.01 credit
+result 1938038 (host 372): exp_markov_branching_rescue_correlation | elapsed=844.52s | nbytes=142172 | missing sanitized payload -> 0.01 credit
+result 1938039 (host 372): exp_minority_game_delay_memory_interaction | elapsed=900.58s | nbytes=33184 | missing sanitized payload -> 0.01 credit
+result 1938040 (host 372): exp_hypergraph_pgg_inertia_crossover | elapsed=543.46s | nbytes=11877 | missing sanitized payload -> 0.01 credit
+result 1938041 (host 372): exp_hypergraph_pgg_inertia_crossover | elapsed=544.46s | nbytes=11829 | missing sanitized payload -> 0.01 credit
+result 1938053 (host 372): exp_hypergraph_pgg_inertia_crossover | elapsed=546.75s | nbytes=11653 | missing sanitized payload -> 0.01 credit
+result 1938054 (host 372): exp_nasch_anticipation_heterogeneity | elapsed=868.76s | nbytes=7949 | missing sanitized payload -> 0.01 credit
+result 1938055 (host 372): exp_nasch_anticipation_heterogeneity | elapsed=880.38s | nbytes=7965 | missing sanitized payload -> 0.01 credit
+result 1938089 (host 372): exp_hypergraph_pgg_inertia_crossover | elapsed=545.61s | nbytes=11803 | missing sanitized payload -> 0.01 credit
+result 1938091 (host 372): exp_nasch_anticipation_heterogeneity | elapsed=879.37s | nbytes=7912 | missing sanitized payload -> 0.01 credit
+result 1938126 (host 96): exp_minority_game_delay_memory_interaction | elapsed=815.99s | nbytes=34619 | missing sanitized payload -> 0.01 credit
+result 1938145 (host 107): exp_nasch_anticipation_heterogeneity | elapsed=868.39s | nbytes=8327 | missing sanitized payload -> 0.01 credit
+result 1938172 (host 96): exp_nasch_anticipation_heterogeneity | elapsed=820.14s | nbytes=8305 | missing sanitized payload -> 0.01 credit
+result 1938192 (host 374): exp_contact_process_crossed_stripe_interaction_gpu_gpu | elapsed=36.57s | nbytes=3035 | missing sanitized payload -> 0.01 credit
+
+Per-user totals:
+user 1: +0.04 credit, total_credit=31358.73
+user 6: +0.16 credit, total_credit=51044.55
+user 22: +0.04 credit, total_credit=2500.01
+user 23: +0.01 credit, total_credit=5685.19
+user 30: +0.01 credit, total_credit=21457.87
+user 31: +0.08 credit, total_credit=8229.69
+user 34: +0.06 credit, total_credit=172.96
+user 35: +0.16 credit, total_credit=932.25
+user 43: +0.12 credit, total_credit=280.28
+user 50: +0.21 credit, total_credit=15.80
+user 55: +0.09 credit, total_credit=503.49
+user 56: +0.12 credit, total_credit=177590.95
+user 72: +0.02 credit, total_credit=550.63
+user 83: +0.07 credit, total_credit=2214.51
+user 88: +0.02 credit, total_credit=18067.17
+user 136: +1.27 credit, total_credit=11860.09
+
+Per-host totals:
+host 2: +0.04 credit, total_credit=708.15
+host 15: +0.08 credit, total_credit=2278.67
+host 16: +0.01 credit, total_credit=5582.62
+host 57: +0.01 credit, total_credit=1581.58
+host 74: +0.16 credit, total_credit=932.35
+host 87: +0.12 credit, total_credit=8600.45
+host 96: +0.09 credit, total_credit=503.54
+host 102: +0.06 credit, total_credit=172.98
+host 107: +0.04 credit, total_credit=491.00
+host 113: +0.02 credit, total_credit=550.41
+host 140: +0.01 credit, total_credit=2854.32
+host 159: +0.02 credit, total_credit=1361.75
+host 190: +0.12 credit, total_credit=280.24
+host 195: +0.02 credit, total_credit=8031.35
+host 230: +0.08 credit, total_credit=4727.69
+host 347: +0.02 credit, total_credit=619.13
+host 349: +0.03 credit, total_credit=69.44
+host 360: +0.07 credit, total_credit=1724.93
+host 366: +0.07 credit, total_credit=15.66
+host 367: +1.27 credit, total_credit=11853.29
+host 372: +0.13 credit, total_credit=0.13
+host 374: +0.01 credit, total_credit=0.01
+
+Stuck/broken tasks cleaned up:
+none
+
+Any bugs found and fixed in experiment scripts:
+none

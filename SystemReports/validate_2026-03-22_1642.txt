@@ -1,0 +1,40 @@
+Axiom validation and credit operational log
+Session time: 2026-03-22 16:42 UTC
+
+Credit status
+- Latest observed credit cron batch: 2026-03-22 16:40:14 UTC
+- Results credited in latest observed batch: 831
+- Total cobblestones credited in latest observed batch: 37395.38
+- Batch composition: CPU 817, GPU 14
+- Remaining uncredited results after batch: 1165120
+- Price table freshness check: fresh at session start (last_updated_unix=1774196116, age about 1460s)
+- Credit cron present in crontab: */5 * * * * python3 /opt/axiom/axiom_credit_cron.py >> /opt/axiom/experiment_session/logs/credit_cron.log 2>&1
+
+Operational notes
+- Credit flow is active. Recent batches were observed at 16:35:06 UTC and 16:40:14 UTC.
+- credit_cron.log contains a lock wait timeout during the user total sync query, but result crediting still completed and logged.
+- No manual credit script run was performed in this session.
+
+Per-host credit summary
+Source: credited result rows touched in the latest observed credit window (UNIX_TIMESTAMP(mod_time) 1774197610 through 1774197613, corresponding to 2026-03-22 16:40:10-16:40:13 UTC).
+
+hostid 487: 5 results, 21527.94 credit
+hostid 544: 5 results, 16562.50 credit
+hostid 22: 4 results, 13546.00 credit
+hostid 437: 3 results, 12644.86 credit
+hostid 486: 2 results, 7369.03 credit
+hostid 17: 3 results, 6204.17 credit
+hostid 485: 1 result, 3649.49 credit
+hostid 18: 1 result, 3382.86 credit
+hostid 19: 2 results, 2936.31 credit
+hostid 105: 2 results, 2707.14 credit
+hostid 16: 2 results, 1324.58 credit
+hostid 23: 2 results, 1321.07 credit
+hostid 398: 33 results, 996.50 credit
+hostid 268: 1 result, 959.76 credit
+hostid 397: 30 results, 926.18 credit
+hostid 339: 93 results, 924.63 credit
+hostid 147: 1 result, 869.78 credit
+hostid 543: 63 results, 766.32 credit
+hostid 497: 24 results, 759.33 credit
+hostid 111: 85 results, 726.86 credit

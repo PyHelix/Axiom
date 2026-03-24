@@ -1,0 +1,74 @@
+Axiom BOINC validation log
+Timestamp (UTC): 2026-03-21 07:24
+Step: Validation & Credit (Step 3 of 17)
+
+Price table status:
+- /opt/axiom/gpu_price_table.json fresh at session start
+- last_updated_unix age: 323 seconds
+- cpu_scale: 5.0196363564419115e-12
+- gpu_scale: 2.6553950402718052e-14
+
+Credit activity verified:
+- credit_cron.log had recent entries before manual intervention
+- crontab entry present: */5 * * * * python3 /opt/axiom/axiom_credit_cron.py >> /opt/axiom/experiment_session/logs/credit_cron.log 2>&1
+
+Results credited this session:
+- session credit window identified via result.mod_time >= 2026-03-21 07:22:32 UTC
+- credited results: 387
+- total granted credit: 10582.53 cobblestones
+
+Manual credit runs executed this session:
+- 2026-03-21 07:22:33 UTC: Credited 270 results, 4171.02 credit (CPU:269 GPU:1)
+- 2026-03-21 07:22:53 UTC: Credited 33 results, 2202.37 credit (CPU:32 GPU:1)
+- 2026-03-21 07:23:05 UTC: Credited 21 results, 306.32 credit (CPU:21 GPU:0)
+- 2026-03-21 07:23:42 UTC: Credited 62 results, 3882.00 credit (CPU:60 GPU:2)
+- 2026-03-21 07:23:44 UTC: Credited 1 result, 20.88 credit (CPU:1 GPU:0)
+
+Per-host credit summary for this session:
+host_id	results	credit
+367	59	3527.56
+22	1	1751.42
+16	2	1016.86
+339	17	351.97
+539	13	328.32
+340	20	281.39
+395	16	244.26
+338	18	231.76
+330	12	222.18
+111	14	213.94
+332	16	202.02
+497	8	185.51
+324	18	180.09
+398	5	176.26
+327	13	160.45
+397	4	147.42
+376	30	144.12
+210	9	140.79
+400	10	130.46
+399	8	128.12
+538	11	114.63
+281	10	89.47
+123	13	87.42
+97	5	83.45
+396	9	78.83
+61	5	72.84
+341	4	49.29
+459	4	41.98
+87	3	40.62
+364	3	34.12
+29	3	33.72
+60	4	19.58
+451	2	19.04
+506	10	13.37
+127	1	11.76
+358	2	9.42
+366	1	6.78
+505	2	5.69
+202	1	2.99
+107	1	2.63
+
+End-of-session live state (UTC query time near 2026-03-21 07:24):
+- uncredited experiment-pattern results still present: 426234
+- orphaned zero-credit rows missing host/workunit join: 424454
+- joinable zero-credit rows with elapsed_time > 0 still present in the live queue: 162
+- note: the queue remained live during this session, so new completed results continued arriving while manual credit passes were running

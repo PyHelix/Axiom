@@ -1,0 +1,70 @@
+Axiom Validation & Credit Report
+Generated: 2026-03-21 22:44 UTC
+Agent step: Validation & Credit (Step 3 of 17)
+
+Credit status
+- Price table fresh: yes
+- Price table last updated: 2026-03-21T22:15:16Z
+- CPU_SCALE: 5.0196363564419115e-12
+- GPU_SCALE: 2.586538701225352e-14
+- Credit cron active: yes
+- Cron entry: */5 * * * * python3 /opt/axiom/axiom_credit_cron.py >> /opt/axiom/experiment_session/logs/credit_cron.log 2>&1
+
+Results credited this session
+- Session window reconstructed from latest completed credit batch
+- Credit batch time: 2026-03-21 22:40:04 UTC
+- Prior batch time: 2026-03-21 22:35:04 UTC
+- Results credited: 373
+- Total cobblestones granted: 62306.82
+- Distinct hosts credited: 44
+- Credit cron log line: 2026-03-21 22:40:04 Credited 373 results, 62306.85 credit (CPU:351 GPU:22)
+
+Queue status
+- Current uncredited experiment-pattern results: 774332
+- Credit is flowing, but backlog remains materially above the >100 threshold.
+
+Per-host credit summary for this session
+hostid=487 results=3 credit=12727.46
+hostid=486 results=3 credit=10901.77
+hostid=485 results=3 credit=10893.70
+hostid=22 results=3 credit=6775.32
+hostid=367 results=59 credit=6562.67
+hostid=18 results=2 credit=3401.74
+hostid=240 results=3 credit=2563.32
+hostid=17 results=1 credit=2052.87
+hostid=249 results=1 credit=968.80
+hostid=268 results=1 credit=955.86
+hostid=497 results=14 credit=540.85
+hostid=339 results=26 credit=441.37
+hostid=338 results=21 credit=344.26
+hostid=332 results=17 credit=311.75
+hostid=327 results=19 credit=310.60
+hostid=376 results=64 credit=309.53
+hostid=395 results=20 credit=298.36
+hostid=330 results=15 credit=284.66
+hostid=520 results=1 credit=268.19
+hostid=324 results=18 credit=261.61
+hostid=539 results=8 credit=228.10
+hostid=97 results=10 credit=177.61
+hostid=159 results=4 credit=107.56
+hostid=85 results=11 credit=84.12
+hostid=61 results=4 credit=71.78
+hostid=123 results=8 credit=61.45
+hostid=60 results=6 credit=48.20
+hostid=29 results=3 credit=43.29
+hostid=398 results=1 credit=42.60
+hostid=364 results=3 credit=40.30
+hostid=397 results=1 credit=35.04
+hostid=396 results=2 credit=31.83
+hostid=202 results=2 credit=24.26
+hostid=400 results=1 credit=18.20
+hostid=358 results=2 credit=16.88
+hostid=210 results=1 credit=16.76
+hostid=127 results=3 credit=14.94
+hostid=534 results=1 credit=14.18
+hostid=456 results=2 credit=13.73
+hostid=107 results=1 credit=9.84
+hostid=394 results=1 credit=9.79
+hostid=493 results=2 credit=7.27
+hostid=451 results=1 credit=7.21
+hostid=134 results=1 credit=7.19
