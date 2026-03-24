@@ -69,3 +69,32 @@ EXPERIMENT: exp_exp_alveolar_surfactant_marangoni_bridge_threshold_gpu (138 tota
   Top fitness: 1.31071e7 (chi=3.2, bw=7.63e-08, N=547), 1.31071e7 (chi=3.2, bw=7.63e-08, N=547), 1.31071e7 (chi=3.2, bw=7.63e-08, N=547)
   Results: The added same-day pass is uniformly supportive, with bridge mass about 0.8776 to 0.8779, surfactant mass about 0.1631 to 0.1634, alveolar balance about 0.998 to 1.000, and edge leak about 0.1222 to 0.1224.
   Conclusion: PRELIMINARY. Bilateral surfactant recirculation still locks the soft mode into a balanced alveolar bridge on every sampled run. The family remains an encouraging ceiling-pinned signal rather than a fully bracketed threshold.
+EXPERIMENT: exp_exp_leaf_vein_areole_hydraulic_bridge_threshold (1333 total results available, 283 you sampled, 27 hosts)
+  Discovered: 2026-03-24 20:05 UTC | Last updated: 2026-03-24
+  Top fitness: 1.6384e6 (xi=0.179999, bw=6.10e-07, N=2048), 1.6384e6 (xi=0.179999, bw=6.10e-07, N=2048), 1.6384e6 (xi=0.179999, bw=6.10e-07, N=2048)
+  Results: Across the sampled same-day frontier, bridge mass stays high at about 0.831 to 0.873 and bilateral balance stays near 0.99, but areole mass remains only about 0.088 to 0.143 with lamina leak about 0.127 to 0.169, so every sampled run misses the areole-core criterion and has support fraction 0.00.
+  Conclusion: REJECTED. Stronger minor-vein coupling does not pull the dominant hydraulic mode into the proposed balanced vein-areole-vein bridge on today's frontier. The mode remains too vein-dominated and underfilled in the areole, even when the deepest N=2048 bracket is extremely tight.
+
+EXPERIMENT: exp_exp_microbial_mat_redox_lamina_delocalization_threshold (1345 total results available, 283 you sampled, 27 hosts)
+  Discovered: 2026-03-24 20:05 UTC | Last updated: 2026-03-24
+  Top fitness: 3.27678e6 (alpha=0.000000, bw=3.05e-07, N=1024), 3.27678e6 (alpha=0.000000, bw=3.05e-07, N=1024), 3.27678e6 (alpha=0.000000, bw=3.05e-07, N=1024)
+  Results: The same-day frontier is uniformly delocalized from the top slice through the deepest N=2048 runs, with participation ratio about 0.939 to 0.942, interface mass about 0.186 to 0.189, top and bottom masses each about 0.404 to 0.410, essentially zero edge leak, and support fraction 1.00 throughout at alpha very near zero.
+  Conclusion: CONFIRMED. The dominant transport mode is already cleanly delocalized across the oxic-anoxic interface on today's deepest frontier, so the threshold has effectively collapsed to the low edge of the scan. This looks like a robust near-zero delocalization threshold rather than a fragile finite-size crossover.
+
+EXPERIMENT: exp_exp_smtz_cryptic_sulfur_bridge_threshold_gpu (34 total results available, 34 you sampled, 14 hosts)
+  Discovered: 2026-03-24 20:05 UTC | Last updated: 2026-03-24
+  Top fitness: 1.0e15 (chi=3.2, bw=0, N=512), 1.0e15 (chi=3.2, bw=0, N=766), 1.0e15 (chi=3.2, bw=0, N=547)
+  Results: Every sampled GPU run supports the bridge, with bridge mass about 1.048 to 1.053, methane-core mass about 0.173 to 0.175, sulfate balance about 0.997 to 1.000, gap ratio about 5.79 to 8.57, and effectively zero distal leak across N=512 to 766.
+  Conclusion: PRELIMINARY. Bilateral sulfur-mediated coupling is already producing an unusually clean SMTZ bridge on the first same-day GPU frontier. The scan is fully pinned at the high-coupling ceiling, so the bridge looks real but the threshold itself is not yet bracketed.
+
+2026-03-24 GPU DESIGN NOTES
+- Added exp_firn_ice_lens_vapor_breakdown_threshold_gpu.py after searches for "firn air layering barometric pumping model", "firn ice layers gas diffusion model", and "melt layers firn gas transport permeability"; adjacent literature covers firn-air transport, layering, and permeability barriers from ice lenses, but not a dense GPU iterative-deepening threshold map for unilateral ice-lens asymmetry breaking a balanced vapor-corridor soft mode.
+- Added exp_marine_snow_gel_pore_bridge_threshold_gpu.py after searches for "marine snow oxygen diffusion aggregate model", "marine snow porosity diffusion model", and "marine aggregate pore model oxygen"; adjacent literature covers particle porosity, oxygen transport, and microbial colonization in marine aggregates, but not a dense GPU iterative-deepening threshold map for balanced gel-pore bridge capture in a disordered operator.
+- These additions deliberately diversify away from the current ceiling-pinned tissue-bridge cluster by adding one cryosphere breakdown family and one ocean-biogeochemistry bridge family.
+
+2026-03-24 CPU DESIGN NOTES
+- Retired active CPU families `exp_estuarine_pycnocline_saltwedge_bridge_threshold` and `exp_subsea_permafrost_talik_salinity_bridge_threshold` as INCONCLUSIVE after 11.7K and 8.4K results respectively; both still show finite-size or borderline deep-frontier behavior without a stable large-N threshold.
+- Added exp_leaf_vein_areole_hydraulic_bridge_threshold.py after searches for `"leaf hydraulic" network model minor veins areoles` and `"leaf venation" hydraulic model areole minor vein`; adjacent literature covers venation architecture and spatially explicit leaf hydraulics, but not a dense iterative-deepening eigensolve threshold map for a bilateral vein/areole bridge mode.
+- Hypothesis: stronger minor-vein coupling can shift the dominant hydraulic mode from outer-lamina pinning into a balanced vein/areole/vein bridge at finite xi.
+- Added exp_microbial_mat_redox_lamina_delocalization_threshold.py after searches for `"microbial mat" redox stratification model diffusion oxygen sulfide` and `"microbial mat" oxygen sulfide diffusion model stratified`; adjacent literature covers reactive transport, oxygen/sulfide profiles, and long-range extracellular electron transfer, but not a dense iterative-deepening eigensolve threshold map for interface delocalization across oxic-anoxic laminae.
+- Hypothesis: stronger cross-lamina electron-shuttle coupling can delocalize the leading transport mode across the microbial-mat redox interface instead of leaving it pinned to one layer.
