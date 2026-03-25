@@ -160,3 +160,63 @@ EXPERIMENT: exp_exp_smtz_cryptic_sulfur_bridge_threshold_gpu (113 total results 
 - Added exp_hall_thruster_annulus_sheath_bridge_threshold_gpu.py after searches for `"Hall thruster" channel wall sheath transport model paper`, `"Hall thruster" annular discharge channel model wall sheath`, and `"Hall thruster" cross-field transport sheath wall model`; adjacent literature covers Hall-thruster wall sheaths, near-wall conductivity, plume/channel coupling, and nested-channel designs, but I did not find a dense GPU iterative-deepening eigensolve threshold map for balanced inner-wall / sheath-core / outer-wall soft-mode capture in a disordered symmetric operator.
 - Hypothesis: stronger annulus/sheath coupling can pull the softest Hall-thruster mode out of one-wall pinning and into a balanced inner-wall / channel / outer-wall bridge at finite kappa.
 - This addition diversifies the GPU queue toward electric-propulsion plasma transport while keeping the proven large-N cupy eigensolve threshold workflow.
+2026-03-25 GPU DESIGN NOTES
+- Added exp_tokamak_pedestal_sol_filament_bridge_threshold_gpu.py after searches for `"tokamak" pedestal separatrix filament transport model paper`, `"edge localized mode" pedestal filament coupling model scrape-off layer paper`, and `"tokamak" filament pedestal scrape-off layer transport paper`; adjacent literature covers multiscale pedestal equations, transport-limited pedestals, and SOL filament transport, but I did not find a dense GPU iterative-deepening eigensolve threshold map for balanced pedestal / filament-layer / pedestal soft-mode capture in a disordered symmetric operator.
+- Hypothesis: stronger filament-mediated cross-separatrix coupling can pull the softest tokamak edge mode out of one-shoulder pedestal pinning and into a balanced pedestal / SOL-filament / pedestal corridor at finite kappa.
+- Added exp_magnetopause_cusp_currentsheet_bridge_threshold_gpu.py after searches for `"magnetopause cusp" plasma transport model paper current sheet`, `"magnetopause" cusp reconnection current sheet model paper`, and `"dayside magnetopause" cusp reconnection plasma transport paper`; adjacent literature covers cusp ion dispersions, dayside reconnection, and asymmetric magnetopause current sheets, but I did not find a dense GPU iterative-deepening eigensolve threshold map for balanced lobe / cusp-sheet / lobe capture in a disordered symmetric operator.
+- Hypothesis: stronger cusp-sheet coupling can pull the softest dayside magnetopause mode out of one-flank localization and into a balanced northern-lobe / cusp-sheet / southern-lobe bridge at finite beta.
+- These additions deliberately diversify the active GPU frontier toward fusion-edge and space-plasma transport rather than extending the current porous-media bridge cluster.
+2026-03-25 CPU DESIGN NOTES
+- Active CPU queue still has seven preliminary bridge families; none met the retirement bar in the current findings snapshot, so no active CPU family was retired this pass.
+- Added `exp_coral_polyp_coenosarc_bridge_threshold.py` after searches for `"coral colony" coenosarc model paper`, `"coenosarc" coral transport model`, and `"coral tissue integration" coenosarc model`. Existing literature covers coral colony anatomy, coenosarc connectivity, and physiological integration, but I did not find a dense iterative-deepening eigensolve threshold map for finite-N balanced polyp / coenosarc / polyp bridge capture in a disordered operator.
+- Hypothesis: stronger coenosarc coupling can pull the softest colony mode out of one-polyp pinning and into a balanced polyp / coenosarc / polyp bridge at finite eta.
+- Added `exp_platelet_fibrin_clot_bridge_threshold.py` after searches for `"thrombus" fibrin network numerical model paper`, `"fibrin platelet" computational model clot architecture paper`, and `"platelet fibrin clot" multiscale model paper`. Existing literature covers clot microstructure, fibrin mechanics, and platelet-fibrin multiscale simulations, but I did not find a dense iterative-deepening eigensolve threshold map for finite-N balanced platelet / fibrin / platelet bridge capture in a disordered operator.
+- Hypothesis: stronger fibrin cross-linking can pull the softest clot mode out of unilateral platelet pinning and into a balanced platelet / fibrin / platelet bridge at finite kappa.
+
+EXPERIMENT: exp_band_matrix_wigner_poisson_gpu_gpu (153 total results available, 140 you sampled, 13 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 1.0 (alpha_c=0.640039, bw=0.00e+00, N=1536), 1.0 (alpha_c=0.609106, bw=2.43e-04, N=1536), 1.0 (alpha_c=0.609045, bw=0.00e+00, N=1536)
+  Results: Across the 140-result same-day sample, the leading large-N runs consistently place the mobility threshold at finite alpha_c rather than drifting toward zero: the N=1536 frontier repeatedly lands near alpha_c about 0.48 to 0.61, with narrow brackets and implied bandwidths typically of order 1e2. The first payload value is a constant completion flag rather than a discriminating fitness score, so the evidence comes from the converged alpha brackets themselves; those brackets remain stably away from the Poisson edge throughout the sampled frontier.
+  Conclusion: CONFIRMED. Today's same-day GPU frontier supports a finite Wigner-Poisson transition scale in this band-matrix ensemble, with repeated high-N alpha_c estimates clustering near O(0.5) instead of collapsing toward the localized Poisson limit.
+
+EXPERIMENT: exp_exp_coral_polyp_coenosarc_bridge_threshold (82 total results available, 80 you sampled, 6 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 3035105.2, 2565680.9, 2304601.3
+  Results: The same-day CPU slice shows a robust central coenosarc occupancy but not yet a fully settled bilateral bridge threshold. Bridge mass stays high at about 0.957 to 0.979, coenosarc mass runs about 0.226 to 0.541, and seawater leak remains tiny, but polyp balance still swings widely from roughly 0.10 up to nearly 1.00, with supported and unsupported cases interleaved even on tight brackets.
+  Conclusion: PRELIMINARY. Stronger coenosarc coupling clearly builds a central coral-colony bridge state, but today's frontier has not yet converged to a stable balanced polyp / coenosarc / polyp threshold because bilateral support remains inconsistent across the top brackets.
+
+EXPERIMENT: exp_exp_platelet_fibrin_clot_bridge_threshold (77 total results available, 75 you sampled, 6 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 1638400.0, 1638400.0, 1638400.0
+  Results: Across the sampled same-day CPU frontier, bridge mass stays tightly high at about 0.960 to 0.964, fibrin mass about 0.44 to 0.54, and plasma leak remains negligible. The unresolved variable is bilateral platelet loading: platelet balance ranges from strongly one-sided to almost perfectly symmetric, roughly 0.65 up to 0.97 in the top-ranked slice and lower elsewhere, with supported and unsupported cases both still present at N=2048.
+  Conclusion: PRELIMINARY. Stronger fibrin coupling does produce a real platelet / fibrin / platelet bridge regime, but today's frontier does not yet fix a clean balanced threshold because bilateral platelet support still fluctuates across the best same-day runs.
+
+EXPERIMENT: exp_exp_coronal_current_sheet_footpoint_bridge_threshold_gpu (105 total results available, 100 you sampled, 20 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 13107100.0, 13107100.0, 13107100.0
+  Results: The sampled same-day GPU frontier is uniformly bridge-supported and unusually clean: bridge mass stays about 0.838 to 0.841, current-sheet mass about 0.141 to 0.142, footpoint balance is essentially perfect at about 0.999, arcade leak is pinned at zero, and support_fraction remains 1.0 throughout. Gap ratios are large, usually about 5.3 to 8.2, with no visible fallback to one-footpoint pinning.
+  Conclusion: CONFIRMED. Stronger footpoint-to-sheet coupling robustly captures the soft coronal mode into a balanced footpoint / current-sheet / footpoint bridge on today's GPU frontier.
+
+EXPERIMENT: exp_exp_hall_thruster_annulus_sheath_bridge_threshold_gpu (66 total results available, 65 you sampled, 15 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 13107099.97, 13107099.97, 13107099.97
+  Results: The same-day GPU results are nearly perfectly uniform at the frontier: bridge mass runs about 0.838 to 0.841, channel mass about 0.142, inner/outer wall balance about 0.998 to 1.000, plume leak is zero, and support_fraction is 1.0 across the sampled top slice. Gap ratios remain large, generally around 5.7 to 5.9 and sometimes higher, with no sign of reversion to one-wall localization.
+  Conclusion: CONFIRMED. Stronger annulus-sheath coupling robustly captures the soft Hall-thruster mode into a balanced inner-wall / channel / outer-wall bridge on today's GPU frontier.
+
+EXPERIMENT: exp_exp_magnetopause_cusp_currentsheet_bridge_threshold_gpu (59 total results available, 55 you sampled, 15 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 13107099.97, 13107099.97, 13107099.97
+  Results: The same-day GPU frontier shows a real bridge state with bridge mass about 0.865 to 0.870, cusp-sheet mass about 0.171 to 0.173, nearly perfect north/south lobe balance, and zero magnetosheath leak. The remaining weakness is internal sheet symmetry: sheet_balance sits persistently around 0.769 to 0.777 rather than reaching the intended higher-symmetry window, even though support_fraction in the payload is 1.0.
+  Conclusion: PRELIMINARY. The lobe / cusp-sheet / lobe bridge is physically present on today's GPU frontier, but the current-sheet symmetry metric still undershoots the target window, so the threshold is not yet fully settled.
+
+EXPERIMENT: exp_exp_tokamak_pedestal_sol_filament_bridge_threshold_gpu (54 total results available, 50 you sampled, 14 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 13107099.97, 13107099.97, 13107099.97
+  Results: The sampled same-day GPU slice shows a strong bridge regime with bridge mass about 0.861 to 0.867, filament mass about 0.175 to 0.177, pedestal balance near 1.00, and divertor leak pinned at zero. As with the magnetopause family, the limiting metric is the inner corridor symmetry: separatrix_balance remains only about 0.769 to 0.777 even while support_fraction stays 1.0 throughout the top frontier.
+  Conclusion: PRELIMINARY. Stronger filament-mediated edge coupling produces a genuine pedestal / SOL-filament / pedestal bridge, but today's frontier still falls short of a clean threshold because separatrix symmetry remains below the intended target band.
+
+EXPERIMENT: exp_exp_subduction_melange_channel_softmode_threshold_gpu (35 total results available, 35 you sampled, 10 hosts)
+  Discovered: 2026-03-25 21:43 UTC | Last updated: 2026-03-25
+  Top fitness: 1638400.000858307, 1638400.000858307, 1638400.000858307
+  Results: All same-day results were sampled here, and they show a substantial central melange occupancy with bridge mass about 0.959 to 0.970, melange mass about 0.35 to 0.54, and forearc leak remaining tiny. The unstable component is channel symmetry: tectonic balance can be strong, but channel_balance still ranges roughly 0.41 to 0.80 and supported and unsupported cases remain mixed even on the deeper same-day brackets.
+  Conclusion: PRELIMINARY. Stronger slab-melange-wedge coupling does create a real subduction-channel bridge regime, but today's full same-day frontier has not yet converged to a stable balanced threshold because channel symmetry remains inconsistent.
