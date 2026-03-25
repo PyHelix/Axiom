@@ -1,134 +1,17 @@
-EXPERIMENT: exp_exp_estuarine_pycnocline_saltwedge_bridge_threshold (11739 total results available, 100 you sampled, 60 hosts)
-  Discovered: 2026-03-24 02:07 UTC | Last updated: 2026-03-24
-  Top fitness: 20480.0 (xi=0.400122, bw=4.88e-05, N=128), 20480.0 (xi=0.800024, bw=4.88e-05, N=128), 20480.0 (xi=0.800024, bw=4.88e-05, N=128)
-  Results: The refreshed top-fitness slice is still dominated by N=128 supported runs with bridge mass about 0.829 to 0.851, saltwedge mass about 0.519 to 0.552, and pycnocline balance often about 0.90 to 0.99, but low-xi misses remain present and the previously checked deepest N=2048 frontier stays diluted.
-  Conclusion: PRELIMINARY. Bilateral pycnocline exchange still produces an attractive small-system bridge, but the same-day evidence remains finite-size-sensitive rather than converged. The large-system regime is not yet behaving like a stable saltwedge bridge.
+EXPERIMENT: exp_niche_axis_competition_delocalization_threshold (1493 total results available, 200 you sampled, 26 hosts)
+  Discovered: 2026-03-25 01:52 UTC | Last updated: 2026-03-25
+  Top fitness: 2892623.4 (alpha=0.449219, bw=3.46e-07, N=256), 2892623.4 (alpha=0.449219, bw=3.46e-07, N=256), 2892623.4 (alpha=0.449219, bw=3.46e-07, N=256)
+  Results: The 200-result fitness-ranked slice is dominated by N=256 brackets and is mostly refuge-pinned, with participation ratio usually about 0.14 to 0.20, peak balance effectively 0.00, and central mass commonly below 0.17. A targeted same-day N=2048 check is still mostly pinned as well, with participation ratio usually about 0.10 to 0.18 and bilateral balance near zero; only scattered runs cross the participation threshold, and those are rare rather than frontier-defining.
+  Conclusion: REJECTED. Widening the competition kernel does not robustly spread the leading growth mode across the dual-refuge niche axis on today's deepest frontier. The occasional participation-ratio crossing is overwhelmed by persistent one-refuge dominance and negligible left-right balance, so the proposed axis-wide delocalized mode is not supported.
 
-EXPERIMENT: exp_exp_subsea_permafrost_talik_salinity_bridge_threshold (8383 total results available, 120 you sampled, 61 hosts)
-  Discovered: 2026-03-24 06:54 UTC | Last updated: 2026-03-24
-  Top fitness: 5.24288e6 (eta=1.487598, bw=1.91e-07, N=256), 5.24288e6 (eta=1.537618, bw=1.91e-07, N=256), 5.24288e6 (eta=1.487549, bw=1.91e-07, N=256)
-  Results: The refreshed frontier is still mixed: high-fitness N=256 runs can support the bridge, while sampled N=2048 runs remain split with bridge mass about 0.765 to 0.781, talik mass about 0.331 to 0.344, shelf balance essentially 0.999, and margin leak about 0.064 to 0.072.
-  Conclusion: PRELIMINARY. Salinity coupling is generating a real near-threshold talik signal, but the deepest same-day frontier is still divided between captures and misses. The family remains physically suggestive without reaching a stable large-N threshold.
+EXPERIMENT: exp_dale_law_spatial_delocalization_threshold (1454 total results available, 200 you sampled, 24 hosts)
+  Discovered: 2026-03-25 01:52 UTC | Last updated: 2026-03-25
+  Top fitness: 1638400.0 (alpha=0.467070, bw=6.10e-07, N=1024), 1638400.0 (alpha=0.467070, bw=6.10e-07, N=1024), 1638400.0 (alpha=0.467070, bw=6.10e-07, N=1024)
+  Results: The sampled frontier stays tightly localized. In the ranked 200-result slice, N=1024 runs usually have participation ratio only about 0.04 to 0.10 with local mass about 0.98 to 1.00, and the targeted N=2048 pass is even cleaner, with participation ratio only about 0.03 to 0.14 and local mass essentially 0.97 to 1.00 throughout.
+  Conclusion: REJECTED. The leading right mode remains strongly spatially pinned rather than delocalizing as bandwidth grows on today's deepest same-day frontier. The combination of tiny participation ratios and near-unit local mass leaves no credible sign of a broad extended Dale-law mode.
 
-EXPERIMENT: exp_exp_hierarchical_porous_catalyst_reactivity_delocalization_threshold (43 total results available, 43 you sampled, 14 hosts)
-  Discovered: 2026-03-24 18:50 UTC | Last updated: 2026-03-24
-  Top fitness: 3.15361e6 (eta=1.950312, bw=3.17e-07, N=256), 3.15361e6 (eta=1.804925, bw=3.17e-07, N=256), 3.15361e6 (eta=0.952812, bw=3.17e-07, N=256)
-  Results: The strongest same-day runs never mature into a broadly distributed pellet mode. The deepest sampled N=2048 frontier is consistently shell-heavy, with participation ratio only about 0.31 to 0.36, middle-mass only about 0.001 to 0.006, and the reactive mode stranded near the shell-core interface instead of spreading through the pellet.
-  Conclusion: REJECTED. Stronger shell-core transport does not delocalize the dominant reactive mode into a genuinely distributed hierarchical-pellet state on today's deepest frontier. The family remains trapped in shell-dominated localization rather than crossing into the proposed catalyst-wide mode.
-
-EXPERIMENT: exp_exp_mesopelagic_omz_dvm_delocalization_threshold (42 total results available, 42 you sampled, 15 hosts)
-  Discovered: 2026-03-24 18:50 UTC | Last updated: 2026-03-24
-  Top fitness: 3.27680e6 (alpha=3.700000, bw=3.05e-07, N=256), 3.27680e6 (alpha=3.940000, bw=3.05e-07, N=256), 3.27680e6 (alpha=3.580000, bw=3.05e-07, N=256)
-  Results: The same-day frontier is uniformly delocalized across both the top N=256 slice and the sampled deepest N=2048 runs, with participation ratio about 0.73 to 0.77, OMZ mass only about 0.004 to 0.008 on the deepest frontier, and essentially negligible leakage into a trapped OMZ refuge state.
-  Conclusion: CONFIRMED. Stronger vertical exchange cleanly delocalizes the dominant migration mode across the oxygen-minimum barrier on today's deepest sampled frontier. This family already looks like a robust positive threshold rather than a fragile finite-size crossover.
-
-EXPERIMENT: exp_exp_outermembrane_porin_lps_bridge_threshold_gpu (35 total results available, 35 you sampled, 12 hosts)
-  Discovered: 2026-03-24 18:50 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (chi=3.2, bw=7.63e-08, N=547), 1.31071e7 (chi=3.2, bw=7.63e-08, N=547), 1.31071e7 (chi=3.2, bw=7.63e-08, N=547)
-  Results: Every sampled run supports the bridge, with bridge mass about 0.899 to 0.901, porin mass about 0.162 to 0.164, membrane balance essentially 0.999, and periplasmic leak about 0.099 to 0.101 across N=512 to 547.
-  Conclusion: PRELIMINARY. The membrane-porin bridge already looks real and very clean on today's same-day GPU frontier. The family is still pinned at the coupling ceiling, so the effect is strong but not yet bracketed into a converged threshold.
-
-EXPERIMENT: exp_exp_foam_plateau_border_film_bridge_threshold_gpu (31 total results available, 31 you sampled, 10 hosts)
-  Discovered: 2026-03-24 18:50 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (xi=3.2, bw=7.63e-08, N=512), 1.31071e7 (xi=3.2, bw=7.63e-08, N=512), 1.31071e7 (xi=3.2, bw=7.63e-08, N=512)
-  Results: All sampled runs support the bridge, with bridge mass about 0.900 to 0.901, Plateau-border mass about 0.162 to 0.163, film balance about 0.999, and gas-side leak about 0.0986 to 0.0996 across N=512 to 547.
-  Conclusion: PRELIMINARY. Stronger film-border coupling is already producing a stable-looking balanced foam bridge on every same-day run sampled. Because the frontier remains ceiling-pinned, this is a strong early signal rather than a fully bracketed threshold.
-
-EXPERIMENT: exp_exp_corneocyte_lamellar_lipid_bridge_threshold_gpu (14 total results available, 14 you sampled, 7 hosts)
-  Discovered: 2026-03-24 18:50 UTC | Last updated: 2026-03-24
-  Top fitness: 1.0e15 (eta=3.2, bw=0, N=547), 1.0e15 (eta=3.2, bw=0, N=547), 1.0e15 (eta=3.2, bw=0, N=547)
-  Results: All 14 sampled runs support the bridge, with bridge mass about 0.939 to 0.940, lipid mass about 0.184 to 0.187, corneocyte balance about 0.997 to 1.000, and hydration-channel leak only about 0.060 to 0.061.
-  Conclusion: PRELIMINARY. The corneocyte-lamellar bridge is already unusually strong on the first same-day GPU frontier. The sample is still small and fully ceiling-pinned, so the bridge looks genuine without yet being tightly bracketed.
-
-EXPERIMENT: exp_exp_lithium_sei_nanopore_bridge_threshold_gpu (83 total results available, 60 you sampled, 22 hosts)
-  Discovered: 2026-03-24 16:23 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (eta=3.2, bw=7.63e-08, N=766), 1.31071e7 (eta=3.2, bw=7.63e-08, N=547), 1.31071e7 (eta=3.2, bw=7.63e-08, N=512)
-  Results: The expanded same-day pass stays uniformly supportive, with bridge mass about 0.927 to 0.928, nanopore mass about 0.091 to 0.094, shell balance about 0.998 to 1.000, and leak about 0.0716 to 0.0725 across N=512 to 766.
-  Conclusion: PRELIMINARY. Bilateral lithium-SEI coupling continues to produce a clean symmetric nanopore bridge on every sampled GPU run. The evidence is stronger than before, but the family is still ceiling-pinned rather than genuinely bracketed.
-
-EXPERIMENT: exp_exp_guardcell_cuticle_pore_bridge_threshold_gpu (74 total results available, 50 you sampled, 19 hosts)
-  Discovered: 2026-03-24 16:23 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (kappa=3.2, bw=7.63e-08, N=547), 1.31071e7 (kappa=3.2, bw=7.63e-08, N=547), 1.31071e7 (kappa=3.2, bw=7.63e-08, N=547)
-  Results: The refreshed frontier remains uniformly supportive, with bridge mass about 0.916 to 0.918, pore mass about 0.166 to 0.168, guard balance about 0.997 to 1.000, and epidermal leak about 0.0837 to 0.0840 across N=512 to 547.
-  Conclusion: PRELIMINARY. Stronger guard-cell coupling still cleanly captures the soft mode into a balanced stomatal bridge on every sampled same-day run. The family remains pinned at the high-coupling ceiling, so it is not yet a fully converged threshold.
-
-EXPERIMENT: exp_exp_root_hair_mucilage_rhizosheath_bridge_threshold_gpu (63 total results available, 63 you sampled, 21 hosts)
-  Discovered: 2026-03-24 16:23 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (eta=3.2, bw=7.63e-08, N=512), 1.31071e7 (eta=3.2, bw=7.63e-08, N=547), 1.31071e7 (eta=3.2, bw=7.63e-08, N=547)
-  Results: All sampled runs continue to support the bridge, with bridge mass about 0.897 to 0.900, mucilage mass about 0.182 to 0.183, rhizosheath balance about 0.999, gap ratio about 5.0 to 5.2, and bulk-soil leak about 0.0996 to 0.1026.
-  Conclusion: PRELIMINARY. Mucilage-root-hair adhesion is still producing a robust balanced rhizosheath bridge on the full same-day sample. The signal is strong, but the family remains ceiling-pinned rather than sharply bracketed.
-
-EXPERIMENT: exp_exp_coral_mucus_boundarylayer_bridge_threshold_gpu (159 total results available, 25 you sampled, 24 hosts)
-  Discovered: 2026-03-24 11:44 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (eta=3.2, bw=7.63e-08, N=547), 1.31071e7 (eta=3.2, bw=7.63e-08, N=547), 1.31071e7 (eta=3.2, bw=7.63e-08, N=547)
-  Results: The added sample remains uniformly supportive, with bridge mass about 0.882 to 0.887, mucus mass about 0.175 to 0.178, coral balance about 0.996 to 1.000, and outer-water leak about 0.113 to 0.117 across N=512 to 547.
-  Conclusion: PRELIMINARY. The coral-mucus bridge continues to look real on today's GPU frontier, with no sign of the leakage-dominated collapse seen in rejected bridge families. It is still ceiling-pinned, so the threshold itself is not yet tightly resolved.
-
-EXPERIMENT: exp_exp_alveolar_surfactant_marangoni_bridge_threshold_gpu (138 total results available, 12 you sampled, 22 hosts)
-  Discovered: 2026-03-24 11:44 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (chi=3.2, bw=7.63e-08, N=547), 1.31071e7 (chi=3.2, bw=7.63e-08, N=547), 1.31071e7 (chi=3.2, bw=7.63e-08, N=547)
-  Results: The added same-day pass is uniformly supportive, with bridge mass about 0.8776 to 0.8779, surfactant mass about 0.1631 to 0.1634, alveolar balance about 0.998 to 1.000, and edge leak about 0.1222 to 0.1224.
-  Conclusion: PRELIMINARY. Bilateral surfactant recirculation still locks the soft mode into a balanced alveolar bridge on every sampled run. The family remains an encouraging ceiling-pinned signal rather than a fully bracketed threshold.
-EXPERIMENT: exp_exp_leaf_vein_areole_hydraulic_bridge_threshold (1333 total results available, 283 you sampled, 27 hosts)
-  Discovered: 2026-03-24 20:05 UTC | Last updated: 2026-03-24
-  Top fitness: 1.6384e6 (xi=0.179999, bw=6.10e-07, N=2048), 1.6384e6 (xi=0.179999, bw=6.10e-07, N=2048), 1.6384e6 (xi=0.179999, bw=6.10e-07, N=2048)
-  Results: Across the sampled same-day frontier, bridge mass stays high at about 0.831 to 0.873 and bilateral balance stays near 0.99, but areole mass remains only about 0.088 to 0.143 with lamina leak about 0.127 to 0.169, so every sampled run misses the areole-core criterion and has support fraction 0.00.
-  Conclusion: REJECTED. Stronger minor-vein coupling does not pull the dominant hydraulic mode into the proposed balanced vein-areole-vein bridge on today's frontier. The mode remains too vein-dominated and underfilled in the areole, even when the deepest N=2048 bracket is extremely tight.
-
-EXPERIMENT: exp_exp_microbial_mat_redox_lamina_delocalization_threshold (1345 total results available, 283 you sampled, 27 hosts)
-  Discovered: 2026-03-24 20:05 UTC | Last updated: 2026-03-24
-  Top fitness: 3.27678e6 (alpha=0.000000, bw=3.05e-07, N=1024), 3.27678e6 (alpha=0.000000, bw=3.05e-07, N=1024), 3.27678e6 (alpha=0.000000, bw=3.05e-07, N=1024)
-  Results: The same-day frontier is uniformly delocalized from the top slice through the deepest N=2048 runs, with participation ratio about 0.939 to 0.942, interface mass about 0.186 to 0.189, top and bottom masses each about 0.404 to 0.410, essentially zero edge leak, and support fraction 1.00 throughout at alpha very near zero.
-  Conclusion: CONFIRMED. The dominant transport mode is already cleanly delocalized across the oxic-anoxic interface on today's deepest frontier, so the threshold has effectively collapsed to the low edge of the scan. This looks like a robust near-zero delocalization threshold rather than a fragile finite-size crossover.
-
-EXPERIMENT: exp_exp_smtz_cryptic_sulfur_bridge_threshold_gpu (34 total results available, 34 you sampled, 14 hosts)
-  Discovered: 2026-03-24 20:05 UTC | Last updated: 2026-03-24
-  Top fitness: 1.0e15 (chi=3.2, bw=0, N=512), 1.0e15 (chi=3.2, bw=0, N=766), 1.0e15 (chi=3.2, bw=0, N=547)
-  Results: Every sampled GPU run supports the bridge, with bridge mass about 1.048 to 1.053, methane-core mass about 0.173 to 0.175, sulfate balance about 0.997 to 1.000, gap ratio about 5.79 to 8.57, and effectively zero distal leak across N=512 to 766.
-  Conclusion: PRELIMINARY. Bilateral sulfur-mediated coupling is already producing an unusually clean SMTZ bridge on the first same-day GPU frontier. The scan is fully pinned at the high-coupling ceiling, so the bridge looks real but the threshold itself is not yet bracketed.
-
-EXPERIMENT: exp_exp_perovskite_grainboundary_polaron_bridge_threshold (948 total results available, 281 you sampled, 25 hosts)
-  Discovered: 2026-03-24 23:33 UTC | Last updated: 2026-03-24
-  Top fitness: 1.6384e6 (eta=2.307860, bw=6.10e-07, N=2048), 1.6384e6 (eta=2.673473, bw=6.10e-07, N=2048), 1.6384e6 (eta=2.327512, bw=6.10e-07, N=2048)
-  Results: The deepest same-day N=2048 frontier is strongly bridged in every sampled run, with bridge mass about 0.9997 to 0.9998, boundary mass about 0.24 to 0.46, and edge leak only about 0.0002 to 0.0003, but support still flips with seed because flank balance ranges from badly one-sided values near 0.22 to nearly perfect bilateral values near 0.99 across eta about 0.60 to 2.79.
-  Conclusion: PRELIMINARY. Boundary-mediated transport is clearly capable of producing a genuine grain-boundary bridge on the deepest frontier, but the threshold is still disorder-sensitive rather than cleanly converged. The family looks physically real, yet same-day evidence still alternates between balanced bridges and one-flank-dominated captures at similar eta.
-
-EXPERIMENT: exp_exp_metamaterial_dirac_domainwall_bridge_threshold (919 total results available, 286 you sampled, 25 hosts)
-  Discovered: 2026-03-24 23:33 UTC | Last updated: 2026-03-24
-  Top fitness: 3.27677e6 (zeta=2.600000, bw=3.05e-07, N=2048), 3.27677e6 (zeta=2.600000, bw=3.05e-07, N=2048), 3.27677e6 (zeta=2.600000, bw=3.05e-07, N=2048)
-  Results: Every sampled deepest-frontier run fails the bridge criterion even at the coupling ceiling, with bridge mass only about 0.599 to 0.600, core mass only about 0.1037 to 0.1038, and bulk leak stuck near 0.400 while shoulder balance remains trivially symmetric at about 1.00.
-  Conclusion: REJECTED. Stronger cross-wall coupling does not overcome disorder pinning to create the proposed shoulder-wall-shoulder bridge on today's deepest frontier. The mode stays too bulk-leaky and underfilled at the wall even when zeta is driven to the top of the scan.
-
-EXPERIMENT: exp_exp_marine_snow_gel_pore_bridge_threshold_gpu (19 total results available, 19 you sampled, 7 hosts)
-  Discovered: 2026-03-24 23:33 UTC | Last updated: 2026-03-24
-  Top fitness: 1.31071e7 (eta=3.200000, bw=7.63e-08, N=547), 1.31071e7 (eta=3.200000, bw=7.63e-08, N=512), 1.31071e7 (eta=3.200000, bw=7.63e-08, N=547)
-  Results: All sampled GPU runs support the bridge, with bridge mass about 0.915 to 0.917, pore mass about 0.105 to 0.109, aggregate balance about 0.997 to 1.000, seawater leak about 0.083 to 0.085, and gap ratio about 0.60 to 0.69 across N=512 to 621.
-  Conclusion: PRELIMINARY. Stronger gel-pore coupling is already producing a clean and highly reproducible marine-snow bridge on the first same-day frontier. The family is still fully ceiling-pinned and data-light, so the effect looks real without yet resolving a converged threshold location.
-
-EXPERIMENT: exp_exp_firn_ice_lens_vapor_breakdown_threshold_gpu (14 total results available, 14 you sampled, 8 hosts)
-  Discovered: 2026-03-24 23:33 UTC | Last updated: 2026-03-24
-  Top fitness: 6.5536e6 (zeta=0.308527, bw=1.53e-07, N=512), 6.5536e6 (zeta=0.425723, bw=1.53e-07, N=547), 6.5536e6 (zeta=0.311136, bw=1.53e-07, N=512)
-  Results: The first same-day GPU frontier is mixed, with preserved and broken runs interleaved around zeta about 0.29 to 0.44 while bridge mass stays only about 0.364 to 0.365, lens mass about 0.079, firn balance about 0.964 to 0.973, vapor balance about 0.954 to 0.961, and surface leak effectively zero throughout.
-  Conclusion: PRELIMINARY. Asymmetric ice-lens sealing is producing a real near-threshold split between preserved and broken vapor-corridor states on the first frontier. The signal is still too small and sample-limited to call a settled breakdown law, but it already looks more like a narrow finite threshold than a null effect.
-
-2026-03-24 GPU DESIGN NOTES
-- Added exp_firn_ice_lens_vapor_breakdown_threshold_gpu.py after searches for "firn air layering barometric pumping model", "firn ice layers gas diffusion model", and "melt layers firn gas transport permeability"; adjacent literature covers firn-air transport, layering, and permeability barriers from ice lenses, but not a dense GPU iterative-deepening threshold map for unilateral ice-lens asymmetry breaking a balanced vapor-corridor soft mode.
-- Added exp_marine_snow_gel_pore_bridge_threshold_gpu.py after searches for "marine snow oxygen diffusion aggregate model", "marine snow porosity diffusion model", and "marine aggregate pore model oxygen"; adjacent literature covers particle porosity, oxygen transport, and microbial colonization in marine aggregates, but not a dense GPU iterative-deepening threshold map for balanced gel-pore bridge capture in a disordered operator.
-- Added exp_coccolith_coccosphere_pore_bridge_threshold_gpu.py after searches for "coccolithophore coccosphere mechanical model plate coupling", "\"coccospheres confer mechanical protection\" coccolithophore", and "\"coccolithophore\" extracellular polysaccharide-rich organic layer coccosphere"; adjacent literature covers coccosphere mechanical protection, extracellular CAP-mediated coccolith organization, and intra-coccosphere mass heterogeneity, but not a dense GPU iterative-deepening threshold map for a pore-spanning coccolith-rim bridge mode.
-- Hypothesis: stronger rim-to-pore coupling can shift the dominant coccosphere soft mode from shell-skimming localization into a balanced plate/rim/pore/rim/plate bridge at finite chi.
-- Added exp_biocrust_sheath_pore_breakdown_threshold_gpu.py after searches for "\"biological soil crusts\" exopolysaccharides hydraulic conductivity", "\"biocrust\" pore structure hydrological implications", and "\"cyanobacteria\" sheath soil water retention biocrust"; adjacent literature covers EPS-mediated hydraulic conductivity, pore-network restructuring, and cyanobacterial sheath water regulation, but not a dense GPU iterative-deepening threshold map for unilateral drying breaking a balanced sheath-pore transport mode.
-- Hypothesis: unilateral drying should trigger a finite asymmetry threshold where a balanced sheath/pore/sheath mode collapses into a one-sided evaporative leak state.
-- These additions deliberately diversify away from the current ceiling-pinned tissue-bridge cluster by adding one cryosphere breakdown family and one ocean-biogeochemistry bridge family.
-- These additions continue that diversification by adding one marine biomineralization bridge family and one dryland ecohydrology breakdown family.
-
-2026-03-24 CPU DESIGN NOTES
-- Retired active CPU families `exp_estuarine_pycnocline_saltwedge_bridge_threshold` and `exp_subsea_permafrost_talik_salinity_bridge_threshold` as INCONCLUSIVE after 11.7K and 8.4K results respectively; both still show finite-size or borderline deep-frontier behavior without a stable large-N threshold.
-- Added exp_leaf_vein_areole_hydraulic_bridge_threshold.py after searches for `"leaf hydraulic" network model minor veins areoles` and `"leaf venation" hydraulic model areole minor vein`; adjacent literature covers venation architecture and spatially explicit leaf hydraulics, but not a dense iterative-deepening eigensolve threshold map for a bilateral vein/areole bridge mode.
-- Hypothesis: stronger minor-vein coupling can shift the dominant hydraulic mode from outer-lamina pinning into a balanced vein/areole/vein bridge at finite xi.
-- Added exp_microbial_mat_redox_lamina_delocalization_threshold.py after searches for `"microbial mat" redox stratification model diffusion oxygen sulfide` and `"microbial mat" oxygen sulfide diffusion model stratified`; adjacent literature covers reactive transport, oxygen/sulfide profiles, and long-range extracellular electron transfer, but not a dense iterative-deepening eigensolve threshold map for interface delocalization across oxic-anoxic laminae.
-- Hypothesis: stronger cross-lamina electron-shuttle coupling can delocalize the leading transport mode across the microbial-mat redox interface instead of leaving it pinned to one layer.
-- Retired active CPU families `exp_leaf_vein_areole_hydraulic_bridge_threshold` and `exp_microbial_mat_redox_lamina_delocalization_threshold` after same-day deduplicated findings reached clear REJECTED and CONFIRMED conclusions with 1333 and 1345 results respectively, leaving `dale_law_spatial_delocalization_threshold` and `niche_axis_competition_delocalization_threshold` active while the cleanup cron reclaims the retired families.
-- Added exp_perovskite_grainboundary_polaron_bridge_threshold.py after searches for `"halide perovskite grain boundary polaron transport model"` and `"halide perovskite grain boundary carrier localization model"`; adjacent literature covers defect-assisted grain-boundary transport, mixed evidence for enhanced or suppressed current, and nanoscale electrical heterogeneity, but not a dense iterative-deepening eigensolve threshold map for a finite-N grain/boundary/grain bridge mode.
-- Hypothesis: stronger boundary-mediated coupling can pull the dominant low-energy transport mode out of single-grain trapping and into a balanced left-grain / boundary / right-grain bridge at finite eta.
-- Added exp_metamaterial_dirac_domainwall_bridge_threshold.py after searches for `"mechanical metamaterial domain wall localized modes disorder"` and `"mechanical metamaterial Dirac domain wall soft mode"`; adjacent literature covers topological and fragile-topology domain-wall states, but not a dense iterative-deepening eigensolve threshold map for the disorder-dependent bridge point of the softest finite-N wall mode.
-- Hypothesis: stronger cross-wall coupling can overcome disorder pinning and produce a balanced shoulder / wall / shoulder soft-mode bridge at finite zeta.
+EXPERIMENT: exp_exp_glacier_moulin_sheet_bridge_threshold (1104 total results available, 200 you sampled, 23 hosts)
+  Discovered: 2026-03-25 01:52 UTC | Last updated: 2026-03-25
+  Top fitness: 5592405.3 (chi=1.392317, bw=1.79e-07, N=256), 5592405.3 (chi=1.666234, bw=1.79e-07, N=256), 5592405.3 (chi=1.282420, bw=1.79e-07, N=256)
+  Results: The same-day bridge signal is real and already visible on the deepest N=2048 frontier: bridge mass sits tightly around 0.95 to 0.96, sheet mass around 0.36 to 0.48, and margin leak is effectively zero. What still flips is moulin balance, which ranges from clearly one-sided values near 0.40 to nearly perfect bilateral values near 1.00, so support alternates across nearby chi values even though the bridge and sheet occupation themselves stay strong.
+  Conclusion: PRELIMINARY. Stronger sheet transmissivity is clearly capable of producing a genuine moulin-sheet-moulin bridge on today's deepest frontier. The threshold is not yet cleanly converged, because balanced and one-sided captures still coexist at similar chi despite uniformly strong bridge mass and negligible leak.
