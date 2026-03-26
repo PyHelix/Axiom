@@ -29,44 +29,41 @@ Conclusion: CONFIRMED. In a 100-file top-fitness sample from 224 same-day GPU re
 EXPERIMENT: exp_exp_bile_canaliculus_tightjunction_breakdown_threshold_gpu
 Last updated: 2026-03-26
 Conclusion: CONFIRMED. In a 100-file top-fitness sample from 169 same-day GPU results, every deepest run at zeta about 1.77-2.00 was one-sided and unsupported despite saturated canalicular loading, with hepatocyte balance only about 0.16-0.21. Unilateral tight-junction weakening cleanly triggers the predicted cholestatic collapse.
+EXPERIMENT: exp_exp_playa_salt_crust_brine_bridge_threshold
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. A 403-file top-fitness same-day sample from 480 sanitized results was uniformly supported, with the deepest N=2048 frontier already bridge-positive at eta effectively pinned to zero, bridge ratio about 1.87, brine mass about 0.275, and crust balance about 0.83. The hypothesized crust / brine / crust bridge is already present at the floor of the scan rather than emerging at an interior threshold.
+EXPERIMENT: exp_exp_mid_ocean_ridge_mush_sill_bridge_threshold_gpu
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. In a 100-file top-fitness sample from 111 same-day GPU results, 97 runs supported a balanced mush / sill / mush bridge with xi effectively pinned near zero, bridge mass about 0.94-0.95, sill mass about 0.31-0.34, and feeder balance about 0.91-1.00. A few borderline one-flank cases remain, but the same-day frontier is overwhelmingly bridge-positive.
+EXPERIMENT: exp_exp_blood_testis_sertoli_bridge_threshold_gpu
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. In a 50-file top-fitness sample from 86 same-day GPU results, 48 runs supported the Sertoli / BTB-core / Sertoli bridge with eta effectively pinned near zero, bridge mass about 0.94-0.95, BTB-core mass about 0.32-0.33, and both compartment-balance metrics usually above 0.90. The rare misses are mild balance failures rather than a collapse of the bridge geometry.
+EXPERIMENT: exp_exp_phloem_companion_sieve_loading_threshold_gpu
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. All 20 sampled same-day GPU files supported a balanced companion / sieve / companion bridge with lambda pinned to zero, bridge mass about 0.879-0.885, sieve mass about 0.514-0.523, companion balance about 0.955-0.997, and source leak about 0.115-0.121. The loading mode is already stably bilateral at the bottom of the scan.
 
 ACTIVE PRELIMINARIES
-EXPERIMENT: exp_exp_boundary_tribofilm_asperity_bridge_threshold
-Last updated: 2026-03-26
-Conclusion: PRELIMINARY. In a 60-file top-fitness sample from 10,430 same-day results (44 hosts), bridge mass stayed near 0.966-0.968 with tribofilm mass about 0.46-0.52 and negligible edge leak, but the deepest frontier still split evenly between balanced and one-asperity capture. The bridge is real; bilateral convergence is not.
-
 EXPERIMENT: exp_exp_magnetotail_plasmasheet_lobe_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. The top same-day frontier remained bridge-rich, with bridge mass about 0.865-0.889 and sheet mass about 0.32-0.44, but only 12 of 60 sampled high-fitness files cleared the lobe-balance criterion. Large-N runs still favor one lobe too often to call the threshold settled.
-
 EXPERIMENT: exp_exp_braided_river_parafluvial_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. Parafluvial bridge formation is strong across the same-day frontier, with bridge mass about 0.936-0.944, parafluvial mass about 0.44-0.52, and leak near 7e-05, but balance continues to alternate between about 0.58 and 0.98. The effect is real, yet the channel symmetry threshold is still not converged.
-
 EXPERIMENT: exp_exp_seagrass_rhizome_sulfide_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. The sampled top-fitness runs stayed bridge-positive with bridge mass about 0.944-0.953, rhizome mass about 0.42-0.53, and very low sediment leak, but support remained split 30/60 because shoot balance still swings from about 0.57 to 0.99. Sulfide-stress bridging is robust; bilateral balance remains unsettled.
-
 EXPERIMENT: exp_exp_twisted_tmd_moire_domainwall_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. The moire/domain-wall bridge is unusually strong, with bridge mass about 0.983-0.988 and wall mass about 0.23-0.31 across the deepest frontier, yet only 16 of 60 sampled files met the balance target because many large-N runs stayed one-domain heavy. The family remains bridge-positive but not symmetry-converged.
-
 EXPERIMENT: exp_exp_sea_ice_brine_vein_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. Same-day high-fitness runs consistently formed a low-leak bridge, with bridge mass about 0.915-0.926 and vein mass about 0.38-0.47, but only 10 of 60 sampled files satisfied the ice-balance target. The brine vein clearly conducts across the slab, yet the balanced bilateral state is still rare on the deepest frontier.
-
 EXPERIMENT: exp_exp_fungal_septal_pore_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. The septal bridge remains clear, with bridge mass about 0.927-0.960, pore mass about 0.26-0.48, and tip leak usually below 1.3e-04, but support was only 16/60 because balance kept flipping between about 0.45 and 0.99. Septal transport is real; stable bilateral hypha loading is not yet locked in.
-
-EXPERIMENT: exp_exp_focal_adhesion_ecm_bridge_threshold
-Last updated: 2026-03-26
-Conclusion: PRELIMINARY. ECM bridging stayed exceptionally strong in the 60-file sample from 5,866 same-day results (42 hosts), with bridge mass about 0.980-0.983, ECM mass about 0.52-0.61, and tiny cytosol leak, but adhesion balance still ranged from about 0.77 to 0.99. The bridge is robust, yet neighboring deep brackets still alternate between balanced and one-side-loaded capture.
-
 EXPERIMENT: exp_exp_glomerular_slit_diaphragm_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. A deeper 100-file frontier sample from 2,210 same-day results raised support to 55/100, with bridge mass about 0.94-0.97 and slit mass about 0.23-0.48, but equally fit 512-1536 runs still alternate between near-perfect balance and severe one-podocyte capture. The bridge is real; the bilateral threshold is still not settled.
-
 EXPERIMENT: exp_exp_mitochondrial_crista_junction_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. A deeper 100-file frontier sample from 2,171 same-day results gave 59/100 supported runs, with bridge mass about 0.92-0.98 and junction mass about 0.16-0.54, yet the same top-fitness bracket still flips between well-balanced and strongly one-crista states. The onset remains promising but not converged.
@@ -81,19 +78,18 @@ RECENT REJECTIONS
 EXPERIMENT: exp_exp_osteochondral_tidemark_delocalization_threshold
 Last updated: 2026-03-26
 Conclusion: REJECTED. The deepest same-day frontier remains tidemark-pinned rather than delocalized.
-
 EXPERIMENT: exp_exp_kinetochore_centromere_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: REJECTED. The top same-day frontier remains chromatid-arm loaded rather than bridge-supported.
-
 EXPERIMENT: exp_exp_tonoplast_vacuole_aquaporin_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: REJECTED. Bridge ratio stays below threshold even at the upper phi edge.
-
 EXPERIMENT: exp_exp_synaptic_cleft_astrocyte_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: REJECTED. Small-N positives collapse on the N=2048 frontier.
-
 EXPERIMENT: exp_exp_peatland_microtopography_methane_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: REJECTED. Small-N positives vanish on the N=2048 frontier.
+EXPERIMENT: exp_exp_hepatic_sinusoid_disse_bridge_threshold_gpu
+Last updated: 2026-03-26
+Conclusion: REJECTED. All 27 sampled same-day GPU files remained unsupported even at xi pinned to the scan ceiling near 3.2, with bridge mass only about 0.64-0.71 and parenchyma leak about 0.29-0.36. The mode stays balanced between sinusoids but never enters the proposed Disse-centered bridge regime.
