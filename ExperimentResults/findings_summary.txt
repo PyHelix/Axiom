@@ -41,7 +41,15 @@ Conclusion: CONFIRMED. In a 50-file top-fitness sample from 86 same-day GPU resu
 EXPERIMENT: exp_exp_phloem_companion_sieve_loading_threshold_gpu
 Last updated: 2026-03-26
 Conclusion: CONFIRMED. All 20 sampled same-day GPU files supported a balanced companion / sieve / companion bridge with lambda pinned to zero, bridge mass about 0.879-0.885, sieve mass about 0.514-0.523, companion balance about 0.955-0.997, and source leak about 0.115-0.121. The loading mode is already stably bilateral at the bottom of the scan.
-
+EXPERIMENT: exp_exp_lichen_photobiont_medulla_bridge_threshold
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. In a 306-file top-fitness same-day sample from 389 sanitized results, the deep N=2048 frontier stayed bridge-positive from chi about 0.168 up to the scan ceiling, with bridge mass about 0.93-1.00, medulla mass about 0.57-0.80, photobiont balance usually about 0.99, and cortex leak falling from about 0.07 toward 0.004 as chi increased. The balanced photobiont / medulla / photobiont bridge is real and does not require large forcing once finite-size noise is removed.
+EXPERIMENT: exp_exp_metallic_glass_shearband_softmode_threshold
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. In a 226-file top-fitness same-day sample from 330 sanitized results, every sampled frontier file was supported, with corridor mass about 0.9958-0.9977, band mass about 0.684-0.722, matrix balance about 0.991-0.995, and edge pinning only about 0.0023-0.0042. The hypothesized balanced matrix / shear-band / matrix corridor appears cleanly, but only near the upper eta edge around 3.37-3.39 rather than at modest softening.
+EXPERIMENT: exp_exp_legume_symbiosome_peribacteroid_bridge_threshold_gpu
+Last updated: 2026-03-26
+Conclusion: CONFIRMED. In a 68-file top-fitness same-day sample from 74 GPU results, 67 runs satisfied the full support test and the lone miss still had bridge mass 1.0 with infected-cell balance only narrowly below threshold at about 0.829. The deepest frontier is effectively zero-threshold, with bridge mass 1.0, core mass about 0.32-0.34, membrane balance about 0.90-1.00, zero leak, and bilateral infected-cell loading usually above 0.85.
 ACTIVE PRELIMINARIES
 EXPERIMENT: exp_exp_magnetotail_plasmasheet_lobe_bridge_threshold
 Last updated: 2026-03-26
@@ -73,7 +81,6 @@ Conclusion: PRELIMINARY. The top 100 same-day files from 734 results show a stro
 EXPERIMENT: exp_exp_retinal_muller_photoreceptor_bridge_threshold
 Last updated: 2026-03-26
 Conclusion: PRELIMINARY. The top 100 same-day files from 712 results are bridge-rich, with bridge mass about 0.94-0.97 and Muller mass about 0.16-0.46, but only 30 runs were supported because photoreceptor balance still ranges from about 0.08 to 1.00 on equally deep brackets. Muller-mediated coupling is real, yet the bilateral onset remains noisy.
-
 RECENT REJECTIONS
 EXPERIMENT: exp_exp_osteochondral_tidemark_delocalization_threshold
 Last updated: 2026-03-26
