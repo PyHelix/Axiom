@@ -18,10 +18,10 @@ Discovered: 2026-03-27 00:19 UTC | Last updated: 2026-03-27
 Top fitness: 409600.0 (bw=2.44e-06, N=529), 409600.0 (bw=2.44e-06, N=529), 409600.0 (bw=2.44e-06, N=529)
 Results: Many narrow-bracket files sit at chi about 4.0-5.0 with bridge mass about 0.991-0.998 but alveolar balance only about 1e-05-1e-04 and pore-density ratio about 0.001-0.03, while a minority jump to the opposite extreme with ratio about 24-30 and balance about 0.68-0.96.
 Conclusion: PRELIMINARY. A pore-of-Kohn mediated bridge exists in some seeds, but the same-depth GPU frontier is still dominated by bistable behavior rather than a settled bilateral onset. The hypothesis remains plausible, yet the threshold is not converged because equally fit runs still flip between almost zero pore participation and very strong pore-dense capture.
-EXPERIMENT: exp_exp_beaver_dam_hyporheic_bridge_threshold (486 total results available, 99 sampled, 31 hosts)
+EXPERIMENT: exp_exp_beaver_dam_hyporheic_bridge_threshold (521 total results available, 96 sampled, 31 hosts)
 Discovered: 2026-03-27 02:35 UTC | Last updated: 2026-03-27
 Top fitness: 3276783.6 (bw=3.05e-07, eta=3.400, N=1024), 3276775.0 (bw=3.05e-07, eta=3.400, N=1536), 3276775.0 (bw=3.05e-07, eta=3.380, N=1536)
-Results: The resampled frontier remains bridge-rich, with corridor mass about 0.92-0.94 and leak usually around 1e-05-1e-03, but bank balance still swings from strong two-bank support near 0.85-0.99 down to clearly biased files near 0.55-0.73 at similar eta.
+Results: The refreshed high-fitness frontier remains bridge-rich, with corridor mass about 0.92-0.93, hyporheic mass about 0.44-0.57, and leak staying around 7e-06-5e-05, but bank balance still swings from strong two-bank support near 0.85-0.99 down to clearly biased files near 0.40-0.80 at essentially the same psi about 3.38-3.40.
 Conclusion: PRELIMINARY. Beaver-dam forcing does generate a real hyporheic bridge regime, but the bilateral floodplain-bank criterion is still seed-sensitive on the deep frontier. Same-depth runs continue to alternate between clean two-bank support and obvious one-bank loading.
 EXPERIMENT: exp_exp_retinal_muller_photoreceptor_bridge_threshold (354 total results available, 150 sampled, 30 hosts)
 Discovered: 2026-03-27 02:35 UTC | Last updated: 2026-03-27
@@ -88,3 +88,8 @@ Discovered: 2026-03-27 07:20 UTC | Last updated: 2026-03-27
 Top fitness: 32000.0 (bw=3.12e-05, chi=3.180, N=2048), 32000.0 (bw=3.12e-05, chi=3.180, N=2048), 32000.0 (bw=3.12e-05, chi=3.180, N=2048)
 Results: Every sampled file is clearly bridge-positive, with bridge mass about 0.944-0.996, medulla mass about 0.596-0.796, photobiont balance about 0.988-0.999, and cortex leak only about 0.004-0.056 across both low-chi and high-chi deep runs.
 Conclusion: CONFIRMED. Stronger internal conductance reliably produces the balanced photobiont / medulla / photobiont bridge on the same-day frontier. The effect is not subtle, and even the lower-chi deep files remain cleanly supported rather than reverting to surface pinning.
+EXPERIMENT: exp_exp_twisted_tmd_moire_domainwall_bridge_threshold (504 total results available, 504 sampled, 29 hosts)
+Discovered: 2026-03-27 09:47 UTC | Last updated: 2026-03-27
+Top fitness: 3276624.1 (bw=3.05e-07, chi=3.197, N=2048), 3276253.2 (bw=3.05e-07, chi=3.192, N=1024), 3275410.0 (bw=3.05e-07, chi=3.190, N=1024)
+Results: Across the full same-day frontier, the dominant mode is almost always bridge-rich, with bridge mass about 0.98-0.99 and wall mass about 0.14-0.35 from chi about 1.2 up to about 3.2. What does not lock in is bilateral symmetry: even the tightest brackets at chi about 3.19-3.20 still mix cleanly balanced files near 0.89-0.99 with obvious one-domain captures around 0.20-0.80, and lower-chi supported cases already appear near chi about 1.2-1.6 without removing that seed split.
+Conclusion: PRELIMINARY. Domain-wall hybridization clearly creates a real moire / domain-wall / moire bridge regime, but the finite threshold is not converged because the deepest same-day brackets still alternate between robust bilateral capture and residual single-domain bias. The onset band is broad enough to show bridge existence, yet not stable enough to call confirmed.
