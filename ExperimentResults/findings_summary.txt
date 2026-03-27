@@ -54,17 +54,37 @@ Top fitness: 51199.6 (bw=1.95e-05, N=1536), 51199.6 (bw=1.95e-05, N=1536), 51199
 Results: The crista-junction family repeatedly forms a strong inner-membrane bridge, with bridge mass generally about 0.92-0.94 and matrix leak typically around 1e-05 to 1e-03 over the sampled frontier. The instability is again in bilateral capture: some same-depth files are cleanly supported with balance about 0.85-0.99, while others at nearly identical chi fall to about 0.04-0.63, including sharp low-chi failures with almost no balanced junction occupancy.
 Conclusion: PRELIMINARY. Crista-junction coupling clearly accesses a bridge-capable regime, but the bilateral inner-boundary support threshold is still unconverged. The family looks physically meaningful, yet the deep frontier remains too seed-split to call the onset confirmed.
 
-2026-03-27 CPU DESIGN NOTES
-- Retired `exp_macula_densa_tubuloglomerular_bridge_threshold.py`: deduplicated findings already reject the family on a 76-result same-day frontier, so more CPU seeding would just revisit a ceiling-saturated asymmetric mode.
-- Retired `exp_solar_prominence_pctr_bridge_threshold.py`: deduplicated findings already confirm a stable nonzero onset near eta 0.31-0.33 on a 69-result same-day frontier.
-- Added `exp_mylonite_ultramylonite_bridge_threshold.py` after literature searches for `mylonite ultramylonite shear zone numerical model`, `ultramylonite shear localization model`, and `mylonite ultramylonite finite element shear zone`.
-- Found adjacent literature on shear-zone microstructures and deformation mechanisms, including "Protomylonite, Mylonite and Ultramylonite" and "Deformation mechanisms in the mylonite/ultramylonite transition", but not a dense iterative-deepening eigensolve threshold map for balanced mylonite / ultramylonite / mylonite soft-mode capture in a disordered operator.
-- Novel angle: map the finite-eta onset where a central ultramylonite corridor overtakes country-rock pinning and yields a balanced bilateral mylonite-supported soft mode at large N.
+EXPERIMENT: exp_exp_braided_river_parafluvial_bridge_threshold (398 total results available, 120 sampled, 29 hosts)
+Discovered: 2026-03-27 04:56 UTC
+Last updated: 2026-03-27
+Top fitness: 2411126.9 (bw=4.15e-07, kappa=3.388, N=1536), 2200598.5 (bw=4.54e-07, kappa=3.397, N=1536), 1847062.0 (bw=5.41e-07, kappa=3.370, N=1536)
+Results: The top same-day frontier is consistently bridge-rich, with channel-parafluvial bridge mass about 0.93-0.97, parafluvial mass about 0.39-0.53, and aquifer leak compressed to about 5e-05-5e-04. The unresolved feature is balance: equally deep runs still range from clean bilateral captures near 0.85-0.99 down to obvious one-channel states near 0.15-0.52, including failures at the very highest kappa values.
+Conclusion: PRELIMINARY. Stronger parafluvial transmissivity clearly creates a real braided-river bridge regime, but the bilateral channel-loading threshold is still split by seed on the deep frontier. The family looks physically meaningful, yet the onset is not converged because same-depth runs still alternate between balanced two-channel support and asymmetric capture.
 
-2026-03-27 GPU DESIGN NOTES
-- Added `exp_hydathode_epithem_xylem_bridge_threshold_gpu.py` after literature searches for `hydathode epithem xylem mathematical model`, `hydathode epithem transport model`, and `hydathode guttation review`.
-- Found hydathode anatomy, epithem morphogenesis, and guttation/xylem transport literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced lamina / epithem / xylem / epithem / lamina soft-mode capture in a disordered operator.
-- Novel angle: map the finite-phi onset where stronger epithem-xylem coupling overcomes one-lamina pinning and stabilizes a bilateral hydathode conduit at large N.
-- Added `exp_brinicle_seaice_keel_bridge_threshold_gpu.py` after literature searches for `brinicle sea ice brine channel model`, `brinicle sea ice transport model`, and `brine channels sea ice review`.
-- Found adjacent brine-channel morphogenesis, sea-ice drainage, and transport-network papers, but not a dense GPU iterative-deepening eigensolve threshold map for balanced sea-ice / brine-sheath / keel / brine-sheath / sea-ice capture in a disordered operator.
-- Novel angle: map the finite-zeta onset where stronger brine-sheath coupling pulls the softest mode into a bilateral brinicle-keel corridor instead of one-wall ice pinning or ocean leakage.
+EXPERIMENT: exp_exp_sea_ice_brine_vein_bridge_threshold (390 total results available, 120 sampled, 29 hosts)
+Discovered: 2026-03-27 04:56 UTC
+Last updated: 2026-03-27
+Top fitness: 3262402.9 (bw=3.07e-07, chi=3.582, N=2048), 3243132.8 (bw=3.08e-07, chi=3.595, N=2048), 3010468.7 (bw=3.32e-07, chi=3.598, N=1024)
+Results: Deep sea-ice runs are uniformly bridge-positive, with bridge mass about 0.92-0.95, vein mass about 0.35-0.47, and surface leak typically only about 1e-04-1e-03. But the bilateral ice balance still swings sharply from near-perfect files around 0.91-0.99 to failed one-flank states near 0.19-0.80 at similar chi and depth, so the highest-fitness frontier remains mixed.
+Conclusion: PRELIMINARY. Brine-vein coupling does access the intended bridge mode, but the balanced ice / vein / ice onset is not yet reproducible across seeds. The evidence favors a real transport regime with persistent bistability rather than a settled threshold surface.
+
+EXPERIMENT: exp_exp_magnetotail_plasmasheet_lobe_bridge_threshold (385 total results available, 120 sampled, 29 hosts)
+Discovered: 2026-03-27 04:56 UTC
+Last updated: 2026-03-27
+Top fitness: 3276206.5 (bw=3.05e-07, kappa=3.190, N=2048), 3268874.3 (bw=3.06e-07, kappa=3.185, N=2048), 3260877.3 (bw=3.07e-07, kappa=3.197, N=2048)
+Results: The magnetotail family repeatedly forms a low-leak bridge, with bridge mass about 0.86-0.91, plasma-sheet mass about 0.30-0.50, and leak around 1e-04-1e-03 over the sampled frontier. What does not stabilize is balance: equally deep N=2048 files still span near-symmetric lobes around 0.85-0.99 and strongly one-lobe captures around 0.15-0.65.
+Conclusion: PRELIMINARY. Stronger plasma-sheet coupling is sufficient to form the intended bridge-capable regime, but not to pin down a stable bilateral lobe-support threshold. The family remains scientifically interesting, yet the onset is still seed-sensitive on the deepest same-day frontier.
+
+EXPERIMENT: exp_exp_seagrass_rhizome_sulfide_bridge_threshold (368 total results available, 120 sampled, 30 hosts)
+Discovered: 2026-03-27 04:56 UTC
+Last updated: 2026-03-27
+Top fitness: 3215626.5 (bw=3.11e-07, xi=3.295, N=2048), 1675018.9 (bw=5.97e-07, xi=3.272, N=2048), 1638400.0 (bw=6.10e-07, xi=3.085, N=2048)
+Results: The strongest seagrass files are robustly bridge-rich, with bridge mass about 0.94-0.97, rhizome mass about 0.38-0.53, and sediment leak usually around 3e-05-1e-03. Balanced shoot-rhizome-shoot support appears repeatedly, even down into some lower-xi files, but the same frontier still mixes those successes with conspicuous one-shoot states near 0.26-0.79 at comparable depth.
+Conclusion: PRELIMINARY. Rhizome conductivity clearly supports the proposed oxygen-transport bridge, and the positive examples are numerous and deep. The threshold is still not converged, however, because equally fit runs continue to flip between stable bilateral support and asymmetric capture.
+
+EXPERIMENT: exp_exp_fungal_septal_pore_bridge_threshold (361 total results available, 120 sampled, 28 hosts)
+Discovered: 2026-03-27 04:56 UTC
+Last updated: 2026-03-27
+Top fitness: 3275561.7 (bw=3.05e-07, kappa=3.397, N=2048), 3258128.5 (bw=3.07e-07, kappa=3.383, N=2048), 3248516.3 (bw=3.08e-07, kappa=3.399, N=2048)
+Results: The fungal family strongly enters a pore-mediated bridge regime, with bridge mass about 0.93-0.98, pore mass about 0.26-0.47, and tip leak compressed to about 2e-05-2e-03 depending on the seed. Yet the bilateral hypha balance remains sharply split, from supported runs around 0.89-0.99 to pronounced one-side pinning near 0.02-0.76 even at the highest kappa values.
+Conclusion: PRELIMINARY. Septal-pore conductance does create a real bridge-rich transport mode, but the balanced hypha / pore / hypha threshold is still unstable on the deep frontier. The family remains promising, while the current same-day evidence still points to unresolved bistability rather than a settled onset.
