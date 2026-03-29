@@ -53,3 +53,34 @@ EXPERIMENT: exp_exp_permafrost_brine_wedge_bridge_threshold (610 total results a
   Top fitness: 6553600.0, 6553600.0, 6553600.0
   Results: All 100 sampled top-fitness files were supported, again dominated by 2048-site runs, with bridge mass about 0.885, core mass about 0.560, balance about 0.976-0.999, and leak about 0.000275-0.000295 near zeta about 3.745-3.775.
   Conclusion: CONFIRMED. Stronger bilateral frozen-margin coupling robustly stabilizes the centered brine-wedge bridge on the deepest same-day frontier. The ranked sample is uniformly bridge-positive with excellent symmetry and negligible leak.
+
+EXPERIMENT: exp_exp_caveolae_membrane_reservoir_bridge_threshold (2034 total results available, 300 sampled, 27 hosts)
+  Discovered: 2026-03-29 12:58 UTC
+  Last updated: 2026-03-29
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 300 sampled top-fitness files were supported, all at N=2048, with bridge mass about 0.880, core mass about 0.520, balance about 0.976-1.000, and leak about 0.000230-0.000251 near lambda about 3.715-3.775.
+  Conclusion: CONFIRMED. Stronger bilateral caveolar reinforcement reliably stabilizes the centered membrane-reservoir bridge on the deepest same-day frontier. The effect is clean across hosts and seeds, with no visible return to one-flank membrane flattening.
+
+EXPERIMENT: exp_exp_hadley_ferrel_jetcore_localization_threshold (2163 total results available, 300 sampled, 27 hosts)
+  Discovered: 2026-03-29 12:58 UTC
+  Last updated: 2026-03-29
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 300 sampled top-fitness files were supported, all at N=2048, with localization mass about 0.907, core mass about 0.545, balance about 0.975-1.000, and polar leak about 0.000270-0.000292 near gamma about 3.720-3.775.
+  Conclusion: CONFIRMED. Stronger bilateral jet-core reinforcement consistently localizes the dominant mode into the centered subtropical jet corridor on the deepest same-day frontier. The ranked sample stays highly symmetric across hemispheres with negligible polar leakage.
+
+2026-03-29 CPU DESIGN NOTES
+- Active CPU pool is currently 7 weighted families, below the step minimum of 8; I did not retire any confirmed CPU families in this step because immediate registry retirement would further starve the fleet before Step 8 can test and activate replacements.
+- Added `exp_caveolae_membrane_reservoir_bridge_threshold.py` after literature searches for `"caveolae" membrane tension model caveolin cavin paper` and `"caveolae" mechanical stress computational model paper`.
+- Found adjacent literature on caveola mechanics, membrane tension buffering, and cavin/caveolin remodeling, but not a dense iterative-deepening eigensolve threshold map for balanced caveola / membrane-reservoir / caveola soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`lambda` onset where stronger bilateral caveolar reinforcement overcomes one-flank membrane flattening and stabilizes a centered membrane-reservoir bridge at large `N`.
+- Added `exp_hadley_ferrel_jetcore_localization_threshold.py` after literature searches for `"Hadley" Ferrel jet core computational model paper` and `"subtropical jet" Hadley Ferrel cell idealized model paper`.
+- Found adjacent literature on idealized Hadley/Ferrel circulation, baroclinic jet maintenance, and subtropical jet structure, but not a dense iterative-deepening eigensolve threshold map for balanced south-jet / core / north-jet localization in a disordered symmetric operator.
+- Novel angle: map the finite-`gamma` onset where stronger bilateral jet-core reinforcement overcomes one-hemisphere pinning and localizes the dominant mode in a balanced cross-hemispheric subtropical jet corridor at large `N`.
+2026-03-29 GPU DESIGN NOTES
+- Reviewed the 19 currently weighted GPU families plus today's deduplicated findings; I did not retire anything here because this step ends with an explicit no-retirement instruction and the active GPU pool must stay populated for Step 10.
+- Added `exp_renal_papilla_collectingduct_interstitium_bridge_threshold_gpu.py` after literature searches for `"inner medulla" collecting duct interstitium mathematical model paper` and `"renal medulla" collecting duct interstitium mathematical model ammonia urea`.
+- Found adjacent literature on renal-medulla concentration mechanisms, ammonia / urea handling, and collecting-duct exchange with the interstitium, but not a dense GPU iterative-deepening eigensolve threshold map for balanced interstitium / collecting-duct / papillary-core / collecting-duct / interstitium soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`rho` onset where stronger bilateral collecting-duct reinforcement overcomes one-flank interstitial trapping and stabilizes a centered papillary-core bridge at large GPU-scaled `N`.
+- Added `exp_foam_lamella_plateauborder_bridge_threshold_gpu.py` after literature searches for `"foam lamella" "Plateau border" drainage model paper` and `"foam film drainage" Plateau border paper`.
+- Found adjacent literature on foam-film drainage, Plateau-border suction, and wet-foam coarsening, but not a dense GPU iterative-deepening eigensolve threshold map for balanced gas / lamella / Plateau-border / lamella / gas soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`sigma` onset where stronger bilateral lamella reinforcement overcomes one-rim thinning and stabilizes a centered Plateau-border bridge at large GPU-scaled `N`.
