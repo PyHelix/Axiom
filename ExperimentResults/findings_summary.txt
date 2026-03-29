@@ -1,89 +1,55 @@
-EXPERIMENT: exp_exp_ciliary_rootlet_basalbody_bridge_threshold (1458 total results available, 300 sampled, 31 hosts)
-  Discovered: 2026-03-29 00:39 UTC
+EXPERIMENT: exp_exp_bone_lacunocanalicular_osteocyte_bridge_threshold (3293 total results available, 300 sampled, 34 hosts)
+  Discovered: 2026-03-29 08:12 UTC
   Last updated: 2026-03-29
-  Top fitness: 25600.0 (bw=3.91e-05, N=512), 25600.0 (bw=3.91e-05, N=2048), 25600.0 (bw=3.91e-05, N=512)
-  Results: Across 300 top-fitness same-day files, every inspected run was supported, with bridge mass about 0.962-0.989, basal-body mass about 0.412-0.556, exterior leak about 0.0109-0.0375, cortex balance about 0.923-0.997, rootlet balance about 0.933-0.998, and basal focus about 0.426-0.563. Supported high-fitness states already appear by phi about 1.56 and persist through the high-phi edge near 3.58 on both 512-site and 2048-site frontiers.
-  Conclusion: CONFIRMED. Stronger bilateral rootlet coupling reliably captures the softest mode into the balanced cortex / rootlet / basal-body / rootlet / cortex bridge on the deepest same-day frontier. The onset is finite but clearly well below the high-phi ceiling, and the 300-file ranked sample shows no visible reversion to one-cortex pinning.
+  Top fitness: 13107100.0, 13107100.0, 13107099.9
+  Results: The deepest 2048-site frontier still splits sharply by seed: some top runs show strong osteocyte-centered bridge mass around 1.055 with core mass about 0.563, but equally deep peers collapse to balance about 0.222-0.692 with leak about 0.032-0.324.
+  Conclusion: PRELIMINARY. A real lacuna-centered bridge exists on the high-fitness frontier, but the same frontier still contains frequent symmetry and leak failures. The effect is too seed-split to promote from preliminary.
 
-EXPERIMENT: exp_exp_crystalline_lens_y_suture_bridge_threshold (1403 total results available, 300 sampled, 28 hosts)
-  Discovered: 2026-03-29 00:39 UTC
+EXPERIMENT: exp_exp_hydrothermal_vent_chemocline_localization_threshold (1727 total results available, 300 sampled, 22 hosts)
+  Discovered: 2026-03-29 08:12 UTC
   Last updated: 2026-03-29
-  Top fitness: 25600.0 (bw=3.91e-05, N=512), 25600.0 (bw=3.91e-05, N=512), 25600.0 (bw=3.91e-05, N=2048)
-  Results: Across 300 top-fitness same-day files, every inspected run was supported, with bridge mass about 0.960-0.990, nucleus mass about 0.428-0.550, exterior leak about 0.0105-0.0402, cortex balance about 0.959-0.998, suture balance about 0.964-0.999, and nucleus focus about 0.445-0.556. Supported high-fitness states already appear by lambda about 1.33 and persist through the upper edge near 3.57 on both 512-site and 2048-site frontiers.
-  Conclusion: CONFIRMED. Stronger bilateral Y-suture coupling reliably captures the softest mode into the balanced cortex / suture-arm / nucleus / suture-arm / cortex bridge on the deepest same-day frontier. The onset is again finite rather than pinned to zero, but the ranked same-day sample is uniformly bridge-positive with no meaningful seed-level balance failures.
+  Top fitness: 13107100.0, 13107100.0, 13107100.0
+  Results: The top 2048-site files remain strongly chemocline-centered with localization mass about 0.981-0.984 and leak about 0.0157-0.0191, but fringe balance stays extremely poor at about 0.036-0.096 even at the deepest edge.
+  Conclusion: REJECTED. Centered localization is real, but the required bilateral fringe symmetry does not survive on the ranked same-day frontier. The dominant outcome is a one-flank solution rather than the balanced chemocline mode hypothesized.
 
-EXPERIMENT: exp_exp_firn_ice_lens_aquifer_bridge_threshold (1227 total results available, 300 sampled, 29 hosts)
-  Discovered: 2026-03-29 02:58 UTC
+EXPERIMENT: exp_exp_xylem_pitmembrane_embolism_bridge_threshold (675 total results available, 100 sampled, 24 hosts)
+  Discovered: 2026-03-29 10:38 UTC
   Last updated: 2026-03-29
-  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048)
-  Results: Across 300 top-fitness same-day files, bridge mass stayed essentially saturated at about 0.9999-1.0000, aquifer mass stayed strong at about 0.633-0.663, and outer leak stayed negligible at about 0.000000-0.000076. The failure mode was bilateral balance: lens balance ranged from about 0.191-0.989 and dry-firn balance from about 0.027-0.974, with only a few rare supported seeds near the high-chi edge while the vast majority of deepest 1024-site and 2048-site files remained one-flank pinned.
-  Conclusion: REJECTED. Stronger bilateral ice-lens coupling reliably creates a centered aquifer-dominated bridge, but it does not reliably stabilize the full balanced dry-firn / lens / aquifer / lens / dry-firn mode on the deepest same-day frontier. The central capture is robust while the flank symmetry almost always fails, so the hypothesized balanced bilateral aquifer bridge is not supported by today’s ranked sample.
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 100 sampled top-fitness files were supported, almost all at N=2048, with bridge mass about 0.884, core mass about 0.555, flank balance about 0.977-0.999, and leak only about 0.000253-0.000272 near chi about 3.745-3.775.
+  Conclusion: CONFIRMED. Stronger bilateral pit-membrane coupling robustly stabilizes the balanced conduit bridge on the deepest same-day frontier. The effect is unanimous in the ranked sample and shows no visible regression to one-vessel pinning.
 
-EXPERIMENT: exp_exp_thylakoid_grana_stromalamella_bridge_threshold (1207 total results available, 300 sampled, 28 hosts)
-  Discovered: 2026-03-29 02:58 UTC
+EXPERIMENT: exp_exp_basal_ganglia_direct_indirect_selection_threshold (665 total results available, 100 sampled, 23 hosts)
+  Discovered: 2026-03-29 10:38 UTC
   Last updated: 2026-03-29
-  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048)
-  Results: Across 300 top-fitness same-day files, bridge mass again stayed near 0.9999-1.0000, core mass stayed strong at about 0.566-0.583, and outer leak stayed tiny at about 0.000000-0.000048. The limiting variable was bilateral side balance: margin balance ranged from about 0.134-0.988 and lamella balance from about 0.023-0.927, with only a few isolated supported seeds while most of the deepest 1024-site and 2048-site frontier still localized onto one lamella branch.
-  Conclusion: REJECTED. Stronger grana-margin coupling reliably captures the softest mode into the granum core, but it does not robustly deliver the balanced stroma-lamella / margin / core / margin / stroma-lamella bridge required by the hypothesis. The dominant same-day pattern is central bridging with persistent lateral asymmetry, so the proposed balanced grana bridge is not confirmed on the current frontier.
-2026-03-29 GPU DESIGN NOTES
-- Reviewed the 11 currently weighted GPU families plus today's deduplicated findings; I did not retire anything in this step because the prompt later forbids retirement here and at least 2 GPU families must remain active regardless.
-- Added `exp_er_pm_tether_microdomain_bridge_threshold_gpu.py` after literature searches for `"ER-PM contact sites" review lipid transfer tethering Nature Reviews` and `"extended synaptotagmin" ER-PM contact site structure lipid transfer Nature`.
-- Found adjacent literature on ER-PM tethering, lipid-transfer proteins, and nanodomain organization, but not a dense GPU iterative-deepening eigensolve threshold map for balanced cytosol / tether / plasma-membrane microdomain / tether / cytosol soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`xi` onset where stronger bilateral ER-PM tether reinforcement overcomes one-flank pinning and stabilizes a balanced lipid-transfer microdomain bridge at GPU-scaled matrix sizes.
-- Added `exp_talin_vinculin_clutch_bridge_threshold_gpu.py` after literature searches for `"talin vinculin" molecular clutch review Nature Reviews` and `"molecular clutch" talin vinculin computational model PNAS`.
-- Found adjacent literature on focal-adhesion clutch mechanics, talin unfolding, and vinculin recruitment, but not a dense GPU iterative-deepening eigensolve threshold map for balanced stress-fiber / clutch / adhesion-plaque / clutch / stress-fiber soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`lambda` onset where stronger bilateral talin-vinculin reinforcement overcomes one-edge slippage and stabilizes a balanced clutch bridge on large GPU frontiers.
-- Added `exp_casparian_passagecell_stele_bridge_threshold_gpu.py` after literature searches for `"Casparian strip" endodermis transport model review`, `"Casparian strip" passage cell transport model`, and `"endodermal passage cells" root computational model`.
-- Found adjacent literature on Casparian-strip barrier function, endodermal suberization, and passage-cell-mediated uptake, but not a dense GPU iterative-deepening eigensolve threshold map for balanced cortex / passage-cell / stele / passage-cell / cortex soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral passage-cell conductance overcomes one-flank entry and stabilizes a balanced stele-centered uptake bridge at GPU-scaled matrix sizes.
-2026-03-29 CPU DESIGN NOTES
-- Retired `exp_ciliary_rootlet_basalbody_bridge_threshold`: today's deduplicated findings show a 300-file unanimous CONFIRMED frontier, so more CPU seeding is not justified.
-- Retired `exp_crystalline_lens_y_suture_bridge_threshold`: today's deduplicated findings show a 300-file unanimous CONFIRMED frontier, so more CPU seeding is not justified.
-- Added `exp_firn_ice_lens_aquifer_bridge_threshold.py` after literature searches for `"firn ice lenses" hydrology model paper`, `"Greenland firn aquifer" model paper`, and `"firn aquifer" hydraulic model Greenland paper`.
-- Found adjacent literature on firn aquifer drainage, firn permeability, and ice-lens-mediated routing, but not a dense iterative-deepening eigensolve threshold map for balanced bilateral aquifer capture in a disordered surrogate operator.
-- Novel angle: map the finite-`chi` onset where stronger bilateral ice-lens coupling overcomes one-flank meltwater pinning and stabilizes a centered aquifer bridge at large `N`.
-- Added `exp_thylakoid_grana_stromalamella_bridge_threshold.py` after literature searches for `"thylakoid membrane" domain model grana stroma paper`, `"grana" "stroma lamellae" model photosynthesis paper`, and `"thylakoid membrane" grana stroma mathematical model`.
-- Found adjacent literature on thylakoid ultrastructure, grana-margin domains, and photosystem partitioning, but not a dense iterative-deepening eigensolve threshold map for balanced bilateral granum-core capture in a disordered surrogate operator.
-- Novel angle: map the finite-`phi` onset where stronger bilateral grana-margin coupling overcomes one-branch localization and stabilizes a centered grana / margin / lamella bridge at large `N`.
-2026-03-29 CPU DESIGN NOTES
-- Retired `exp_synaptonemal_recombination_nodule_bridge_threshold`: today's deduplicated findings mark the 300-file sampled frontier as uniformly CONFIRMED, so additional CPU seeds are not justified.
-- Retired `exp_firn_ice_lens_aquifer_bridge_threshold`: today's deduplicated findings reject the bilateral bridge on a 300-file sampled frontier, so more CPU seeds are better spent on new questions.
-- Left `exp_pollen_tube_callose_plug_bridge_threshold` active because the findings remain PRELIMINARY, and left `exp_thylakoid_grana_stromalamella_bridge_threshold` active for now to preserve at least two weighted CPU families until the next config pass.
-- Added `exp_tripartite_synapse_glutamate_bridge_threshold.py` after literature searches for `"tripartite synapse" glutamate diffusion model paper`, `"astrocyte glutamate uptake" synapse model`, and `"synaptic cleft" astrocyte glutamate computational model`.
-- Found adjacent literature on tripartite synapses, glutamate clearance, and astrocyte-mediated spillover control, but not a dense iterative-deepening eigensolve threshold map for balanced bilateral cleft confinement in a disordered symmetric operator.
-- Novel angle: map the finite-`sigma` onset where stronger bilateral perisynaptic astrocyte coupling overcomes one-flank glutamate spillover and stabilizes a centered neuropil / astrocyte / cleft / astrocyte / neuropil bridge at large `N`.
-- Added `exp_lake_oxicline_methanotroph_localization_threshold.py` after literature searches for `"stratified lake" methane oxidation model`, `"lake methane oxidation" model oxygen`, and `"methanotroph" oxycline stratified lake`.
-- Found adjacent literature on stratified-lake methane oxidation, redox transitions, and methanotroph community structure, but not a dense iterative-deepening eigensolve threshold map for centered oxycline localization in a disordered surrogate operator.
-- Novel angle: map the finite-`zeta` onset where stronger oxic-anoxic coupling overcomes boundary pinning and localizes the dominant mode inside a methanotroph-rich oxycline band at large `N`.
-2026-03-29 GPU DESIGN NOTES
-- Added `exp_podosome_actin_ring_matrix_bridge_threshold_gpu.py` after literature searches for `"podosome actin ring matrix coupling computational model paper"`, `"podosome actin core ring computational model paper"`, and `"podosome eigenmode threshold actin ring matrix"`.
-- Found adjacent literature on podosome core-ring architecture, force generation, and mechanosensing, but not a dense GPU iterative-deepening eigensolve threshold map for balanced matrix / adhesion-ring / actin-core / adhesion-ring / matrix soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral ring-matrix reinforcement overcomes one-flank pinning and stabilizes a balanced podosome bridge at GPU-scaled matrix sizes.
-- Added `exp_subglacial_esker_tunnel_bridge_threshold_gpu.py` after literature searches for `"subglacial esker channel margin computational model paper"`, `"esker eigenmode threshold subglacial channel margin"`, and `"modelling distributed and channelized subglacial drainage the spacing of channels"`.
-- Found adjacent literature on channelized subglacial drainage, esker deposition, and conduit spacing, but not a dense GPU iterative-deepening eigensolve threshold map for balanced ice-bed / tunnel-wall / sediment-core / tunnel-wall / ice-bed soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`eta` onset where stronger bilateral wall-sediment reinforcement overcomes one-margin pinning and stabilizes a centered esker bridge on large GPU frontiers.
-- Added `exp_mam_calcium_nanodomain_bridge_threshold_gpu.py` after literature searches for `"ER mitochondria calcium nanodomain computational model paper"`, `"ER-mitochondria calcium nanodomain eigenmode threshold"`, and `"A mathematical model of calcium dynamics obesity and mitochondria-associated ER membranes"`.
-- Found adjacent literature on ER-mitochondria contact sites, MAM calcium exchange, and calcium/redox nanodomains, but not a dense GPU iterative-deepening eigensolve threshold map for balanced cytosol / tether / MAM-calcium-nanodomain / tether / cytosol soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`chi` onset where stronger bilateral tether reinforcement overcomes one-flank pinning and stabilizes a balanced MAM calcium bridge at GPU-scaled matrix sizes.
-2026-03-29 CPU DESIGN NOTES
-- CPU generator currently has zero weighted families in `wu_generator_config.json`, so this pass focused on replenishing Step 8 with fresh CPU scripts rather than retiring anything further.
-- Added `exp_hydrothermal_vent_chemocline_localization_threshold.py` after literature searches for `"hydrothermal vent" sulfide oxygen model paper`, `"hydrothermal plume" sulfur oxidation model`, and `"hydrothermal vent" chemocline sulfur oxidizer model`.
-- Found adjacent literature on hydrothermal plume chemistry, sulfide oxidation, and microbial mixing interfaces, but not a dense iterative-deepening eigensolve threshold map for centered chemocline localization in a disordered surrogate operator.
-- Novel angle: map the finite-`eta` onset where stronger oxic-reduced coupling overcomes seawater/vent-side pinning and localizes the dominant mode inside a centered sulfur-oxidation chemocline at large `N`.
-- Added `exp_bone_lacunocanalicular_osteocyte_bridge_threshold.py` after literature searches for `"osteocyte lacunocanalicular network" computational model`, `"lacunocanalicular network" fluid flow osteocyte model`, and `"osteocyte" network architecture fluid flow canaliculi paper`.
-- Found adjacent literature on osteocyte fluid flow, lacunocanalicular transport, and mechanotransduction microenvironment models, but not a dense iterative-deepening eigensolve threshold map for balanced matrix / canaliculi / lacuna / canaliculi / matrix soft-mode capture in a disordered operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral canalicular coupling overcomes mineral-side pinning and stabilizes a lacuna-centered bridge at large `N`.
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 100 sampled top-fitness files were supported, dominated by 2048-site runs with localization mass about 0.910, core mass about 0.589, flank balance about 0.972-0.997, and leak about 0.000290-0.000312 near theta about 3.735-3.775.
+  Conclusion: CONFIRMED. Bilateral striato-thalamic reinforcement reliably localizes the dominant mode into the centered selection channel on the deepest frontier. The effect is large, clean, and consistent across hosts and seeds in the ranked sample.
 
-EXPERIMENT: exp_exp_bone_lacunocanalicular_osteocyte_bridge_threshold (919 total results available, 300 sampled, 18 hosts)
-  Discovered: 2026-03-29 03:31 UTC
+EXPERIMENT: exp_exp_mycelial_cord_nutrient_bridge_threshold (667 total results available, 100 sampled, 25 hosts)
+  Discovered: 2026-03-29 10:38 UTC
   Last updated: 2026-03-29
-  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107099.9 (bw=7.63e-08, N=2048), 13107099.1 (bw=7.63e-08, N=2048)
-  Results: The 300-file ranked same-day frontier is sharply seed-split. Many deep 1024-site and 2048-site files show strong balanced bridges with bridge mass about 1.069-1.081, lacuna mass about 0.574-0.596, canaliculi balance about 0.803-0.991, and matrix leak about 0.0094-0.0203, but most top-fitness files still fail through side imbalance or excess matrix leak, with unsupported examples sitting near balance 0.17-0.75 and leak 0.021-0.48. Supported seeds appear across a broad kappa band from about 1.84 through 3.60 rather than only at the extreme high-kappa edge.
-  Conclusion: PRELIMINARY. Stronger bilateral canalicular coupling can clearly stabilize the intended lacuna-centered bridge on the deepest same-day frontier, and the successful seeds are not marginal. But the effect is not yet reliable across top-fitness runs, so the hypothesis is promising rather than settled.
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 100 sampled top-fitness files were supported, with bridge mass about 0.890, core mass about 0.540-0.542, balance about 0.974-0.999, and leak about 0.000293-0.000393 across kappa about 3.307-3.775 on mostly 2048-site runs.
+  Conclusion: CONFIRMED. Stronger bilateral cord reinforcement consistently produces the centered nutrient bridge instead of one-side substrate pinning. Even the weaker high-fitness tail remains comfortably above the support thresholds.
 
-EXPERIMENT: exp_exp_hydrothermal_vent_chemocline_localization_threshold (887 total results available, 300 sampled, 18 hosts)
-  Discovered: 2026-03-29 03:31 UTC
+EXPERIMENT: exp_exp_nuclear_pore_fg_mesh_localization_threshold (636 total results available, 100 sampled, 26 hosts)
+  Discovered: 2026-03-29 10:38 UTC
   Last updated: 2026-03-29
-  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048)
-  Results: Across all 300 top-fitness same-day files, the dominant mode is tightly trapped in the center with localization mass about 0.947-0.989, chemocline mass about 0.278-0.460, and reservoir leak only about 0.011-0.053. The failure is bilateral balance: every inspected file remains far below the target, with fringe balance only about 0.006-0.107 while eta is pinned at the upper edge near 3.80 on both 1024-site and 2048-site frontiers.
-  Conclusion: REJECTED. Stronger oxic-reduced coupling reliably creates a sharply centered chemocline-localized mode, but it does not produce the balanced centered state required by the hypothesis on the deepest same-day frontier. The localization succeeds while one side still dominates, so the proposed balanced chemocline capture is not supported by today’s ranked sample.
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 100 sampled top-fitness files were supported, nearly all at N=2048, with localization mass about 0.892, core mass about 0.580, flank balance about 0.975-1.000, and leak about 0.000296-0.000313 near xi about 3.725-3.775.
+  Conclusion: CONFIRMED. Bilateral FG-mesh reinforcement robustly localizes the dominant mode into the centered pore conduit on the deepest same-day frontier. The sample is uniformly pore-centered and balanced rather than flank-pinned.
+
+EXPERIMENT: exp_exp_estuary_turbidity_maximum_localization_threshold (614 total results available, 100 sampled, 25 hosts)
+  Discovered: 2026-03-29 10:38 UTC
+  Last updated: 2026-03-29
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 100 sampled top-fitness files were supported, overwhelmingly at N=2048, with localization mass about 0.907, core mass about 0.611, balance about 0.979-1.000, and leak about 0.000316-0.000333 near eta about 3.730-3.775.
+  Conclusion: CONFIRMED. Stronger bilateral shear-trapping reinforcement cleanly localizes the dominant mode into a centered ETM core on the deepest frontier. The effect is stable across the ranked sample with no meaningful return to river- or shelf-side pinning.
+
+EXPERIMENT: exp_exp_permafrost_brine_wedge_bridge_threshold (610 total results available, 100 sampled, 26 hosts)
+  Discovered: 2026-03-29 10:38 UTC
+  Last updated: 2026-03-29
+  Top fitness: 6553600.0, 6553600.0, 6553600.0
+  Results: All 100 sampled top-fitness files were supported, again dominated by 2048-site runs, with bridge mass about 0.885, core mass about 0.560, balance about 0.976-0.999, and leak about 0.000275-0.000295 near zeta about 3.745-3.775.
+  Conclusion: CONFIRMED. Stronger bilateral frozen-margin coupling robustly stabilizes the centered brine-wedge bridge on the deepest same-day frontier. The ranked sample is uniformly bridge-positive with excellent symmetry and negligible leak.
