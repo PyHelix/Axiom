@@ -11,3 +11,34 @@ EXPERIMENT: exp_exp_crystalline_lens_y_suture_bridge_threshold (1403 total resul
   Top fitness: 25600.0 (bw=3.91e-05, N=512), 25600.0 (bw=3.91e-05, N=512), 25600.0 (bw=3.91e-05, N=2048)
   Results: Across 300 top-fitness same-day files, every inspected run was supported, with bridge mass about 0.960-0.990, nucleus mass about 0.428-0.550, exterior leak about 0.0105-0.0402, cortex balance about 0.959-0.998, suture balance about 0.964-0.999, and nucleus focus about 0.445-0.556. Supported high-fitness states already appear by lambda about 1.33 and persist through the upper edge near 3.57 on both 512-site and 2048-site frontiers.
   Conclusion: CONFIRMED. Stronger bilateral Y-suture coupling reliably captures the softest mode into the balanced cortex / suture-arm / nucleus / suture-arm / cortex bridge on the deepest same-day frontier. The onset is again finite rather than pinned to zero, but the ranked same-day sample is uniformly bridge-positive with no meaningful seed-level balance failures.
+
+EXPERIMENT: exp_exp_firn_ice_lens_aquifer_bridge_threshold (1227 total results available, 300 sampled, 29 hosts)
+  Discovered: 2026-03-29 02:58 UTC
+  Last updated: 2026-03-29
+  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048)
+  Results: Across 300 top-fitness same-day files, bridge mass stayed essentially saturated at about 0.9999-1.0000, aquifer mass stayed strong at about 0.633-0.663, and outer leak stayed negligible at about 0.000000-0.000076. The failure mode was bilateral balance: lens balance ranged from about 0.191-0.989 and dry-firn balance from about 0.027-0.974, with only a few rare supported seeds near the high-chi edge while the vast majority of deepest 1024-site and 2048-site files remained one-flank pinned.
+  Conclusion: REJECTED. Stronger bilateral ice-lens coupling reliably creates a centered aquifer-dominated bridge, but it does not reliably stabilize the full balanced dry-firn / lens / aquifer / lens / dry-firn mode on the deepest same-day frontier. The central capture is robust while the flank symmetry almost always fails, so the hypothesized balanced bilateral aquifer bridge is not supported by today’s ranked sample.
+
+EXPERIMENT: exp_exp_thylakoid_grana_stromalamella_bridge_threshold (1207 total results available, 300 sampled, 28 hosts)
+  Discovered: 2026-03-29 02:58 UTC
+  Last updated: 2026-03-29
+  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048)
+  Results: Across 300 top-fitness same-day files, bridge mass again stayed near 0.9999-1.0000, core mass stayed strong at about 0.566-0.583, and outer leak stayed tiny at about 0.000000-0.000048. The limiting variable was bilateral side balance: margin balance ranged from about 0.134-0.988 and lamella balance from about 0.023-0.927, with only a few isolated supported seeds while most of the deepest 1024-site and 2048-site frontier still localized onto one lamella branch.
+  Conclusion: REJECTED. Stronger grana-margin coupling reliably captures the softest mode into the granum core, but it does not robustly deliver the balanced stroma-lamella / margin / core / margin / stroma-lamella bridge required by the hypothesis. The dominant same-day pattern is central bridging with persistent lateral asymmetry, so the proposed balanced grana bridge is not confirmed on the current frontier.
+2026-03-29 GPU DESIGN NOTES
+- Reviewed the 11 currently weighted GPU families plus today's deduplicated findings; I did not retire anything in this step because the prompt later forbids retirement here and at least 2 GPU families must remain active regardless.
+- Added `exp_er_pm_tether_microdomain_bridge_threshold_gpu.py` after literature searches for `"ER-PM contact sites" review lipid transfer tethering Nature Reviews` and `"extended synaptotagmin" ER-PM contact site structure lipid transfer Nature`.
+- Found adjacent literature on ER-PM tethering, lipid-transfer proteins, and nanodomain organization, but not a dense GPU iterative-deepening eigensolve threshold map for balanced cytosol / tether / plasma-membrane microdomain / tether / cytosol soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`xi` onset where stronger bilateral ER-PM tether reinforcement overcomes one-flank pinning and stabilizes a balanced lipid-transfer microdomain bridge at GPU-scaled matrix sizes.
+- Added `exp_talin_vinculin_clutch_bridge_threshold_gpu.py` after literature searches for `"talin vinculin" molecular clutch review Nature Reviews` and `"molecular clutch" talin vinculin computational model PNAS`.
+- Found adjacent literature on focal-adhesion clutch mechanics, talin unfolding, and vinculin recruitment, but not a dense GPU iterative-deepening eigensolve threshold map for balanced stress-fiber / clutch / adhesion-plaque / clutch / stress-fiber soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`lambda` onset where stronger bilateral talin-vinculin reinforcement overcomes one-edge slippage and stabilizes a balanced clutch bridge on large GPU frontiers.
+2026-03-29 CPU DESIGN NOTES
+- Retired `exp_ciliary_rootlet_basalbody_bridge_threshold`: today's deduplicated findings show a 300-file unanimous CONFIRMED frontier, so more CPU seeding is not justified.
+- Retired `exp_crystalline_lens_y_suture_bridge_threshold`: today's deduplicated findings show a 300-file unanimous CONFIRMED frontier, so more CPU seeding is not justified.
+- Added `exp_firn_ice_lens_aquifer_bridge_threshold.py` after literature searches for `"firn ice lenses" hydrology model paper`, `"Greenland firn aquifer" model paper`, and `"firn aquifer" hydraulic model Greenland paper`.
+- Found adjacent literature on firn aquifer drainage, firn permeability, and ice-lens-mediated routing, but not a dense iterative-deepening eigensolve threshold map for balanced bilateral aquifer capture in a disordered surrogate operator.
+- Novel angle: map the finite-`chi` onset where stronger bilateral ice-lens coupling overcomes one-flank meltwater pinning and stabilizes a centered aquifer bridge at large `N`.
+- Added `exp_thylakoid_grana_stromalamella_bridge_threshold.py` after literature searches for `"thylakoid membrane" domain model grana stroma paper`, `"grana" "stroma lamellae" model photosynthesis paper`, and `"thylakoid membrane" grana stroma mathematical model`.
+- Found adjacent literature on thylakoid ultrastructure, grana-margin domains, and photosystem partitioning, but not a dense iterative-deepening eigensolve threshold map for balanced bilateral granum-core capture in a disordered surrogate operator.
+- Novel angle: map the finite-`phi` onset where stronger bilateral grana-margin coupling overcomes one-branch localization and stabilizes a centered grana / margin / lamella bridge at large `N`.
