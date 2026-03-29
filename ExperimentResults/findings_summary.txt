@@ -78,15 +78,22 @@ EXPERIMENT: exp_glymphatic_astrocyte_endfoot_bridge_threshold (2079 total result
   Conclusion: PRELIMINARY. Stronger bilateral endfoot coupling does stabilize the centered exchange mode, and the effect strengthens smoothly with rho. The frontier is still mixed enough on balance that this should remain provisional rather than confirmed.
 
 EXPERIMENT: exp_mangrove_aerenchyma_sulfide_escape_bridge_threshold (1994 total results available, 100 sampled, 37 hosts)
-  Discovered: 2026-03-29 20:18 UTC
-  Last updated: 2026-03-29
-  Top fitness: 6553600.0 (bw~1.5e-7, N=2048, chi=0.1317), 6553600.0 (bw~1.5e-7, N=2048, chi=0.3037), 6553600.0 (bw~1.5e-7, N=2048, chi=0.2768)
+  Discovered: 2026-03-29 20:18 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=2048, chi=0.1317), 6553600.0 (bw~1.5e-7, N=2048, chi=0.3037), 6553600.0 (bw~1.5e-7, N=2048, chi=0.2768)
   Results: The frontier keeps bridge mass around 0.879-0.920, aerenchyma mass around 0.291-0.398, and leak around 0.017-0.064, with many supported 1024-site and 2048-site files spanning chi from about 0.13 into the 0.30s. Balance failures still appear at some intermediate chi values, but the centered escape bridge repeatedly reasserts itself across hosts and system sizes rather than surviving only in a narrow tail.
   Conclusion: CONFIRMED. Bilateral aerenchyma reinforcement robustly stabilizes the centered oxygen-escape bridge on the deep same-day frontier, with broad low-leak support across many ranked files. The remaining asymmetry outliers are local fluctuations, not the dominant pattern.
-
 EXPERIMENT: exp_battery_separator_dendrite_neck_bridge_threshold (2038 total results available, 100 sampled, 37 hosts)
-  Discovered: 2026-03-29 20:18 UTC
-  Last updated: 2026-03-29
-  Top fitness: 6553600.0 (bw~1.5e-7, N=1024, eta=0.2601), 6553600.0 (bw~1.5e-7, N=2048, eta=0.3109), 6553600.0 (bw~1.5e-7, N=2048, eta=0.2995)
+  Discovered: 2026-03-29 20:18 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=1024, eta=0.2601), 6553600.0 (bw~1.5e-7, N=2048, eta=0.3109), 6553600.0 (bw~1.5e-7, N=2048, eta=0.2995)
   Results: Neck-focused bridge mass is consistently present but marginal, usually around 0.830-0.856 with neck mass around 0.345-0.417 and leak around 0.014-0.046. Cleaner supported runs emerge at higher eta around 0.30-0.50, yet much of the top-ranked frontier still sits just under the bridge-mass or balance targets rather than locking into a unanimously stable centered mode.
   Conclusion: PRELIMINARY. Separator-neck reinforcement is pushing the system in the hypothesized direction, especially at higher eta where low-leak balanced runs become common. The effect is not yet strong enough across the highest-fitness frontier to call it confirmed.
+EXPERIMENT: exp_microvillus_terminal_web_bridge_threshold (1297 total results available, 200 sampled, 29 hosts)
+  Discovered: 2026-03-29 22:16 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=2048, psi=0.3630), 6553600.0 (bw~1.5e-7, N=1024, psi=0.2601), 6553600.0 (bw~1.5e-7, N=1024, psi=0.2747)
+  Results: The ranked frontier keeps bridge mass around 0.835-0.848, terminal-web mass around 0.359-0.414, and lumen leak around 0.008-0.029. Higher psi clearly sharpens the bridge and suppresses leak, but many deep files still miss either the 0.85 bridge target or the 0.86 balance target, with the strongest pocket near psi~0.42-0.54 only barely approaching the threshold.
+  Conclusion: PRELIMINARY. Bilateral rootlet and terminal-web reinforcement is moving the system in the hypothesized direction, but the deep same-day frontier still falls just short of a robust centered bridge. This looks like a real but not yet settled onset rather than a finished confirmation.
+EXPERIMENT: exp_submarine_groundwater_saltwedge_bridge_threshold (1261 total results available, 200 sampled, 27 hosts)
+  Discovered: 2026-03-29 22:16 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=2048, chi=2.6767), 6553600.0 (bw~1.5e-7, N=1024, chi=2.6231), 6553600.0 (bw~1.5e-7, N=2048, chi=2.2273)
+  Results: Across the sampled frontier the centered wedge is extremely clean: bridge mass stays around 0.890, saltwedge mass around 0.500-0.511, transition balance around 0.95-0.99, and boundary leak around 0.0006-0.0015. The effect is stable from chi~1.7 through above 3.0 and remains strong at both 1024-site and 2048-site depth.
+  Conclusion: CONFIRMED. Stronger bilateral interface reinforcement robustly stabilizes the centered fresh-salt wedge bridge on the highest-fitness same-day frontier. The bridge is not only present but unusually clean, with vanishing leak and essentially unanimous left-right balance across deep files.
+EXPERIMENT: exp_synovial_lubricin_cartilage_bridge_threshold (1219 total results available, 200 sampled, 27 hosts)
+  Discovered: 2026-03-29 22:16 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=1024, lambda=0.7288), 6553600.0 (bw~1.5e-7, N=1024, lambda=0.7435), 6553600.0 (bw~1.5e-7, N=1024, lambda=0.7435)
+  Results: The frontier is symmetric and low-leak, with lubricin balance usually around 0.90-0.99 and cartilage leak around 0.004-0.007, but bridge mass stays pinned near 0.829-0.831 across almost the entire sampled lambda range. Film mass rises modestly into the 0.446 range at higher lambda, yet the centered film never gets close to the bridge criterion the way the successful families do.
+  Conclusion: NO EFFECT. Stronger lubricin reinforcement does not materially produce the hypothesized centered synovial-film bridge on the deep same-day frontier. The mode stays tidy but underpowered, so the main predicted transition is absent rather than merely noisy.
