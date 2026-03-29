@@ -55,3 +55,35 @@ EXPERIMENT: exp_exp_thylakoid_grana_stromalamella_bridge_threshold (1207 total r
 - Added `exp_lake_oxicline_methanotroph_localization_threshold.py` after literature searches for `"stratified lake" methane oxidation model`, `"lake methane oxidation" model oxygen`, and `"methanotroph" oxycline stratified lake`.
 - Found adjacent literature on stratified-lake methane oxidation, redox transitions, and methanotroph community structure, but not a dense iterative-deepening eigensolve threshold map for centered oxycline localization in a disordered surrogate operator.
 - Novel angle: map the finite-`zeta` onset where stronger oxic-anoxic coupling overcomes boundary pinning and localizes the dominant mode inside a methanotroph-rich oxycline band at large `N`.
+2026-03-29 GPU DESIGN NOTES
+- Added `exp_podosome_actin_ring_matrix_bridge_threshold_gpu.py` after literature searches for `"podosome actin ring matrix coupling computational model paper"`, `"podosome actin core ring computational model paper"`, and `"podosome eigenmode threshold actin ring matrix"`.
+- Found adjacent literature on podosome core-ring architecture, force generation, and mechanosensing, but not a dense GPU iterative-deepening eigensolve threshold map for balanced matrix / adhesion-ring / actin-core / adhesion-ring / matrix soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`kappa` onset where stronger bilateral ring-matrix reinforcement overcomes one-flank pinning and stabilizes a balanced podosome bridge at GPU-scaled matrix sizes.
+- Added `exp_subglacial_esker_tunnel_bridge_threshold_gpu.py` after literature searches for `"subglacial esker channel margin computational model paper"`, `"esker eigenmode threshold subglacial channel margin"`, and `"modelling distributed and channelized subglacial drainage the spacing of channels"`.
+- Found adjacent literature on channelized subglacial drainage, esker deposition, and conduit spacing, but not a dense GPU iterative-deepening eigensolve threshold map for balanced ice-bed / tunnel-wall / sediment-core / tunnel-wall / ice-bed soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`eta` onset where stronger bilateral wall-sediment reinforcement overcomes one-margin pinning and stabilizes a centered esker bridge on large GPU frontiers.
+- Added `exp_mam_calcium_nanodomain_bridge_threshold_gpu.py` after literature searches for `"ER mitochondria calcium nanodomain computational model paper"`, `"ER-mitochondria calcium nanodomain eigenmode threshold"`, and `"A mathematical model of calcium dynamics obesity and mitochondria-associated ER membranes"`.
+- Found adjacent literature on ER-mitochondria contact sites, MAM calcium exchange, and calcium/redox nanodomains, but not a dense GPU iterative-deepening eigensolve threshold map for balanced cytosol / tether / MAM-calcium-nanodomain / tether / cytosol soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`chi` onset where stronger bilateral tether reinforcement overcomes one-flank pinning and stabilizes a balanced MAM calcium bridge at GPU-scaled matrix sizes.
+2026-03-29 CPU DESIGN NOTES
+- CPU generator currently has zero weighted families in `wu_generator_config.json`, so this pass focused on replenishing Step 8 with fresh CPU scripts rather than retiring anything further.
+- Added `exp_hydrothermal_vent_chemocline_localization_threshold.py` after literature searches for `"hydrothermal vent" sulfide oxygen model paper`, `"hydrothermal plume" sulfur oxidation model`, and `"hydrothermal vent" chemocline sulfur oxidizer model`.
+- Found adjacent literature on hydrothermal plume chemistry, sulfide oxidation, and microbial mixing interfaces, but not a dense iterative-deepening eigensolve threshold map for centered chemocline localization in a disordered surrogate operator.
+- Novel angle: map the finite-`eta` onset where stronger oxic-reduced coupling overcomes seawater/vent-side pinning and localizes the dominant mode inside a centered sulfur-oxidation chemocline at large `N`.
+- Added `exp_bone_lacunocanalicular_osteocyte_bridge_threshold.py` after literature searches for `"osteocyte lacunocanalicular network" computational model`, `"lacunocanalicular network" fluid flow osteocyte model`, and `"osteocyte" network architecture fluid flow canaliculi paper`.
+- Found adjacent literature on osteocyte fluid flow, lacunocanalicular transport, and mechanotransduction microenvironment models, but not a dense iterative-deepening eigensolve threshold map for balanced matrix / canaliculi / lacuna / canaliculi / matrix soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`kappa` onset where stronger bilateral canalicular coupling overcomes mineral-side pinning and stabilizes a lacuna-centered bridge at large `N`.
+
+EXPERIMENT: exp_exp_bone_lacunocanalicular_osteocyte_bridge_threshold (919 total results available, 300 sampled, 18 hosts)
+  Discovered: 2026-03-29 03:31 UTC
+  Last updated: 2026-03-29
+  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107099.9 (bw=7.63e-08, N=2048), 13107099.1 (bw=7.63e-08, N=2048)
+  Results: The 300-file ranked same-day frontier is sharply seed-split. Many deep 1024-site and 2048-site files show strong balanced bridges with bridge mass about 1.069-1.081, lacuna mass about 0.574-0.596, canaliculi balance about 0.803-0.991, and matrix leak about 0.0094-0.0203, but most top-fitness files still fail through side imbalance or excess matrix leak, with unsupported examples sitting near balance 0.17-0.75 and leak 0.021-0.48. Supported seeds appear across a broad kappa band from about 1.84 through 3.60 rather than only at the extreme high-kappa edge.
+  Conclusion: PRELIMINARY. Stronger bilateral canalicular coupling can clearly stabilize the intended lacuna-centered bridge on the deepest same-day frontier, and the successful seeds are not marginal. But the effect is not yet reliable across top-fitness runs, so the hypothesis is promising rather than settled.
+
+EXPERIMENT: exp_exp_hydrothermal_vent_chemocline_localization_threshold (887 total results available, 300 sampled, 18 hosts)
+  Discovered: 2026-03-29 03:31 UTC
+  Last updated: 2026-03-29
+  Top fitness: 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048), 13107100.0 (bw=7.63e-08, N=2048)
+  Results: Across all 300 top-fitness same-day files, the dominant mode is tightly trapped in the center with localization mass about 0.947-0.989, chemocline mass about 0.278-0.460, and reservoir leak only about 0.011-0.053. The failure is bilateral balance: every inspected file remains far below the target, with fringe balance only about 0.006-0.107 while eta is pinned at the upper edge near 3.80 on both 1024-site and 2048-site frontiers.
+  Conclusion: REJECTED. Stronger oxic-reduced coupling reliably creates a sharply centered chemocline-localized mode, but it does not produce the balanced centered state required by the hypothesis on the deepest same-day frontier. The localization succeeds while one side still dominates, so the proposed balanced chemocline capture is not supported by today’s ranked sample.
