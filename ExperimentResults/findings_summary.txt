@@ -39,3 +39,47 @@ EXPERIMENT: exp_olivine_basalt_reaction_rim_bridge_threshold (1467 total results
   Top fitness: 6553600.0 (bw=1.5e-7, kappa=0.189, N=1024), 6553600.0 (bw=1.5e-7, kappa=0.151, N=2048), 6553600.0 (bw=1.5e-7, kappa=0.184, N=1024)
   Results: The frontier splits by kappa: low-kappa brackets around 0.15-0.23 remain marginal or unsupported despite decent reaction-bridge mass, with rim balance often only 0.80-0.89 and basalt leak around 0.05-0.08, while higher-kappa N=2048 cases around 0.25-0.41 repeatedly reach reaction-bridge mass about 0.956-0.974, olivine-core mass 0.374-0.406, rim balance 0.91-0.98, and leak down near 0.026-0.046. The effect is present, but the sampled frontier still includes neighboring mixed brackets rather than a uniformly clean edge.
   Conclusion: PRELIMINARY. Stronger bilateral reaction-rim coupling appears to stabilize a centered olivine-core transport bridge, and the deep N=2048 files above the onset are consistently cleaner than the low-kappa cases. The transition is not yet sharp enough to call fully closed because nearby high-fitness brackets still alternate between mixed and fully supported behavior.
+
+EXPERIMENT: exp_placental_villous_tree_intervillous_bridge_threshold (1025 total results available, 150 sampled, 29 hosts)
+  Discovered: 2026-03-30 09:52 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (rho=0.484, bridge=0.855, balance=0.971), 6553600.0 (rho=0.479, bridge=0.854, balance=0.946), 6553600.0 (rho=0.479, bridge=0.854, balance=0.878)
+  Results: The full ranked 150-file N=2048 pull is mostly supported, with bridge mass staying near 0.851-0.855, intervillous core mass around 0.410-0.431, and maternal leak still only about 0.006-0.011 across the frontier. The few failures appear only as rho relaxes toward roughly 0.34-0.40, where bridge mass remains high but villous balance intermittently slips just below the 0.86 criterion.
+  Conclusion: CONFIRMED. Stronger bilateral villous reinforcement does stabilize a centered intervillous exchange bridge once rho enters the upper part of the sampled frontier, and the deep N=2048 solutions are clean and low-leak. The remaining misses are narrow threshold-edge balance failures rather than evidence against the bridge regime.
+
+EXPERIMENT: exp_lichen_cortex_photobiont_bridge_threshold (971 total results available, 150 sampled, 27 hosts)
+  Discovered: 2026-03-30 09:52 UTC
+  Last updated: 2026-03-30
+  Top fitness: 11465239.4 (eta=0.0521, bridge=0.928, balance=0.904), 9382579.8 (eta=0.0561, bridge=0.927, balance=0.811), 8429176.0 (eta=0.0541, bridge=0.926, balance=0.731)
+  Results: Every sampled file sat on the deep N=2048 frontier and the hydrated bridge itself was always strong, with bridge mass around 0.926-0.935, photobiont-core mass about 0.454-0.477, and desiccation leak only about 0.003-0.013. What stays unsettled is symmetry: adjacent high-fitness brackets from eta about 0.05 up through the mid-0.20s still alternate between supported and unsupported outcomes as cortex balance swings from the low 0.73-0.85 range into the 0.89-1.00 range.
+  Conclusion: PRELIMINARY. Stronger bilateral cortex-photobiont coupling clearly promotes a centered hydrated bridge, but the onset remains broad enough that neighboring high-fitness brackets still flip on balance rather than closing into a uniformly stable threshold. The effect looks real, yet today's frontier does not pin down a sharp settled eta_c.
+
+EXPERIMENT: exp_root_nodule_peribacteroid_oxygen_bridge_threshold (337 total results available, 150 sampled, 22 hosts)
+  Discovered: 2026-03-30 09:52 UTC
+  Last updated: 2026-03-30
+  Top fitness: 819200.0 (chi=3.76535, bridge=0.878, balance=0.974), 819200.0 (chi=3.76035, bridge=0.878, balance=0.993), 819200.0 (chi=3.76035, bridge=0.878, balance=0.992)
+  Results: The entire ranked 150-file pull was supported and entirely N=2048, with oxygen-bridge mass locked near 0.8783-0.8784, peribacteroid core mass around 0.4765-0.4767, infected-zone balance typically 0.97-1.00, and cortex leak falling to only about 2.2e-4-2.4e-4. The sampled chi band is tight around 3.72-3.77, showing a very clean deep-frontier threshold rather than a scattered crossover.
+  Conclusion: CONFIRMED. Strong bilateral infected-zone coupling does overcome cortex-side pinning and stabilizes a centered peribacteroid oxygen bridge on the deepest frontier. The support is unusually clean: every sampled high-fitness file is symmetric, low-leak, and well above the bridge and core targets.
+
+EXPERIMENT: exp_beam_plasma_filament_localization_threshold (269 total results available, 150 sampled, 21 hosts)
+  Discovered: 2026-03-30 09:52 UTC
+  Last updated: 2026-03-30
+  Top fitness: 819200.0 (kappa=0.3363, localization=0.889, balance=0.976), 819200.0 (kappa=0.2122, localization=0.872, balance=0.852), 819200.0 (kappa=0.1725, localization=0.859, balance=0.724)
+  Results: The ranked N=2048 frontier shows a real localization regime, with higher-kappa cases from about 0.43 up through 0.74 repeatedly reaching localization mass about 0.894-0.898, filament mass 0.37-0.40, and beam leak down near 0.005-0.014. The onset remains mixed, though: from roughly kappa 0.17-0.40 many neighboring high-fitness files alternate between supported and unsupported behavior as return-current balance and leak trade off against each other.
+  Conclusion: PRELIMINARY. Stronger bilateral return-current coupling does appear to localize the dominant mode into a centered filament, but the threshold band is still broad and jagged on today's frontier. The high-kappa phase is convincing, yet the mixed onset region is not sharp enough to treat as fully settled.
+
+2026-03-30 GPU DESIGN NOTES
+- Reviewed `/opt/axiom/experiment_session/wu_generator_config.json` and found 37 active weighted GPU families, which exceeds the prompt's hard cap of 20 active GPU experiments.
+- Read `/opt/axiom/experiment_session/retired_experiments.txt`, `/opt/axiom_boinc/html/user/experiment_results/findings_deduplicated.txt`, and `/opt/axiom/experiment_session/findings_summary.txt`; there was no newer `validate_*.txt` log to inspect.
+- Because the queue is already oversubscribed, I did not write new GPU scripts, did not append anything to `/opt/axiom/experiment_session/new_gpu_scripts.txt`, and did not touch deployment/config weights.
+- Immediate implication: Step 10 should retire or zero enough existing GPU families before any additional GPU experiment design is useful or compliant.
+2026-03-30 CPU DESIGN NOTES
+- Reviewed `/opt/axiom/experiment_session/wu_generator_config.json`: 12 CPU families are still weighted, so retiring two settled families leaves the pool safely above the 8-family minimum.
+- Retired `exp_intestinal_crypt_stem_niche_bridge_threshold`: today's 150-file ranked frontier is uniformly REJECTED through N=2048, so more seeds will not rescue the centered crypt-bridge hypothesis.
+- Retired `exp_paranode_juxtaparanode_nodal_bridge_threshold`: today's 150-file ranked frontier is already CONFIRMED with clean symmetry and low leak, so more seeds are wasted there.
+- Added `exp_root_nodule_peribacteroid_oxygen_bridge_threshold.py` after searches for `"root nodule" oxygen diffusion model peribacteroid membrane`, `"legume nodule" oxygen regulation diffusion model`, and `"peribacteroid membrane" oxygen diffusion model`.
+- Found adjacent legume-nodule oxygen barrier and respiration models, but not a dense iterative-deepening eigensolve threshold map for a balanced cortex / infected zone / peribacteroid core / infected zone / cortex bridge mode in a disordered operator.
+- Novel angle: map the finite-`chi` onset where stronger bilateral infected-zone coupling overcomes cortex-side oxygen pinning and stabilizes a centered peribacteroid oxygen bridge at large `N`.
+- Added `exp_beam_plasma_filament_localization_threshold.py` after searches for `"beam plasma" filamentation instability threshold model`, `"current filamentation instability" threshold beam plasma review`, and `"beam plasma instability" filament merging model`.
+- Found adjacent current-filamentation and beam-transport literature, including recent imaging of filament growth, but not a dense iterative-deepening eigensolve threshold map for a balanced beam / return current / filament / return current / beam localization mode in a disordered operator.
+- Novel angle: map the finite-`kappa` onset where stronger bilateral return-current coupling overcomes one-edge beam pinning and localizes the dominant mode into a centered filament at large `N`.
