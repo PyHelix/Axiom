@@ -19,6 +19,12 @@ EXPERIMENT: exp_endothelial_glycocalyx_cleft_bridge_threshold (338 total results
 - Added `exp_subduction_dehydration_channel_bridge_threshold_gpu.py` after literature searches for `"subduction dehydration channelization numerical model"`, `"metamorphic dehydration channelization subduction numerical model"`, and `"subduction channel fluid flow dehydration model"`.
 - Found adjacent literature on dehydration reactions, fluid overpressure, and shear-zone channelization along subduction interfaces, but not a dense GPU iterative-deepening eigensolve threshold map for balanced slab / shear-channel / dehydration-core / shear-channel / mantle-wedge soft-mode capture in a disordered symmetric operator.
 - Novel angle: map the finite-`kappa` onset where stronger bilateral shear-channel reinforcement overcomes unilateral leakage and stabilizes a centered dehydration bridge at GPU-scaled matrix sizes.
+- Added `exp_nucleolus_fc_dfc_gc_bridge_threshold_gpu.py` after literature searches for `"site:pubmed.ncbi.nlm.nih.gov nucleolus fibrillar center dense fibrillar component granular component computational model"`, `"site:pmc.ncbi.nlm.nih.gov nucleolus fibrillar center granular component model"`, and `"site:pubmed.ncbi.nlm.nih.gov nucleolus phase separation fibrillar center granular component model"`.
+- Found broad triphasic nucleolus and phase-separation literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced GC / DFC / FC / DFC / GC soft-mode capture in a disordered symmetric operator.
+- Novel angle: map the finite-`chi` onset where stronger bilateral GC-DFC reinforcement overcomes one-flank compartment pinning and stabilizes a centered fibrillar-center bridge at GPU-scaled matrix sizes.
+- Added `exp_nuclear_speckle_genehub_bridge_threshold_gpu.py` after literature searches for `"site:pubmed.ncbi.nlm.nih.gov nuclear speckle spatial organization splicing computational model"`, `"site:pubmed.ncbi.nlm.nih.gov nuclear speckle gene expression model computational"`, and `"site:pmc.ncbi.nlm.nih.gov nuclear speckle genome organization model"`.
+- Found broad imaging, polymer, and condensate literature on nuclear speckles and genome organization, but not a dense GPU iterative-deepening eigensolve threshold map for balanced chromatin / speckle / gene-hub / speckle / chromatin soft-mode capture in a disordered symmetric operator.
+- Novel angle: map the finite-`sigma` onset where stronger bilateral speckle-shell reinforcement overcomes one-flank speckle localization and stabilizes a centered transcription-hub bridge at GPU-scaled matrix sizes.
 
 2026-03-30 CPU DESIGN NOTES
 - Active CPU config has 8 weighted families. I retired two families with closed same-day conclusions in the registry: `exp_endothelial_glycocalyx_cleft_bridge_threshold` (CONFIRMED) and `exp_perovskite_grainboundary_carrier_bridge_threshold` (REJECTED).
@@ -30,3 +36,11 @@ EXPERIMENT: exp_endothelial_glycocalyx_cleft_bridge_threshold (338 total results
 - Searches: `"quantum point contact" saddle-point potential conductance quantization`; `"quantum point contact" saddle potential localization`; `"quantum point contact" random matrix model`.
 - Found adjacent QPC saddle-potential and conductance literature, including soft-saddle localization in specialized quantum Hall settings, but not a dense iterative-deepening eigensolve threshold map for a balanced reservoir / shoulder / saddle / shoulder / reservoir localization mode.
 - Novel angle: map the finite-`theta` onset where stronger bilateral shoulder confinement overcomes one-reservoir pinning and localizes the dominant mode into a centered saddle corridor at large `N`.
+- Added `exp_paranode_juxtaparanode_nodal_bridge_threshold.py`.
+- Searches: `"node of Ranvier" paranode juxtaparanode computational model`; `"paranode" juxtaparanode axon model`; `"node of Ranvier" FEM model paranode`.
+- Found adjacent Ranvier conduction, compartment, and FEM literature, but not a dense iterative-deepening eigensolve threshold map for a balanced internode / juxtaparanode / paranode / node / paranode / juxtaparanode / internode mode.
+- Novel angle: map the finite-`sigma` onset where stronger bilateral paranode and juxtaparanode reinforcement overcomes one-flank internodal pinning and stabilizes a centered nodal conduction corridor at large `N`.
+- Added `exp_olivine_basalt_reaction_rim_bridge_threshold.py`.
+- Searches: `"olivine dissolution" reaction rim model`; `"olivine basalt" reaction rim diffusion model`; `"reaction rim" olivine numerical model`.
+- Found adjacent dissolution, diffusion-rim, and alteration literature, but not a dense iterative-deepening eigensolve threshold map for a balanced basalt / reaction-rim / olivine-core / reaction-rim / basalt mode.
+- Novel angle: map the finite-`kappa` onset where stronger bilateral reaction-rim coupling overcomes one-flank melt pinning and stabilizes a centered olivine-core bridge at large `N`.
