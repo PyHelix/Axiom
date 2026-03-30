@@ -1,99 +1,13 @@
-2026-03-29 CPU RESEARCH SUMMARY
+EXPERIMENT: exp_perovskite_grainboundary_carrier_bridge_threshold (336 total results available, 300 sampled, 21 hosts)
+  Discovered: 2026-03-30 00:35 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (N=1024, xi=0.275, bridge=0.829, balance=0.882), 6553600.0 (N=1024, xi=0.289, bridge=0.831, balance=0.955), 6553600.0 (N=1024, xi=0.275, bridge=0.829, balance=0.951)
+  Results: The top 292 high-fitness N=1024 and N=2048 files all stayed unsupported even when balance was strong and bulk leak was low: bridge mass sat in a narrow 0.826-0.838 band and never reached the 0.84 support threshold. The only supported files in the 300-sample pull were 8 shallow N=64 runs at fitness 68.3, so the apparent bridge vanishes on the deeper frontier.
+  Conclusion: REJECTED. Bilateral grain-boundary passivation clearly suppresses leak and lifts grain-boundary mass, but it does not stabilize the centered carrier bridge once the search reaches the high-fitness N=1024-2048 frontier. The surviving positives are low-depth finite-size artifacts rather than a robust threshold.
 
-Current CPU pool state:
-- Active weighted CPU experiments at start of this step: 2.
-- Active families were `exp_hopper_orifice_forcechain_bridge_threshold` and `exp_phloem_sieveplate_callose_bridge_threshold`.
-- Today's deduplicated findings mark both active families REJECTED.
-- I did not retire them in this step because the prompt also requires keeping at least 2 active CPU experiments until replacements are available.
-
-Recent CPU conclusions from today's deduplicated frontier:
-- `exp_bone_lacunocanalicular_osteocyte_bridge_threshold`: PRELIMINARY; real bridge exists but high-fitness frontier remains seed-split.
-- `exp_hydrothermal_vent_chemocline_localization_threshold`: REJECTED; centered localization appears but bilateral balance fails.
-- `exp_xylem_pitmembrane_embolism_bridge_threshold`: CONFIRMED; balanced conduit bridge is unanimous on sampled top-fitness files.
-- `exp_basal_ganglia_direct_indirect_selection_threshold`: CONFIRMED; centered selection-channel localization is clean and stable.
-- `exp_mycelial_cord_nutrient_bridge_threshold`: CONFIRMED; centered nutrient bridge is robust across sampled frontier.
-- `exp_nuclear_pore_fg_mesh_localization_threshold`: CONFIRMED; pore-centered localization is stable and balanced.
-- `exp_estuary_turbidity_maximum_localization_threshold`: CONFIRMED; centered ETM core is clean on the ranked frontier.
-- `exp_permafrost_brine_wedge_bridge_threshold`: CONFIRMED; balanced brine-wedge bridge is robust.
-- `exp_caveolae_membrane_reservoir_bridge_threshold`: CONFIRMED; caveolar bridge is clean and host-stable.
-- `exp_hadley_ferrel_jetcore_localization_threshold`: CONFIRMED; centered jet-core localization is clean and symmetric.
-- `exp_meltpond_ice_lid_channel_localization_threshold`: CONFIRMED; centered drainage corridor is robust.
-- `exp_fault_gouge_clast_forcechain_localization_threshold`: CONFIRMED; centered force-chain localization is robust.
-- `exp_chloroplast_pyrenoid_starchsheath_bridge_threshold`: CONFIRMED; pyrenoid bridge is clean and low-leak.
-- `exp_glomerular_podocyte_slitdiaphragm_bridge_threshold`: CONFIRMED; balanced podocyte bridge is real though looser than the cleanest families.
-- `exp_seagrass_lacuna_oxycline_bridge_threshold`: CONFIRMED; root oxycline bridge is stable across sampled frontier.
-
-2026-03-29 CPU DESIGN NOTES
-- Added `exp_retinal_muller_glia_potassium_sink_bridge_threshold.py`.
-  Search: `"Muller glia" potassium buffering computational model retina paper`; `"retina" Muller glia potassium siphoning model paper`.
-  Found adjacent retinal potassium-buffering and morphology-dependent siphoning models, but not a dense iterative-deepening spectral threshold map for balanced bilateral sink capture.
-  Novel angle: map the finite-`kappa` onset where stronger bilateral Muller-glia coupling overcomes one-layer pinning and stabilizes a centered potassium-sink bridge at large `N`.
-- Added `exp_mangrove_aerenchyma_sulfide_escape_bridge_threshold.py`.
-  Search: `mangrove root oxygen sulfide transport model paper`; `mangrove root aerenchyma sulfide oxygen transport model paper`.
-  Found mangrove redox-gradient and internal-aeration models, but not a dense iterative-deepening spectral threshold map for balanced sediment / cortex / aerenchyma / cortex / sediment escape modes.
-  Novel angle: map the finite-`chi` onset where stronger bilateral aerenchyma coupling overcomes one-flank sulfide trapping and stabilizes a centered oxygen-escape bridge.
-- Added `exp_battery_separator_dendrite_neck_bridge_threshold.py`.
-  Search: `"lithium metal battery" separator dendrite mechanical model paper`; `"separator microstructure" dendrite growth pore-scale computational model`.
-  Found pore-scale separator and dendrite-growth simulations, but not a dense iterative-deepening spectral threshold map for balanced anode / separator shoulder / pore neck / separator shoulder / cathode capture.
-  Novel angle: map the finite-`eta` onset where stronger bilateral separator-neck reinforcement suppresses one-wall penetration and stabilizes a centered neck bridge.
-- Added `exp_subduction_melange_shearzone_bridge_threshold.py`.
-  Search: `"subduction melange" shear zone numerical model paper`; `"two-phase subduction shear zone" numerical experiments`.
-  Found geodynamic localization and rheology studies for mixed subduction interfaces, but not a dense iterative-deepening spectral threshold map for balanced slab / damage zone / melange core / damage zone / mantle-wedge capture.
-  Novel angle: map the finite-`lambda` onset where stronger bilateral melange coupling overcomes one-flank localization and stabilizes a centered interface bridge.
-- Added `exp_glymphatic_astrocyte_endfoot_bridge_threshold.py`.
-  Search: `glymphatic astrocyte endfoot perivascular transport computational model paper`; `"glymphatic" astrocyte endfoot model paper`.
-  Found multidomain glymphatic transport models, but not a dense iterative-deepening spectral threshold map for balanced paravenous / endfoot / perivascular core / endfoot / para-arterial capture.
-  Novel angle: map the finite-`rho` onset where stronger bilateral astrocyte-endfoot coupling stabilizes a centered perivascular exchange bridge at large `N`.
-- Added `exp_insect_tracheole_mitochondria_oxygen_bridge_threshold.py`.
-  Search: `"insect" tracheole mitochondria oxygen transport model paper`; `"flight muscle" tracheole physiology theory oxygen`.
-  Found tracheole-oxygen theory and modern geometry studies, but not a dense iterative-deepening spectral threshold map for balanced myofibril / terminal-branch / tracheole tip / terminal-branch / myofibril capture.
-  Novel angle: map the finite-`phi` onset where stronger bilateral tracheolar coupling overcomes one-side oxygen pinning and stabilizes a centered delivery bridge at large `N`.
-
-EXPERIMENT: exp_insect_tracheole_mitochondria_oxygen_bridge_threshold (2003 total results available, 100 sampled, 37 hosts)
-  Discovered: 2026-03-29 20:18 UTC
-  Last updated: 2026-03-29
-  Top fitness: 6553600.0 (bw~1.5e-7, N=2048, phi=0.2544), 6553600.0 (bw~1.5e-7, N=1024, phi=0.2513), 6553600.0 (bw~1.5e-7, N=1024, phi=0.2501)
-  Results: The ranked frontier keeps bridge mass around 0.883-0.893, tracheole mass around 0.389-0.417, and leak around 0.020-0.032. The failure mode is recurrent branch-balance splitting, with many deep files clustering near phi~0.23-0.28 and balance dipping into the 0.78-0.83 range even while the bridge itself remains strong.
-  Conclusion: PRELIMINARY. Stronger bilateral tracheolar coupling does produce a real centered oxygen-delivery bridge, but the highest-fitness frontier is still visibly seed-split on left-right balance. This looks like a genuine positive effect that needs a cleaner symmetry margin before promotion to confirmed.
-
-EXPERIMENT: exp_subduction_melange_shearzone_bridge_threshold (2099 total results available, 100 sampled, 36 hosts)
-  Discovered: 2026-03-29 20:18 UTC
-  Last updated: 2026-03-29
-  Top fitness: 6553600.0 (bw~1.5e-7, N=1024, lambda=0.1478), 6553600.0 (bw~1.5e-7, N=2048, lambda=0.1430), 6553600.0 (bw~1.5e-7, N=2048, lambda=0.1464)
-  Results: Bridge mass stays high at roughly 0.870-0.904 with melange/core mass around 0.324-0.395 and leak around 0.025-0.064. A cleaner balanced regime appears near lambda~0.27-0.28 on 2048-site files, but much of the top-fitness frontier below that remains flank-split with balance commonly in the 0.74-0.83 band.
-  Conclusion: PRELIMINARY. The centered melange bridge is real and eventually becomes quite clean, but the same deep frontier still carries too many asymmetric runs to call the threshold robust. The present evidence supports a finite onset rather than the null, yet symmetry convergence is incomplete.
-
-EXPERIMENT: exp_retinal_muller_glia_potassium_sink_bridge_threshold (2022 total results available, 100 sampled, 36 hosts)
-  Discovered: 2026-03-29 20:18 UTC
-  Last updated: 2026-03-29
-  Top fitness: 6553600.0 (bw~1.5e-7, N=1024, kappa=0.2800), 6553600.0 (bw~1.5e-7, N=1024, kappa=0.3104), 6553600.0 (bw~1.5e-7, N=2048, kappa=0.1905)
-  Results: The sampled frontier shows very strong sink bridges, with bridge mass about 0.850-0.931, sink mass about 0.245-0.418, and leak falling from about 0.105 at weak coupling to about 0.012 at stronger coupling. The unresolved issue is layer balance: many files at kappa~0.27-0.31 remain just below the 0.84 target, even though a cleaner supported pocket emerges by kappa~0.29-0.51.
-  Conclusion: PRELIMINARY. Muller-glia coupling clearly strengthens and sharpens the centered potassium sink, so the hypothesis is not failing on core capture or leak control. The remaining obstacle is persistent symmetry jitter on the highest-fitness frontier, which keeps this result short of confirmed.
-
-EXPERIMENT: exp_glymphatic_astrocyte_endfoot_bridge_threshold (2079 total results available, 100 sampled, 37 hosts)
-  Discovered: 2026-03-29 20:18 UTC
-  Last updated: 2026-03-29
-  Top fitness: 6553600.0 (bw~1.5e-7, N=1024, rho=0.1952), 6553600.0 (bw~1.5e-7, N=2048, rho=0.2779), 6553600.0 (bw~1.5e-7, N=1024, rho=0.1667)
-  Results: Perivascular bridge mass sits in a narrow but stable band around 0.856-0.880, core mass around 0.337-0.400, and leak around 0.016-0.047. Support becomes common from rho~0.18 upward and looks especially clean near rho~0.29-0.39, but many neighboring deep files still miss on endfoot balance rather than on bridge or leak.
-  Conclusion: PRELIMINARY. Stronger bilateral endfoot coupling does stabilize the centered exchange mode, and the effect strengthens smoothly with rho. The frontier is still mixed enough on balance that this should remain provisional rather than confirmed.
-
-EXPERIMENT: exp_mangrove_aerenchyma_sulfide_escape_bridge_threshold (1994 total results available, 100 sampled, 37 hosts)
-  Discovered: 2026-03-29 20:18 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=2048, chi=0.1317), 6553600.0 (bw~1.5e-7, N=2048, chi=0.3037), 6553600.0 (bw~1.5e-7, N=2048, chi=0.2768)
-  Results: The frontier keeps bridge mass around 0.879-0.920, aerenchyma mass around 0.291-0.398, and leak around 0.017-0.064, with many supported 1024-site and 2048-site files spanning chi from about 0.13 into the 0.30s. Balance failures still appear at some intermediate chi values, but the centered escape bridge repeatedly reasserts itself across hosts and system sizes rather than surviving only in a narrow tail.
-  Conclusion: CONFIRMED. Bilateral aerenchyma reinforcement robustly stabilizes the centered oxygen-escape bridge on the deep same-day frontier, with broad low-leak support across many ranked files. The remaining asymmetry outliers are local fluctuations, not the dominant pattern.
-EXPERIMENT: exp_battery_separator_dendrite_neck_bridge_threshold (2038 total results available, 100 sampled, 37 hosts)
-  Discovered: 2026-03-29 20:18 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=1024, eta=0.2601), 6553600.0 (bw~1.5e-7, N=2048, eta=0.3109), 6553600.0 (bw~1.5e-7, N=2048, eta=0.2995)
-  Results: Neck-focused bridge mass is consistently present but marginal, usually around 0.830-0.856 with neck mass around 0.345-0.417 and leak around 0.014-0.046. Cleaner supported runs emerge at higher eta around 0.30-0.50, yet much of the top-ranked frontier still sits just under the bridge-mass or balance targets rather than locking into a unanimously stable centered mode.
-  Conclusion: PRELIMINARY. Separator-neck reinforcement is pushing the system in the hypothesized direction, especially at higher eta where low-leak balanced runs become common. The effect is not yet strong enough across the highest-fitness frontier to call it confirmed.
-EXPERIMENT: exp_microvillus_terminal_web_bridge_threshold (1297 total results available, 200 sampled, 29 hosts)
-  Discovered: 2026-03-29 22:16 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=2048, psi=0.3630), 6553600.0 (bw~1.5e-7, N=1024, psi=0.2601), 6553600.0 (bw~1.5e-7, N=1024, psi=0.2747)
-  Results: The ranked frontier keeps bridge mass around 0.835-0.848, terminal-web mass around 0.359-0.414, and lumen leak around 0.008-0.029. Higher psi clearly sharpens the bridge and suppresses leak, but many deep files still miss either the 0.85 bridge target or the 0.86 balance target, with the strongest pocket near psi~0.42-0.54 only barely approaching the threshold.
-  Conclusion: PRELIMINARY. Bilateral rootlet and terminal-web reinforcement is moving the system in the hypothesized direction, but the deep same-day frontier still falls just short of a robust centered bridge. This looks like a real but not yet settled onset rather than a finished confirmation.
-EXPERIMENT: exp_submarine_groundwater_saltwedge_bridge_threshold (1261 total results available, 200 sampled, 27 hosts)
-  Discovered: 2026-03-29 22:16 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=2048, chi=2.6767), 6553600.0 (bw~1.5e-7, N=1024, chi=2.6231), 6553600.0 (bw~1.5e-7, N=2048, chi=2.2273)
-  Results: Across the sampled frontier the centered wedge is extremely clean: bridge mass stays around 0.890, saltwedge mass around 0.500-0.511, transition balance around 0.95-0.99, and boundary leak around 0.0006-0.0015. The effect is stable from chi~1.7 through above 3.0 and remains strong at both 1024-site and 2048-site depth.
-  Conclusion: CONFIRMED. Stronger bilateral interface reinforcement robustly stabilizes the centered fresh-salt wedge bridge on the highest-fitness same-day frontier. The bridge is not only present but unusually clean, with vanishing leak and essentially unanimous left-right balance across deep files.
-EXPERIMENT: exp_synovial_lubricin_cartilage_bridge_threshold (1219 total results available, 200 sampled, 27 hosts)
-  Discovered: 2026-03-29 22:16 UTC | Last updated: 2026-03-29 | Top fitness: 6553600.0 (bw~1.5e-7, N=1024, lambda=0.7288), 6553600.0 (bw~1.5e-7, N=1024, lambda=0.7435), 6553600.0 (bw~1.5e-7, N=1024, lambda=0.7435)
-  Results: The frontier is symmetric and low-leak, with lubricin balance usually around 0.90-0.99 and cartilage leak around 0.004-0.007, but bridge mass stays pinned near 0.829-0.831 across almost the entire sampled lambda range. Film mass rises modestly into the 0.446 range at higher lambda, yet the centered film never gets close to the bridge criterion the way the successful families do.
-  Conclusion: NO EFFECT. Stronger lubricin reinforcement does not materially produce the hypothesized centered synovial-film bridge on the deep same-day frontier. The mode stays tidy but underpowered, so the main predicted transition is absent rather than merely noisy.
+EXPERIMENT: exp_endothelial_glycocalyx_cleft_bridge_threshold (338 total results available, 300 sampled, 24 hosts)
+  Discovered: 2026-03-30 00:35 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (N=1024, sigma=3.790, bridge=0.848, unsupported), 6553600.0 (N=1024, sigma=3.790, bridge=0.848, unsupported), 6553600.0 (N=1024, sigma=3.790, bridge=0.848, unsupported)
+  Results: After five razor-tight but still unsupported N=1024 files at sigma=3.790, the ranked frontier becomes overwhelmingly clean at N=2048: 284 of the 300 sampled files were supported, with bridge mass fixed around 0.852, cleft mass around 0.471, glycocalyx balance typically 0.976-1.000, and matrix leak effectively zero. The remaining unsupported files in the pull were shallow N=64 runs with bridge mass only about 0.781-0.782 despite the same vanishing leak.
+  Conclusion: CONFIRMED. Strong bilateral glycocalyx organization does stabilize a centered cleft-filter bridge once the search reaches the deepest N=2048 results, and that bridge is exceptionally clean and symmetric. The residual failures are shallow finite-size edge cases, not a breakdown of the high-fitness frontier.
