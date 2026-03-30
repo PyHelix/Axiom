@@ -68,18 +68,30 @@ EXPERIMENT: exp_beam_plasma_filament_localization_threshold (269 total results a
   Results: The ranked N=2048 frontier shows a real localization regime, with higher-kappa cases from about 0.43 up through 0.74 repeatedly reaching localization mass about 0.894-0.898, filament mass 0.37-0.40, and beam leak down near 0.005-0.014. The onset remains mixed, though: from roughly kappa 0.17-0.40 many neighboring high-fitness files alternate between supported and unsupported behavior as return-current balance and leak trade off against each other.
   Conclusion: PRELIMINARY. Stronger bilateral return-current coupling does appear to localize the dominant mode into a centered filament, but the threshold band is still broad and jagged on today's frontier. The high-kappa phase is convincing, yet the mixed onset region is not sharp enough to treat as fully settled.
 
-2026-03-30 GPU DESIGN NOTES
-- Reviewed `/opt/axiom/experiment_session/wu_generator_config.json` and found 37 active weighted GPU families, which exceeds the prompt's hard cap of 20 active GPU experiments.
-- Read `/opt/axiom/experiment_session/retired_experiments.txt`, `/opt/axiom_boinc/html/user/experiment_results/findings_deduplicated.txt`, and `/opt/axiom/experiment_session/findings_summary.txt`; there was no newer `validate_*.txt` log to inspect.
-- Because the queue is already oversubscribed, I did not write new GPU scripts, did not append anything to `/opt/axiom/experiment_session/new_gpu_scripts.txt`, and did not touch deployment/config weights.
-- Immediate implication: Step 10 should retire or zero enough existing GPU families before any additional GPU experiment design is useful or compliant.
-2026-03-30 CPU DESIGN NOTES
-- Reviewed `/opt/axiom/experiment_session/wu_generator_config.json`: 12 CPU families are still weighted, so retiring two settled families leaves the pool safely above the 8-family minimum.
-- Retired `exp_intestinal_crypt_stem_niche_bridge_threshold`: today's 150-file ranked frontier is uniformly REJECTED through N=2048, so more seeds will not rescue the centered crypt-bridge hypothesis.
-- Retired `exp_paranode_juxtaparanode_nodal_bridge_threshold`: today's 150-file ranked frontier is already CONFIRMED with clean symmetry and low leak, so more seeds are wasted there.
-- Added `exp_root_nodule_peribacteroid_oxygen_bridge_threshold.py` after searches for `"root nodule" oxygen diffusion model peribacteroid membrane`, `"legume nodule" oxygen regulation diffusion model`, and `"peribacteroid membrane" oxygen diffusion model`.
-- Found adjacent legume-nodule oxygen barrier and respiration models, but not a dense iterative-deepening eigensolve threshold map for a balanced cortex / infected zone / peribacteroid core / infected zone / cortex bridge mode in a disordered operator.
-- Novel angle: map the finite-`chi` onset where stronger bilateral infected-zone coupling overcomes cortex-side oxygen pinning and stabilizes a centered peribacteroid oxygen bridge at large `N`.
-- Added `exp_beam_plasma_filament_localization_threshold.py` after searches for `"beam plasma" filamentation instability threshold model`, `"current filamentation instability" threshold beam plasma review`, and `"beam plasma instability" filament merging model`.
-- Found adjacent current-filamentation and beam-transport literature, including recent imaging of filament growth, but not a dense iterative-deepening eigensolve threshold map for a balanced beam / return current / filament / return current / beam localization mode in a disordered operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral return-current coupling overcomes one-edge beam pinning and localizes the dominant mode into a centered filament at large `N`.
+EXPERIMENT: exp_coral_reef_larval_corridor_localization_threshold (324 total results available, 271 sampled, 23 hosts)
+  Discovered: 2026-03-30 12:12 UTC
+  Last updated: 2026-03-30
+  Top fitness: 819200.0 (xi=0.323068, N=2048, loc=0.898, balance=0.829), 819200.0 (xi=0.497445, N=2048, loc=0.902, balance=0.986), 819200.0 (xi=0.297153, N=2048, loc=0.898, balance=0.827)
+  Results: Across the 271-file ranked pull, localization mass stayed high at about 0.88-0.90 and corridor mass at about 0.23-0.40, with reef leak already modest near 0.015-0.058, but support kept flipping on shelf balance. Lower and mid-xi brackets around roughly 0.07-0.40 repeatedly failed with balance only 0.76-0.88, while many higher-xi cases from about 0.50 upward were cleanly supported with balance around 0.89-0.99 and leak closer to 0.016-0.019.
+  Conclusion: PRELIMINARY. Stronger bilateral shelf stepping-stone coupling does appear to localize the dominant dispersal mode into a centered pelagic corridor, but today's frontier still contains a broad balance-limited onset band rather than a sharply settled threshold. The effect is real, yet the mixed support around intermediate xi keeps it short of confirmation.
+
+EXPERIMENT: exp_snowpack_windpump_ventilation_localization_threshold (296 total results available, 271 sampled, 21 hosts)
+  Discovered: 2026-03-30 12:12 UTC
+  Last updated: 2026-03-30
+  Top fitness: 819200.0 (sigma=3.77035, N=2048, loc=0.886, balance=0.978), 819200.0 (sigma=3.75535, N=2048, loc=0.886, balance=0.974), 819200.0 (sigma=3.77035, N=2048, loc=0.886, balance=1.000)
+  Results: The full 271-file ranked sample was uniformly supported, spanning mostly deep N=2048 files plus additional N=512 brackets, with localization mass locked near 0.881-0.886, ventilation-core mass about 0.471-0.473, flank balance usually 0.97-1.00, and surface leak only about 1.6e-4-1.9e-4. The sampled sigma band stayed tight around 3.74-3.79 and never showed a balance or leak breakdown anywhere in the pull.
+  Conclusion: CONFIRMED. Strong bilateral subsurface permeability coupling cleanly overcomes surface trapping and localizes the dominant exchange mode into a centered ventilated snow core. The support is unusually decisive across the entire sampled frontier, with near-perfect symmetry and essentially vanishing leak at both deep and shallower matrix sizes.
+
+EXPERIMENT: exp_er_pm_tether_microdomain_bridge_threshold_gpu (31 total results available, 31 sampled, 13 hosts)
+  Discovered: 2026-03-30 12:12 UTC
+  Last updated: 2026-03-30
+  Top fitness: 13107100.0 (xi=3.800000, N=547, bridge=1.048, cytbal=1.000), 13107100.0 (xi=3.800000, N=547, bridge=1.048, cytbal=1.000), 13107100.0 (xi=3.800000, N=547, bridge=1.048, cytbal=1.000)
+  Results: All 31 sampled GPU files were supported at the extreme high-coupling edge, with bridge score about 2.58-2.69, microdomain mass about 0.150-0.155, tether mass about 0.279-0.283, cytosol and tether balance essentially 1.000, and leak fixed at zero. What is missing is onset structure: the entire available pull is pinned at xi approximately 3.8, so today's data show a saturated bridge regime rather than a mapped threshold band.
+  Conclusion: PRELIMINARY. Strong bilateral ER-PM tether reinforcement clearly captures the soft mode into a clean, perfectly balanced microdomain bridge at the top end of the control range. That ceiling-saturation result is compelling, but the current batch does not yet locate where the transition begins, so the threshold itself remains unsettled.
+
+EXPERIMENT: exp_geothermal_sinter_terrace_vent_bridge_threshold_gpu (27 total results available, 27 sampled, 12 hosts)
+  Discovered: 2026-03-30 12:12 UTC
+  Last updated: 2026-03-30
+  Top fitness: 13107100.0 (eta=3.600000, N=546, bridge=1.030, balance=1.000), 13107100.0 (eta=3.600000, N=437, bridge=1.028, balance=0.999), 13107100.0 (eta=3.600000, N=547, bridge=1.030, balance=1.000)
+  Results: Every sampled GPU file was supported at eta approximately 3.6, with bridge score about 3.25-3.39, vent mass about 0.149-0.153, vent-rim mass about 0.260-0.266, terrace balance essentially 0.999-1.000, and leak at zero across N roughly 436-632. As with the ER-PM run, the available batch sits entirely on the saturated upper edge, so it demonstrates the strong-coupling phase without resolving the onset.
+  Conclusion: PRELIMINARY. Strong bilateral vent-rim cementation very likely stabilizes a centered silica-conduit soft mode once eta is driven to the top of the sampled range, and the resulting state is exceptionally symmetric and leak-free. The evidence is still preliminary because today's results do not yet trace the transition band below that ceiling.
