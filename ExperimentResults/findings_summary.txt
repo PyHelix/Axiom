@@ -95,3 +95,48 @@ EXPERIMENT: exp_geothermal_sinter_terrace_vent_bridge_threshold_gpu (27 total re
   Top fitness: 13107100.0 (eta=3.600000, N=546, bridge=1.030, balance=1.000), 13107100.0 (eta=3.600000, N=437, bridge=1.028, balance=0.999), 13107100.0 (eta=3.600000, N=547, bridge=1.030, balance=1.000)
   Results: Every sampled GPU file was supported at eta approximately 3.6, with bridge score about 3.25-3.39, vent mass about 0.149-0.153, vent-rim mass about 0.260-0.266, terrace balance essentially 0.999-1.000, and leak at zero across N roughly 436-632. As with the ER-PM run, the available batch sits entirely on the saturated upper edge, so it demonstrates the strong-coupling phase without resolving the onset.
   Conclusion: PRELIMINARY. Strong bilateral vent-rim cementation very likely stabilizes a centered silica-conduit soft mode once eta is driven to the top of the sampled range, and the resulting state is exceptionally symmetric and leak-free. The evidence is still preliminary because today's results do not yet trace the transition band below that ceiling.
+
+EXPERIMENT: exp_microvillus_terminal_web_bridge_threshold (5655 total results available, 100 sampled, 43 hosts)
+  Discovered: 2026-03-30 14:32 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (psi=0.289375, N=1024, bridge=0.841, balance=0.857), 6553600.0 (psi=0.274726, N=1024, bridge=0.840, balance=0.903), 6553600.0 (psi=0.348320, N=2048, bridge=0.843, balance=0.881)
+  Results: The highest-ranked frontier sits just under the bridge target almost everywhere: most sampled files stayed at bridge mass about 0.838-0.843 with core mass around 0.368-0.390 and leak about 0.016-0.035, while support flipped mainly on the 0.86 balance cutoff. A few stronger files reached bridge mass around 0.846-0.848 with lower leak near 0.008-0.012, but the top-ranked mass of the frontier remains parked below the 0.85 bridge requirement rather than closing decisively.
+  Conclusion: REJECTED. Bilateral rootlet and terminal-web reinforcement improves symmetry and leak control, but today's deep frontier still fails to stabilize the stronger centered bridge demanded by the hypothesis. The system looks trapped in a near-threshold shoulder regime rather than crossing into a robust supported bridge phase.
+
+EXPERIMENT: exp_glymphatic_astrocyte_endfoot_bridge_threshold (5717 total results available, 100 sampled, 43 hosts)
+  Discovered: 2026-03-30 14:32 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (rho=0.180787, N=1024, bridge=0.861, balance=0.864), 6553600.0 (rho=0.271880, N=1024, bridge=0.873, balance=0.948), 6553600.0 (rho=0.303672, N=1024, bridge=0.876, balance=0.948)
+  Results: The sampled frontier splits sharply by rho. Lower-rho brackets around 0.13-0.22 repeatedly stay unsupported with bridge mass only about 0.849-0.866, core mass about 0.322-0.359, and leak about 0.034-0.056, while higher-rho files from roughly 0.25 upward do support with bridge mass about 0.870-0.880, core mass about 0.369-0.399, balance usually 0.88-0.99, and leak down near 0.017-0.030.
+  Conclusion: REJECTED. Stronger endfoot coupling does help and eventually produces supported files, but the top-ranked frontier is still dominated by lower-rho brackets that remain balance- or leak-limited rather than cleanly settling into a stable bridge regime. The effect is real but today it does not close into a decisive threshold front.
+
+EXPERIMENT: exp_insect_tracheole_mitochondria_oxygen_bridge_threshold (5668 total results available, 100 sampled, 43 hosts)
+  Discovered: 2026-03-30 14:32 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (phi=0.258481, N=1024, bridge=0.890, balance=0.856), 6553600.0 (phi=0.274399, N=1024, bridge=0.891, balance=0.876), 6553600.0 (phi=0.310996, N=1024, bridge=0.894, balance=0.886)
+  Results: Across the full 100-file ranked pull, bridge mass stayed high at about 0.888-0.896 with core mass around 0.404-0.426 and leak usually only 0.017-0.035. Most failures were confined to lower-phi brackets where support was lost on balance alone, but once phi moved into the mid and upper part of the sampled band the files were repeatedly supported with clean symmetry and strong core capture.
+  Conclusion: CONFIRMED. Stronger bilateral tracheolar coupling does stabilize a centered oxygen-delivery bridge in the flight-muscle operator, and the deep frontier above onset is consistently high-mass and low-leak. The remaining misses are narrow onset-edge balance failures rather than evidence against the bridge phase.
+
+EXPERIMENT: exp_retinal_muller_glia_potassium_sink_bridge_threshold (5678 total results available, 100 sampled, 44 hosts)
+  Discovered: 2026-03-30 14:32 UTC
+  Last updated: 2026-03-30
+  Top fitness: 9431833.5 (kappa=0.055958, N=1024, bridge=0.852, balance=0.759), 8315443.5 (kappa=0.056881, N=1024, bridge=0.852, balance=0.809), 7833596.0 (kappa=0.056295, N=1024, bridge=0.851, balance=0.724)
+  Results: The very highest-fitness files cluster at tiny bracket widths but remain unsupported, with bridge mass only about 0.848-0.853, core mass around 0.246-0.251, balance often 0.60-0.81, and leak still high near 0.102-0.108. Deeper into the ranked pull, higher-kappa files from roughly 0.25 upward repeatedly reach strong supported regimes with bridge mass about 0.912-0.925, core mass about 0.360-0.400, and leak down near 0.019-0.034, but the onset remains broad and mixed.
+  Conclusion: PRELIMINARY. Strong bilateral Muller-glia coupling clearly can stabilize a centered potassium-sink bridge, yet the most tightly ranked brackets still include an unresolved low-kappa band that fails on balance and leak. The supported phase looks convincing, but the threshold front remains too jagged to treat as settled today.
+
+EXPERIMENT: exp_battery_separator_dendrite_neck_bridge_threshold (5628 total results available, 100 sampled, 43 hosts)
+  Discovered: 2026-03-30 14:32 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (eta=0.291778, N=1024, bridge=0.842, balance=0.800), 6553600.0 (eta=0.283686, N=1024, bridge=0.842, balance=0.917), 6553600.0 (eta=0.295567, N=1024, bridge=0.843, balance=0.905)
+  Results: Most of the sampled frontier remains narrowly sub-threshold, with bridge mass about 0.839-0.843, core mass about 0.367-0.377, and leak about 0.031-0.035 while support flips mainly on the balance cutoff. A secondary higher-eta band does appear, where bridge mass rises to about 0.848-0.854, core mass to about 0.399-0.413, and leak drops near 0.016-0.023, producing repeated supported files but not a uniformly clean frontier.
+  Conclusion: PRELIMINARY. Stronger separator-neck reinforcement seems able to push the operator into a real centered suppression bridge, but today's ranked frontier is still dominated by near-threshold files that sit just under the bridge target. The higher-eta supported regime is promising, yet the onset is too mixed to count as fully closed.
+
+EXPERIMENT: exp_subduction_melange_shearzone_bridge_threshold (5743 total results available, 100 sampled, 44 hosts)
+  Discovered: 2026-03-30 14:32 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (lambda=0.177636, N=1024, bridge=0.887, balance=0.774), 6553600.0 (lambda=0.128873, N=1024, bridge=0.876, balance=0.822), 6553600.0 (lambda=0.274532, N=1024, bridge=0.903, balance=0.900)
+  Results: The frontier separates into two regimes. Lower-lambda files around 0.12-0.18 stay unsupported with bridge mass about 0.874-0.889, core mass about 0.333-0.361, and leak about 0.043-0.060, while higher-lambda cases around 0.25-0.27 repeatedly support with bridge mass about 0.900-0.903, core mass about 0.388-0.394, balance about 0.88-0.98, and leak down near 0.026-0.029.
+  Conclusion: REJECTED. Stronger melange coupling does generate a supported high-lambda phase, but the top-ranked frontier is still heavily occupied by lower-lambda brackets that fail cleanly on balance and leak rather than converging to a settled bridge threshold. The centered bridge is not yet the dominant outcome on today's deep frontier.
+CPU NOTE 2026-03-30 12:23 UTC: Retired `exp_snowpack_windpump_ventilation_localization_threshold` because today's ranked frontier is unanimously CONFIRMED on deep N=2048 files, so more CPU seeding there is wasted.
+CPU NOTE 2026-03-30 12:23 UTC: Added `exp_pituitary_portal_fenestra_bridge_threshold.py` after searches for `"pituitary portal system" review transport endocrine gland`, `"adenohypophysis" sinusoid model endocrine diffusion`, and `site:pubmed.ncbi.nlm.nih.gov pituitary portal blood flow review`; found adjacent endocrine microcirculation literature but no dense single-seed spectral threshold map for a balanced portal-fenestra bridge.
+CPU NOTE 2026-03-30 12:23 UTC: Added `exp_neural_plate_hingepoint_bridge_threshold.py` after searches for `"neurulation" finite element model neural fold hingepoint`, `"median hinge point" computational model neurulation`, and `"neurulation" mechanical model neural plate bending`; found neurulation mechanics literature but no dense single-seed spectral threshold map for a balanced hingepoint bridge.
