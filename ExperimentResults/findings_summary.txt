@@ -11,36 +11,31 @@ EXPERIMENT: exp_endothelial_glycocalyx_cleft_bridge_threshold (338 total results
   Top fitness: 6553600.0 (N=1024, sigma=3.790, bridge=0.848, unsupported), 6553600.0 (N=1024, sigma=3.790, bridge=0.848, unsupported), 6553600.0 (N=1024, sigma=3.790, bridge=0.848, unsupported)
   Results: After five razor-tight but still unsupported N=1024 files at sigma=3.790, the ranked frontier becomes overwhelmingly clean at N=2048: 284 of the 300 sampled files were supported, with bridge mass fixed around 0.852, cleft mass around 0.471, glycocalyx balance typically 0.976-1.000, and matrix leak effectively zero. The remaining unsupported files in the pull were shallow N=64 runs with bridge mass only about 0.781-0.782 despite the same vanishing leak.
   Conclusion: CONFIRMED. Strong bilateral glycocalyx organization does stabilize a centered cleft-filter bridge once the search reaches the deepest N=2048 results, and that bridge is exceptionally clean and symmetric. The residual failures are shallow finite-size edge cases, not a breakdown of the high-fitness frontier.
-2026-03-30 GPU DESIGN NOTES
-- Reviewed the 30 currently weighted GPU families, the retirement registry, today's deduplicated findings, and significance scores. I did not retire anything here because the prompt's closing instruction says not to retire in this step and the GPU pool is already active.
-- Added `exp_mitochondrial_cristae_respirasome_bridge_threshold_gpu.py` after literature searches for `"mitochondrial cristae respirasome computational model paper"`, `"mitochondrial cristae supercomplex computational model"`, and `"mitochondrial cristae respirasome eigenmode threshold"`.
-- Found adjacent literature on crista ultrastructure, membrane curvature, and respiratory supercomplex organization, but not a dense GPU iterative-deepening eigensolve threshold map for balanced matrix / crista-junction / respirasome-core / crista-junction / matrix soft-mode capture in a disordered symmetric operator.
-- Novel angle: map the finite-`rho` onset where stronger bilateral crista-junction reinforcement overcomes one-flank pinning and stabilizes a centered respirasome bridge at GPU-scaled matrix sizes.
-- Added `exp_subduction_dehydration_channel_bridge_threshold_gpu.py` after literature searches for `"subduction dehydration channelization numerical model"`, `"metamorphic dehydration channelization subduction numerical model"`, and `"subduction channel fluid flow dehydration model"`.
-- Found adjacent literature on dehydration reactions, fluid overpressure, and shear-zone channelization along subduction interfaces, but not a dense GPU iterative-deepening eigensolve threshold map for balanced slab / shear-channel / dehydration-core / shear-channel / mantle-wedge soft-mode capture in a disordered symmetric operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral shear-channel reinforcement overcomes unilateral leakage and stabilizes a centered dehydration bridge at GPU-scaled matrix sizes.
-- Added `exp_nucleolus_fc_dfc_gc_bridge_threshold_gpu.py` after literature searches for `"site:pubmed.ncbi.nlm.nih.gov nucleolus fibrillar center dense fibrillar component granular component computational model"`, `"site:pmc.ncbi.nlm.nih.gov nucleolus fibrillar center granular component model"`, and `"site:pubmed.ncbi.nlm.nih.gov nucleolus phase separation fibrillar center granular component model"`.
-- Found broad triphasic nucleolus and phase-separation literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced GC / DFC / FC / DFC / GC soft-mode capture in a disordered symmetric operator.
-- Novel angle: map the finite-`chi` onset where stronger bilateral GC-DFC reinforcement overcomes one-flank compartment pinning and stabilizes a centered fibrillar-center bridge at GPU-scaled matrix sizes.
-- Added `exp_nuclear_speckle_genehub_bridge_threshold_gpu.py` after literature searches for `"site:pubmed.ncbi.nlm.nih.gov nuclear speckle spatial organization splicing computational model"`, `"site:pubmed.ncbi.nlm.nih.gov nuclear speckle gene expression model computational"`, and `"site:pmc.ncbi.nlm.nih.gov nuclear speckle genome organization model"`.
-- Found broad imaging, polymer, and condensate literature on nuclear speckles and genome organization, but not a dense GPU iterative-deepening eigensolve threshold map for balanced chromatin / speckle / gene-hub / speckle / chromatin soft-mode capture in a disordered symmetric operator.
-- Novel angle: map the finite-`sigma` onset where stronger bilateral speckle-shell reinforcement overcomes one-flank speckle localization and stabilizes a centered transcription-hub bridge at GPU-scaled matrix sizes.
 
-2026-03-30 CPU DESIGN NOTES
-- Active CPU config has 8 weighted families. I retired two families with closed same-day conclusions in the registry: `exp_endothelial_glycocalyx_cleft_bridge_threshold` (CONFIRMED) and `exp_perovskite_grainboundary_carrier_bridge_threshold` (REJECTED).
-- Added `exp_intestinal_crypt_stem_niche_bridge_threshold.py`.
-- Searches: `"intestinal crypt" computational model Paneth stem niche`; `"Paneth cells constitute the niche for Lgr5 stem cells in intestinal crypts"`; `"Computational model of cell positioning" intestinal crypt epithelium`.
-- Found adjacent intestinal-crypt positioning and Paneth/Lgr5 niche literature, but not a dense iterative-deepening eigensolve threshold map for a balanced stroma / Paneth-niche / crypt-base / Paneth-niche / stroma mode.
-- Novel angle: map the finite-`chi` onset where stronger bilateral niche reinforcement overcomes one-wall stromal pinning and stabilizes a centered crypt-base bridge at large `N`.
-- Added `exp_quantum_point_contact_saddle_localization_threshold.py`.
-- Searches: `"quantum point contact" saddle-point potential conductance quantization`; `"quantum point contact" saddle potential localization`; `"quantum point contact" random matrix model`.
-- Found adjacent QPC saddle-potential and conductance literature, including soft-saddle localization in specialized quantum Hall settings, but not a dense iterative-deepening eigensolve threshold map for a balanced reservoir / shoulder / saddle / shoulder / reservoir localization mode.
-- Novel angle: map the finite-`theta` onset where stronger bilateral shoulder confinement overcomes one-reservoir pinning and localizes the dominant mode into a centered saddle corridor at large `N`.
-- Added `exp_paranode_juxtaparanode_nodal_bridge_threshold.py`.
-- Searches: `"node of Ranvier" paranode juxtaparanode computational model`; `"paranode" juxtaparanode axon model`; `"node of Ranvier" FEM model paranode`.
-- Found adjacent Ranvier conduction, compartment, and FEM literature, but not a dense iterative-deepening eigensolve threshold map for a balanced internode / juxtaparanode / paranode / node / paranode / juxtaparanode / internode mode.
-- Novel angle: map the finite-`sigma` onset where stronger bilateral paranode and juxtaparanode reinforcement overcomes one-flank internodal pinning and stabilizes a centered nodal conduction corridor at large `N`.
-- Added `exp_olivine_basalt_reaction_rim_bridge_threshold.py`.
-- Searches: `"olivine dissolution" reaction rim model`; `"olivine basalt" reaction rim diffusion model`; `"reaction rim" olivine numerical model`.
-- Found adjacent dissolution, diffusion-rim, and alteration literature, but not a dense iterative-deepening eigensolve threshold map for a balanced basalt / reaction-rim / olivine-core / reaction-rim / basalt mode.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral reaction-rim coupling overcomes one-flank melt pinning and stabilizes a centered olivine-core bridge at large `N`.
+EXPERIMENT: exp_intestinal_crypt_stem_niche_bridge_threshold (2864 total results available, 150 sampled, 35 hosts)
+  Discovered: 2026-03-30 07:27 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (bw=1.5e-7, chi=0.456, N=2048), 6553600.0 (bw=1.5e-7, chi=0.465, N=1024), 6553600.0 (bw=1.5e-7, chi=0.490, N=2048)
+  Results: Across the full 150-file ranked pull, crypt bridge mass stayed stuck around 0.836-0.838 while crypt-base mass remained strong at about 0.408-0.420, niche balance usually sat between 0.87 and 0.98, and stromal leak stayed low near 0.006-0.009. Even the deepest N=2048 brackets never crossed the 0.85 bridge target, and the sampled frontier stayed uniformly unsupported.
+  Conclusion: REJECTED. Bilateral Paneth-like niche reinforcement concentrates the mode cleanly into the crypt base, but it does not produce the stronger centered bridge required by the hypothesis. The frontier is consistently just below threshold rather than hiding a deeper-size crossover.
+
+EXPERIMENT: exp_quantum_point_contact_saddle_localization_threshold (2838 total results available, 150 sampled, 36 hosts)
+  Discovered: 2026-03-30 07:27 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (bw=1.5e-7, theta=0.397, N=1024), 6553600.0 (bw=1.5e-7, theta=0.338, N=1024), 6553600.0 (bw=1.5e-7, theta=0.321, N=1024)
+  Results: The ranked frontier shows a real confinement crossover: low-theta brackets around 0.16-0.24 are still marginal, with saddle mass only about 0.29-0.33 and support fractions of 0.0-0.5, while higher-theta cases from roughly 0.27 upward repeatedly reach localization mass about 0.88-0.889, saddle mass 0.34-0.39, shoulder balance around 0.88-0.96, and reservoir leak near 0.008-0.02. Neighboring high-fitness brackets still toggle between unsupported, mixed, and fully supported outcomes near the onset.
+  Conclusion: PRELIMINARY. Stronger bilateral shoulder confinement does appear to localize the dominant mode into a balanced saddle corridor, but the threshold band is still broad enough that adjacent high-fitness brackets flip between marginal and fully supported behavior. The effect looks real, yet the onset is not sharp enough today to treat as fully settled.
+
+EXPERIMENT: exp_paranode_juxtaparanode_nodal_bridge_threshold (1497 total results available, 150 sampled, 35 hosts)
+  Discovered: 2026-03-30 07:27 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (bw=1.5e-7, sigma=0.617, N=1024), 6553600.0 (bw=1.5e-7, sigma=0.548, N=1024), 6553600.0 (bw=1.5e-7, sigma=0.551, N=1024)
+  Results: Once sigma reaches the stronger half of the sampled band, the frontier repeatedly shows nodal bridge mass near 0.99-0.998, node mass around 0.25-0.31, paranode balance around 0.86-0.97, and internodal leak only 0.0025-0.01 across many N=1024 and N=2048 files. The failures are concentrated at lower sigma, where the bridge is still large but symmetry and leak control break down together, with balance dropping to roughly 0.69-0.81 and leak rising into the 0.02-0.05 range.
+  Conclusion: CONFIRMED. Stronger bilateral paranode and juxtaparanode reinforcement does overcome one-flank internodal pinning and stabilize a centered nodal conduction corridor. The threshold is visible in the sampled frontier, and above it the deep solutions are clean, symmetric, and low-leak.
+
+EXPERIMENT: exp_olivine_basalt_reaction_rim_bridge_threshold (1467 total results available, 150 sampled, 34 hosts)
+  Discovered: 2026-03-30 07:27 UTC
+  Last updated: 2026-03-30
+  Top fitness: 6553600.0 (bw=1.5e-7, kappa=0.189, N=1024), 6553600.0 (bw=1.5e-7, kappa=0.151, N=2048), 6553600.0 (bw=1.5e-7, kappa=0.184, N=1024)
+  Results: The frontier splits by kappa: low-kappa brackets around 0.15-0.23 remain marginal or unsupported despite decent reaction-bridge mass, with rim balance often only 0.80-0.89 and basalt leak around 0.05-0.08, while higher-kappa N=2048 cases around 0.25-0.41 repeatedly reach reaction-bridge mass about 0.956-0.974, olivine-core mass 0.374-0.406, rim balance 0.91-0.98, and leak down near 0.026-0.046. The effect is present, but the sampled frontier still includes neighboring mixed brackets rather than a uniformly clean edge.
+  Conclusion: PRELIMINARY. Stronger bilateral reaction-rim coupling appears to stabilize a centered olivine-core transport bridge, and the deep N=2048 files above the onset are consistently cleaner than the low-kappa cases. The transition is not yet sharp enough to call fully closed because nearby high-fitness brackets still alternate between mixed and fully supported behavior.
