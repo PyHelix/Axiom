@@ -54,20 +54,6 @@ EXPERIMENT: exp_exp_neural_plate_hingepoint_bridge_threshold (2527 total results
   Conclusion: CONFIRMED. Stronger bilateral fold coupling clearly stabilizes the centered median-hingepoint bridge and suppresses lateral leakage across the deep sample. The remaining noise is a symmetry-limited onset band, not evidence against the proposed bridge state.
   Last updated: 2026-03-31
 
-EXPERIMENT: exp_exp_diatom_raphe_centralnodule_bridge_threshold (340 total results available, 100 sampled, 21 hosts)
-  Discovered: 2026-03-31 16:20 UTC
-  Top fitness: 25600.0 (bw=0.0000, eta=0.241, N=2048), 25600.0 (bw=0.0000, eta=0.238, N=2048), 25600.0 (bw=0.0000, eta=0.232, N=2048)
-  Results: The sample shows a broad central-nodule capture regime, with raphe localization about 0.88-0.98, central-nodule mass about 0.28-0.40, raphe balance usually about 0.87-1.00 in the accepted branch, mantle leak often about 0.012-0.05 in the stronger part of the frontier, and core-to-leak ranging from roughly 5 near onset up through the teens and occasional 20-31 cases. Mixed support is concentrated in the lower-eta onset band around about 0.14-0.20, where balance and leak fluctuate more noticeably, but even there the effect stays directionally bridge-positive rather than flipping to an opposite regime.
-  Conclusion: CONFIRMED. Stronger bilateral raphe coupling does stabilize the predicted centered central-nodule bridge, with a clear low-leak accepted regime opening once eta moves modestly above onset. The threshold edge is still somewhat ragged, but the bridge state itself is well supported by the ranked sample.
-  Last updated: 2026-03-31
-
-EXPERIMENT: exp_exp_mussel_byssus_cuticle_granule_bridge_threshold (317 total results available, 100 sampled, 20 hosts)
-  Discovered: 2026-03-31 16:20 UTC
-  Top fitness: 25600.0 (bw=0.0000, phi=0.270, N=2048), 25600.0 (bw=0.0000, phi=0.267, N=2048), 25600.0 (bw=0.0000, phi=0.203, N=2048)
-  Results: The ranked pull is strongly core-positive, with cuticle localization about 0.88-0.98, core mass about 0.27-0.40, granule balance often about 0.87-0.99 once phi rises past the weakest edge, surface leak falling from about 0.09 near onset to about 0.014-0.05 in the cleaner bridge band, and core-to-leak climbing from roughly 3 near onset into the 8-28 range. The weakest brackets around about 0.10-0.14 remain balance-limited and leakier, but they do not overturn the dominant trend toward centered core capture at higher phi.
-  Conclusion: CONFIRMED. Stronger bilateral granule reinforcement clearly pulls the dominant mode off the cuticle surface and into a centered cuticle-core bridge across the deep sampled frontier. The effect is consistent enough to call the bridge real, with only the low-phi onset band still noisy.
-  Last updated: 2026-03-31
-
 EXPERIMENT: exp_exp_endoplasmic_reticulum_tubule_sheet_bridge_threshold (404 total results available, 200 sampled, 23 hosts)
   Discovered: 2026-03-31 18:41 UTC
   Top fitness: 819193.8 (bw=0.00000122, chi=3.799999, N=2048), 819193.8 (bw=0.00000122, chi=3.799999, N=2048), 409596.9 (bw=0.00000244, chi=3.799999, N=2048)
@@ -87,4 +73,25 @@ EXPERIMENT: exp_exp_fungal_mat_waterfilm_bridge_threshold (417 total results ava
   Top fitness: 819193.8 (bw=0.00000122, eta=3.699999, N=2048), 819193.8 (bw=0.00000122, eta=3.699999, N=2048), 409596.9 (bw=0.00000244, eta=3.699999, N=2048)
   Results: The ranked sample is uniformly eta-ceiling-pinned without a real water-film bridge: at N=2048, bridge mass stays only about 0.00103-0.00112, film mass about 0.00152-0.00168, and rim and substrate balance fluctuate widely from about 0.14 up to about 1.00 with no accompanying jump into a centered bridge state. Spot-checking the strongest bridge cases elsewhere today only reaches about 0.0181 bridge and about 0.0277 film at N=256, still nowhere near the hypothesized bridge regime, while outer leak remains low around 0.0064-0.0070.
   Conclusion: REJECTED. Bilateral hyphal-rim reinforcement does not generate the proposed centered water-film bridge in today's frontier, even when eta is saturated at the upper search bound. The experiment is failing on bridge formation itself, not on leak suppression or threshold resolution, so the hypothesis is not supported.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_basalt_vesicle_zeolite_bridge_threshold (629 total results available, 200 sampled, 28 hosts)
+  Discovered: 2026-03-31 21:06 UTC
+  Top fitness: 819193.8 (bw=0.00000122, kappa=3.899999, N=2048), 819193.8 (bw=0.00000122, kappa=3.899999, N=2048), 409596.9 (bw=0.00000244, kappa=3.899999, N=2048)
+  Results: The ranked frontier is ceiling-pinned without any meaningful zeolite-core bridge: at N=2048, bridge mass stays about 0.001316 and core mass about 0.002365 while rind and wall balance are usually strong and wall leak is only about 0.0000056. Even the strongest bridge cases anywhere today only reach about 0.0213 bridge and 0.0385 core at N=256, still far below the bridge and core targets.
+  Conclusion: REJECTED. Stronger rind-to-core coupling does not produce the predicted centered zeolite bridge in today's basalt-vesicle frontier, even when kappa is pushed to the search ceiling. The experiment suppresses leak and preserves symmetry, but it never transfers appreciable mass into the intended bridge state, so this is a null mechanism rather than an unresolved threshold.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_seagrass_rhizome_oxygen_bridge_threshold (609 total results available, 200 sampled, 26 hosts)
+  Discovered: 2026-03-31 21:06 UTC
+  Top fitness: 819193.8 (bw=0.00000122, rho=3.799999, N=2048), 819193.8 (bw=0.00000122, rho=3.799999, N=2048), 409596.9 (bw=0.00000244, rho=3.799999, N=2048)
+  Results: High-fitness runs are uniformly pinned at the rho ceiling while bridge mass remains about 0.001293 and rhizome-core mass about 0.002379 at N=2048, with good lacuna and sediment balance and sediment leak only about 0.0000061. The best bridge-positive spot checks anywhere today rise only to about 0.0209 bridge and 0.0387 core at N=256, which is still nowhere near the accepted oxygen-bridge regime.
+  Conclusion: REJECTED. Stronger bilateral lacuna-to-core coupling does not stabilize the proposed centered rhizome oxygen bridge in today's frontier. This is not a threshold-localization problem, because both the deepest runs and the strongest bridge outliers remain far below the bridge and core targets even at maximal coupling.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_glomerular_podocyte_slit_bridge_threshold (602 total results available, 200 sampled, 28 hosts)
+  Discovered: 2026-03-31 21:06 UTC
+  Top fitness: 819193.8 (bw=0.00000122, sigma=3.899999, N=2048), 819193.8 (bw=0.00000122, sigma=3.899999, N=2048), 409596.9 (bw=0.00000244, sigma=3.899999, N=2048)
+  Results: The ranked sample is sigma-ceiling-pinned and still never forms a real slit bridge: at N=2048, bridge mass stays about 0.001326 and slit mass about 0.002564 while foot balance is high, Bowman balance is often about 0.80-0.99, filtrate leak is only about 0.0000019, and bridge-to-leak is huge only because the leak is vanishingly small. The strongest bridge cases anywhere today only reach about 0.0214 bridge and 0.0419 slit at N=256, which remains far below the target bridge regime.
+  Conclusion: REJECTED. Increasing bilateral foot-process coupling does not drive the dominant mode into the centered slit-diaphragm bridge hypothesized by this family. The family achieves symmetry and low leak but fails on bridge formation itself, so the mechanism is not supported rather than merely unresolved.
   Last updated: 2026-03-31
