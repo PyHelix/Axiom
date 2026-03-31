@@ -1,7 +1,6 @@
 2026-03-31 GPU DESIGN NOTES
-- Recheck on 2026-03-31: `wu_generator_config.json` currently has 22 weighted GPU families, which is above the hard 20-family cap for this step. No new GPU scripts, manifest entries, config edits, or deployments were made in this run.
-- Active GPU pool check: 20 weighted GPU families are already active in `wu_generator_config.json`, so no config changes or deployments were made in this step.
-- Reviewed the retirement registry, deduplicated findings, and current GPU references; this step followed the prompt's later no-retirement instruction and left the live pool unchanged.
+- Recheck on 2026-03-31: `wu_generator_config.json` currently has 21 weighted GPU families, which is above the hard 20-family cap for this step. No new GPU scripts, manifest entries, config edits, or deployments were made in this run.
+- Reviewed the retirement registry, deduplicated findings, and current GPU references; no validation log matching `validate_*.txt` existed in `/opt/axiom/experiment_session/`, and this step followed the prompt's later no-retirement instruction and left the live pool unchanged.
 - Added `exp_moss_peristome_annulus_bridge_threshold_gpu.py` after searches for `"moss peristome" hygroscopic movement paper` and `"peristome teeth" humidity model moss`.
 - Found adjacent literature on moss peristome hygroscopic mechanics and humidity-regulated spore release, including recent plant-biomechanics papers, but not a dense GPU iterative-deepening eigensolve threshold map for balanced capsule-wall / annulus / pore / annulus / capsule-wall soft-mode capture in a disordered operator.
 - Novel angle: map the finite-`zeta` onset where stronger bilateral annulus-peristome reinforcement overcomes one-capsule pinning and stabilizes a centered pore bridge at large GPU-scaled `N`.
@@ -66,3 +65,36 @@ EXPERIMENT: exp_exp_beam_plasma_filament_localization_threshold (916 total resul
   Top fitness: 819200.0 (bw=0.000001221, kappa=0.250586), 819200.0 (bw=0.000001221, kappa=0.309344), 819200.0 (bw=0.000001221, kappa=0.498907)
   Results: Filament localization is clearly present across the ranked pull, with localization mass about 0.86-0.90, filament mass about 0.28-0.40, and beam leak often pushed down to about 0.007-0.03 once kappa reaches the stronger-coupling end. The unresolved issue is again balance: many top-fitness brackets at kappa about 0.22-0.40 still sit around 0.78-0.86 return-current balance, while the cleaner high-kappa runs above about 0.45 repeatedly cross into the predicted centered regime with very large filament-to-leak ratios.
   Conclusion: PRELIMINARY. Stronger bilateral return-current coupling does strengthen and center the filament state in part of the frontier, especially at higher kappa where leak nearly collapses. The threshold is not yet cleanly mapped, though, because a substantial share of the high-fitness edge still shows one-sided balance failures instead of a uniformly centered filament.
+2026-03-31 CPU DESIGN NOTES (update)
+- Rechecked `wu_generator_config.json`: 19 weighted CPU families were active before this edit, so retiring two more confirmed families still leaves the pool safely above the eight-family minimum.
+- Retired `exp_conifer_torus_margo_sealing_threshold` and `exp_diatom_frustule_areola_cribrum_bridge_threshold` because today's deduplicated frontier now marks both as CONFIRMED with enough depth to reclaim those CPU slots.
+- Added `exp_insect_tracheal_taenidia_lumen_bridge_threshold.py` after searches for `"insect trachea" taenidia mechanics model` and `"tracheal taenidia" computational model`.
+- Found adjacent literature on insect tracheal development, taenidial reinforcement, and airway mechanics, but not a dense CPU iterative-deepening eigensolve threshold map for balanced taenidia / lumen / taenidia capture in a disordered symmetric operator.
+- Novel angle: map the finite-`chi` onset where stronger bilateral taenidial reinforcement overcomes wall-skimming leakage and stabilizes a centered lumen corridor at large `N`.
+- Added `exp_marine_snow_microgel_pore_bridge_threshold.py` after searches for `"marine snow" microgel pore model` and `"marine snow" porous media microgel model`.
+- Found adjacent literature on marine-snow porous-media structure, microgel scaffolds, and solute exchange, but not a dense CPU iterative-deepening eigensolve threshold map for balanced microgel / pore / microgel capture in a disordered symmetric operator.
+- Novel angle: map the finite-`zeta` onset where stronger bilateral microgel reinforcement overcomes seawater-skimming leakage and stabilizes a centered pore corridor at large `N`.
+EXPERIMENT: exp_exp_fault_core_cataclasite_seal_localization_threshold (1217 total results available, 100 sampled, 37 hosts)
+  Discovered: 2026-03-31 09:05 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, lambda=3.750353), 819200.0 (bw=0.000001221, lambda=3.750353), 819200.0 (bw=0.000001221, lambda=3.770352)
+  Results: The sampled frontier is an almost textbook centered seal regime: localization stays about 0.9169 throughout, seal-core mass about 0.4839-0.4841, bilateral balance about 0.97-1.00, and leak only about 0.00032-0.00036 even well down the ranked pull. Across all 100 inspected results the mode remains tightly pinned in the fault core rather than the damage zones, with huge core-to-leak ratios around 1330-1500.
+  Conclusion: CONFIRMED. Stronger bilateral cataclasite-core coupling clearly traps the soft mode into a centered low-leak seal rather than leaving it damage-zone pinned. This is not a fragile threshold edge; the ranked frontier is already deep inside the predicted sealed regime and stays there across hosts and bracket depths.
+EXPERIMENT: exp_exp_meibomian_acinar_duct_bridge_threshold (1212 total results available, 100 sampled, 37 hosts)
+  Discovered: 2026-03-31 09:05 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, eta=3.760353), 819200.0 (bw=0.000001221, eta=3.770352), 819200.0 (bw=0.000001221, eta=3.715353)
+  Results: This is the cleanest new CPU family in the batch: localization sits near 0.8962, duct-core mass near 0.4555, balance near 0.97-1.00, and leak collapses to roughly 0.00017-0.00019 across the full sampled frontier. The 100-result pull is essentially uniform across hosts and bracket depths, with enormous core-to-leak ratios around 2360-2650 and no meaningful drift back toward edge-pinned states.
+  Conclusion: CONFIRMED. Stronger bilateral acinar-duct coupling robustly stabilizes the centered duct bridge mode and overwhelmingly suppresses tarsal-edge leakage. The effect is already saturated in the ranked frontier rather than merely emerging, so additional same-family CPU seeding is not needed to establish direction or magnitude.
+EXPERIMENT: exp_exp_saltmarsh_upland_ecotone_localization_threshold (1209 total results available, 100 sampled, 34 hosts)
+  Discovered: 2026-03-31 09:05 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, sigma=0.322219), 819200.0 (bw=0.000001221, sigma=0.371052), 819200.0 (bw=0.000001221, sigma=0.405021)
+  Results: The dominant mode is strongly marsh-core localized across the ranked pull: localization is already about 0.88-0.98, core mass about 0.29-0.46, and leak falls from about 0.09 in the lowest-sigma edge to about 0.005-0.02 once sigma moves into the cleaner regime. Balance is the only real limiter near onset, but above roughly sigma 0.25-0.35 the frontier repeatedly locks into centered high-localization states with large core-to-leak separation.
+  Conclusion: CONFIRMED. Stronger bilateral brackish-transition coupling does pull the mode off the saline and upland edges and into the centered marsh corridor as hypothesized. The onset is ragged because some otherwise strong brackets still miss the balance target, but the high-fitness frontier has already crossed decisively into the centered low-leak regime.
+EXPERIMENT: exp_exp_stomatal_subsidiary_guardcell_bridge_threshold (1221 total results available, 100 sampled, 35 hosts)
+  Discovered: 2026-03-31 09:05 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, xi=0.932277), 819200.0 (bw=0.000001221, xi=0.870525), 819200.0 (bw=0.000001221, xi=0.682888)
+  Results: The ranked stomatal frontier is overwhelmingly pore-bridge positive: localization stays about 0.93-0.99, pore-core mass about 0.26-0.38, and epidermal-edge leak is only about 0.0005-0.029, dropping below 0.002 in the stronger-coupling brackets. Failures are mostly balance-limited in the mid-xi onset zone around roughly 0.45-0.95, while higher-xi results around 1.0-1.4 repeatedly show strong bilateral centering and very large core-to-leak ratios.
+  Conclusion: CONFIRMED. Stronger subsidiary-cell coupling does stabilize the centered pore bridge rather than leaving the mode edge-pinned, and the effect becomes very strong once xi clears the onset band. The remaining misses are narrow symmetry failures near threshold, not evidence against the bridge-localization mechanism itself.
