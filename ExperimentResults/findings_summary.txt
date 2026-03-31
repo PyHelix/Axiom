@@ -39,3 +39,59 @@ EXPERIMENT: exp_exp_insect_tracheal_taenidia_lumen_bridge_threshold (535 total r
   Results: Even at the very lowest deep brackets, bridge mass is already about 0.93-0.98 in the clean runs, lumen mass about 0.30-0.42, taenidial balance is essentially perfect, wall leak falls to about 0.003-0.04 in the good brackets, and lumen-to-wall easily clears the target with values around 22 and higher. The notable issue is the opposite of weak effect: the best-ranked frontier is pinned against the low-chi floor near 0.05, so the onset appears to lie below the current search range rather than inside it.
   Conclusion: PRELIMINARY. The centered lumen-capture regime is clearly present, but the threshold itself is not yet localized because the deepest successful brackets collapse against the lower search bound. This looks like an onset-below-floor case rather than a null result.
   Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_marine_snow_microgel_pore_bridge_threshold (932 total results available, 140 sampled, 37 hosts)
+  Discovered: 2026-03-31 13:58 UTC
+  Top fitness: 6553600.0 (bw=0.0000, zeta=1.235, N=2048), 6553600.0 (bw=0.0000, zeta=1.227, N=2048), 6553600.0 (bw=0.0000, zeta=1.199, N=2048)
+  Results: The ranked pull contains a real centered pore-corridor regime, with bridge mass often about 0.89-0.95, pore mass about 0.40-0.47, microgel balance essentially perfect, leak dropping to about 0.004-0.06, and pore-to-seawater ratios rising from roughly 7 into the tens and occasional near-100 cases. But the same high-fitness frontier is visibly bifurcated, with many neighboring brackets around zeta about 0.34-1.14 still landing in lower-bridge, higher-leak states around bridge mass 0.73-0.85 and leak about 0.09-0.19.
+  Conclusion: PRELIMINARY. Bilateral microgel reinforcement can clearly capture the dominant mode into the centered pore state, so the mechanism is real. The threshold map is not yet closed because the deep frontier still mixes accepted and leaking branches at nearly identical bracket widths rather than settling into one clean onset band.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_ooid_cortex_nucleus_bridge_threshold (634 total results available, 140 sampled, 29 hosts)
+  Discovered: 2026-03-31 13:58 UTC
+  Top fitness: 10181070.1 (bw=0.0000, kappa=0.050, N=2048), 9693140.8 (bw=0.0000, kappa=0.053, N=2048), 9686040.6 (bw=0.0000, kappa=0.051, N=2048)
+  Results: Strong centered nucleus-capture runs are abundant, with bridge mass commonly about 0.90-0.99, nucleus mass about 0.29-0.38, nearly perfect cortex balance, lagoon leak often about 0.008-0.08, and nucleus-to-lagoon ratios from roughly 3 up to 45. Yet the deepest low-kappa edge is still split between those clean nucleus states and shell-skimming failures with bridge mass only about 0.77-0.84, leak about 0.15-0.23, and ratios around 1.4-2.0.
+  Conclusion: PRELIMINARY. The centered nucleus bridge is clearly achievable and remains strong across much of the sampled frontier. The unresolved issue is that the best-ranked low-kappa brackets still alternate between bridge and shell states, so this looks more like a mixed-branch or onset-below-floor case than a finished threshold localization.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_moss_peristome_hygroscopic_bridge_threshold (600 total results available, 120 sampled, 30 hosts)
+  Discovered: 2026-03-31 13:58 UTC
+  Top fitness: 12825101.4 (bw=0.0000, eta=0.051, N=2048), 12414502.7 (bw=0.0000, eta=0.051, N=2048), 11642182.3 (bw=0.0000, eta=0.054, N=2048)
+  Results: Accepted runs show a robust centered pore corridor with bridge mass about 0.86-0.99, pore mass about 0.30-0.39, annulus balance essentially unity, capsule leak often about 0.01-0.13, and pore-to-capsule ratios from about 2.3 up past 40. But the frontier is still mixed at both the very low-eta floor and the mid-eta band, where otherwise similar brackets can flip into capsule-skimming states with bridge mass about 0.77-0.84 and leak about 0.15-0.23.
+  Conclusion: PRELIMINARY. Stronger annulus-peristome reinforcement does produce the predicted centered pore mode, and the positive branch is not subtle. The threshold itself is not yet settled because the deepest brackets still jump between clean pore capture and obvious leakage states instead of tracing one stable onset.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_corneal_stroma_bowman_bridge_threshold (238 total results available, 100 sampled, 23 hosts)
+  Discovered: 2026-03-31 13:58 UTC
+  Top fitness: 25600.0 (bw=0.0000, kappa=0.377, N=2048), 25600.0 (bw=0.0000, kappa=0.293, N=2048), 25600.0 (bw=0.0000, kappa=0.280, N=2048)
+  Results: Across the ranked sample, corneal localization stays about 0.87-0.94, apex mass about 0.22-0.30, limbal leak usually about 0.02-0.07, and core-to-leak runs from roughly 3 up to 14 in the accepted band. The failures are narrow and balance-limited around kappa about 0.20-0.24, where Bowman symmetry can dip into the mid-0.8s while localization, apex mass, and leak already point in the right direction.
+  Conclusion: CONFIRMED. Stronger bilateral Bowman-stroma coupling does stabilize the predicted centered apical bridge, with a broad low-leak accepted regime once kappa moves modestly past onset. The remaining ambiguity is only the sharpness of the balance threshold, not the direction of effect.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_barrier_island_overwash_fan_bridge_threshold (236 total results available, 100 sampled, 23 hosts)
+  Discovered: 2026-03-31 13:58 UTC
+  Top fitness: 25600.0 (bw=0.0000, lambda=0.289, N=2048), 25600.0 (bw=0.0000, lambda=0.260, N=2048), 25600.0 (bw=0.0000, lambda=0.247, N=2048)
+  Results: The ranked pull is strongly fan-positive, with overwash localization about 0.88-0.96, fan mass about 0.25-0.34, dune leak usually about 0.02-0.09, and core-to-leak ratios climbing from roughly 3 near onset into the teens deeper in the accepted regime. The only persistent failures are in the narrow lower-lambda onset band around about 0.11-0.17, where throat balance can sag into the high-0.7s or low-0.8s even though the localization and leak metrics remain directionally favorable.
+  Conclusion: CONFIRMED. Stronger bilateral throat conveyance clearly stabilizes a centered washover-fan mode and suppresses edge-pinned dune leakage across the deep sample. The effect is consistent enough to call the bridge real, with only a thin symmetry-limited onset window still noisy.
+  Last updated: 2026-03-31
+
+2026-03-31 CPU DESIGN NOTES
+- Reviewed `/opt/axiom/experiment_session/wu_generator_config.json`: 15 CPU families were active at the start of this step, so retiring four settled families still leaves the pool above the 8-family minimum.
+- No `validate_*.txt` log was present in `/opt/axiom/experiment_session/`, so there was no newer validation report to incorporate.
+- Retired `exp_alveolar_septal_pore_bridge_threshold`, `exp_meander_hyporheic_corridor_localization_threshold`, `exp_perineuronal_net_synaptic_cleft_bridge_threshold`, and `exp_root_hair_rhizosphere_bridge_threshold` because today's deduplicated frontier already marks them CONFIRMED with ample data.
+- Added `exp_corneal_stroma_bowman_bridge_threshold.py` after searches for `"Bowman's layer" corneal biomechanics finite element model`, `"corneal stroma" Bowman's layer finite element model`, and `"corneal stroma" Bowman's membrane diffusion model`.
+- Found adjacent corneal finite-element and stromal microstructure models, but not a dense iterative-deepening eigensolve threshold map for a symmetric limbus / Bowman / apex / Bowman / limbus bridge mode in a disordered operator.
+- Novel angle: map the finite-`kappa` onset where stronger bilateral Bowman-stroma coupling overcomes limbal pinning and stabilizes a centered apical bridge at large `N`.
+- Added `exp_barrier_island_overwash_fan_bridge_threshold.py` after searches for `"barrier island" overwash fan numerical model sediment transport`, `"overwash fan" barrier island morphodynamic model`, and `"washover fan" barrier island model sediment threshold`.
+- Found adjacent overwash-deposit and morphodynamic barrier-island models, but not a dense iterative-deepening eigensolve threshold map for a symmetric dune / throat / fan / throat / dune bridge in a disordered operator.
+- Novel angle: map the finite-`lambda` onset where stronger bilateral throat conveyance overcomes edge-pinned runup and stabilizes a centered washover-fan deposition mode at large `N`.
+
+2026-03-31 GPU DESIGN NOTES
+- Active GPU pool check: 18 weighted families in `wu_generator_config.json`, so adding 2 new GPU scripts stays within the hard cap of 20.
+- SQL check run on 2026-03-31: `SELECT COUNT(*) FROM result WHERE server_state=2;` returned 3527 unsent results and `SELECT COUNT(*) FROM result WHERE outcome=1;` returned 181697 completed results; no user/account/preferences tables were touched.
+- Added `exp_cranial_suture_osteogenic_front_bridge_threshold_gpu.py` after searches for `"cranial suture" review mechanobiology finite element osteogenic front` and `"cranial suture" osteogenic front finite element computational`.
+- Found adjacent cranial-suture mechanobiology and finite-element literature, but not a dense GPU iterative-deepening threshold map for balanced osteogenic-front / suture bridge capture in a disordered symmetric operator.
+- Novel angle: map the finite-`phi` onset where stronger bilateral osteogenic-front reinforcement pulls the softest mode off bone-flank pinning and into a centered suture mesenchyme bridge at large `N`.
+- Added `exp_osteon_haversian_canal_bridge_threshold_gpu.py` after searches for `"osteon" "Haversian canal" review finite element model bone microstructure` and `"Haversian canal" fluid flow computational model osteon`.
+- Found adjacent osteon finite-element and fluid-flow literature, but not a dense GPU threshold map for balanced cement-line / canal bridge capture in a disordered symmetric operator.
+- Novel angle: map the finite-`kappa` onset where stronger bilateral cement-line/canal reinforcement overcomes outer-lamella pinning and stabilizes a centered Haversian-canal bridge at large `N`.
