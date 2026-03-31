@@ -1,0 +1,30 @@
+2026-03-31 GPU DESIGN NOTES
+- Active GPU pool check: 20 weighted GPU families are already active in `wu_generator_config.json`, so no config changes or deployments were made in this step.
+- Reviewed the retirement registry, deduplicated findings, and current GPU references; this step followed the prompt's later no-retirement instruction and left the live pool unchanged.
+- Added `exp_moss_peristome_annulus_bridge_threshold_gpu.py` after searches for `"moss peristome" hygroscopic movement paper` and `"peristome teeth" humidity model moss`.
+- Found adjacent literature on moss peristome hygroscopic mechanics and humidity-regulated spore release, including recent plant-biomechanics papers, but not a dense GPU iterative-deepening eigensolve threshold map for balanced capsule-wall / annulus / pore / annulus / capsule-wall soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`zeta` onset where stronger bilateral annulus-peristome reinforcement overcomes one-capsule pinning and stabilizes a centered pore bridge at large GPU-scaled `N`.
+- Added `exp_sabkha_gypsum_brinelens_bridge_threshold_gpu.py` after searches for `"sabkha" groundwater brine gypsum transport model` and `"sabkha" gypsum precipitation porewater model`.
+- Found adjacent literature on sabkha brine hydrology, gypsum/anhydrite precipitation, and evaporite diagenesis, including Abu Dhabi sabkha studies and hydrogeochemical brine-evolution modeling, but not a dense GPU iterative-deepening eigensolve threshold map for balanced sabkha-flat / gypsum-rim / brine-lens / gypsum-rim / sabkha-flat soft-mode capture in a disordered operator.
+- Novel angle: map the finite-`eta` onset where stronger bilateral gypsum-rim reinforcement overcomes one-flank crust pinning and stabilizes a centered brine-lens bridge at large GPU-scaled `N`.
+
+EXPERIMENT: exp_exp_pituitary_portal_fenestra_bridge_threshold (659 total results available, 200 sampled, 31 hosts)
+  Discovered: 2026-03-31 04:36 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, xi=0.300443), 819200.0 (bw=0.000001221, xi=0.320639), 819200.0 (bw=0.000001221, xi=0.136204)
+  Results: The ranked frontier is bridge-dominant across the sampled depth range: portal localization stays about 0.85-0.90, endocrine-core mass about 0.27-0.39, and gland leak stays low at about 0.009-0.075. Failures are narrow and mostly balance-limited near the onset edge, while cleaner high-xi brackets around 0.26-0.49 repeatedly show strong bilateral balance and large core-to-leak ratios.
+  Conclusion: CONFIRMED. Stronger bilateral portal-sinusoid coupling does stabilize the centered pituitary bridge mode rather than leaving the mode pinned to the gland edges. The onset is not razor-clean because some near-threshold brackets still miss the balance target, but the overall high-fitness frontier clearly shifts into the predicted bridge regime and remains there as xi increases.
+
+EXPERIMENT: exp_exp_cochlear_pillar_tunnel_bridge_threshold (648 total results available, 200 sampled, 32 hosts)
+  Discovered: 2026-03-31 04:36 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, phi=0.251628), 819200.0 (bw=0.000001221, phi=0.290481), 819200.0 (bw=0.000001221, phi=0.373524)
+  Results: This family shows the cleanest bridge capture of the three: Corti localization is consistently extreme at about 0.88-0.996, tunnel mass sits around 0.24-0.38, and lateral leak collapses to about 0.001-0.013 across the strongest brackets. The only recurrent misses are balance failures in otherwise well-localized states near intermediate phi, while higher-phi brackets around 0.45-0.52 are almost perfectly centered and essentially leak-free.
+  Conclusion: CONFIRMED. Bilateral pillar-cell reinforcement robustly captures the leading mode into a centered tunnel-of-Corti bridge, with a very strong separation from edge-pinned states once phi moves above the onset region. The residual failures are not a sign of no effect; they are narrow balance misses around threshold inside an otherwise overwhelmingly bridge-like frontier.
+
+EXPERIMENT: exp_exp_intestinal_villus_lacteal_bridge_threshold (632 total results available, 200 sampled, 33 hosts)
+  Discovered: 2026-03-31 04:36 UTC
+  Last updated: 2026-03-31
+  Top fitness: 819200.0 (bw=0.000001221, rho=0.552345), 819200.0 (bw=0.000001221, rho=0.283238), 819200.0 (bw=0.000001221, rho=0.226646)
+  Results: The top-ranked villus-lacteal results are strongly localized in the bridge zone, with lacteal bridge mass about 0.86-0.91, core mass about 0.25-0.40, and epithelial leak typically held near 0.007-0.063. Near-threshold misses again come mainly from left-right imbalance rather than loss of localization, and the cleaner brackets above roughly rho 0.28 repeatedly combine strong balance, low leak, and large core-to-leak separation.
+  Conclusion: CONFIRMED. Stronger villus-core coupling does produce the predicted centered lacteal bridge mode, and the high-fitness frontier is already well inside that regime rather than wobbling around a null effect. The onset remains somewhat ragged because balance is still the limiting criterion near lower rho, but the direction and magnitude of the effect are clear.
