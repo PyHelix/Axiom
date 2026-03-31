@@ -12,13 +12,6 @@ EXPERIMENT: exp_exp_meander_hyporheic_corridor_localization_threshold (1378 tota
   Conclusion: CONFIRMED. The centered hyporheic-corridor mode is real and strengthens monotonically with bilateral exchange coupling, with cleaner symmetry and sharply lower bank leakage once the system gets modestly past onset. The data do not show an opposite regime; they show a balance-limited threshold that resolves in the predicted direction.
   Last updated: 2026-03-31
 
-EXPERIMENT: exp_exp_root_hair_rhizosphere_bridge_threshold (1314 total results available, 100 sampled, 35 hosts)
-  Discovered: 2026-03-31 11:30 UTC
-  Top fitness: 819200.0 (bw=0.0000, rho=0.255, N=2048), 819200.0 (bw=0.0000, rho=0.265, N=2048), 819200.0 (bw=0.0000, rho=0.332, N=2048)
-  Results: The sample shows rhizosphere localization about 0.88-0.96, root-hair mass about 0.20-0.31, soil leak usually about 0.007-0.06, and core-to-leak ratios climbing from roughly 3-7 near onset into the teens and 20s once rho pushes higher. Balance failures recur mostly between rho about 0.17 and 0.25, but above that the bridge becomes consistently centered and low-leak.
-  Conclusion: CONFIRMED. Stronger bilateral rhizosphere coupling does produce the predicted centered root-hair bridge, and the effect becomes clean well before the deep frontier reaches its highest-coupling cases. The noisy portion is confined to the onset window, where symmetry lags behind the otherwise positive localization shift.
-  Last updated: 2026-03-31
-
 EXPERIMENT: exp_exp_perineuronal_net_synaptic_cleft_bridge_threshold (1120 total results available, 100 sampled, 34 hosts)
   Discovered: 2026-03-31 11:30 UTC
   Top fitness: 25600.0 (bw=0.0000, sigma=0.433, N=2048), 25600.0 (bw=0.0000, sigma=0.318, N=2048), 25600.0 (bw=0.0000, sigma=0.419, N=2048)
@@ -61,37 +54,44 @@ EXPERIMENT: exp_exp_moss_peristome_hygroscopic_bridge_threshold (600 total resul
   Conclusion: PRELIMINARY. Stronger annulus-peristome reinforcement does produce the predicted centered pore mode, and the positive branch is not subtle. The threshold itself is not yet settled because the deepest brackets still jump between clean pore capture and obvious leakage states instead of tracing one stable onset.
   Last updated: 2026-03-31
 
-EXPERIMENT: exp_exp_corneal_stroma_bowman_bridge_threshold (238 total results available, 100 sampled, 23 hosts)
-  Discovered: 2026-03-31 13:58 UTC
-  Top fitness: 25600.0 (bw=0.0000, kappa=0.377, N=2048), 25600.0 (bw=0.0000, kappa=0.293, N=2048), 25600.0 (bw=0.0000, kappa=0.280, N=2048)
-  Results: Across the ranked sample, corneal localization stays about 0.87-0.94, apex mass about 0.22-0.30, limbal leak usually about 0.02-0.07, and core-to-leak runs from roughly 3 up to 14 in the accepted band. The failures are narrow and balance-limited around kappa about 0.20-0.24, where Bowman symmetry can dip into the mid-0.8s while localization, apex mass, and leak already point in the right direction.
-  Conclusion: CONFIRMED. Stronger bilateral Bowman-stroma coupling does stabilize the predicted centered apical bridge, with a broad low-leak accepted regime once kappa moves modestly past onset. The remaining ambiguity is only the sharpness of the balance threshold, not the direction of effect.
+EXPERIMENT: exp_exp_hematopoietic_endosteal_sinusoid_bridge_threshold (2646 total results available, 100 sampled, 46 hosts)
+  Discovered: 2026-03-31 16:20 UTC
+  Top fitness: 819200.0 (bw=0.0000, chi=0.502, N=2048), 819200.0 (bw=0.0000, chi=0.493, N=2048), 819200.0 (bw=0.0000, chi=0.489, N=2048)
+  Results: The ranked pull is strongly marrow-bridge positive, with sinusoid localization about 0.86-0.91, HSC core mass about 0.26-0.40, niche balance usually about 0.88-0.99 once chi clears roughly 0.18, endosteal leak falling from about 0.07 near onset to about 0.006-0.02 in the deep accepted band, and core-to-leak climbing from roughly 4 into the 20-68 range. The only real instability is a narrow low-chi onset strip around about 0.10-0.25 and a few mid-chi brackets near 0.29-0.36 where balance briefly dips into the high-0.7s or low-0.8s despite otherwise favorable localization and leak.
+  Conclusion: CONFIRMED. Stronger bilateral perisinusoidal coupling clearly pulls the dominant mode into a centered endosteal-sinusoid bridge and sharply suppresses endosteal leakage across the deep frontier. The remaining uncertainty is only the precise width of the symmetry-limited onset window, not the direction or reality of the effect.
   Last updated: 2026-03-31
 
-EXPERIMENT: exp_exp_barrier_island_overwash_fan_bridge_threshold (236 total results available, 100 sampled, 23 hosts)
-  Discovered: 2026-03-31 13:58 UTC
-  Top fitness: 25600.0 (bw=0.0000, lambda=0.289, N=2048), 25600.0 (bw=0.0000, lambda=0.260, N=2048), 25600.0 (bw=0.0000, lambda=0.247, N=2048)
-  Results: The ranked pull is strongly fan-positive, with overwash localization about 0.88-0.96, fan mass about 0.25-0.34, dune leak usually about 0.02-0.09, and core-to-leak ratios climbing from roughly 3 near onset into the teens deeper in the accepted regime. The only persistent failures are in the narrow lower-lambda onset band around about 0.11-0.17, where throat balance can sag into the high-0.7s or low-0.8s even though the localization and leak metrics remain directionally favorable.
-  Conclusion: CONFIRMED. Stronger bilateral throat conveyance clearly stabilizes a centered washover-fan mode and suppresses edge-pinned dune leakage across the deep sample. The effect is consistent enough to call the bridge real, with only a thin symmetry-limited onset window still noisy.
+EXPERIMENT: exp_exp_sphagnum_capitulum_hyaline_bridge_threshold (2569 total results available, 100 sampled, 42 hosts)
+  Discovered: 2026-03-31 16:20 UTC
+  Top fitness: 819200.0 (bw=0.0000, eta=0.494, N=2048), 819200.0 (bw=0.0000, eta=0.489, N=2048), 819200.0 (bw=0.0000, eta=0.416, N=2048)
+  Results: Across the ranked sample, bridge mass sits about 0.89-0.94, capitulum mass about 0.29-0.40, hyaline balance is often about 0.88-0.99 in the accepted regime, branch leak drops from about 0.07-0.08 near onset toward about 0.014-0.03 deeper in the frontier, and bridge-to-leak runs from low teens into the 40-67 range. Mixed support is confined mostly to the lower-eta edge around about 0.15-0.22, where otherwise bridge-positive runs still show occasional balance dips into the high-0.7s or low-0.8s.
+  Conclusion: CONFIRMED. Stronger bilateral hyaline-cell coupling robustly stabilizes the centered capitulum water bridge and reduces branch-edge drying across the high-fitness sample. The threshold onset is still somewhat balance-limited, but the effect itself is consistent and not ambiguous.
   Last updated: 2026-03-31
 
-2026-03-31 CPU DESIGN NOTES
-- Reviewed `/opt/axiom/experiment_session/wu_generator_config.json`: 15 CPU families were active at the start of this step, so retiring four settled families still leaves the pool above the 8-family minimum.
-- No `validate_*.txt` log was present in `/opt/axiom/experiment_session/`, so there was no newer validation report to incorporate.
-- Retired `exp_alveolar_septal_pore_bridge_threshold`, `exp_meander_hyporheic_corridor_localization_threshold`, `exp_perineuronal_net_synaptic_cleft_bridge_threshold`, and `exp_root_hair_rhizosphere_bridge_threshold` because today's deduplicated frontier already marks them CONFIRMED with ample data.
-- Added `exp_corneal_stroma_bowman_bridge_threshold.py` after searches for `"Bowman's layer" corneal biomechanics finite element model`, `"corneal stroma" Bowman's layer finite element model`, and `"corneal stroma" Bowman's membrane diffusion model`.
-- Found adjacent corneal finite-element and stromal microstructure models, but not a dense iterative-deepening eigensolve threshold map for a symmetric limbus / Bowman / apex / Bowman / limbus bridge mode in a disordered operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral Bowman-stroma coupling overcomes limbal pinning and stabilizes a centered apical bridge at large `N`.
-- Added `exp_barrier_island_overwash_fan_bridge_threshold.py` after searches for `"barrier island" overwash fan numerical model sediment transport`, `"overwash fan" barrier island morphodynamic model`, and `"washover fan" barrier island model sediment threshold`.
-- Found adjacent overwash-deposit and morphodynamic barrier-island models, but not a dense iterative-deepening eigensolve threshold map for a symmetric dune / throat / fan / throat / dune bridge in a disordered operator.
-- Novel angle: map the finite-`lambda` onset where stronger bilateral throat conveyance overcomes edge-pinned runup and stabilizes a centered washover-fan deposition mode at large `N`.
+EXPERIMENT: exp_exp_cerebral_organoid_ventricular_zone_bridge_threshold (2554 total results available, 100 sampled, 43 hosts)
+  Discovered: 2026-03-31 16:20 UTC
+  Top fitness: 819200.0 (bw=0.0000, chi=3.770, N=2048), 819200.0 (bw=0.0000, chi=3.770, N=2048), 819200.0 (bw=0.0000, chi=3.770, N=2048)
+  Results: Every top-ranked run sits in the same saturated strong-coupling regime: bridge mass stays essentially fixed near 0.920, lumen mass near 0.474, ventricular balance near 0.97-1.00, mantle leak near 0.0003, and bridge-to-leak remains around 2800-3120. What is missing from this slice is any resolved onset structure at all, because the deepest brackets are all pinned against the high-chi ceiling around 3.71-3.78 rather than traversing the transition band.
+  Conclusion: PRELIMINARY. The centered ventricular bridge is unmistakably real at strong coupling, but this cycle did not localize the threshold because the frontier is ceiling-pinned in a fully saturated regime. The mechanism looks genuine; the unresolved question is where onset occurs below the current upper-bound pileup.
+  Last updated: 2026-03-31
 
-2026-03-31 GPU DESIGN NOTES
-- Active GPU pool check: 18 weighted families in `wu_generator_config.json`, so adding 2 new GPU scripts stays within the hard cap of 20.
-- SQL check run on 2026-03-31: `SELECT COUNT(*) FROM result WHERE server_state=2;` returned 3527 unsent results and `SELECT COUNT(*) FROM result WHERE outcome=1;` returned 181697 completed results; no user/account/preferences tables were touched.
-- Added `exp_cranial_suture_osteogenic_front_bridge_threshold_gpu.py` after searches for `"cranial suture" review mechanobiology finite element osteogenic front` and `"cranial suture" osteogenic front finite element computational`.
-- Found adjacent cranial-suture mechanobiology and finite-element literature, but not a dense GPU iterative-deepening threshold map for balanced osteogenic-front / suture bridge capture in a disordered symmetric operator.
-- Novel angle: map the finite-`phi` onset where stronger bilateral osteogenic-front reinforcement pulls the softest mode off bone-flank pinning and into a centered suture mesenchyme bridge at large `N`.
-- Added `exp_osteon_haversian_canal_bridge_threshold_gpu.py` after searches for `"osteon" "Haversian canal" review finite element model bone microstructure` and `"Haversian canal" fluid flow computational model osteon`.
-- Found adjacent osteon finite-element and fluid-flow literature, but not a dense GPU threshold map for balanced cement-line / canal bridge capture in a disordered symmetric operator.
-- Novel angle: map the finite-`kappa` onset where stronger bilateral cement-line/canal reinforcement overcomes outer-lamella pinning and stabilizes a centered Haversian-canal bridge at large `N`.
+EXPERIMENT: exp_exp_neural_plate_hingepoint_bridge_threshold (2527 total results available, 100 sampled, 39 hosts)
+  Discovered: 2026-03-31 16:20 UTC
+  Top fitness: 819200.0 (bw=0.0000, phi=0.507, N=2048), 819200.0 (bw=0.0000, phi=0.341, N=2048), 819200.0 (bw=0.0000, phi=0.336, N=2048)
+  Results: The ranked frontier is strongly hingepoint-positive, with localization about 0.86-0.90, median hinge mass about 0.26-0.38, fold balance typically about 0.88-0.99 above onset, lateral leak dropping from about 0.06 near the weak edge to about 0.009-0.02 in the clean bridge band, and hinge-to-leak commonly rising from about 4-7 near onset into the teens, 20s, and occasional 40-plus cases. The failures are narrow and onset-limited, concentrated mainly around phi about 0.13-0.21 and a few mid-phi brackets around 0.27-0.31 where balance briefly slips while localization and leak still point the right way.
+  Conclusion: CONFIRMED. Stronger bilateral fold coupling clearly stabilizes the centered median-hingepoint bridge and suppresses lateral leakage across the deep sample. The remaining noise is a symmetry-limited onset band, not evidence against the proposed bridge state.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_diatom_raphe_centralnodule_bridge_threshold (340 total results available, 100 sampled, 21 hosts)
+  Discovered: 2026-03-31 16:20 UTC
+  Top fitness: 25600.0 (bw=0.0000, eta=0.241, N=2048), 25600.0 (bw=0.0000, eta=0.238, N=2048), 25600.0 (bw=0.0000, eta=0.232, N=2048)
+  Results: The sample shows a broad central-nodule capture regime, with raphe localization about 0.88-0.98, central-nodule mass about 0.28-0.40, raphe balance usually about 0.87-1.00 in the accepted branch, mantle leak often about 0.012-0.05 in the stronger part of the frontier, and core-to-leak ranging from roughly 5 near onset up through the teens and occasional 20-31 cases. Mixed support is concentrated in the lower-eta onset band around about 0.14-0.20, where balance and leak fluctuate more noticeably, but even there the effect stays directionally bridge-positive rather than flipping to an opposite regime.
+  Conclusion: CONFIRMED. Stronger bilateral raphe coupling does stabilize the predicted centered central-nodule bridge, with a clear low-leak accepted regime opening once eta moves modestly above onset. The threshold edge is still somewhat ragged, but the bridge state itself is well supported by the ranked sample.
+  Last updated: 2026-03-31
+
+EXPERIMENT: exp_exp_mussel_byssus_cuticle_granule_bridge_threshold (317 total results available, 100 sampled, 20 hosts)
+  Discovered: 2026-03-31 16:20 UTC
+  Top fitness: 25600.0 (bw=0.0000, phi=0.270, N=2048), 25600.0 (bw=0.0000, phi=0.267, N=2048), 25600.0 (bw=0.0000, phi=0.203, N=2048)
+  Results: The ranked pull is strongly core-positive, with cuticle localization about 0.88-0.98, core mass about 0.27-0.40, granule balance often about 0.87-0.99 once phi rises past the weakest edge, surface leak falling from about 0.09 near onset to about 0.014-0.05 in the cleaner bridge band, and core-to-leak climbing from roughly 3 near onset into the 8-28 range. The weakest brackets around about 0.10-0.14 remain balance-limited and leakier, but they do not overturn the dominant trend toward centered core capture at higher phi.
+  Conclusion: CONFIRMED. Stronger bilateral granule reinforcement clearly pulls the dominant mode off the cuticle surface and into a centered cuticle-core bridge across the deep sampled frontier. The effect is consistent enough to call the bridge real, with only the low-phi onset band still noisy.
+  Last updated: 2026-03-31
