@@ -1,16 +1,22 @@
 2026-03-31 CPU FRONTIER SUMMARY
 
 Retire today:
-- `exp_basalt_vesicle_zeolite_bridge_threshold`: REJECTED. Deep N=2048 frontier stays ceiling-pinned with bridge/core mass near zero; null mechanism, not unresolved onset.
-- `exp_seagrass_rhizome_oxygen_bridge_threshold`: REJECTED. Deep frontier remains rho-ceiling-pinned with negligible bridge/core capture; additional CPU seeding is not justified.
-- `exp_glomerular_podocyte_slit_bridge_threshold`: REJECTED. Symmetry/leak look good but slit-bridge mass never forms; mechanism unsupported.
+- `exp_basalt_vesicle_zeolite_bridge_threshold`: REJECTED. Deep frontier stays ceiling-pinned with bridge/core mass near zero.
+- `exp_seagrass_rhizome_oxygen_bridge_threshold`: REJECTED. Deep frontier remains rho-ceiling-pinned with negligible bridge/core capture.
+- `exp_glomerular_podocyte_slit_bridge_threshold`: REJECTED. Symmetry/leak are fine but slit-bridge mass never forms.
+- `exp_fjord_pycnocline_sill_exchange_threshold`: CONFIRMED. Ranked frontier is uniformly centered, balanced, and nearly leak-free.
+- `exp_josephson_twinboundary_vortex_channel_threshold`: CONFIRMED. Ranked frontier is saturated in the centered vortex-channel regime.
+- `exp_stage_structured_foodweb_coherence_breakdown_threshold`: CONFIRMED. Ranked frontier is uniformly coherent and centered.
 
 Keep active for now:
-- `exp_delta_distributary_mouthbar_bridge_threshold`: PRELIMINARY. High-lambda mouth-bar regime is real, but onset is still balance-limited and jagged.
-- `exp_myelin_schmidt_lanterman_incisure_bridge_threshold`: PRELIMINARY. Strong high-sigma bridge phase exists, but adjacent deep brackets still alternate on balance.
+- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: PRELIMINARY. Freshwater corridor is real, but onset remains balance-limited near kappa about 0.13-0.17.
+- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: PRELIMINARY. Centered interface bridge is real, but adjacent deep brackets still alternate just below the stronger branch.
+- `exp_ribosome_exit_tunnel_charge_focusing_threshold`: PRELIMINARY. Centered tunnel-axis mode is real, but bilateral balance still flips near onset.
 
-Still scientifically live from today’s ranked findings:
-- `exp_insect_tracheal_taenidia_lumen_bridge_threshold`: onset appears below current low-chi floor; positive branch is real.
+Still scientifically live from ranked findings:
+- `exp_delta_distributary_mouthbar_bridge_threshold`: strong high-lambda regime exists, but onset is still jagged.
+- `exp_myelin_schmidt_lanterman_incisure_bridge_threshold`: strong high-sigma bridge phase exists, but adjacent deep brackets still alternate on balance.
+- `exp_insect_tracheal_taenidia_lumen_bridge_threshold`: onset appears below the current low-chi floor.
 - `exp_marine_snow_microgel_pore_bridge_threshold`: real centered pore corridor, but deep frontier remains bifurcated.
 - `exp_ooid_cortex_nucleus_bridge_threshold`: strong centered nucleus branch exists, but low-kappa edge is still split.
 - `exp_moss_peristome_hygroscopic_bridge_threshold`: strong pore branch exists, but threshold remains mixed.
@@ -18,65 +24,53 @@ Still scientifically live from today’s ranked findings:
 
 2026-03-31 NEW CPU DESIGN NOTES
 
-- Added `exp_ribosome_exit_tunnel_charge_focusing_threshold.py`.
-  Novelty check: searched `ribosome exit tunnel electrostatics computational model nascent peptide review` and related PMCID results on exit-tunnel electrostatics and mechanochemical forces. Found ribosome electrostatics / stalling literature, but not a dense iterative-deepening spectral threshold map for balanced wall-charge focusing onto the tunnel axis.
-
-- Added `exp_fjord_pycnocline_sill_exchange_threshold.py`.
-  Novelty check: searched `fjord sill exchange pycnocline hydraulic control numerical model` and related fjord hydraulic-control literature. Found numerical and observational fjord-exchange studies, but not a dense spectral threshold map for bilateral pycnocline coupling that traps the dominant mode into a centered sill corridor.
-
-- Added `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold.py`.
-  Novelty check: searched `coastal aquifer aquitard leakage saltwater intrusion numerical model` and related USGS / numerical saltwater-intrusion references. Found leakage and intrusion models, but not a dense iterative-deepening eigensolve threshold study for balanced aquitard-shunt stabilization of a centered freshwater corridor.
-
-- Added `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold.py`.
-  Novelty check: searched `peatland methane oxidation oxygen water table model biogeochemistry`, `methanotroph peatland oxic anoxic interface model`, and related peatland methane-model literature. Found methane production / oxidation depth-profile models, but not a dense spectral threshold map for bilateral methanotroph coupling around the oxic-anoxic reaction interface.
-
-- Added `exp_josephson_twinboundary_vortex_channel_threshold.py`.
-  Novelty check: searched `Josephson grain boundary vortex channel model numerical superconductor` and related vortex-guidance / twin-boundary superconductivity literature. Found grain-boundary and vortex-channel modeling, but not a dense iterative-deepening threshold map for balanced twin-boundary capture of a centered vortex channel.
-
-- Added `exp_stage_structured_foodweb_coherence_breakdown_threshold.py`.
-  Novelty check: searched `stage structured food web persistence paper`, `trophic coherence food web stability paper`, and `ontogenetic niche shift food web stability model`. Found stage-structured persistence and trophic-coherence theory separately, but not a dense spectral threshold map linking bilateral juvenile-adult coupling to coherent centered trophic transfer.
+- Added `exp_fault_gouge_clast_pressurearch_bridge_threshold.py`.
+  Novelty check: searched `fault gouge force chain shear localization pore pressure model` and related fault-zone mechanics literature. Found force-chain and shear-band models, but not a dense iterative-deepening spectral threshold map for bilateral gouge coupling that stabilizes a centered pressure arch.
+- Added `exp_mangrove_lenticel_aerenchyma_bridge_threshold.py`.
+  Novelty check: searched `mangrove lenticel aerenchyma sulfide oxygen transport model` and related mangrove root-aeration literature. Found aeration and sulfide-stress models, but not a dense spectral threshold map for bilateral lenticel-aerenchyma coupling that closes a centered oxygen bridge.
+- Added `exp_chloroplast_pyrenoid_thylakoid_bridge_threshold.py`.
+  Novelty check: searched `chloroplast pyrenoid thylakoid computational model` and related pyrenoid ultrastructure literature. Found structural and transport models, but not a dense iterative-deepening eigensolve threshold study for bilateral thylakoid capture of a centered pyrenoid bridge.
+- Added `exp_peat_pore_ironredox_bridge_threshold.py`.
+  Novelty check: searched `peat pore iron redox oxygen model biogeochemistry` and related peat redox-front literature. Found oxygen and iron-cycling models, but not a dense spectral threshold map for bilateral pore coupling around a centered iron-redox bridge.
+- Added `exp_thalamocortical_trn_gate_bridge_threshold.py`.
+  Novelty check: searched `thalamocortical reticular nucleus gating network model` and related thalamic relay literature. Found relay/TRN gating models, but not a dense iterative-deepening threshold map for bilateral reticular coupling that stabilizes a centered relay gate.
 
 Operational note:
-- Active CPU pool was at 5 families before design. After retiring the three rejected families above, Step 8 should dry-run these six new scripts first, then promote enough of them to restore the CPU pool above the 8-family floor.
+- CPU config showed only 6 active families before retirement review, and 3 of those were already concluded. This cycle added 5 new CPU scripts so Step 8 can restore the scientifically live CPU pool to at least 8 families after cleanup zeroes the retired weights.
 
-EXPERIMENT: exp_peatland_methanotroph_oxic_anoxic_bridge_threshold (1190 total results available, 100 sampled, 30 hosts)
-  Discovered: 2026-03-31 23:49 UTC
-  Last updated: 2026-03-31
-  Top fitness: 6553600.001 (bw=1.53e-07, rho=0.280326, N=2048), 6553600.001 (bw=1.53e-07, rho=0.217094, N=2048), 6553600.001 (bw=1.53e-07, rho=0.281901, N=2048)
-  Results: The ranked frontier repeatedly forms the centered oxic-anoxic bridge with bridge mass about 0.858-0.869, core mass about 0.36-0.40, and outer leak about 0.018-0.034. The strongest branch sits around rho about 0.25-0.29 with balance usually above 0.85, but adjacent equally deep brackets around rho about 0.17-0.23 still flip support when balance falls into the low-0.8 range.
-  Conclusion: PRELIMINARY. Bilateral methanotroph coupling clearly creates the predicted centered interface bridge, so the mechanism itself looks real. The onset is still not cleanly localized because neighboring deep brackets just below the stronger branch alternate on bilateral balance.
+2026-04-01 SCIENCE CYCLE
 
-EXPERIMENT: exp_josephson_twinboundary_vortex_channel_threshold (1192 total results available, 100 sampled, 30 hosts)
-  Discovered: 2026-03-31 23:49 UTC
-  Last updated: 2026-03-31
-  Top fitness: 6553599.994 (bw=1.53e-07, gamma=3.514024, N=2048), 6553599.994 (bw=1.53e-07, gamma=3.769688, N=2048), 6553599.994 (bw=1.53e-07, gamma=3.799766, N=2048)
-  Results: Across the full ranked pull, the centered vortex channel is saturated with bridge mass about 0.874, core mass about 0.49, balance about 0.97-1.00, and outer leak only about 0.0002-0.0003. Support stays positive throughout the high-fitness sample while the core-to-leak ratio is enormous, typically in the thousands.
-  Conclusion: CONFIRMED. Stronger bilateral twin-boundary coupling robustly traps the dominant mode into the centered vortex channel rather than letting flux pin to the walls. This is not a marginal effect: the deep frontier is uniformly bridge-positive, extremely balanced, and nearly leak-free.
+EXPERIMENT: exp_chloroplast_pyrenoid_thylakoid_bridge_threshold (192 total results available, 0 sampled, 20 hosts)
+  Discovered: 2026-04-01 02:22 UTC
+  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
+  Results: MariaDB shows 192 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no ranked frontier to inspect.
+  Conclusion: SKIP. The experiment is scientifically eligible but not yet analyzable because the assimilated numbers have not landed in the sanitized results directory. Revisit once the sanitized payloads exist so the pyrenoid-vs-edge leakage pattern can be read directly from raw numeric outputs.
+  Last updated: 2026-04-01
 
-EXPERIMENT: exp_ribosome_exit_tunnel_charge_focusing_threshold (1180 total results available, 100 sampled, 31 hosts)
-  Discovered: 2026-03-31 23:49 UTC
-  Last updated: 2026-03-31
-  Top fitness: 6553600.001 (bw=1.53e-07, psi=0.199653, N=2048), 6553600.001 (bw=1.53e-07, psi=0.279403, N=2048), 6553600.001 (bw=1.53e-07, psi=0.193412, N=2048)
-  Results: The high-fitness frontier consistently shows a centered tunnel-axis mode with bridge mass about 0.861-0.889, core mass about 0.31-0.39, and outer leak compressed to about 0.016-0.056. The directional effect is stable, but support still flips between nearby deep brackets because balance can sit anywhere from the high-0.6s to mid-0.9s at psi about 0.07-0.28.
-  Conclusion: PRELIMINARY. Balanced wall-charge focusing clearly strengthens centered transport along the tunnel axis and suppresses wall leakage. The remaining uncertainty is threshold placement, not mechanism sign, because equally deep runs still alternate on bilateral balance near the apparent onset band.
+EXPERIMENT: exp_thalamocortical_trn_gate_bridge_threshold (181 total results available, 0 sampled, 24 hosts)
+  Discovered: 2026-04-01 02:22 UTC
+  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
+  Results: MariaDB shows 181 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no ranked relay-gate frontier to inspect.
+  Conclusion: SKIP. The BOINC rows are present but the sanitized science payloads are not, so no defensible statement about centered gate formation versus boundary leakage can be made yet. Re-sample after assimilation catches up.
+  Last updated: 2026-04-01
 
-EXPERIMENT: exp_coastal_aquifer_aquitard_shunt_breakdown_threshold (1110 total results available, 100 sampled, 29 hosts)
-  Discovered: 2026-03-31 23:49 UTC
-  Last updated: 2026-03-31
-  Top fitness: 6553600.001 (bw=1.53e-07, kappa=0.152746, N=4096), 6553600.001 (bw=1.53e-07, kappa=0.137322, N=4096), 6553600.001 (bw=1.53e-07, kappa=0.157080, N=4096)
-  Results: Deep 4096-mode brackets repeatedly hold a centered freshwater corridor with bridge mass about 0.856-0.874, core mass about 0.34-0.39, and outer leak about 0.018-0.043. The positive branch is strongest from kappa about 0.16 upward, while nearby deep brackets around kappa about 0.13-0.17 still toggle support when balance slides from the high-0.8s into the upper-0.7s.
-  Conclusion: PRELIMINARY. Bilateral aquitard reinforcement does stabilize the centered freshwater corridor and strongly suppress saline-boundary leakage. The frontier is still balance-limited near onset, so the breakdown threshold is not yet sharply closed even though the favorable regime is already obvious.
+EXPERIMENT: exp_fault_gouge_clast_pressurearch_bridge_threshold (172 total results available, 0 sampled, 23 hosts)
+  Discovered: 2026-04-01 02:22 UTC
+  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
+  Results: MariaDB shows 172 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so the pressure-arch versus edge-localization frontier cannot be inspected.
+  Conclusion: SKIP. This family has enough completed work to merit analysis, but the sanitized numeric layer is still absent. Until those files appear, there is no safe basis for confirming or rejecting the proposed centered pressure arch.
+  Last updated: 2026-04-01
 
-EXPERIMENT: exp_stage_structured_foodweb_coherence_breakdown_threshold (1087 total results available, 100 sampled, 30 hosts)
-  Discovered: 2026-03-31 23:49 UTC
-  Last updated: 2026-03-31
-  Top fitness: 6553599.994 (bw=1.53e-07, eta=3.775352, N=4096), 6553599.994 (bw=1.53e-07, eta=3.775352, N=4096), 6553599.994 (bw=1.53e-07, eta=3.775352, N=4096)
-  Results: The top-ranked sample is uniformly coherent and centered, with bridge mass about 0.875, core mass about 0.494, balance about 0.98-1.00, and outer leak about 0.0002 throughout. Every sampled high-fitness result supports the same direction, with core-to-leak ratios again in the thousands.
-  Conclusion: CONFIRMED. Strong juvenile-adult coupling robustly stabilizes a centered coherent transfer corridor instead of incoherent edge-dominated flow. The effect is saturated across the deep frontier, leaving little ambiguity about the sign or strength of the mechanism.
+EXPERIMENT: exp_peat_pore_ironredox_bridge_threshold (166 total results available, 0 sampled, 23 hosts)
+  Discovered: 2026-04-01 02:22 UTC
+  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
+  Results: MariaDB shows 166 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so no iron-redox bridge frontier is available to read.
+  Conclusion: SKIP. The experiment has active completed returns, but the assimilated numeric outputs are missing from the sanitized store. Revisit after those artifacts are written so the centered redox-core regime can be evaluated directly.
+  Last updated: 2026-04-01
 
-EXPERIMENT: exp_fjord_pycnocline_sill_exchange_threshold (1058 total results available, 100 sampled, 30 hosts)
-  Discovered: 2026-03-31 23:49 UTC
-  Last updated: 2026-03-31
-  Top fitness: 6553599.994 (bw=1.53e-07, lambda=3.874961, N=4096), 6553599.994 (bw=1.53e-07, lambda=3.874961, N=4096), 6553599.994 (bw=1.53e-07, lambda=3.874961, N=4096)
-  Results: The deep ranked frontier is strongly sill-centered, with bridge mass about 0.888, core mass about 0.514, balance about 0.98-1.00, and outer leak near 0.0002 across the sample. Support is uniformly positive and the core-to-leak ratio remains in the high thousands, indicating an exceptionally clean centered exchange corridor.
-  Conclusion: CONFIRMED. Stronger bilateral pycnocline coupling clearly locks the dominant mode into a centered sill-exchange corridor rather than boundary-skewed trapping. The effect is large, repeatable, and essentially leak-free in the deepest sampled brackets.
+EXPERIMENT: exp_mangrove_lenticel_aerenchyma_bridge_threshold (155 total results available, 0 sampled, 23 hosts)
+  Discovered: 2026-04-01 02:22 UTC
+  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
+  Results: MariaDB shows 155 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no oxygen-bridge frontier to inspect.
+  Conclusion: SKIP. The completed BOINC rows indicate interest from the volunteer pool, but not yet an analyzable sanitized dataset. No conclusion about centered oxygen capture versus edge leakage is warranted until assimilation produces the numeric payloads.
+  Last updated: 2026-04-01
