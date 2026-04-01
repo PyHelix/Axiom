@@ -8,6 +8,8 @@ Retire today:
 - `exp_peat_pore_ironredox_bridge_threshold`: CONFIRMED. The centered iron-redox core is stable and near-perfectly balanced at the high-kappa frontier.
 - `exp_thalamocortical_trn_gate_bridge_threshold`: CONFIRMED. The relay-gate bridge is stable, balanced, and nearly leak-free in the high-theta regime.
 - `exp_mangrove_lenticel_aerenchyma_bridge_threshold`: CONFIRMED. The oxygen bridge is now cleanly analyzable and the deep frontier is uniformly centered, balanced, and near-zero leak.
+- `exp_osteoclast_sealingzone_resorptionpit_bridge_threshold`: REJECTED. The ranked frontier remains uniformly below the bridge target despite strong centering and low leak.
+- `exp_trophoblast_lacuna_syncytium_bridge_threshold`: REJECTED. The ranked frontier stays centered and low-leak but never reaches the required bridge mass.
 
 Keep active for now:
 - `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: PRELIMINARY. Freshwater corridor is real, but many equally deep brackets still fail on bilateral balance in the onset band.
@@ -15,59 +17,76 @@ Keep active for now:
 - `exp_ribosome_exit_tunnel_charge_focusing_threshold`: PRELIMINARY. Centered tunnel-axis focusing is real, but the onset band remains balance-limited.
 - `exp_conifer_needle_transfusion_bridge_threshold`: PRELIMINARY. Centered transfusion bridge is real, but the lowest-eta deep frontier still drops support on occasional balance-limited brackets.
 - `exp_basketcell_pinceau_ais_bridge_threshold`: PRELIMINARY. Centered AIS gate is real, but adjacent deep gamma brackets still alternate on bilateral balance.
+- `exp_dural_lymphatic_arachnoid_bridge_threshold`: PRELIMINARY. The centered drainage corridor appears real, but only a minority of equally deep brackets cross full support.
 
-EXPERIMENT: exp_coastal_aquifer_aquitard_shunt_breakdown_threshold (6131 total results available, 150 sampled, 44 hosts)
-  Discovered: 2026-04-01 14:53 UTC
-  Last updated: 2026-04-01
-  Top fitness: 6553600.0 (kappa=0.149906, N=4096), 6553600.0 (kappa=0.166279, N=4096), 6553600.0 (kappa=0.154719, N=4096)
-  Results: The ranked sample repeatedly forms a centered freshwater corridor with bridge mass about 0.848-0.877, core mass about 0.326-0.400, and outer leak about 0.017-0.054. But 78 of the 150 deepest brackets still miss support because balance repeatedly slips into roughly the 0.72-0.83 range even when leak is already modest and core capture is strong.
-  Conclusion: PRELIMINARY. Bilateral aquitard reinforcement does create the predicted centered freshwater mode rather than boundary leakage. The effect is scientifically real, but the threshold placement is still ragged because many max-fitness brackets remain balance-limited in the same kappa band.
+New CPU experiments queued:
+- `exp_bile_duct_plate_portal_bridge_threshold`: Developmental liver morphogenesis. Literature search found portal-coupled ductal-plate biology and bile-duct morphogenesis reviews, but not a dense finite-size threshold map for a balanced portal-duct bridge in disordered operators. Hypothesis: stronger bilateral portal reinforcement produces a centered ductal-plate bridge before parenchymal leakage dominates.
+- `exp_freeadd_heavytail_cusp_split_threshold`: Random-matrix theory. Literature search found deformed-Wigner free-convolution and cusp-universality theory, but not a Student-t finite-N bisection map for central-gap onset under quartic diagonal trapping. Hypothesis: heavy tails shift the one-cut to two-cut transition to a reproducible finite deformation threshold.
 
-EXPERIMENT: exp_peatland_methanotroph_oxic_anoxic_bridge_threshold (7468 total results available, 150 sampled, 45 hosts)
-  Discovered: 2026-04-01 14:53 UTC
-  Last updated: 2026-04-01
-  Top fitness: 6553600.0 (rho=0.201171, N=2048), 6553600.0 (rho=0.238967, N=2048), 6553600.0 (rho=0.205062, N=2048)
-  Results: The ranked frontier shows a real centered oxic-anoxic bridge with bridge mass about 0.856-0.870, core mass about 0.357-0.400, and outer leak about 0.018-0.037. The stronger branch above roughly rho 0.22-0.29 is often clean, but 74 of the 150 deepest brackets still fail on balance near about 0.77-0.83 despite otherwise favorable bridge and leak values.
-  Conclusion: PRELIMINARY. Stronger bilateral methanotroph coupling does stabilize the centered interface reaction bridge and suppress edge leakage. The mechanism is clear, but the onset band is not yet closed because neighboring deep brackets still alternate on balance.
+Validation context:
+- Active CPU count before retirement entries: 10.
+- Two active weighted families (`exp_osteoclast_sealingzone_resorptionpit_bridge_threshold.py`, `exp_trophoblast_lacuna_syncytium_bridge_threshold.py`) are already concluded as REJECTED in today's frontier and have now been retired by registry entry only.
+- Keeping the remaining active/preliminary families plus the two new scripts leaves the CPU side above the 8-family minimum once Step 8 tests and enables replacements.
 
-EXPERIMENT: exp_ribosome_exit_tunnel_charge_focusing_threshold (7538 total results available, 150 sampled, 42 hosts)
-  Discovered: 2026-04-01 14:53 UTC
-  Last updated: 2026-04-01
-  Top fitness: 6553600.0 (psi=0.126781, N=2048), 6553600.0 (psi=0.125011, N=2048), 6553600.0 (psi=0.126881, N=2048)
-  Results: The sample splits into a weaker low-psi branch around psi 0.07-0.17 with bridge mass about 0.858-0.880, core mass about 0.305-0.358, and leak about 0.029-0.057, plus a stronger higher-psi branch around psi 0.21-0.30 with bridge mass about 0.884-0.890 and leak about 0.015-0.023. Even so, 70 of the 150 deepest brackets still miss support when bilateral balance sits around 0.68-0.83, including some otherwise strong high-psi runs.
-  Conclusion: PRELIMINARY. Bilateral wall-charge focusing does produce the centered tunnel-axis mode and materially reduces wall leakage. The threshold remains incomplete because support still alternates across neighboring deep brackets, especially where balance stays just below the target.
+GPU design note 2026-04-01:
+- Added `exp_nmc_secondaryparticle_grainneck_bridge_threshold_gpu.py`.
+- Hypothesis: stronger bilateral grain-boundary cohesion in layered-cathode secondary particles creates a centered grain-neck transport bridge instead of one-shell leakage.
+- Novelty search: `site:pubmed.ncbi.nlm.nih.gov lithium cathode secondary particle grain boundary transport model`
+- Novelty search: `site:pubmed.ncbi.nlm.nih.gov NMC secondary particle computational model grain boundary diffusion`
+- Result of search: adjacent grain-boundary and secondary-particle transport papers exist, but not this dense GPU iterative-deepening threshold map on a symmetric disordered operator.
 
-EXPERIMENT: exp_conifer_needle_transfusion_bridge_threshold (1216 total results available, 100 sampled, 32 hosts)
-  Discovered: 2026-04-01 12:20 UTC
+EXPERIMENT: exp_coastal_aquifer_aquitard_shunt_breakdown_threshold (6075 total results available, 250 sampled, 50 hosts)
+  Discovered: 2026-04-01 19:50 UTC
   Last updated: 2026-04-01
-  Top fitness: 13039982.2 (eta=0.050209, N=2048), 12596012.7 (eta=0.050702, N=2048), 11882326.8 (eta=0.050240, N=2048)
-  Results: The ranked frontier repeatedly forms the centered transfusion bridge with bridge mass about 0.914-0.918, core mass about 0.306-0.309, and outer leak about 0.082-0.086. Most of the sampled deep runs support the bridge at eta just above 0.05, but nearby equally deep brackets still occasionally miss support when bilateral balance slips into the high-0.7 to low-0.8 range.
-  Conclusion: PRELIMINARY. Bilateral endodermis-transfusion coupling clearly creates the predicted centered transfusion bridge and suppresses mesophyll-edge leakage. The mechanism sign looks real, but the onset band is still balance-limited enough that the threshold is not yet fully closed.
+  Top fitness: 6553600.001 (kappa=0.1472, N=768), 6553600.001 (kappa=0.1612, N=768), 6553600.001 (kappa=0.1401, N=768)
+  Results: The deep frontier keeps the freshwater corridor strongly localized, with bridge mass about 0.849-0.872, core mass about 0.327-0.384, and leak only about 0.024-0.053, but equally deep brackets still flip support whenever bilateral balance slips into roughly the 0.74-0.83 band.
+  Conclusion: PRELIMINARY. The corridor is real and often strong, but the onset band is still balance-limited rather than closed. Today's deeper sample strengthens the positive signal without eliminating the same narrow-band alternation that kept this family active.
 
-EXPERIMENT: exp_basketcell_pinceau_ais_bridge_threshold (1116 total results available, 100 sampled, 31 hosts)
-  Discovered: 2026-04-01 12:20 UTC
+EXPERIMENT: exp_peatland_methanotroph_oxic_anoxic_bridge_threshold (7592 total results available, 250 sampled, 51 hosts)
+  Discovered: 2026-04-01 19:50 UTC
   Last updated: 2026-04-01
-  Top fitness: 12747726.6 (gamma=0.051147, N=2048), 12475868.9 (gamma=0.050034, N=2048), 12110869.1 (gamma=0.050339, N=2048)
-  Results: The top ranked samples consistently show a centered AIS gate with bridge mass about 0.916-0.920, core mass about 0.307-0.310, and outer leak about 0.080-0.084 in the low-gamma branch, with an even stronger higher-gamma branch reaching bridge mass about 0.927-0.946 and leak about 0.054-0.073. The only instability is occasional support loss on neighboring deep low-gamma brackets when balance falls to about 0.80-0.82.
-  Conclusion: PRELIMINARY. Balanced basket-to-pinceau reinforcement clearly strengthens the centered AIS-core mode and cuts boundary leakage, so the proposed gate mechanism is real. The threshold location is still ragged because adjacent deep brackets can alternate on bilateral balance even while the centered mode remains visually strong.
+  Top fitness: 6553600.001 (rho=0.1864, N=1024), 6553600.001 (rho=0.2806, N=1024), 6553600.001 (rho=0.2213, N=1024)
+  Results: Centered interface capture remains strong across the ranked sample, with bridge mass about 0.857-0.870, core mass about 0.358-0.397, and leak about 0.018-0.035, but support still alternates between neighboring deep brackets as balance toggles around the 0.84 threshold.
+  Conclusion: PRELIMINARY. The oxic-anoxic bridge is clearly present, yet the deepest frontier still contains many equally sharp failures driven by bilateral imbalance rather than weak localization. This is stronger evidence for a real effect, but not yet a closed threshold.
 
-EXPERIMENT: exp_dural_lymphatic_arachnoid_bridge_threshold (584 total results available, 200 sampled, 27 hosts)
-  Discovered: 2026-04-01 16:22 UTC
+EXPERIMENT: exp_ribosome_exit_tunnel_charge_focusing_threshold (7683 total results available, 250 sampled, 48 hosts)
+  Discovered: 2026-04-01 19:50 UTC
   Last updated: 2026-04-01
-  Top fitness: 6553600.0 (eta=0.260507, N=2048), 6553600.0 (eta=0.260507, N=2048), 6553600.0 (eta=0.210390, N=2048)
-  Results: The ranked frontier cleanly forms a centered arachnoid drainage corridor with bridge mass about 0.831-0.843, core mass about 0.346-0.387, and dural leak about 0.016-0.033. Most of the deepest brackets sit just below support around eta 0.18-0.26, but a higher-eta branch near about 0.27-0.32 repeatedly turns support-positive with balance about 0.87-0.99 and leak about 0.015-0.020.
-  Conclusion: PRELIMINARY. Stronger bilateral dural-lymphatic coupling does generate the predicted centered drainage corridor rather than one-wall trapping. The effect is real, but the onset band is still ragged because only 15 of the 200 ranked samples cross full support and many equally deep brackets remain just under the bridge threshold.
+  Top fitness: 6553600.001 (psi=0.1993, N=1024), 6553600.001 (psi=0.1343, N=1024), 6553600.001 (psi=0.2723, N=2048)
+  Results: The tunnel-axis mode stays strongly centered, with bridge mass about 0.861-0.889, core mass about 0.308-0.394, and leak about 0.016-0.054, but support repeatedly fails in high-fitness brackets when balance lands in roughly the 0.74-0.83 range even at deep N.
+  Conclusion: PRELIMINARY. Charge focusing is real and often quite strong, but the onset band remains balance-limited rather than uniformly stable. The added depth broadens the positive regime without removing the alternating failures.
 
-EXPERIMENT: exp_osteoclast_sealingzone_resorptionpit_bridge_threshold (561 total results available, 200 sampled, 27 hosts)
-  Discovered: 2026-04-01 16:22 UTC
+EXPERIMENT: exp_conifer_needle_transfusion_bridge_threshold (4663 total results available, 250 sampled, 43 hosts)
+  Discovered: 2026-04-01 19:50 UTC
   Last updated: 2026-04-01
-  Top fitness: 6553600.0 (rho=0.320664, N=2048), 6553600.0 (rho=0.370820, N=1024), 6553600.0 (rho=0.305625, N=2048)
-  Results: Across the ranked sample the centered pit-like mode is present but stays sub-threshold, with sealing-bridge mass only about 0.836-0.845 against a 0.85 target, pit core mass about 0.374-0.402, balance usually about 0.85-0.98, and matrix leak about 0.013-0.024. Even the strongest high-rho brackets remain narrowly short on bridge capture, and none of the 200 sampled runs are support-positive.
-  Conclusion: REJECTED. Bilateral sealing-zone reinforcement improves centering and reduces leak, but it does not stabilize the proposed fully supported resorption-pit bridge on the ranked frontier. The observed effect points in the right direction yet consistently stops short of the hypothesized threshold, so this bridge claim is not borne out as posed.
+  Top fitness: 13056744.037 (eta=0.0527, N=2048), 13039982.167 (eta=0.0502, N=2048), 13022618.536 (eta=0.0538, N=2048)
+  Results: The ranked frontier is heavily concentrated near eta about 0.050-0.054 and shows a strong centered bridge, with bridge mass about 0.914-0.917, core mass about 0.306-0.310, and leak about 0.083-0.086; most deep samples support, but occasional equally deep brackets still drop out when balance falls into the high-0.7 to low-0.8 range.
+  Conclusion: PRELIMINARY. The transfusion bridge is now a robust positive effect, but the lowest-eta onset band still contains balance-limited misses at the same depth and nearly the same parameter value. That keeps this family short of a cleanly closed confirmation for now.
 
-EXPERIMENT: exp_trophoblast_lacuna_syncytium_bridge_threshold (535 total results available, 200 sampled, 26 hosts)
-  Discovered: 2026-04-01 16:22 UTC
+EXPERIMENT: exp_basketcell_pinceau_ais_bridge_threshold (4624 total results available, 250 sampled, 42 hosts)
+  Discovered: 2026-04-01 19:50 UTC
   Last updated: 2026-04-01
-  Top fitness: 6553600.0 (chi=0.274726, N=1024), 6553600.0 (chi=0.260078, N=1024), 6553600.0 (chi=0.260078, N=1024)
-  Results: The ranked lacuna frontier is consistently centered and low-leak, with bridge mass about 0.826-0.833, core mass about 0.362-0.381, syncytium balance usually about 0.85-0.98, and decidual leak about 0.019-0.029. However, the bridge mass never reaches the 0.84 support target and none of the 200 deepest samples turn support-positive, even in the stronger chi 0.29-0.31 branch.
-  Conclusion: REJECTED. Stronger bilateral syncytiotrophoblast organization improves the centered lacuna mode but does not produce the hypothesized supported maternal-lacuna bridge in the deep frontier. Because the entire ranked sample remains uniformly below the bridge threshold, this specific bridge-threshold claim is not supported.
+  Top fitness: 13107001.177 (gamma=0.0526, N=2048), 13099772.710 (gamma=0.0529, N=2048), 13073597.559 (gamma=0.0514, N=2048)
+  Results: The deep AIS-gate frontier is likewise strongly centered, with bridge mass about 0.916-0.919, core mass about 0.307-0.309, and leak about 0.081-0.084, and most top-ranked samples support; the remaining failures are almost entirely cases where balance slips to about 0.79-0.82 despite otherwise strong bridge metrics.
+  Conclusion: PRELIMINARY. The cerebellar gate effect is real and now broadly replicated, but the deepest onset band still alternates on symmetry rather than locking into a single closed threshold. More high-depth brackets in this narrow gamma window are still scientifically useful.
+
+EXPERIMENT: exp_dural_lymphatic_arachnoid_bridge_threshold (1212 total results available, 250 sampled, 30 hosts)
+  Discovered: 2026-04-01 19:50 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553600.001 (eta=0.4009, N=2048), 6553600.001 (eta=0.2505, N=1024), 6553600.001 (eta=0.2605, N=2048)
+  Results: The best results show a clean drainage corridor with bridge mass up to about 0.846, core mass up to about 0.401, and leak down to about 0.011, but most of the 250-sample frontier still sits just below the bridge target or only crosses support in the higher-eta tail.
+  Conclusion: PRELIMINARY. The centered drainage mode appears genuine, yet only a minority of equally deep brackets currently satisfy full support. The family remains positive but not closed because the onset still sharpens materially with eta.
+
+EXPERIMENT: exp_bile_duct_plate_portal_bridge_threshold (358 total results available, 250 sampled, 22 hosts)
+  Discovered: 2026-04-01 19:50 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553599.994 (eta=3.1627, N=2048), 6553599.994 (eta=3.1777, N=2048), 6553599.994 (eta=3.1727, N=2048)
+  Results: The entire ranked 250-sample frontier is uniformly supported at deep N, with bridge mass about 0.8765, core mass about 0.4894, balance about 0.978-0.996, and leak only about 0.0002 across the top and tail of the sample.
+  Conclusion: CONFIRMED. Strong bilateral portal reinforcement cleanly stabilizes a centered ductal-plate bridge in this finite-size operator family. The effect is not marginal: the deep frontier is uniformly balanced and essentially leak-free across the full ranked sample.
+
+EXPERIMENT: exp_freeadd_heavytail_cusp_split_threshold (378 total results available, 250 sampled, 22 hosts)
+  Discovered: 2026-04-01 19:50 UTC
+  Last updated: 2026-04-01
+  Top fitness: 13107099.967 (delta=3.6000, N=2048), 13107099.967 (delta=3.6000, N=2048), 13107099.967 (delta=3.6000, N=2048)
+  Results: Even at the delta ceiling and deepest N, the central gap stays tiny at about 0.001-0.004 and the gap ratio only about 0.5-1.9, while center offset and left-right balance are already excellent, so the missing ingredient is simply gap opening rather than centering or symmetry.
+  Conclusion: REJECTED. The hypothesized reproducible cusp split does not appear anywhere in the tested deformation window. Heavy tails plus the quartic trap keep the spectrum balanced and near-centered, but they do not open the large central gap required by the support criterion.
