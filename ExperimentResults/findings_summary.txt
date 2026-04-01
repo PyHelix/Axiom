@@ -3,70 +3,80 @@
 Retire today:
 - `exp_karst_conduit_speleothem_bridge_threshold`: CONFIRMED. Deep 2048-site frontier is uniformly centered, balanced, and very low leak.
 - `exp_saltcrust_pore_evaporation_bridge_threshold`: CONFIRMED. Supported evaporation corridor persists across the ranked 2048-site sample.
-
-Keep active for now:
-- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: PRELIMINARY. Freshwater corridor is real, but onset is still balance-limited near kappa about 0.13-0.17.
-- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: PRELIMINARY. Centered interface bridge is real, but adjacent deep brackets still alternate below the stronger branch.
-- `exp_ribosome_exit_tunnel_charge_focusing_threshold`: PRELIMINARY. Centered tunnel-axis mode is real, but bilateral balance still flips near onset.
-- `exp_conifer_needle_transfusion_bridge_threshold`: PRELIMINARY. Centered transfusion bridge is real, but the lowest-eta deep frontier still drops support on occasional balance-limited brackets.
-- `exp_basketcell_pinceau_ais_bridge_threshold`: PRELIMINARY. Centered AIS gate is real, but adjacent deep gamma brackets still alternate on bilateral balance.
 - `exp_chloroplast_pyrenoid_thylakoid_bridge_threshold`: CONFIRMED. High-psi pyrenoid capture is centered, balanced, and essentially leak-free across the ranked frontier.
 - `exp_fault_gouge_clast_pressurearch_bridge_threshold`: CONFIRMED. High-tau pressure arches are centered and very low leak across the deep frontier.
-- `exp_mangrove_lenticel_aerenchyma_bridge_threshold`: SKIP for now. Completed BOINC rows exist, but sanitized payloads are still absent.
 - `exp_peat_pore_ironredox_bridge_threshold`: CONFIRMED. The centered iron-redox core is stable and near-perfectly balanced at the high-kappa frontier.
 - `exp_thalamocortical_trn_gate_bridge_threshold`: CONFIRMED. The relay-gate bridge is stable, balanced, and nearly leak-free in the high-theta regime.
+- `exp_mangrove_lenticel_aerenchyma_bridge_threshold`: CONFIRMED. The oxygen bridge is now cleanly analyzable and the deep frontier is uniformly centered, balanced, and near-zero leak.
 
-Still scientifically live from ranked findings:
-- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: positive branch is obvious, but threshold placement is still ragged.
-- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: real centered bridge, but onset remains mixed on balance.
-- `exp_ribosome_exit_tunnel_charge_focusing_threshold`: real focusing mechanism, but onset remains mixed on balance.
+Keep active for now:
+- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: PRELIMINARY. Freshwater corridor is real, but many equally deep brackets still fail on bilateral balance in the onset band.
+- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: PRELIMINARY. Centered interface capture is real, but adjacent deep brackets still alternate below the stronger branch.
+- `exp_ribosome_exit_tunnel_charge_focusing_threshold`: PRELIMINARY. Centered tunnel-axis focusing is real, but the onset band remains balance-limited.
+- `exp_conifer_needle_transfusion_bridge_threshold`: PRELIMINARY. Centered transfusion bridge is real, but the lowest-eta deep frontier still drops support on occasional balance-limited brackets.
+- `exp_basketcell_pinceau_ais_bridge_threshold`: PRELIMINARY. Centered AIS gate is real, but adjacent deep gamma brackets still alternate on bilateral balance.
 
-2026-04-01 NEW CPU DESIGN NOTES
+EXPERIMENT: exp_coastal_aquifer_aquitard_shunt_breakdown_threshold (6131 total results available, 150 sampled, 44 hosts)
+  Discovered: 2026-04-01 14:53 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553600.0 (kappa=0.149906, N=4096), 6553600.0 (kappa=0.166279, N=4096), 6553600.0 (kappa=0.154719, N=4096)
+  Results: The ranked sample repeatedly forms a centered freshwater corridor with bridge mass about 0.848-0.877, core mass about 0.326-0.400, and outer leak about 0.017-0.054. But 78 of the 150 deepest brackets still miss support because balance repeatedly slips into roughly the 0.72-0.83 range even when leak is already modest and core capture is strong.
+  Conclusion: PRELIMINARY. Bilateral aquitard reinforcement does create the predicted centered freshwater mode rather than boundary leakage. The effect is scientifically real, but the threshold placement is still ragged because many max-fitness brackets remain balance-limited in the same kappa band.
 
-- Added `exp_conifer_needle_transfusion_bridge_threshold.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov conifer needle transfusion tissue water transport model` and `site:pubmed.ncbi.nlm.nih.gov conifer needle endodermis transfusion tissue hydraulic model`.
-  Found adjacent conifer-needle hydraulic and anatomy literature, but not a dense iterative-deepening spectral threshold map for bilateral endodermis-transfusion coupling that stabilizes a centered transfusion bridge.
-- Added `exp_basketcell_pinceau_ais_bridge_threshold.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov Purkinje pinceau basket cell computational model` and `site:pubmed.ncbi.nlm.nih.gov cerebellar basket cell pinceau axon initial segment model`.
-  Found adjacent cerebellar basket-axon and AIS physiology literature, but not a dense iterative-deepening spectral threshold map for bilateral basket-to-pinceau coupling that stabilizes a centered AIS gate.
+EXPERIMENT: exp_peatland_methanotroph_oxic_anoxic_bridge_threshold (7468 total results available, 150 sampled, 45 hosts)
+  Discovered: 2026-04-01 14:53 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553600.0 (rho=0.201171, N=2048), 6553600.0 (rho=0.238967, N=2048), 6553600.0 (rho=0.205062, N=2048)
+  Results: The ranked frontier shows a real centered oxic-anoxic bridge with bridge mass about 0.856-0.870, core mass about 0.357-0.400, and outer leak about 0.018-0.037. The stronger branch above roughly rho 0.22-0.29 is often clean, but 74 of the 150 deepest brackets still fail on balance near about 0.77-0.83 despite otherwise favorable bridge and leak values.
+  Conclusion: PRELIMINARY. Stronger bilateral methanotroph coupling does stabilize the centered interface reaction bridge and suppress edge leakage. The mechanism is clear, but the onset band is not yet closed because neighboring deep brackets still alternate on balance.
 
-Operational note:
-- CPU config currently shows 10 active weighted families. Retiring the two newly concluded families still leaves 8 active, which satisfies the minimum live CPU-pool requirement for Step 8.
-- No existing experiment scripts were modified. This step only added new CPU scripts, registered their numeric result fields, and recorded the new filenames for dry-run/deploy.
+EXPERIMENT: exp_ribosome_exit_tunnel_charge_focusing_threshold (7538 total results available, 150 sampled, 42 hosts)
+  Discovered: 2026-04-01 14:53 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553600.0 (psi=0.126781, N=2048), 6553600.0 (psi=0.125011, N=2048), 6553600.0 (psi=0.126881, N=2048)
+  Results: The sample splits into a weaker low-psi branch around psi 0.07-0.17 with bridge mass about 0.858-0.880, core mass about 0.305-0.358, and leak about 0.029-0.057, plus a stronger higher-psi branch around psi 0.21-0.30 with bridge mass about 0.884-0.890 and leak about 0.015-0.023. Even so, 70 of the 150 deepest brackets still miss support when bilateral balance sits around 0.68-0.83, including some otherwise strong high-psi runs.
+  Conclusion: PRELIMINARY. Bilateral wall-charge focusing does produce the centered tunnel-axis mode and materially reduces wall leakage. The threshold remains incomplete because support still alternates across neighboring deep brackets, especially where balance stays just below the target.
+
+EXPERIMENT: exp_mangrove_lenticel_aerenchyma_bridge_threshold (4763 total results available, 150 sampled, 43 hosts)
+  Discovered: 2026-04-01 14:53 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553600.0 (rho=3.770352, N=2048), 6553600.0 (rho=3.760352, N=2048), 6553600.0 (rho=3.760352, N=2048)
+  Results: All 150 ranked samples are support-positive and sit in the same high-rho centered oxygen-bridge regime, with bridge mass about 0.8832-0.8833, core mass about 0.5213-0.5246, bilateral balance about 0.976-1.000, and outer leak about 0.00018-0.00032. The deep 1024 and 2048 site runs agree cleanly and show no meaningful return to edge-localized leakage.
+  Conclusion: CONFIRMED. Stronger bilateral lenticel-aerenchyma coupling robustly stabilizes the centered oxygen bridge through the sulfide-rich tissue. The effect is uniform across the ranked frontier, with near-perfect balance and essentially zero leak once the high-rho branch is reached.
 
 EXPERIMENT: exp_conifer_needle_transfusion_bridge_threshold (1216 total results available, 100 sampled, 32 hosts)
   Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
   Top fitness: 13039982.2 (eta=0.050209, N=2048), 12596012.7 (eta=0.050702, N=2048), 11882326.8 (eta=0.050240, N=2048)
-  Results: The ranked frontier repeatedly forms the centered transfusion bridge with bridge mass about 0.914-0.918, core mass about 0.306-0.309, and outer leak about 0.082-0.086. Most of the 100 sampled deep runs support the bridge at eta just above 0.05, but nearby equally deep brackets still occasionally miss support when bilateral balance slips into the high-0.7 to low-0.8 range.
+  Results: The ranked frontier repeatedly forms the centered transfusion bridge with bridge mass about 0.914-0.918, core mass about 0.306-0.309, and outer leak about 0.082-0.086. Most of the sampled deep runs support the bridge at eta just above 0.05, but nearby equally deep brackets still occasionally miss support when bilateral balance slips into the high-0.7 to low-0.8 range.
   Conclusion: PRELIMINARY. Bilateral endodermis-transfusion coupling clearly creates the predicted centered transfusion bridge and suppresses mesophyll-edge leakage. The mechanism sign looks real, but the onset band is still balance-limited enough that the threshold is not yet fully closed.
 
 EXPERIMENT: exp_basketcell_pinceau_ais_bridge_threshold (1116 total results available, 100 sampled, 31 hosts)
   Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
   Top fitness: 12747726.6 (gamma=0.051147, N=2048), 12475868.9 (gamma=0.050034, N=2048), 12110869.1 (gamma=0.050339, N=2048)
-  Results: The top 100 ranked samples consistently show a centered AIS gate with bridge mass about 0.916-0.920, core mass about 0.307-0.310, and outer leak about 0.080-0.084 in the low-gamma branch, with an even stronger higher-gamma branch reaching bridge mass about 0.927-0.946 and leak about 0.054-0.073. The only instability is occasional support loss on neighboring deep low-gamma brackets when balance falls to about 0.80-0.82.
+  Results: The top ranked samples consistently show a centered AIS gate with bridge mass about 0.916-0.920, core mass about 0.307-0.310, and outer leak about 0.080-0.084 in the low-gamma branch, with an even stronger higher-gamma branch reaching bridge mass about 0.927-0.946 and leak about 0.054-0.073. The only instability is occasional support loss on neighboring deep low-gamma brackets when balance falls to about 0.80-0.82.
   Conclusion: PRELIMINARY. Balanced basket-to-pinceau reinforcement clearly strengthens the centered AIS-core mode and cuts boundary leakage, so the proposed gate mechanism is real. The threshold location is still ragged because adjacent deep brackets can alternate on bilateral balance even while the centered mode remains visually strong.
 
 EXPERIMENT: exp_chloroplast_pyrenoid_thylakoid_bridge_threshold (4616 total results available, 100 sampled, 44 hosts)
   Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
   Top fitness: 6553600.0 (psi=3.780352, N=2048), 6553600.0 (psi=3.775352, N=2048), 6553600.0 (psi=3.770352, N=2048)
-  Results: Every sampled high-fitness run sits in the same high-psi regime and shows a tightly centered pyrenoid bridge with bridge mass about 0.8833, core mass about 0.5239, bilateral balance about 0.98-0.999, and outer leak around 0.00016. The frontier is no longer an assimilation gap; it is a remarkably uniform near-zero-leak capture regime.
+  Results: Every sampled high-fitness run sits in the same high-psi regime and shows a tightly centered pyrenoid bridge with bridge mass about 0.8833, core mass about 0.5239, bilateral balance about 0.98-0.999, and outer leak around 0.00016. The frontier is a remarkably uniform near-zero-leak capture regime.
   Conclusion: CONFIRMED. Strong bilateral thylakoid coupling robustly stabilizes the centered pyrenoid-core bridge rather than edge leakage. The effect is extremely consistent across the ranked frontier, with almost perfect balance and essentially no outer leak in the supported regime.
 
 EXPERIMENT: exp_fault_gouge_clast_pressurearch_bridge_threshold (3830 total results available, 100 sampled, 44 hosts)
   Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
   Top fitness: 6553600.0 (tau=3.780352, N=1024), 6553600.0 (tau=3.780352, N=1024), 6553600.0 (tau=3.740352, N=2048)
-  Results: The entire ranked sample is pressure-arch positive in the high-tau regime, with bridge mass about 0.8888, core mass about 0.5112-0.5119, bilateral balance about 0.98-1.00, and outer leak around 0.00017-0.00018. Deep 1024 and 2048 site runs agree cleanly, and none of the sampled frontier points revert to edge-localized failure.
+  Results: The entire ranked sample is pressure-arch positive in the high-tau regime, with bridge mass about 0.8888, core mass about 0.5112-0.5119, bilateral balance about 0.98-1.00, and outer leak around 0.00017-0.00018. Deep 1024 and 2048 site runs agree cleanly.
   Conclusion: CONFIRMED. Stronger bilateral gouge coupling does stabilize a centered pressure arch instead of damage-zone edge pinning. The effect is uniform across the sampled ranked frontier, with near-perfect balance and negligible leak once the high-tau branch is reached.
 
 EXPERIMENT: exp_peat_pore_ironredox_bridge_threshold (3809 total results available, 100 sampled, 43 hosts)
   Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
   Top fitness: 6553600.0 (kappa=3.765352, N=2048), 6553600.0 (kappa=3.780352, N=1024), 6553600.0 (kappa=3.760352, N=2048)
-  Results: Across the top 100 ranked results the centered redox core is exceptionally stable, with bridge mass about 0.8833, core mass about 0.5239-0.5245, bilateral balance about 0.98-1.00, and outer leak around 0.00016-0.00017. The deep frontier is uniform across both 1024 and 2048 site runs and shows no meaningful tendency toward edge oxidation.
+  Results: Across the top ranked results the centered redox core is exceptionally stable, with bridge mass about 0.8833, core mass about 0.5239-0.5245, bilateral balance about 0.98-1.00, and outer leak around 0.00016-0.00017. The deep frontier is uniform across both 1024 and 2048 site runs.
   Conclusion: CONFIRMED. Bilateral pore coupling robustly produces the predicted centered iron-redox bridge and strongly suppresses edge leak. The supported regime is highly consistent across the sampled frontier, indicating a real and stable redox-core mechanism.
 
 EXPERIMENT: exp_thalamocortical_trn_gate_bridge_threshold (3659 total results available, 100 sampled, 44 hosts)
