@@ -1,180 +1,77 @@
-2026-03-31 CPU FRONTIER SUMMARY
+2026-04-01 CPU FRONTIER SUMMARY
 
 Retire today:
-- `exp_basalt_vesicle_zeolite_bridge_threshold`: REJECTED. Deep frontier stays ceiling-pinned with bridge/core mass near zero.
-- `exp_seagrass_rhizome_oxygen_bridge_threshold`: REJECTED. Deep frontier remains rho-ceiling-pinned with negligible bridge/core capture.
-- `exp_glomerular_podocyte_slit_bridge_threshold`: REJECTED. Symmetry/leak are fine but slit-bridge mass never forms.
-- `exp_fjord_pycnocline_sill_exchange_threshold`: CONFIRMED. Ranked frontier is uniformly centered, balanced, and nearly leak-free.
-- `exp_josephson_twinboundary_vortex_channel_threshold`: CONFIRMED. Ranked frontier is saturated in the centered vortex-channel regime.
-- `exp_stage_structured_foodweb_coherence_breakdown_threshold`: CONFIRMED. Ranked frontier is uniformly coherent and centered.
+- `exp_karst_conduit_speleothem_bridge_threshold`: CONFIRMED. Deep 2048-site frontier is uniformly centered, balanced, and very low leak.
+- `exp_saltcrust_pore_evaporation_bridge_threshold`: CONFIRMED. Supported evaporation corridor persists across the ranked 2048-site sample.
 
 Keep active for now:
-- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: PRELIMINARY. Freshwater corridor is real, but onset remains balance-limited near kappa about 0.13-0.17.
-- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: PRELIMINARY. Centered interface bridge is real, but adjacent deep brackets still alternate just below the stronger branch.
+- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: PRELIMINARY. Freshwater corridor is real, but onset is still balance-limited near kappa about 0.13-0.17.
+- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: PRELIMINARY. Centered interface bridge is real, but adjacent deep brackets still alternate below the stronger branch.
 - `exp_ribosome_exit_tunnel_charge_focusing_threshold`: PRELIMINARY. Centered tunnel-axis mode is real, but bilateral balance still flips near onset.
+- `exp_conifer_needle_transfusion_bridge_threshold`: PRELIMINARY. Centered transfusion bridge is real, but the lowest-eta deep frontier still drops support on occasional balance-limited brackets.
+- `exp_basketcell_pinceau_ais_bridge_threshold`: PRELIMINARY. Centered AIS gate is real, but adjacent deep gamma brackets still alternate on bilateral balance.
+- `exp_chloroplast_pyrenoid_thylakoid_bridge_threshold`: CONFIRMED. High-psi pyrenoid capture is centered, balanced, and essentially leak-free across the ranked frontier.
+- `exp_fault_gouge_clast_pressurearch_bridge_threshold`: CONFIRMED. High-tau pressure arches are centered and very low leak across the deep frontier.
+- `exp_mangrove_lenticel_aerenchyma_bridge_threshold`: SKIP for now. Completed BOINC rows exist, but sanitized payloads are still absent.
+- `exp_peat_pore_ironredox_bridge_threshold`: CONFIRMED. The centered iron-redox core is stable and near-perfectly balanced at the high-kappa frontier.
+- `exp_thalamocortical_trn_gate_bridge_threshold`: CONFIRMED. The relay-gate bridge is stable, balanced, and nearly leak-free in the high-theta regime.
 
 Still scientifically live from ranked findings:
-- `exp_delta_distributary_mouthbar_bridge_threshold`: strong high-lambda regime exists, but onset is still jagged.
-- `exp_myelin_schmidt_lanterman_incisure_bridge_threshold`: strong high-sigma bridge phase exists, but adjacent deep brackets still alternate on balance.
-- `exp_insect_tracheal_taenidia_lumen_bridge_threshold`: onset appears below the current low-chi floor.
-- `exp_marine_snow_microgel_pore_bridge_threshold`: real centered pore corridor, but deep frontier remains bifurcated.
-- `exp_ooid_cortex_nucleus_bridge_threshold`: strong centered nucleus branch exists, but low-kappa edge is still split.
-- `exp_moss_peristome_hygroscopic_bridge_threshold`: strong pore branch exists, but threshold remains mixed.
-- `exp_cerebral_organoid_ventricular_zone_bridge_threshold`: strong bridge regime is real, but frontier is ceiling-pinned.
-
-2026-03-31 NEW CPU DESIGN NOTES
-
-- Added `exp_fault_gouge_clast_pressurearch_bridge_threshold.py`.
-  Novelty check: searched `fault gouge force chain shear localization pore pressure model` and related fault-zone mechanics literature. Found force-chain and shear-band models, but not a dense iterative-deepening spectral threshold map for bilateral gouge coupling that stabilizes a centered pressure arch.
-- Added `exp_mangrove_lenticel_aerenchyma_bridge_threshold.py`.
-  Novelty check: searched `mangrove lenticel aerenchyma sulfide oxygen transport model` and related mangrove root-aeration literature. Found aeration and sulfide-stress models, but not a dense spectral threshold map for bilateral lenticel-aerenchyma coupling that closes a centered oxygen bridge.
-- Added `exp_chloroplast_pyrenoid_thylakoid_bridge_threshold.py`.
-  Novelty check: searched `chloroplast pyrenoid thylakoid computational model` and related pyrenoid ultrastructure literature. Found structural and transport models, but not a dense iterative-deepening eigensolve threshold study for bilateral thylakoid capture of a centered pyrenoid bridge.
-- Added `exp_peat_pore_ironredox_bridge_threshold.py`.
-  Novelty check: searched `peat pore iron redox oxygen model biogeochemistry` and related peat redox-front literature. Found oxygen and iron-cycling models, but not a dense spectral threshold map for bilateral pore coupling around a centered iron-redox bridge.
-- Added `exp_thalamocortical_trn_gate_bridge_threshold.py`.
-  Novelty check: searched `thalamocortical reticular nucleus gating network model` and related thalamic relay literature. Found relay/TRN gating models, but not a dense iterative-deepening threshold map for bilateral reticular coupling that stabilizes a centered relay gate.
-
-Operational note:
-- CPU config showed only 6 active families before retirement review, and 3 of those were already concluded. This cycle added 5 new CPU scripts so Step 8 can restore the scientifically live CPU pool to at least 8 families after cleanup zeroes the retired weights.
-
-2026-04-01 SCIENCE CYCLE
-
-EXPERIMENT: exp_chloroplast_pyrenoid_thylakoid_bridge_threshold (192 total results available, 0 sampled, 20 hosts)
-  Discovered: 2026-04-01 02:22 UTC
-  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
-  Results: MariaDB shows 192 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no ranked frontier to inspect.
-  Conclusion: SKIP. The experiment is scientifically eligible but not yet analyzable because the assimilated numbers have not landed in the sanitized results directory. Revisit once the sanitized payloads exist so the pyrenoid-vs-edge leakage pattern can be read directly from raw numeric outputs.
-  Last updated: 2026-04-01
-
-EXPERIMENT: exp_thalamocortical_trn_gate_bridge_threshold (181 total results available, 0 sampled, 24 hosts)
-  Discovered: 2026-04-01 02:22 UTC
-  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
-  Results: MariaDB shows 181 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no ranked relay-gate frontier to inspect.
-  Conclusion: SKIP. The BOINC rows are present but the sanitized science payloads are not, so no defensible statement about centered gate formation versus boundary leakage can be made yet. Re-sample after assimilation catches up.
-  Last updated: 2026-04-01
-
-EXPERIMENT: exp_fault_gouge_clast_pressurearch_bridge_threshold (172 total results available, 0 sampled, 23 hosts)
-  Discovered: 2026-04-01 02:22 UTC
-  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
-  Results: MariaDB shows 172 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so the pressure-arch versus edge-localization frontier cannot be inspected.
-  Conclusion: SKIP. This family has enough completed work to merit analysis, but the sanitized numeric layer is still absent. Until those files appear, there is no safe basis for confirming or rejecting the proposed centered pressure arch.
-  Last updated: 2026-04-01
-
-EXPERIMENT: exp_peat_pore_ironredox_bridge_threshold (166 total results available, 0 sampled, 23 hosts)
-  Discovered: 2026-04-01 02:22 UTC
-  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
-  Results: MariaDB shows 166 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so no iron-redox bridge frontier is available to read.
-  Conclusion: SKIP. The experiment has active completed returns, but the assimilated numeric outputs are missing from the sanitized store. Revisit after those artifacts are written so the centered redox-core regime can be evaluated directly.
-  Last updated: 2026-04-01
-
-EXPERIMENT: exp_mangrove_lenticel_aerenchyma_bridge_threshold (155 total results available, 0 sampled, 23 hosts)
-  Discovered: 2026-04-01 02:22 UTC
-  Top fitness: unavailable; 0 matching sanitized payloads were present under /opt/axiom/experiment_results/sanitized/.
-  Results: MariaDB shows 155 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no oxygen-bridge frontier to inspect.
-  Conclusion: SKIP. The completed BOINC rows indicate interest from the volunteer pool, but not yet an analyzable sanitized dataset. No conclusion about centered oxygen capture versus edge leakage is warranted until assimilation produces the numeric payloads.
-  Last updated: 2026-04-01
+- `exp_coastal_aquifer_aquitard_shunt_breakdown_threshold`: positive branch is obvious, but threshold placement is still ragged.
+- `exp_peatland_methanotroph_oxic_anoxic_bridge_threshold`: real centered bridge, but onset remains mixed on balance.
+- `exp_ribosome_exit_tunnel_charge_focusing_threshold`: real focusing mechanism, but onset remains mixed on balance.
 
 2026-04-01 NEW CPU DESIGN NOTES
 
-- Added `exp_retinal_rpe_bruch_drusen_bridge_threshold.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov retinal pigment epithelium Bruch membrane drusen computational model` and `site:pubmed.ncbi.nlm.nih.gov Bruch membrane drusen transport model retina`. Found adjacent RPE/Bruch bilayer and AMD-geometry studies (including PMID 31146784 and PMID 39365260), but not a dense iterative-deepening spectral threshold map for bilateral RPE/Bruch coupling that stabilizes a centered drusen bridge.
-- Added `exp_oocyte_zona_perivitelline_bridge_threshold.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov zona pellucida mechanical model computational oocyte` and `site:pubmed.ncbi.nlm.nih.gov perivitelline space oocyte computational model`. Found adjacent oocyte-shell and perivitelline morphology work (including PMID 32285294), but not a dense iterative-deepening spectral threshold map for bilateral zona support that closes a centered perivitelline bridge.
+- Added `exp_conifer_needle_transfusion_bridge_threshold.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov conifer needle transfusion tissue water transport model` and `site:pubmed.ncbi.nlm.nih.gov conifer needle endodermis transfusion tissue hydraulic model`.
+  Found adjacent conifer-needle hydraulic and anatomy literature, but not a dense iterative-deepening spectral threshold map for bilateral endodermis-transfusion coupling that stabilizes a centered transfusion bridge.
+- Added `exp_basketcell_pinceau_ais_bridge_threshold.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov Purkinje pinceau basket cell computational model` and `site:pubmed.ncbi.nlm.nih.gov cerebellar basket cell pinceau axon initial segment model`.
+  Found adjacent cerebellar basket-axon and AIS physiology literature, but not a dense iterative-deepening spectral threshold map for bilateral basket-to-pinceau coupling that stabilizes a centered AIS gate.
 
 Operational note:
-- CPU config is still at 8 active families today, so these two scripts are opportunistic additions for Step 8 rather than emergency backfill.
+- CPU config currently shows 10 active weighted families. Retiring the two newly concluded families still leaves 8 active, which satisfies the minimum live CPU-pool requirement for Step 8.
+- No existing experiment scripts were modified. This step only added new CPU scripts, registered their numeric result fields, and recorded the new filenames for dry-run/deploy.
 
-2026-04-01 NEW GPU DESIGN NOTES
-
-- Added `exp_stromule_peroxisome_redox_bridge_threshold_gpu.py`.
-  Novelty check: searched `"stromules" chloroplast peroxisome contact site` and `"chloroplast peroxisome" membrane contact site photorespiration`. Found stromule-induction and chloroplast-peroxisome contact literature, but not a dense GPU iterative-deepening threshold map for balanced stromule-mediated peroxisome capture at matrix sizes beyond the CPU-only study.
-- Added `exp_microvillus_terminal_web_bridge_threshold_gpu.py`.
-  Novelty check: searched `"microvillus" "terminal web" model paper` and `"brush border" terminal web mechanics model paper`. Found structural and biomechanical work on microvilli and terminal-web organization, but not a dense GPU eigensolve threshold study for bilateral rootlet reinforcement that localizes the soft mode into a centered terminal-web bridge.
-- Added `exp_root_endodermis_pericycle_bridge_threshold_gpu.py`.
-  Novelty check: searched `"pericycle endodermis interaction" lateral root model`, `"auxin" endodermis pericycle computational model lateral root emergence`, and `"root endodermis" pericycle communication model`. Found adjacent developmental and transport literature, but not a dense GPU finite-size spectral bisection map for balanced endodermis-pericycle-endodermis bridge capture.
-
-Operational note:
-- GPU config currently has 15 active families, so these three scripts keep the pool under the 20-family cap while expanding it beyond the current bridge-threshold themes already in circulation.
-
-2026-04-01 NEW CPU DESIGN NOTES
-
-- Added `exp_lamina_cribrosa_scleral_canal_bridge_threshold.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov lamina cribrosa scleral canal finite element model glaucoma` and `site:pubmed.ncbi.nlm.nih.gov optic nerve head lamina cribrosa computational model scleral canal`. Found adjacent optic-nerve-head and glaucoma biomechanics literature, including specimen-specific and finite-element scleral-canal studies, but not a dense iterative-deepening spectral threshold map for bilateral laminar reinforcement that stabilizes a centered canal bridge.
-- Added `exp_firn_ice_slab_runoff_breakdown_threshold.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov firn ice slab hydrology model meltwater infiltration` and `site:pubmed.ncbi.nlm.nih.gov polar firn aquifer ice slab permeability model`. Found adjacent firn-hydrology, permeability, and ice-slab runoff literature, but not a dense iterative-deepening spectral threshold map for bilateral slab confinement that preserves a centered runoff corridor instead of one-flank leakage.
-
-Operational note:
-- CPU config is at 10 active families on 2026-04-01, so these two scripts are opportunistic additions rather than minimum-pool backfill.
-
-2026-04-01 GPU DESIGN ADDENDUM
-
-- Added `exp_stria_vascularis_endolymph_bridge_threshold_gpu.py`.
-  Novelty check: searched `"stria vascularis" potassium transport model` and `"endolymph" "stria vascularis" model`. Found adjacent cochlear ion-transport and lateral-wall physiology literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced spiral-ligament / stria / endolymph / stria / spiral-ligament soft-mode capture.
-- Added `exp_er_exit_site_golgi_bridge_threshold_gpu.py`.
-  Novelty check: searched `"ER exit site" Golgi transport model` and `"ER exit site" computational model COPII Golgi`. Found adjacent COPII, ERES, and secretory-pathway literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced ER-sheet / ERES / Golgi-core / ERES / ER-sheet capture.
-
-Operational note:
-- GPU config showed 18 active weighted families at the start of this step, so these two additions are the full safe allotment under the 20-family cap. No retirement, testing, deployment, or config edits were done here.
-
-EXPERIMENT: exp_lamina_cribrosa_scleral_canal_bridge_threshold (423 total results available, 200 sampled, 24 hosts)
-  Discovered: 2026-04-01 03:02 UTC
-  Top fitness: 13107100.0 (bw=7.63e-08, kappa=4.000000, N=2048), 13107100.0 (bw=7.63e-08, kappa=4.000000, N=2048), 13107100.0 (bw=7.63e-08, kappa=4.000000, N=2048)
-  Results: Across the ranked 200-sample pull, bridge mass stays essentially saturated (~0.9999) and canal mass stays high (~0.66-0.71), but the same deep frontier remains ceiling-pinned at kappa about 4.0 and never flips the supported flag. The failure mode is bilateral balance: lamina balance repeatedly stalls around 0.33-0.81 in much of the frontier and the opposing scleral balance is often even weaker, while leak is already negligible.
-  Conclusion: REJECTED. Stronger bilateral laminar reinforcement does not produce the proposed centered canal-spanning bridge in a self-consistent way, because the high-fitness frontier only reaches that regime by pinning at the kappa ceiling while one side of the balance condition keeps failing. The experiment instead points to a one-sided or asymmetric localization pattern rather than a robust centered bridge threshold.
+EXPERIMENT: exp_conifer_needle_transfusion_bridge_threshold (1216 total results available, 100 sampled, 32 hosts)
+  Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
+  Top fitness: 13039982.2 (eta=0.050209, N=2048), 12596012.7 (eta=0.050702, N=2048), 11882326.8 (eta=0.050240, N=2048)
+  Results: The ranked frontier repeatedly forms the centered transfusion bridge with bridge mass about 0.914-0.918, core mass about 0.306-0.309, and outer leak about 0.082-0.086. Most of the 100 sampled deep runs support the bridge at eta just above 0.05, but nearby equally deep brackets still occasionally miss support when bilateral balance slips into the high-0.7 to low-0.8 range.
+  Conclusion: PRELIMINARY. Bilateral endodermis-transfusion coupling clearly creates the predicted centered transfusion bridge and suppresses mesophyll-edge leakage. The mechanism sign looks real, but the onset band is still balance-limited enough that the threshold is not yet fully closed.
 
-EXPERIMENT: exp_retinal_rpe_bruch_drusen_bridge_threshold (409 total results available, 200 sampled, 24 hosts)
-  Discovered: 2026-04-01 03:02 UTC
-  Top fitness: 13013781.0 (bw=7.68e-08, kappa=0.053168, N=4096), 12976378.4 (bw=7.71e-08, kappa=0.053158, N=4096), 12871064.7 (bw=7.77e-08, kappa=0.051314, N=4096)
-  Results: The ranked pull concentrates into a narrow low-kappa onset band, with kappa estimates mostly around 0.05-0.09 even deep into the sample tail. Bridge mass stays around 0.900-0.912, core mass around 0.370-0.394, leak remains low around 0.032-0.045, and core-to-leak stays strongly favorable around 8-12; the only variation is occasional balance dips into the high-0.7 range, but most deep samples remain supported.
-  Conclusion: CONFIRMED. The drusen-centered bridge regime is real and appears at a sharply localized low-kappa threshold rather than only at a ceiling-pinned extreme. The highest-fitness and lower-ranked deep samples both preserve strong bridge capture, strong core-over-leak separation, and usually adequate bilateral balance, which is the pattern expected from a genuine centered RPE/Bruch bridge.
+EXPERIMENT: exp_basketcell_pinceau_ais_bridge_threshold (1116 total results available, 100 sampled, 31 hosts)
+  Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
+  Top fitness: 12747726.6 (gamma=0.051147, N=2048), 12475868.9 (gamma=0.050034, N=2048), 12110869.1 (gamma=0.050339, N=2048)
+  Results: The top 100 ranked samples consistently show a centered AIS gate with bridge mass about 0.916-0.920, core mass about 0.307-0.310, and outer leak about 0.080-0.084 in the low-gamma branch, with an even stronger higher-gamma branch reaching bridge mass about 0.927-0.946 and leak about 0.054-0.073. The only instability is occasional support loss on neighboring deep low-gamma brackets when balance falls to about 0.80-0.82.
+  Conclusion: PRELIMINARY. Balanced basket-to-pinceau reinforcement clearly strengthens the centered AIS-core mode and cuts boundary leakage, so the proposed gate mechanism is real. The threshold location is still ragged because adjacent deep brackets can alternate on bilateral balance even while the centered mode remains visually strong.
 
-EXPERIMENT: exp_firn_ice_slab_runoff_breakdown_threshold (400 total results available, 200 sampled, 24 hosts)
-  Discovered: 2026-04-01 03:02 UTC
-  Top fitness: 13107100.0 (bw=7.63e-08, rho=4.000000, N=2048), 13107100.0 (bw=7.63e-08, rho=3.999980, N=2048), 13107100.0 (bw=7.63e-08, rho=4.000000, N=2048)
-  Results: Across the ranked 200-sample pull, bridge mass again saturates near 1.0 and corridor mass stays respectable around 0.65-0.66, but the deep frontier is pinned against rho about 4.0 and the supported flag never turns on. The missing ingredient is balanced confinement: slab balance often sits only around 0.38-0.76, with only occasional excursions higher, while the opposite-side balance and leak metrics are already small enough that the unresolved failure is clearly the corridor not stabilizing symmetrically.
-  Conclusion: REJECTED. Stronger bilateral ice-slab confinement does not cleanly preserve a centered runoff corridor before the search hits the rho ceiling, so the hypothesized balanced corridor phase is not borne out by the ranked frontier. The data support a breakdown picture dominated by asymmetric shoulder capture rather than a true centered-corridor threshold.
+EXPERIMENT: exp_chloroplast_pyrenoid_thylakoid_bridge_threshold (4616 total results available, 100 sampled, 44 hosts)
+  Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
+  Top fitness: 6553600.0 (psi=3.780352, N=2048), 6553600.0 (psi=3.775352, N=2048), 6553600.0 (psi=3.770352, N=2048)
+  Results: Every sampled high-fitness run sits in the same high-psi regime and shows a tightly centered pyrenoid bridge with bridge mass about 0.8833, core mass about 0.5239, bilateral balance about 0.98-0.999, and outer leak around 0.00016. The frontier is no longer an assimilation gap; it is a remarkably uniform near-zero-leak capture regime.
+  Conclusion: CONFIRMED. Strong bilateral thylakoid coupling robustly stabilizes the centered pyrenoid-core bridge rather than edge leakage. The effect is extremely consistent across the ranked frontier, with almost perfect balance and essentially no outer leak in the supported regime.
 
-2026-04-01 GPU DESIGN ADDENDUM II
-
-- Added `exp_lipid_droplet_peridroplet_mitochondria_bridge_threshold_gpu.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov lipid droplet mitochondria peridroplet computational model` and `site:pubmed.ncbi.nlm.nih.gov peridroplet mitochondria model lipid droplet respiration`. Found adjacent lipid-droplet / mitochondria contact-site and organelle-metabolism literature, including recent reviews of peridroplet mitochondria, but not a dense GPU iterative-deepening eigensolve threshold map for balanced mitochondrion / tether / droplet / tether / mitochondrion soft-mode capture.
-- Added `exp_neuromuscular_junctional_fold_bridge_threshold_gpu.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov neuromuscular junction junctional folds computational model active zone` and `site:pubmed.ncbi.nlm.nih.gov motor endplate junctional folds computational model`. Found adjacent morphology and transmission studies on neuromuscular-junction folds, but not a dense GPU finite-size spectral bisection map for bilateral junctional-fold reinforcement that localizes the soft mode into a centered endplate trough.
-- Added `exp_sofc_triplephase_boundary_bridge_threshold_gpu.py`.
-  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov solid oxide fuel cell triple phase boundary computational model` and `site:pubmed.ncbi.nlm.nih.gov SOFC triple phase boundary computational model electrode`. Found adjacent SOFC electrochemistry and electrode-microstructure modeling literature, but not a dense GPU iterative-deepening threshold map for balanced anode-pore / TPB / electrolyte-neck / TPB / anode-pore bridge capture.
-
-Operational note:
-- GPU config showed 16 active weighted families at the start of this step, so these three additions stay below the 20-family cap without requiring any retirement, testing, deployment, or config edits here.
-2026-04-01 CPU RETIREMENT NOTE
-
-- Retire `exp_retinal_rpe_bruch_drusen_bridge_threshold`: today's ranked frontier is sharply localized at low kappa and already CONFIRMED.
-- Retire `exp_lamina_cribrosa_scleral_canal_bridge_threshold`: today's ranked frontier remains ceiling-pinned and balance-limited, so the hypothesized centered bridge is REJECTED.
-- Retire `exp_firn_ice_slab_runoff_breakdown_threshold`: today's ranked frontier remains ceiling-pinned and asymmetry-limited, so the centered runoff corridor is REJECTED.
-
-2026-04-01 NEW CPU DESIGN NOTES
-
-- Added `exp_karst_conduit_speleothem_bridge_threshold.py`.
-  Novelty check: searched `karst conduit speleothem reactive transport model` and `CaveCalc speleothem chemistry model`. Found adjacent cave-chemistry and reactive-transport work, but not a dense iterative-deepening spectral threshold map for bilateral seepage-wall coupling that stabilizes a centered conduit bridge.
-- Added `exp_saltcrust_pore_evaporation_bridge_threshold.py`.
-  Novelty check: searched `salt crust evaporation model paper` and `combined wicking evaporation NaCl porous material model`. Found adjacent evaporation and salt-weathering models, but not a dense iterative-deepening spectral threshold map for bilateral crust-pore coupling that stabilizes a centered evaporation corridor.
-
-Operational note:
-- After marking the three concluded active families for retirement, the CPU pool still retains 8 active weighted families before Step 8 testing/deployment, so these two scripts are opportunistic replacements rather than emergency backfill.
-
-EXPERIMENT: exp_saltcrust_pore_evaporation_bridge_threshold (749 total results available, 300 sampled, 30 hosts)
-  Discovered: 2026-04-01 09:45 UTC
-  Top fitness: 6553600.0 (bw=1.53e-07, eta=1.305665, N=2048), 6553600.0 (bw=1.53e-07, eta=1.506250, N=2048), 6553600.0 (bw=1.53e-07, eta=1.506250, N=2048)
-  Results: Across the full 300-sample ranked pull, every deep frontier point stays supported with bridge mass clustered around 0.842-0.857, core mass around 0.47-0.49, balance mostly 0.95-1.00, and outer leak only about 5e-4 to 2e-3. The threshold band is not razor-thin, but the centered evaporation corridor remains intact from roughly eta about 1.0 up through about 2.0 in the deep 2048-size runs, with core-to-leak usually in the hundreds and often above 500.
-  Conclusion: CONFIRMED. Stronger bilateral crust-pore coupling does produce the proposed centered evaporation bridge rather than surface-pinned brine accumulation, and that regime persists well beyond a single lucky bracket. The highest-fitness and lower-ranked deep samples agree on the same signature: adequate bridge mass, strong bilateral balance, and extremely low leakage.
+EXPERIMENT: exp_fault_gouge_clast_pressurearch_bridge_threshold (3830 total results available, 100 sampled, 44 hosts)
+  Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
+  Top fitness: 6553600.0 (tau=3.780352, N=1024), 6553600.0 (tau=3.780352, N=1024), 6553600.0 (tau=3.740352, N=2048)
+  Results: The entire ranked sample is pressure-arch positive in the high-tau regime, with bridge mass about 0.8888, core mass about 0.5112-0.5119, bilateral balance about 0.98-1.00, and outer leak around 0.00017-0.00018. Deep 1024 and 2048 site runs agree cleanly, and none of the sampled frontier points revert to edge-localized failure.
+  Conclusion: CONFIRMED. Stronger bilateral gouge coupling does stabilize a centered pressure arch instead of damage-zone edge pinning. The effect is uniform across the sampled ranked frontier, with near-perfect balance and negligible leak once the high-tau branch is reached.
 
-EXPERIMENT: exp_karst_conduit_speleothem_bridge_threshold (708 total results available, 300 sampled, 30 hosts)
-  Discovered: 2026-04-01 09:45 UTC
-  Top fitness: 6553600.0 (bw=1.53e-07, chi=3.929571, N=2048), 6553600.0 (bw=1.53e-07, chi=3.959571, N=2048), 6553600.0 (bw=1.53e-07, chi=3.959571, N=2048)
-  Results: The entire 300-sample ranked pull is strongly centered and supported, with bridge mass almost fixed near 0.8887-0.8888, conduit-core mass near 0.516, balance usually 0.98-1.00, and outer leak only around 1.2e-4 to 1.35e-4. The onset lives in a narrow high-chi band around 3.92-3.97 near the top of the scan, but once the frontier reaches that band the centered conduit bridge is exceptionally clean, with core-to-leak repeatedly around 3800-4200.
-  Conclusion: CONFIRMED. The karst wall-coupling hypothesis is borne out: a robust centered conduit bridge does emerge, and the deep frontier keeps returning the same low-leak, high-balance state rather than alternating into wall-pinned trapping. The effect sits near the strong-coupling end of the explored range, but it is still a real supported regime rather than a ceiling-pinned failure.
+EXPERIMENT: exp_peat_pore_ironredox_bridge_threshold (3809 total results available, 100 sampled, 43 hosts)
+  Discovered: 2026-04-01 12:20 UTC
   Last updated: 2026-04-01
+  Top fitness: 6553600.0 (kappa=3.765352, N=2048), 6553600.0 (kappa=3.780352, N=1024), 6553600.0 (kappa=3.760352, N=2048)
+  Results: Across the top 100 ranked results the centered redox core is exceptionally stable, with bridge mass about 0.8833, core mass about 0.5239-0.5245, bilateral balance about 0.98-1.00, and outer leak around 0.00016-0.00017. The deep frontier is uniform across both 1024 and 2048 site runs and shows no meaningful tendency toward edge oxidation.
+  Conclusion: CONFIRMED. Bilateral pore coupling robustly produces the predicted centered iron-redox bridge and strongly suppresses edge leak. The supported regime is highly consistent across the sampled frontier, indicating a real and stable redox-core mechanism.
+
+EXPERIMENT: exp_thalamocortical_trn_gate_bridge_threshold (3659 total results available, 100 sampled, 44 hosts)
+  Discovered: 2026-04-01 12:20 UTC
+  Last updated: 2026-04-01
+  Top fitness: 6553600.0 (theta=3.780352, N=1024), 6553600.0 (theta=3.780352, N=1024), 6553600.0 (theta=3.740352, N=2048)
+  Results: The ranked frontier repeatedly shows a centered relay gate with bridge mass about 0.8833, core mass about 0.5237-0.5245, bilateral balance about 0.98-1.00, and outer leak around 0.00016-0.00017. Both 1024 and 2048 site deep runs agree on the same nearly leak-free, high-balance gate regime.
+  Conclusion: CONFIRMED. Strong bilateral reticular coupling clearly stabilizes the centered thalamocortical gate rather than boundary-skewed sensory leakage. The effect is uniform across the sampled deep frontier and remains balanced and near leak-free throughout the supported high-theta branch.
