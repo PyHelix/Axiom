@@ -137,3 +137,44 @@ EXPERIMENT: exp_firn_ice_slab_runoff_breakdown_threshold (400 total results avai
   Results: Across the ranked 200-sample pull, bridge mass again saturates near 1.0 and corridor mass stays respectable around 0.65-0.66, but the deep frontier is pinned against rho about 4.0 and the supported flag never turns on. The missing ingredient is balanced confinement: slab balance often sits only around 0.38-0.76, with only occasional excursions higher, while the opposite-side balance and leak metrics are already small enough that the unresolved failure is clearly the corridor not stabilizing symmetrically.
   Conclusion: REJECTED. Stronger bilateral ice-slab confinement does not cleanly preserve a centered runoff corridor before the search hits the rho ceiling, so the hypothesized balanced corridor phase is not borne out by the ranked frontier. The data support a breakdown picture dominated by asymmetric shoulder capture rather than a true centered-corridor threshold.
   Last updated: 2026-04-01
+
+2026-04-01 GPU DESIGN ADDENDUM II
+
+- Added `exp_lipid_droplet_peridroplet_mitochondria_bridge_threshold_gpu.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov lipid droplet mitochondria peridroplet computational model` and `site:pubmed.ncbi.nlm.nih.gov peridroplet mitochondria model lipid droplet respiration`. Found adjacent lipid-droplet / mitochondria contact-site and organelle-metabolism literature, including recent reviews of peridroplet mitochondria, but not a dense GPU iterative-deepening eigensolve threshold map for balanced mitochondrion / tether / droplet / tether / mitochondrion soft-mode capture.
+- Added `exp_neuromuscular_junctional_fold_bridge_threshold_gpu.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov neuromuscular junction junctional folds computational model active zone` and `site:pubmed.ncbi.nlm.nih.gov motor endplate junctional folds computational model`. Found adjacent morphology and transmission studies on neuromuscular-junction folds, but not a dense GPU finite-size spectral bisection map for bilateral junctional-fold reinforcement that localizes the soft mode into a centered endplate trough.
+- Added `exp_sofc_triplephase_boundary_bridge_threshold_gpu.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov solid oxide fuel cell triple phase boundary computational model` and `site:pubmed.ncbi.nlm.nih.gov SOFC triple phase boundary computational model electrode`. Found adjacent SOFC electrochemistry and electrode-microstructure modeling literature, but not a dense GPU iterative-deepening threshold map for balanced anode-pore / TPB / electrolyte-neck / TPB / anode-pore bridge capture.
+
+Operational note:
+- GPU config showed 16 active weighted families at the start of this step, so these three additions stay below the 20-family cap without requiring any retirement, testing, deployment, or config edits here.
+2026-04-01 CPU RETIREMENT NOTE
+
+- Retire `exp_retinal_rpe_bruch_drusen_bridge_threshold`: today's ranked frontier is sharply localized at low kappa and already CONFIRMED.
+- Retire `exp_lamina_cribrosa_scleral_canal_bridge_threshold`: today's ranked frontier remains ceiling-pinned and balance-limited, so the hypothesized centered bridge is REJECTED.
+- Retire `exp_firn_ice_slab_runoff_breakdown_threshold`: today's ranked frontier remains ceiling-pinned and asymmetry-limited, so the centered runoff corridor is REJECTED.
+
+2026-04-01 NEW CPU DESIGN NOTES
+
+- Added `exp_karst_conduit_speleothem_bridge_threshold.py`.
+  Novelty check: searched `karst conduit speleothem reactive transport model` and `CaveCalc speleothem chemistry model`. Found adjacent cave-chemistry and reactive-transport work, but not a dense iterative-deepening spectral threshold map for bilateral seepage-wall coupling that stabilizes a centered conduit bridge.
+- Added `exp_saltcrust_pore_evaporation_bridge_threshold.py`.
+  Novelty check: searched `salt crust evaporation model paper` and `combined wicking evaporation NaCl porous material model`. Found adjacent evaporation and salt-weathering models, but not a dense iterative-deepening spectral threshold map for bilateral crust-pore coupling that stabilizes a centered evaporation corridor.
+
+Operational note:
+- After marking the three concluded active families for retirement, the CPU pool still retains 8 active weighted families before Step 8 testing/deployment, so these two scripts are opportunistic replacements rather than emergency backfill.
+
+EXPERIMENT: exp_saltcrust_pore_evaporation_bridge_threshold (749 total results available, 300 sampled, 30 hosts)
+  Discovered: 2026-04-01 09:45 UTC
+  Top fitness: 6553600.0 (bw=1.53e-07, eta=1.305665, N=2048), 6553600.0 (bw=1.53e-07, eta=1.506250, N=2048), 6553600.0 (bw=1.53e-07, eta=1.506250, N=2048)
+  Results: Across the full 300-sample ranked pull, every deep frontier point stays supported with bridge mass clustered around 0.842-0.857, core mass around 0.47-0.49, balance mostly 0.95-1.00, and outer leak only about 5e-4 to 2e-3. The threshold band is not razor-thin, but the centered evaporation corridor remains intact from roughly eta about 1.0 up through about 2.0 in the deep 2048-size runs, with core-to-leak usually in the hundreds and often above 500.
+  Conclusion: CONFIRMED. Stronger bilateral crust-pore coupling does produce the proposed centered evaporation bridge rather than surface-pinned brine accumulation, and that regime persists well beyond a single lucky bracket. The highest-fitness and lower-ranked deep samples agree on the same signature: adequate bridge mass, strong bilateral balance, and extremely low leakage.
+  Last updated: 2026-04-01
+
+EXPERIMENT: exp_karst_conduit_speleothem_bridge_threshold (708 total results available, 300 sampled, 30 hosts)
+  Discovered: 2026-04-01 09:45 UTC
+  Top fitness: 6553600.0 (bw=1.53e-07, chi=3.929571, N=2048), 6553600.0 (bw=1.53e-07, chi=3.959571, N=2048), 6553600.0 (bw=1.53e-07, chi=3.959571, N=2048)
+  Results: The entire 300-sample ranked pull is strongly centered and supported, with bridge mass almost fixed near 0.8887-0.8888, conduit-core mass near 0.516, balance usually 0.98-1.00, and outer leak only around 1.2e-4 to 1.35e-4. The onset lives in a narrow high-chi band around 3.92-3.97 near the top of the scan, but once the frontier reaches that band the centered conduit bridge is exceptionally clean, with core-to-leak repeatedly around 3800-4200.
+  Conclusion: CONFIRMED. The karst wall-coupling hypothesis is borne out: a robust centered conduit bridge does emerge, and the deep frontier keeps returning the same low-leak, high-balance state rather than alternating into wall-pinned trapping. The effect sits near the strong-coupling end of the explored range, but it is still a real supported regime rather than a ceiling-pinned failure.
+  Last updated: 2026-04-01
