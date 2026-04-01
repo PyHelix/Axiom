@@ -96,3 +96,44 @@ Operational note:
 
 Operational note:
 - GPU config currently has 15 active families, so these three scripts keep the pool under the 20-family cap while expanding it beyond the current bridge-threshold themes already in circulation.
+
+2026-04-01 NEW CPU DESIGN NOTES
+
+- Added `exp_lamina_cribrosa_scleral_canal_bridge_threshold.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov lamina cribrosa scleral canal finite element model glaucoma` and `site:pubmed.ncbi.nlm.nih.gov optic nerve head lamina cribrosa computational model scleral canal`. Found adjacent optic-nerve-head and glaucoma biomechanics literature, including specimen-specific and finite-element scleral-canal studies, but not a dense iterative-deepening spectral threshold map for bilateral laminar reinforcement that stabilizes a centered canal bridge.
+- Added `exp_firn_ice_slab_runoff_breakdown_threshold.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov firn ice slab hydrology model meltwater infiltration` and `site:pubmed.ncbi.nlm.nih.gov polar firn aquifer ice slab permeability model`. Found adjacent firn-hydrology, permeability, and ice-slab runoff literature, but not a dense iterative-deepening spectral threshold map for bilateral slab confinement that preserves a centered runoff corridor instead of one-flank leakage.
+
+Operational note:
+- CPU config is at 10 active families on 2026-04-01, so these two scripts are opportunistic additions rather than minimum-pool backfill.
+
+2026-04-01 GPU DESIGN ADDENDUM
+
+- Added `exp_stria_vascularis_endolymph_bridge_threshold_gpu.py`.
+  Novelty check: searched `"stria vascularis" potassium transport model` and `"endolymph" "stria vascularis" model`. Found adjacent cochlear ion-transport and lateral-wall physiology literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced spiral-ligament / stria / endolymph / stria / spiral-ligament soft-mode capture.
+- Added `exp_er_exit_site_golgi_bridge_threshold_gpu.py`.
+  Novelty check: searched `"ER exit site" Golgi transport model` and `"ER exit site" computational model COPII Golgi`. Found adjacent COPII, ERES, and secretory-pathway literature, but not a dense GPU iterative-deepening eigensolve threshold map for balanced ER-sheet / ERES / Golgi-core / ERES / ER-sheet capture.
+
+Operational note:
+- GPU config showed 18 active weighted families at the start of this step, so these two additions are the full safe allotment under the 20-family cap. No retirement, testing, deployment, or config edits were done here.
+
+EXPERIMENT: exp_lamina_cribrosa_scleral_canal_bridge_threshold (423 total results available, 200 sampled, 24 hosts)
+  Discovered: 2026-04-01 03:02 UTC
+  Top fitness: 13107100.0 (bw=7.63e-08, kappa=4.000000, N=2048), 13107100.0 (bw=7.63e-08, kappa=4.000000, N=2048), 13107100.0 (bw=7.63e-08, kappa=4.000000, N=2048)
+  Results: Across the ranked 200-sample pull, bridge mass stays essentially saturated (~0.9999) and canal mass stays high (~0.66-0.71), but the same deep frontier remains ceiling-pinned at kappa about 4.0 and never flips the supported flag. The failure mode is bilateral balance: lamina balance repeatedly stalls around 0.33-0.81 in much of the frontier and the opposing scleral balance is often even weaker, while leak is already negligible.
+  Conclusion: REJECTED. Stronger bilateral laminar reinforcement does not produce the proposed centered canal-spanning bridge in a self-consistent way, because the high-fitness frontier only reaches that regime by pinning at the kappa ceiling while one side of the balance condition keeps failing. The experiment instead points to a one-sided or asymmetric localization pattern rather than a robust centered bridge threshold.
+  Last updated: 2026-04-01
+
+EXPERIMENT: exp_retinal_rpe_bruch_drusen_bridge_threshold (409 total results available, 200 sampled, 24 hosts)
+  Discovered: 2026-04-01 03:02 UTC
+  Top fitness: 13013781.0 (bw=7.68e-08, kappa=0.053168, N=4096), 12976378.4 (bw=7.71e-08, kappa=0.053158, N=4096), 12871064.7 (bw=7.77e-08, kappa=0.051314, N=4096)
+  Results: The ranked pull concentrates into a narrow low-kappa onset band, with kappa estimates mostly around 0.05-0.09 even deep into the sample tail. Bridge mass stays around 0.900-0.912, core mass around 0.370-0.394, leak remains low around 0.032-0.045, and core-to-leak stays strongly favorable around 8-12; the only variation is occasional balance dips into the high-0.7 range, but most deep samples remain supported.
+  Conclusion: CONFIRMED. The drusen-centered bridge regime is real and appears at a sharply localized low-kappa threshold rather than only at a ceiling-pinned extreme. The highest-fitness and lower-ranked deep samples both preserve strong bridge capture, strong core-over-leak separation, and usually adequate bilateral balance, which is the pattern expected from a genuine centered RPE/Bruch bridge.
+  Last updated: 2026-04-01
+
+EXPERIMENT: exp_firn_ice_slab_runoff_breakdown_threshold (400 total results available, 200 sampled, 24 hosts)
+  Discovered: 2026-04-01 03:02 UTC
+  Top fitness: 13107100.0 (bw=7.63e-08, rho=4.000000, N=2048), 13107100.0 (bw=7.63e-08, rho=3.999980, N=2048), 13107100.0 (bw=7.63e-08, rho=4.000000, N=2048)
+  Results: Across the ranked 200-sample pull, bridge mass again saturates near 1.0 and corridor mass stays respectable around 0.65-0.66, but the deep frontier is pinned against rho about 4.0 and the supported flag never turns on. The missing ingredient is balanced confinement: slab balance often sits only around 0.38-0.76, with only occasional excursions higher, while the opposite-side balance and leak metrics are already small enough that the unresolved failure is clearly the corridor not stabilizing symmetrically.
+  Conclusion: REJECTED. Stronger bilateral ice-slab confinement does not cleanly preserve a centered runoff corridor before the search hits the rho ceiling, so the hypothesized balanced corridor phase is not borne out by the ranked frontier. The data support a breakdown picture dominated by asymmetric shoulder capture rather than a true centered-corridor threshold.
+  Last updated: 2026-04-01
