@@ -74,3 +74,25 @@ EXPERIMENT: exp_mangrove_lenticel_aerenchyma_bridge_threshold (155 total results
   Results: MariaDB shows 155 completed results today for this new family, but none of the corresponding sanitized numeric artifacts exist yet, so there is no oxygen-bridge frontier to inspect.
   Conclusion: SKIP. The completed BOINC rows indicate interest from the volunteer pool, but not yet an analyzable sanitized dataset. No conclusion about centered oxygen capture versus edge leakage is warranted until assimilation produces the numeric payloads.
   Last updated: 2026-04-01
+
+2026-04-01 NEW CPU DESIGN NOTES
+
+- Added `exp_retinal_rpe_bruch_drusen_bridge_threshold.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov retinal pigment epithelium Bruch membrane drusen computational model` and `site:pubmed.ncbi.nlm.nih.gov Bruch membrane drusen transport model retina`. Found adjacent RPE/Bruch bilayer and AMD-geometry studies (including PMID 31146784 and PMID 39365260), but not a dense iterative-deepening spectral threshold map for bilateral RPE/Bruch coupling that stabilizes a centered drusen bridge.
+- Added `exp_oocyte_zona_perivitelline_bridge_threshold.py`.
+  Novelty check: searched `site:pubmed.ncbi.nlm.nih.gov zona pellucida mechanical model computational oocyte` and `site:pubmed.ncbi.nlm.nih.gov perivitelline space oocyte computational model`. Found adjacent oocyte-shell and perivitelline morphology work (including PMID 32285294), but not a dense iterative-deepening spectral threshold map for bilateral zona support that closes a centered perivitelline bridge.
+
+Operational note:
+- CPU config is still at 8 active families today, so these two scripts are opportunistic additions for Step 8 rather than emergency backfill.
+
+2026-04-01 NEW GPU DESIGN NOTES
+
+- Added `exp_stromule_peroxisome_redox_bridge_threshold_gpu.py`.
+  Novelty check: searched `"stromules" chloroplast peroxisome contact site` and `"chloroplast peroxisome" membrane contact site photorespiration`. Found stromule-induction and chloroplast-peroxisome contact literature, but not a dense GPU iterative-deepening threshold map for balanced stromule-mediated peroxisome capture at matrix sizes beyond the CPU-only study.
+- Added `exp_microvillus_terminal_web_bridge_threshold_gpu.py`.
+  Novelty check: searched `"microvillus" "terminal web" model paper` and `"brush border" terminal web mechanics model paper`. Found structural and biomechanical work on microvilli and terminal-web organization, but not a dense GPU eigensolve threshold study for bilateral rootlet reinforcement that localizes the soft mode into a centered terminal-web bridge.
+- Added `exp_root_endodermis_pericycle_bridge_threshold_gpu.py`.
+  Novelty check: searched `"pericycle endodermis interaction" lateral root model`, `"auxin" endodermis pericycle computational model lateral root emergence`, and `"root endodermis" pericycle communication model`. Found adjacent developmental and transport literature, but not a dense GPU finite-size spectral bisection map for balanced endodermis-pericycle-endodermis bridge capture.
+
+Operational note:
+- GPU config currently has 15 active families, so these three scripts keep the pool under the 20-family cap while expanding it beyond the current bridge-threshold themes already in circulation.
