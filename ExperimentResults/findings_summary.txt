@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-02
 
-No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 17:01 UTC, so there was no eligible current-day frontier to sample or classify in this cycle.
+No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 21:46 UTC, so there was no eligible current-day frontier to sample or classify in this cycle.
 
 2026-04-02 GPU DESIGN NOTES
 
@@ -20,7 +20,19 @@ No experiment families met the Step 2 threshold of `completed >= 10` with `recei
   Search: `"fault gouge" hydro-mechanical permeability vein site:nature.com`
   Search: `"fault gouge" fluid flow fracture network site:agupubs.onlinelibrary.wiley.com`
   Found adjacent hydro-mechanical and permeability studies of fault gouge, but no dense large-N GPU threshold map of bilateral vein-mesh bridge capture in a symmetric disordered operator.
-- All three scripts use CuPy-first iterative deepening with GPU TFLOPS scaling, VRAM-based `MAX_N`, cuSOLVER fallback guards, one-seed workunits, ordered numeric result output, and `CUPY_CACHE_IN_MEMORY=1`.
+- New script: `exp_fungal_dolipore_parenthesome_bridge_threshold_gpu.py`
+  Search: `dolipore parenthesome basidiomycete ultrastructure transport`
+  Search: `site:pubmed.ncbi.nlm.nih.gov dolipore septum parenthesome basidiomycete`
+  Found adjacent basidiomycete septal-pore ultrastructure and pore-cap composition literature, but no dense large-N GPU threshold map of bilateral dolipore-parenthesome bridge capture in a symmetric disordered operator.
+- New script: `exp_coral_calicoblastic_coelenteron_bridge_threshold_gpu.py`
+  Search: `site:pubmed.ncbi.nlm.nih.gov coral coelenteron mixing transport`
+  Search: `site:pubmed.ncbi.nlm.nih.gov calicoblastic cell layer coral permeability`
+  Found adjacent primary literature on coral coelenteron flow, tissue permeability, and calicoblastic ion transport, but no dense large-N GPU threshold map of bilateral calicoblastic-coelenteron bridge capture in a symmetric disordered operator.
+- New script: `exp_carboxysome_rubisco_shell_bridge_threshold_gpu.py`
+  Search: `site:pubmed.ncbi.nlm.nih.gov carboxysome Rubisco shell assembly model`
+  Search: `site:pubmed.ncbi.nlm.nih.gov carboxysome condensate shell permeability`
+  Found adjacent primary literature on carboxysome shell permeability, Rubisco packaging, and shell assembly, but no dense large-N GPU threshold map of bilateral shell-scaffold capture onto a centered Rubisco condensate in a symmetric disordered operator.
+- All six scripts listed in this GPU section use CuPy-first iterative deepening with GPU TFLOPS scaling, VRAM-based `MAX_N`, cuSOLVER fallback guards, one-seed workunits, ordered numeric result output, and `CUPY_CACHE_IN_MEMORY=1`.
 
 NEW CPU EXPERIMENTS DESIGNED 2026-04-02
 
@@ -33,3 +45,18 @@ NEW CPU EXPERIMENTS DESIGNED 2026-04-02
    Search queries: `site:pubmed.ncbi.nlm.nih.gov Golgi ribbon tether trafficking paper`; `site:pmc.ncbi.nlm.nih.gov Golgi ribbon organization tether traffic paper`
    Found: primary literature on Golgi ribbon assembly, tether proteins, and ribbon-linked trafficking, but no dense finite-size bisection map for a balanced cis-rim/tether/medial-ribbon bridge threshold in a symmetric operator.
    Novel angle: iterative-deepening eigensolve threshold search for when bilateral rim tethering pulls the dominant mode off cis/trans rim pinning into a centered ribbon corridor.
+
+3. exp_desmosome_keratin_corticalsheet_bridge_threshold.py
+   Search queries: `site:pubmed.ncbi.nlm.nih.gov desmosome keratin cytoskeleton epithelial mechanics paper`; `site:pubmed.ncbi.nlm.nih.gov desmosome actin keratin assembly epithelial paper`
+   Found: primary desmosome / desmoplakin mechanics and assembly literature, but no dense finite-size bisection map for a symmetric desmosome/keratin-sheet/cortical-core bridge threshold.
+   Novel angle: iterative-deepening eigensolve threshold search for when bilateral desmosome anchoring stabilizes a centered keratin-supported cortical corridor rather than junction-edge pinning.
+
+4. exp_synaptic_vesicle_periactive_actin_bridge_threshold.py
+   Search queries: `site:pubmed.ncbi.nlm.nih.gov synaptic vesicle actin endocytosis periactive zone paper`; `site:pubmed.ncbi.nlm.nih.gov periactive zone architecture endocytosis actin paper`
+   Found: primary literature on actin-dependent presynaptic endocytosis and periactive-zone organization, but no dense finite-size bisection map for a symmetric active-zone/actin-ring/recycling-core bridge threshold.
+   Novel angle: iterative-deepening eigensolve threshold search for when bilateral periactive scaffolding produces a centered vesicle-recycling corridor instead of active-zone edge trapping.
+
+5. exp_skeletal_triad_junctophilin_ryr_bridge_threshold.py
+   Search queries: `site:pubmed.ncbi.nlm.nih.gov junctophilin ryanodine receptor skeletal muscle triad paper`; `site:pubmed.ncbi.nlm.nih.gov skeletal muscle triad junctophilin calcium release paper`
+   Found: primary literature on junctophilin, triadin/junctin, and RyR organization in skeletal muscle, but no dense finite-size bisection map for a symmetric T-tubule/junctional-SR/RyR-core bridge threshold.
+   Novel angle: iterative-deepening eigensolve threshold search for when balanced bilateral junctional-SR coupling stabilizes a centered RyR release corridor rather than one-flank dyad pinning.
