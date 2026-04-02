@@ -2,11 +2,12 @@
 
 Last updated: 2026-04-02
 
-No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 00:33 UTC, so there was no eligible today-only frontier to sample or classify in this cycle.
+No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 04:59 UTC, so there was no eligible today-only frontier to sample or classify in this cycle.
 
 New CPU experiments drafted on 2026-04-02:
 - `exp_pulmonary_tubular_myelin_bridge_threshold`: alveolus/surfactant/tubular-myelin/surfactant/alveolus bridge search. Literature check found structural and biophysical tubular-myelin papers, but not a dense finite-size eigensolve threshold map for balanced bridge onset.
 - `exp_jordan_balancer_pseudospectrum_threshold`: Hermitized Jordan-chain threshold for centered singular-mode capture under bilateral stabilizing feedback. Literature check found Jordan-block perturbation and pseudospectrum theory papers, but not a dense finite-size bisection map for this bilateral-feedback onset.
+- `exp_neuromuscular_junction_activezone_fold_bridge_threshold`: motor-terminal/active-zone/junctional-fold bridge search. Literature check found papers on NMJ fold electrophysiology, active-zone alignment, and fold ultrastructure, but not a dense finite-size eigensolve threshold map for balanced active-zone/fold bridge onset.
 
 2026-04-02 GPU DESIGN NOTES
 
@@ -23,3 +24,11 @@ New CPU experiments drafted on 2026-04-02:
   - PMID 27910904 on vesicle release and dendrite-tip blebbing during transfer
 - Novel angle: those papers study mechanisms of trafficking and uptake, but I did not find a dense large-N GPU threshold map for when balanced bilateral dendrite-tip coupling stabilizes a centered transfer bridge rather than one-tip trapping or extracellular leak.
 - Script design: CuPy iterative-deepening eigensolver with FLOPS-scaled `N`, VRAM cap, cuSOLVER guards, one seed per workunit, and numeric-only ordered result output.
+
+2026-04-02 GPU CAPACITY REVIEW
+
+- Active GPU families at review time: 20, which is the configured hard cap for concurrently active GPU families.
+- Current active set: `exp_biochar_micropore_mineral_bridge_threshold_gpu`, `exp_cephalopod_iridophore_reflectin_platelet_bridge_threshold_gpu`, `exp_cnidarian_nematocyst_thread_bridge_threshold_gpu`, `exp_cranial_suture_osteogenic_front_bridge_threshold_gpu`, `exp_fungal_pellet_oxygen_bridge_threshold_gpu`, `exp_glialimitans_perivascular_cuff_bridge_threshold_gpu`, `exp_glymphatic_aqp4_polarization_bridge_threshold_gpu`, `exp_hindbrain_neuralcrest_stream_bridge_threshold_gpu`, `exp_insect_tracheal_taenidia_lumen_bridge_threshold_gpu`, `exp_lipid_droplet_peridroplet_mitochondria_bridge_threshold_gpu`, `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu`, `exp_microvillus_terminal_web_bridge_threshold_gpu`, `exp_moss_hydroid_leptoid_bridge_threshold_gpu`, `exp_neuromuscular_junctional_fold_bridge_threshold_gpu`, `exp_nmc_secondaryparticle_grainneck_bridge_threshold_gpu`, `exp_root_endodermis_pericycle_bridge_threshold_gpu`, `exp_sabkha_gypsum_brinelens_bridge_threshold_gpu`, `exp_sofc_triplephase_boundary_bridge_threshold_gpu`, `exp_stria_vascularis_endolymph_bridge_threshold_gpu`, `exp_stromule_peroxisome_redox_bridge_threshold_gpu`.
+- No new GPU scripts were drafted in this cycle because adding another family would exceed the Step 9 pool-balance limit before any retirements occur.
+- No retirement action was taken from this step. The active GPU families do not yet appear in the current deduplicated findings report, so there is not a fresh findings-based basis to reclaim slots here.
+- Validation log check found no `validate_*.txt` file to review in `/opt/axiom/experiment_session/` during this cycle.
