@@ -11,24 +11,30 @@ New CPU experiments drafted on 2026-04-02:
 
 2026-04-02 GPU DESIGN NOTES
 
-- Active GPU families at design time: 19, so this cycle added one new GPU family and did not exceed the 20-family cap.
-- New GPU script: `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu.py`
-- Novelty search queries:
-  - `site:pubmed.ncbi.nlm.nih.gov melanosome transfer keratinocyte dendrite primary research`
-  - `site:pubmed.ncbi.nlm.nih.gov melanocyte keratinocyte melanosome transfer phagocytosis`
-  - `"melanosome transfer" model threshold melanocyte keratinocyte`
-- Adjacent literature found:
-  - PMID 24141907 on Rab11b-mediated melanin transfer via coupled exo/endocytosis
-  - PMID 35426185 on melanocore uptake by keratinocyte phagocytosis
-  - PMID 38607931 on keratinocyte EVs increasing melanocyte dendricity and transfer competence
-  - PMID 27910904 on vesicle release and dendrite-tip blebbing during transfer
-- Novel angle: those papers study mechanisms of trafficking and uptake, but I did not find a dense large-N GPU threshold map for when balanced bilateral dendrite-tip coupling stabilizes a centered transfer bridge rather than one-tip trapping or extracellular leak.
-- Script design: CuPy iterative-deepening eigensolver with FLOPS-scaled `N`, VRAM cap, cuSOLVER guards, one seed per workunit, and numeric-only ordered result output.
+- Active GPU families at design time: 16, so there was room to draft four more families without exceeding the 20-family cap.
+- New GPU scripts:
+  - `exp_mucociliary_periciliary_mucus_bridge_threshold_gpu.py`
+  - `exp_synaptic_neurexin_nanocolumn_bridge_threshold_gpu.py`
+  - `exp_permafrost_icewedge_brinefilm_bridge_threshold_gpu.py`
+  - `exp_llzo_grainboundary_spacecharge_bridge_threshold_gpu.py`
+- Novelty checks:
+  - `exp_mucociliary_periciliary_mucus_bridge_threshold_gpu`: searched `site:pubmed.ncbi.nlm.nih.gov periciliary brush airway mucus transport primary research`, `site:pubmed.ncbi.nlm.nih.gov airway surface liquid mucus periciliary transport`, and `"mucociliary transport" threshold periciliary layer model`. Found airway periciliary-brush and mucociliary-transport papers, but not a dense finite-size eigensolve threshold map for balanced bilateral periciliary capture.
+  - `exp_synaptic_neurexin_nanocolumn_bridge_threshold_gpu`: searched `site:pubmed.ncbi.nlm.nih.gov trans-synaptic nanocolumn alignment primary research`, `site:pubmed.ncbi.nlm.nih.gov synaptic nanocolumn alignment neurexin`, and `"synaptic nanocolumn" threshold model neurexin neuroligin`. Found trans-synaptic nanocolumn alignment, neurexin nanocluster, and nanocolumn modeling papers, but not a large-N GPU threshold study of bilateral neurexin/neuroligin bridge onset.
+  - `exp_permafrost_icewedge_brinefilm_bridge_threshold_gpu`: searched `"ice segregation" premelt film soil primary research`, `"ice wedge" premelt film permafrost primary research`, and `site:tc.copernicus.org ice segregation premelt film rock soil`. Found premelt-film and ice-segregation literature, but not a dense GPU threshold map for balanced bilateral ice-wedge conduit onset.
+  - `exp_llzo_grainboundary_spacecharge_bridge_threshold_gpu`: searched `"garnet" grain boundary space charge lithium dendrite primary research`, `site:pubmed.ncbi.nlm.nih.gov LLZO grain boundary lithium dendrite`, and `"LLZO" grain boundary transport space charge`. Found LLZO grain-boundary transport and intrusion papers, but not a dense finite-size eigensolve threshold map for bilateral space-charge bridge onset.
+- Script design: all four use CuPy iterative-deepening eigensolvers with FLOPS-scaled `N`, VRAM caps, cuSOLVER guards, one seed per workunit, and numeric-only ordered result output.
 
 2026-04-02 GPU CAPACITY REVIEW
 
-- Active GPU families at review time: 20, which is the configured hard cap for concurrently active GPU families.
-- Current active set: `exp_biochar_micropore_mineral_bridge_threshold_gpu`, `exp_cephalopod_iridophore_reflectin_platelet_bridge_threshold_gpu`, `exp_cnidarian_nematocyst_thread_bridge_threshold_gpu`, `exp_cranial_suture_osteogenic_front_bridge_threshold_gpu`, `exp_fungal_pellet_oxygen_bridge_threshold_gpu`, `exp_glialimitans_perivascular_cuff_bridge_threshold_gpu`, `exp_glymphatic_aqp4_polarization_bridge_threshold_gpu`, `exp_hindbrain_neuralcrest_stream_bridge_threshold_gpu`, `exp_insect_tracheal_taenidia_lumen_bridge_threshold_gpu`, `exp_lipid_droplet_peridroplet_mitochondria_bridge_threshold_gpu`, `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu`, `exp_microvillus_terminal_web_bridge_threshold_gpu`, `exp_moss_hydroid_leptoid_bridge_threshold_gpu`, `exp_neuromuscular_junctional_fold_bridge_threshold_gpu`, `exp_nmc_secondaryparticle_grainneck_bridge_threshold_gpu`, `exp_root_endodermis_pericycle_bridge_threshold_gpu`, `exp_sabkha_gypsum_brinelens_bridge_threshold_gpu`, `exp_sofc_triplephase_boundary_bridge_threshold_gpu`, `exp_stria_vascularis_endolymph_bridge_threshold_gpu`, `exp_stromule_peroxisome_redox_bridge_threshold_gpu`.
-- No new GPU scripts were drafted in this cycle because adding another family would exceed the Step 9 pool-balance limit before any retirements occur.
+- Active GPU families before Step 10 deployment: 16 configured weights > 0 in `wu_generator_config.json`.
+- Current active set: `exp_biochar_micropore_mineral_bridge_threshold_gpu`, `exp_cephalopod_iridophore_reflectin_platelet_bridge_threshold_gpu`, `exp_cnidarian_nematocyst_thread_bridge_threshold_gpu`, `exp_cranial_suture_osteogenic_front_bridge_threshold_gpu`, `exp_fungal_pellet_oxygen_bridge_threshold_gpu`, `exp_glialimitans_perivascular_cuff_bridge_threshold_gpu`, `exp_glymphatic_aqp4_polarization_bridge_threshold_gpu`, `exp_hindbrain_neuralcrest_stream_bridge_threshold_gpu`, `exp_lipid_droplet_peridroplet_mitochondria_bridge_threshold_gpu`, `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu`, `exp_moss_hydroid_leptoid_bridge_threshold_gpu`, `exp_neuromuscular_junctional_fold_bridge_threshold_gpu`, `exp_nmc_secondaryparticle_grainneck_bridge_threshold_gpu`, `exp_sabkha_gypsum_brinelens_bridge_threshold_gpu`, `exp_sofc_triplephase_boundary_bridge_threshold_gpu`, `exp_stria_vascularis_endolymph_bridge_threshold_gpu`.
+- These four drafts would bring the pool to the 20-family cap if Step 10 validates and deploys them; no retirement action was taken in this step.
 - No retirement action was taken from this step. The active GPU families do not yet appear in the current deduplicated findings report, so there is not a fresh findings-based basis to reclaim slots here.
 - Validation log check found no `validate_*.txt` file to review in `/opt/axiom/experiment_session/` during this cycle.
+
+2026-04-02 CPU ADDITIONS
+
+- Reviewed the 11 currently weighted CPU families plus the deduplicated findings; none met the retirement condition from this step because the active set is still preliminary and at least 2 active CPU families must remain.
+- Added `exp_forisome_sieveplate_occlusion_bridge_threshold.py` after searches for `site:pubmed.ncbi.nlm.nih.gov forisome sieve tube occlusion calcium primary research` and `site:pubmed.ncbi.nlm.nih.gov sieve plate forisome biomechanics model`; adjacent literature covers Ca2+-triggered forisome occlusion and sieve-element physiology, but I did not find a dense finite-size threshold map for balanced pore-plug capture.
+- Added `exp_tendon_interfascicular_sliding_bridge_threshold.py` after searches for `site:pubmed.ncbi.nlm.nih.gov tendon interfascicular matrix sliding fascicle primary research` and `site:pubmed.ncbi.nlm.nih.gov tendon interfascicular matrix computational model`; adjacent literature covers IFM-enabled fascicle sliding and tendon continuum mechanics, but I did not find a dense finite-size threshold map for centered bilateral sliding-corridor capture.
+- Added `exp_glandular_trichome_cuticle_pocket_bridge_threshold.py` after searches for `site:pubmed.ncbi.nlm.nih.gov glandular trichome subcuticular storage cavity secretory space primary research` and `site:pubmed.ncbi.nlm.nih.gov peltate glandular trichome subcuticular cavity primary research`; adjacent literature covers peltate trichome ultrastructure and subcuticular oil cavities, but I did not find a dense finite-size threshold map for balanced storage-pocket capture.
