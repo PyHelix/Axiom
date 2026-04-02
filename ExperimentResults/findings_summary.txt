@@ -3,3 +3,33 @@
 Last updated: 2026-04-02
 
 No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 17:01 UTC, so there was no eligible current-day frontier to sample or classify in this cycle.
+
+2026-04-02 GPU DESIGN NOTES
+
+- Active GPU pool reviewed at 17 families, so three new GPU families were added without crossing the 20-family cap.
+- New script: `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu.py`
+  Search: `"melanosome" keratinocyte transfer cytoskeleton site:pubmed.ncbi.nlm.nih.gov`
+  Search: `"melanosome" dendrite transfer pigmentation site:pubmed.ncbi.nlm.nih.gov`
+  Found adjacent transfer biology including PMID 33772156, but no dense large-N GPU threshold map of bilateral melanosome-transfer bridge capture in a symmetric disordered operator.
+- New script: `exp_lichen_cortex_photobiont_waterfilm_bridge_threshold_gpu.py`
+  Search: `"lichen" hydration photobiont cortex water relations site:pubmed.ncbi.nlm.nih.gov`
+  Search: `"lichen" gas exchange water content cortex site:pubmed.ncbi.nlm.nih.gov`
+  Found adjacent hydration and gas-exchange literature including PMID 28307728, but no dense large-N GPU threshold map of bilateral cortex-medulla water-film bridge capture.
+- New script: `exp_fault_gouge_vein_mesh_bridge_threshold_gpu.py`
+  Search: `"fault gouge" vein permeability fluid pathway site:sciencedirect.com`
+  Search: `"fault gouge" hydro-mechanical permeability vein site:nature.com`
+  Search: `"fault gouge" fluid flow fracture network site:agupubs.onlinelibrary.wiley.com`
+  Found adjacent hydro-mechanical and permeability studies of fault gouge, but no dense large-N GPU threshold map of bilateral vein-mesh bridge capture in a symmetric disordered operator.
+- All three scripts use CuPy-first iterative deepening with GPU TFLOPS scaling, VRAM-based `MAX_N`, cuSOLVER fallback guards, one-seed workunits, ordered numeric result output, and `CUPY_CACHE_IN_MEMORY=1`.
+
+NEW CPU EXPERIMENTS DESIGNED 2026-04-02
+
+1. exp_subduction_melange_fluidlens_bridge_threshold.py
+   Search queries: `site:agupubs.onlinelibrary.wiley.com subduction mélange fluid overpressure lens channel paper`; `site:sciencedirect.com subduction mélange fluid lens interface paper`
+   Found: primary literature on transient fluid transfer, veining, and deformation-enhanced channelization along subduction interfaces, but no dense finite-size bisection map for a balanced slab/damage-zone/fluid-lens bridge threshold in a symmetric operator.
+   Novel angle: iterative-deepening eigensolve threshold search for when bilateral melange coupling stabilizes a centered fluid-lens corridor instead of one-flank trapping.
+
+2. exp_golgi_ribbon_rim_tether_bridge_threshold.py
+   Search queries: `site:pubmed.ncbi.nlm.nih.gov Golgi ribbon tether trafficking paper`; `site:pmc.ncbi.nlm.nih.gov Golgi ribbon organization tether traffic paper`
+   Found: primary literature on Golgi ribbon assembly, tether proteins, and ribbon-linked trafficking, but no dense finite-size bisection map for a balanced cis-rim/tether/medial-ribbon bridge threshold in a symmetric operator.
+   Novel angle: iterative-deepening eigensolve threshold search for when bilateral rim tethering pulls the dominant mode off cis/trans rim pinning into a centered ribbon corridor.
