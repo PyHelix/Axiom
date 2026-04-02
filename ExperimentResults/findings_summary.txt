@@ -3,3 +3,23 @@
 Last updated: 2026-04-02
 
 No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 00:33 UTC, so there was no eligible today-only frontier to sample or classify in this cycle.
+
+New CPU experiments drafted on 2026-04-02:
+- `exp_pulmonary_tubular_myelin_bridge_threshold`: alveolus/surfactant/tubular-myelin/surfactant/alveolus bridge search. Literature check found structural and biophysical tubular-myelin papers, but not a dense finite-size eigensolve threshold map for balanced bridge onset.
+- `exp_jordan_balancer_pseudospectrum_threshold`: Hermitized Jordan-chain threshold for centered singular-mode capture under bilateral stabilizing feedback. Literature check found Jordan-block perturbation and pseudospectrum theory papers, but not a dense finite-size bisection map for this bilateral-feedback onset.
+
+2026-04-02 GPU DESIGN NOTES
+
+- Active GPU families at design time: 19, so this cycle added one new GPU family and did not exceed the 20-family cap.
+- New GPU script: `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu.py`
+- Novelty search queries:
+  - `site:pubmed.ncbi.nlm.nih.gov melanosome transfer keratinocyte dendrite primary research`
+  - `site:pubmed.ncbi.nlm.nih.gov melanocyte keratinocyte melanosome transfer phagocytosis`
+  - `"melanosome transfer" model threshold melanocyte keratinocyte`
+- Adjacent literature found:
+  - PMID 24141907 on Rab11b-mediated melanin transfer via coupled exo/endocytosis
+  - PMID 35426185 on melanocore uptake by keratinocyte phagocytosis
+  - PMID 38607931 on keratinocyte EVs increasing melanocyte dendricity and transfer competence
+  - PMID 27910904 on vesicle release and dendrite-tip blebbing during transfer
+- Novel angle: those papers study mechanisms of trafficking and uptake, but I did not find a dense large-N GPU threshold map for when balanced bilateral dendrite-tip coupling stabilizes a centered transfer bridge rather than one-tip trapping or extracellular leak.
+- Script design: CuPy iterative-deepening eigensolver with FLOPS-scaled `N`, VRAM cap, cuSOLVER guards, one seed per workunit, and numeric-only ordered result output.
