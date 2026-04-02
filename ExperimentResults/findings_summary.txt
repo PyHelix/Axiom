@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-02
 
-No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 04:59 UTC, so there was no eligible today-only frontier to sample or classify in this cycle.
+No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 12:22 UTC, so there was no eligible today-only frontier to sample or classify in this cycle.
 
 New CPU experiments drafted on 2026-04-02:
 - `exp_pulmonary_tubular_myelin_bridge_threshold`: alveolus/surfactant/tubular-myelin/surfactant/alveolus bridge search. Literature check found structural and biophysical tubular-myelin papers, but not a dense finite-size eigensolve threshold map for balanced bridge onset.
@@ -50,3 +50,17 @@ New CPU experiments drafted on 2026-04-02:
 - Added `exp_paranode_juxtaparanode_barrier_bridge_threshold_gpu.py` after searches for `paranode juxtaparanode diffusion barrier site:pubmed.ncbi.nlm.nih.gov` and `site:pubmed.ncbi.nlm.nih.gov node of ranvier paranode juxtaparanode organization primary research`; adjacent literature covers paranodal barriers, nodal nanocircuits, and domain segregation, but I did not find a dense finite-size GPU threshold map for balanced bilateral nodal-gate capture.
 - Added `exp_conifer_pitmembrane_torusmargo_bridge_threshold_gpu.py` after searches for `"pit membrane" torus margo cavitation site:pubmed.ncbi.nlm.nih.gov` and `"xylem pit membrane" hydraulic safety site:pubmed.ncbi.nlm.nih.gov`; adjacent literature covers torus-margo aspiration and cavitation vulnerability, but I did not find a dense finite-size GPU threshold map for balanced bilateral torus-seal capture.
 - All four drafts follow the established CuPy iterative-deepening eigensolver pattern with in-memory kernel cache, FLOPS-scaled `N`, VRAM-aware caps, cuSOLVER guards, one seed per workunit, and numeric-only ordered result output for the assimilator.
+
+2026-04-02 GPU CAPACITY CHECK (current cycle)
+
+- Re-read `/opt/axiom/experiment_session/wu_generator_config.json` at 2026-04-02 07:31 UTC and found 20 GPU families with weight > 0, which is the hard cap from the GPU research prompt.
+- Because the pool is already at the 20-family maximum, no new GPU scripts were drafted or added to `/opt/axiom/experiment_session/new_gpu_scripts.txt` in this cycle.
+- Re-checked `/opt/axiom_boinc/html/user/experiment_results/findings_deduplicated.txt` generated 2026-04-01 22:15 UTC; none of the 20 currently active GPU keys appear there yet, so this step had no fresh findings-based basis to reclaim slots.
+- No `validate_*.txt` file existed in `/opt/axiom/experiment_session/` during this cycle.
+
+2026-04-02 CPU ADDITIONS (current cycle)
+
+- Re-read `/opt/axiom/experiment_session/wu_generator_config.json` at 2026-04-02 08:06 UTC and found 16 active CPU families, so no retirement action was required to preserve capacity and no active family met the findings-based retirement threshold.
+- Added `exp_stomatal_subsidiary_aperture_bridge_threshold.py` after searches for `stomatal subsidiary cell mechanics aperture plant cell primary research` and `stomatal subsidiary cell guard cell mechanical interaction primary research`; adjacent literature covers subsidiary-cell mechanical advantage and stomatal wall mechanics, but I did not find a dense finite-size eigensolve threshold map for balanced bilateral subsidiary support of centered pore capture.
+- Added `exp_mylonite_porphyroclast_strainshadow_bridge_threshold.py` after searches for `"porphyroclast" "strain shadow" mylonite deformation paper` and `site:pubs.geoscienceworld.org porphyroclast strain shadow mylonite paper`; adjacent literature covers strain-shadow pores, porphyroclast tails, and synkinematic fluid reservoirs, but I did not find a dense finite-size eigensolve threshold map for balanced bilateral shadow-conduit capture around a central clast.
+- Added `exp_sarcomere_titin_mline_bridge_threshold.py` after searches for `site:pubmed.ncbi.nlm.nih.gov titin M-band myomesin obscurin primary research` and `site:pubmed.ncbi.nlm.nih.gov M-band titin mechanical stability primary research`; adjacent literature covers myomesin-titin binding, obscurin organization, and M-band mechanics, but I did not find a dense finite-size eigensolve threshold map for balanced bilateral titin capture onto a centered M-line conduit.
