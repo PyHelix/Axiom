@@ -1,62 +1,31 @@
-2026-04-02 CPU FRONTIER SUMMARY
+2026-04-03 CPU FRONTIER SUMMARY
 
-Last updated: 2026-04-02
+Sampled 89 sanitized results across 4 new CPU families from the 2026-04-03 UTC frontier.
 
-No experiment families met the Step 2 threshold of `completed >= 10` with `received_time >= UNIX_TIMESTAMP(CURDATE())` when queried at 2026-04-02 21:46 UTC, so there was no eligible current-day frontier to sample or classify in this cycle.
+EXPERIMENT: exp_exp_golgi_ribbon_rim_tether_bridge_threshold (27 total results available, 24 sampled, 10 hosts)
+  Discovered: 2026-04-03 00:07 UTC
+  Last updated: 2026-04-03
+  Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
+  Results: The deep 2048-site frontier is tightly pinned at lambda_c about 0.05000-0.05001 with bridge mass 0.891-0.895 and leak 0.105-0.109 throughout. Balance is usually in the 0.81-0.90 range with a few softer runs down to 0.77-0.80, while the lower-N runs remain even more bridge-heavy and low-leak.
+  Conclusion: CONFIRMED. Balanced rim tethering robustly stabilizes the centered Golgi ribbon corridor rather than cis/trans rim pinning across the full sampled frontier. Residual asymmetry shows up as modest balance spread, but the bridge-positive regime is otherwise clean and consistent.
 
-2026-04-02 GPU DESIGN NOTES
+EXPERIMENT: exp_exp_synaptic_vesicle_periactive_actin_bridge_threshold (28 total results available, 24 sampled, 13 hosts)
+  Discovered: 2026-04-03 00:07 UTC
+  Last updated: 2026-04-03
+  Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
+  Results: The deep 2048-site runs cluster at eta_c about 0.05000-0.05001 with strong bridge mass 0.892-0.898 and low leak 0.102-0.108, but balance ranges widely from 0.70 up to 0.94. The 64-site runs are cleaner and more symmetric, suggesting the recycling core is present but still sensitive to left-right trapping in part of the deep frontier.
+  Conclusion: PRELIMINARY. Bilateral periactive actin scaffolding clearly strengthens a recycling corridor, but the deepest runs are still balance-sensitive enough that edge-biased trapping has not been fully eliminated. The effect looks real, yet it needs a broader deep sample before it should be treated as settled.
 
-- Active GPU pool reviewed at 17 families, so three new GPU families were added without crossing the 20-family cap.
-- New script: `exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu.py`
-  Search: `"melanosome" keratinocyte transfer cytoskeleton site:pubmed.ncbi.nlm.nih.gov`
-  Search: `"melanosome" dendrite transfer pigmentation site:pubmed.ncbi.nlm.nih.gov`
-  Found adjacent transfer biology including PMID 33772156, but no dense large-N GPU threshold map of bilateral melanosome-transfer bridge capture in a symmetric disordered operator.
-- New script: `exp_lichen_cortex_photobiont_waterfilm_bridge_threshold_gpu.py`
-  Search: `"lichen" hydration photobiont cortex water relations site:pubmed.ncbi.nlm.nih.gov`
-  Search: `"lichen" gas exchange water content cortex site:pubmed.ncbi.nlm.nih.gov`
-  Found adjacent hydration and gas-exchange literature including PMID 28307728, but no dense large-N GPU threshold map of bilateral cortex-medulla water-film bridge capture.
-- New script: `exp_fault_gouge_vein_mesh_bridge_threshold_gpu.py`
-  Search: `"fault gouge" vein permeability fluid pathway site:sciencedirect.com`
-  Search: `"fault gouge" hydro-mechanical permeability vein site:nature.com`
-  Search: `"fault gouge" fluid flow fracture network site:agupubs.onlinelibrary.wiley.com`
-  Found adjacent hydro-mechanical and permeability studies of fault gouge, but no dense large-N GPU threshold map of bilateral vein-mesh bridge capture in a symmetric disordered operator.
-- New script: `exp_fungal_dolipore_parenthesome_bridge_threshold_gpu.py`
-  Search: `dolipore parenthesome basidiomycete ultrastructure transport`
-  Search: `site:pubmed.ncbi.nlm.nih.gov dolipore septum parenthesome basidiomycete`
-  Found adjacent basidiomycete septal-pore ultrastructure and pore-cap composition literature, but no dense large-N GPU threshold map of bilateral dolipore-parenthesome bridge capture in a symmetric disordered operator.
-- New script: `exp_coral_calicoblastic_coelenteron_bridge_threshold_gpu.py`
-  Search: `site:pubmed.ncbi.nlm.nih.gov coral coelenteron mixing transport`
-  Search: `site:pubmed.ncbi.nlm.nih.gov calicoblastic cell layer coral permeability`
-  Found adjacent primary literature on coral coelenteron flow, tissue permeability, and calicoblastic ion transport, but no dense large-N GPU threshold map of bilateral calicoblastic-coelenteron bridge capture in a symmetric disordered operator.
-- New script: `exp_carboxysome_rubisco_shell_bridge_threshold_gpu.py`
-  Search: `site:pubmed.ncbi.nlm.nih.gov carboxysome Rubisco shell assembly model`
-  Search: `site:pubmed.ncbi.nlm.nih.gov carboxysome condensate shell permeability`
-  Found adjacent primary literature on carboxysome shell permeability, Rubisco packaging, and shell assembly, but no dense large-N GPU threshold map of bilateral shell-scaffold capture onto a centered Rubisco condensate in a symmetric disordered operator.
-- All six scripts listed in this GPU section use CuPy-first iterative deepening with GPU TFLOPS scaling, VRAM-based `MAX_N`, cuSOLVER fallback guards, one-seed workunits, ordered numeric result output, and `CUPY_CACHE_IN_MEMORY=1`.
+EXPERIMENT: exp_exp_subduction_melange_fluidlens_bridge_threshold (18 total results available, 18 sampled, 12 hosts)
+  Discovered: 2026-04-03 00:07 UTC
+  Last updated: 2026-04-03
+  Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
+  Results: The deep 1024-2048 frontier stays at xi_c about 0.05000-0.05001 but only reaches bridge mass 0.801-0.808, with high leak 0.192-0.199 and balance often stuck between 0.67 and 0.84. Even the lower-N runs only graze bridge mass 0.838-0.850 while remaining too leaky to look like a stable centered fluid-lens corridor.
+  Conclusion: REJECTED. Bilateral melange coupling does not produce the hypothesized centered fluid-lens bridge in the deep frontier; the dominant mode remains too weakly bridged and too leaky even at the lowest scanned coupling. This looks like persistent flank trapping rather than an imminent threshold just below the sampled bracket.
 
-NEW CPU EXPERIMENTS DESIGNED 2026-04-02
-
-1. exp_subduction_melange_fluidlens_bridge_threshold.py
-   Search queries: `site:agupubs.onlinelibrary.wiley.com subduction mélange fluid overpressure lens channel paper`; `site:sciencedirect.com subduction mélange fluid lens interface paper`
-   Found: primary literature on transient fluid transfer, veining, and deformation-enhanced channelization along subduction interfaces, but no dense finite-size bisection map for a balanced slab/damage-zone/fluid-lens bridge threshold in a symmetric operator.
-   Novel angle: iterative-deepening eigensolve threshold search for when bilateral melange coupling stabilizes a centered fluid-lens corridor instead of one-flank trapping.
-
-2. exp_golgi_ribbon_rim_tether_bridge_threshold.py
-   Search queries: `site:pubmed.ncbi.nlm.nih.gov Golgi ribbon tether trafficking paper`; `site:pmc.ncbi.nlm.nih.gov Golgi ribbon organization tether traffic paper`
-   Found: primary literature on Golgi ribbon assembly, tether proteins, and ribbon-linked trafficking, but no dense finite-size bisection map for a balanced cis-rim/tether/medial-ribbon bridge threshold in a symmetric operator.
-   Novel angle: iterative-deepening eigensolve threshold search for when bilateral rim tethering pulls the dominant mode off cis/trans rim pinning into a centered ribbon corridor.
-
-3. exp_desmosome_keratin_corticalsheet_bridge_threshold.py
-   Search queries: `site:pubmed.ncbi.nlm.nih.gov desmosome keratin cytoskeleton epithelial mechanics paper`; `site:pubmed.ncbi.nlm.nih.gov desmosome actin keratin assembly epithelial paper`
-   Found: primary desmosome / desmoplakin mechanics and assembly literature, but no dense finite-size bisection map for a symmetric desmosome/keratin-sheet/cortical-core bridge threshold.
-   Novel angle: iterative-deepening eigensolve threshold search for when bilateral desmosome anchoring stabilizes a centered keratin-supported cortical corridor rather than junction-edge pinning.
-
-4. exp_synaptic_vesicle_periactive_actin_bridge_threshold.py
-   Search queries: `site:pubmed.ncbi.nlm.nih.gov synaptic vesicle actin endocytosis periactive zone paper`; `site:pubmed.ncbi.nlm.nih.gov periactive zone architecture endocytosis actin paper`
-   Found: primary literature on actin-dependent presynaptic endocytosis and periactive-zone organization, but no dense finite-size bisection map for a symmetric active-zone/actin-ring/recycling-core bridge threshold.
-   Novel angle: iterative-deepening eigensolve threshold search for when bilateral periactive scaffolding produces a centered vesicle-recycling corridor instead of active-zone edge trapping.
-
-5. exp_skeletal_triad_junctophilin_ryr_bridge_threshold.py
-   Search queries: `site:pubmed.ncbi.nlm.nih.gov junctophilin ryanodine receptor skeletal muscle triad paper`; `site:pubmed.ncbi.nlm.nih.gov skeletal muscle triad junctophilin calcium release paper`
-   Found: primary literature on junctophilin, triadin/junctin, and RyR organization in skeletal muscle, but no dense finite-size bisection map for a symmetric T-tubule/junctional-SR/RyR-core bridge threshold.
-   Novel angle: iterative-deepening eigensolve threshold search for when balanced bilateral junctional-SR coupling stabilizes a centered RyR release corridor rather than one-flank dyad pinning.
+EXPERIMENT: exp_exp_skeletal_triad_junctophilin_ryr_bridge_threshold (23 total results available, 23 sampled, 10 hosts)
+  Discovered: 2026-04-03 00:07 UTC
+  Last updated: 2026-04-03
+  Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
+  Results: The deep 2048-site frontier sits at phi_c about 0.05000-0.05001 with bridge mass 0.875-0.880 and leak 0.120-0.125, while balance spans 0.73-0.90. The corridor is clearly present, but several deep runs hug the leak threshold and still show noticeable left-right asymmetry compared with the cleaner 64-site runs.
+  Conclusion: PRELIMINARY. Junctional-SR coupling appears to support a centered RyR release corridor, but the deepest frontier is not yet uniformly balanced or comfortably below the leak ceiling. The positive signal is strong enough to keep, though not yet strong enough to retire as settled.
