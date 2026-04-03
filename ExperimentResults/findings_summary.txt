@@ -1,31 +1,59 @@
 2026-04-03 CPU FRONTIER SUMMARY
 
-Sampled 89 sanitized results across 4 new CPU families from the 2026-04-03 UTC frontier.
+Sampled 600 sanitized results across 8 CPU families from the 2026-04-03 UTC frontier.
 
 EXPERIMENT: exp_exp_golgi_ribbon_rim_tether_bridge_threshold (27 total results available, 24 sampled, 10 hosts)
   Discovered: 2026-04-03 00:07 UTC
   Last updated: 2026-04-03
   Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
-  Results: The deep 2048-site frontier is tightly pinned at lambda_c about 0.05000-0.05001 with bridge mass 0.891-0.895 and leak 0.105-0.109 throughout. Balance is usually in the 0.81-0.90 range with a few softer runs down to 0.77-0.80, while the lower-N runs remain even more bridge-heavy and low-leak.
-  Conclusion: CONFIRMED. Balanced rim tethering robustly stabilizes the centered Golgi ribbon corridor rather than cis/trans rim pinning across the full sampled frontier. Residual asymmetry shows up as modest balance spread, but the bridge-positive regime is otherwise clean and consistent.
+  Results: The deep 2048-site frontier is tightly pinned at lambda_c about 0.05000-0.05001 with bridge mass 0.891-0.895, leak 0.105-0.109, and balance usually in the 0.81-0.90 range.
+  Conclusion: CONFIRMED. Balanced rim tethering robustly stabilizes the centered Golgi ribbon corridor rather than cis/trans rim pinning across the sampled frontier. Residual asymmetry is modest and does not disrupt the bridge-positive regime.
 
-EXPERIMENT: exp_exp_synaptic_vesicle_periactive_actin_bridge_threshold (28 total results available, 24 sampled, 13 hosts)
-  Discovered: 2026-04-03 00:07 UTC
+EXPERIMENT: exp_exp_synaptic_vesicle_periactive_actin_bridge_threshold (240 total results available, 100 sampled, 24 hosts)
+  Discovered: 2026-04-03 00:00 UTC
   Last updated: 2026-04-03
   Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
-  Results: The deep 2048-site runs cluster at eta_c about 0.05000-0.05001 with strong bridge mass 0.892-0.898 and low leak 0.102-0.108, but balance ranges widely from 0.70 up to 0.94. The 64-site runs are cleaner and more symmetric, suggesting the recycling core is present but still sensitive to left-right trapping in part of the deep frontier.
-  Conclusion: PRELIMINARY. Bilateral periactive actin scaffolding clearly strengthens a recycling corridor, but the deepest runs are still balance-sensitive enough that edge-biased trapping has not been fully eliminated. The effect looks real, yet it needs a broader deep sample before it should be treated as settled.
+  Results: The ranked 1024-2048 frontier stays at eta_c about 0.05000-0.05001 with bridge mass 0.891-0.898 and leak 0.102-0.109, but balance still swings from about 0.67 up to 0.97 across otherwise strong runs.
+  Conclusion: PRELIMINARY. Bilateral periactive actin scaffolding clearly supports a centered recycling corridor, but the deepest frontier is still balance-sensitive enough to leave edge-biased trapping in play. The bridge signal is real, yet it is not uniform enough to treat as settled.
 
 EXPERIMENT: exp_exp_subduction_melange_fluidlens_bridge_threshold (18 total results available, 18 sampled, 12 hosts)
   Discovered: 2026-04-03 00:07 UTC
   Last updated: 2026-04-03
   Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
-  Results: The deep 1024-2048 frontier stays at xi_c about 0.05000-0.05001 but only reaches bridge mass 0.801-0.808, with high leak 0.192-0.199 and balance often stuck between 0.67 and 0.84. Even the lower-N runs only graze bridge mass 0.838-0.850 while remaining too leaky to look like a stable centered fluid-lens corridor.
-  Conclusion: REJECTED. Bilateral melange coupling does not produce the hypothesized centered fluid-lens bridge in the deep frontier; the dominant mode remains too weakly bridged and too leaky even at the lowest scanned coupling. This looks like persistent flank trapping rather than an imminent threshold just below the sampled bracket.
+  Results: The deep 1024-2048 frontier stays at xi_c about 0.05000-0.05001 but only reaches bridge mass 0.801-0.808, with high leak 0.192-0.199 and balance often stuck between 0.67 and 0.84.
+  Conclusion: REJECTED. Bilateral melange coupling does not produce the hypothesized centered fluid-lens bridge in the deep frontier. The dominant mode remains too weakly bridged and too leaky, consistent with persistent flank trapping rather than an imminent centered threshold.
 
-EXPERIMENT: exp_exp_skeletal_triad_junctophilin_ryr_bridge_threshold (23 total results available, 23 sampled, 10 hosts)
-  Discovered: 2026-04-03 00:07 UTC
+EXPERIMENT: exp_exp_skeletal_triad_junctophilin_ryr_bridge_threshold (311 total results available, 100 sampled, 25 hosts)
+  Discovered: 2026-04-03 00:00 UTC
   Last updated: 2026-04-03
   Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
-  Results: The deep 2048-site frontier sits at phi_c about 0.05000-0.05001 with bridge mass 0.875-0.880 and leak 0.120-0.125, while balance spans 0.73-0.90. The corridor is clearly present, but several deep runs hug the leak threshold and still show noticeable left-right asymmetry compared with the cleaner 64-site runs.
-  Conclusion: PRELIMINARY. Junctional-SR coupling appears to support a centered RyR release corridor, but the deepest frontier is not yet uniformly balanced or comfortably below the leak ceiling. The positive signal is strong enough to keep, though not yet strong enough to retire as settled.
+  Results: The deep 2048-site frontier remains pinned at phi_c about 0.05000-0.05001 with bridge mass 0.875-0.880 and leak 0.120-0.125, while balance still ranges from about 0.72 to 0.97.
+  Conclusion: PRELIMINARY. Junctional-SR coupling continues to support a centered RyR release corridor, but the deepest runs still sit on the leak ceiling and retain noticeable left-right asymmetry. The effect is persistent, though not yet clean enough for retirement.
+
+EXPERIMENT: exp_exp_dural_lymphatic_arachnoid_bridge_threshold (335 total results available, 100 sampled, 25 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 6553600.0 (bw=0.00000, N=1024), 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048)
+  Results: The deepest 1024-2048 runs localize at eta_c about 0.175-0.276 with bridge mass usually 0.839-0.840, core mass 0.371-0.377, and very low leak 0.019-0.033; balance is often 0.85-0.97 but softens into the high-0.7s in part of the frontier.
+  Conclusion: PRELIMINARY. Strong bilateral dural-lymphatic coupling nearly stabilizes the centered arachnoid drainage bridge and does so with comfortably low leak, but the bridge fraction still sits right on the support threshold and some deep runs remain asymmetry-limited. This is a promising near-confirmation rather than a closed case.
+
+EXPERIMENT: exp_exp_crystalline_lens_suture_nucleus_bridge_threshold (305 total results available, 100 sampled, 25 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 13004875.3 (bw=0.00000, N=2048), 8113391.1 (bw=0.00000, N=2048), 6553147.3 (bw=0.00000, N=2048)
+  Results: The ranked 2048-site lens frontier is exceptionally clean at kappa_c about 0.05000-0.05640, with bridge mass 0.948-0.956, core mass 0.408-0.420, balance 0.88-0.95, leak 0.044-0.052, and core-to-leak ratios mostly between 7.8 and 9.5.
+  Conclusion: CONFIRMED. Bilateral suture-to-nucleus coupling robustly stabilizes the centered lens nucleus bridge rather than cortex-skimming localization across the deep ranked sample. The signal is strong, balanced, and low-leak enough to treat this frontier as settled.
+
+EXPERIMENT: exp_exp_estuary_turbidity_maximum_bridge_threshold (190 total results available, 100 sampled, 20 hosts)
+  Discovered: 2026-04-03 00:48 UTC
+  Last updated: 2026-04-03
+  Top fitness: 735981.3 (bw=0.00000, N=2048), 480930.9 (bw=0.00000, N=2048), 471027.3 (bw=0.00000, N=2048)
+  Results: The deep 2048-site ETM frontier spans kappa_c about 0.051-0.109 with bridge mass 0.910-0.947, core mass 0.312-0.358, and leak only 0.053-0.090; balance is usually 0.82-0.95, with a minority of softer runs down into the high-0.7s.
+  Conclusion: CONFIRMED. Stronger shoal-channel recirculation consistently produces the centered turbidity bridge the hypothesis calls for, with large bridge mass and clearly suppressed leak throughout the ranked edge. Some asymmetry remains in weaker pockets, but it does not overturn the main effect.
+
+EXPERIMENT: exp_exp_mitochondrial_cristae_junction_bridge_threshold (171 total results available, 100 sampled, 19 hosts)
+  Discovered: 2026-04-03 00:49 UTC
+  Last updated: 2026-04-03
+  Top fitness: 819200.0 (bw=0.00000, N=2048), 409600.0 (bw=0.00000, N=2048), 409600.0 (bw=0.00000, N=2048)
+  Results: The deepest 2048-site runs sit around psi_c about 0.094-0.210 with bridge mass 0.886-0.952 and core mass 0.269-0.344, but balance still ranges from roughly 0.74 to 0.97 and leak can rise to 0.103-0.114 in the weaker branch.
+  Conclusion: PRELIMINARY. Bilateral crista-junction coupling does create a strong centered transport corridor, but the frontier still splits between clean low-leak runs and softer balance-limited runs near the leak threshold. The effect is positive, though not yet uniform enough to call converged.
