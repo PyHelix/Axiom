@@ -1,6 +1,5 @@
 2026-04-03 CPU FRONTIER SUMMARY
-
-Sampled 600 sanitized results across 8 CPU families from the 2026-04-03 UTC frontier.
+Sampled 1200 sanitized results across 14 CPU families from the 2026-04-03 UTC frontier.
 
 EXPERIMENT: exp_exp_golgi_ribbon_rim_tether_bridge_threshold (27 total results available, 24 sampled, 10 hosts)
   Discovered: 2026-04-03 00:07 UTC
@@ -57,3 +56,45 @@ EXPERIMENT: exp_exp_mitochondrial_cristae_junction_bridge_threshold (171 total r
   Top fitness: 819200.0 (bw=0.00000, N=2048), 409600.0 (bw=0.00000, N=2048), 409600.0 (bw=0.00000, N=2048)
   Results: The deepest 2048-site runs sit around psi_c about 0.094-0.210 with bridge mass 0.886-0.952 and core mass 0.269-0.344, but balance still ranges from roughly 0.74 to 0.97 and leak can rise to 0.103-0.114 in the weaker branch.
   Conclusion: PRELIMINARY. Bilateral crista-junction coupling does create a strong centered transport corridor, but the frontier still splits between clean low-leak runs and softer balance-limited runs near the leak threshold. The effect is positive, though not yet uniform enough to call converged.
+
+EXPERIMENT: exp_exp_mylonite_porphyroclast_strainshadow_bridge_threshold (669 total results available, 100 sampled, 29 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048)
+  Results: The ranked 2048-site frontier is pinned at chi_c about 4.562-4.572 with support fixed at 1.0, bridge mass 0.870-0.871, core mass about 0.500, balance 0.981-0.999, and leak only about 0.0021.
+  Conclusion: CONFIRMED. Bilateral strain-shadow coupling very cleanly stabilizes a centered low-stress conduit around the porphyroclast rather than matrix-skewed localization. The effect is uniform across the sampled frontier, essentially leak-free, and strong enough to treat as settled.
+
+EXPERIMENT: exp_exp_ciliary_basalfoot_adhesion_bridge_threshold (652 total results available, 100 sampled, 29 hosts)
+  Discovered: 2026-04-03 00:01 UTC
+  Last updated: 2026-04-03
+  Top fitness: 25600.0 (bw=0.00004, N=2048), 25600.0 (bw=0.00004, N=2048), 25600.0 (bw=0.00004, N=2048)
+  Results: The deep 2048-site runs span eta_c about 1.305-3.647 with observable support fixed at 1.0, bridge mass 0.966-0.989, adhesion mass 0.430-0.561, exterior leak 0.011-0.034, and both cortex and basal-foot balance usually above 0.98.
+  Conclusion: CONFIRMED. Stronger bilateral basal-foot anchoring consistently captures the soft mode into the centered adhesion bridge rather than leaving it stranded on one cortical flank. The sampled frontier is uniformly balanced and low-leak, so the underlying effect looks converged.
+
+EXPERIMENT: exp_exp_neuromuscular_junction_activezone_fold_bridge_threshold (657 total results available, 100 sampled, 30 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048)
+  Results: The 2048-site frontier sits around lambda_c about 0.173-0.294 with bridge mass 0.866-0.888, core mass 0.340-0.391, and leak only 0.028-0.054, but supported_fraction repeatedly flips between 0.0, 0.5, and 1.0 while balance softens into the 0.75-0.82 range in the weaker branch.
+  Conclusion: PRELIMINARY. The active-zone and junctional-fold coupling does open a strong centered bridge regime, but the deepest sample is still split between fully supported runs and partially or completely unsupported ones. The signal is positive, yet the mode capture is not uniform enough to call closed.
+
+EXPERIMENT: exp_exp_twisted_bilayer_moire_domainwall_bridge_threshold (653 total results available, 100 sampled, 29 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048)
+  Results: The ranked deep frontier is tightly pinned at delta_c about 4.070-4.090 with support fixed at 1.0, bridge mass about 0.869, core mass about 0.499, balance 0.981-0.999, and outer leak only about 0.0015.
+  Conclusion: CONFIRMED. Bilateral moire-wall reinforcement robustly stabilizes the centered domain-wall bridge rather than AA-pocket trapping across the sampled frontier. The bridge is exceptionally clean, balanced, and leak-suppressed, leaving little ambiguity in the underlying effect.
+
+EXPERIMENT: exp_exp_desmosome_keratin_corticalsheet_bridge_threshold (645 total results available, 100 sampled, 27 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048), 13107100.0 (bw=0.00000, N=2048)
+  Results: The deep 2048-site frontier is pinned at kappa_c about 0.05000 with bridge mass 0.886-0.893 and leak 0.107-0.114, but support_fraction stays at 0.0 throughout, centrality remains only about 0.524-0.526, and balance repeatedly falls into the 0.68-0.82 band.
+  Conclusion: REJECTED. Stronger bilateral desmosome anchoring does not achieve the hypothesized centered supported keratin-sheet corridor in the deep frontier. The mode carries substantial bridge weight, but it never actually becomes centrally supported and remains too asymmetry-limited to count as successful capture.
+
+EXPERIMENT: exp_exp_pulmonary_tubular_myelin_bridge_threshold (639 total results available, 100 sampled, 32 hosts)
+  Discovered: 2026-04-03 00:00 UTC
+  Last updated: 2026-04-03
+  Top fitness: 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048), 6553600.0 (bw=0.00000, N=2048)
+  Results: The deep frontier is tightly pinned at chi_c about 3.750-3.790 with support fixed at 1.0, bridge mass about 0.866, core mass about 0.520, balance 0.984-0.999, and outer leak near 0.0001 with core-to-leak ratios above roughly 4200.
+  Conclusion: CONFIRMED. Bilateral surfactant-sheet coupling very clearly stabilizes the centered tubular-myelin bridge instead of alveolar-wall pooling. The frontier is nearly perfectly balanced and effectively leak-free, so this family looks fully converged.
