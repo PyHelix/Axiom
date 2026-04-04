@@ -1,3 +1,4 @@
+
 EXPERIMENT: exp_exp_paranode_kvdomain_sequestration_threshold (3184 total results available, 450 sampled, 32 hosts)
   Discovered: 2026-04-04 00:00 UTC | Last updated: 2026-04-04
   Top fitness: 1638400.0 (gamma≈0.29364, bw≈6.10e-7, N=2048), 1638400.0 (gamma≈0.29427, bw≈6.10e-7, N=2048), 1638400.0 (gamma≈0.29260, bw≈6.10e-7, N=2048)
@@ -75,3 +76,24 @@ EXPERIMENT: exp_exp_magnetosome_mamk_midcell_bridge_threshold (3837 total result
   Top fitness: 819200.0 (lambda≈0.09940, bw≈1.22e-6, N=2048), 819200.0 (lambda≈0.09623, bw≈1.22e-6, N=2048), 819200.0 (lambda≈0.13771, bw≈1.22e-6, N=2048)
   Results: the ranked 150 show a real centered midcell corridor over a nonzero band roughly lambda≈0.07-0.17, with bridge mass about 0.895-0.953, core mass about 0.289-0.361, and leak about 0.047-0.104. But the deepest 2048-site edge is still branch-split between lower-lambda unsupported files around 0.09-0.10 and cleaner supported files around 0.14-0.17, with the same pattern recurring deeper in the sample.
   Conclusion: PRELIMINARY. Stronger MamK-like chain coupling appears to produce a finite relocalization band into a centered midcell magnetosome corridor rather than persistent pole-skewed collapse. But the deepest frontier is still split between a mixed-support low-lambda branch and a cleaner higher-lambda branch, so the onset is not yet numerically converged.
+
+EXPERIMENT: exp_exp_kupffer_vesicle_rooffloor_lumen_bridge_threshold (1445 total results available, 150 sampled, 32 hosts)
+  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
+  Top fitness: 1638400.0 (chi≈0.43000, bw≈6.10e-7, N=1024), 1638400.0 (chi≈0.41002, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.20522, bw≈6.10e-7, N=1024)
+  Results: the ranked pull shows a real centered roof-lumen-floor corridor over nonzero coupling bands, with the deepest files splitting between a low branch near chi≈0.031-0.046 where bridge≈0.868-0.878, core≈0.178-0.198, and leak≈0.078-0.087 sit right on the support cutoffs, and cleaner higher branches near chi≈0.056-0.106 and chi≈0.185-0.430 with stronger core loading and much lower leak. Even the tail of the 150-file pass keeps the same nonzero corridor structure rather than collapsing to chi≈0.
+  Conclusion: PRELIMINARY. Bilateral roof-floor ciliary coupling appears to open a finite lumen-centered bridge rather than leaving the dominant mode surface-pinned. But the best-resolved frontier is still branch-split between cutoff-hugging low-chi files and cleaner higher-chi files, so the onset band is present without being numerically settled.
+EXPERIMENT: exp_exp_mitochondrial_nucleoid_crista_bridge_threshold (815 total results available, 150 sampled, 29 hosts)
+  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
+  Top fitness: 1638400.0 (mu≈0.06021, bw≈6.10e-7, N=1024), 1638400.0 (mu≈0.05500, bw≈6.10e-7, N=1024), 1638400.0 (mu≈0.05500, bw≈6.10e-7, N=1024)
+  Results: the sampled frontier keeps a centered crista-nucleoid-crista mode over a nonzero band, with many high-fitness files concentrated near mu≈0.055-0.060 at N=1024 and a deeper 2048-site tranche still supporting corridor capture down near mu≈0.036-0.048. Bridge mass stays about 0.926-0.934 with core≈0.189-0.206 and leak≈0.031-0.038 on the main branch, while occasional higher-mu files around 0.16-0.23 are cleaner but do not define the onset.
+  Conclusion: PRELIMINARY. Stronger bilateral crista-rim coupling looks sufficient to produce a finite nucleoid-facing corridor instead of persistent outer-membrane skew. But the deepest resolved files still mix supported and unsupported cases across the low-mu frontier, so the threshold is real-looking but not yet converged.
+EXPERIMENT: exp_exp_myelin_inneroutertongue_bridge_threshold (866 total results available, 150 sampled, 27 hosts)
+  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
+  Top fitness: 1638400.0 (gamma≈0.07723, bw≈6.10e-7, N=1024), 1638400.0 (gamma≈0.07805, bw≈6.10e-7, N=1024), 1638400.0 (gamma≈0.07996, bw≈6.10e-7, N=1024)
+  Results: across the ranked 150, the frontier is tightly pinned near gamma≈0.069-0.078 with bridge mass about 0.909-0.914, core about 0.177-0.189, and leak about 0.041-0.045. The centered tongue-channel corridor persists through both the 1024-site and 2048-site slices, but the deepest files still alternate between supported and unsupported classifications at essentially the same narrow gamma band.
+  Conclusion: PRELIMINARY. The inner-tongue/channel/outer-tongue family is consistent with a small but clearly nonzero relocalization threshold into a centered paranodal corridor. However, the best frontier is still cutoff-hugging and support flips at nearly identical gamma values, so it is not yet safe to call the threshold settled.
+EXPERIMENT: exp_exp_lens_fiber_suture_cortex_bridge_threshold (863 total results available, 150 sampled, 27 hosts)
+  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
+  Top fitness: 3123212.2 (eta≈0.00266, bw≈3.20e-7, N=2048), 3120147.7 (eta≈0.00038, bw≈3.21e-7, N=2048), 2192099.6 (eta≈0.00247, bw≈4.56e-7, N=2048)
+  Results: the highest-fitness 2048-site files already place the centered cortex-suture-nucleus-suture-cortex corridor at eta values effectively on the floor of the scan, typically eta≈0.0004-0.003 with bridge≈0.950-0.952, core≈0.200-0.204, and leak≈0.039-0.040. Later files at eta≈0.01-0.05 and higher only strengthen the same centered mode rather than revealing any delayed nonzero onset.
+  Conclusion: REJECTED. The centered lens-suture corridor is already present at effectively zero bilateral reinforcement, so this family does not support the hypothesized finite threshold above zero. The experiment shows strong bridge localization, but not a delayed relocalization transition.
