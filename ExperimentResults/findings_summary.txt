@@ -1,96 +1,17 @@
-EXPERIMENT: exp_exp_dural_lymphatic_arachnoid_bridge_threshold (752 total results available, 100 sampled, 31 hosts)
-  Discovered: 2026-04-03 00:00 UTC | Last updated: 2026-04-03
-  Top fitness: 6553600.0, 6553600.0, 6553600.0 | Results: eta_c sits around 0.175-0.276 with bridge mass about 0.839-0.840, core mass 0.371-0.377, leak 0.019-0.033, and some balance softening into the high-0.7s.
-  Conclusion: PRELIMINARY. The arachnoid drainage bridge is close, but the deepest frontier still includes asymmetry-limited runs right at the support threshold.
-EXPERIMENT: exp_exp_mitochondrial_cristae_junction_bridge_threshold (582 total results available, 100 sampled, 28 hosts)
-  Discovered: 2026-04-03 00:49 UTC | Last updated: 2026-04-03
-  Top fitness: 819200.0, 409600.0, 409600.0 | Results: psi_c spans about 0.094-0.210 with bridge mass 0.886-0.952, core mass 0.269-0.344, balance 0.74-0.97, and leak up to about 0.114 in the weaker branch.
-  Conclusion: PRELIMINARY. Bilateral crista-junction coupling is positive, but the frontier still splits between clean low-leak runs and softer balance-limited ones.
-EXPERIMENT: exp_exp_neuromuscular_junction_activezone_fold_bridge_threshold (769 total results available, 100 sampled, 30 hosts)
-  Discovered: 2026-04-03 00:00 UTC | Last updated: 2026-04-03
-  Top fitness: 6553600.0, 6553600.0, 6553600.0 | Results: lambda_c sits around 0.173-0.294 with bridge mass 0.866-0.888, core mass 0.340-0.391, leak 0.028-0.054, but supported_fraction still flips between 0.0, 0.5, and 1.0.
-  Conclusion: PRELIMINARY. The active-zone and fold coupling opens a real centered bridge regime, but the deepest sample is still split between supported and unsupported branches.
-EXPERIMENT: exp_exp_tendon_interfascicular_sliding_bridge_threshold (759 total results available, 200 sampled, 31 hosts)
-  Discovered: 2026-04-03 07:40 UTC | Last updated: 2026-04-03
-  Top fitness: 4725976.3, 4725976.3, 4725976.3 | Results: xi_c spans about 0.10-0.30 with bridge mass 0.85-0.93, core mass 0.27-0.36, and leak 0.03-0.12, but support still flips between 0.0 and 1.0 with a weaker low-balance branch.
-  Conclusion: PRELIMINARY. Interfascicular reinforcement clearly opens a centered sliding corridor, but the deep frontier is still too support-split to retire.
-EXPERIMENT: exp_exp_glandular_trichome_cuticle_pocket_bridge_threshold (758 total results available, 200 sampled, 31 hosts)
-  Discovered: 2026-04-03 07:40 UTC | Last updated: 2026-04-03
-  Top fitness: 4357718.4, 4357718.4, 4357718.4 | Results: kappa_c spans about 0.08-0.29 with bridge mass 0.86-0.96 and leak 0.02-0.13, but supported_fraction still alternates between 0.0 and 1.0 and the weaker branch repeatedly drops below balance 0.80.
-  Conclusion: PRELIMINARY. Secretory-disc reinforcement does promote a centered storage-pocket bridge, but the onset is still too branch-split to call converged.
-EXPERIMENT: exp_exp_forisome_sieveplate_occlusion_bridge_threshold (754 total results available, 200 sampled, 30 hosts)
-  Discovered: 2026-04-03 07:40 UTC | Last updated: 2026-04-03
-  Top fitness: 6553600.0, 6553600.0, 6553600.0 | Results: sigma_c spans about 0.09-0.26 with bridge mass 0.85-0.94, core mass 0.29-0.39, and leak 0.03-0.13, but support still splits between 0.0 and 1.0 across the deep frontier.
-  Conclusion: PRELIMINARY. Forisome-arm reinforcement opens a real centered occlusion regime, but the family remains support-split enough to stay open.
-EXPERIMENT: exp_exp_grainboundary_premelt_triplejunction_bridge_threshold (739 total results available, 200 sampled, 32 hosts)
-  Discovered: 2026-04-03 07:40 UTC | Last updated: 2026-04-03
-  Top fitness: 819200.0, 409600.0, 409600.0 | Results: xi_c spans about 0.076-0.170 with bridge mass 0.88-0.95 and leak 0.05-0.12, but support_fraction still ranges from 0.0 up to 1.0 with many partial-support branches.
-  Conclusion: PRELIMINARY. Premelt-film reinforcement creates a centered triple-junction regime, but the support pattern is still too split across deep runs to call settled.
-EXPERIMENT: exp_exp_intercalated_disc_dyad_bridge_threshold (744 total results available, 167 sampled, 30 hosts)
-  Discovered: 2026-04-03 10:21 UTC | Last updated: 2026-04-03
-  Top fitness: 6553600.0, 6553600.0, 6553600.0 | Results: eta_c still sits in a tight 1.065-1.076 band with core mass about 0.219-0.262 and edge leak about 0.062-0.076, but the ranked 167 continues to alternate between supported and unsupported branches as disc balance softens from about 0.46 up to 0.99.
-  Conclusion: PRELIMINARY. Stronger intercalated-disc coupling still opens a real centered dyad bridge regime. But the deep frontier remains split between clean supported slices and one-sided failures at nearly the same depth, so the onset is not converged enough to retire.
-EXPERIMENT: exp_exp_basketcell_pinceau_ais_bridge_threshold (749 total results available, 200 sampled, 31 hosts)
-  Discovered: 2026-04-03 12:55 UTC | Last updated: 2026-04-03
-  Top fitness: 4247396.5 (gamma=0.17344, bw≈2.35e-7, N=256), 4247396.5 (gamma=0.12717, bw≈2.35e-7, N=256), 4247396.5 (gamma=0.05000, bw≈2.35e-7, N=256) | Results: across the ranked 200, gamma_c still clusters in a narrow 0.050-0.173 band with bridge mass 0.916-0.964, core mass 0.298-0.372, and leak only 0.036-0.084, but supported_fraction keeps mixing 0.0 and 1.0 because a recurring branch softens to balance about 0.77-0.82 while neighboring same-fitness runs sit near 0.90-1.00.
-  Conclusion: PRELIMINARY. Bilateral basket-to-pinceau coupling still very clearly opens a centered AIS-gating corridor instead of one-flank pinning. The bridge is strong and low-leak throughout the ranked sample, but the deepest edge remains balance-split rather than uniformly supported.
-EXPERIMENT: exp_exp_synaptonemal_centralelement_recombination_bridge_threshold (720 total results available, 100 sampled, 30 hosts)
-  Discovered: 2026-04-03 12:55 UTC | Last updated: 2026-04-03
-  Top fitness: 952831.5 (chi=0.05743, bw≈1.05e-6, N=2048), 819200.0 (chi=0.06822, bw≈1.22e-6, N=2048), 819200.0 (chi=0.07891, bw≈1.22e-6, N=2048) | Results: chi_c spans about 0.050-0.154 with support fractions from 0.0 up to 1.0; the stronger branch reaches bridge mass 0.94-0.96, core mass 0.33-0.37, balance 0.90-0.95, and leak 0.036-0.058, while weaker same-rank runs soften to balance about 0.74-0.80 and leak about 0.09-0.10.
-  Conclusion: PRELIMINARY. Stronger bilateral lateral-element coupling does support a centered central-element recombination corridor. But the deep 2048-site edge still splits between fully supported and asymmetry-limited branches, so the finding is not closed yet.
-EXPERIMENT: exp_exp_conifer_needle_transfusion_bridge_threshold (655 total results available, 100 sampled, 29 hosts)
-  Discovered: 2026-04-03 12:55 UTC | Last updated: 2026-04-03
-  Top fitness: 4247396.5 (eta=0.06545, bw≈2.35e-7, N=256), 4247396.5 (eta=0.05029, bw≈2.35e-7, N=256), 4247396.5 (eta=0.05387, bw≈2.35e-7, N=256) | Results: eta_c clusters near 0.050-0.112 in the deepest slice, with bridge mass 0.914-0.945, core mass 0.301-0.360, leak 0.055-0.086, and many supported runs, but the weaker branch still drops to balance about 0.79-0.82 at the same frontier.
-  Conclusion: PRELIMINARY. Bilateral endodermis-transfusion reinforcement produces a real centered transfusion bridge rather than one-flank mesophyll capture. The ranked edge is positive and fairly clean, yet still balance-split enough that I would not call it converged.
-EXPERIMENT: exp_exp_magnetosome_mamk_midcell_bridge_threshold (597 total results available, 200 sampled, 31 hosts)
-  Discovered: 2026-04-03 12:55 UTC | Last updated: 2026-04-03
-  Top fitness: 819200.0 (lambda=0.12149, bw≈1.22e-6, N=2048), 819200.0 (lambda=0.07773, bw≈1.22e-6, N=1024), 819200.0 (lambda=0.14484, bw≈1.22e-6, N=2048) | Results: in the ranked 200, lambda_c spans about 0.058-0.167; the stronger 2048-site branch reaches bridge mass 0.932-0.953, core mass 0.319-0.361, balance 0.85-0.94, and leak 0.047-0.076, but same-depth weaker runs still sit at bridge mass 0.874-0.918 with supported_fraction from 0.0 up to 0.67 and leak repeatedly near 0.10-0.126.
-  Conclusion: PRELIMINARY. MamK-like bilateral coupling still favors a centered midcell magnetosome corridor once the coupling is strong enough. But the ranked frontier remains split between a clean high-lambda branch and a broad weaker branch at similar depth, so the threshold map is not closed.
-EXPERIMENT: exp_exp_nuclear_pore_fgmesh_selectivity_bridge_threshold (317 total results available, 200 sampled, 29 hosts)
-  Discovered: 2026-04-03 12:55 UTC | Last updated: 2026-04-03
-  Top fitness: 819200.0 (sigma=0.06015, bw≈1.22e-6, N=2048), 819200.0 (sigma=0.08432, bw≈1.22e-6, N=2048), 819200.0 (sigma=0.10314, bw≈1.22e-6, N=2048) | Results: through the ranked 200, sigma_c spans about 0.053-0.122; bridge mass stays about 0.910-0.955 and core mass about 0.341-0.396 with leak only about 0.045-0.090, but support_fraction still ranges from 0.0 to 1.0 because weaker same-depth branches soften to balance about 0.74-0.80.
-  Conclusion: PRELIMINARY. Bilateral FG-mesh coupling still favors a centered pore-channel branch instead of wall-pinned transport. The best 2048-site runs are clearly bridge-positive, but the deep frontier is still split between strong and weaker branches, so I would not retire it.
-EXPERIMENT: exp_exp_seaice_brine_channel_platelet_bridge_threshold (343 total results available, 200 sampled, 28 hosts)
-  Discovered: 2026-04-03 15:29 UTC | Last updated: 2026-04-03
-  Top fitness: 819200.0 (chi=0.06714, bw≈1.22e-6, N=2048), 819200.0 (chi=0.05809, bw≈1.22e-6, N=2048), 819200.0 (chi=0.06536, bw≈1.22e-6, N=2048) | Results: through the ranked 200, chi_c spans about 0.051-0.098; bridge mass stays about 0.918-0.948 and core mass about 0.378-0.415 with leak only about 0.052-0.082, but support_fraction still runs from 0.33 up to 1.0 because weaker slices keep softening to balance about 0.77-0.84.
-  Conclusion: PRELIMINARY. Bilateral platelet-layer coupling clearly opens a centered brine-drainage channel rather than boundary-trapped exchange. The effect is robust and low-leak, but the deep ranked frontier still mixes fully supported and weaker balance-limited branches, so I would not retire it yet.
-EXPERIMENT: exp_foodweb_seedbank_heavytail_omnivory_threshold (17 total results available, 17 sampled, 5 hosts)
-  Discovered: 2026-04-03 17:54 UTC | Last updated: 2026-04-03
-  Top fitness: 25599.8 (omega=2.79998, bw≈3.91e-5, N=2048), 25599.8 (omega=2.79998, bw≈3.91e-5, N=2048), 25599.8 (omega=2.79998, bw≈3.91e-5, N=2048) | Results: every sampled run is still stable at the omega ceiling, with max real part about -0.96 to -0.92, unstable fraction fixed at 0.0, omnivory flux only about 0.00547, and the bracket pinned against omega≈2.80 rather than collapsing to a lower threshold.
-  Conclusion: REJECTED. Heavy-tailed trophic couplings do not shrink the seed-bank-rescued omnivory window in this frontier. The deep 2048-site runs remain comfortably stable even at the search ceiling, so the hypothesized early breakdown is not supported.
-EXPERIMENT: exp_exp_glialimitans_perivascular_cuff_bridge_threshold_gpu (10 total results available, 7 sampled, 6 hosts)
-  Discovered: 2026-04-03 20:20 UTC | Last updated: 2026-04-03
-  Top fitness: 13107100.0 (theta≈0.00000, bw≈7.63e-8, N=316), 51199.6 (theta≈0.00001, bw≈1.95e-5, N=316), 51199.6 (theta≈0.00001, bw≈1.95e-5, N=316) | Results: the sampled runs sit essentially at theta≈0 with bridge mass about 0.99976-0.99992, core mass about 0.168-0.195, glia mass about 0.724-0.757, and localization about 4.93-6.65, but supported_fraction stays 0.0 throughout because side balance never rises above about 0.79 and often falls to about 0.55-0.65.
-  Conclusion: REJECTED. Stronger cuff-to-glia reinforcement does not produce the balanced glia-limitans gateway the hypothesis asked for. The mode is highly localized but persistently one-sided, so this looks like asymmetric cuff capture rather than a true centered gateway bridge.
-EXPERIMENT: exp_exp_pollen_aperture_intine_bridge_threshold_gpu (10 total results available, 9 sampled, 7 hosts)
-  Discovered: 2026-04-03 20:20 UTC | Last updated: 2026-04-03
-  Top fitness: 999999999999999.9 (eta=4.00000 ceiling, N=447), 999999999999999.9 (eta=4.00000 ceiling, N=447), 999999999999999.9 (eta=4.00000 ceiling, N=447) | Results: every sampled run is pinned at the eta ceiling, with bridge mass only about 0.544-0.551 and core mass only about 0.165-0.168 even though annulus balance is essentially 0.999 and exine balance stays near 0.850.
-  Conclusion: REJECTED. Maximal bilateral aperture coupling aligns the wall but still does not load enough mass into the centered intine-emergence corridor to satisfy the hypothesis. This is a well-balanced shell mode, not a robust centered germination bridge.
-EXPERIMENT: exp_exp_carboxysome_rubisco_shell_bridge_threshold_gpu (20 total results available, 20 sampled, 11 hosts)
-  Discovered: 2026-04-03 15:29 UTC | Last updated: 2026-04-03
-  Top fitness: 13107100.0 (param=4.00000, bw≈7.63e-8, N=547), 13107100.0 (param=4.00000, bw≈7.63e-8, N=546), 13107100.0 (param=4.00000, bw≈7.63e-8, N=433) | Results: the bracket is pinned at the param ceiling, bridge mass stays only about 0.574-0.585, core mass about 0.185-0.189, and both inner and outer balance are essentially perfect, but the centered scaffold-to-Rubisco bridge never becomes dominant.
-  Conclusion: REJECTED. Stronger shell-scaffold coupling symmetrizes the soft mode, but even maximal coupling leaves too little mass in the actual bridge region to support the hypothesized centered capture. This looks like a weakly centered shell-condensate mode, not a robust Rubisco bridge.
-EXPERIMENT: exp_exp_fungal_dolipore_parenthesome_bridge_threshold_gpu (13 total results available, 11 sampled, 9 hosts)
-  Discovered: 2026-04-03 15:29 UTC | Last updated: 2026-04-03
-  Top fitness: 13107100.0 (param=4.00000, bw≈7.63e-8, N=433), 13107100.0 (param=4.00000, bw≈7.63e-8, N=316), 13107100.0 (param=4.00000, bw≈7.63e-8, N=546) | Results: the bracket is again pinned at the param ceiling; bridge mass stays only about 0.531-0.535, core mass about 0.149-0.153, balances are effectively 1.0, and the dolipore gap is large, but the centered pore mass never fills in.
-  Conclusion: REJECTED. Maximal parenthesome coupling opens a clean symmetric separation without producing a strong dolipore-centered transport bridge. The mode remains too underfilled in the pore core for the hypothesis to hold.
-EXPERIMENT: exp_exp_fault_gouge_vein_mesh_bridge_threshold_gpu (18 total results available, 18 sampled, 10 hosts)
-  Discovered: 2026-04-03 17:46 UTC | Last updated: 2026-04-03
-  Top fitness: 999999999999999.9 (lambda=4.00000 ceiling, N=447), 999999999999999.9 (lambda=4.00000 ceiling, N=447), 999999999999999.9 (lambda=4.00000 ceiling, N=547) | Results: every sampled run is pinned at the coupling ceiling, with bridge mass only 0.533-0.540, core mass 0.153-0.157, leak 0.028-0.032, and damage-side balance still only about 0.78-0.81 despite near-perfect vein symmetry.
-  Conclusion: REJECTED. Stronger bilateral vein-mesh coupling symmetrizes the fault mode, but even the deepest ceiling-pinned runs never build a dominant centered gouge-fluid bridge. This remains a weakly centered, damage-zone-biased mode rather than the hypothesized captured corridor.
-EXPERIMENT: exp_exp_conifer_pitmembrane_torusmargo_bridge_threshold_gpu (10 total results available, 10 sampled, 9 hosts)
-  Discovered: 2026-04-03 17:46 UTC | Last updated: 2026-04-03
-  Top fitness: 16384.0 (rho=3.99997, bw≈6.10e-5, N=409), 16384.0 (rho=3.99997, bw≈6.10e-5, N=511), 16384.0 (rho=3.99997, bw≈6.10e-5, N=418) | Results: rho_c is jammed at the upper bracket edge in all 10 runs, while bridge mass stays only 0.536-0.542 and core mass 0.153-0.157 even though both torus and wall balances are essentially perfect and leak remains just 0.025-0.028.
-  Conclusion: REJECTED. Maximal margo coupling produces a very symmetric pit mode, but it does not capture enough mass into the centered torus seal to satisfy the hypothesis. The operator stays underfilled in the bridge core rather than transitioning into a robust seal-centered channel.
-EXPERIMENT: exp_exp_halide_perovskite_grainboundary_ionbridge_threshold_gpu (14 total results available, 14 sampled, 7 hosts)
-  Discovered: 2026-04-03 17:46 UTC | Last updated: 2026-04-03
-  Top fitness: 999999999999999.9 (chi=4.00000 ceiling, N=774), 999999999999999.9 (chi=4.00000 ceiling, N=316), 999999999999999.9 (chi=4.00000 ceiling, N=447) | Results: the full sampled set is again ceiling-pinned, with bridge mass only 0.540-0.547, core mass 0.160-0.163, leak 0.019-0.023, and one grain-side balance branch stuck near 0.79-0.81 despite very strong sheath symmetry.
-  Conclusion: REJECTED. Stronger bilateral space-charge coupling cleans up the symmetry of the soft mode, but it never creates a dominant centered ion-conduction throat. The deepest runs remain too underfilled in the bridge region to support the proposed grain-boundary capture.
-EXPERIMENT: exp_exp_melanosome_keratinocyte_dendrite_bridge_threshold_gpu (14 total results available, 14 sampled, 8 hosts)
-  Discovered: 2026-04-03 17:46 UTC | Last updated: 2026-04-03
-  Top fitness: 999999999999999.9 (psi=4.00000 ceiling, N=433), 999999999999999.9 (psi=4.00000 ceiling, N=316), 999999999999999.9 (psi=4.00000 ceiling, N=447) | Results: all sampled runs hit the coupling ceiling, but bridge mass remains only 0.531-0.540 and core mass 0.152-0.156; leak stays modest at 0.026-0.032 while the weaker cortex-balance branch repeatedly sits only around 0.68-0.71.
-  Conclusion: REJECTED. Maximal dendrite-packet coupling does not rescue a strong melanosome-centered transfer bridge. The mode stays cortex-biased and underfilled in the packet core, so the hypothesized centered capture is not supported.
-EXPERIMENT: exp_exp_phragmoplast_cellplate_bridge_threshold_gpu (10 total results available, 10 sampled, 9 hosts)
-  Discovered: 2026-04-03 17:46 UTC | Last updated: 2026-04-03
-  Top fitness: 13107100.0 (param=4.00000, bw≈7.63e-8, N=546), 51199.6 (param=3.99999, bw≈1.95e-5, N=316), 51199.6 (param=3.99999, bw≈1.95e-5, N=447) | Results: the best runs are sharply symmetric and essentially leak-free, with bridge mass about 0.590-0.598 and core mass 0.183-0.187, but the bridge never approaches dominance and the sampled tail already includes a failed zero-support branch.
-  Conclusion: REJECTED. Stronger phragmoplast coupling improves centering, but it still does not produce a robust cell-plate-dominant bridge. With only modest bridge occupancy at the ceiling and outright unsupported tail runs, the hypothesized centered capture is not borne out.
+EXPERIMENT: exp_exp_paranode_kvdomain_sequestration_threshold (269 total results available, 200 sampled, 17 hosts)
+  Discovered: 2026-04-04 00:00 UTC | Last updated: 2026-04-04
+  Top fitness: 1638400.0 (gamma≈0.29244, bw≈6.10e-7, N=2048), 1638400.0 (gamma≈0.29402, bw≈6.10e-7, N=2048), 1638400.0 (gamma≈0.29391, bw≈6.10e-7, N=2048)
+  Results: across the ranked 200, gamma_c stays mostly around 0.292-0.305 with bridge mass about 0.894-0.912, core mass about 0.269-0.283, balance ranging from roughly 0.75 up to 0.99, and leak repeatedly sitting right on the 0.18 cutoff. The deepest 2048-site frontier keeps mixing support fractions of 0.0, 0.5, and 1.0 even when bracket widths are already down near 1.56e-4 to 6.10e-7.
+  Conclusion: PRELIMINARY. Stronger paranodal barrier coupling does pull the dominant mode off the bilateral Kv flanks and into a centered paranode-node-paranode corridor at a real finite threshold. But the deepest frontier is still split between fully supported and borderline balance/leak-limited branches, so the onset is not converged enough to retire.
+
+EXPERIMENT: exp_exp_weyl_fermiarc_bulk_repair_threshold (263 total results available, 200 sampled, 19 hosts)
+  Discovered: 2026-04-04 00:00 UTC | Last updated: 2026-04-04
+  Top fitness: 3276762.1 (lambda≈0.01199, bw≈3.05e-7, N=2048), 3275215.9 (lambda≈9.79e-5, bw≈3.05e-7, N=2048), 3273351.0 (lambda≈0.00064, bw≈3.05e-7, N=2048)
+  Results: the ranked 200 already show bulk-centered modes essentially at lambda≈0 to 0.02 in the deepest slice, with bridge mass about 1.15-1.21, core mass about 0.33-0.45, and leak often only 0.006-0.04; later ranked runs still stay broadly bridge-positive even when balance softens into the 0.63-0.80 range or leak rises toward 0.05-0.10. Support fractions mix 0.0, 0.5, and 1.0, but the dominant pattern is that the bulk corridor is present before any clean nonzero threshold emerges.
+  Conclusion: REJECTED. Reciprocal bulk-repair coupling does not reveal the hypothesized finite relocalization threshold, because the leading mode is already strongly bulk-corridor dominated at effectively zero coupling in the highest-fitness 2048-site runs. The family shows a real centered bulk mode, but not a nontrivial thresholded escape from edge-trapped Fermi arcs.
+
+EXPERIMENT: exp_exp_stromatolite_lamina_redox_porewater_bridge_threshold (288 total results available, 200 sampled, 19 hosts)
+  Discovered: 2026-04-04 00:00 UTC | Last updated: 2026-04-04
+  Top fitness: 1638400.0 (rho≈0.05222, bw≈6.10e-7, N=2048), 1638400.0 (rho≈0.04086, bw≈6.10e-7, N=2048), 1638400.0 (rho≈0.03690, bw≈6.10e-7, N=2048)
+  Results: through the ranked 200, rho_c sits mostly around 0.037-0.079 with bridge mass about 0.946-0.953, core mass about 0.189-0.206, leak only about 0.026-0.032, and balance usually around 0.85-0.97 with only occasional softer slices near 0.79-0.82. The deepest 2048-site runs are repeatedly support-positive at bracket widths down to 6.10e-7 and stay pointed the same way even when the edge cases lose full support.
+  Conclusion: CONFIRMED. Bilateral stromatolite lamina coupling produces a real finite threshold into a centered porewater-redox conduit rather than leaving the mode split across outer water films. The effect is large, low-leak, and directionally consistent across the ranked 200, so additional same-family sampling is unlikely to change the conclusion.
