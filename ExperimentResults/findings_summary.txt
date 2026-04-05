@@ -2,26 +2,82 @@ EXPERIMENT: exp_exp_peroxisome_mitochondria_contact_bridge_threshold (362 total 
   Discovered: 2026-04-05 00:45 UTC
   Last updated: 2026-04-05
   Top fitness: 1638400.0 (bw=0.00000, N=1024), 1638400.0 (bw=0.00000, N=1024), 1638400.0 (bw=0.00000, N=2048)
-  Results: The ranked frontier stays tightly clustered at rho_c≈0.080-0.082 with bridge_mass≈0.840-0.841, core_mass≈0.225-0.230, balance usually ≈0.88-0.98, and leak≈0.121-0.122. A few files dip to balance≈0.73-0.80, but the bridge metrics remain above target and the threshold band does not wander with depth.
-  Conclusion: CONFIRMED. Peroxisome-mitochondria coupling shows a real finite bridge threshold near rho_c≈0.081 rather than a floor-pinned artifact. Across the ranked 290, the centered bridge remains strong and low-leak at the deepest N, with only modest balance wobble around an otherwise stable nonzero corridor.
+  Results: The ranked frontier stays tightly clustered at rho_c≈0.080-0.082 with bridge_mass≈0.840-0.841, core_mass≈0.225-0.230, balance usually ≈0.88-0.98, and leak≈0.121-0.122. A few files dip to balance≈0.73-0.80, but the threshold band does not wander with depth.
+  Conclusion: CONFIRMED. Peroxisome-mitochondria coupling shows a real finite bridge threshold near rho_c≈0.081 rather than a floor-pinned artifact. Across the ranked frontier, the centered bridge remains strong and low-leak at the deepest N.
 
 EXPERIMENT: exp_exp_virophage_patch_stability_threshold (373 total results available, 289 sampled, 24 hosts)
   Discovered: 2026-04-05 00:45 UTC
   Last updated: 2026-04-05
   Top fitness: 3276776.6 (bw=0.00000, N=1024), 3276776.6 (bw=0.00000, N=1024), 3276776.6 (bw=0.00000, N=1024)
-  Results: Every ranked file is pinned at eta_c≈4.800 with stable_fraction≈0.180, support_fraction=0.000, bridge_mass=0.000, core_mass≈0.95-0.96, balance≈0.06, leak≈0.85-0.99, and positive max_real_part≈0.0010-0.0057. Even the 2048-site files only move to eta_c≈4.79996 with the same zero-bridge, high-leak pattern.
-  Conclusion: REJECTED. The hypothesized virophage-mediated stabilization bridge does not appear within the scanned range. The frontier is ceiling-pinned and remains trapped in a leaky core-dominated mode with zero centered bridge support, so stronger bilateral coupling is not rescuing the unstable state in this surrogate.
+  Results: Every ranked file is pinned at eta_c≈4.800 with stable_fraction≈0.180, support_fraction=0.000, bridge_mass=0.000, core_mass≈0.95-0.96, balance≈0.06, leak≈0.85-0.99, and positive max_real_part≈0.0010-0.0057. Even the 2048-site files keep the same zero-bridge unstable pattern.
+  Conclusion: REJECTED. The hypothesized virophage-mediated stabilization bridge does not appear within the scanned range. The frontier is ceiling-pinned and trapped in a leaky core-dominated mode with zero centered bridge support.
 
-EXPERIMENT: exp_exp_mycorrhiza_hartig_net_bridge_threshold_gpu (11 total results available, 11 sampled, 7 hosts)
+EXPERIMENT: exp_exp_coral_mucus_cilia_diffusion_bridge_threshold_gpu (38 total results available, 30 sampled, 7 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=512)
+  Results: All sampled files are ceiling-pinned at kappa_c≈4.600 with bridge_mass≈0.560-0.565 against a 0.872 target, core_mass≈0.181-0.182, perfect symmetry, zero leak, and support_fraction=0.000 throughout. The mode is balanced but never relocates into a centered mucus bridge.
+  Conclusion: REJECTED. Stronger bilateral cilia-mucus coupling does not produce the proposed centered bridge within the scanned bracket. The frontier is uniformly ceiling-pinned and sub-threshold rather than approaching capture.
+
+EXPERIMENT: exp_exp_neuromast_cupula_hairbundle_bridge_threshold_gpu (36 total results available, 34 sampled, 7 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=546), 13107100.0 (bw=0.00000, N=547)
+  Results: The sampled frontier sits at kappa_c≈4.600 with bridge_mass≈0.561-0.566 versus a 0.870 target, core_mass≈0.181-0.183, inner and outer balance essentially 1.000, leak=0.000, and support_fraction=0.000 in every file. Higher-N runs look no closer to a cupula-centered capture than the smaller ones.
+  Conclusion: REJECTED. The hypothesized centered cupula bridge is not emerging in this parameter range. Increased bilateral anchoring yields a perfectly symmetric but still clearly sub-threshold mode pinned away from the required bridge mass.
+
+EXPERIMENT: exp_exp_rootendodermis_exodermis_bridge_threshold_gpu (38 total results available, 35 sampled, 9 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=546), 13107100.0 (bw=0.00000, N=546)
+  Results: Across the ranked sample, param_c stays at ≈4.600 while bridge_mass remains only ≈0.561-0.565 against a 0.884 target; core_mass is ≈0.181-0.183, balance is effectively perfect, leak is zero, and support_fraction never rises above 0.000. Even the 774-site files retain the same sub-threshold shape.
+  Conclusion: REJECTED. Stronger bilateral exodermis coupling does not create the centered endodermis-stele bridge predicted by the hypothesis. The family is ceiling-pinned with a stable symmetric null pattern rather than a finite threshold crossing.
+
+EXPERIMENT: exp_exp_braincapillary_pericyte_glycocalyx_bridge_threshold_gpu (36 total results available, 31 sampled, 9 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=546), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=774)
+  Results: The ranked files are again pinned at kappa_c≈4.600 with bridge_mass≈0.561-0.564 against a 0.885 target, core_mass≈0.181-0.182, balance≈1.000, leak=0.000, and support_fraction=0.000. The capillary-pericyte surrogate settles into a symmetric but underbuilt state rather than a glycocalyx-centered bridge.
+  Conclusion: REJECTED. The proposed microvascular bridge does not materialize anywhere in the sampled frontier. Stronger bilateral coupling leaves the system ceiling-limited and far below the bridge criterion.
+
+EXPERIMENT: exp_exp_synovial_lining_collagen_bridge_threshold_gpu (34 total results available, 32 sampled, 8 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=547)
+  Results: Every sampled result is parked near kappa_c≈4.600 with bridge_mass≈0.561-0.565 relative to a 0.878 target, core_mass≈0.181-0.183, nearly exact bilateral balance, zero leak, and support_fraction=0.000. The collagen-rich film never becomes the dominant centered corridor.
+  Conclusion: REJECTED. Stronger lining-film coupling fails to produce the hypothesized lubricating bridge. The frontier is clean and symmetric, but it remains decisively below the threshold needed for centered capture.
+
+EXPERIMENT: exp_exp_osteocyte_canaliculi_lacuna_bridge_threshold_gpu (33 total results available, 31 sampled, 8 hosts)
   Discovered: 2026-04-05 00:45 UTC
   Last updated: 2026-04-05
-  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512)
-  Results: All 11 files sit at kappa_c≈4.600 with bridge_mass≈0.125, core_mass≈0.56, inner_balance≈0.18, outer_balance=1.000, leak≈0.248-0.250, and support_fraction only ≈0.162-0.166. The mode is still heavily one-sided, with left-inner mass≈0.64 and right-inner mass≈0.19.
-  Conclusion: SKIP. The first 11 GPU results all point against the hypothesized centered Hartig-net bridge, but the sample is still too small to retire the family confidently. For now the experiment is effectively ceiling-pinned and strongly asymmetric, so it needs more runs before a hard accept/reject call.
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=774)
+  Results: The larger sample overturns the earlier asymmetry concern but not the null outcome: kappa_c stays at ≈4.600, bridge_mass stays only ≈0.561-0.565 versus a 0.875 target, core_mass is ≈0.181-0.183, balance is now effectively 1.000, leak is zero, and support_fraction remains 0.000. More depth sharpened the symmetric ceiling-pinned failure mode rather than revealing a lacuna bridge.
+  Conclusion: REJECTED. With 31 sampled files across 8 hosts, this family no longer looks merely preliminary. The centered lacuna bridge is absent throughout the ranked frontier, and the experiment is best read as a clean negative result.
 
-EXPERIMENT: exp_exp_osteocyte_canaliculi_lacuna_bridge_threshold_gpu (10 total results available, 10 sampled, 5 hosts)
+EXPERIMENT: exp_exp_algal_pyrenoid_starchsheath_bridge_threshold_gpu (29 total results available, 24 sampled, 7 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=546)
+  Results: The sampled files cluster at kappa_c≈4.600 with bridge_mass≈0.561-0.565, core_mass≈0.181-0.183, balance≈1.000, leak=0.000, and support_fraction=0.000 throughout. The starch-sheath bridge target is never approached despite the sharp brackets.
+  Conclusion: REJECTED. Stronger bilateral pyrenoid-starch coupling does not produce the proposed centered bridge in this scan. The family is another ceiling-pinned symmetric null rather than a finite-threshold capture.
+
+EXPERIMENT: exp_exp_mycorrhiza_hartig_net_bridge_threshold_gpu (27 total results available, 25 sampled, 9 hosts)
   Discovered: 2026-04-05 00:45 UTC
   Last updated: 2026-04-05
-  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=774)
-  Results: The first 10 files are likewise pinned at kappa_c≈4.600 with bridge_mass≈0.120, core_mass≈0.563-0.566, inner_balance≈0.182-0.183, outer_balance=1.000, leak≈0.248-0.249, and support_fraction only ≈0.171-0.173. The dominant mass remains left-heavy rather than centered in the lacuna.
-  Conclusion: SKIP. This family has only reached 10 completed results, and all of them still look like a ceiling-pinned asymmetric mode rather than a centered lacuna bridge. The early signal is unfavorable, but the dataset is still too thin to classify as a firm rejection.
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=547)
+  Results: The expanded sample replaces the early one-sided runs with a stable symmetric ceiling-pinned pattern: kappa_c≈4.600, bridge_mass≈0.560-0.565 against a 0.880 target, core_mass≈0.181-0.182, balance≈1.000, leak=0.000, and support_fraction=0.000 in every sampled file. Additional results did not move the frontier toward a Hartig-net-centered bridge.
+  Conclusion: REJECTED. This family has matured beyond the earlier `SKIP` state into a clear negative result. Stronger mantle-Hartig coupling yields a balanced but persistently sub-threshold mode, not the hypothesized centered bridge.
+
+EXPERIMENT: exp_exp_spindle_midzone_prc1_kif4a_bridge_threshold_gpu (19 total results available, 16 sampled, 7 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=512)
+  Results: Every sampled run is pinned at kappa_c≈4.600 with bridge_mass≈0.561-0.565 against a 0.875 target, core_mass≈0.181-0.183, balance≈1.000, leak=0.000, and support_fraction=0.000. The midzone overlap surrogate stays symmetric but never transfers dominant mass into a centered bridge.
+  Conclusion: REJECTED. Stronger PRC1/KIF4A-like overlap reinforcement does not rescue a spindle-midzone bridge within the scanned bracket. The frontier is uniformly ceiling-pinned and far below the bridge criterion.
+
+EXPERIMENT: exp_exp_saltfinger_thermohaline_staircase_bridge_threshold_gpu (14 total results available, 13 sampled, 8 hosts)
+  Discovered: 2026-04-05 03:00 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=547)
+  Results: The available files all sit at kappa_c≈4.600 with bridge_mass≈0.561-0.565 versus a 0.870 target, core_mass≈0.181-0.183, inner and outer balance≈1.000, leak=0.000, and support_fraction=0.000. Even the deepest staircase runs look identical to the shallower ones.
+  Conclusion: REJECTED. The hypothesized centered thermohaline staircase bridge is not appearing in this GPU scan. The family already shows a coherent ceiling-pinned null mode rather than any finite-threshold onset.
