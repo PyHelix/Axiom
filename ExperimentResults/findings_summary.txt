@@ -1,100 +1,27 @@
-EXPERIMENT: exp_exp_paranode_kvdomain_sequestration_threshold (3184 total results available, 450 sampled, 32 hosts)
-  Discovered: 2026-04-04 00:00 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (gamma≈0.29364, bw≈6.10e-7, N=2048), 1638400.0 (gamma≈0.29427, bw≈6.10e-7, N=2048), 1638400.0 (gamma≈0.29260, bw≈6.10e-7, N=2048)
-  Results: the 2048-site frontier is still pinned near gamma_c≈0.292-0.305 with bridge mass about 0.894-0.908, core mass about 0.269-0.277, balance about 0.79-0.99, and leak repeatedly at 0.170-0.182. The best bw≈6.10e-7 files still split between barely sub-threshold balance/leak cases and cleaner supported cases instead of collapsing onto one stable branch.
-  Conclusion: PRELIMINARY. Stronger paranodal barrier coupling still looks like a real finite sequestration onset into a centered paranode-node-paranode corridor. But the deepest frontier remains parked on the balance and leak cutoffs, so the threshold band is present without yet being numerically settled.
-EXPERIMENT: exp_exp_sphagnum_hyalocyte_chlorocyst_bridge_threshold (1216 total results available, 200 sampled, 20 hosts)
-  Discovered: 2026-04-04 05:25 UTC | Last updated: 2026-04-04
-  Top fitness: 13107099.99 (kappa≈0.05131, bw≈7.63e-8, N=2048), 13107080.12 (kappa≈0.05126, bw≈7.63e-8, N=2048), 13107074.77 (kappa≈0.05067, bw≈7.63e-8, N=2048)
-  Results: across the ranked 200, the deepest 2048-site frontier is pinned almost entirely at kappa_c≈0.0500-0.0542, with bridge mass about 0.898-0.902, core mass about 0.295-0.299, balance usually around 0.81-0.99, and leak about 0.098-0.102. Lower-fitness files drift upward into kappa≈0.066-0.116 with even cleaner bridge signatures rather than exposing a distinct nonzero onset.
-  Conclusion: REJECTED. The centered chlorocyst corridor is already present at the lower edge of the scanned coupling range, so this family does not show a convincing finite bilateral threshold above zero. Strong bridge localization exists, but the best-resolved frontier is floor-pinned instead of revealing the hypothesized delayed relocalization.
-EXPERIMENT: exp_exp_mussel_byssus_cuticle_plaque_bridge_threshold (1948 total results available, 300 sampled, 26 hosts)
-  Discovered: 2026-04-04 05:25 UTC | Last updated: 2026-04-04
-  Top fitness: 6553600.0 (tau≈0.09734, bw≈1.53e-7, N=2048), 6553600.0 (tau≈0.09747, bw≈1.53e-7, N=2048), 6553600.0 (tau≈0.09726, bw≈1.53e-7, N=2048)
-  Results: the 2048-site frontier stays split between a low branch around tau≈0.091-0.102 that repeatedly flips support at bridge≈0.876-0.883 and leak≈0.117-0.124, and a stronger branch around tau≈0.105-0.130 with cleaner bridge≈0.884-0.897 and leak≈0.103-0.116. Rare stronger files out near tau≈0.195 stay fully supported, so the centered plaque corridor is real but not yet tied to one converged onset branch.
-  Conclusion: PRELIMINARY. Bilateral cuticle-thread reinforcement still appears to produce a finite relocalization band into a centered plaque load-transfer corridor rather than one-flank trapping. But the deepest frontier remains branch-split between mixed-support low-tau files and cleaner higher-tau files, so the threshold is not yet cleanly converged.
-EXPERIMENT: exp_exp_kelp_holdfast_haptera_bridge_threshold (1330 total results available, 300 sampled, 24 hosts)
-  Discovered: 2026-04-04 05:25 UTC | Last updated: 2026-04-04
-  Top fitness: 6553600.0 (kappa≈0.28938, bw≈1.53e-7, N=2048), 6553600.0 (kappa≈0.12513, bw≈1.53e-7, N=2048), 6553600.0 (kappa≈0.12555, bw≈1.53e-7, N=2048)
-  Results: the frontier keeps three visible bands: an unsupported lower tranche near kappa≈0.097-0.114, a mixed-support main frontier near kappa≈0.124-0.126 with leak right on 0.119-0.121, and a cleaner higher branch around kappa≈0.132-0.165 with bridge≈0.884-0.898 and leak≈0.102-0.116. The centered holdfast corridor is robust once coupling rises, but the top-ranked edge still has both supported and unsupported files at essentially the same bracket width.
-  Conclusion: PRELIMINARY. Stronger bilateral haptera reinforcement still appears to open a finite centered holdfast corridor rather than leaving the dominant mode stranded on one outer flank. But the deepest frontier remains branch-split, with a leak-limited low branch and a cleaner higher branch, so the onset is not yet converged.
-EXPERIMENT: exp_exp_cuttlebone_septa_pillar_bridge_threshold (735 total results available, 250 sampled, 23 hosts)
-  Discovered: 2026-04-04 00:00 UTC | Last updated: 2026-04-04
-  Top fitness: 6553600.0 (eta≈0.17094, bw≈1.53e-7, N=2048), 6553600.0 (eta≈0.11309, bw≈1.53e-7, N=2048), 6553600.0 (eta≈0.11318, bw≈1.53e-7, N=2048)
-  Results: the deepest 2048-site frontier is dominated by a low branch near eta≈0.113-0.120 where leak sits right at 0.115-0.121 while support flips with balance, plus a stronger branch around eta≈0.126-0.187 carrying cleaner bridge≈0.890-0.925 and leak≈0.075-0.110. The stronger branch shows a robust centered pillar corridor once coupling rises above the floor branch.
-  Conclusion: PRELIMINARY. Bilateral septa-to-pillar reinforcement appears to create a real finite relocalization band into a centered cuttlebone pillar corridor rather than one-wall localization. But the deepest frontier is still split between a cutoff-hugging low-eta branch and a cleaner higher-eta branch, so the threshold remains open rather than converged.
-EXPERIMENT: exp_exp_hydrothermal_vent_sulfide_chimney_bridge_threshold (322 total results available, 300 sampled, 19 hosts)
-  Discovered: 2026-04-04 10:25 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (chi≈0.13805, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.14132, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.13816, bw≈6.10e-7, N=2048)
-  Results: across the ranked 300, the frontier stays tightly concentrated near chi_c≈0.138-0.143 with bridge mass about 0.910-0.913, core mass about 0.188-0.197, balance usually about 0.80-0.97, and leak only about 0.030-0.033. Even the lower-fitness tranche holds the same narrow nonzero band instead of drifting toward zero coupling.
-  Conclusion: CONFIRMED. The vent-chimney surrogate now shows a real finite sulfide-wall coupling threshold into a centered wall-conduit-wall mode rather than one-flank localization. The threshold location is narrow, stable, and clearly nonzero across the full 300-result pass, so the main scientific question looks settled.
-EXPERIMENT: exp_exp_skyrmion_domainwall_core_bridge_threshold (323 total results available, 300 sampled, 20 hosts)
-  Discovered: 2026-04-04 10:25 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (lambda≈0.02961, bw≈6.10e-7, N=2048), 1638400.0 (lambda≈0.03445, bw≈6.10e-7, N=2048), 1638400.0 (lambda≈0.04062, bw≈6.10e-7, N=1024)
-  Results: across the ranked 300, the deepest and lower-fitness slices both keep the frontier near lambda_c≈0.030-0.035 with bridge mass about 0.925-0.927, core mass about 0.198-0.205, balance usually about 0.81-0.96, and leak about 0.053-0.055. A few cleaner higher-lambda files around 0.06 and 0.15 appear deeper in the pull, but they do not move the main frontier off this very low-coupling band.
-  Conclusion: PRELIMINARY. The skyrmion wall-core family looks consistent with a very small but nonzero relocalization threshold into a centered wall-skyrmion-wall corridor. But the onset sits so close to zero and still shows mixed disorder-averaged support that it is not yet safe to call the threshold fully converged.
-EXPERIMENT: exp_exp_basketcell_pinceau_ais_bridge_threshold (4475 total results available, 150 sampled, 48 hosts)
-  Discovered: 2026-04-04 12:34 UTC | Last updated: 2026-04-04
-  Top fitness: 13107096.7 (gamma≈0.05010, bw≈7.63e-8, N=256), 13107088.4 (gamma≈0.05188, bw≈7.63e-8, N=256), 13107045.5 (gamma≈0.05316, bw≈7.63e-8, N=256)
-  Results: across the ranked 150, the deepest frontier stays pinned at gamma≈0.050-0.055 with bridge mass about 0.916-0.922, core mass about 0.300-0.307, balance usually about 0.76-0.97, and leak about 0.078-0.084. Support keeps flipping between 0.0 and 1.0 at essentially the minimum scanned coupling, while lower-fitness files remain in the same floor-level band instead of revealing any delayed nonzero onset.
-  Conclusion: REJECTED. The centered AIS gate is already present at the lower edge of the scanned basket-to-pinceau coupling range, so this family does not show a convincing finite threshold above zero. Strong bridge localization exists, but the best-resolved frontier is floor-pinned rather than thresholded.
-EXPERIMENT: exp_exp_conifer_needle_transfusion_bridge_threshold (4434 total results available, 150 sampled, 47 hosts)
-  Discovered: 2026-04-04 12:34 UTC | Last updated: 2026-04-04
-  Top fitness: 52428698.9 (eta≈0.05281, bw≈1.91e-8, N=128), 52428693.1 (eta≈0.05386, bw≈1.91e-8, N=128), 52428610.0 (eta≈0.05064, bw≈1.91e-8, N=128)
-  Results: through the ranked 150, the entire frontier sits at eta≈0.050-0.055 with bridge mass about 0.910-0.919, core mass about 0.298-0.306, balance about 0.78-0.99, and leak about 0.081-0.090. The support bit still flips at these floor-level eta values, and later files stay in the same narrow low-coupling band rather than moving to a clearly nonzero onset.
-  Conclusion: REJECTED. The centered transfusion corridor is already alive at the lower edge of the scanned coupling interval, so this family does not support a finite endodermis-transfusion threshold above zero. The experiment shows robust centered transport, but not the hypothesized delayed onset.
-EXPERIMENT: exp_exp_glandular_trichome_cuticle_pocket_bridge_threshold (4410 total results available, 150 sampled, 49 hosts)
-  Discovered: 2026-04-04 12:34 UTC | Last updated: 2026-04-04
-  Top fitness: 6553600.0 (kappa≈0.13120, bw≈1.53e-7, N=256), 6553600.0 (kappa≈0.13066, bw≈1.53e-7, N=256), 6553600.0 (kappa≈0.13901, bw≈1.53e-7, N=256)
-  Results: across the ranked 150, the frontier stays in a clearly nonzero band around kappa≈0.124-0.155 with bridge mass about 0.914-0.933, core mass about 0.325-0.346, balance about 0.69-0.98, and leak only about 0.051-0.070. Even lower-ranked files remain in the same nonzero band with strong bridge capture and low leakage rather than drifting toward zero coupling.
-  Conclusion: CONFIRMED. Bilateral secretory-disc reinforcement produces a real finite threshold into a centered subcuticular storage-pocket bridge rather than one-flank cuticle loading or diffuse leakage. The threshold band is stably nonzero and the centered pocket mode remains strong across the full 150-sample pass.
-EXPERIMENT: exp_exp_magnetosome_mamk_midcell_bridge_threshold (3837 total results available, 150 sampled, 40 hosts)
-  Discovered: 2026-04-04 12:34 UTC | Last updated: 2026-04-04
-  Top fitness: 819200.0 (lambda≈0.09940, bw≈1.22e-6, N=2048), 819200.0 (lambda≈0.09623, bw≈1.22e-6, N=2048), 819200.0 (lambda≈0.13771, bw≈1.22e-6, N=2048)
-  Results: the ranked 150 show a real centered midcell corridor over a nonzero band roughly lambda≈0.07-0.17, with bridge mass about 0.895-0.953, core mass about 0.289-0.361, and leak about 0.047-0.104. But the deepest 2048-site edge is still branch-split between lower-lambda unsupported files around 0.09-0.10 and cleaner supported files around 0.14-0.17, with the same pattern recurring deeper in the sample.
-  Conclusion: PRELIMINARY. Stronger MamK-like chain coupling appears to produce a finite relocalization band into a centered midcell magnetosome corridor rather than persistent pole-skewed collapse. But the deepest frontier is still split between a mixed-support low-lambda branch and a cleaner higher-lambda branch, so the onset is not yet numerically converged.
-EXPERIMENT: exp_exp_kupffer_vesicle_rooffloor_lumen_bridge_threshold (1445 total results available, 167 sampled, 32 hosts)
-  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (chi≈0.43000, bw≈6.10e-7, N=1024), 1638400.0 (chi≈0.41002, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.20522, bw≈6.10e-7, N=1024)
-  Results: the extra high-fitness pass leaves the same split structure intact: a low branch near chi≈0.031-0.057 with bridge≈0.869-0.882, core≈0.181-0.203, and leak≈0.074-0.086 still hugs the support cutoffs, while cleaner higher branches near chi≈0.205-0.430 carry bridge≈0.926-0.946, core≈0.289-0.363, and leak≈0.014-0.033. The top-up therefore strengthened the nonzero corridor picture without collapsing the frontier onto a single onset.
-  Conclusion: PRELIMINARY. Bilateral roof-floor ciliary coupling still appears to open a finite lumen-centered bridge rather than leaving the dominant mode surface-pinned. But the best-resolved frontier remains branch-split between cutoff-hugging low-chi files and cleaner higher-chi files, so the onset band is present without being numerically settled.
-EXPERIMENT: exp_exp_mitochondrial_nucleoid_crista_bridge_threshold (815 total results available, 150 sampled, 29 hosts)
-  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (mu≈0.06021, bw≈6.10e-7, N=1024), 1638400.0 (mu≈0.05500, bw≈6.10e-7, N=1024), 1638400.0 (mu≈0.05500, bw≈6.10e-7, N=1024)
-  Results: the sampled frontier keeps a centered crista-nucleoid-crista mode over a nonzero band, with many high-fitness files concentrated near mu≈0.055-0.060 at N=1024 and a deeper 2048-site tranche still supporting corridor capture down near mu≈0.036-0.048. Bridge mass stays about 0.926-0.934 with core≈0.189-0.206 and leak≈0.031-0.038 on the main branch, while occasional higher-mu files around 0.16-0.23 are cleaner but do not define the onset.
-  Conclusion: PRELIMINARY. Stronger bilateral crista-rim coupling looks sufficient to produce a finite nucleoid-facing corridor instead of persistent outer-membrane skew. But the deepest resolved files still mix supported and unsupported cases across the low-mu frontier, so the threshold is real-looking but not yet converged.
-EXPERIMENT: exp_exp_myelin_inneroutertongue_bridge_threshold (866 total results available, 150 sampled, 27 hosts)
-  Discovered: 2026-04-04 15:05 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (gamma≈0.07723, bw≈6.10e-7, N=1024), 1638400.0 (gamma≈0.07805, bw≈6.10e-7, N=1024), 1638400.0 (gamma≈0.07996, bw≈6.10e-7, N=1024)
-  Results: across the ranked 150, the frontier is tightly pinned near gamma≈0.069-0.078 with bridge mass about 0.909-0.914, core about 0.177-0.189, and leak about 0.041-0.045. The centered tongue-channel corridor persists through both the 1024-site and 2048-site slices, but the deepest files still alternate between supported and unsupported classifications at essentially the same narrow gamma band.
-  Conclusion: PRELIMINARY. The inner-tongue/channel/outer-tongue family is consistent with a small but clearly nonzero relocalization threshold into a centered paranodal corridor. However, the best frontier is still cutoff-hugging and support flips at nearly identical gamma values, so it is not yet safe to call the threshold settled.
-EXPERIMENT: exp_exp_foodweb_seedbank_predator_interference_threshold (864 total results available, 300 sampled, 28 hosts)
-  Discovered: 2026-04-04 17:30 UTC | Last updated: 2026-04-04
-  Top fitness: 6524085.1 (rho≈5.99999992, bw≈1.53e-7, N=1024), 6509947.4 (rho≈5.99999992, bw≈1.54e-7, N=1024), 6498174.3 (rho≈5.99999992, bw≈1.54e-7, N=1024)
-  Results: across the ranked 300, the frontier is pinned against the scan ceiling at rho≈5.99-6.00 from the 1024-site tranche through the deepest 2048-site files, while stable_fraction stays at 0.0 and the leading real part remains positive at about 0.0043-0.0091. Mean interference flux stays tiny at about 4.4e-4 and the mean spectral radius stays near 6.68, so stronger predator interference never actually restabilizes the Jacobian within the searched range.
-  Conclusion: REJECTED. The seed-bank-buffered food-web family does not show a finite rescue threshold inside the scanned predator-interference window, because even the strongest tested interference leaves the leading eigenvalue unstable. If stabilization exists at all, it lies beyond the current upper bound rather than emerging as the hypothesized accessible threshold.
-EXPERIMENT: exp_exp_mangrove_aerenchyma_rhizosphere_bridge_threshold (1318 total results available, 258 sampled, 31 hosts)
-  Discovered: 2026-04-04 17:36 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (chi≈0.08391, bw≈6.10e-7, N=1024), 1638400.0 (chi≈0.08422, bw≈6.10e-7, N=1024), 1638400.0 (chi≈0.08391, bw≈6.10e-7, N=1024)
-  Results: across the ranked 258, the deepest frontier stays in a clearly nonzero band with 2048-site files concentrated around chi≈0.064-0.069 and 1024-site confirmations around chi≈0.084-0.094. Bridge mass stays about 0.935-0.939, core mass about 0.178-0.195, balance about 0.80-0.98, and leak only about 0.030-0.036 instead of drifting toward zero coupling.
-  Conclusion: CONFIRMED. Stronger bilateral aerenchyma coupling produces a real finite threshold into a centered oxidized rhizosphere corridor rather than one-flank oxygen trapping. The nonzero onset band stays stable and low-leak across the full 258-file pass, so this family looks scientifically settled.
-EXPERIMENT: exp_exp_subglacial_till_channel_bridge_threshold (1252 total results available, 258 sampled, 31 hosts)
-  Discovered: 2026-04-04 17:36 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (chi≈0.13613, bw≈6.10e-7, N=1024), 1638400.0 (chi≈0.12923, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.13619, bw≈6.10e-7, N=1024)
-  Results: the ranked 258 keep a narrow nonzero corridor with the 2048-site frontier clustered near chi≈0.126-0.133 and 1024-site confirmations near chi≈0.134-0.146. Bridge mass stays about 0.921-0.925, core mass about 0.187-0.197, balance about 0.81-0.97, and leak only about 0.021-0.025 across both the top and lower-fitness slices.
-  Conclusion: CONFIRMED. Stronger bilateral till-channel coupling produces a real finite threshold into a centered subglacial drainage corridor rather than one-flank distributed-bed localization. The onset band is tight, nonzero, and consistently low-leak across the full 258-sample read, so the main hypothesis looks settled.
-EXPERIMENT: exp_exp_tendon_interfascicular_sliding_bridge_threshold (9775 total results available, 200 sampled, 52 hosts)
-  Discovered: 2026-04-04 22:20 UTC | Last updated: 2026-04-04
-  Top fitness: 13107200.0 (xi≈0.14074, bw≈7.63e-8, N=256), 6553600.0 (xi≈0.13108, bw≈1.53e-7, N=256), 6553600.0 (xi≈0.16712, bw≈1.53e-7, N=256)
-  Results: across the ranked 200, the 256-site frontier stays in a nonzero band around xi≈0.126-0.168 with bridge mass about 0.872-0.906, core mass about 0.281-0.320, IFM balance about 0.69-0.99, and fascicle leak about 0.061-0.098. Support keeps flipping between 0.0 and 1.0 at essentially the same narrow bracket widths, with weaker low-balance branches and cleaner high-balance branches both present throughout the pull.
-  Conclusion: PRELIMINARY. Stronger interfascicular reinforcement still looks capable of opening a centered sliding corridor rather than leaving the mode trapped on one fascicle. But the deepest frontier remains support-split inside the same low-xi band, so the threshold is not yet numerically converged.
-EXPERIMENT: exp_exp_permafrost_icewedge_trough_bridge_threshold (1314 total results available, 200 sampled, 29 hosts)
-  Discovered: 2026-04-04 22:20 UTC | Last updated: 2026-04-04
-  Top fitness: 1638400.0 (chi≈0.08630, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.08701, bw≈6.10e-7, N=2048), 1638400.0 (chi≈0.08441, bw≈6.10e-7, N=2048)
-  Results: the ranked 200 keep the deepest 2048-site frontier in a clearly nonzero band around chi≈0.084-0.090, with 1024-site confirmations around chi≈0.089-0.094, bridge mass about 0.911-0.920, core mass about 0.177-0.194, balance about 0.74-0.99, and leak about 0.030-0.038. Support fractions still flip between 0.0, 0.5, and 1.0 at nearly identical chi values, so the centered thaw-trough mode is real but the onset edge is still branch-split.
-  Conclusion: PRELIMINARY. Bilateral ice-wedge shoulder coupling appears to produce a finite threshold into a centered thaw-trough drainage corridor rather than one-shoulder localization. But the best-resolved frontier still alternates between unsupported and supported disorder averages in the same narrow chi band, so the threshold is present without yet being settled.
-EXPERIMENT: exp_exp_phage_lysogen_patch_stability_threshold (1326 total results available, 200 sampled, 29 hosts)
-  Discovered: 2026-04-04 22:20 UTC | Last updated: 2026-04-04
-  Top fitness: 2184522.5 (eta≈5.00000, bw≈4.58e-7, N=1024), 2184522.5 (eta≈5.00000, bw≈4.58e-7, N=1024), 2184522.5 (eta≈5.00000, bw≈4.58e-7, N=1024)
-  Results: across the ranked 200, the frontier is pinned at the scan ceiling eta≈5.0 while support stays at 0.0 and the leading real part remains strongly positive at about 5.06-5.24. Bridge mass is high at about 0.925-0.969 with tiny leak about 0.0004-0.029, but core mass stays only about 0.040-0.054 and the Jacobian never enters the stable regime anywhere in the sampled tail.
-  Conclusion: REJECTED. Stronger bilateral refuge exchange does not produce the hypothesized finite stabilization threshold inside the scanned range, because even the deepest files at the ceiling remain decisively unstable. The family supports centered refuge loading, but not a transition into stable lysogen-centered coexistence.
+EXPERIMENT: exp_exp_peroxisome_mitochondria_contact_bridge_threshold (362 total results available, 290 sampled, 24 hosts)
+  Discovered: 2026-04-05 00:45 UTC
+  Last updated: 2026-04-05
+  Top fitness: 1638400.0 (bw=0.00000, N=1024), 1638400.0 (bw=0.00000, N=1024), 1638400.0 (bw=0.00000, N=2048)
+  Results: The ranked frontier stays tightly clustered at rho_c≈0.080-0.082 with bridge_mass≈0.840-0.841, core_mass≈0.225-0.230, balance usually ≈0.88-0.98, and leak≈0.121-0.122. A few files dip to balance≈0.73-0.80, but the bridge metrics remain above target and the threshold band does not wander with depth.
+  Conclusion: CONFIRMED. Peroxisome-mitochondria coupling shows a real finite bridge threshold near rho_c≈0.081 rather than a floor-pinned artifact. Across the ranked 290, the centered bridge remains strong and low-leak at the deepest N, with only modest balance wobble around an otherwise stable nonzero corridor.
+
+EXPERIMENT: exp_exp_virophage_patch_stability_threshold (373 total results available, 289 sampled, 24 hosts)
+  Discovered: 2026-04-05 00:45 UTC
+  Last updated: 2026-04-05
+  Top fitness: 3276776.6 (bw=0.00000, N=1024), 3276776.6 (bw=0.00000, N=1024), 3276776.6 (bw=0.00000, N=1024)
+  Results: Every ranked file is pinned at eta_c≈4.800 with stable_fraction≈0.180, support_fraction=0.000, bridge_mass=0.000, core_mass≈0.95-0.96, balance≈0.06, leak≈0.85-0.99, and positive max_real_part≈0.0010-0.0057. Even the 2048-site files only move to eta_c≈4.79996 with the same zero-bridge, high-leak pattern.
+  Conclusion: REJECTED. The hypothesized virophage-mediated stabilization bridge does not appear within the scanned range. The frontier is ceiling-pinned and remains trapped in a leaky core-dominated mode with zero centered bridge support, so stronger bilateral coupling is not rescuing the unstable state in this surrogate.
+
+EXPERIMENT: exp_exp_mycorrhiza_hartig_net_bridge_threshold_gpu (11 total results available, 11 sampled, 7 hosts)
+  Discovered: 2026-04-05 00:45 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512)
+  Results: All 11 files sit at kappa_c≈4.600 with bridge_mass≈0.125, core_mass≈0.56, inner_balance≈0.18, outer_balance=1.000, leak≈0.248-0.250, and support_fraction only ≈0.162-0.166. The mode is still heavily one-sided, with left-inner mass≈0.64 and right-inner mass≈0.19.
+  Conclusion: SKIP. The first 11 GPU results all point against the hypothesized centered Hartig-net bridge, but the sample is still too small to retire the family confidently. For now the experiment is effectively ceiling-pinned and strongly asymmetric, so it needs more runs before a hard accept/reject call.
+
+EXPERIMENT: exp_exp_osteocyte_canaliculi_lacuna_bridge_threshold_gpu (10 total results available, 10 sampled, 5 hosts)
+  Discovered: 2026-04-05 00:45 UTC
+  Last updated: 2026-04-05
+  Top fitness: 13107100.0 (bw=0.00000, N=547), 13107100.0 (bw=0.00000, N=512), 13107100.0 (bw=0.00000, N=774)
+  Results: The first 10 files are likewise pinned at kappa_c≈4.600 with bridge_mass≈0.120, core_mass≈0.563-0.566, inner_balance≈0.182-0.183, outer_balance=1.000, leak≈0.248-0.249, and support_fraction only ≈0.171-0.173. The dominant mass remains left-heavy rather than centered in the lacuna.
+  Conclusion: SKIP. This family has only reached 10 completed results, and all of them still look like a ceiling-pinned asymmetric mode rather than a centered lacuna bridge. The early signal is unfavorable, but the dataset is still too thin to classify as a firm rejection.
