@@ -1,59 +1,17 @@
-EXPERIMENT: exp_exp_ice_shelf_suture_melange_bridge_threshold (104 total results available, 104 sampled, 16 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 1638400.0 (bw=0.00000061, N=1024), 1638400.0 (bw=0.00000061, N=2048), 1638400.0 (bw=0.00000061, N=2048). Results: The ranked frontier stays in a narrow band near chi_c≈0.247 with bridge_mass≈0.864-0.865, core_mass≈0.477, balance usually ≈0.86-0.97, and leak right on the ≈0.110 cutoff; support splits across 0.00, 0.50, and 1.00 rather than locking cleanly.
-Conclusion: PRELIMINARY. Shelf-to-suture coupling does appear to create a real centered buttressing corridor rather than a one-margin-trapped null. But the deepest 2048-site frontier is still branch-split at essentially the same chi, so the threshold is promising rather than settled.
+EXPERIMENT: exp_exp_chromatin_lamina_nucleolus_bridge_threshold (144 total results available, 144 sampled, 23 hosts)
+  Discovered: 2026-04-06 00:34 UTC | Last updated: 2026-04-06
+  Top fitness: 25600.0 (bw=0.00003906, N=2048, chi=3.090020), 25600.0 (bw=0.00003906, N=2048, chi=3.052520), 25600.0 (bw=0.00003906, N=2048, chi=3.002520)
+  Results: The high-fitness 2048-site frontier is uniformly support=1 across the full same-day pull, with bridge_mass holding around 0.458-0.580, lamina_leak staying low at about 0.012-0.055, lamina_balance around 0.945-0.988, and LAD balance typically around 0.98-1.00. Only a couple of coarse N=64, fit=80 exploratory files fall off the supported branch; the deep bracketed runs stay cleanly centered and host-diverse.
+  Conclusion: CONFIRMED. Stronger bilateral LAD-to-nucleolus coupling does produce a robust centered lamina/LAD/nucleolus/LAD/lamina bridge rather than leaving the soft mode edge-pinned. The deepest same-day frontier is no longer branch-split or leak-limited, so this family has crossed from promising to settled.
 
-EXPERIMENT: exp_exp_trichodesmium_mucilage_gasvesicle_bridge_threshold (88 total results available, 88 sampled, 14 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 1638400.0 (bw=0.00000061, N=2048), 1638400.0 (bw=0.00000061, N=2048), 1638400.0 (bw=0.00000061, N=2048). Results: The full same-day pull sits near rho_c≈0.1303-0.1305 with bridge_mass≈1.0075-1.0078, core_mass≈0.5875-0.5877, and balance≈0.90-0.99, but leak stays pinned right at ≈0.1100-0.1101 so support toggles between 0.00 and 0.50.
-Conclusion: PRELIMINARY. The colony-core bridge itself is strong and clearly nonzero, so this family is not failing by under-bridging. The unresolved issue is the leak boundary: the frontier is sitting directly on the acceptance cutoff, which keeps the deepest runs from converging to a single supported branch.
+EXPERIMENT: exp_exp_river_hyporheic_biofilm_bridge_threshold (144 total results available, 144 sampled, 21 hosts)
+  Discovered: 2026-04-06 00:34 UTC | Last updated: 2026-04-06
+  Top fitness: 25600.0 (bw=0.00003906, N=2048, theta=3.177520), 25600.0 (bw=0.00003906, N=2048, theta=2.800645), 25600.0 (bw=0.00003906, N=2048, theta=2.765801)
+  Results: The ranked 2048-site results are consistently support=1 throughout the same-day sample, with bridge_mass about 0.420-0.561, channel_leak only about 0.012-0.068, channel_balance around 0.932-0.988, and biofilm balance usually around 0.98-1.00. A lone coarse N=64 fit=75.3 file is unsupportive, but the deep refined runs from many hosts stay centered, low-leak, and highly symmetric.
+  Conclusion: CONFIRMED. Bilateral biofilm-hyporheic coupling clearly captures the soft transport mode into a balanced channel/biofilm/core/biofilm/channel bridge at finite strength. The deepest same-day frontier is stable instead of sitting on a support cutoff, so the positive threshold now looks settled.
 
-EXPERIMENT: exp_exp_cement_csh_gel_capillary_bridge_threshold_gpu (29 total results available, 29 sampled, 9 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=547), 13107100.0 (bw=0.00000008, N=547), 13107100.0 (bw=0.00000008, N=512). Results: Every sampled GPU file is ceiling-pinned at kappa_c≈1.100 with bridge_mass≈0.625-0.627 against a 0.85 target, core_mass≈0.223-0.225 against a 0.27 target, near-perfect inner and outer balance, zero leak, and support_fraction=0.00 throughout.
-Conclusion: REJECTED. Stronger bilateral C-S-H coupling does not create the proposed centered capillary-neck corridor within the scanned GPU range. The family is a clean symmetric null that remains far below both bridge and core thresholds.
-
-EXPERIMENT: exp_exp_biofilm_channel_eps_persister_bridge_threshold_gpu (28 total results available, 28 sampled, 9 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=512), 13107100.0 (bw=0.00000008, N=512), 13107100.0 (bw=0.00000008, N=547). Results: The full ranked set is pinned at kappa_c≈1.200 with bridge_mass≈0.625-0.627, core_mass≈0.222-0.225, inner and outer balance essentially 1.000, zero leak, and support_fraction fixed at 0.00 in every file.
-Conclusion: REJECTED. Increased EPS coupling does not capture the soft mode into a centered nutrient-channel bridge in this scan. The biofilm family converges to another highly symmetric but decisively sub-threshold null.
-
-EXPERIMENT: exp_exp_er_ermes_mitochondrial_bridge_threshold_gpu (28 total results available, 28 sampled, 10 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=547), 13107100.0 (bw=0.00000008, N=512), 13107100.0 (bw=0.00000008, N=547). Results: Across all sampled files, the frontier is ceiling-pinned at kappa_c≈1.100 with bridge_mass≈0.624-0.626, core_mass≈0.222-0.225, almost exact bilateral balance, zero leak, and support_fraction=0.00.
-Conclusion: REJECTED. Stronger ERMES-like tethering does not produce the proposed centered mitochondria-contact corridor within the current GPU bracket. The family is a stable symmetric null rather than an emerging threshold.
-
-EXPERIMENT: exp_exp_cryovolcanic_dike_brine_sill_bridge_threshold_gpu (28 total results available, 28 sampled, 12 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=547), 13107100.0 (bw=0.00000008, N=546), 13107100.0 (bw=0.00000008, N=512). Results: The GPU frontier is uniformly ceiling-pinned at kappa_c≈1.400 with bridge_mass≈0.6571-0.6574 against a 0.84 target, core_mass≈0.232-0.235 against a 0.25 target, perfect symmetry, zero leak, and support_fraction=0.00 throughout.
-Conclusion: REJECTED. Stronger warm-fracture coupling does not capture the mode into a centered brine-sill bridge within the scanned range. The results are consistent and clean, but they remain well below onset.
-
-EXPERIMENT: exp_exp_asteroid_rubble_regolith_sinter_bridge_threshold_gpu (20 total results available, 20 sampled, 9 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=774), 13107100.0 (bw=0.00000008, N=512), 13107100.0 (bw=0.00000008, N=547). Results: All sampled files sit at kappa_c≈1.600 with bridge_mass≈0.615-0.617 against a 0.84 target, core_mass≈0.212-0.215 against a 0.24 target, essentially perfect bilateral balance, zero leak, and support_fraction=0.00.
-Conclusion: REJECTED. Stronger regolith sintering does not produce the proposed centered neck corridor in the rubble-pile surrogate. This family is another ceiling-pinned symmetric null with no sign of approaching threshold.
-
-EXPERIMENT: exp_exp_pollen_tube_spitzenkorper_vesicle_bridge_threshold_gpu (19 total results available, 19 sampled, 9 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=512), 13107100.0 (bw=0.00000008, N=547), 13107100.0 (bw=0.00000008, N=512). Results: The available GPU files are ceiling-pinned at kappa_c≈0.950 with bridge_mass≈0.583-0.586 against a 0.87 target, core_mass≈0.202-0.203 against a 0.33 target, near-perfect inner and outer balance, zero leak, and support_fraction=0.00.
-Conclusion: REJECTED. Stronger actin-fringe coupling does not generate the proposed centered Spitzenkoerper corridor in this scan. The family remains sharply symmetric but far below the bridge and core requirements.
-
-EXPERIMENT: exp_exp_cardiomyocyte_costamere_zdisc_bridge_threshold_gpu (10 total results available, 10 sampled, 8 hosts)
-Discovered: 2026-04-05 22:16 UTC | Last updated: 2026-04-05
-Top fitness: 13107100.0 (bw=0.00000008, N=546), 13107100.0 (bw=0.00000008, N=774), 13107100.0 (bw=0.00000008, N=547). Results: All available files are pinned at kappa_c≈1.000 with bridge_mass≈0.583-0.588 against a 0.86 target, core_mass≈0.202-0.203 against a 0.29 target, inner and outer balance≈1.000, zero leak, and support_fraction=0.00 in every run.
-Conclusion: REJECTED. Even this early sample already shows a coherent symmetric null rather than a partly formed centered Z-disc bridge. The family is sitting too far below the required bridge and core masses to justify a positive reading.
-
-EXPERIMENT: exp_exp_roothair_mucilage_rhizosphere_bridge_threshold (4783 total results available, 83 sampled, 46 hosts)
-Discovered: 2026-04-05 10:18 UTC | Last updated: 2026-04-05
-Top fitness: 3647220.9 (bw=0.00000027, N=256), 3647220.9 (bw=0.00000027, N=256), 3647220.9 (bw=0.00000027, N=256). Results: The ranked pull stays bridge-positive from rho≈0.220-0.223 at 256 sites through rho≈0.228 at 1024 sites, with bridge_mass≈0.8468-0.8529, core_mass≈0.268-0.276, balance usually ≈0.85-0.99, and leak≈0.0848-0.0889. But the extra 2048-site check still splits across support=0.00 and 0.50 near rho≈0.2215-0.2217 instead of locking to the supported branch.
-Conclusion: PRELIMINARY. The centered mucilage corridor remains real and stable across depth, so the positive bridge hypothesis still looks correct. The hold-up is the deepest 2048 frontier, which has not yet converged to a single support class.
-
-EXPERIMENT: exp_exp_phloem_companion_sieveplate_bridge_threshold (2664 total results available, 83 sampled, 42 hosts)
-Discovered: 2026-04-05 12:17 UTC | Last updated: 2026-04-05
-Top fitness: 3813003.6 (bw=0.00000026, N=256), 3813003.6 (bw=0.00000026, N=256), 3813003.6 (bw=0.00000026, N=256). Results: The frontier remains strongly bridge-positive from rho≈0.145-0.149 at 256 sites into rho≈0.140-0.141 at 1024-2048 sites, with bridge_mass≈1.171-1.186, core_mass≈0.363-0.369, and balance usually ≈0.90-0.99. The instability is entirely at the leak/support edge: leak sits at ≈0.1198-0.1201 and the deepest 2048 slice still flips between support=0.00 and 1.00.
-Conclusion: PRELIMINARY. Bilateral companion-cell coupling still supports a real centered sieve-plate corridor at a finite threshold. But the onset band is still sitting directly on the leak cutoff at 2048 sites, so the family has not yet earned a clean confirmed verdict.
-
-EXPERIMENT: exp_exp_chondrule_rim_matrix_bridge_threshold (823 total results available, 80 sampled, 35 hosts)
-Discovered: 2026-04-05 15:05 UTC | Last updated: 2026-04-05
-Top fitness: 3495253.3 (bw=0.00000029, N=256), 3495253.3 (bw=0.00000029, N=256), 3495253.3 (bw=0.00000029, N=256). Results: The family stays in a tight nonzero band from rho≈0.310-0.313 at 256 sites to rho≈0.304-0.305 at 1024 sites, with bridge_mass≈0.8801-0.8822, core_mass≈0.439-0.443, balance usually ≈0.87-0.96, and leak≈0.1187-0.1200. The 2048-site tail still splits between support=0.00 and 0.50 near rho≈0.3029-0.3030 rather than locking fully positive.
-Conclusion: PRELIMINARY. The rim/matrix bridge remains real and nonzero across the deeper pull, so the family still reads as a genuine positive candidate rather than a null. But the sharpest 2048 frontier is still branch-split at essentially one threshold value, which keeps it short of confirmation.
+EXPERIMENT: exp_studentt_modular_softmode_delocalization_threshold_gpu (43 total results available, 43 sampled, 9 hosts)
+  Discovered: 2026-04-06 00:34 UTC | Last updated: 2026-04-06
+  Top fitness: 6387.5 (bw=0.00015656, N=768, gamma=0.050078), 6387.5 (bw=0.00015656, N=768, gamma=0.050078), 6387.5 (bw=0.00015656, N=768, gamma=0.050078)
+  Results: Every sampled GPU result sits at the floor bracket near gamma_c≈0.050078 with delocalized_soft_mode=1, weak_module_mass≈0.256-0.258 well below the 0.57 threshold, bridge_fraction≈0.742-0.744, and scaled IPR pinned near 1.000 across N=512-768. There is no sign of a delayed delocalization onset; the soft mode is already spread away from the weak module at the lowest scanned brace strength.
+  Conclusion: REJECTED. Heavy-tailed stiffness disorder does not delay delocalization into a finite positive bracing threshold in this modular setup. The family is effectively floor-pinned on the delocalized side, so the claimed onset never appears within the scanned range.
